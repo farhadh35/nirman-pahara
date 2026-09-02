@@ -19,6 +19,7 @@
   "m10_safety.json",
   "m12_malpractice.json",
   "m21_services.json",
-  "m22_maintenance.json"
+  "m22_maintenance.json",
+  "m19_cost.json"
  ]
 }
