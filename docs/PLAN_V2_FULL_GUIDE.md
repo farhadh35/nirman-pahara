@@ -483,3 +483,39 @@ descriptions against its rows.
 The civil table's own extraction script was never committed — only its output — so "1,749 = every
 civil item" remains asserted rather than tested. The E/M extractor should be committed under
 `tool/` and both counts asserted.
+
+
+---
+
+## 15. The 2025 Bidhimala — found, and what it actually is (2026-09-02)
+
+The plan-approval module was blocked on the gazette. It is no longer blocked.
+
+**ঢাকা মহানগর ইমারত বিধিমালা, ২০২৫** — note the title, which is *ইমারত বিধিমালা*
+and not *ইমারত নির্মাণ বিধিমালা* as this plan assumed throughout.
+
+| | |
+|---|---|
+| Gazette | বাংলাদেশ গেজেট, অতিরিক্ত সংখ্যা — রবিবার, ১৪ ডিসেম্বর ২০২৫ |
+| Notification | এস.আর.ও. নং ৪৬৯-আইন/২০২৫, dated ২৬ অগ্রহায়ণ ১৪৩২ / ১১ ডিসেম্বর ২০২৫ |
+| Issued by | গৃহায়ন ও গণপূর্ত মন্ত্রণালয় |
+| Power | Building Construction Act, 1952 (Act No. II of 1953), section 18 |
+| Extent | The Dhaka Metropolitan Master Plan area under the Town Improvement Act, 1953 |
+| Commencement | ইহা অবিলম্বে কার্যকর হইবে — in force immediately |
+| Length | 112 pages, cover price Tk 96 |
+| Source | RAJUK, via the ministry object store linked from rajuk.gov.bd's আইন ও বিধি page |
+
+Rule 2(1) defines অনুমোদিত নকশা by reference to **Bangladesh National Building Code, 2020**, so
+the Bidhimala and BNBC 2020 are read together rather than as alternatives.
+
+**Two corrections this forces on the plan.** The commencement is December 2025, not the August
+2025 this plan guessed; and the DAP 2022–35 amendment referenced alongside it is also December
+2025. Any card citing either must carry those dates.
+
+The gazette PDF is kept at the repository root for reference. It is a public government document,
+but it is 5 MB of scanned Bangla and does not belong in the app bundle: cards cite the S.R.O.
+number and rule number, and the reader is pointed at RAJUK for the text.
+
+**Still required before the approval module ships:** the FAR, setback and height numbers have to be
+read out of the gazette rule by rule, into `docs/FACTS_V2.md`, the same way everything else was.
+Finding the document is not the same as having read it.

@@ -1,0 +1,177 @@
+{
+ "id": "m16_drawings",
+ "code": "M16",
+ "track": "both",
+ "icon": "drawing",
+ "title": {
+  "bn": "নকশা পড়া",
+  "en": "Reading the drawings"
+ },
+ "summary": {
+  "bn": "কাগজটা ভয় লাগে, কিন্তু আপনার দরকার মাত্র কয়েকটা জিনিস — কোথায় সেগুলো, আর কোনটা কী বলে।",
+  "en": "The sheet looks forbidding, but you need only a few things off it. Where they are, and what each one says."
+ },
+ "cards": [
+  {
+   "id": "m16c1",
+   "tier": "general",
+   "title": {
+    "bn": "নকশা কয় রকম, আর কোনটা কীসের জন্য",
+    "en": "How many drawings, and what each is for"
+   },
+   "body": {
+    "bn": "এক বাড়ির জন্য একটার বেশি নকশা হয়, আর সেগুলো একে অন্যের বিকল্প নয়। আর্কিটেকচারাল নকশা বলে ঘর কোথায়, দরজা-জানালা কোথায়। স্ট্রাকচারাল নকশা বলে কলাম কোথায়, রড কয়টা আর কত মোটা। ইলেকট্রিক্যাল আর স্যানিটারি নকশা বলে তার আর পাইপ কোন পথে যাবে। ঠিকাদার আপনাকে শুধু আর্কিটেকচারাল নকশাটা দেখালে বাকিগুলো চেয়ে নিন — ভিতের ভেতরে কী বসছে সেটা ঐ কাগজেই লেখা আছে।",
+    "en": "A house has more than one drawing, and they are not alternatives to each other. The architectural drawing says where the rooms, doors and windows are. The structural drawing says where the columns are and how many bars go in them, and how thick. The electrical and sanitary drawings say which way the wires and pipes run. If a contractor shows you only the architectural sheet, ask for the others: what goes inside the foundation is written on those."
+   },
+   "watch_for": [
+    {
+     "bn": "স্ট্রাকচারাল নকশা ছাড়া রডের হিসাব মেলানো যায় না — ওটাই রডের সংখ্যা আর মাপের একমাত্র উৎস।",
+     "en": "Without the structural drawing there is nothing to check the steel against: it is the only source for bar counts and sizes."
+    },
+    {
+     "bn": "প্রতিটি নকশায় তারিখ আর রিভিশন নম্বর থাকে। সাইটে পুরোনো রিভিশন ঝুলে থাকা সাধারণ ভুল।",
+     "en": "Every sheet carries a date and a revision number. An old revision left hanging on site is a common mistake."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), ষষ্ঠ অধ্যায়",
+      "en": "House construction and site supervision (2019), chapter 6"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m16c2",
+   "tier": "general",
+   "title": {
+    "bn": "স্কেল: কাগজের মাপ আর মাটির মাপ",
+    "en": "Scale: the paper and the ground"
+   },
+   "body": {
+    "bn": "নকশার প্রতিটা মাপ ছোট করে আঁকা, আর কতটা ছোট সেটা লেখা থাকে স্কেলে — যেমন ১:১০০ মানে কাগজে ১ ইঞ্চি হলে বাস্তবে ১০০ ইঞ্চি। কিন্তু কাগজ থেকে স্কেল দিয়ে মেপে সংখ্যা বের করা ঠিক নয়, কারণ ফটোকপি বা প্রিন্টে কাগজ সামান্য ছোট-বড় হয়ে যায়। যেখানে সংখ্যা লেখা আছে, সেই লেখা সংখ্যাটাই ধরতে হবে — নকশায় লেখা মাপ আর আপনার ফিতের মাপ, এই দুটোই মেলানোর জিনিস।",
+    "en": "Everything on a drawing is drawn smaller, and how much smaller is the scale: 1:100 means an inch on paper is a hundred inches on the ground. But taking a number off the paper with a ruler is not how it is done, because a photocopy or a print stretches the sheet slightly. Where a figure is written, the written figure governs. What you compare is the written dimension against your tape."
+   },
+   "watch_for": [
+    {
+     "bn": "সব নকশার প্রথম নোটেই সাধারণত লেখা থাকে: 'নকশা থেকে স্কেল করে মাপ নেবেন না'।",
+     "en": "The first note on most drawings says exactly this: do not scale off the drawing."
+    },
+    {
+     "bn": "লেখা মাপ আর আঁকা ছবি না মিললে লেখা মাপটাই ঠিক ধরা হয়, আর প্রকৌশলীকে জানাতে হয়।",
+     "en": "Where the written figure and the picture disagree, the figure governs — and the engineer should be told."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "সাধারণ প্রকৌশল অঙ্কনের রীতি — লিখিত মাপ স্কেলের উপরে",
+      "en": "Standard drafting convention: written dimensions govern over scaling"
+     },
+     "status": "verified"
+    }
+   ],
+   "diagram": "drawing_parts"
+  },
+  {
+   "id": "m16c3",
+   "tier": "work",
+   "title": {
+    "bn": "ঘরের মাপ: কাগজে যা, বাস্তবে যা",
+    "en": "Room sizes: on paper and in the room"
+   },
+   "body": {
+    "bn": "নকশায় ঘরের মাপ লেখা থাকে দেয়ালের ভেতরের দিক ধরে। প্রচলিত মাপগুলো মোটামুটি এরকম: শোবার ঘর ১০ × ১৩.৫ ফুট থেকে ১৩ × ১৫.৫ ফুট, রান্নাঘর ৮ × ১০ ফুটের কাছাকাছি, বাথরুম ৫ × ৭ ফুট, বারান্দা ৫ থেকে ৮ ফুট চওড়া, আর ড্রয়িং রুম ১৩.৫ × ১৩ ফুট। এগুলো নিয়ম নয়, প্রচলিত মাপ — আপনার নকশায় যা লেখা, সেটাই আপনার ঘর। প্লাস্টার হয়ে যাওয়ার পর ঘর সামান্য ছোট হয়, কারণ প্লাস্টারের পুরুত্ব ভেতরের দিকেই আসে।",
+    "en": "A drawing gives room sizes to the inside face of the walls. Common sizes run roughly like this: a bedroom from 10 × 13.5 to 13 × 15.5 feet, a kitchen around 8 × 10, a bathroom 5 × 7, a verandah 5 to 8 feet wide, and a drawing room about 13.5 × 13. These are what is usual, not what is required — your drawing is your room. A finished room measures slightly smaller than the drawing, because the plaster thickness comes off the inside."
+   },
+   "watch_for": [
+    {
+     "bn": "গাঁথুনির পর, প্লাস্টারের আগে মাপুন। তখনকার মাপই নকশার মাপের সঙ্গে সরাসরি মেলে।",
+     "en": "Measure after the masonry and before the plaster: that is the measurement the drawing is giving."
+    },
+    {
+     "bn": "একটা ঘর ছোট হলে পাশেরটা বড় হয়ে যায় — দুটোই মেপে দেখুন।",
+     "en": "If one room came out small, the next one came out large. Measure both."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), ষষ্ঠ অধ্যায়, (৬-৪)",
+      "en": "House construction and site supervision (2019), chapter 6, (6-4)"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m16c4",
+   "tier": "work",
+   "title": {
+    "bn": "স্ট্রাকচারাল নকশা থেকে যা গোনা যায়",
+    "en": "What can be counted off the structural drawing"
+   },
+   "body": {
+    "bn": "স্ট্রাকচারাল নকশা প্রকৌশলীর জিনিস, কিন্তু তার তিনটে সংখ্যা যে কেউ গুনে মিলিয়ে নিতে পারে: একটা কলামে কয়টা মূল রড, রিংগুলোর মধ্যে ফাঁক কত, আর ফুটিংয়ের মাপ কত। নকশায় লেখা থাকে যেমন '৮ নং ১৬ মিমি' — মানে ১৬ মিলিমিটার ব্যাসের আটটা রড। ঢালাইয়ের আগে দাঁড়িয়ে গুনে ফেলুন। এটা নকশা বোঝা নয়, এটা মিলিয়ে দেখা।",
+    "en": "The structural drawing is an engineer's document, but three of its numbers anyone can count: how many main bars in a column, the gap between the rings, and the size of the footing. A drawing writes something like '8 nos 16 mm' — eight bars of 16 millimetre diameter. Stand there before the pour and count them. This is not reading a design; it is checking one thing against another."
+   },
+   "watch_for": [
+    {
+     "bn": "সংখ্যা মিলছে কিন্তু রড চিকন — মিমি-র মাপটাও দেখুন, শুধু সংখ্যা নয়।",
+     "en": "The count can match while the bars are thinner: check the millimetre size too, not just the number."
+    },
+    {
+     "bn": "দোকানে রড বিক্রি হয় সুতায়। ৫ সুতা মানে ১৬ মিমি — অ্যাপের মাপের অংশে রূপান্তরটা আছে।",
+     "en": "Bars are sold in suta: 5 suta is the 16 mm bar. The measuring section converts."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), ষষ্ঠ অধ্যায়",
+      "en": "House construction and site supervision (2019), chapter 6"
+     },
+     "status": "review"
+    }
+   ],
+   "diagram": "slab_rebar"
+  },
+  {
+   "id": "m16c5",
+   "tier": "general",
+   "title": {
+    "bn": "অনুমোদিত নকশা চেয়ে নেওয়া",
+    "en": "Asking for the approved drawing"
+   },
+   "body": {
+    "bn": "সরকারি কাজে হোক বা নিজের বাড়িতে, যে নকশাটা কর্তৃপক্ষ অনুমোদন করেছে সেটাই একমাত্র নকশা যেটার সঙ্গে বাস্তবের কাজ মেলানোর কথা। সাইটে ঝুলে থাকা কাগজ আর অনুমোদিত নকশা এক না-ও হতে পারে। নিজের বাড়ির ক্ষেত্রে এটা আপনারই কাগজ — স্থপতি বা ঠিকাদারের কাছে চাইলেই পাওয়ার কথা, আর চুক্তিতে সেটা লিখে রাখাই ভালো। সরকারি কাজে এই নকশা চেয়ে নেওয়ার আলাদা পথ আছে, সেটা অধিকার অংশে দেওয়া। এই একটা কাগজ হাতে না থাকলে বাকি সব মাপ কীসের সঙ্গে মেলাবেন, সেটাই থাকে না।",
+    "en": "On a public work or on your own house, the drawing the authority approved is the only one the work is meant to match. The sheet hanging on site and the approved drawing are not always the same. On your own house it is your paper: the architect or contractor should hand it over on request, and it is worth writing into the contract that they will. For a public work there is a separate route to ask for it, set out in the rights section. Without that one sheet there is nothing for any other measurement to be checked against."
+   },
+   "watch_for": [
+    {
+     "bn": "অনুমোদিত নকশায় কর্তৃপক্ষের সিল ও অনুমোদনের তারিখ থাকে।",
+     "en": "An approved drawing carries the authority's stamp and the date of approval."
+    },
+    {
+     "bn": "সাইটের কাগজ আর অনুমোদিত নকশা আলাদা হলে সেটাই প্রথম প্রশ্ন।",
+     "en": "If the site copy and the approved drawing differ, that is the first question to ask."
+    },
+    {
+     "bn": "চুক্তি সইয়ের সময়েই নকশার কপি চেয়ে নিন — কাজ শুরুর পরে চাওয়া কঠিন হয়।",
+     "en": "Ask for the drawings when the contract is signed; asking after work starts is harder."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "নির্মাণ চুক্তির প্রচলিত চর্চা — নকশা হস্তান্তর",
+      "en": "Common construction contract practice: handing over drawings"
+     },
+     "status": "review"
+    }
+   ]
+  }
+ ]
+}
