@@ -1,0 +1,176 @@
+{
+ "id": "m22_maintenance",
+ "code": "M22",
+ "track": "both",
+ "icon": "maintenance",
+ "title": {
+  "bn": "বাড়ি টিকিয়ে রাখা",
+  "en": "Keeping the building"
+ },
+ "summary": {
+  "bn": "স্যাঁতস্যাঁতে দেয়াল, উঁইপোকা, ছাদের পানি — কোনটা মেরামত, আর কোনটা গোড়ার ভুল।",
+  "en": "Damp walls, termites, water on the roof: which are repairs and which are faults from the start."
+ },
+ "cards": [
+  {
+   "id": "m22c1",
+   "tier": "general",
+   "title": {
+    "bn": "স্যাঁতস্যাঁতে দেয়াল: রং নয়, কারণ খুঁজুন",
+    "en": "A damp wall is not a paint problem"
+   },
+   "body": {
+    "bn": "দেয়ালে দাগ, রং খসে পড়া, ভেতরের দিকে নোনা — এগুলো দেখে সবাই আগে রং করায়, আর কয়েক মাসে আবার একই জায়গায় ফিরে আসে। কারণ পানিটা বাইরে থেকে ঢুকছে, রঙের নিচ থেকে নয়। পানি আসার পথ মোটামুটি তিনটে: মাটি থেকে দেয়াল বেয়ে উপরে (এটা ঠেকায় ডিপিসি), ছাদ বা সানশেড থেকে চুঁইয়ে, আর ফেটে যাওয়া পাইপ থেকে। কোন পথে আসছে সেটা না বের করে রং করা মানে টাকা দুবার খরচ।",
+    "en": "Stains, paint lifting, salt showing through: the usual response is to repaint, and within months it comes back in the same place, because the water is arriving from outside and not from under the paint. There are roughly three ways in: up the wall from the ground, which is what a damp proof course stops; down from a roof or a sunshade; and out of a cracked pipe. Painting before finding which is spending the money twice."
+   },
+   "watch_for": [
+    {
+     "bn": "দাগ মেঝের কাছে থেকে উপরে উঠছে — মাটির পানি। ছাদের কাছ থেকে নামছে — উপর থেকে।",
+     "en": "A stain rising from near the floor is ground water; one spreading down from the ceiling is from above."
+    },
+    {
+     "bn": "একটা নির্দিষ্ট জায়গায় সীমিত ভেজা দাগ প্রায়ই পাইপের।",
+     "en": "Damp confined to one patch is usually a pipe."
+    },
+    {
+     "bn": "বর্ষার পরে দাগ বাড়ে কি না লক্ষ করুন — সেটাই সবচেয়ে বড় সূত্র।",
+     "en": "Whether it grows after the rains is the strongest clue there is."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পঞ্চদশ অধ্যায়, (১৫-৩) ও (১৫-৪)",
+      "en": "House construction and site supervision (2019), chapter 15, (15-3) and (15-4)"
+     },
+     "status": "review"
+    }
+   ],
+   "diagram": "footing_section"
+  },
+  {
+   "id": "m22c2",
+   "tier": "work",
+   "title": {
+    "bn": "ডিপিসি: যেটা থাকলে এই সমস্যাই হয় না",
+    "en": "The DPC, which is why this does not happen"
+   },
+   "body": {
+    "bn": "মাটি থেকে দেয়ালে পানি ওঠা ঠেকানোর একমাত্র জিনিস হলো ডিপিসি — প্লিন্থ লেভেলে দেয়ালের ভেতরে বসানো একটা পাতলা কিন্তু পানি-নিরোধক স্তর, সাধারণত ১:১.৫:৩ কনক্রিটের, প্রায় ৪০ মিলিমিটার পুরু। পুরো বাড়ির খরচের এক শতাংশেরও কম, আর বাদ দিলে সঙ্গে সঙ্গে কিছু বোঝা যায় না — দু-তিন বর্ষা পরে দেয়াল কথা বলতে শুরু করে। একবার বাদ পড়লে পরে বসানো প্রায় অসম্ভব, কারণ দেয়াল তার উপরেই দাঁড়িয়ে।",
+    "en": "The only thing stopping ground water rising into a wall is the damp proof course: a thin waterproof layer set into the wall at plinth level, usually 1:1.5:3 concrete about 40 millimetres thick. It is under one per cent of the cost of a house, and leaving it out does nothing at all at first — two or three monsoons later the wall starts to say so. Once it has been left out it is close to impossible to add, because the wall is standing on it."
+   },
+   "watch_for": [
+    {
+     "bn": "ডিপিসি ঢালাই একদিনের কাজ, আর ঐ দিনটাই দেখার একমাত্র দিন।",
+     "en": "The DPC is a single day's work, and that day is the only day to see it."
+    },
+    {
+     "bn": "বিলে ডিপিসি আলাদা আইটেম হিসেবে আছে কি না — না থাকলে জিজ্ঞেস করার জিনিস।",
+     "en": "Whether the DPC is a separate item on the bill. If it is not, that is worth asking about."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "PWD Schedule of Rates 2022, আইটেম ০৩.৬.১ — ৭৫ মিমি ডিপিসি (১:১.৫:৩)",
+      "en": "PWD Schedule of Rates 2022, item 03.6.1 — 75 mm DPC (1:1.5:3)"
+     },
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": "m22c3",
+   "tier": "general",
+   "title": {
+    "bn": "ছাদের পানি কোথায় যাচ্ছে",
+    "en": "Where the roof water goes"
+   },
+   "body": {
+    "bn": "ছাদে পানি জমে থাকা মানে ধীরে ধীরে ভেতরে ঢোকা। ছাদে সামান্য ঢাল থাকার কথা যাতে পানি ড্রেনের মুখে গিয়ে পড়ে, আর ঐ মুখগুলো নিয়মিত পরিষ্কার রাখতে হয় — পাতা আর বালিতে বন্ধ হয়ে যাওয়াই সবচেয়ে সাধারণ কারণ। বৃষ্টির পানির পাইপ সাধারণত ৪ ইঞ্চি ব্যাসের। পুরোনো ধাঁচের ছাদে জলছাদ দেওয়া হয় — চুন, সুরকি আর খোয়ার ২:২:৭ মিশ্রণ, ৩ থেকে ৪ ইঞ্চি পুরু — যা ঢালও দেয় আর তাপও কমায়।",
+    "en": "Water standing on a roof is water working its way in. A roof is meant to fall slightly towards its outlets, and those outlets have to be kept clear — leaves and grit blocking them is the commonest cause of all. Rainwater pipes are usually 4 inches. Older roofs are finished with lime terracing: lime, brick dust and aggregate in 2:2:7, three to four inches thick, which gives the fall and cuts the heat as well."
+   },
+   "watch_for": [
+    {
+     "bn": "বৃষ্টির পরে ছাদে গিয়ে দেখুন কোথায় পানি দাঁড়িয়ে আছে — ঐ জায়গাটাই সমস্যা।",
+     "en": "Go up after rain and see where water is standing. That spot is the problem."
+    },
+    {
+     "bn": "প্রতি বর্ষার আগে ছাদের ড্রেনের মুখ পরিষ্কার — সবচেয়ে সস্তা রক্ষণাবেক্ষণ।",
+     "en": "Clearing the roof outlets before each monsoon is the cheapest maintenance there is."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পঞ্চদশ অধ্যায়, (১৫-৬)",
+      "en": "House construction and site supervision (2019), chapter 15, (15-6)"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m22c4",
+   "tier": "general",
+   "title": {
+    "bn": "উঁইপোকা: কাঠ নয়, পথ বন্ধ করুন",
+    "en": "Termites: block the route, not the timber"
+   },
+   "body": {
+    "bn": "উঁইপোকা মাটি থেকে আসে, আর দরজার চৌকাঠ বা আলমারিতে যখন দেখা যায় তখন তারা অনেকদিন ধরে আছে। দেয়াল বেয়ে ওঠা সরু মাটির নলগুলোই প্রথম চিহ্ন — ওগুলো ওদের চলাচলের ঢাকা পথ। কাঠে ওষুধ দেওয়ার চেয়ে কাজের হলো মাটির সঙ্গে কাঠের সরাসরি যোগাযোগ বন্ধ রাখা, আর ভিত ঢালাইয়ের আগেই মাটিতে অ্যান্টি-টার্মাইট শোধন করানো — সেটা তখনই সম্ভব, পরে নয়।",
+    "en": "Termites come from the ground, and by the time they show in a door frame or a cupboard they have been there a long time. The first sign is the thin mud tubes running up a wall, which are their covered road. Treating the timber matters less than keeping timber out of direct contact with ground, and than having the soil treated before the foundation is cast — which can only be done then, not afterwards."
+   },
+   "watch_for": [
+    {
+     "bn": "দেয়ালে সরু মাটির নল দেখলে ভেঙে দেখুন — ভেতরে পোকা থাকলে পথটা সক্রিয়।",
+     "en": "Break open a mud tube: if there are insects inside, the route is live."
+    },
+    {
+     "bn": "নতুন বাড়িতে মাটি শোধন বিলে আলাদা আইটেম — হয়েছে কি না দেখে নিন।",
+     "en": "On a new build, soil treatment is a separate item on the bill. Check it happened."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পঞ্চদশ অধ্যায়, (১৫-৫)",
+      "en": "House construction and site supervision (2019), chapter 15, (15-5)"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m22c5",
+   "tier": "work",
+   "title": {
+    "bn": "কোন কাজ কত বছর পরপর",
+    "en": "What comes round, and how often"
+   },
+   "body": {
+    "bn": "রক্ষণাবেক্ষণ পিছিয়ে দিলে খরচ বাড়ে, কারণ ছোট মেরামত বড় মেরামত হয়ে যায়। প্রচলিত ছন্দ হলো: চুনকাম আর ছোটখাটো সারাই বছরে একবার, আর দেয়ালের রং, দরজা-জানালার রং আর বড় মেরামতের দফা প্রায় চার বছর পরপর। রং করাতে হিসাব রাখলে সুবিধা — এক গ্যালনে মোটামুটি ৩০০ বর্গফুট ঢাকে, আর ঠিকভাবে রং মানে প্রাইম, আন্ডার আর ফিনিশ — তিন দফা।",
+    "en": "Deferred maintenance costs more, because a small repair becomes a large one. The usual rhythm is whitewash and small repairs once a year, with the bigger round — wall paint, joinery, larger repairs — about every four years. For paint it helps to have the arithmetic: a gallon covers roughly 300 square feet, and painting done properly is three passes, prime, under and finish."
+   },
+   "watch_for": [
+    {
+     "bn": "এগুলো প্রচলিত ছন্দ, নিয়ম নয়। লবণাক্ত বা বেশি বৃষ্টির এলাকায় বিরতি ছোট হয়।",
+     "en": "This is a common rhythm, not a rule. Salt air or heavy rain shortens the interval."
+    },
+    {
+     "bn": "রঙের হিসাব করার আগে দেয়ালের ক্ষেত্রফল বের করে নিন — অ্যাপের মাপের অংশে আছে।",
+     "en": "Work out the wall area before buying paint; the measuring section does it."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "অনুমানের শর্টকাট — বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পঞ্চদশ অধ্যায়, (১৫-১)",
+      "en": "Rule of thumb — House construction and site supervision (2019), chapter 15, (15-1)"
+     },
+     "status": "ruleOfThumb"
+    }
+   ]
+  }
+ ]
+}
