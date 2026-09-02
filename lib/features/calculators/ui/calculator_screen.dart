@@ -31,6 +31,10 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+    _seed();
+  }
+
+  void _seed() {
     if (_seeded) return;
     _seeded = true;
     // Seeded here rather than in initState because the starting values are
@@ -49,6 +53,24 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         )..addListener(() => setState(() {}));
       }
     }
+  }
+
+  @override
+  void didUpdateWidget(CalculatorScreen old) {
+    super.didUpdateWidget(old);
+    // Every calculator is pushed as its own route today, so this never fires in
+    // the app as it stands. It fires the moment anything rebuilds this widget
+    // with a different spec — a tab, a master-detail pane on a tablet, a test —
+    // and without it the seeded controllers belong to the previous calculator
+    // and every lookup for a field the new one owns is a null dereference.
+    if (old.spec.id == widget.spec.id) return;
+    for (final c in _controllers.values) {
+      c.dispose();
+    }
+    _controllers.clear();
+    _choices.clear();
+    _seeded = false;
+    _seed();
   }
 
   @override
