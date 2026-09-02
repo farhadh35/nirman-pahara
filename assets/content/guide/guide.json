@@ -89,7 +89,8 @@
        "en": "c/c means centre to centre — the middle of one bar to the middle of the next."
       }
      ],
-     "citations": []
+     "citations": [],
+     "diagram": "drawing_parts"
     },
     {
      "id": "m0c4",
@@ -163,7 +164,8 @@
        "en": "Measure anything that is going to be covered before it is covered. There is no second chance."
       }
      ],
-     "citations": []
+     "citations": [],
+     "diagram": "measuring"
     }
    ]
   },
@@ -312,7 +314,8 @@
        "url": "https://citizen.bppa.gov.bd/about-us",
        "status": "verified"
       }
-     ]
+     ],
+     "diagram": "signboard"
     },
     {
      "id": "m2c2",
@@ -457,7 +460,8 @@
        },
        "status": "review"
       }
-     ]
+     ],
+     "diagram": "standard_hook"
     },
     {
      "id": "m3c3",
@@ -764,7 +768,8 @@
        },
        "status": "review"
       }
-     ]
+     ],
+     "diagram": "slab_rebar"
     },
     {
      "id": "m5c2",
@@ -825,7 +830,8 @@
        },
        "status": "review"
       }
-     ]
+     ],
+     "diagram": "stirrup_spacing"
     },
     {
      "id": "m5c4",
@@ -1163,7 +1169,8 @@
        },
        "status": "review"
       }
-     ]
+     ],
+     "diagram": "excavation"
     },
     {
      "id": "m10c2",

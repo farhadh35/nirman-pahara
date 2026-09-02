@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -7,7 +6,6 @@ import 'package:nirman_pahara/core/content/content_repository.dart';
 import 'package:nirman_pahara/features/guide/diagrams/diagram_base.dart';
 import 'package:nirman_pahara/features/guide/diagrams/guide_diagrams.dart';
 import 'package:nirman_pahara/features/guide/diagrams/materials_diagrams.dart';
-import 'package:nirman_pahara/features/guide/diagrams/structure_diagrams.dart';
 
 Future<String> _fromDisk(String path) => File(path).readAsString();
 
@@ -65,42 +63,42 @@ void main() {
     ));
   });
 
-  test('no painter throws, whatever size it is handed', () {
-    // Diagrams are laid out fractionally, so a narrow phone, a tablet and the
-    // degenerate cases all go through the same arithmetic. A divide by zero
-    // here would crash the guide screen rather than degrade it.
-    const palette = DiagramPalette(
-      ink: Color(0xFF000000),
-      muted: Color(0xFF666666),
-      concrete: Color(0xFFDDE3DA),
-      steel: Color(0xFF9A3412),
-      accent: Color(0xFF006A4E),
-      water: Color(0xFFBFE0F0),
-    );
-    final painters = <String, CustomPainter>{
-      'silt_test': SiltTestPainter(palette: palette, bn: true),
-      'brick_bond': BrickBondPainter(palette: palette, bn: false),
-      'cover_block': CoverBlockPainter(palette: palette, bn: true),
-      'footing_section': FootingSectionPainter(palette: palette, bn: false),
-    };
-    const sizes = [
-      Size(320, 160),
-      Size(360, 190),
-      Size(1024, 512),
-      Size(1, 1),
-    ];
-    for (final entry in painters.entries) {
-      for (final size in sizes) {
-        final recorder = ui.PictureRecorder();
-        final canvas = Canvas(recorder);
-        expect(
-          () => entry.value.paint(canvas, size),
-          returnsNormally,
-          reason: '${entry.key} at ${size.width}x${size.height}',
-        );
-        recorder.endRecording().dispose();
+  testWidgets('every registered diagram survives any size it is given',
+      (tester) async {
+    // Diagrams lay out in fractions of the canvas, so a narrow phone, a tablet
+    // and the degenerate cases all run the same arithmetic. Driven off the
+    // registry rather than a list here, so a new painter cannot be added
+    // without also being crash-checked.
+    for (final key in kGuideDiagramKeys) {
+      // Widths a real handset and a tablet give a guide card, with height left
+      // free the way a scrolling list leaves it.
+      for (final width in const [300.0, 360.0, 900.0]) {
+        await tester.pumpWidget(MaterialApp(
+          home: Scaffold(
+            body: ListView(
+              children: [
+                SizedBox(
+                  width: width,
+                  child: Builder(
+                    builder: (context) =>
+                        guideDiagram(context, key, bn: true) ?? const SizedBox(),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ));
+        expect(tester.takeException(), isNull, reason: '$key at ${width}px');
       }
     }
+  });
+
+  test('a canvas too small to say anything on is declined, not drawn on', () {
+    // The painters lay out fractionally, so a degenerate canvas would otherwise
+    // produce inverted rectangles and negative text widths.
+    expect(diagramTooSmall(const Size(60, 30)), isTrue);
+    expect(diagramTooSmall(const Size(double.nan, 200)), isTrue);
+    expect(diagramTooSmall(const Size(320, 170)), isFalse);
   });
 
   test('the silt limit the drawing is scaled to is the one the app checks', () {

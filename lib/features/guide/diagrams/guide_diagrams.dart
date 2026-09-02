@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../core/i18n/app_locale.dart';
 import 'diagram_base.dart';
 import 'materials_diagrams.dart';
+import 'rebar_diagrams.dart';
+import 'site_diagrams.dart';
 import 'structure_diagrams.dart';
 
 /// Column reinforcement: main bars, stirrups with inward hooks, cover blocks,
@@ -399,6 +401,13 @@ const kGuideDiagramKeys = <String>[
   'brick_bond',
   'cover_block',
   'footing_section',
+  'stirrup_spacing',
+  'slab_rebar',
+  'standard_hook',
+  'signboard',
+  'measuring',
+  'drawing_parts',
+  'excavation',
 ];
 
 Widget? guideDiagram(BuildContext context, String? key, {required bool bn}) {
@@ -444,6 +453,41 @@ Widget? guideDiagram(BuildContext context, String? key, {required bool bn}) {
         FootingSectionPainter(palette: palette, bn: bn),
         1.4,
         const L10nText('ভিত থেকে মেঝে পর্যন্ত', 'From footing to floor')
+      ),
+    'stirrup_spacing' => (
+        StirrupSpacingPainter(palette: palette, bn: bn),
+        1.25,
+        const L10nText('স্টিরাপের ফাঁক', 'Stirrup spacing')
+      ),
+    'slab_rebar' => (
+        SlabRebarPainter(palette: palette, bn: bn),
+        1.6,
+        const L10nText('স্ল্যাবের রড', 'Slab reinforcement')
+      ),
+    'standard_hook' => (
+        StandardHookPainter(palette: palette, bn: bn),
+        2.1,
+        const L10nText('রডের হুক', 'The hook at a bar end')
+      ),
+    'signboard' => (
+        SignboardPainter(palette: palette, bn: bn),
+        1.35,
+        const L10nText('কাজের তথ্যবোর্ড', 'The work information board')
+      ),
+    'measuring' => (
+        MeasuringPainter(palette: palette, bn: bn),
+        2.2,
+        const L10nText('ফিতে ধরার নিয়ম', 'Holding the tape')
+      ),
+    'drawing_parts' => (
+        DrawingPartsPainter(palette: palette, bn: bn),
+        1.5,
+        const L10nText('নকশার যে অংশগুলো কাজে লাগে', 'The parts of a drawing that help')
+      ),
+    'excavation' => (
+        ExcavationPainter(palette: palette, bn: bn),
+        1.7,
+        const L10nText('গর্ত কাটা', 'Cutting a trench')
       ),
     _ => (null, 1.0, const L10nText('', '')),
   };
