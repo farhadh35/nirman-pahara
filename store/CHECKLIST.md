@@ -20,19 +20,22 @@ developer account.
 - [x] Data safety answers
 - [x] Release notes
 
+Project page: https://farhadh35.github.io/nirman-pahara/
+Source: https://github.com/farhadh35/nirman-pahara
+
 ## Needs the account holder
 
 - [ ] **Back the keystore up off this machine.** Losing
       `android/keystore/nirman-upload.jks` means this app can never be updated
       on Play again. Copy it and `android/key.properties` somewhere safe before
       the first upload.
-- [ ] Publish the privacy policy at a public URL and paste that URL into the
-      listing and the Data safety form
-- [ ] Add a contact email to the privacy policy and the listing
-- [ ] Screenshots: at least 2, phone, 16:9 or 9:16, min 320 px
-      (suggested: home, a guide card with its diagram, an inspection in
-      progress, the report, the rate-schedule findings)
-- [ ] Feature graphic, 1024 × 500
+- [x] Privacy policy published at https://farhadh35.github.io/nirman-pahara/privacy.html
+      — paste that URL into the listing and the Data safety form
+- [x] Contact email in the privacy policy and the listing
+- [x] Screenshots: three in `store/screenshots/` (home, the checklists, an
+      inspection starting), captured from the release build in Bangla. Add more
+      if you want the report and the rate-schedule findings shown.
+- [x] Feature graphic at `store/feature-graphic-1024x500.png`
 - [ ] Content rating questionnaire
 - [ ] Ads declaration: yes
 - [ ] Target audience: adults

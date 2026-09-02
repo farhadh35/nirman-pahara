@@ -36,6 +36,8 @@ invisible to the people it is for.
 | Audio narration | Not yet — needs a voice artist |
 | Ads | Not yet integrated; policy fixed in `docs/AD_POLICY.md` |
 
+Project page: https://farhadh35.github.io/nirman-pahara/ · Privacy policy: https://farhadh35.github.io/nirman-pahara/privacy.html
+
 ## Run it
 
 ```bash

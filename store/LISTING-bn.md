@@ -54,3 +54,11 @@ PWD Schedule of Rates 2022 (২য় সংশোধিত)-এর ১,৭৪�
 কর্তৃপক্ষ নিজে যাচাই করতে পারে। কারিগরি তথ্য BNBC 2020 ও সরকারি রেট শিডিউল
 ধরে লেখা; যেগুলো এখনো সনদপ্রাপ্ত প্রকৌশলী যাচাই করেননি, সেগুলোর গায়ে সেটা
 লেখা আছে।
+
+---
+
+## Links
+
+Privacy policy: https://farhadh35.github.io/nirman-pahara/privacy.html
+Website: https://farhadh35.github.io/nirman-pahara/
+Source code: https://github.com/farhadh35/nirman-pahara

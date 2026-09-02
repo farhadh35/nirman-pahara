@@ -62,3 +62,11 @@ advice. It states what the rule requires and what you observed, separately, so
 that the authority can verify it themselves. The technical content is written
 from BNBC 2020 and the published government rate schedules; anything a licensed
 civil engineer has not yet signed off carries a visible mark saying so.
+
+---
+
+## Links
+
+Privacy policy: https://farhadh35.github.io/nirman-pahara/privacy.html
+Website: https://farhadh35.github.io/nirman-pahara/
+Source code: https://github.com/farhadh35/nirman-pahara

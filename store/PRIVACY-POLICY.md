@@ -2,8 +2,11 @@
 
 **Last updated: 2 September 2026**
 
-This policy must be published at a public URL before the app is submitted; Play
-requires the URL in both the store listing and the Data safety form.
+**Published at https://farhadh35.github.io/nirman-pahara/privacy.html**
+
+That is the URL to paste into the store listing and the Data safety form.
+The rendered page lives in `docs/privacy.html`; edit it there and push, and
+GitHub Pages republishes.
 
 ---
 
@@ -75,5 +78,5 @@ removes everything.
 
 ## Contact
 
-Add a contact email here before publishing. Play requires a working address, and
-this is also where a correction to the technical content should be sent.
+farhadh.35@gmail.com — also where a correction to the technical content
+should be sent.
