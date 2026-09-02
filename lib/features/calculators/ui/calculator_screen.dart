@@ -108,7 +108,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           if (error != null)
             CautionBox(text: error)
           else if (result != null)
-            _ResultView(result: result),
+            CalcResultView(result: result),
         ],
       ),
     );
@@ -167,8 +167,15 @@ class _ChoiceField extends StatelessWidget {
   }
 }
 
-class _ResultView extends StatelessWidget {
-  const _ResultView({required this.result});
+/// Renders a [CalcResult]: the numbers, then the formula and assumptions under
+/// them.
+///
+/// Public because the plot-rules screen shows its answer the same way. A second
+/// copy of this would be a second place for the two to drift apart, and the
+/// formula block is the part of the app that has to look identical everywhere:
+/// it is what a reader shows the contractor.
+class CalcResultView extends StatelessWidget {
+  const CalcResultView({super.key, required this.result});
 
   final CalcResult result;
 
