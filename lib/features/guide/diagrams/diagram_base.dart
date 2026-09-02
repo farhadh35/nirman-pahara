@@ -34,7 +34,13 @@ class DiagramPalette {
       ink: scheme.onSurface,
       muted: scheme.onSurfaceVariant,
       concrete: dark ? const Color(0xFF3A3F3A) : const Color(0xFFDDE3DA),
-      steel: const Color(0xFF9A3412),
+      // Steel had one value for both themes, and on dark it was the one colour
+      // in the palette that had not been thought about. A rust this deep sits
+      // at 2.5:1 against the dark background and 1.5:1 against the dark
+      // concrete — and the rebar diagrams draw steel *inside* concrete, so in
+      // dark mode the bars all but disappeared into the thing they are meant to
+      // be seen within. Lightened for dark to 6.4:1 and 3.7:1, same hue.
+      steel: dark ? const Color(0xFFE8794A) : const Color(0xFF9A3412),
       accent: scheme.primary,
       water: dark ? const Color(0xFF2A4A5A) : const Color(0xFFBFE0F0),
     );
