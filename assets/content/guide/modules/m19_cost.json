@@ -135,37 +135,6 @@
      "status": "ruleOfThumb"
     }
    ]
-  },
-  {
-   "id": "m19c5",
-   "tier": "work",
-   "title": {
-    "bn": "পুরোনো দর দিয়ে হিসাব করবেন না",
-    "en": "Do not budget on an old rate"
-   },
-   "body": {
-    "bn": "বই, ওয়েবসাইট বা পরিচিতের কাছ থেকে পাওয়া 'প্রতি বর্গফুটে এত টাকা' জাতীয় হিসাব সবচেয়ে বিপজ্জনক সংখ্যা, কারণ ওগুলোর সঙ্গে তারিখ থাকে না। কয়েক বছরের পুরোনো দর ধরে বাজেট করলে কাজ মাঝপথে থেমে যায়। দর দেখার জায়গা একটাই — চলতি রেট শিডিউল, যেখানে প্রতিটা আইটেমের দর আর সেটা কোন সংস্করণের, দুটোই লেখা। এই অ্যাপে শিডিউলটা সঙ্গেই আছে, সংস্করণের নামসহ।",
-    "en": "A rate per square foot picked up from a book, a website or an acquaintance is the most dangerous number in a budget, because it comes with no date. Budgeting on a rate a few years old is how work stops half finished. There is one place to look: the current schedule of rates, where every item's rate comes with the edition it belongs to. This app carries the schedule, edition named."
-   },
-   "watch_for": [
-    {
-     "bn": "যেকোনো দরের সঙ্গে জিজ্ঞেস করুন: কোন সালের, কোন সংস্করণের।",
-     "en": "Of any rate, ask which year and which edition it is from."
-    },
-    {
-     "bn": "দর অঞ্চলভেদে আলাদা — একই কাজের দর ঢাকা আর রংপুরে এক নয়।",
-     "en": "Rates differ by region: the same work is not priced the same in Dhaka and Rangpur."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "PWD Schedule of Rates 2022 (২য় সংশোধিত)",
-      "en": "PWD Schedule of Rates 2022 (2nd revised)"
-     },
-     "status": "verified"
-    }
-   ]
   }
  ]
 }
