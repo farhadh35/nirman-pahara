@@ -6,10 +6,12 @@ developer account.
 ## Done in the build
 
 - [x] Application ID `bd.nirmanpahara.nirman_pahara`
-- [x] Version 1.0.0 (versionCode 1), asserted against `pubspec.yaml` by a test
-- [x] Release signing from `android/key.properties` → `android/keystore/nirman-upload.jks`
-      (debug fallback when the key is absent, so a build without the key can
-      never be uploaded by accident)
+- [x] Version 2.0.0 (versionCode 4), asserted against `pubspec.yaml` by a test
+- [x] Release signing from `android/key.properties` → `android/keystore/nirman-upload.jks`.
+      A release build **refuses** to run without the key rather than falling back
+      to debug signing, because that fallback was silent: the Gradle output looks
+      the same either way and Play is the first thing that tells you. Building
+      one on purpose takes `-PallowDebugSigning=true`.
 - [x] `minSdk 24`
 - [x] R8 minification and resource shrinking on release
 - [x] Signed Android App Bundle builds and verifies as `CN=Nirman Pahara`
@@ -25,10 +27,12 @@ Source: https://github.com/farhadh35/nirman-pahara
 
 ## Needs the account holder
 
-- [ ] **Back the keystore up off this machine.** Losing
-      `android/keystore/nirman-upload.jks` means this app can never be updated
-      on Play again. Copy it and `android/key.properties` somewhere safe before
-      the first upload.
+- [ ] **Back the keystore up off this machine.** `android/keystore/nirman-upload.jks`
+      and `android/key.properties` are gitignored, so they exist in exactly one
+      place. Losing them means this listing can never be updated again: a new
+      app, a new listing, and every existing install left behind on the last
+      version it got. Copy both somewhere off this machine before the next
+      upload — this is still not done.
 - [x] Privacy policy published at https://farhadh35.github.io/nirman-pahara/privacy.html
       — paste that URL into the listing and the Data safety form
 - [x] Contact email in the privacy policy and the listing
