@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
+import '../../../app/widgets/locale_fields.dart';
 import '../../../core/i18n/app_locale.dart';
 import '../../../core/util/bn.dart';
 import '../../calculators/logic/calc_result.dart';
@@ -100,7 +101,7 @@ class _LandUnitsTabState extends State<_LandUnitsTab> {
         text: Bn.localiseDigits('5', locale),
       )..addListener(() => setState(() {}));
     } else if (_seededLocale != locale) {
-      _followLocale([_controller], locale);
+      followLocaleDigits([_controller], locale);
     }
     _seededLocale = locale;
   }
@@ -242,7 +243,7 @@ class _SutaTabState extends State<_SutaTab> {
         text: Bn.localiseDigits('12', locale),
       )..addListener(() => setState(() {}));
     } else if (_seededLocale != locale) {
-      _followLocale([_controller], locale);
+      followLocaleDigits([_controller], locale);
     }
     _seededLocale = locale;
   }
@@ -359,24 +360,6 @@ class _SutaTabState extends State<_SutaTab> {
 
 /// ---------------------------------------------------------------- জ্যামিতি
 
-/// Rewrites what is already in a box when the reader changes language.
-///
-/// Every tab here seeds its starting value once, in the reader's own script. A
-/// language change afterwards left the old digits sitting in the box while the
-/// answer below them switched — the same number in two scripts on one screen.
-/// Only the digits change; whatever was typed is kept.
-void _followLocale(Iterable<TextEditingController> cs, AppLocale locale) {
-  for (final c in cs) {
-    if (c.text.trim().isEmpty) continue;
-    final converted = Bn.localiseDigits(c.text, locale);
-    if (converted == c.text) continue;
-    c.value = TextEditingValue(
-      text: converted,
-      selection: TextSelection.collapsed(offset: converted.length),
-    );
-  }
-}
-
 /// Shown instead of a complaint while a required box is empty. A box the reader
 /// has cleared to retype is an unfinished question, not a wrong answer.
 Widget _unfinishedHint(BuildContext context, String text) => Padding(
@@ -410,7 +393,7 @@ class _GeometryTabState extends State<_GeometryTab> {
       _seeded = true;
       _buildControllers();
     } else if (_seededLocale != locale) {
-      _followLocale(_controllers, locale);
+      followLocaleDigits(_controllers, locale);
     }
     _seededLocale = locale;
   }

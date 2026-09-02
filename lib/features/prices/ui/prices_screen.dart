@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import '../../../app/app_scope.dart';
 import '../../../core/i18n/app_locale.dart';
 import '../../../app/widgets/common.dart';
+import '../../../app/widgets/locale_fields.dart';
 import '../../../core/i18n/strings.dart';
 import '../../../core/util/bn.dart';
 import '../../../core/util/grouped_number_formatter.dart';
@@ -91,13 +92,19 @@ class _MarketTabState extends State<_MarketTab> {
   final _quote = TextEditingController();
   final _quantity = TextEditingController();
   bool _seeded = false;
+  AppLocale? _seededLocale;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    if (_seeded) return;
-    _seeded = true;
-    _quantity.text = Bn.localiseDigits('1', context.locale);
+    final locale = context.locale;
+    if (!_seeded) {
+      _seeded = true;
+      _quantity.text = Bn.localiseDigits('1', locale);
+    } else if (_seededLocale != locale) {
+      followLocaleDigits([_quote, _quantity], locale);
+    }
+    _seededLocale = locale;
   }
 
   @override
@@ -265,16 +272,21 @@ class _CountryTabState extends State<_CountryTab> {
   final _cost = TextEditingController();
   final _quantity = TextEditingController();
   bool _seeded = false;
+  AppLocale? _seededLocale;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    if (_seeded) return;
-    _seeded = true;
     final locale = context.locale;
-    _fx.text =
-        Bn.localiseDigits(widget.pack.seedUsdToBdt.toString(), locale);
-    _quantity.text = Bn.localiseDigits('1', locale);
+    if (!_seeded) {
+      _seeded = true;
+      _fx.text =
+          Bn.localiseDigits(widget.pack.seedUsdToBdt.toString(), locale);
+      _quantity.text = Bn.localiseDigits('1', locale);
+    } else if (_seededLocale != locale) {
+      followLocaleDigits([_fx, _cost, _quantity], locale);
+    }
+    _seededLocale = locale;
   }
 
   @override

@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
+import '../../../app/widgets/locale_fields.dart';
 import '../../../core/i18n/app_locale.dart';
 import '../../../core/util/bn.dart';
 import '../../calculators/logic/calc_result.dart';
@@ -71,17 +72,7 @@ class _FarFormState extends State<_FarForm> {
         c.addListener(() => setState(() {}));
       }
     } else if (_seededLocale != locale) {
-      // Changing language has to rewrite what is already in the boxes, or the
-      // form shows one script and the answer under it shows the other.
-      for (final c in [_area, _road, _storeys]) {
-        if (c.text.trim().isEmpty) continue;
-        final converted = Bn.localiseDigits(c.text, locale);
-        if (converted == c.text) continue;
-        c.value = TextEditingValue(
-          text: converted,
-          selection: TextSelection.collapsed(offset: converted.length),
-        );
-      }
+      followLocaleDigits([_area, _road, _storeys], locale);
     }
     _seededLocale = locale;
   }

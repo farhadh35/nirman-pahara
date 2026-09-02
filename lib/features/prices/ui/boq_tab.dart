@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
+import '../../../app/widgets/locale_fields.dart';
 import '../../../core/i18n/app_locale.dart';
 import '../../../core/i18n/strings.dart';
 import '../../../core/util/bn.dart';
@@ -36,11 +37,25 @@ class _BoqTabState extends State<BoqTab> {
   final _search = TextEditingController();
   final _boqRate = TextEditingController();
   final _quantity = TextEditingController();
+  AppLocale? _seededLocale;
   PwdRateItem? _item;
   int _region = 0;
   int _volume = 0;
 
   PwdRateTable get _table => widget.tables[_volume];
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // These boxes start empty, so there is no seed to convert — but a reader
+    // who typed Bangla digits and then switched to English should not be left
+    // looking at them.
+    final locale = context.locale;
+    if (_seededLocale != null && _seededLocale != locale) {
+      followLocaleDigits([_boqRate, _quantity], locale);
+    }
+    _seededLocale = locale;
+  }
 
   @override
   void dispose() {
