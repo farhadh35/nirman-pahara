@@ -28,6 +28,7 @@ class ContentRepository {
   RightsPack? _rights;
   PricePack? _prices;
   PwdRateTable? _pwdRates;
+  PwdRateTable? _pwdEmRates;
 
   Future<void> loadAll() async {
     await Future.wait([guide(), checklists(), rights(), prices()]);
@@ -78,6 +79,19 @@ class ContentRepository {
     final raw = await _read('assets/content/rates/pwd_sor_2022.json');
     _pwdRates = PwdRateTable.fromJson(jsonDecode(raw) as Map<String, dynamic>);
     return _pwdRates!;
+  }
+
+  /// The published PWD rates for E/M (electro-mechanical) works.
+  ///
+  /// A separate volume from the civil schedule, with its own item numbering and
+  /// no stated profit or overhead basis, so it is kept as its own table rather
+  /// than merged. Without it the app can check the civil half of a bill and
+  /// silently ignore the electrical half.
+  Future<PwdRateTable> pwdEmRates() async {
+    if (_pwdEmRates != null) return _pwdEmRates!;
+    final raw = await _read('assets/content/rates/pwd_sor_em_2022.json');
+    _pwdEmRates = PwdRateTable.fromJson(jsonDecode(raw) as Map<String, dynamic>);
+    return _pwdEmRates!;
   }
 
   Future<ChecklistPack?> checklistById(String id) async {

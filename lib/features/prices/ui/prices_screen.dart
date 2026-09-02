@@ -53,12 +53,12 @@ class PricesScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: ContentBuilder<({PricePack prices, PwdRateTable rates})>(
+        body: ContentBuilder<({PricePack prices, List<PwdRateTable> rates})>(
           future: _load(context),
           builder: (context, data) => TabBarView(
             children: [
               _MarketTab(pack: data.prices),
-              BoqTab(table: data.rates),
+              BoqTab(tables: data.rates),
               _CountryTab(pack: data.prices),
             ],
           ),
@@ -67,10 +67,13 @@ class PricesScreen extends StatelessWidget {
     );
   }
 
-  Future<({PricePack prices, PwdRateTable rates})> _load(
+  Future<({PricePack prices, List<PwdRateTable> rates})> _load(
       BuildContext context) async {
     final content = context.content;
-    return (prices: await content.prices(), rates: await content.pwdRates());
+    return (
+      prices: await content.prices(),
+      rates: [await content.pwdRates(), await content.pwdEmRates()],
+    );
   }
 }
 

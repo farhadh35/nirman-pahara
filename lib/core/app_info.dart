@@ -9,8 +9,8 @@ import 'i18n/app_locale.dart';
 class AppInfo {
   AppInfo._();
 
-  static const version = '1.0.0';
-  static const buildNumber = 1;
+  static const version = '1.1.0';
+  static const buildNumber = 2;
   static const applicationId = 'bd.nirmanpahara.nirman_pahara';
 
   static String get versionLabel => '$version ($buildNumber)';
@@ -40,6 +40,16 @@ class AppInfo {
             'Department.',
       ),
       url: 'https://ss.pwd.gov.bd/document/sor/Final_SoR_2022%20_2nd_Revised.pdf',
+    ),
+    Attribution(
+      name: 'PWD Schedule of Rates 2022 for E/M Works (2nd revised)',
+      detail: L10nText(
+        'তড়িৎ ও যান্ত্রিক কাজের রেট — গণপূর্ত অধিদপ্তরের আলাদা তফসিল থেকে।',
+        'Electro-mechanical rates, from the separate volume the Public Works '
+            'Department publishes for them.',
+      ),
+      url: 'https://ss.pwd.gov.bd/document/sor/'
+          'Pwd_Schedule_Of_Rates_EM_2nd_revised.pdf',
     ),
     Attribution(
       name: 'BNBC 2020',

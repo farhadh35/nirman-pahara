@@ -35,6 +35,7 @@ invisible to the people it is for.
 | PDF layout placing photographs beside their findings | Not yet — next phase |
 | Audio narration | Not yet — needs a voice artist |
 | Ads | Not yet integrated; policy fixed in `docs/AD_POLICY.md` |
+| Electrical (E/M) rate schedule | Working — 2,606 items, 19 subheads, four zones |
 
 Project page: https://farhadh35.github.io/nirman-pahara/ · Privacy policy: https://farhadh35.github.io/nirman-pahara/privacy.html
 

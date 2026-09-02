@@ -41,6 +41,7 @@ Future<void> _boot(
   await tester.runAsync(() async {
     await content.loadAll();
     await content.pwdRates();
+    await content.pwdEmRates();
   });
 
   await tester.pumpWidget(

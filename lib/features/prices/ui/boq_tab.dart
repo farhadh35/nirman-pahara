@@ -18,9 +18,15 @@ import '../logic/pwd_rate_table.dart';
 /// screen leads with which edition they came from — a rate quoted from the
 /// wrong revision is worse than no rate at all.
 class BoqTab extends StatefulWidget {
-  const BoqTab({super.key, required this.table});
+  const BoqTab({super.key, required this.tables});
 
-  final PwdRateTable table;
+  /// The published volumes, civil first.
+  ///
+  /// PWD prints civil and electro-mechanical rates as separate books with their
+  /// own item numbering, so they are chosen between rather than merged: an
+  /// electrical bill checked against the civil book finds nothing and looks
+  /// clean, which is the worst outcome this screen can produce.
+  final List<PwdRateTable> tables;
 
   @override
   State<BoqTab> createState() => _BoqTabState();
@@ -32,6 +38,9 @@ class _BoqTabState extends State<BoqTab> {
   final _quantity = TextEditingController();
   PwdRateItem? _item;
   int _region = 0;
+  int _volume = 0;
+
+  PwdRateTable get _table => widget.tables[_volume];
 
   @override
   void dispose() {
@@ -46,14 +55,15 @@ class _BoqTabState extends State<BoqTab> {
     final locale = context.locale;
     final bn = locale.isBangla;
     final theme = Theme.of(context);
-    final table = widget.table;
+    final table = _table;
 
     final boq = Bn.parse(_boqRate.text) ?? 0;
     final quantity = Bn.parse(_quantity.text) ?? 0;
     final item = _item;
 
     CalcResult? result;
-    if (item != null && boq > 0 && quantity > 0) {
+    final scheduleRate = item?.rateFor(_region);
+    if (item != null && scheduleRate != null && boq > 0 && quantity > 0) {
       try {
         result = const BoqComparison().compare(
           itemLabel: L10nText(
@@ -62,7 +72,7 @@ class _BoqTabState extends State<BoqTab> {
           ),
           scheduleLabel: table.schedule,
           unit: item.unit,
-          scheduleRate: item.rateFor(_region),
+          scheduleRate: scheduleRate,
           boqRate: boq,
           quantity: quantity,
           locale: locale,
@@ -75,6 +85,30 @@ class _BoqTabState extends State<BoqTab> {
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 40),
       children: [
+        if (widget.tables.length > 1) ...[
+          Text(
+            bn ? 'কোন তফসিল' : 'Which schedule',
+            style: theme.textTheme.labelLarge,
+          ),
+          const SizedBox(height: 8),
+          Wrap(
+            spacing: 8,
+            children: [
+              for (var i = 0; i < widget.tables.length; i++)
+                ChoiceChip(
+                  label: Text(widget.tables[i].volume?.of(locale) ??
+                      (bn ? 'পুর্ত কাজ' : 'Civil works')),
+                  selected: _volume == i,
+                  onSelected: (_) => setState(() {
+                    _volume = i;
+                    _item = null;
+                    _search.clear();
+                  }),
+                ),
+            ],
+          ),
+          const SizedBox(height: 16),
+        ],
         _EditionCard(table: table),
         const SizedBox(height: 16),
         DropdownButtonFormField<int>(
@@ -164,16 +198,17 @@ class _BoqTabState extends State<BoqTab> {
           const SizedBox(height: 20),
           if (result != null) _Result(result: result),
           const SizedBox(height: 16),
+          if (table.profitPercent != null && table.overheadPercent != null)
           Text(
             bn
                 ? 'মনে রাখবেন: শিডিউলের রেটে ঠিকাদারের লাভ '
-                    '${Bn.number(table.profitPercent, decimals: 0, locale: locale)}% '
+                    '${Bn.number(table.profitPercent!, decimals: 0, locale: locale)}% '
                     'ও ওভারহেড '
-                    '${Bn.number(table.overheadPercent, decimals: 1, locale: locale)}% '
+                    '${Bn.number(table.overheadPercent!, decimals: 1, locale: locale)}% '
                     'আগে থেকেই ধরা আছে।'
                 : 'Note: the schedule rate already includes '
-                    '${table.profitPercent.toStringAsFixed(0)}% contractor '
-                    'profit and ${table.overheadPercent.toStringAsFixed(1)}% '
+                    '${table.profitPercent!.toStringAsFixed(0)}% contractor '
+                    'profit and ${table.overheadPercent!.toStringAsFixed(1)}% '
                     'overhead.',
             style: theme.textTheme.bodySmall?.copyWith(
               color: theme.colorScheme.onSurfaceVariant,
@@ -272,7 +307,9 @@ class _Results extends StatelessWidget {
               subtitle: Text(i.description, maxLines: 3,
                   overflow: TextOverflow.ellipsis),
               trailing: Text(
-                Bn.taka(i.rateFor(region), locale: locale),
+                i.rateFor(region) == null
+                    ? '—'
+                    : Bn.taka(i.rateFor(region)!, locale: locale),
                 style: theme.textTheme.titleSmall,
               ),
               onTap: () => onPick(i),
@@ -311,7 +348,7 @@ class _PickedItem extends StatelessWidget {
           const SizedBox(height: 6),
           Text(
             '${bn ? 'অধ্যায়' : 'Chapter'} '
-            '${Bn.number(item.chapter.toDouble(), decimals: 0, locale: locale)}'
+            '${Bn.localiseDigits(item.chapter, locale)}'
             ' · ${item.chapterName.of(locale)}',
             style: theme.textTheme.bodySmall?.copyWith(
               color: theme.colorScheme.onSurfaceVariant,
@@ -321,8 +358,12 @@ class _PickedItem extends StatelessWidget {
           ValueRow(
             label: '${bn ? 'শিডিউল রেট' : 'Schedule rate'} · '
                 '${regionName.of(locale)}',
-            value: '${Bn.taka(item.rateFor(region), decimals: 2, locale: locale)}'
-                ' / ${item.unit.of(locale)}',
+            value: item.rateFor(region) == null
+                ? (bn
+                    ? 'প্রকাশিত তফসিলে এই অঞ্চলের রেট স্পষ্ট নয়'
+                    : 'the published schedule does not state this zone clearly')
+                : '${Bn.taka(item.rateFor(region)!, decimals: 2, locale: locale)}'
+                    ' / ${item.unit.of(locale)}',
             emphasis: true,
           ),
           Align(

@@ -26,12 +26,15 @@ class PwdRateItem {
     required this.description,
     required this.unit,
     required this.rates,
+    this.unclearZones = const [],
   });
 
   /// Item number as printed, e.g. '07.1.3'.
   final String code;
 
-  final int chapter;
+  /// Chapter of the civil volume, or subhead of the E/M volume, as printed.
+  /// A string because the E/M volume numbers some of its subheads '2.1', '20.1'.
+  final String chapter;
   final L10nText chapterName;
 
   /// English as published — the schedule itself is written in English.
@@ -40,9 +43,18 @@ class PwdRateItem {
   final L10nText unit;
 
   /// One rate per region, in the same order as [PwdRateTable.regions].
-  final List<double> rates;
+  ///
+  /// A null means the published schedule does not give a usable figure for that
+  /// zone. The E/M volume misprints some of them — row 7.1.1.2 prints
+  /// "109,117.00 | 1946 | 18789 | 18789" where the row above it prints
+  /// "92,722.00 | 92652 | 92395 | 92395" — and a rate invented to fill the gap
+  /// would be far worse here than an absent one.
+  final List<double?> rates;
 
-  double rateFor(int regionIndex) =>
+  /// Indices of [rates] the published schedule does not state clearly.
+  final List<int> unclearZones;
+
+  double? rateFor(int regionIndex) =>
       rates[regionIndex.clamp(0, rates.length - 1)];
 
   /// Whether this item answers [query].
@@ -87,11 +99,18 @@ class PwdRateItem {
 
   factory PwdRateItem.fromJson(Map<String, dynamic> j) => PwdRateItem(
         code: j['code'] as String,
-        chapter: j['ch'] as int,
+        chapter: '${j['ch']}',
         chapterName: L10nText(j['ch_bn'] as String, j['ch_en'] as String?),
         description: j['desc'] as String,
-        unit: L10nText(j['unit_bn'] as String, j['unit'] as String),
-        rates: (j['rates'] as List).map((e) => (e as num).toDouble()).toList(),
+        unit: L10nText(
+          (j['unit_bn'] ?? j['unit'] ?? '') as String,
+          j['unit'] as String?,
+        ),
+        rates: (j['rates'] as List)
+            .map((e) => e == null ? null : (e as num).toDouble())
+            .toList(),
+        unclearZones:
+            ((j['unclear_zones'] as List?) ?? const []).cast<int>().toList(),
       );
 }
 
@@ -112,6 +131,8 @@ class PwdRateTable {
     required this.profitPercent,
     required this.overheadPercent,
     required this.vatPercent,
+    this.volume,
+    this.notIncluded,
   });
 
   final L10nText schedule;
@@ -127,10 +148,20 @@ class PwdRateTable {
   final List<SorRegion> regions;
   final List<PwdRateItem> items;
 
-  /// Built into every rate in the schedule.
-  final double profitPercent;
-  final double overheadPercent;
-  final double vatPercent;
+  /// Built into every rate in the schedule, where the volume says so.
+  ///
+  /// Null for the E/M volume, which states no profit or overhead basis of its
+  /// own — and whose subhead 13 prints rates explicitly "WITHOUT PROFIT,
+  /// OVERHEAD", so the civil volume's figures must not be assumed to carry over.
+  final double? profitPercent;
+  final double? overheadPercent;
+  final double? vatPercent;
+
+  /// Which published volume this is, for a reader choosing between them.
+  final L10nText? volume;
+
+  /// What the volume does not cover, stated so a gap is never read as a zero.
+  final L10nText? notIncluded;
 
   factory PwdRateTable.fromJson(Map<String, dynamic> j) => PwdRateTable(
         schedule: L10nText(
@@ -140,11 +171,11 @@ class PwdRateTable {
         effective: j['effective'] as String,
         sourceUrl: j['source_url'] as String,
         extracted: j['extracted'] as String,
-        profitPercent:
-            ((j['markups'] as Map)['profit_percent'] as num).toDouble(),
-        overheadPercent:
-            ((j['markups'] as Map)['overhead_percent'] as num).toDouble(),
-        vatPercent: ((j['markups'] as Map)['vat_percent'] as num).toDouble(),
+        profitPercent: _markup(j, 'profit_percent'),
+        overheadPercent: _markup(j, 'overhead_percent'),
+        vatPercent: _markup(j, 'vat_percent'),
+        volume: _text(j['volume']),
+        notIncluded: _text(j['not_included']),
         regions: (j['regions'] as List)
             .map((e) => SorRegion.fromJson((e as Map).cast<String, dynamic>()))
             .toList(),
@@ -172,6 +203,31 @@ class PwdRateTable {
     return out;
   }
 
-  List<int> get chapters =>
-      items.map((i) => i.chapter).toSet().toList()..sort();
+  /// Chapters (civil) or subheads (E/M), in printed order.
+  ///
+  /// Sorted numerically part by part so '20.1' follows '9' rather than '2'.
+  List<String> get chapters {
+    final out = items.map((i) => i.chapter).toSet().toList();
+    out.sort((a, b) {
+      final x = a.split('.'), y = b.split('.');
+      for (var i = 0; i < x.length && i < y.length; i++) {
+        final c = (int.tryParse(x[i]) ?? 0).compareTo(int.tryParse(y[i]) ?? 0);
+        if (c != 0) return c;
+      }
+      return x.length.compareTo(y.length);
+    });
+    return out;
+  }
+
+  static double? _markup(Map<String, dynamic> j, String key) {
+    final m = j['markups'];
+    if (m is! Map) return null;
+    final v = m[key];
+    return v is num ? v.toDouble() : null;
+  }
+
+  static L10nText? _text(Object? raw) {
+    if (raw is! Map) return null;
+    return L10nText(raw['bn'] as String, raw['en'] as String?);
+  }
 }
