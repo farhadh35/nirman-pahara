@@ -202,6 +202,15 @@ class GuideModule {
   final List<GuideCard> cards;
   final String? iconName;
 
+  /// A module written for the engineer's reference tier.
+  ///
+  /// Derived from the cards rather than declared, so a module cannot claim to
+  /// be general reading while carrying detailing tables, or the reverse. The
+  /// guide list shows everything this is false for; the reference section shows
+  /// everything it is true for, and nothing appears in both.
+  bool get isReference =>
+      cards.isNotEmpty && cards.every((c) => c.tier == CardTier.reference);
+
   factory GuideModule.fromJson(Map<String, dynamic> j) => GuideModule(
         id: j['id'] as String,
         code: j['code'] as String,
@@ -263,8 +272,14 @@ class GuidePack {
           if (m.cards.any((c) => c.tier == tier)) m,
       ];
 
-  List<GuideModule> forTrack(Track t) =>
-      modules.where((m) => m.track.covers(t)).toList();
+  List<GuideModule> forTrack(Track t) => modules
+      .where((m) => m.track.covers(t) && !m.isReference)
+      .toList();
+
+  /// The engineer's reference tier, reached from its own entry and never from
+  /// the guide list.
+  List<GuideModule> get reference =>
+      modules.where((m) => m.isReference).toList();
 
   GuideModule? moduleById(String id) {
     for (final m in modules) {

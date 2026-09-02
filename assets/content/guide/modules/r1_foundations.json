@@ -1,0 +1,173 @@
+{
+ "id": "r1_foundations",
+ "code": "R1",
+ "track": "both",
+ "icon": "reference",
+ "title": {
+  "bn": "ফাউন্ডেশন ও ডিটেইলিং — রেফারেন্স",
+  "en": "Foundations and detailing — reference"
+ },
+ "summary": {
+  "bn": "প্রকৌশলী ও সাইট সুপারভাইজারের জন্য। সাধারণ পাঠকের অংশে এগুলো আসে না।",
+  "en": "For engineers and site supervisors. These do not appear in the general reader's guide."
+ },
+ "cards": [
+  {
+   "id": "r1c1",
+   "tier": "reference",
+   "title": {
+    "bn": "অগভীর না গভীর ফাউন্ডেশন",
+    "en": "Shallow or deep"
+   },
+   "body": {
+    "bn": "ফাউন্ডেশন কোন শ্রেণির হবে সেটা ঠিক হয় ভবনের ভার আর যে গভীরতায় নির্ভরযোগ্য স্তর পাওয়া যায়, এই দুটোর সম্পর্কে। উপরের স্তর ভার নিতে পারলে অগভীর ফাউন্ডেশন — আইসোলেটেড ফুটিং, কম্বাইন্ড ফুটিং, স্ট্র্যাপ ফুটিং, আর কলাম ঘন হলে বা মাটি দুর্বল হলে র‍্যাফট। উপরের স্তর ভার নিতে না পারলে গভীর ফাউন্ডেশন — পাইল, আর বড় কাঠামোয় ওয়েল বা কেসন। বাছাইটা সয়েল রিপোর্টের এন-ভ্যালু আর ভার হিসাবের যৌথ ফল, কোনো একটার নয়।",
+    "en": "Which class of foundation is settled by the relationship between the load and the depth at which dependable ground is found. Where the upper layers can carry it, a shallow foundation serves: isolated footings, combined footings, strap footings, and a raft where columns are close or the soil is weak. Where they cannot, a deep foundation: piles, and for large structures wells or caissons. The choice comes from the N-values and the load calculation together, not from either alone."
+   },
+   "watch_for": [
+    {
+     "bn": "কম্বাইন্ড ফুটিং সাধারণত সীমানার কাছের কলামে, যেখানে আইসোলেটেড ফুটিং সমকেন্দ্রিক রাখা যায় না।",
+     "en": "A combined footing usually appears at a boundary column, where an isolated footing cannot be kept concentric."
+    },
+    {
+     "bn": "র‍্যাফট ভার ছড়িয়ে দেয়, কিন্তু অসম বসনের সমস্যা দূর করে না — সেটা মাটির প্রশ্ন।",
+     "en": "A raft spreads load but does not remove differential settlement, which is a soil question."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), অতিরিক্ত অধ্যায়-২ ও ৩",
+      "en": "House construction and site supervision (2019), inserted chapters 2 and 3"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "r1c2",
+   "tier": "reference",
+   "title": {
+    "bn": "পাইলের শ্রেণি ও পাইল ক্যাপ",
+    "en": "Pile classes and the pile cap"
+   },
+   "body": {
+    "bn": "পাইল ভার নেয় দুইভাবে — মাথার নিচের শক্ত স্তরে ঠেকে (এন্ড বিয়ারিং) অথবা গায়ের ঘর্ষণে (ফ্রিকশন) — আর বাস্তবে বেশির ভাগ পাইল দুটোরই মিশ্রণ। উপকরণভেদে কাস্ট-ইন-সিটু, প্রিকাস্ট, টিম্বার আর স্টিল এইচ-পাইল; কাজভেদে শিট পাইল, ব্যাটার পাইল, অ্যাঙ্কর পাইল। পাইল ক্যাপ একাধিক পাইলের মাথা বেঁধে কলামের ভার ভাগ করে দেয়, আর তার পুরুত্ব ও রড ক্যাপের ভেতরের কর্তন-ধরনের উপর নির্ভর করে।",
+    "en": "A pile carries load two ways — bearing on firm ground at its toe, or friction along its shaft — and most piles in practice do some of both. By material: cast in situ, precast, timber and steel H-piles. By duty: sheet piles, batter piles, anchor piles. A pile cap ties the heads of a group and distributes the column load into them; its thickness and steel follow the shear behaviour inside the cap."
+   },
+   "watch_for": [
+    {
+     "bn": "খাদ্য অধিদপ্তরের ঐ গুদামের নকশায় পাইলের ব্যাস ১৮ ইঞ্চি।",
+     "en": "The Directorate General of Food godown drawings use an 18 inch pile."
+    },
+    {
+     "bn": "গ্রুপে পাইলের ধারণক্ষমতা এককের যোগফল নয় — গ্রুপ এফিসিয়েন্সি আলাদা হিসাব।",
+     "en": "Group capacity is not the sum of the singles; group efficiency is its own calculation."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "খাদ্য অধিদপ্তরের ১০০০ মেট্রিক টন গুদামের ওয়ার্কিং ড্রয়িং (আগস্ট ২০২৪)",
+      "en": "Directorate General of Food working drawings for a 1000 MT godown (August 2024)"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "r1c3",
+   "tier": "reference",
+   "title": {
+    "bn": "টাই বিম ও গ্রেড বিম",
+    "en": "Tie beams and grade beams"
+   },
+   "body": {
+    "bn": "টাই বিম কলামের গোড়াগুলোকে বেঁধে রাখে, যাতে ভূমিকম্প বা অসম বসনে কলামগুলো আলাদা আলাদাভাবে না নড়ে। খাদ্য অধিদপ্তরের ঐ গুদামের নকশায় টাই বিম টিবি১-এর মাপ ১২ × ১৮ ইঞ্চি, উপরে ও নিচে ৩টি করে ২০ মিলিমিটার রড, স্টিরাপ ১০ মিলিমিটার প্রান্তে ৪ ইঞ্চি ও মাঝে ৬ ইঞ্চি পরপর, আর ক্লিয়ার কভার ১.৫ ইঞ্চি। প্রান্তের ঘন অংশটি ৫ ফুট পর্যন্ত।",
+    "en": "A tie beam locks the column bases together so they cannot move independently under earthquake or differential settlement. In those godown drawings tie beam TB1 is 12 × 18 inches, with three 20 mm bars top and bottom, 10 mm stirrups at 4 inches near the ends and 6 inches through the middle, and 1½ inches clear cover. The close-spaced end zone runs 5 feet."
+   },
+   "watch_for": [
+    {
+     "bn": "প্রান্তে স্টিরাপ ঘন থাকার কারণ কর্তন — মাঝখানে নয়, মাথার দিকেই বিম ভাঙে।",
+     "en": "Stirrups close up at the ends because of shear: a beam fails there, not at mid-span."
+    },
+    {
+     "bn": "এই মাপগুলো ঐ টাইপ ডিজাইনের, সর্বজনীন মান নয়।",
+     "en": "These are that type design's figures, not a universal standard."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "খাদ্য অধিদপ্তরের ১০০০ মেট্রিক টন গুদামের ওয়ার্কিং ড্রয়িং (আগস্ট ২০২৪)",
+      "en": "Directorate General of Food working drawings for a 1000 MT godown (August 2024)"
+     },
+     "status": "review"
+    }
+   ],
+   "diagram": "stirrup_spacing"
+  },
+  {
+   "id": "r1c4",
+   "tier": "reference",
+   "title": {
+    "bn": "সীমানা প্রাচীরের ডিটেইল",
+    "en": "Boundary wall detailing"
+   },
+   "body": {
+    "bn": "সীমানা প্রাচীর ছোট কাঠামো, কিন্তু ডিটেইল ছাড়া বানালে হেলে পড়ে বা ফেটে যায়। ঐ নকশায় ফুটিং এফ১ ৪ × ৪ ফুট, ১২ মিলিমিটার রড উভয় দিকে ৬ ইঞ্চি পরপর, ২ ইঞ্চি ক্লিয়ার। কলাম ১০ × ১০ ইঞ্চি, ৪টি ১৬ মিলিমিটার রড, ১০ মিলিমিটার টাই ৬ ইঞ্চি পরপর; নিচের অংশে ১৩ × ১৩ ইঞ্চি। গ্রেড বিম ১০ × ১২ ইঞ্চি। দেয়াল ৫ ইঞ্চি গাঁথুনি, কলামের ফাঁক ১০ ফুট, আর এক্সপ্যানশন জয়েন্ট আধা ইঞ্চি করে ৩২ ফুট পরপর।",
+    "en": "A boundary wall is a small structure that leans or cracks when built without detailing. In those drawings footing F1 is 4 × 4 feet with 12 mm bars at 6 inches both ways and 2 inches clear. The column is 10 × 10 inches with four 16 mm bars and 10 mm ties at 6 inches, thickening to 13 × 13 at the base. The grade beam is 10 × 12 inches. The wall is 5 inch masonry, columns at 10 foot centres, with half-inch expansion joints every 32 feet."
+   },
+   "watch_for": [
+    {
+     "bn": "এক্সপ্যানশন জয়েন্ট বাদ পড়লে লম্বা প্রাচীরে তাপের কারণে ফাটল ধরে।",
+     "en": "Without expansion joints a long wall cracks from thermal movement."
+    },
+    {
+     "bn": "কলামের ফাঁক বাড়ালে গাঁথুনির উপর ভার বাড়ে — ফাঁক আর দেয়ালের পুরুত্ব একসঙ্গে ধরতে হয়।",
+     "en": "Widening the column spacing loads the masonry more; spacing and wall thickness are chosen together."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "খাদ্য অধিদপ্তরের ১০০০ মেট্রিক টন গুদামের ওয়ার্কিং ড্রয়িং (আগস্ট ২০২৪)",
+      "en": "Directorate General of Food working drawings for a 1000 MT godown (August 2024)"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "r1c5",
+   "tier": "reference",
+   "title": {
+    "bn": "বোর লগ ও এন-ভ্যালু পড়া",
+    "en": "Reading a bore log and its N-values"
+   },
+   "body": {
+    "bn": "বোর লগে গভীরতার সঙ্গে স্তরের বিবরণ, এন-ভ্যালু আর পানির স্তর থাকে। এন-ভ্যালু স্ট্যান্ডার্ড পেনিট্রেশন টেস্টের আঘাত সংখ্যা, সাধারণত প্রতি ৫ ফুট পরপর নেওয়া। মান যত কম, স্তর তত নরম। রিপোর্টে দেওয়া নিরাপদ ধারণক্ষমতা আনুমানিক — মোটা বালি বা নুড়িতে ৪৫ টন প্রতি বর্গমিটারের ঘরে, খুব নরম কাদায় ৫-এর ঘরে। ভিতের মাপ এই সংখ্যা থেকে সরাসরি আসে না; ভার, গভীরতা আর বসনের সীমা মিলিয়ে হিসাব করতে হয়।",
+    "en": "A bore log carries the layer description against depth, the N-values and the water table. N is the Standard Penetration Test blow count, usually taken every 5 feet, and the smaller it is the softer the layer. The safe bearing capacities quoted in a report are indicative: around 45 tonnes per square metre in coarse sand or gravel, down to about 5 in very soft clay. A footing size does not fall out of that number; it comes from the load, the depth and the settlement limit together."
+   },
+   "watch_for": [
+    {
+     "bn": "এন-ভ্যালুতে বড় ফাঁক মানে ঐ গভীরতায় পরীক্ষা হয়নি — রিপোর্টে সেটা ধরা পড়ে।",
+     "en": "A gap in the N-value column means that depth was not tested, and the report shows it."
+    },
+    {
+     "bn": "ধারণক্ষমতার সারণি আন্দাজের জন্য; নকশা সাইটের নিজস্ব রিপোর্ট ধরেই হয়।",
+     "en": "Bearing tables are for orientation; a design works from the site's own report."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), অতিরিক্ত অধ্যায়-২ ও ৩",
+      "en": "House construction and site supervision (2019), inserted chapters 2 and 3"
+     },
+     "status": "review"
+    }
+   ],
+   "diagram": "bore_log"
+  }
+ ]
+}

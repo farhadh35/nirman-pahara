@@ -10,6 +10,7 @@ import '../../guide/ui/guide_screens.dart';
 import '../../inspection/ui/inspection_screens.dart';
 import '../../prices/ui/prices_screen.dart';
 import '../../boq/ui/schedule_check_screen.dart';
+import '../../reference/ui/reference_screen.dart';
 import '../../rights/ui/rights_screen.dart';
 import '../../settings/ui/settings_screen.dart';
 
@@ -76,6 +77,18 @@ class HomeScreen extends StatelessWidget {
             title: context.t(S.rights),
             subtitle: context.t(S.rightsSub),
             onTap: () => _go(context, const RightsScreen()),
+          ),
+          // Last on the page on purpose: a homeowner should never arrive in the
+          // detailing tier by scrolling, only by deciding to.
+          _Door(
+            icon: Icons.architecture_outlined,
+            title: context.locale.isBangla
+                ? 'প্রকৌশলীর রেফারেন্স'
+                : "Engineer's reference",
+            subtitle: context.locale.isBangla
+                ? 'ডিটেইলিং, ফাউন্ডেশনের ধরন, বোর লগ'
+                : 'Detailing, foundation types, bore logs',
+            onTap: () => _go(context, const ReferenceScreen()),
           ),
         ],
       ),

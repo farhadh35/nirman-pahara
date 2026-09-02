@@ -22,6 +22,7 @@
   "m21_services.json",
   "m22_maintenance.json",
   "m19_cost.json",
-  "m20_earthquake.json"
+  "m20_earthquake.json",
+  "r1_foundations.json"
  ]
 }
