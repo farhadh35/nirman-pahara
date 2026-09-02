@@ -1,0 +1,176 @@
+{
+ "id": "m18_estimate",
+ "code": "M18",
+ "track": "both",
+ "icon": "estimate",
+ "title": {
+  "bn": "এস্টিমেট",
+  "en": "The estimate"
+ },
+ "summary": {
+  "bn": "কত মাল লাগবে, কত টাকা লাগবে — আর যে হিসাবটা আপনাকে ধরিয়ে দেওয়া হলো, সেটা মিলছে কি না।",
+  "en": "How much material, how much money, and whether the figure you were handed adds up."
+ },
+ "cards": [
+  {
+   "id": "m18c1",
+   "tier": "general",
+   "title": {
+    "bn": "এস্টিমেট আসলে একটা তর্কের কাগজ",
+    "en": "An estimate is an argument on paper"
+   },
+   "body": {
+    "bn": "এস্টিমেট মানে একটা মোট টাকার অঙ্ক নয়। এটা একটা তালিকা: কোন কাজ, কত পরিমাণ, প্রতি এককে কত দর, আর গুণ করলে কত। এই চারটে কলাম থাকলে যেকোনো লাইন ধরে প্রশ্ন করা যায় — পরিমাণটা কোথা থেকে এল, দরটা কোথা থেকে এল। এক পাতায় শুধু 'ঢালাই বাবদ ৪ লাখ' লেখা থাকলে প্রশ্ন করার জায়গাই থাকে না, আর সেটাই তার কাজ।",
+    "en": "An estimate is not a total. It is a list: which work, how much of it, what the rate is per unit, and what those multiply to. With those four columns any line can be questioned — where the quantity came from, where the rate came from. A single page saying four lakh for casting leaves nowhere to put a question, and that is what it is for."
+   },
+   "watch_for": [
+    {
+     "bn": "চারটে কলাম আছে কি না দেখুন: কাজ, পরিমাণ, একক দর, মোট।",
+     "en": "Check for the four columns: work, quantity, unit rate, amount."
+    },
+    {
+     "bn": "প্রতিটা লাইনের একক লেখা আছে কি না — ঘনফুট, বর্গফুট নাকি সংখ্যা।",
+     "en": "Whether each line names its unit: cubic feet, square feet or number."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), অষ্টম অধ্যায়",
+      "en": "House construction and site supervision (2019), chapter 8"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m18c2",
+   "tier": "work",
+   "title": {
+    "bn": "১০০ ঘনফুট ঢালাইয়ে কী কী যায়",
+    "en": "What goes into 100 cubic feet of concrete"
+   },
+   "body": {
+    "bn": "ঢালাইয়ের পরিমাণ জানা থাকলে মালামালের হিসাব বেরিয়ে আসে, আর সেটা মিলিয়ে দেখা যায় সাইটে কত ব্যাগ নামল তার সঙ্গে। ১:২:৪ অনুপাতে ১০০ ঘনফুট আরসিসিতে যায় প্রায় ১৮ ব্যাগ সিমেন্ট, ৪৫ ঘনফুট বালি আর ৯০ ঘনফুট খোয়া। বেশি শক্তির ১:১.৫:৩ অনুপাতে একই ১০০ ঘনফুটে ২২ ব্যাগ সিমেন্ট, ৪২ ঘনফুট বালি আর ৮৪ ঘনফুট খোয়া। ভিতের নিচের ১:৩:৬ মাস কনক্রিটে নামে ১৩ ব্যাগে।",
+    "en": "Once the volume of a pour is known the materials follow, and they can be checked against what actually arrived on site. A 1:2:4 mix takes about 18 bags of cement, 45 cubic feet of sand and 90 of aggregate per 100 cubic feet. The stronger 1:1.5:3 takes 22 bags, 42 of sand and 84 of aggregate for the same volume. The 1:3:6 mass concrete under a foundation drops to 13 bags."
+   },
+   "watch_for": [
+    {
+     "bn": "দিনের শেষে খালি ব্যাগ গুনুন। ১০০ ঘনফুট ১:২:৪ ঢালাইয়ে ১৮টার আশপাশে থাকার কথা।",
+     "en": "Count the empty bags at the end of the day: about 18 for 100 cubic feet of 1:2:4."
+    },
+    {
+     "bn": "এক ব্যাগ সিমেন্টে ২০–২৫ লিটারের বেশি পানি গেলে শক্তি পড়ে যায়।",
+     "en": "More than 20 to 25 litres of water to a bag and the strength drops."
+    },
+    {
+     "bn": "এক টনে ২০ ব্যাগ। ট্রাকে কত টন এল, কত ব্যাগ নামল — দুটো মেলান।",
+     "en": "Twenty bags to the tonne: match what the truck billed against what came off it."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "অনুপাত থেকে গণনা করে মিলিয়ে দেখা হয়েছে",
+      "en": "Checked by computing from the mix ratio"
+     },
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": "m18c3",
+   "tier": "work",
+   "title": {
+    "bn": "গাঁথুনি, প্লাস্টার আর সোলিংয়ের হিসাব",
+    "en": "Masonry, plaster and soling"
+   },
+   "body": {
+    "bn": "১০০ ঘনফুট ১০ ইঞ্চি গাঁথুনিতে (১:৬) যায় প্রায় ১১৫০টা প্রথম শ্রেণীর ইট, ৪ ব্যাগ সিমেন্ট আর ৩০ ঘনফুট বালি। ৫ ইঞ্চি দেয়ালের হিসাব হয় বর্গফুটে — ১০০ বর্গফুটে ৫০০ ইট, ৩ ব্যাগ সিমেন্ট, ১৩ ঘনফুট বালি। ইটের সলিংয়ে ১০০ বর্গফুটে ৩০০ ইট, আর হেরিং বোন বন্ডে সেটা ৫০০। ৬ মিলিমিটার পুরু ১:৪ প্লাস্টারে ১০০ বর্গফুটে আধা ব্যাগ সিমেন্ট আর ২ ঘনফুট বালি।",
+    "en": "A hundred cubic feet of 10 inch masonry in 1:6 takes about 1,150 first class bricks, 4 bags of cement and 30 cubic feet of sand. A 5 inch wall is counted by area instead: 500 bricks, 3 bags and 13 cubic feet of sand per 100 square feet. Brick soling runs 300 bricks per 100 square feet, and herringbone 500. Six millimetre plaster in 1:4 takes half a bag of cement and 2 cubic feet of sand per 100 square feet."
+   },
+   "watch_for": [
+    {
+     "bn": "১০ ইঞ্চি দেয়ালের হিসাব ঘনফুটে, ৫ ইঞ্চির হিসাব বর্গফুটে — একক গুলিয়ে ফেললে হিসাব বহু গুণ ভুল হয়।",
+     "en": "A 10 inch wall is measured by volume and a 5 inch wall by area. Mixing the two throws the figure out by a wide margin."
+    },
+    {
+     "bn": "ইট গোনা যায়, আর গাঁথুনি হয়ে যাওয়ার পরেও সামনের দিকের সারি গুনে আন্দাজ মেলানো যায়।",
+     "en": "Bricks can be counted, and even after building the visible courses give a rough check."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), অষ্টম অধ্যায়, (৩-৪)",
+      "en": "House construction and site supervision (2019), chapter 8, (3-4)"
+     },
+     "status": "review"
+    }
+   ],
+   "diagram": "brick_bond"
+  },
+  {
+   "id": "m18c4",
+   "tier": "work",
+   "title": {
+    "bn": "কত মিস্ত্রী, কত লেবার",
+    "en": "How many masons, how many labourers"
+   },
+   "body": {
+    "bn": "কাজের পরিমাণ থেকে লোকের সংখ্যাও আন্দাজ করা যায়, আর সেটা সাইটে দাঁড়িয়ে গুনে মেলানো যায়। ১০০ ঘনফুট ১০ ইঞ্চি গাঁথুনিতে মোটামুটি ৪ জন মিস্ত্রী আর ৬ জন লেবার, ১০০ ঘনফুট আরসিসি ঢালাইয়ে ২ জন মিস্ত্রী আর ৬ জন লেবার, ১০০ বর্গফুট প্লাস্টারে ১ জন মিস্ত্রী আর ২ জন লেবার। বিলে যত জনের মজুরি দেখানো হয়েছে আর সাইটে যত লোক কাজ করেছে — এই দুটো মেলানোই এই সংখ্যাগুলোর কাজ।",
+    "en": "The quantity of work also implies how many people, and that can be counted standing on site. A hundred cubic feet of 10 inch masonry runs to roughly 4 masons and 6 labourers; 100 cubic feet of RCC to 2 masons and 6 labourers; 100 square feet of plaster to 1 mason and 2 labourers. What these figures are for is comparing the wages a bill claims against the people who were actually there."
+   },
+   "watch_for": [
+    {
+     "bn": "এগুলো আন্দাজের হিসাব। দক্ষতা, আবহাওয়া আর সাইটের অবস্থা ধরে সংখ্যা বদলায়।",
+     "en": "These are approximations. Skill, weather and site conditions all move them."
+    },
+    {
+     "bn": "সংখ্যা কম হলেই কারচুপি নয় — কাজ ধীরে হচ্ছে কি না, সেটাও এই হিসাবেই ধরা পড়ে।",
+     "en": "A low count is not proof of anything: it may equally show the work is running slow."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), অষ্টম অধ্যায়, (৩-৪) — আনুমানিক লেবার হিসাব",
+      "en": "House construction and site supervision (2019), chapter 8, (3-4) — indicative labour figures"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m18c5",
+   "tier": "work",
+   "title": {
+    "bn": "দর কোথা থেকে আসার কথা",
+    "en": "Where the rate is supposed to come from"
+   },
+   "body": {
+    "bn": "পরিমাণ আপনি মেপে বের করতে পারেন; দর আপনাকে দেওয়া হয়। সরকারি কাজে সেই দরের উৎস নির্দিষ্ট — গণপূর্ত অধিদপ্তরের রেট শিডিউল, যেখানে প্রতিটা আইটেমের দর অঞ্চলভেদে আলাদা করে ছাপা আছে। এই অ্যাপে পূর্ত কাজের ১,৭৪৯টা আর তড়িৎ-যান্ত্রিক কাজের ২,৬০৬টা আইটেম সঙ্গেই আছে, চারটে অঞ্চলের দরসহ। বিলের দর আর শিডিউলের দর পাশাপাশি রেখে দেখলে ফারাকটা চোখে পড়ে — কেন ফারাক, সেটা দপ্তরই বলতে পারবে।",
+    "en": "You can measure the quantity; the rate is handed to you. On a public work the rate has a stated source: the Public Works Department's schedule, which prints a rate for every item, separately for each region. This app carries 1,749 civil items and 2,606 electro-mechanical ones, with all four regional rates. Put the bill's rate beside the schedule's and the gap shows. Why there is a gap is for the department to answer."
+   },
+   "watch_for": [
+    {
+     "bn": "অঞ্চল ঠিক আছে কি না দেখুন — ঢাকার দর দিয়ে রংপুরের কাজ মাপা ভুল উত্তর দেয়।",
+     "en": "Check the region: measuring a Rangpur work against Dhaka rates gives a wrong answer."
+    },
+    {
+     "bn": "শিডিউলের দরে ঠিকাদারের লাভ ও ওভারহেড আগে থেকেই ধরা থাকে — উপরে আবার যোগ হওয়ার কথা নয়।",
+     "en": "The schedule's civil rates already include contractor profit and overhead; they are not added again on top."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "PWD Schedule of Rates 2022 (২য় সংশোধিত)",
+      "en": "PWD Schedule of Rates 2022 (2nd revised)"
+     },
+     "status": "verified"
+    }
+   ]
+  }
+ ]
+}
