@@ -63,7 +63,12 @@ are signed with this key and not with a debug fallback.
       if you want the report and the rate-schedule findings shown.
 - [x] Feature graphic at `store/feature-graphic-1024x500.png`
 - [ ] Content rating questionnaire
-- [ ] Ads declaration: yes
+- [ ] **Ads declaration: no.** This said "yes". There is no ad SDK in the
+      build — nothing in `pubspec.yaml`, nothing in the manifest — so declaring
+      ads would be telling Google something untrue about the binary being
+      uploaded. Change it to "yes" in the same release that first ships an ad
+      SDK, not before, and set the ad network's category blocking first
+      (`docs/AD_POLICY.md`).
 - [ ] Target audience: adults
 - [ ] Countries: Bangladesh at minimum
 - [ ] Configure the ad network's category blocking before the first ad is
@@ -75,6 +80,25 @@ are signed with this key and not with a debug fallback.
       lists every cited claim; the ones still marked `review` show an amber
       badge in the app. Publishing with structural claims unreviewed is the
       main outstanding risk, not a build problem.
+
+## Uploading 2.0.0
+
+The listing text changed this release, so it is not a bundle-only upload.
+
+1. **Bundle** — `build/app/outputs/bundle/release/app-release.aab`, built from
+   `flutter build appbundle --release`. Version 2.0.0, versionCode 4.
+2. **Release notes** — the `2.0.0 (4)` block in `store/RELEASE-NOTES.md`. Paste
+   the `<bn-BD>` text into Bengali and the `<en-US>` text into English. Both are
+   inside Play's 500-character limit.
+3. **Store listing** — `store/LISTING-bn.md` and `store/LISTING-en.md` under
+   Main store listing. The full descriptions changed: they were still
+   describing six calculators and 42 guide cards, and the app now has seventeen
+   and ninety-seven. Both are under the 4,000-character limit.
+4. **What is new to mention if asked**: the plot-rules screen reads the FAR
+   index off Table 5 of the 2025 Dhaka building rules gazette. It reports a
+   ceiling, not an approval, and says so on the screen — worth keeping that
+   distinction in any description written outside these files.
+5. Roll out staged, not to 100% at once.
 
 ## Building a release
 
