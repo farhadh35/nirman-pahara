@@ -30,11 +30,15 @@ class ShutteringCalculator {
   CalcResult compute({
     required ShutterElement element,
     required double a,
-    required double b,
+    double b = 1,
     required double runFt,
     int count = 1,
   }) {
-    for (final d in [a, b, runFt]) {
+    // A wall is measured on its length and its height; it has no second
+    // cross-section dimension, so asking for one only to ignore it would make
+    // the form demand a number that means nothing.
+    final used = element == ShutterElement.wall ? [a, runFt] : [a, b, runFt];
+    for (final d in used) {
       if (!d.isFinite || d <= 0) {
         throw CalcException(const L10nText(
           'প্রতিটি মাপ শূন্যের বড় একটি সংখ্যা হতে হবে।',
@@ -60,7 +64,7 @@ class ShutteringCalculator {
         formula = L10nText(
           'বিম = (২ × গভীরতা + চওড়া) × দৈর্ঘ্য = (২ × ${_fmt(depthFt)} + '
               '${_fmt(widthFt)}) × ${_fmt(runFt)} = ${_fmt(perOne)} বর্গফুট। '
-              'উপরের মুখ খোলা — ওখানে স্ল্যাব বসে।',
+              'উপরের দিক খোলা — ওখানে স্ল্যাব বসে।',
           'Beam = (2 × depth + width) × span = (2 × ${_fmt(depthFt)} + '
               '${_fmt(widthFt)}) × ${_fmt(runFt)} = ${_fmt(perOne)} sft. The '
               'top is open: the slab closes it.',
@@ -80,7 +84,7 @@ class ShutteringCalculator {
         final thickFt = runFt / 12.0;
         perOne = a * b + 2 * (a + b) * thickFt;
         formula = L10nText(
-          'স্ল্যাব = নিচের মুখ + চারপাশের কিনারা = (${_fmt(a)} × ${_fmt(b)}) + '
+          'স্ল্যাব = নিচের দিক + চারপাশের কিনারা = (${_fmt(a)} × ${_fmt(b)}) + '
               '২ × (${_fmt(a)} + ${_fmt(b)}) × ${_fmt(thickFt)} = '
               '${_fmt(perOne)} বর্গফুট।',
           'Slab = soffit + the edge all round = (${_fmt(a)} × ${_fmt(b)}) + '
@@ -121,13 +125,13 @@ class ShutteringCalculator {
           : formula,
       assumptions: [
         const L10nText(
-          'শুধু যে মুখ কংক্রিট ছোঁয় সেটুকুই ধরা হয়েছে — বিল এভাবেই হয়।',
+          'কংক্রিট যে পাশে ঠেকে শুধু সেটুকুই ধরা হয়েছে — বিল এভাবেই হয়।',
           'Only the faces the concrete touches are counted, which is how the '
               'bill is written.',
         ),
         if (element == ShutterElement.beam)
           const L10nText(
-            'বিমের উপরের মুখ ধরা হয়নি; স্ল্যাব ঢালাইয়ের সঙ্গে ওটা বন্ধ হয়।',
+            'বিমের উপরের দিক ধরা হয়নি; স্ল্যাব ঢালাইয়ের সঙ্গে ওটা বন্ধ হয়।',
             'The top of the beam is not counted: the slab pour closes it.',
           ),
         if (element == ShutterElement.slab)

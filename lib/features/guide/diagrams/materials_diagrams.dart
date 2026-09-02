@@ -203,10 +203,10 @@ class BrickBondPainter extends CustomPainter {
       canvas,
       english
           ? (bn
-              ? 'এক সারি লম্বা মুখ, পরের সারি আড়াআড়ি মুখ'
+              ? 'এক সারি লম্বা পাশ, পরের সারি আড়াআড়ি পাশ'
               : 'One course all stretchers, the next all headers')
           : (bn
-              ? 'একই সারিতে লম্বা আর আড়াআড়ি মুখ পাশাপাশি'
+              ? 'একই সারিতে লম্বা আর আড়াআড়ি দিক পাশাপাশি'
               : 'Stretchers and headers alternate within the course'),
       Offset(cell.left + 8, area.bottom + 6),
       colour: palette.muted,

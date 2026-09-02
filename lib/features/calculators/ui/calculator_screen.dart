@@ -101,7 +101,11 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 onChanged: (v) => setState(() => _choices[f.key] = v),
               )
             else
-              _NumberField(field: f, controller: _controllers[f.key]!),
+              _NumberField(
+                field: f,
+                controller: _controllers[f.key]!,
+                values: _values,
+              ),
             const SizedBox(height: 16),
           ],
           const SizedBox(height: 8),
@@ -116,10 +120,18 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 }
 
 class _NumberField extends StatelessWidget {
-  const _NumberField({required this.field, required this.controller});
+  const _NumberField({
+    required this.field,
+    required this.controller,
+    required this.values,
+  });
 
   final CalcField field;
   final TextEditingController controller;
+
+  /// The whole form, so a field that renames itself with another field's
+  /// choice can read that choice.
+  final Map<String, dynamic> values;
 
   @override
   Widget build(BuildContext context) {
@@ -132,10 +144,14 @@ class _NumberField extends StatelessWidget {
         if (field.money) GroupedNumberFormatter(context.locale),
       ],
       decoration: InputDecoration(
-        labelText: context.t(field.label),
-        helperText: field.hint == null ? null : context.t(field.hint!),
+        labelText: context.t(field.labelFor(values)),
+        helperText: field.hintFor(values) == null
+            ? null
+            : context.t(field.hintFor(values)!),
         helperMaxLines: 3,
-        suffixText: field.suffix == null ? null : context.t(field.suffix!),
+        suffixText: field.suffixFor(values) == null
+            ? null
+            : context.t(field.suffixFor(values)!),
       ),
     );
   }

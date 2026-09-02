@@ -101,12 +101,27 @@ void main() {
     expect(find.text('ভাষা'), findsOneWidget);
 
     await _tapText(tester, 'পরবর্তী');
-    expect(find.text('শিখুন'), findsOneWidget);
-    expect(find.text('পরিদর্শন'), findsOneWidget);
-    expect(find.text('হিসাব'), findsOneWidget);
-    expect(find.text('দাম যাচাই'), findsOneWidget);
-    expect(find.text('অধিকার'), findsOneWidget);
+    // The track chips sit above the doors, so they are checked before the page
+    // is scrolled down past them.
     expect(find.text('নিজের বাড়ি'), findsOneWidget);
+    // Every door on the home page, found by scrolling to it rather than by
+    // assuming the whole list fits: the page grew past one screen when the
+    // measuring tools, the tables and the plot rules were added, and a test
+    // that only sees the top of it stops testing the bottom of it.
+    for (final door in const [
+      'শিখুন',
+      'পরিদর্শন',
+      'হিসাব',
+      'মাপজোখ',
+      'মাপ ও তালিকা',
+      'জমিতে কতটুকু করা যাবে',
+      'দাম যাচাই',
+      'অধিকার',
+      'প্রকৌশলীর রেফারেন্স',
+    ]) {
+      await _scrollTo(tester, find.text(door));
+      expect(find.text(door), findsOneWidget, reason: 'no door for "$door"');
+    }
   });
 
   testWidgets('the guide opens a module and pages through its cards',
@@ -408,12 +423,19 @@ void main() {
     await tester.pageBack();
     await tester.pumpAndSettle();
 
-    expect(find.text('Learn'), findsOneWidget);
-    expect(find.text('Inspect'), findsOneWidget);
-    expect(find.text('Check prices'), findsOneWidget);
-    // Six doors now; the last one sits below the fold.
-    await _scrollTo(tester, find.text('Your rights'));
-    expect(find.text('Your rights'), findsOneWidget);
+    // Nine doors now, most of them below the fold, so each is scrolled to.
+    for (final door in const [
+      'Learn',
+      'Inspect',
+      'Measuring tools',
+      'Standards and tables',
+      'What the plot allows',
+      'Check prices',
+      'Your rights',
+    ]) {
+      await _scrollTo(tester, find.text(door));
+      expect(find.text(door), findsOneWidget, reason: 'no door for "$door"');
+    }
   });
 
   testWidgets('English carries through into content, not just chrome',

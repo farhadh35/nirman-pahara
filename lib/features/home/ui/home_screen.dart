@@ -6,6 +6,9 @@ import '../../../core/content/models.dart';
 import '../../../core/i18n/app_locale.dart';
 import '../../../core/i18n/strings.dart';
 import '../../calculators/ui/calculators_screen.dart';
+import '../../lookups/ui/lookups_screen.dart';
+import '../../measure/ui/measure_screen.dart';
+import '../../rules/ui/far_screen.dart';
 import '../../guide/ui/guide_screens.dart';
 import '../../inspection/ui/inspection_screens.dart';
 import '../../prices/ui/prices_screen.dart';
@@ -59,6 +62,33 @@ class HomeScreen extends StatelessWidget {
             title: context.t(S.calculate),
             subtitle: context.t(S.calculateSub),
             onTap: () => _go(context, const CalculatorsScreen()),
+          ),
+          _Door(
+            icon: Icons.straighten_outlined,
+            title: context.locale.isBangla ? 'মাপজোখ' : 'Measuring tools',
+            subtitle: context.locale.isBangla
+                ? 'কাঠা-বিঘা-শতাংশ, সুতা থেকে মিলিমিটার, ক্ষেত্রফল ও আয়তন'
+                : 'Katha, bigha and decimals; suta to millimetres; areas and '
+                    'volumes',
+            onTap: () => _go(context, const MeasureScreen()),
+          ),
+          _Door(
+            icon: Icons.table_chart_outlined,
+            title: context.locale.isBangla ? 'মাপ ও তালিকা' : 'Standards and tables',
+            subtitle: context.locale.isBangla
+                ? 'অনুপাত, কিউরিং, শাটার খোলার সময়, বালির এফএম'
+                : 'Mix ratios, curing, striking times, sand fineness',
+            onTap: () => _go(context, const LookupsScreen()),
+          ),
+          _Door(
+            icon: Icons.apartment_outlined,
+            title: context.locale.isBangla
+                ? 'জমিতে কতটুকু করা যাবে'
+                : 'What the plot allows',
+            subtitle: context.locale.isBangla
+                ? 'সামনের রাস্তার মাপ ধরে গেজেটের FAR সূচক'
+                : "The gazette's FAR index, read off the road in front",
+            onTap: () => _go(context, const FarScreen()),
           ),
           _Door(
             icon: Icons.trending_up,

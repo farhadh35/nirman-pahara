@@ -272,8 +272,8 @@ class _SutaTabState extends State<_SutaTab> {
             child: Column(
               children: [
                 ValueRow(
-                  label: context.t(nearest.label),
-                  value: nearest.inchLabel,
+                  label: Bn.localiseDigits(context.t(nearest.label), locale),
+                  value: Bn.localiseDigits(nearest.inchLabel, locale),
                   emphasis: true,
                 ),
                 ValueRow(
@@ -322,7 +322,7 @@ class _SutaTabState extends State<_SutaTab> {
                 for (final s in SutaSize.values)
                   DataRow(cells: [
                     DataCell(Text(Bn.localiseDigits('${s.suta}', locale))),
-                    DataCell(Text(s.inchLabel)),
+                    DataCell(Text(Bn.localiseDigits(s.inchLabel, locale))),
                     DataCell(Text(Bn.number(s.nominalMm.toDouble(),
                         decimals: 0, locale: locale))),
                     DataCell(Text(Bn.number(s.roundingMm,

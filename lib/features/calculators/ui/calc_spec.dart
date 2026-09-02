@@ -87,6 +87,10 @@ class CalcField {
     this.choices,
     this.optional = false,
     this.money = false,
+    this.variesWith,
+    this.labelWhen,
+    this.hintWhen,
+    this.suffixWhen,
   });
 
   final String key;
@@ -104,6 +108,34 @@ class CalcField {
   /// Taka amounts are grouped as the user types — a seven-digit contract value
   /// is unreadable otherwise.
   final bool money;
+
+  /// The key of a choice field this one follows.
+  ///
+  /// Some forms ask for the same box under different names. Shuttering is the
+  /// case that forced this: the first measurement is a beam's width in inches,
+  /// a slab's length in feet or a wall's length in feet, depending on what is
+  /// being built. Labelling that box "Measurement 1" and explaining all three
+  /// in a hint is how a form gets filled in wrong.
+  final String? variesWith;
+
+  final Map<String, L10nText>? labelWhen;
+  final Map<String, L10nText>? hintWhen;
+  final Map<String, L10nText>? suffixWhen;
+
+  String? _driver(Map<String, dynamic> values) {
+    if (variesWith == null) return null;
+    final v = values[variesWith];
+    return v is String ? v : null;
+  }
+
+  L10nText labelFor(Map<String, dynamic> values) =>
+      labelWhen?[_driver(values)] ?? label;
+
+  L10nText? hintFor(Map<String, dynamic> values) =>
+      hintWhen?[_driver(values)] ?? hint;
+
+  L10nText? suffixFor(Map<String, dynamic> values) =>
+      suffixWhen?[_driver(values)] ?? suffix;
 
   bool get isChoice => choices != null;
 }
@@ -666,54 +698,83 @@ class CalcSpec {
       group: CalcGroup.casting,
       title: const L10nText('শাটারিং', 'Shuttering'),
       subtitle: const L10nText(
-        'যে মুখ কংক্রিট ছোঁয় শুধু সেটাই বিলে ঢোকে — ভুল মুখ ধরলে বাড়তি টাকা গোনা লাগে',
-        "Only the face the concrete touches goes into the bill — get it wrong and you're paying extra",
+        'কংক্রিট যে পাশে ঠেকে শুধু সেটাই বিলে ওঠে — ভুল পাশ ধরলে বাড়তি টাকা যায়',
+        'Only the face the concrete touches goes in the bill; the wrong face '
+            'costs you money',
       ),
       fields: [
         CalcField(
           key: 'element',
-          label: const L10nText('উপাদান', 'Element'),
+          label: const L10nText('কীসের শাটারিং', 'Shuttering for what'),
           initial: 'beam',
           choices: {for (final e in ShutterElement.values) e.name: e.label},
         ),
+        // Each box renames itself with the element, because the same box is a
+        // beam's width in inches and a slab's length in feet.
         const CalcField(
           key: 'a',
-          label: L10nText('মাপ ১', 'Measurement 1'),
-          hint: L10nText(
-            'বিম-কলামে প্রস্থচ্ছেদের একটা মাপ ইঞ্চিতে; স্ল্যাব ও দেয়ালে দৈর্ঘ্য ফুটে',
-            'For a beam or column, one cross-section side in inches; for a slab '
-                'or wall, the length in feet',
-          ),
+          label: L10nText('প্রথম মাপ', 'First measurement'),
           initial: '10',
+          variesWith: 'element',
+          labelWhen: {
+            'beam': L10nText('বিমের চওড়া', 'Beam width'),
+            'column': L10nText('কলামের এক বাহু', 'Column, one side'),
+            'slab': L10nText('স্ল্যাবের দৈর্ঘ্য', 'Slab length'),
+            'wall': L10nText('দেয়ালের দৈর্ঘ্য', 'Wall length'),
+          },
+          suffixWhen: {
+            'beam': L10nText('ইঞ্চি', 'inch'),
+            'column': L10nText('ইঞ্চি', 'inch'),
+            'slab': L10nText('ফুট', 'ft'),
+            'wall': L10nText('ফুট', 'ft'),
+          },
         ),
         const CalcField(
           key: 'b',
-          label: L10nText('মাপ ২', 'Measurement 2'),
-          hint: L10nText(
-            'বিম-কলামে প্রস্থচ্ছেদের অন্য মাপ ইঞ্চিতে; স্ল্যাবে প্রস্থ ফুটে; '
-                'দেয়ালে ব্যবহার হয় না তবু শূন্যের বড় একটা মাপ দিন',
-            'For a beam or column, the other cross-section side in inches; for '
-                'a slab, the width in feet; a wall does not use it but still '
-                'needs a number greater than zero',
-          ),
+          label: L10nText('দ্বিতীয় মাপ', 'Second measurement'),
           initial: '15',
+          optional: true,
+          variesWith: 'element',
+          labelWhen: {
+            'beam': L10nText('বিমের গভীরতা', 'Beam depth'),
+            'column': L10nText('কলামের অন্য বাহু', 'Column, other side'),
+            'slab': L10nText('স্ল্যাবের প্রস্থ', 'Slab width'),
+            'wall': L10nText('দেয়ালে লাগে না', 'Not used for a wall'),
+          },
+          suffixWhen: {
+            'beam': L10nText('ইঞ্চি', 'inch'),
+            'column': L10nText('ইঞ্চি', 'inch'),
+            'slab': L10nText('ফুট', 'ft'),
+            'wall': L10nText('', ''),
+          },
+          hintWhen: {
+            'wall': L10nText(
+              'দেয়ালের হিসাবে এই ঘরটা লাগে না, খালি রাখলেও চলবে',
+              'A wall does not use this box; leaving it empty is fine',
+            ),
+          },
         ),
         const CalcField(
           key: 'run',
-          label: L10nText(
-            'দৈর্ঘ্য / উচ্চতা / পুরুত্ব',
-            'Span, height or thickness',
-          ),
-          hint: L10nText(
-            'বিম-কলাম-দেয়ালে স্প্যান বা উচ্চতা ফুটে; স্ল্যাবে পুরুত্ব ইঞ্চিতে',
-            'For a beam, column or wall, the span or height in feet; for a '
-                'slab, the thickness in inches',
-          ),
-          initial: '10',
+          label: L10nText('দৈর্ঘ্য', 'Run'),
+          initial: '20',
+          variesWith: 'element',
+          labelWhen: {
+            'beam': L10nText('বিমের স্প্যান', 'Beam span'),
+            'column': L10nText('কলামের উচ্চতা', 'Column height'),
+            'slab': L10nText('স্ল্যাবের পুরুত্ব', 'Slab thickness'),
+            'wall': L10nText('দেয়ালের উচ্চতা', 'Wall height'),
+          },
+          suffixWhen: {
+            'beam': L10nText('ফুট', 'ft'),
+            'column': L10nText('ফুট', 'ft'),
+            'slab': L10nText('ইঞ্চি', 'inch'),
+            'wall': L10nText('ফুট', 'ft'),
+          },
         ),
         const CalcField(
           key: 'count',
-          label: L10nText('সংখ্যা', 'Count'),
+          label: L10nText('কয়টি', 'How many'),
           initial: '1',
         ),
       ],
@@ -727,7 +788,7 @@ class CalcSpec {
         return const ShutteringCalculator().compute(
           element: element,
           a: _num(v, 'a'),
-          b: _num(v, 'b'),
+          b: element == ShutterElement.wall ? 1 : _num(v, 'b'),
           runFt: _num(v, 'run'),
           count: _num(v, 'count', 1).round(),
         );
