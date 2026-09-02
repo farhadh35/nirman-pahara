@@ -5,7 +5,14 @@ import 'package:nirman_pahara/features/calculators/logic/soling.dart';
 import 'package:nirman_pahara/features/calculators/logic/stair.dart';
 import 'package:nirman_pahara/features/calculators/logic/water_store.dart';
 
+import 'package:nirman_pahara/features/measure/logic/geometry.dart';
+
+import 'package:nirman_pahara/features/measure/logic/sutas.dart';
+
+import 'package:nirman_pahara/features/calculators/logic/rebar.dart';
+
 void main() {
+  _phase2ReviewRegressions();
   group('Hook length', () {
     const c = HookLapCalculator();
 
@@ -209,6 +216,53 @@ void main() {
           expect(l.label.needsTranslation, isFalse, reason: l.key);
           expect(l.unit.needsTranslation, isFalse, reason: l.key);
         }
+      }
+    });
+  });
+}
+
+// Regression tests for the Phase 2 review. Each of these four was a live
+// defect: the arithmetic was right and the guard around it was not.
+void _phase2ReviewRegressions() {
+  group('phase 2 review', () {
+    test('a measurement that is not a number is refused, not multiplied', () {
+      // `d <= 0` is false for NaN, so an unparseable input used to sail through
+      // the guard and come out the far end printed as "NaN".
+      for (final bad in [double.nan, double.infinity, double.negativeInfinity]) {
+        expect(
+          () => const Geometry().compute(Shape.rectangle, [bad, 10]),
+          throwsA(isA<CalcException>()),
+          reason: '$bad reached the arithmetic',
+        );
+      }
+    });
+
+    test('a septic tank is not sized for nobody', () {
+      // compute() refuses fewer than one user; septicFor() used to hand back
+      // the smallest published tank instead, so the same class gave two
+      // different answers to the same bad question.
+      expect(const WaterStoreCalculator().septicFor(0), isNull);
+      expect(const WaterStoreCalculator().septicFor(-5), isNull);
+      expect(const WaterStoreCalculator().septicFor(1)?.users, 10);
+    });
+
+    test('there is one list of stock bar diameters, and it carries 6 mm', () {
+      // Two lists existed and had already drifted: the hook calculator knew
+      // about the 6 mm bar and the rebar calculator did not.
+      expect(RebarCalculator.commonDiametersMm, contains(6));
+      expect(RebarCalculator.commonDiametersMm, contains(32));
+      // Sorted and unique, since a picker renders straight off it.
+      final sorted = [...RebarCalculator.commonDiametersMm]..sort();
+      expect(RebarCalculator.commonDiametersMm, sorted);
+      expect(RebarCalculator.commonDiametersMm.toSet().length,
+          RebarCalculator.commonDiametersMm.length);
+    });
+
+    test('every সুতা size the converter offers is a bar the trade sells', () {
+      for (final s in SutaSize.values) {
+        expect(RebarCalculator.commonDiametersMm, contains(s.nominalMm),
+            reason: '${s.suta} suta maps to ${s.nominalMm} mm, which the app '
+                'does not list as a stock diameter');
       }
     });
   });

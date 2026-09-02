@@ -16,7 +16,13 @@ class RebarCalculator {
   final double steelDensityKgM3;
 
   /// Diameters commonly sold in Bangladesh, in mm.
-  static const List<int> commonDiametersMm = [8, 10, 12, 16, 20, 22, 25, 28, 32];
+  ///
+  /// The one list. A second copy lived in the hook calculator and the two had
+  /// already drifted — that one carried the 6 mm bar and this did not, so the
+  /// same app disagreed with itself about what the trade sells.
+  static const List<int> commonDiametersMm = [
+    6, 8, 10, 12, 16, 20, 22, 25, 28, 32,
+  ];
 
   /// Commercial rod lengths sold in Bangladesh, in feet.
   static const List<int> commonStockLengthsFt = [20, 40];

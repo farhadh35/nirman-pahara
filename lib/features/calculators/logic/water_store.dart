@@ -16,9 +16,6 @@ class WaterStoreCalculator {
 
   /// The floor the app sizes against. People use more than this; a tank built
   /// for less than this runs dry.
-  static const double minLitresPerPersonPerDay = 10 * 4.546;
-
-  /// Minimum gallons per person per day.
   static const double minGallonsPerPersonPerDay = 10.0;
 
   /// Days of supply each tank is expected to carry.
@@ -136,6 +133,10 @@ class WaterStoreCalculator {
   /// The published size that covers [users], or null when there are more users
   /// than the table goes up to — at which point it is an engineer's problem.
   SepticSize? septicFor(int users) {
+    // Zero or fewer users is not a small tank, it is a bad question. compute()
+    // already refuses it, and these two doors into the class should not
+    // disagree about what counts as an answerable input.
+    if (users < 1) return null;
     for (final s in septicSizes) {
       if (users <= s.users) return s;
     }

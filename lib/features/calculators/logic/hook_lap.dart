@@ -23,9 +23,6 @@ class HookLapCalculator {
   /// Hook length as a multiple of the bar diameter.
   static const double hookMultiple = 12.0;
 
-  /// Diameters the trade stocks, in millimetres.
-  static const List<int> stockDiametersMm = [6, 8, 10, 12, 16, 20, 22, 25, 28, 32];
-
   /// Hook length for a bar of [diameterMm].
   CalcResult hook({required double diameterMm, required int count}) {
     if (diameterMm <= 0) {

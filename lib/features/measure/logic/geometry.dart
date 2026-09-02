@@ -57,10 +57,13 @@ class Geometry {
       ));
     }
     for (final d in dimensions) {
-      if (d <= 0) {
+      // Not `d <= 0` alone: every comparison against NaN is false, so a value
+      // that failed to parse would pass the check and come out the other end
+      // printed as NaN.
+      if (!d.isFinite || d <= 0) {
         throw CalcException(const L10nText(
-          'প্রতিটি মাপ শূন্যের বড় হতে হবে।',
-          'Every measurement has to be greater than zero.',
+          'প্রতিটি মাপ শূন্যের বড় একটি সংখ্যা হতে হবে।',
+          'Every measurement has to be a real number greater than zero.',
         ));
       }
     }
