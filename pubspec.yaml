@@ -33,6 +33,7 @@ flutter:
     - assets/content/
     - assets/content/guide/
     - assets/content/checklists/
+    - assets/content/lookups/
     - assets/content/rates/
   fonts:
     - family: NotoSansBengali

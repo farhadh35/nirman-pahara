@@ -33,10 +33,26 @@ enum Track {
 /// See docs/CONTENT_REVIEW.md.
 enum ReviewStatus {
   verified,
-  review;
+  review,
 
-  static ReviewStatus parse(String? s) =>
-      s == 'verified' ? ReviewStatus.verified : ReviewStatus.review;
+  /// An estimator's shortcut, not a specification.
+  ///
+  /// Separate from [review] because the two need opposite treatment: a review
+  /// claim is probably right and waiting to be confirmed, while a rule of thumb
+  /// is only ever for sanity-checking a number somebody quoted you. Some of
+  /// them — foundation depth taken as a foot per storey, beam depth in inches
+  /// taken as the span in feet — are unsafe if read as a way to decide a
+  /// dimension, so the card carrying one always says so on its face.
+  ruleOfThumb;
+
+  static ReviewStatus parse(String? s) => switch (s) {
+        'verified' => ReviewStatus.verified,
+        'ruleOfThumb' => ReviewStatus.ruleOfThumb,
+        _ => ReviewStatus.review,
+      };
+
+  /// Whether a badge is shown against a claim with this status.
+  bool get needsBadge => this != ReviewStatus.verified;
 }
 
 /// Where a number came from.

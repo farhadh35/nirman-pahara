@@ -6,6 +6,7 @@ import 'checklist_models.dart';
 import 'models.dart';
 import 'rights_models.dart';
 import '../../features/prices/logic/price_models.dart';
+import '../../features/lookups/logic/lookup_tables.dart';
 import '../../features/prices/logic/pwd_rate_table.dart';
 
 /// Loads the bundled content packs.
@@ -27,6 +28,7 @@ class ContentRepository {
   List<ChecklistPack>? _checklists;
   RightsPack? _rights;
   PricePack? _prices;
+  LookupPack? _lookups;
   PwdRateTable? _pwdRates;
   PwdRateTable? _pwdEmRates;
 
@@ -79,6 +81,15 @@ class ContentRepository {
     final raw = await _read('assets/content/rates/pwd_sor_2022.json');
     _pwdRates = PwdRateTable.fromJson(jsonDecode(raw) as Map<String, dynamic>);
     return _pwdRates!;
+  }
+
+  /// The "what should it be?" tables — mixes, curing, striking, sand, cost
+  /// shares. Small, and wanted on the one screen, so it loads with the rest.
+  Future<LookupPack> lookups() async {
+    if (_lookups != null) return _lookups!;
+    final raw = await _read('assets/content/lookups/lookups.json');
+    _lookups = LookupPack.fromJson(jsonDecode(raw) as Map<String, dynamic>);
+    return _lookups!;
   }
 
   /// The published PWD rates for E/M (electro-mechanical) works.
