@@ -1,9 +1,12 @@
 # Advertising policy
 
-The app is free and ad-supported, with no paywall. The whole value of the app is
-that it tells someone whether the cement, the rod, the brick and the price they
-are being given are sound. Ads from the companies selling those things would
-destroy that, so the funding model is constrained as follows.
+The app is free with no paywall. Ads are **not yet integrated** — there is no ad
+SDK in the build. When they are, this policy governs them.
+
+The whole value of the app is that it tells someone whether the cement, the rod,
+the brick and the price they are being given are sound. Ads from the companies
+selling those things would destroy that, so the funding model is constrained as
+follows.
 
 ## Category blocklist
 

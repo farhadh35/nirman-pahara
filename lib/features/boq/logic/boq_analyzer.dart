@@ -53,9 +53,12 @@ class BoqAnalyzer {
   /// kind would normally carry.
   List<BoqFinding> analyse(BoqDocument doc, {WorkProfile? profile}) => [
         ..._missingItems(doc, profile),
-        ..._unscheduledItems(doc),
-        ..._quantityOverruns(doc),
-        ..._notExecuted(doc),
+        // Only a document that measures work against a schedule can be asked
+        // whether the two agree. An estimate is written before anything is
+        // built, so these three would fire on every line of it.
+        if (doc.hasMeasuredColumn) ..._unscheduledItems(doc),
+        if (doc.hasMeasuredColumn) ..._quantityOverruns(doc),
+        if (doc.hasMeasuredColumn) ..._notExecuted(doc),
         ..._arithmetic(doc),
         ..._duplicateSerials(doc),
         ..._inconsistentRates(doc),

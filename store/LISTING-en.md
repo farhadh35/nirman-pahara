@@ -23,7 +23,7 @@ with labelled diagrams.
 Separate checklists for rural roads, buildings, food godowns, repair works and
 electrical work. Every question says why it matters and how to check it without
 instruments. Photographs carry their time and, where the phone can get a fix,
-their place — and the report puts each one beside the finding it belongs to.
+their place, and the run ends in a PDF report with the photographs in it.
 
 **Calculate — ask your question with a number**
 Rod weight, concrete materials, brickwork, plaster, road layers. And divide the

@@ -203,7 +203,11 @@ class ScheduleImporter {
     var quoted = false;
     for (var i = 0; i < line.length; i++) {
       final ch = line[i];
-      if (ch == '"') {
+      // A double quote only opens a field when it stands at the field's head.
+      // Bangladeshi bills of quantity are full of inch marks — 10" brick work,
+      // 5" wall — and treating those as an opening quote swallowed the rest of
+      // the row, so the line imported with no quantity and no rate.
+      if (ch == '"' && (quoted || buf.isEmpty)) {
         quoted = !quoted;
       } else if (ch == ',' && !quoted) {
         out.add(buf.toString());

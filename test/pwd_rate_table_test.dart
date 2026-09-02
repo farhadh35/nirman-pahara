@@ -13,8 +13,10 @@ void main() {
 
   test('the published schedule loads with all its chapters', () async {
     final t = await repo.pwdRates();
-    expect(t.items.length, greaterThan(1500));
-    expect(t.chapters.length, greaterThan(25));
+    // Exact, not a floor: if a re-extraction of the source PDF changes what
+    // the table holds, that must fail here rather than pass quietly.
+    expect(t.items.length, 1749);
+    expect(t.chapters.length, 32);
     expect(t.regions.length, 4);
     expect(t.effective, '2026-01-22');
     expect(t.sourceUrl, contains('pwd.gov.bd'));
@@ -106,7 +108,7 @@ void main() {
   group('E/M works volume', () {
     test('loads as its own volume with all four zones', () async {
       final t = await repo.pwdEmRates();
-      expect(t.items.length, greaterThan(2500));
+      expect(t.items.length, 2606);
       expect(t.regions.length, 4);
       expect(t.sourceUrl, contains('Pwd_Schedule_Of_Rates_EM'));
       expect(t.volume!.en, contains('E/M'));

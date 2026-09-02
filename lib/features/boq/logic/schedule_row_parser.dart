@@ -10,13 +10,24 @@ import 'boq_models.dart';
 class ScheduleRowParser {
   const ScheduleRowParser();
 
-  static const _serialWords = ['sl', 'serial', 'item', 'ক্রমিক'];
+  // 's.l' and 'sl.' are here because real sheets head the column "S.L No.",
+  // which contains neither 'sl' nor 'serial'.
+  static const _serialWords = ['sl', 's.l', 'sl.', 'serial', 'item', 'no.',
+      'ক্রমিক'];
   static const _descWords = ['description', 'particular', 'বিবরণ', 'কাজ'];
   static const _unitWords = ['unit', 'একক'];
   static const _scheduleQtyWords = ['schedule quantity', 'scheduled quantity',
       'schedule qty', 'তফসিল পরিমাণ'];
   static const _measuredQtyWords = ['measued quantity', 'measured quantity',
       'measured qty', 'মাপা পরিমাণ'];
+  /// Used only when neither a scheduled nor a measured quantity column was
+  /// named. An estimate heads its column plain "Quantity"; matching that
+  /// eagerly would swallow "Measured Quantity" on a running bill and set the
+  /// two columns against each other the wrong way round.
+  static const _bareQtyWords = ['quantity', 'qty', 'পরিমাণ'];
+  /// Same reasoning as [_bareQtyWords]: an estimate heads its money column
+  /// plainly "Amount", and without this its arithmetic cannot be checked.
+  static const _bareAmtWords = ['amount', 'টাকা'];
   static const _rateWords = ['rate', 'দর', 'রেট'];
   static const _scheduleAmtWords = ['schedule amount', 'তফসিল টাকা'];
   static const _measuredAmtWords = ['measured amount', 'measued amount',
@@ -84,6 +95,8 @@ class ScheduleRowParser {
       statedScheduleTotal: statedSchedule,
       statedMeasuredTotal: statedMeasured,
       totalRowCount: totalRows,
+      hasMeasuredColumn: map['measuredQuantity'] != null ||
+          map['measuredAmount'] != null,
     );
   }
 
@@ -94,7 +107,8 @@ class ScheduleRowParser {
         _descWords.any(joined.contains),
         _unitWords.any(joined.contains),
         _rateWords.any(joined.contains) ||
-            _scheduleQtyWords.any(joined.contains),
+            _scheduleQtyWords.any(joined.contains) ||
+            _bareQtyWords.any(joined.contains),
       ].where((h) => h).length;
       if (hits >= 2) return i;
     }
@@ -112,14 +126,23 @@ class ScheduleRowParser {
 
     // Amount columns must be matched before the bare "rate"/"quantity" words,
     // which would otherwise swallow them.
+    var scheduleQty = find(_scheduleQtyWords);
+    final measuredQty = find(_measuredQtyWords);
+    // An estimate names one plain "Quantity" column. Without this the sheet
+    // imports with no quantity at all, and every line then looks as though it
+    // was billed against nothing.
+    scheduleQty ??= measuredQty == null ? find(_bareQtyWords) : null;
+    var scheduleAmt = find(_scheduleAmtWords);
+    final measuredAmt = find(_measuredAmtWords);
+    scheduleAmt ??= measuredAmt == null ? find(_bareAmtWords) : null;
     return {
       'serial': find(_serialWords),
       'description': find(_descWords),
       'unit': find(_unitWords),
-      'scheduleQuantity': find(_scheduleQtyWords),
-      'measuredQuantity': find(_measuredQtyWords),
-      'scheduleAmount': find(_scheduleAmtWords),
-      'measuredAmount': find(_measuredAmtWords),
+      'scheduleQuantity': scheduleQty,
+      'measuredQuantity': measuredQty,
+      'scheduleAmount': scheduleAmt,
+      'measuredAmount': measuredAmt,
       'rate': find(_rateWords),
     };
   }

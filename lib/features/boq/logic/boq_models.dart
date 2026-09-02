@@ -69,6 +69,7 @@ class BoqDocument {
     this.statedScheduleTotal,
     this.statedMeasuredTotal,
     this.totalRowCount = 0,
+    this.hasMeasuredColumn = true,
   });
 
   final String title;
@@ -83,6 +84,14 @@ class BoqDocument {
   /// total per section and then a grand total; comparing one section's total
   /// against every line in the document would manufacture a discrepancy.
   final int totalRowCount;
+
+  /// Whether the document sets a measured quantity against a scheduled one.
+  ///
+  /// A running account statement does. An estimate or a tender BoQ does not —
+  /// it is written before any work is measured. Every check that compares the
+  /// two is meaningless on such a document, and left ungated would report
+  /// "scheduled, but nothing done" against every line of an ordinary estimate.
+  final bool hasMeasuredColumn;
 
   double get summedScheduleAmount => lines.fold(
       0, (t, l) => t + (l.scheduleAmount ?? 0));
