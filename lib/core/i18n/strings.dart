@@ -24,7 +24,7 @@ class S {
   );
   static const calculate = L10nText('হিসাব', 'Calculate');
   static const calculateSub = L10nText(
-    'কত মাল লাগবে, কত খরচ হওয়ার কথা',
+    'কত মালামাল লাগবে, কত খরচ হওয়ার কথা',
     'How much material a job needs, and what it should cost',
   );
   static const inspect = L10nText('পরিদর্শন', 'Inspect');
