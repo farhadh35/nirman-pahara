@@ -412,6 +412,7 @@ const kGuideDiagramKeys = <String>[
   'bore_log',
   'plot_faces',
   'traps',
+  'seismic_tie',
 ];
 
 Widget? guideDiagram(BuildContext context, String? key, {required bool bn}) {
@@ -507,6 +508,11 @@ Widget? guideDiagram(BuildContext context, String? key, {required bool bn}) {
         TrapPainter(palette: palette, bn: bn),
         1.6,
         const L10nText('ট্র্যাপ — গন্ধ আটকানোর পানি', 'The trap, and the water that stops the smell')
+      ),
+    'seismic_tie' => (
+        SeismicTiePainter(palette: palette, bn: bn),
+        1.7,
+        const L10nText('কলামের রিংয়ের হুক', 'The hook on a column tie')
       ),
     _ => (null, 1.0, const L10nText('', '')),
   };

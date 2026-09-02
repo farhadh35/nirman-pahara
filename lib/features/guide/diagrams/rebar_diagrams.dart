@@ -332,3 +332,117 @@ class StandardHookPainter extends CustomPainter {
   bool shouldRepaint(covariant StandardHookPainter old) =>
       old.palette != palette || old.bn != bn;
 }
+
+/// The end of a column tie, bent 135 degrees into the core, against the 90
+/// degree bend that opens out.
+///
+/// The single most checkable thing in seismic detailing, and one of the least
+/// known outside the trade. A tie is what stops a column's main bars buckling
+/// outward when the building sways. Bent at 90 degrees the hook sits in the
+/// cover concrete, which spalls off first in an earthquake — and once the cover
+/// is gone the tie unwinds and the column loses its ties exactly when it needs
+/// them. Bent at 135 degrees the hook is anchored inside the core, where the
+/// concrete is confined and stays put.
+///
+/// Drawn as a section through a column, because that is the view a person gets
+/// looking down into the cage before the pour.
+class SeismicTiePainter extends CustomPainter {
+  SeismicTiePainter({required this.palette, required this.bn});
+
+  final DiagramPalette palette;
+  final bool bn;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (diagramTooSmall(size)) return;
+    final half = size.width / 2;
+    _tie(canvas, Rect.fromLTWH(0, 0, half, size.height), good: true);
+    _tie(canvas, Rect.fromLTWH(half, 0, half, size.height), good: false);
+  }
+
+  void _tie(Canvas canvas, Rect cell, {required bool good}) {
+    paintLabel(
+      canvas,
+      good
+          ? (bn ? '১৩৫° — ভেতরের দিকে' : '135°, turned into the core')
+          : (bn ? '৯০° — কভারের মধ্যে' : '90°, sitting in the cover'),
+      Offset(cell.center.dx, cell.top + 5),
+      colour: good ? palette.accent : palette.steel,
+      size: 10.5,
+      weight: FontWeight.w600,
+      centreOnPoint: true,
+      maxWidth: cell.width,
+    );
+
+    final s = cell.width * 0.44;
+    final col = Rect.fromCenter(
+        center: Offset(cell.center.dx, cell.center.dy + cell.height * 0.04),
+        width: s, height: s);
+
+    // Column section, with the cover shown as a band inside the face.
+    canvas.drawRect(col, Paint()..color = palette.concrete);
+    canvas.drawRect(
+        col,
+        Paint()
+          ..color = palette.muted
+          ..strokeWidth = 1.2
+          ..style = PaintingStyle.stroke);
+    final cover = col.deflate(s * 0.13);
+    canvas.drawRect(
+        cover,
+        Paint()
+          ..color = palette.muted.withValues(alpha: 0.35)
+          ..strokeWidth = 0.9
+          ..style = PaintingStyle.stroke);
+
+    // The tie itself, running just inside the cover line.
+    final steel = Paint()
+      ..color = good ? palette.accent : palette.steel
+      ..strokeWidth = 2.4
+      ..style = PaintingStyle.stroke;
+    canvas.drawRect(cover, steel);
+
+    // Four main bars at the corners.
+    for (final p in [
+      cover.topLeft, cover.topRight, cover.bottomLeft, cover.bottomRight,
+    ]) {
+      canvas.drawCircle(p, s * 0.055, Paint()..color = palette.steel);
+    }
+
+    // The hook at the top right corner: inward for 135, outward for 90.
+    final c = cover.topRight;
+    final hook = Path()..moveTo(c.dx, c.dy);
+    if (good) {
+      hook.lineTo(c.dx - s * 0.20, c.dy + s * 0.20);
+    } else {
+      hook.lineTo(c.dx + s * 0.16, c.dy - s * 0.02);
+    }
+    canvas.drawPath(hook, steel);
+
+    paintLeader(
+      canvas,
+      Offset(cell.center.dx + (good ? -s * 0.75 : s * 0.55), cell.top + cell.height * 0.26),
+      good ? Offset(c.dx - s * 0.16, c.dy + s * 0.16) : Offset(c.dx + s * 0.12, c.dy),
+      good ? palette.accent : palette.steel,
+    );
+
+    paintLabel(
+      canvas,
+      good
+          ? (bn
+              ? 'হুক কংক্রিটের ভেতরের শক্ত অংশে আটকে থাকে'
+              : 'The hook is anchored in the confined core')
+          : (bn
+              ? 'কভার খসে পড়লেই হুক ছুটে যায়, রিং খুলে যায়'
+              : 'When the cover spalls the hook is free and the tie unwinds'),
+      Offset(cell.left + 6, cell.bottom - cell.height * 0.13),
+      colour: good ? palette.muted : palette.steel,
+      size: 9,
+      maxWidth: cell.width - 12,
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant SeismicTiePainter old) =>
+      old.palette != palette || old.bn != bn;
+}

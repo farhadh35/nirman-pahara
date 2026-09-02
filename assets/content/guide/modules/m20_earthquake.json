@@ -1,0 +1,180 @@
+{
+ "id": "m20_earthquake",
+ "code": "M20",
+ "track": "both",
+ "icon": "earthquake",
+ "title": {
+  "bn": "ভূমিকম্প",
+  "en": "Earthquake"
+ },
+ "summary": {
+  "bn": "কোন জিনিসগুলো ভবনকে দাঁড়িয়ে থাকতে সাহায্য করে — আর তার প্রায় সবই ঢালাইয়ের আগে দেখে নেওয়া যায়।",
+  "en": "What helps a building stay up, and how much of it can be checked before the concrete goes on."
+ },
+ "cards": [
+  {
+   "id": "m20c1",
+   "tier": "general",
+   "title": {
+    "bn": "আপনার এলাকা কোন জোনে",
+    "en": "Which zone your site is in"
+   },
+   "body": {
+    "bn": "বাংলাদেশ ভূমিকম্পপ্রবণ, আর ঝুঁকি সব জায়গায় সমান নয়। বিল্ডিং কোড দেশটাকে কয়েকটা জোনে ভাগ করে, আর নকশা করার সময় প্রকৌশলী কোন জোন ধরে হিসাব করবেন সেটা ঐ ভাগ থেকেই আসে। পুরোনো বই আর ইন্টারনেটে যে জোনের তালিকা পাওয়া যায় তার অনেকগুলো ১৯৯৩ সালের কোড ধরে লেখা — সেই ভাগ আর চলতি ভাগ এক নয়। তাই জেলার নাম মিলিয়ে নিজে সিদ্ধান্ত নেওয়ার চেয়ে প্রকৌশলীকে জিজ্ঞেস করাই ঠিক: নকশাটা কোন জোন আর কোন কোড ধরে করা হয়েছে।",
+    "en": "Bangladesh is earthquake country, and the risk is not the same everywhere. The building code divides the country into zones, and which zone a site falls in is what an engineer designs against. Many zone lists in older books and on the internet are from the 1993 code, and that division is not the current one. So rather than matching a district name off a list yourself, the question to ask the engineer is which zone and which code edition the design was worked to."
+   },
+   "watch_for": [
+    {
+     "bn": "নকশায় কোন কোড আর কোন সংস্করণ ধরে হিসাব হয়েছে, সেটা লেখা থাকার কথা।",
+     "en": "The drawing should say which code and which edition the design followed."
+    },
+    {
+     "bn": "জোনের তালিকা কোথাও পেলে দেখে নিন সেটা কোন সালের কোড থেকে নেওয়া।",
+     "en": "If you find a zone list anywhere, check which edition of the code it came from."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "Bangladesh National Building Code 2020 — ভূমিকম্প জোন",
+      "en": "Bangladesh National Building Code 2020 — seismic zoning"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m20c2",
+   "tier": "work",
+   "title": {
+    "bn": "রড বাঁধায় যে তিনটে জিনিস দেখা যায়",
+    "en": "Three things visible in the steel"
+   },
+   "body": {
+    "bn": "ভূমিকম্পে ভবন ভাঙে জোড়ার জায়গায় — বিম আর কলাম যেখানে মেলে। ঐ জায়গার কাজ ঢালাইয়ের আগে চোখে দেখা যায়, আর তিনটে জিনিস আলাদা করে দেখার মতো। এক, কলামের রিংয়ের শেষ মাথা ১৩৫ ডিগ্রি বেঁকে ভেতরের দিকে ঢুকে থাকার কথা — ৯০ ডিগ্রিতে বাঁকানো রিং ঝাঁকুনিতে খুলে যায়। দুই, জোড়ার কাছে রিং ঘন থাকার কথা, মাঝখানের চেয়ে বেশি। তিন, বিম-কলামের সংযোগস্থলে রডের ল্যাপ বা জোড়া দেওয়ার কথা নয়।",
+    "en": "In an earthquake buildings fail at the joints, where beams meet columns. That work is visible before the pour, and three things there are worth looking at on their own. First, the ends of the column ties should be bent 135 degrees and turned into the core: a tie bent at 90 degrees opens out under shaking. Second, the ties should be closer together near the joint than in the middle. Third, bars should not be lapped or spliced at the beam-column joint itself."
+   },
+   "watch_for": [
+    {
+     "bn": "রিংয়ের মাথা ভেতরের দিকে ঢুকে আছে কি না — এটা ছবি তুলে রাখার মতো জিনিস।",
+     "en": "Whether the tie ends turn into the core. This is worth photographing."
+    },
+    {
+     "bn": "জোড়ার কাছে রিংয়ের ফাঁক আর মাঝখানের ফাঁক — দুটো মেপে তুলনা করুন।",
+     "en": "Measure the tie spacing near the joint and at mid-height, and compare."
+    },
+    {
+     "bn": "সংযোগস্থলে রডের জোড়া দেখলে প্রকৌশলীকে জিজ্ঞেস করুন।",
+     "en": "If bars are being lapped at the joint, ask the engineer."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), প্রথম ও ষোড়শ অধ্যায় — ভূমিকম্প প্রতিরোধে রড স্থাপন",
+      "en": "House construction and site supervision (2019), chapters 1 and 16 — seismic reinforcement detailing"
+     },
+     "status": "review"
+    }
+   ],
+   "diagram": "seismic_tie"
+  },
+  {
+   "id": "m20c3",
+   "tier": "general",
+   "title": {
+    "bn": "নরম তলা: নিচটা ফাঁকা, উপরটা ভারী",
+    "en": "The soft storey: open below, heavy above"
+   },
+   "body": {
+    "bn": "শহরের বহু বাড়িতে নিচের তলাটা গাড়ি রাখার জন্য পুরো ফাঁকা, আর উপরের তলাগুলোয় চারদিকে ইটের দেয়াল। ঝাঁকুনির সময় উপরের ভারী অংশটা এক দিকে হেলে যায় আর পুরো চাপ পড়ে নিচের সরু কলামগুলোর উপর, যাদের ধরে রাখার মতো দেয়াল নেই। এটাকে বলে নরম তলা, আর ভূমিকম্পে ভেঙে পড়া ভবনের ছবিতে বারবার এই একই চেহারা দেখা যায় — উপরের তলাগুলো আস্ত, নিচেরটা নেই।",
+    "en": "In many city buildings the ground floor is left open for parking while the floors above are walled in brick all round. Under shaking the heavy upper part leans one way and the whole of that force lands on the slim columns below, which have no walls to help them. This is a soft storey, and photographs of collapsed buildings show the same shape again and again: the upper floors intact, the ground floor gone."
+   },
+   "watch_for": [
+    {
+     "bn": "নিচের তলা পুরো ফাঁকা রাখা হলে সেটা নকশায় আলাদা করে হিসাব করা হয়েছে কি না জিজ্ঞেস করুন।",
+     "en": "If the ground floor is left fully open, ask whether the design accounted for it separately."
+    },
+    {
+     "bn": "অনিয়মিত আকারের ভবন, বা তলায় তলায় আলাদা আকৃতি — এগুলোও একই ধরনের ঝুঁকি।",
+     "en": "Irregular shapes, and floors that differ from each other, carry related risks."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), প্রথম ও ষোড়শ অধ্যায়",
+      "en": "House construction and site supervision (2019), chapters 1 and 16"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m20c4",
+   "tier": "work",
+   "title": {
+    "bn": "পুরোনো বাড়ির ক্ষেত্রে",
+    "en": "On a building already standing"
+   },
+   "body": {
+    "bn": "দাঁড়িয়ে থাকা বাড়িতেও কাজ করার আছে, যদিও সেটা নতুন বাড়ির চেয়ে খরচসাপেক্ষ। কলামকে মোটা করা যায়, তবে সেটা ভিত থেকেই করতে হয় — শুধু উপরের অংশ মোটা করলে ভার নিচে গিয়ে একই জায়গায় জমা হয়। দেয়ালে ব্রেসিং, অর্থাৎ কোনাকুনি বন্ধনী দেওয়া যায়। টানা লিন্টেল না থাকলে নতুন করে দেওয়া যায়। আর মাটির অবস্থা নিয়ে সন্দেহ থাকলে নতুন করে পরীক্ষা করানো যায়। এর কোনোটাই নিজে সিদ্ধান্ত নেওয়ার জিনিস নয় — কী দরকার সেটা প্রকৌশলী দেখে বলবেন।",
+    "en": "There is work to be done on a building already standing, though it costs more than doing it at the start. Columns can be thickened, but from the foundation up: enlarging only the upper part sends the load down to the same place. Walls can be braced diagonally. A continuous lintel band can be added where there is none. And where there is doubt about the ground, the soil can be tested again. None of this is something to decide yourself; what is needed is for an engineer to look and say."
+   },
+   "watch_for": [
+    {
+     "bn": "কলাম মোটা করা ভিত থেকে শুরু না হলে কাজটা অসম্পূর্ণ।",
+     "en": "Column jacketing that does not start at the foundation is unfinished work."
+    },
+    {
+     "bn": "পুরোনো ভবনে ফাটল দেখা দিলে কোথায়, কত চওড়া আর বাড়ছে কি না — ছবি তুলে তারিখ রাখুন।",
+     "en": "Where cracks appear, photograph them with a date: where, how wide, and whether they are growing."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), প্রথম ও ষোড়শ অধ্যায়",
+      "en": "House construction and site supervision (2019), chapters 1 and 16"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m20c5",
+   "tier": "general",
+   "title": {
+    "bn": "কম্পন শুরু হলে",
+    "en": "When the shaking starts"
+   },
+   "body": {
+    "bn": "ভূমিকম্পের সময় কী করা উচিত সেটা নির্ভর করে আপনি কোথায় আছেন তার উপর, আর এখানে একটা সর্বজনীন নিয়ম নেই। নিচতলায় বা একতলা ঘরে থাকলে খোলা জায়গায় বেরিয়ে যাওয়া যায়, তবে বিদ্যুতের খুঁটি, তার আর দেয়াল থেকে দূরে। উপরের তলায় থাকলে সিঁড়িতে ভিড় করে নামার চেয়ে শক্ত টেবিলের নিচে বা কলামের গোড়ায় আশ্রয় নিয়ে কম্পন থামা পর্যন্ত অপেক্ষা করাই বেশি নিরাপদ ধরা হয়। কম্পন থামলে বিদ্যুৎ ও গ্যাসের সংযোগ বন্ধ করা, আর দুর্যোগ ব্যবস্থাপনা কর্তৃপক্ষের সাম্প্রতিক নির্দেশনা দেখে নেওয়া ভালো — এই অ্যাপ জরুরি নির্দেশনার উৎস নয়।",
+    "en": "What to do during an earthquake depends on where you are, and there is no single rule. On the ground floor or in a single-storey house you can get out to open ground, away from poles, wires and walls. Higher up, crowding onto a staircase is generally considered more dangerous than sheltering under a solid table or at the base of a column until the shaking stops. Afterwards, shut off the power and the gas, and follow the disaster management authority's current guidance — this app is not a source of emergency instructions."
+   },
+   "watch_for": [
+    {
+     "bn": "বের হওয়ার পথ আর সিঁড়ি খালি রাখা — মালামাল রেখে সিঁড়ি আটকানো খুব সাধারণ ভুল।",
+     "en": "Keep exits and stairs clear: storing things on a staircase is a very common mistake."
+    },
+    {
+     "bn": "ভারী আলমারি বা তাক দেয়ালে আটকানো থাকলে পড়ে যায় না।",
+     "en": "Heavy cupboards and shelves fixed to the wall do not fall over."
+    },
+    {
+     "bn": "জরুরি নির্দেশনার জন্য দুর্যোগ ব্যবস্থাপনা অধিদপ্তরের চলতি নির্দেশনা দেখুন।",
+     "en": "For emergency guidance follow the current advice from the disaster management authorities."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), প্রথম ও ষোড়শ অধ্যায় — ভূমিকম্পের সময় করণীয়",
+      "en": "House construction and site supervision (2019), chapters 1 and 16 — what to do during an earthquake"
+     },
+     "status": "review"
+    }
+   ]
+  }
+ ]
+}
