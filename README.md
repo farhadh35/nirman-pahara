@@ -51,11 +51,43 @@ flutter test
 flutter run
 ```
 
-Release build, split per ABI (15.6 MB armeabi-v7a, 18.1 MB arm64):
+Release build, split per ABI (18.6 MB armeabi-v7a, 20.7 MB arm64):
 
 ```bash
 flutter build apk --release --split-per-abi
 ```
+
+The Play bundle:
+
+```bash
+flutter build appbundle --release
+```
+
+### Signing
+
+Release signing lives in `android/key.properties` and `android/keystore/`, both
+outside the repository. A release build refuses to run without them:
+
+```
+Refusing to build a debug-signed release: the keystore
+'../keystore/nirman-upload.jks' named by android/key.properties is missing.
+```
+
+It used to fall back to debug signing silently, which is worse than it sounds:
+the Gradle output is identical either way, Flutter filters warnings out of it,
+and the first thing that tells you is the Play upload dialog rejecting the
+signature. To build without the key on purpose — a contributor who only wants to
+check that the release build compiles — say so:
+
+```bash
+flutter build apk --release -PallowDebugSigning=true
+```
+
+**The keystore has no second copy.** It is gitignored, it exists only on the
+machine that made it, and losing it means the app can never be updated under
+its current Play listing — a new one would have to be published from scratch,
+with every install starting over. Back up `android/keystore/nirman-upload.jks`
+and `android/key.properties` somewhere off this machine before the next release.
 
 ## Layout
 
