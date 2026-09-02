@@ -144,7 +144,7 @@ class BoqComparison {
     }
     if (diffPercent < -questionThresholdPercent) {
       return L10nText(
-        'BoQ-এর রেট তফসিলের চেয়ে প্রায় $abs% কম। খুব কম দরে কাজ নিলে মালের মান '
+        'BoQ-এর রেট তফসিলের চেয়ে প্রায় $abs% কম। খুব কম দরে কাজ নিলে মালামালের মান '
             'কমানোর ঝুঁকি বাড়ে — কাজ চলার সময় মালামাল দেখা তখন বেশি জরুরি।',
         'The BoQ rate is about $abs% below the schedule. Work taken well under '
             'rate carries a real risk of thinner materials, so watching the '

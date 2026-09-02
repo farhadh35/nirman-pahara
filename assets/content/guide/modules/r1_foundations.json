@@ -87,7 +87,7 @@
    },
    "watch_for": [
     {
-     "bn": "প্রান্তে স্টিরাপ ঘন থাকার কারণ কর্তন — মাঝখানে নয়, মাথার দিকেই বিম ভাঙে।",
+     "bn": "প্রান্তে স্টিরাপ ঘন থাকার কারণ কর্তন — মাঝখানে নয়, প্রান্তের দিকেই বিম ভাঙে।",
      "en": "Stirrups close up at the ends because of shear: a beam fails there, not at mid-span."
     },
     {

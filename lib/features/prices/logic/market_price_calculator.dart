@@ -184,7 +184,7 @@ class MarketPriceCalculator {
         ),
       PricePosition.below => L10nText(
           'বাজারদরের নিচে, মাঝামাঝির চেয়ে প্রায় $abs% কম। সস্তা মানেই ভালো নয় — '
-              'অস্বাভাবিক কম দরে মালের গ্রেড বা মান কম হওয়ার ঝুঁকি থাকে। '
+              'অস্বাভাবিক কম দরে মালামালের গ্রেড বা মান কম হওয়ার ঝুঁকি থাকে। '
               'ডেলিভারির সময় ব্র্যান্ড ও গ্রেড মিলিয়ে দেখুন।',
           'Below the band, about $abs% under the midpoint. Cheap is not the same '
               'as good — an unusually low rate often means a lower grade. Check '
