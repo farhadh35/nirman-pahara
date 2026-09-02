@@ -5,6 +5,7 @@ import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
 import '../../../app/widgets/locale_fields.dart';
 import '../../../core/i18n/app_locale.dart';
+import '../../../core/i18n/strings.dart';
 import '../../../core/util/bn.dart';
 import '../../calculators/logic/calc_result.dart';
 import '../../calculators/ui/calculator_screen.dart';
@@ -116,12 +117,13 @@ class _LandUnitsTabState extends State<_LandUnitsTab> {
   Widget build(BuildContext context) {
     final locale = context.locale;
     final unfinished = _controller.text.trim().isEmpty;
+    final unreadable = !unfinished && Bn.parse(_controller.text) == null;
     final value = Bn.parse(_controller.text) ?? 0.0;
 
     LandArea? area;
     String? error;
     try {
-      if (!unfinished) area = LandArea.of(value, _unit);
+      if (!unfinished && !unreadable) area = LandArea.of(value, _unit);
     } on ArgumentError {
       error = locale.isBangla
           ? 'শূন্য বা তার বেশি একটি সংখ্যা দিন।'
@@ -160,7 +162,9 @@ class _LandUnitsTabState extends State<_LandUnitsTab> {
           onChanged: (u) => u == null ? null : setState(() => _unit = u),
         ),
         const SizedBox(height: 20),
-        if (unfinished)
+        if (unreadable)
+          CautionBox(text: context.t(S.notANumber))
+        else if (unfinished)
           _unfinishedHint(
             context,
             locale.isBangla
@@ -441,11 +445,13 @@ class _GeometryTabState extends State<_GeometryTab> {
   Widget build(BuildContext context) {
     final locale = context.locale;
     final unfinished = _controllers.any((c) => c.text.trim().isEmpty);
+    final unreadable = !unfinished &&
+        _controllers.any((c) => Bn.parse(c.text) == null);
     final dims = [for (final c in _controllers) Bn.parse(c.text) ?? 0.0];
 
     CalcResult? result;
     String? error;
-    if (!unfinished) {
+    if (!unfinished && !unreadable) {
       try {
         result = const Geometry().compute(_shape, dims);
       } on CalcException catch (e) {
@@ -497,7 +503,9 @@ class _GeometryTabState extends State<_GeometryTab> {
           const SizedBox(height: 16),
         ],
         const SizedBox(height: 8),
-        if (unfinished)
+        if (unreadable)
+          CautionBox(text: context.t(S.notANumber))
+        else if (unfinished)
           _unfinishedHint(
             context,
             locale.isBangla

@@ -94,6 +94,17 @@ class S {
   static const fillTheFields =
       L10nText('উপরের ঘরগুলো পূরণ করুন', 'Fill in the fields above');
 
+  /// For something typed that is not a number at all.
+  ///
+  /// The keypad accepts a dot and a comma, so "১.২.৩" is a thing a thumb
+  /// produces. It used to be read as zero and answered with whatever the
+  /// calculator says about zero — "the area must be greater than zero" — which
+  /// sends the reader looking at the wrong thing entirely.
+  static const notANumber = L10nText(
+    'এটা সংখ্যা হিসেবে পড়া যাচ্ছে না — দশমিক একটাই হবে।',
+    'That cannot be read as a number — there can be only one decimal point.',
+  );
+
   // Prices -----------------------------------------------------------------
   static const marketPrice = L10nText('বাজারদর', 'Market rate');
   static const yourQuote = L10nText('আপনাকে বলা দর', 'The price you were quoted');

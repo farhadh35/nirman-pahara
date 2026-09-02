@@ -95,4 +95,45 @@ void main() {
 
     expect(find.text('ফলাফল'), findsOneWidget);
   });
+
+  testWidgets('something typed that is not a number says so', (tester) async {
+    tester.view.physicalSize = const Size(1200, 3000);
+    tester.view.devicePixelRatio = 3.0;
+    addTearDown(tester.view.reset);
+
+    final spec = CalcSpec.byId('plaster')!;
+    await tester.pumpWidget(await _wrap(tester, CalculatorScreen(spec: spec)));
+    await tester.pumpAndSettle();
+
+    // The keypad allows a dot and a comma, so this is a thing a thumb makes.
+    // It parses to nothing, was substituted with zero, and the reader was told
+    // the area must be greater than zero — which sends them looking at the
+    // wrong thing.
+    await tester.enterText(find.byType(TextField).first, '১.২.৩');
+    await tester.pumpAndSettle();
+
+    expect(find.textContaining('সংখ্যা হিসেবে পড়া যাচ্ছে না'), findsOneWidget);
+    expect(find.textContaining('শূন্যের বেশি হতে হবে'), findsNothing,
+        reason: 'the reader is told the number is too small, not unreadable');
+    expect(find.text('উপরের ঘরগুলো পূরণ করুন'), findsNothing,
+        reason: 'the box is not empty, it is unreadable');
+  });
+
+  testWidgets('a comma is grouping, not a mistake', (tester) async {
+    tester.view.physicalSize = const Size(1200, 3000);
+    tester.view.devicePixelRatio = 3.0;
+    addTearDown(tester.view.reset);
+
+    final spec = CalcSpec.byId('plaster')!;
+    await tester.pumpWidget(await _wrap(tester, CalculatorScreen(spec: spec)));
+    await tester.pumpAndSettle();
+
+    // People write large numbers with separators, and stripping them is the
+    // intended behaviour — this must not be caught by the new check.
+    await tester.enterText(find.byType(TextField).first, '১,২০০');
+    await tester.pumpAndSettle();
+
+    expect(find.text('ফলাফল'), findsOneWidget);
+    expect(find.textContaining('সংখ্যা হিসেবে পড়া যাচ্ছে না'), findsNothing);
+  });
 }

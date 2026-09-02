@@ -5,6 +5,7 @@ import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
 import '../../../app/widgets/locale_fields.dart';
 import '../../../core/i18n/app_locale.dart';
+import '../../../core/i18n/strings.dart';
 import '../../../core/util/bn.dart';
 import '../../calculators/logic/calc_result.dart';
 import '../../calculators/ui/calculator_screen.dart';
@@ -105,10 +106,15 @@ class _FarFormState extends State<_FarForm> {
     // a wrong answer, and it should not be answered with a refusal.
     final unfinished =
         _area.text.trim().isEmpty || _road.text.trim().isEmpty;
+    final unreadable = !unfinished &&
+        [_area, _road, _storeys].any((c) {
+          final t = c.text.trim();
+          return t.isNotEmpty && Bn.parse(t) == null;
+        });
 
     CalcResult? result;
     String? error;
-    if (!unfinished) {
+    if (!unfinished && !unreadable) {
       try {
         result = FarCalculator(pack: widget.pack).compute(
           plotAreaSft: _areaUnit.toSquareFeet(areaValue),
@@ -274,7 +280,9 @@ class _FarFormState extends State<_FarForm> {
               : 'Fill it in and it also shows the average floor plate',
         ),
         const SizedBox(height: 24),
-        if (unfinished)
+        if (unreadable)
+          CautionBox(text: context.t(S.notANumber))
+        else if (unfinished)
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8),
             child: Text(

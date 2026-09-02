@@ -122,10 +122,18 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     // the calculator's own complaint.
     final unfinished = widget.spec.fields.any((f) =>
         !f.isChoice && !f.optional && _controllers[f.key]!.text.trim().isEmpty);
+    // Typed, but not a number. Different from blank and different again from a
+    // number the calculator rejects, and each deserves its own answer.
+    final unreadable = !unfinished &&
+        widget.spec.fields.any((f) {
+          if (f.isChoice) return false;
+          final t = _controllers[f.key]!.text.trim();
+          return t.isNotEmpty && Bn.parse(t) == null;
+        });
 
     CalcResult? result;
     String? error;
-    if (!unfinished) {
+    if (!unfinished && !unreadable) {
       try {
         result = widget.spec.run(_values);
       } on CalcException catch (e) {
@@ -163,7 +171,9 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             const SizedBox(height: 16),
           ],
           const SizedBox(height: 8),
-          if (unfinished)
+          if (unreadable)
+            CautionBox(text: context.t(S.notANumber))
+          else if (unfinished)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8),
               child: Text(
