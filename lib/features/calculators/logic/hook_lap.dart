@@ -25,7 +25,7 @@ class HookLapCalculator {
 
   /// Hook length for a bar of [diameterMm].
   CalcResult hook({required double diameterMm, required int count}) {
-    if (diameterMm <= 0) {
+    if (!diameterMm.isFinite || diameterMm <= 0) {
       throw CalcException(L10nText(
         'রডের ব্যাস শূন্যের বড় হতে হবে।',
         'The bar diameter has to be greater than zero.',

@@ -24,13 +24,13 @@ class UnitCostCalculator {
     double incomeTaxPercent = 0,
     double? comparisonRate,
   }) {
-    if (contractValue <= 0) {
+    if (!contractValue.isFinite || contractValue <= 0) {
       throw CalcException(const L10nText(
         'চুক্তিমূল্য শূন্যের বেশি হতে হবে।',
         'Contract value must be greater than zero.',
       ));
     }
-    if (quantity <= 0) {
+    if (!quantity.isFinite || quantity <= 0) {
       throw CalcException(const L10nText(
         'কাজের পরিমাণ শূন্যের বেশি হতে হবে।',
         'Work quantity must be greater than zero.',

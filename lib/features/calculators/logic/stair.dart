@@ -32,14 +32,16 @@ class StairCalculator {
     required double floorHeightFt,
     double? treadIn,
   }) {
-    if (floorHeightFt <= 0) {
+    if (!floorHeightFt.isFinite || floorHeightFt <= 0) {
       throw CalcException(L10nText(
         'তলার উচ্চতা শূন্যের বড় হতে হবে।',
         'The floor-to-floor height has to be greater than zero.',
       ));
     }
     final tread = treadIn ?? minTreadIn;
-    if (tread < minTreadIn) {
+    // Not `tread < minTreadIn` alone: NaN loses every comparison, and an
+    // infinite tread clears the minimum while making nonsense of the going.
+    if (!tread.isFinite || tread < minTreadIn) {
       throw CalcException(L10nText(
         'ট্রেড অন্তত ${minTreadIn.toStringAsFixed(0)} ইঞ্চি হতে হবে, নইলে পুরো পা '
             'ধাপে বসে না।',

@@ -56,13 +56,14 @@ class BrickworkCalculator {
     MixRatio mortar = MixRatio.m1_6,
     double openingsSft = 0,
   }) {
-    if (lengthFt <= 0 || heightFt <= 0) {
+    if (!lengthFt.isFinite || !heightFt.isFinite || lengthFt <= 0 ||
+        heightFt <= 0) {
       throw CalcException(const L10nText(
         'দেয়ালের দৈর্ঘ্য ও উচ্চতা শূন্যের বেশি হতে হবে।',
         'Wall length and height must be greater than zero.',
       ));
     }
-    if (thicknessIn <= 0) {
+    if (!thicknessIn.isFinite || thicknessIn <= 0) {
       throw CalcException(const L10nText(
         'দেয়ালের পুরুত্ব শূন্যের বেশি হতে হবে।',
         'Wall thickness must be greater than zero.',
@@ -76,7 +77,7 @@ class BrickworkCalculator {
     }
 
     final netAreaSft = (lengthFt * heightFt) - openingsSft;
-    if (netAreaSft <= 0) {
+    if (!netAreaSft.isFinite || netAreaSft <= 0) {
       throw CalcException(const L10nText(
         'দরজা-জানালা বাদ দিলে দেয়াল আর থাকে না — মাপ দেখুন।',
         'After deducting openings there is no wall left — check the figures.',

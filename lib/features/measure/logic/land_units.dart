@@ -46,7 +46,7 @@ class LandArea {
   const LandArea._(this.squareFeet);
 
   factory LandArea.of(double value, LandUnit unit) {
-    if (value < 0) {
+    if (!value.isFinite || value < 0) {
       throw ArgumentError.value(value, 'value', 'area cannot be negative');
     }
     return LandArea._(unit.toSquareFeet(value));

@@ -27,13 +27,13 @@ class PlasterCalculator {
     double thicknessIn = innerWallIn,
     MixRatio mortar = MixRatio.m1_6,
   }) {
-    if (area <= 0) {
+    if (!area.isFinite || area <= 0) {
       throw CalcException(const L10nText(
         'ক্ষেত্রফল শূন্যের বেশি হতে হবে।',
         'Area must be greater than zero.',
       ));
     }
-    if (thicknessIn <= 0) {
+    if (!thicknessIn.isFinite || thicknessIn <= 0) {
       throw CalcException(const L10nText(
         'পুরুত্ব শূন্যের বেশি হতে হবে।',
         'Thickness must be greater than zero.',

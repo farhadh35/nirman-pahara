@@ -38,7 +38,7 @@ class RoadLayerCalculator {
     LengthUnit widthUnit = LengthUnit.foot,
     required List<RoadLayerSpec> layers,
   }) {
-    if (length <= 0 || width <= 0) {
+    if (!length.isFinite || !width.isFinite || length <= 0 || width <= 0) {
       throw CalcException(const L10nText(
         'রাস্তার দৈর্ঘ্য ও প্রস্থ শূন্যের বেশি হতে হবে।',
         'Road length and width must be greater than zero.',
@@ -68,7 +68,7 @@ class RoadLayerCalculator {
     var totalCompacted = 0.0;
     for (var i = 0; i < layers.length; i++) {
       final layer = layers[i];
-      if (layer.thickness <= 0) {
+      if (!layer.thickness.isFinite || layer.thickness <= 0) {
         throw CalcException(L10nText(
           '${layer.name.bn}: পুরুত্ব শূন্যের বেশি হতে হবে।',
           '${layer.name.en ?? layer.name.bn}: thickness must be greater than zero.',

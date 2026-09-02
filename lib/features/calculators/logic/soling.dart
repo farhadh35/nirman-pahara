@@ -26,13 +26,13 @@ class SolingCalculator {
     bool herringbone = false,
     double wastagePercent = 5.0,
   }) {
-    if (areaSft <= 0) {
+    if (!areaSft.isFinite || areaSft <= 0) {
       throw CalcException(L10nText(
         'ক্ষেত্রফল শূন্যের বড় হতে হবে।',
         'The area has to be greater than zero.',
       ));
     }
-    if (wastagePercent < 0) {
+    if (!wastagePercent.isFinite || wastagePercent < 0) {
       throw CalcException(L10nText(
         'অপচয় ঋণাত্মক হতে পারে না।',
         'Wastage cannot be negative.',

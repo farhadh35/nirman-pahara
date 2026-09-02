@@ -28,7 +28,7 @@ class RebarCalculator {
   static const List<int> commonStockLengthsFt = [20, 40];
 
   double kgPerMetre(double diameterMm) {
-    if (diameterMm <= 0) {
+    if (!diameterMm.isFinite || diameterMm <= 0) {
       throw CalcException(const L10nText(
         'রডের ব্যাস শূন্যের বেশি হতে হবে।',
         'Bar diameter must be greater than zero.',
@@ -57,7 +57,13 @@ class RebarCalculator {
         'The number of bars must be at least 1.',
       ));
     }
-    if (length <= 0) {
+    if (!wastagePercent.isFinite || wastagePercent < 0) {
+      throw CalcException(const L10nText(
+        'অপচয় ঋণাত্মক হতে পারে না।',
+        'Wastage cannot be negative.',
+      ));
+    }
+    if (!length.isFinite || length <= 0) {
       throw CalcException(const L10nText(
         'রডের দৈর্ঘ্য শূন্যের বেশি হতে হবে।',
         'Bar length must be greater than zero.',
@@ -146,7 +152,7 @@ class RebarCalculator {
   /// How many pieces of a given stock length make one metric tonne.
   double piecesPerTon(double diameterMm, {int stockLengthFt = 20}) {
     final perPiece = kgPerFoot(diameterMm) * stockLengthFt;
-    if (perPiece <= 0) {
+    if (!perPiece.isFinite || perPiece <= 0) {
       throw CalcException(
         const L10nText('হিসাব করা যায়নি।', 'Could not calculate.'),
       );

@@ -28,7 +28,7 @@ class ConcreteCalculator {
     MixRatio ratio = MixRatio.c1_2_4,
     double waterCementRatio = 0.45,
   }) {
-    if (volume <= 0) {
+    if (!volume.isFinite || volume <= 0) {
       throw CalcException(const L10nText(
         'ঢালাইয়ের পরিমাণ শূন্যের বেশি হতে হবে।',
         'The concrete volume must be greater than zero.',

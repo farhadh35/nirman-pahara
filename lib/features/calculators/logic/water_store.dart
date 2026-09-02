@@ -35,7 +35,7 @@ class WaterStoreCalculator {
         'Count at least one person.',
       ));
     }
-    if (gallonsPerPersonPerDay <= 0) {
+    if (!gallonsPerPersonPerDay.isFinite || gallonsPerPersonPerDay <= 0) {
       throw CalcException(L10nText(
         'দৈনিক পানির হিসাব শূন্যের বড় হতে হবে।',
         'Daily water per person has to be greater than zero.',

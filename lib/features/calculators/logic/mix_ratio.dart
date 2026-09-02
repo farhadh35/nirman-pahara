@@ -31,7 +31,7 @@ class MixRatio {
         'Write the ratio like 1:2:4 or 1:6',
       ));
     }
-    if (parts.any((e) => e! <= 0)) {
+    if (parts.any((e) => !e!.isFinite || e <= 0)) {
       throw CalcException(const L10nText(
         'অনুপাতের কোনো অংশ শূন্য হতে পারে না।',
         'No part of the ratio can be zero.',
