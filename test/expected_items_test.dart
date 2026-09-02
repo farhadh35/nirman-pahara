@@ -31,6 +31,44 @@ void main() {
       expect(ids, isNot(contains('brickwork')));
     });
 
+    test('a bigger profile does not turn an honest bill into questions', () {
+      // The profiles were rebuilt from a real district food office estimate and
+      // the Directorate General of Food type design, which made them longer.
+      // Length is only safe if the right profile still passes the right
+      // document in silence: a page of invented absences would teach a reader
+      // to ignore the whole feature.
+      final doc = parser.parse(_fixture('boq_sample_boundary_wall.txt'));
+      final descriptions = doc.lines.map((l) => l.description).toList();
+      expect(ExpectedItems.boundaryWall.missingFrom(descriptions), isEmpty);
+    });
+
+    test('electrical work is checked for earthing, which was never checked',
+        () {
+      // The app has shipped an electrical checklist since 1.0 with no profile
+      // behind it, so the electrical section of a bill went unexamined.
+      final critical = ExpectedItems.electrical.items
+          .where((i) => i.critical)
+          .map((i) => i.id);
+      expect(critical, contains('earthing'));
+      expect(critical, contains('distribution_board'));
+    });
+
+    test('sanitary work is checked for somewhere the sewage goes', () {
+      final critical = ExpectedItems.sanitary.items
+          .where((i) => i.critical)
+          .map((i) => i.id);
+      expect(critical, contains('septic_tank'));
+    });
+
+    test('a building is asked after its doors and windows', () {
+      // Doors and windows carry roughly a sixth of a building's cost, and the
+      // profile never looked for them.
+      final ids = ExpectedItems.building.items.map((i) => i.id);
+      expect(ids, contains('doors_windows'));
+      expect(ids, contains('lintel'));
+      expect(ids, contains('apron'));
+    });
+
     test('a godown insists on a damp proof course and ventilation', () {
       final critical = ExpectedItems.godown.items
           .where((i) => i.critical)
