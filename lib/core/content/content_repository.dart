@@ -7,6 +7,7 @@ import 'models.dart';
 import 'rights_models.dart';
 import '../../features/prices/logic/price_models.dart';
 import '../../features/lookups/logic/lookup_tables.dart';
+import '../../features/rules/logic/far_rules.dart';
 import '../../features/prices/logic/pwd_rate_table.dart';
 
 /// Loads the bundled content packs.
@@ -29,6 +30,7 @@ class ContentRepository {
   RightsPack? _rights;
   PricePack? _prices;
   LookupPack? _lookups;
+  FarPack? _far;
   PwdRateTable? _pwdRates;
   PwdRateTable? _pwdEmRates;
 
@@ -105,6 +107,18 @@ class ContentRepository {
     final raw = await _read('assets/content/lookups/lookups.json');
     _lookups = LookupPack.fromJson(jsonDecode(raw) as Map<String, dynamic>);
     return _lookups!;
+  }
+
+  /// The road-width FAR table from the 2025 Dhaka building rules.
+  ///
+  /// Held apart from the guide because it is a statutory table, not written
+  /// content: every figure in it is the gazette's, and it is replaced wholesale
+  /// when the gazette is amended rather than edited card by card.
+  Future<FarPack> far() async {
+    if (_far != null) return _far!;
+    final raw = await _read('assets/content/rules/far_2025.json');
+    _far = FarPack.fromJson(jsonDecode(raw) as Map<String, dynamic>);
+    return _far!;
   }
 
   /// The published PWD rates for E/M (electro-mechanical) works.

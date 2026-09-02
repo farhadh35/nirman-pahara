@@ -1,0 +1,926 @@
+{
+ "version": 1,
+ "table": "সারণি-৫ — প্লট সংলগ্ন বিদ্যমান রাস্তার জন্য প্রযোজ্য FAR সূচক",
+ "source_bn": "ঢাকা মহানগর ইমারত (নির্মাণ, উন্নয়ন, সংরক্ষণ ও অপসারণ) বিধিমালা, ২০২৫; এস.আর.ও. নং ৪৬৯-আইন/২০২৫; বাংলাদেশ গেজেট, অতিরিক্ত, ১৪ ডিসেম্বর ২০২৫, সারণি-৫ (গেজেট পৃষ্ঠা ১৩৪৬০–১৩৪৬৪)",
+ "road_bands": [
+  {
+   "from_m": 1.8,
+   "to_m": 2.5
+  },
+  {
+   "from_m": 2.5,
+   "to_m": 3.66
+  },
+  {
+   "from_m": 3.66,
+   "to_m": 4.88
+  },
+  {
+   "from_m": 4.88,
+   "to_m": 6.0
+  },
+  {
+   "from_m": 6.0,
+   "to_m": 9.0
+  },
+  {
+   "from_m": 9.0,
+   "to_m": 12.0
+  },
+  {
+   "from_m": 12.0,
+   "to_m": 18.0
+  },
+  {
+   "from_m": 18.0,
+   "to_m": 24.0
+  },
+  {
+   "from_m": 24.0,
+   "to_m": null
+  }
+ ],
+ "zones": [
+  {
+   "id": "central",
+   "label_bn": "কেন্দ্রীয় ঢাকা, পূর্বাচল, ঝিলমিল"
+  },
+  {
+   "id": "outer",
+   "label_bn": "বহিঃস্থ নগর অঞ্চল — যেমন নারায়ণগঞ্জ সিটি কর্পোরেশন, সাভার পৌরসভা"
+  },
+  {
+   "id": "other",
+   "label_bn": "অন্যান্য এলাকা"
+  }
+ ],
+ "uses": [
+  {
+   "code": "A1",
+   "zone": "central",
+   "label_bn": "একক পরিবারের বাড়ি",
+   "far": [
+    1.25,
+    1.5,
+    1.75,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    3.75,
+    4.25
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A2",
+   "zone": "central",
+   "label_bn": "দুই পরিবারের বাড়ি",
+   "far": [
+    1.25,
+    1.5,
+    1.75,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    3.75,
+    4.25
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A3",
+   "zone": "central",
+   "label_bn": "ফ্ল্যাট ও এ্যাপার্টমেন্ট বাড়ি",
+   "far": [
+    1.25,
+    1.75,
+    2.0,
+    2.25,
+    3.25,
+    3.5,
+    4.0,
+    4.25,
+    4.75
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A4",
+   "zone": "central",
+   "label_bn": "মেস, বোর্ডিং, ডরমিটরি ও হোস্টেল",
+   "far": [
+    null,
+    2.0,
+    2.25,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.5
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A5",
+   "zone": "central",
+   "label_bn": "হোটেল, মোটেল, গেস্ট হাউজ, সার্ভিস এপার্টমেন্ট",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    4.0,
+    4.5,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "not_recommended": true
+  },
+  {
+   "code": "A6",
+   "zone": "central",
+   "label_bn": "সাশ্রয়ী আবাসন",
+   "far": [
+    1.5,
+    2.0,
+    2.25,
+    2.5,
+    3.0,
+    3.25,
+    3.75,
+    4.0,
+    4.25
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A1",
+   "zone": "outer",
+   "label_bn": "একক পরিবারের বাড়ি",
+   "far": [
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.25,
+    2.75,
+    3.25,
+    3.5,
+    4.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A2",
+   "zone": "outer",
+   "label_bn": "দুই পরিবারের বাড়ি",
+   "far": [
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.25,
+    2.75,
+    3.25,
+    3.5,
+    4.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A3",
+   "zone": "outer",
+   "label_bn": "ফ্ল্যাট ও এ্যাপার্টমেন্ট বাড়ি",
+   "far": [
+    1.25,
+    1.5,
+    1.75,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    3.75,
+    4.25
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A4",
+   "zone": "outer",
+   "label_bn": "মেস, বোর্ডিং, ডরমিটরি ও হোস্টেল",
+   "far": [
+    1.25,
+    1.75,
+    2.0,
+    2.25,
+    2.75,
+    3.25,
+    3.75,
+    4.25,
+    4.75
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A5",
+   "zone": "outer",
+   "label_bn": "হোটেল, মোটেল, গেস্ট হাউজ, সার্ভিস এপার্টমেন্ট",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    3.75,
+    4.25,
+    4.75,
+    5.75,
+    6.75
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A6",
+   "zone": "outer",
+   "label_bn": "সাশ্রয়ী আবাসন",
+   "far": [
+    1.5,
+    1.75,
+    2.0,
+    2.25,
+    2.75,
+    3.0,
+    3.5,
+    3.75,
+    4.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A1",
+   "zone": "other",
+   "label_bn": "একক পরিবারের বাড়ি",
+   "far": [
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.25,
+    2.75,
+    3.25,
+    3.5,
+    4.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A2",
+   "zone": "other",
+   "label_bn": "দুই পরিবারের বাড়ি",
+   "far": [
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.25,
+    2.75,
+    3.25,
+    3.5,
+    4.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A3",
+   "zone": "other",
+   "label_bn": "ফ্ল্যাট ও এ্যাপার্টমেন্ট বাড়ি",
+   "far": [
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.3,
+    2.8,
+    3.3,
+    3.5,
+    4.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A4",
+   "zone": "other",
+   "label_bn": "মেস, বোর্ডিং, ডরমিটরি ও হোস্টেল",
+   "far": [
+    1.0,
+    1.5,
+    1.75,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A5",
+   "zone": "other",
+   "label_bn": "হোটেল, মোটেল, গেস্ট হাউজ, সার্ভিস এপার্টমেন্ট",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    3.5,
+    4.0,
+    4.5,
+    5.5,
+    6.5
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "A6",
+   "zone": "other",
+   "label_bn": "সাশ্রয়ী আবাসন",
+   "far": [
+    1.5,
+    1.75,
+    2.0,
+    2.25,
+    2.75,
+    3.0,
+    3.5,
+    3.75,
+    4.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "B1",
+   "zone": null,
+   "label_bn": "স্কুল ও কলেজ জাতীয় শিক্ষা প্রতিষ্ঠান (দ্বাদশ শ্রেণি পর্যন্ত)",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    2.5,
+    3.0,
+    3.5,
+    4.5,
+    5.5
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "B2",
+   "zone": null,
+   "label_bn": "বিশ্ববিদ্যালয়, মেডিকেল কলেজ, ট্রেনিং একাডেমি (দ্বাদশ শ্রেণির উপরে)",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    2.5,
+    3.5,
+    4.0,
+    6.0,
+    7.0
+   ],
+   "not_recommended": true
+  },
+  {
+   "code": "B3",
+   "zone": null,
+   "label_bn": "প্রি-স্কুল",
+   "far": [
+    null,
+    null,
+    null,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.5,
+    5.5
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "C1",
+   "zone": null,
+   "label_bn": "শিশু পরিচর্যা",
+   "far": [
+    null,
+    null,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    5.0,
+    6.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "C2",
+   "zone": null,
+   "label_bn": "বয়স্ক পরিচর্যা (শারীরিকভাবে সক্ষম)",
+   "far": [
+    null,
+    null,
+    null,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    5.0,
+    6.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "C3",
+   "zone": null,
+   "label_bn": "বয়স্ক পরিচর্যা (শারীরিকভাবে সক্ষম নহে)",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    2.0,
+    3.5,
+    4.0,
+    5.0,
+    6.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "C4",
+   "zone": null,
+   "label_bn": "শিশুদের জন্য সংশোধনাগার, মানসিক ও অন্যান্য সংশোধন কেন্দ্র",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    2.0,
+    3.5,
+    4.0,
+    5.0,
+    6.0
+   ],
+   "not_recommended": true
+  },
+  {
+   "code": "C5",
+   "zone": null,
+   "label_bn": "বয়স্কদের জন্য কারাগার, মানসিক ও অন্যান্য পুনর্বাসন কেন্দ্র",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    2.0,
+    3.5,
+    4.0,
+    5.0,
+    6.0
+   ],
+   "not_recommended": true
+  },
+  {
+   "code": "D1",
+   "zone": null,
+   "label_bn": "সাধারণ স্বাস্থ্যসেবা (হাসপাতাল, ক্লিনিক, মেডিকেল হাসপাতাল)",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    3.0,
+    4.0,
+    4.5,
+    5.5,
+    6.5
+   ],
+   "not_recommended": true
+  },
+  {
+   "code": "D2",
+   "zone": null,
+   "label_bn": "জরুরি অবস্থায় কার্যকর স্বাস্থ্যসেবা (দুর্যোগকালীন ও পরবর্তী জরুরি ব্যবস্থাপনাসহ)",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    4.0,
+    4.5,
+    5.5,
+    6.5
+   ],
+   "not_recommended": true
+  },
+  {
+   "code": "D3",
+   "zone": null,
+   "label_bn": "ডক্টর চেম্বার, ডায়াগনস্টিক ল্যাব, প্যাথলজি ল্যাব (বেড ব্যতীত)",
+   "far": [
+    null,
+    null,
+    null,
+    1.5,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "E1",
+   "zone": null,
+   "label_bn": "অফিস",
+   "far": [
+    null,
+    null,
+    1.5,
+    2.0,
+    3.0,
+    4.0,
+    5.5,
+    6.0,
+    6.5
+   ],
+   "not_recommended": true
+  },
+  {
+   "code": "E2",
+   "zone": null,
+   "label_bn": "গবেষণা ও পরীক্ষাগার (রিসার্চ প্রতিষ্ঠান জাতীয় স্থাপনা)",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    2.5,
+    3.0,
+    4.0,
+    5.0,
+    6.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "E3",
+   "zone": null,
+   "label_bn": "নিত্য প্রয়োজনীয় অন্যান্য সেবা (ব্যাংক, পোস্ট অফিস ও সমজাতীয়)",
+   "far": [
+    null,
+    null,
+    1.5,
+    2.0,
+    3.0,
+    4.0,
+    5.5,
+    6.0,
+    6.5
+   ],
+   "not_recommended": true
+  },
+  {
+   "code": "F1",
+   "zone": null,
+   "label_bn": "ছোট দোকান ও বাজার (৩০০ বর্গমিটারের কম)",
+   "far": [
+    null,
+    null,
+    1.0,
+    1.75,
+    2.0,
+    2.25,
+    2.5,
+    2.75,
+    3.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "F2",
+   "zone": null,
+   "label_bn": "বড় দোকান ও বাজার (৩০০ বর্গমিটারের অধিক)",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    2.0,
+    4.0,
+    4.5,
+    5.5,
+    6.5
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "F3",
+   "zone": null,
+   "label_bn": "ফিলিং স্টেশন",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    1.25,
+    1.5,
+    1.75,
+    2.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "G1",
+   "zone": null,
+   "label_bn": "কম দূষণকারী, কম বিপজ্জনক কারখানা ও কুটিরশিল্প",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    3.0,
+    4.0,
+    4.5,
+    5.5,
+    5.5
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "G2",
+   "zone": null,
+   "label_bn": "সাধারণ দূষণকারী কারখানা",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    3.0,
+    4.0,
+    4.5,
+    5.0,
+    5.5
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "H1",
+   "zone": null,
+   "label_bn": "কম দাহ্য পদার্থের গুদাম",
+   "far": [
+    null,
+    null,
+    null,
+    1.0,
+    2.0,
+    2.5,
+    3.5,
+    4.5,
+    5.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "H2",
+   "zone": null,
+   "label_bn": "সাধারণ দাহ্য পদার্থের গুদাম",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    1.5,
+    2.0,
+    3.0,
+    4.0,
+    5.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "I1",
+   "zone": null,
+   "label_bn": "বড় মিলনায়তন (স্থায়ী আসন ১০০০ বা তদূর্ধ্ব)",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    3.5,
+    4.5,
+    5.5,
+    6.5
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "I2",
+   "zone": null,
+   "label_bn": "ছোট মিলনায়তন (স্থায়ী আসন ১০০০ এর কম)",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "I3",
+   "zone": null,
+   "label_bn": "বড় মিলনায়তন (আসন স্থানান্তরযোগ্য নহে, জনসংখ্যা ৩০০ বা তদূর্ধ্ব)",
+   "far": [
+    null,
+    null,
+    null,
+    1.5,
+    2.5,
+    3.5,
+    4.5,
+    5.5,
+    6.5
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "I4",
+   "zone": null,
+   "label_bn": "ছোট মিলনায়তন (আসন স্থানান্তরযোগ্য নহে, জনসংখ্যা ৩০০ এর কম)",
+   "far": [
+    null,
+    null,
+    null,
+    1.5,
+    1.75,
+    2.0,
+    2.25,
+    2.5,
+    2.75
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "I5",
+   "zone": null,
+   "label_bn": "ধর্মীয়, ক্রীড়া ও সংস্কৃতি বিষয়ক",
+   "far": [
+    null,
+    null,
+    1.5,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "J1",
+   "zone": null,
+   "label_bn": "বিস্ফোরণ ঘটাইতে পারে এইরূপ ভবন",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    2.0,
+    2.5,
+    3.25,
+    4.25
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "J2",
+   "zone": null,
+   "label_bn": "রাসায়নিক ধরনের বিপজ্জনক ভবন",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    3.0,
+    4.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "J3",
+   "zone": null,
+   "label_bn": "জীবাণু ধরনের বিপজ্জনক ভবন",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    3.0,
+    4.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "J4",
+   "zone": null,
+   "label_bn": "বিকিরণ ধরনের বিপজ্জনক ভবন",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    3.0,
+    4.0
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "K1",
+   "zone": null,
+   "label_bn": "বাণিজ্যিক পার্কিং",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    3.5,
+    4.0,
+    5.5,
+    6.0,
+    6.5
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "K2",
+   "zone": null,
+   "label_bn": "ব্যক্তি মালিকানাধীন পার্কিং",
+   "far": [
+    null,
+    null,
+    1.0,
+    1.5,
+    3.5,
+    4.0,
+    5.5,
+    6.0,
+    6.5
+   ],
+   "not_recommended": false
+  },
+  {
+   "code": "K3",
+   "zone": null,
+   "label_bn": "মেরামত কারখানা",
+   "far": [
+    null,
+    null,
+    null,
+    null,
+    2.0,
+    2.25,
+    2.5,
+    3.0,
+    4.0
+   ],
+   "not_recommended": false
+  }
+ ]
+}
