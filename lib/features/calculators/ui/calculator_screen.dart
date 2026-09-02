@@ -1,0 +1,271 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+import '../../../app/app_scope.dart';
+import '../../../app/widgets/common.dart';
+import '../../../core/i18n/strings.dart';
+import '../../../core/util/bn.dart';
+import '../../../core/util/grouped_number_formatter.dart';
+import '../logic/calc_result.dart';
+import 'calc_spec.dart';
+
+/// One screen that renders every calculator from its [CalcSpec].
+///
+/// The result appears under the form and updates as the user types — no
+/// "Calculate" button, because on a site people change one number at a time and
+/// watch what it does.
+class CalculatorScreen extends StatefulWidget {
+  const CalculatorScreen({super.key, required this.spec});
+
+  final CalcSpec spec;
+
+  @override
+  State<CalculatorScreen> createState() => _CalculatorScreenState();
+}
+
+class _CalculatorScreenState extends State<CalculatorScreen> {
+  final Map<String, TextEditingController> _controllers = {};
+  final Map<String, String> _choices = {};
+  bool _seeded = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_seeded) return;
+    _seeded = true;
+    // Seeded here rather than in initState because the starting values are
+    // written in the reader's own digits: a Bangla-first app that prints
+    // "৪০ ফুট" in the answer must not put "40" in the box above it.
+    final locale = context.locale;
+    for (final f in widget.spec.fields) {
+      if (f.isChoice) {
+        _choices[f.key] = f.initial ?? f.choices!.keys.first;
+      } else {
+        final seed = Bn.localiseDigits(f.initial ?? '', locale);
+        _controllers[f.key] = TextEditingController(
+          text: f.money && seed.isNotEmpty
+              ? Bn.number(Bn.parse(seed) ?? 0, decimals: 0, locale: locale)
+              : seed,
+        )..addListener(() => setState(() {}));
+      }
+    }
+  }
+
+  @override
+  void dispose() {
+    for (final c in _controllers.values) {
+      c.dispose();
+    }
+    super.dispose();
+  }
+
+  Map<String, dynamic> get _values => {
+        for (final f in widget.spec.fields)
+          f.key: f.isChoice
+              ? _choices[f.key]
+              : Bn.parse(_controllers[f.key]!.text) ?? 0.0,
+      };
+
+  @override
+  Widget build(BuildContext context) {
+    final locale = context.locale;
+    final theme = Theme.of(context);
+
+    CalcResult? result;
+    String? error;
+    try {
+      result = widget.spec.run(_values);
+    } on CalcException catch (e) {
+      error = e.of(locale);
+    } catch (_) {
+      error = context.t(S.fillTheFields);
+    }
+
+    return Scaffold(
+      appBar: AppBar(title: Text(context.t(widget.spec.title))),
+      body: ListView(
+        padding: const EdgeInsets.fromLTRB(16, 8, 16, 40),
+        children: [
+          Text(
+            context.t(widget.spec.subtitle),
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+          ),
+          const SizedBox(height: 20),
+          for (final f in widget.spec.fields) ...[
+            if (f.isChoice)
+              _ChoiceField(
+                field: f,
+                value: _choices[f.key]!,
+                onChanged: (v) => setState(() => _choices[f.key] = v),
+              )
+            else
+              _NumberField(field: f, controller: _controllers[f.key]!),
+            const SizedBox(height: 16),
+          ],
+          const SizedBox(height: 8),
+          if (error != null)
+            CautionBox(text: error)
+          else if (result != null)
+            _ResultView(result: result),
+        ],
+      ),
+    );
+  }
+}
+
+class _NumberField extends StatelessWidget {
+  const _NumberField({required this.field, required this.controller});
+
+  final CalcField field;
+  final TextEditingController controller;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      controller: controller,
+      keyboardType: const TextInputType.numberWithOptions(decimal: true),
+      // Bangla digits are accepted too; Bn.parse normalises them.
+      inputFormatters: [
+        FilteringTextInputFormatter.allow(RegExp(r'[0-9০-৯.,\s]')),
+        if (field.money) GroupedNumberFormatter(context.locale),
+      ],
+      decoration: InputDecoration(
+        labelText: context.t(field.label),
+        helperText: field.hint == null ? null : context.t(field.hint!),
+        helperMaxLines: 3,
+        suffixText: field.suffix == null ? null : context.t(field.suffix!),
+      ),
+    );
+  }
+}
+
+class _ChoiceField extends StatelessWidget {
+  const _ChoiceField({
+    required this.field,
+    required this.value,
+    required this.onChanged,
+  });
+
+  final CalcField field;
+  final String value;
+  final ValueChanged<String> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButtonFormField<String>(
+      initialValue: value,
+      isExpanded: true,
+      decoration: InputDecoration(labelText: context.t(field.label)),
+      items: [
+        for (final e in field.choices!.entries)
+          DropdownMenuItem(value: e.key, child: Text(context.t(e.value)))
+      ],
+      onChanged: (v) => v == null ? null : onChanged(v),
+    );
+  }
+}
+
+class _ResultView extends StatelessWidget {
+  const _ResultView({required this.result});
+
+  final CalcResult result;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final locale = context.locale;
+    final headline = result.lines.where((l) => l.emphasis).toList();
+    final rest = result.lines.where((l) => !l.emphasis).toList();
+
+    String format(CalcLine l) =>
+        '${Bn.number(l.value, decimals: l.decimals, locale: locale)} '
+        '${l.unit.of(locale)}';
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        SectionCard(
+          title: context.t(S.result),
+          icon: Icons.calculate_outlined,
+          child: Column(
+            children: [
+              for (final l in headline)
+                ValueRow(
+                  label: l.label.of(locale),
+                  value: format(l),
+                  emphasis: true,
+                ),
+              if (rest.isNotEmpty) ...[
+                const Divider(height: 24),
+                for (final l in rest)
+                  ValueRow(label: l.label.of(locale), value: format(l)),
+              ],
+            ],
+          ),
+        ),
+        if (result.note != null) ...[
+          const SizedBox(height: 12),
+          CautionBox(text: result.note!.of(locale)),
+        ],
+        const SizedBox(height: 12),
+        SectionCard(
+          title: context.t(S.howCalculated),
+          icon: Icons.functions,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(result.formula.of(locale),
+                  style: theme.textTheme.bodyMedium),
+              const SizedBox(height: 16),
+              Text(context.t(S.assumptions),
+                  style: theme.textTheme.titleSmall),
+              const SizedBox(height: 6),
+              for (final a in result.assumptions)
+                Padding(
+                  padding: const EdgeInsets.only(top: 4),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('• '),
+                      Expanded(
+                        child: Text(a.of(locale),
+                            style: theme.textTheme.bodySmall),
+                      ),
+                    ],
+                  ),
+                ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 12),
+        OutlinedButton.icon(
+          onPressed: () => copyToClipboard(context, _asText(context)),
+          icon: const Icon(Icons.copy_all_outlined),
+          label: Text(context.t(S.copy)),
+        ),
+      ],
+    );
+  }
+
+  String _asText(BuildContext context) {
+    final locale = context.locale;
+    final b = StringBuffer();
+    for (final l in result.lines) {
+      b.writeln('${l.label.of(locale)}: '
+          '${Bn.number(l.value, decimals: l.decimals, locale: locale)} '
+          '${l.unit.of(locale)}');
+    }
+    b.writeln();
+    b.writeln(result.formula.of(locale));
+    for (final a in result.assumptions) {
+      b.writeln('• ${a.of(locale)}');
+    }
+    if (result.note != null) {
+      b.writeln();
+      b.writeln(result.note!.of(locale));
+    }
+    return b.toString();
+  }
+}

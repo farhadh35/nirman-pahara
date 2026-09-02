@@ -1,0 +1,35 @@
+Nirman Pahara / নির্মাণ পাহারা
+Copyright 2026 Nirman Pahara
+
+Code is licensed under the Apache License, Version 2.0 (see LICENSE).
+Written content, checklists and diagrams are licensed under
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
+
+This product bundles or draws on the following:
+
+  Noto Sans Bengali
+    SIL Open Font License 1.1
+    https://github.com/notofonts/bengali
+    Bundled at assets/fonts/ so that Bangla conjuncts render identically on
+    every handset, including those whose system Bangla font is incomplete.
+
+  PWD Schedule of Rates 2022 (2nd revised), 16th edition
+    Published by the Public Works Department, Government of Bangladesh.
+    Rates in assets/content/rates/pwd_sor_2022.json were extracted from the
+    published PDF on 2026-09-02. The edition and its effective date are shown
+    in the app wherever a rate appears.
+
+  Bangladesh National Building Code (BNBC) 2020
+    Cited as the source for technical content. Clause-level citations are
+    marked "review" until checked by a licensed civil engineer; see
+    docs/CONTENT_REVIEW.md.
+
+  Flutter and the Dart SDK
+    BSD-3-Clause. https://flutter.dev
+
+  Third-party Dart packages
+    Their licences are listed in the app under Settings, and in full via
+    `flutter pub deps`.
+
+Government documents, schedules and legal texts referenced by this app remain
+the property of their respective publishers and are cited, not relicensed.

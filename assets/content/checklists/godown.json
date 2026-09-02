@@ -1,0 +1,255 @@
+{
+  "id": "food_godown",
+  "track": "government",
+  "icon": "warehouse",
+  "title": {
+    "bn": "খাদ্য গুদাম",
+    "en": "Food godown"
+  },
+  "summary": {
+    "bn": "এলএসডি বা খাদ্য গুদাম। এখানে সবচেয়ে বড় শত্রু পানি আর আর্দ্রতা — শস্য পচে গেলে ভবন দাঁড়িয়ে থাকলেও কাজে আসে না।",
+    "en": "An LSD or food store. Here the enemy is water and damp: if the grain spoils, a building that is still standing has failed anyway."
+  },
+  "stages": [
+    {
+      "id": "g1_site",
+      "title": {
+        "bn": "জায়গা ও ভিত",
+        "en": "Site and plinth"
+      },
+      "when": {
+        "bn": "মাটি ভরাট ও প্লিন্থ ওঠার সময়",
+        "en": "While the earth filling and plinth go up"
+      },
+      "items": [
+        {
+          "id": "g1",
+          "photo": true,
+          "question": {
+            "bn": "গুদামের মেঝে আশপাশের জমি ও বন্যার পানির স্তরের চেয়ে যথেষ্ট উঁচু?",
+            "en": "Is the godown floor well above the surrounding ground and the flood level?"
+          },
+          "why": {
+            "bn": "নিচু গুদামে বর্ষায় পানি ঢোকে, আর একবার ভিজলে পুরো স্টক নষ্ট।",
+            "en": "A low godown takes water in the monsoon, and once the stock is wet it is gone."
+          },
+          "how": {
+            "bn": "এলাকাবাসীকে জিজ্ঞেস করুন গত বন্যায় পানি কতটুকু উঠেছিল, তারপর মেঝের উচ্চতা ফিতা দিয়ে মাপুন।",
+            "en": "Ask neighbours how high the water came in the last flood, then measure the floor height with a tape."
+          },
+          "standard": {
+            "bn": "গুদামের প্লিন্থ সাধারণত মাটি থেকে প্রায় ৮০ সেন্টিমিটার উঁচু রাখা হয়; স্থানীয় বন্যার স্তর বেশি হলে আরও উঁচু।",
+            "en": "A godown plinth is normally kept about 80 cm above finished ground, and higher where the local flood level demands it."
+          },
+          "citations": [
+            {
+              "source": {
+                "bn": "গুদাম নির্মাণের প্রচলিত মান — প্লিন্থের উচ্চতা",
+                "en": "Standard godown construction guidance — plinth height"
+              },
+              "status": "review"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "photo": true,
+          "question": {
+            "bn": "ভরাট মাটি স্তরে স্তরে দিয়ে দাবানো হচ্ছে?",
+            "en": "Is the fill being placed in layers and compacted?"
+          },
+          "why": {
+            "bn": "একবারে ঢেলে দেওয়া মাটি পরে বসে যায়, আর তখন মেঝে ফেটে যায়।",
+            "en": "Fill dumped in one go settles later, and the floor cracks when it does."
+          },
+          "how": {
+            "bn": "এক স্তর কতটা পুরু দেওয়া হচ্ছে দেখুন, আর পানি দিয়ে দাবানো হচ্ছে কি না।",
+            "en": "Watch how thick each layer is and whether it is watered and rammed."
+          },
+          "standard": {
+            "bn": "সাধারণত ২০০ মিলিমিটারের বেশি পুরু স্তরে ভরাট করা হয় না; প্রতি স্তরে পানি দিয়ে দাবাতে হয়।",
+            "en": "Fill is normally placed in layers no thicker than 200 mm, each watered and consolidated."
+          },
+          "citations": [
+            {
+              "source": {
+                "bn": "গুদাম নির্মাণের প্রচলিত মান — মাটি ভরাট",
+                "en": "Standard godown construction guidance — earth filling"
+              },
+              "status": "review"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g2_floor",
+      "title": {
+        "bn": "মেঝে ও আর্দ্রতা",
+        "en": "Floor and damp"
+      },
+      "when": {
+        "bn": "মেঝে ঢালাই ও ডিপিসি দেওয়ার সময়",
+        "en": "While the floor is cast and the damp course laid"
+      },
+      "items": [
+        {
+          "id": "g3",
+          "photo": true,
+          "question": {
+            "bn": "আর্দ্রতা রোধক স্তর (ডিপিসি) দেওয়া হয়েছে?",
+            "en": "Has a damp proof course been laid?"
+          },
+          "why": {
+            "bn": "ডিপিসি না থাকলে মাটি থেকে আর্দ্রতা উঠে বস্তার নিচের শস্য পচায় — উপর থেকে কিছুই বোঝা যায় না।",
+            "en": "Without it, damp rises out of the ground and rots the grain at the bottom of the stack, with nothing visible from above."
+          },
+          "how": {
+            "bn": "প্লিন্থের উপরে দেয়াল ওঠার ঠিক আগে কালো/ধূসর একটা আলাদা স্তর দেখা যায় কি না দেখুন।",
+            "en": "Look for a distinct layer laid across the plinth just before the walls start."
+          },
+          "citations": [
+            {
+              "source": {
+                "bn": "BNBC 2020, পার্ট ৫ ও গুদাম নির্মাণ মান",
+                "en": "BNBC 2020, Part 5, and godown construction guidance"
+              },
+              "status": "review"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "photo": true,
+          "question": {
+            "bn": "মেঝে সমান ও ফাটলমুক্ত?",
+            "en": "Is the floor level and free of cracks?"
+          },
+          "why": {
+            "bn": "ফাটা মেঝে দিয়ে আর্দ্রতা ও পোকা ঢোকে, আর বস্তা সাজানো যায় না।",
+            "en": "A cracked floor lets damp and pests in, and stacks cannot sit properly on it."
+          },
+          "how": {
+            "bn": "মেঝেতে পানি ঢেলে দেখুন কোথাও জমে থাকে কি না।",
+            "en": "Pour a little water and see whether it stands anywhere."
+          }
+        }
+      ]
+    },
+    {
+      "id": "g3_shell",
+      "title": {
+        "bn": "দেয়াল, ছাদ ও বাতাস চলাচল",
+        "en": "Walls, roof and ventilation"
+      },
+      "when": {
+        "bn": "কাঠামো ওঠার পর, হস্তান্তরের আগে",
+        "en": "Once the shell is up, before handover"
+      },
+      "items": [
+        {
+          "id": "g5",
+          "photo": true,
+          "question": {
+            "bn": "বাতাস চলাচলের ব্যবস্থা (ভেন্টিলেটর/লুভার) রাখা হয়েছে?",
+            "en": "Are ventilators or louvres provided?"
+          },
+          "why": {
+            "bn": "বাতাস না চললে ভেতরে ভাপ জমে, শস্যে ছত্রাক ধরে।",
+            "en": "Without air movement the store sweats and the grain moulds."
+          },
+          "how": {
+            "bn": "দুই পাশে খোলা আছে কি না, আর জাল দেওয়া আছে কি না দেখুন।",
+            "en": "Check for openings on opposite walls, and whether they are screened."
+          }
+        },
+        {
+          "id": "g6",
+          "photo": true,
+          "question": {
+            "bn": "ছাদ বা দেয়াল দিয়ে পানি পড়ে?",
+            "en": "Does water come through the roof or walls?"
+          },
+          "why": {
+            "bn": "একটা ফুটো দিয়েই পুরো স্তূপ নষ্ট হয়ে যেতে পারে।",
+            "en": "One leak can spoil an entire stack."
+          },
+          "how": {
+            "bn": "বৃষ্টির পরদিন ভেতরে গিয়ে ছাদের নিচে ভেজা দাগ খুঁজুন। টর্চ ব্যবহার করুন।",
+            "en": "Go inside the day after rain and look for wet patches on the underside. Use a torch."
+          }
+        },
+        {
+          "id": "g7",
+          "photo": true,
+          "question": {
+            "bn": "ইঁদুর ও পাখি ঢোকার পথ বন্ধ?",
+            "en": "Are rats and birds shut out?"
+          },
+          "why": {
+            "bn": "গুদামে সবচেয়ে বড় ক্ষতি করে ইঁদুর — আর তারা ছোট ফাঁক দিয়েই ঢোকে।",
+            "en": "Rats do the most damage in a store, and they get in through very small gaps."
+          },
+          "how": {
+            "bn": "দরজার নিচে ফাঁক, ভেন্টিলেটরে জাল, আর দেয়ালের কোনায় ছিদ্র দেখুন।",
+            "en": "Look for gaps under doors, screens on ventilators, and holes at wall corners."
+          }
+        }
+      ]
+    },
+    {
+      "id": "g4_around",
+      "title": {
+        "bn": "চারপাশ ও নিষ্কাশন",
+        "en": "Surroundings and drainage"
+      },
+      "when": {
+        "bn": "কাজ শেষে, বিল পরিশোধের আগে",
+        "en": "At completion, before the bill is paid"
+      },
+      "items": [
+        {
+          "id": "g8",
+          "photo": true,
+          "question": {
+            "bn": "দরজার সামনের চাতাল বাইরের দিকে ঢালু?",
+            "en": "Does the platform slope away from the doors?"
+          },
+          "why": {
+            "bn": "চাতাল ভেতরের দিকে ঢালু হলে বৃষ্টির পানি দরজা দিয়ে গুদামে ঢোকে।",
+            "en": "A platform sloping inwards feeds rainwater straight through the doors."
+          },
+          "how": {
+            "bn": "চাতালে পানি ঢেলে দেখুন কোন দিকে গড়ায়।",
+            "en": "Pour water on the platform and watch which way it runs."
+          },
+          "standard": {
+            "bn": "চাতালে বাইরের দিকে সাধারণত ১:৪০ ঢাল রাখা হয়।",
+            "en": "The platform is normally given an outward slope of about 1 in 40."
+          },
+          "citations": [
+            {
+              "source": {
+                "bn": "গুদাম নির্মাণের প্রচলিত মান — চাতালের ঢাল",
+                "en": "Standard godown construction guidance — platform slope"
+              },
+              "status": "review"
+            }
+          ]
+        },
+        {
+          "id": "g9",
+          "photo": true,
+          "question": {
+            "bn": "গুদামের চারপাশে পানি নিষ্কাশনের ড্রেন আছে?",
+            "en": "Is there a drain around the godown?"
+          },
+          "why": {
+            "bn": "চারপাশে পানি জমলে দেয়াল ভিজতে থাকে, ভিতও দুর্বল হয়।",
+            "en": "Standing water around the walls keeps them damp and weakens the foundation."
+          }
+        }
+      ]
+    }
+  ]
+}

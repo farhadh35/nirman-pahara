@@ -1,0 +1,184 @@
+{
+  "id": "repair_works",
+  "track": "both",
+  "icon": "build",
+  "title": {
+    "bn": "মেরামত কাজ",
+    "en": "Repair works"
+  },
+  "summary": {
+    "bn": "মেরামতে সবচেয়ে সহজ কারচুপি — সমস্যাটা সারানোর বদলে ঢেকে দেওয়া, আর না করা কাজের বিল নেওয়া।",
+    "en": "Repairs are the easiest place to cheat: cover the defect instead of curing it, and bill for work never done."
+  },
+  "stages": [
+    {
+      "id": "p1_before",
+      "title": {
+        "bn": "কাজ শুরুর আগে",
+        "en": "Before work starts"
+      },
+      "when": {
+        "bn": "পুরোনো অবস্থা যতক্ষণ অক্ষত",
+        "en": "While the old condition is still untouched"
+      },
+      "items": [
+        {
+          "id": "p1",
+          "photo": true,
+          "question": {
+            "bn": "মেরামতের আগের অবস্থার ছবি তুলে রেখেছেন?",
+            "en": "Have you photographed the condition before the repair?"
+          },
+          "why": {
+            "bn": "আগের ছবি না থাকলে পরে প্রমাণ করা যায় না কী মেরামত হয়েছে আর কী হয়নি।",
+            "en": "Without a before photograph you cannot later show what was repaired and what was not."
+          },
+          "how": {
+            "bn": "ক্ষতিগ্রস্ত জায়গার ছবি তুলুন, সঙ্গে আশপাশ যাতে জায়গাটা চেনা যায়।",
+            "en": "Photograph the damaged area, and enough around it to identify the spot."
+          }
+        },
+        {
+          "id": "p2",
+          "photo": true,
+          "question": {
+            "bn": "কতটুকু জায়গা মেরামত হওয়ার কথা, তা জানা আছে?",
+            "en": "Do you know how much area is meant to be repaired?"
+          },
+          "why": {
+            "bn": "পরিমাণ না জানলে অর্ধেক কাজ করে পুরো বিল নেওয়া ধরা যায় না।",
+            "en": "Without the quantity you cannot catch half the work being billed as all of it."
+          },
+          "how": {
+            "bn": "সাইনবোর্ড বা কাজের তালিকা থেকে দৈর্ঘ্য/ক্ষেত্রফল লিখে রাখুন।",
+            "en": "Write down the length or area from the board or the work list."
+          }
+        }
+      ]
+    },
+    {
+      "id": "p2_during",
+      "title": {
+        "bn": "কাজের সময়",
+        "en": "While the work is done"
+      },
+      "when": {
+        "bn": "পুরোনো অংশ তোলার সময় — এই সময়টাই একমাত্র সুযোগ",
+        "en": "While the old material is being taken out — the only chance"
+      },
+      "items": [
+        {
+          "id": "p3",
+          "photo": true,
+          "question": {
+            "bn": "নষ্ট অংশ তুলে ফেলা হচ্ছে, নাকি তার উপরেই নতুন দেওয়া হচ্ছে?",
+            "en": "Is the damaged material being removed, or just covered over?"
+          },
+          "why": {
+            "bn": "আলগা বা ভেজা অংশের উপর নতুন স্তর দিলে কয়েক মাসেই আবার খসে পড়ে — টাকাটা পুরো নষ্ট।",
+            "en": "A new layer over loose or damp material lets go within months, and the money is simply gone."
+          },
+          "how": {
+            "bn": "পুরোনো অংশ ছেনি দিয়ে তোলা হচ্ছে কি না, আর নিচের তল শক্ত কি না দেখুন।",
+            "en": "Watch whether the old material is being cut out, and whether what is underneath is sound."
+          }
+        },
+        {
+          "id": "p4",
+          "photo": true,
+          "question": {
+            "bn": "মেরামতের কিনারা কেটে সোজা করা হয়েছে?",
+            "en": "Have the edges of the patch been cut square?"
+          },
+          "why": {
+            "bn": "পাতলা ছুঁচালো কিনারা সবার আগে ভাঙে, তাই কিনারা খাড়া করে কাটতে হয়।",
+            "en": "A thin feathered edge is the first thing to break up, which is why edges are cut square."
+          }
+        },
+        {
+          "id": "p5",
+          "photo": true,
+          "question": {
+            "bn": "নতুন স্তরের পুরুত্ব ঠিক আছে?",
+            "en": "Is the new layer the right thickness?"
+          },
+          "why": {
+            "bn": "পাতলা করে দিলে চোখে একই দেখায়, কিন্তু টেকে না — আর পার্থক্যটাই ঠিকাদারের লাভ।",
+            "en": "Laid thin it looks identical and lasts a fraction of the time, and the difference is the contractor's margin."
+          },
+          "how": {
+            "bn": "ঢাকা পড়ার আগে কিনারায় ফিতা বসিয়ে মাপুন।",
+            "en": "Measure at the edge with a tape before it is covered."
+          }
+        },
+        {
+          "id": "p6",
+          "photo": true,
+          "question": {
+            "bn": "ফাটল বা ভেজা দাগের উপর সরাসরি রং করা হচ্ছে?",
+            "en": "Is paint going straight over cracks or damp patches?"
+          },
+          "why": {
+            "bn": "রং সমস্যাটা লুকায়, সারায় না। কয়েক মাস পর একই জায়গায় আবার ফিরে আসে।",
+            "en": "Paint hides the problem, it does not cure it. The same patch returns within months."
+          }
+        }
+      ]
+    },
+    {
+      "id": "p3_after",
+      "title": {
+        "bn": "কাজ শেষে",
+        "en": "After completion"
+      },
+      "when": {
+        "bn": "বিল পরিশোধের আগে",
+        "en": "Before the bill is paid"
+      },
+      "items": [
+        {
+          "id": "p7",
+          "photo": true,
+          "question": {
+            "bn": "যতটুকু কাজের কথা ছিল, ততটুকুই হয়েছে?",
+            "en": "Was as much work done as was promised?"
+          },
+          "why": {
+            "bn": "না করা কাজের বিল তোলা মেরামতের সবচেয়ে সাধারণ অনিয়ম — কোথাও কোথাও পুরো প্যাকেজেই কোনো কাজ হয় না।",
+            "en": "Billing for work never done is the commonest irregularity in maintenance; in some cases whole packages are paid with nothing done at all."
+          },
+          "how": {
+            "bn": "দুই প্রান্ত হেঁটে মেপে দেখুন, আর আগের ছবির সঙ্গে মেলান।",
+            "en": "Walk and measure both ends, and compare with your before photographs."
+          },
+          "citations": [
+            {
+              "source": {
+                "bn": "সংবাদমাধ্যমে প্রকাশিত রক্ষণাবেক্ষণ অনিয়মের অনুসন্ধান",
+                "en": "Press investigations into maintenance irregularities"
+              },
+              "status": "review",
+              "url": "https://www.tbsnews.net/bangladesh/corruption/3-lged-road-and-bridge-projects-tk343cr-gone-no-real-work-1237341"
+            }
+          ]
+        },
+        {
+          "id": "p8",
+          "photo": true,
+          "question": {
+            "bn": "মেরামতের পর জায়গাটা পানি ধরে রাখছে না তো?",
+            "en": "Does the repaired area now hold water?"
+          },
+          "why": {
+            "bn": "মেরামতের পর ঢাল নষ্ট হয়ে গেলে ঐ জায়গাতেই আবার নষ্ট হবে।",
+            "en": "If the repair kills the fall, the same spot fails again."
+          },
+          "how": {
+            "bn": "বৃষ্টির পর গিয়ে দেখুন কোথাও পানি জমে আছে কি না।",
+            "en": "Go after rain and see whether water is standing anywhere."
+          }
+        }
+      ]
+    }
+  ]
+}

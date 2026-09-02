@@ -1,0 +1,154 @@
+{
+  "id": "building",
+  "track": "both",
+  "icon": "building",
+  "title": { "bn": "ভবন", "en": "Building" },
+  "summary": {
+    "bn": "স্কুল, স্বাস্থ্য কমপ্লেক্স, অফিস ভবন — আর আপনার নিজের বাড়িও। ভিত থেকে ফিনিশিং পর্যন্ত।",
+    "en": "School, health complex, office block — and your own house. Foundation to finishing."
+  },
+  "stages": [
+    {
+      "id": "b1_layout",
+      "title": { "bn": "লে-আউট ও ভিত", "en": "Layout and foundation" },
+      "when": { "bn": "মাটি কাটার সময়", "en": "During excavation" },
+      "items": [
+        {
+          "id": "b1",
+          "question": { "bn": "গর্তের গভীরতা ও মাপ নকশা অনুযায়ী?", "en": "Do the pit depth and size match the drawing?" },
+          "why": { "bn": "ভিত অগভীর হলে ভবন পরে বসে যায়, আর তখন আর কিছু করার থাকে না।", "en": "A shallow foundation lets the building settle later, when nothing can be done about it." },
+          "how": { "bn": "গর্তে লাঠি নামিয়ে ফিতা দিয়ে গভীরতা মাপুন।", "en": "Drop a stick into the pit and measure the depth with a tape." },
+          "photo": true
+        },
+        {
+          "id": "b2",
+          "question": { "bn": "গর্তের পাশ ধসের ঝুঁকিতে আছে?", "en": "Are the pit sides at risk of collapse?" },
+          "why": { "bn": "প্রতি বছর গর্ত ধসে শ্রমিক মারা যান — বিশেষ করে বর্ষায়।", "en": "Workers are killed by collapsing pits every year, especially in the monsoon." },
+          "how": { "bn": "খোঁড়া মাটি কিনারার কাছে স্তূপ করা আছে কি না, ওঠানামার মই আছে কি না দেখুন।", "en": "Check whether spoil is heaped near the edge and whether there is a ladder." },
+          "photo": true
+        }
+      ]
+    },
+    {
+      "id": "b2_rebar",
+      "title": { "bn": "রড বাঁধা", "en": "Reinforcement" },
+      "when": { "bn": "রড বাঁধা শেষ, ঢালাই শুরুর আগে — এই সময়টাই একমাত্র সুযোগ", "en": "Tying finished, pour not started — this window is the only chance" },
+      "items": [
+        {
+          "id": "b3",
+          "question": { "bn": "রডের সংখ্যা নকশার সঙ্গে মেলে?", "en": "Does the number of bars match the drawing?" },
+          "why": { "bn": "কম রড মানে কম শক্তি, আর ঢালাইয়ের পর কেউ আর গুনতে পারবে না।", "en": "Fewer bars means less strength, and after the pour nobody can count them." },
+          "how": { "bn": "নকশা দেখতে চান, তারপর গুনুন। গোনার জন্য প্রকৌশলী হতে হয় না।", "en": "Ask for the drawing, then count. Counting takes no engineer." },
+          "photo": true
+        },
+        {
+          "id": "b4",
+          "question": { "bn": "দুই রডের মাঝের ফাঁক নকশা অনুযায়ী?", "en": "Is the spacing between bars as drawn?" },
+          "why": { "bn": "ফাঁক বেশি মানে রড কম — একই কথা, অন্যভাবে।", "en": "Wider spacing means fewer bars — the same thing said differently." },
+          "how": { "bn": "জালির উপর ফিতা রেখে কয়েক জায়গায় ফাঁক মাপুন।", "en": "Lay a tape across the mesh and measure the gap at several places." },
+          "photo": true
+        },
+        {
+          "id": "b5",
+          "question": { "bn": "কভার ব্লক দেওয়া আছে?", "en": "Are cover blocks in place?" },
+          "why": { "bn": "কভার কম হলে কয়েক বছরেই রডে মরিচা ধরে কংক্রিট ফেটে যায়।", "en": "Too little cover and the steel rusts and spalls the concrete within a few years." },
+          "how": { "bn": "রডের নিচে ছোট সিমেন্ট ব্লক আছে কি না দেখুন — ইটের টুকরা চলবে না।", "en": "Look for small cement blocks under the bars — brick chips are not acceptable." },
+          "standard": { "bn": "প্রয়োজনীয় কভার অংশ ও পরিবেশভেদে আলাদা; নকশা দেখুন।", "en": "Required cover varies by member and exposure; read it off the drawing." },
+          "photo": true,
+          "citations": [
+            { "source": { "bn": "BNBC 2020, পার্ট ৬", "en": "BNBC 2020, Part 6" }, "status": "review" }
+          ]
+        },
+        {
+          "id": "b6",
+          "question": { "bn": "কলাম ও বিমের রিং (স্টিরাপ) ঠেকনার কাছে ঘন আছে?", "en": "Are stirrups closer together near the supports?" },
+          "why": { "bn": "ভূমিকম্পে কলামের গোড়া-মাথাতেই সবচেয়ে বেশি চাপ পড়ে।", "en": "In an earthquake the top and bottom of a column take the most punishment." },
+          "photo": true,
+          "citations": [
+            { "source": { "bn": "BNBC 2020, পার্ট ৬", "en": "BNBC 2020, Part 6" }, "status": "review" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3_pour",
+      "title": { "bn": "ঢালাই", "en": "The pour" },
+      "when": { "bn": "ঢালাইয়ের দিন, সারা দিন", "en": "On pour day, throughout" },
+      "items": [
+        {
+          "id": "b7",
+          "question": { "bn": "মাপার বাক্স (ফর্মা) ব্যবহার হচ্ছে?", "en": "Are measuring boxes being used?" },
+          "why": { "bn": "বেলচা গুনে অনুপাত ঠিক রাখা যায় না — অনুপাত ঠিক না থাকলে শক্তিও থাকে না।", "en": "Shovelfuls cannot hold a ratio, and without the ratio there is no strength." },
+          "photo": true
+        },
+        {
+          "id": "b8",
+          "question": { "bn": "মিশ্রণে পানি বেশি দেওয়া হচ্ছে?", "en": "Is too much water going into the mix?" },
+          "why": { "bn": "বাড়তি পানি শুকিয়ে গেলে অসংখ্য ছিদ্র রেখে যায় এবং কংক্রিট দুর্বল হয় — উপরে দেখে বোঝা যায় না।", "en": "The extra water dries out and leaves pores behind, weakening the concrete — and nothing on the surface shows it." },
+          "how": { "bn": "মিশ্রণ পানির মতো গড়িয়ে পড়ছে কি না দেখুন; ভিডিও করুন।", "en": "Watch whether the mix runs like water; take a video." },
+          "photo": true
+        },
+        {
+          "id": "b9",
+          "question": { "bn": "খালি সিমেন্টের ব্যাগ গোনা হয়েছে?", "en": "Have the empty cement bags been counted?" },
+          "why": { "bn": "যত ব্যাগ লাগার কথা তত ব্যাগ খালি হয়েছে কি না — এটাই সবচেয়ে সহজ যাচাই।", "en": "Whether the empties match the number the pour needed is the simplest check there is." },
+          "how": { "bn": "অ্যাপের কংক্রিট হিসাব দিয়ে কত ব্যাগ লাগার কথা বের করুন, তারপর খালি ব্যাগ গুনুন।", "en": "Work out the required bags with the app's concrete calculator, then count the empties." },
+          "photo": true
+        },
+        {
+          "id": "b10",
+          "question": { "bn": "নমুনা (সিলিন্ডার) নেওয়া হয়েছে?", "en": "Were test cylinders cast?" },
+          "why": { "bn": "কংক্রিটের শক্তি প্রমাণ করে একমাত্র ল্যাব টেস্ট, অনুপাত নয়।", "en": "Only a laboratory test proves the strength; the ratio does not." },
+          "photo": true,
+          "citations": [
+            { "source": { "bn": "BNBC 2020, পার্ট ৬ ও ৭", "en": "BNBC 2020, Parts 6 and 7" }, "status": "review" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b4_curing",
+      "title": { "bn": "কিউরিং", "en": "Curing" },
+      "when": { "bn": "ঢালাইয়ের পরের দিনগুলোতে", "en": "In the days after the pour" },
+      "items": [
+        {
+          "id": "b11",
+          "question": { "bn": "ঢালাইয়ের পর নিয়মিত পানি দেওয়া হচ্ছে?", "en": "Is the concrete being watered regularly?" },
+          "why": { "bn": "পানি না দিলে কংক্রিট পুরো শক্তি পায় না এবং ফাটল ধরে।", "en": "Without water the concrete never reaches full strength and it cracks." },
+          "how": { "bn": "পরপর কয়েক দিন একই জায়গার ছবি তুলুন — শুকনা ছাদের ধারাবাহিক ছবি শক্ত প্রমাণ।", "en": "Photograph the same spot on successive days. A run of dry-slab photographs is strong evidence." },
+          "standard": { "bn": "কত দিন লাগবে তা সিমেন্টের ধরন ও দপ্তরের স্পেসিফিকেশনের উপর নির্ভর করে।", "en": "How many days depends on the cement type and the department's specification." },
+          "photo": true,
+          "citations": [
+            { "source": { "bn": "BNBC 2020, পার্ট ৭", "en": "BNBC 2020, Part 7" }, "status": "review" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b5_masonry",
+      "title": { "bn": "গাঁথুনি ও প্লাস্টার", "en": "Masonry and plaster" },
+      "when": { "bn": "দেয়াল ওঠার সময়", "en": "While the walls go up" },
+      "items": [
+        {
+          "id": "b12",
+          "question": { "bn": "ইট প্রথম শ্রেণির?", "en": "Are the bricks first class?" },
+          "why": { "bn": "কম পোড়া ইট পানি টানে, লবণ ওঠে, আর দেয়াল দুর্বল হয়।", "en": "Underburnt brick draws water, throws salt, and leaves a weak wall." },
+          "how": { "bn": "দুটো ইট ঠুকুন — ঝনঝন শব্দ ভালো, ভোঁতা শব্দ খারাপ। স্তূপের ভেতর থেকে টেনে দেখুন।", "en": "Strike two together: a ring is good, a thud is not. Pull a few from inside the stack." },
+          "photo": true
+        },
+        {
+          "id": "b13",
+          "question": { "bn": "গাঁথুনির আগে ইট ভেজানো হচ্ছে?", "en": "Are bricks being wetted before laying?" },
+          "why": { "bn": "শুকনা ইট মসলার পানি টেনে নেয়, ফলে মসলা ঠিকমতো শক্ত হয় না।", "en": "A dry brick sucks the water out of the mortar, so the mortar never sets properly." },
+          "photo": true
+        },
+        {
+          "id": "b14",
+          "question": { "bn": "প্লাস্টারের পরও পানি দেওয়া হচ্ছে?", "en": "Is the plaster being cured too?" },
+          "why": { "bn": "প্লাস্টারেও কিউরিং লাগে; না দিলে চুল-ফাটল ধরে।", "en": "Plaster needs curing as well; skip it and you get hairline cracks." },
+          "photo": true
+        }
+      ]
+    }
+  ]
+}

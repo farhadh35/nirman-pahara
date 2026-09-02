@@ -1,0 +1,110 @@
+{
+  "id": "road_rural",
+  "track": "government",
+  "icon": "road",
+  "title": { "bn": "গ্রামীণ সড়ক", "en": "Rural road" },
+  "summary": {
+    "bn": "মাটির কাজ থেকে কার্পেটিং পর্যন্ত। বেশির ভাগ জিনিস ঢেকে যাওয়ার আগেই দেখতে হয়।",
+    "en": "From earthwork to the wearing course. Most of it can only be seen before it is covered."
+  },
+  "stages": [
+    {
+      "id": "s1_before",
+      "title": { "bn": "কাজ শুরুর আগে", "en": "Before work starts" },
+      "when": { "bn": "মাটি কাটা শুরুর আগে", "en": "Before earthwork begins" },
+      "items": [
+        {
+          "id": "r1",
+          "question": { "bn": "সাইনবোর্ড লাগানো হয়েছে এবং পড়া যায়?", "en": "Is the signboard up and readable?" },
+          "why": { "bn": "বোর্ড ছাড়া কাজের পরিমাণ, মূল্য বা সময়সীমা কিছুই যাচাই করা যায় না।", "en": "Without the board you cannot check the quantity, the value or the deadline." },
+          "how": { "bn": "বোর্ডে সাতটি তথ্য খুঁজুন: কাজের নাম, টেন্ডার আইডি, দপ্তর, ঠিকাদার, চুক্তিমূল্য, শুরু ও শেষের তারিখ, কাজের পরিমাণ।", "en": "Look for seven things: work name, tender ID, department, contractor, contract value, start and end dates, and quantity." },
+          "standard": { "bn": "প্রতিটি সাইটে দৃশ্যমান জায়গায় তথ্যবোর্ড থাকার কথা।", "en": "Every site is meant to carry an information board in a visible place." },
+          "photo": true,
+          "citations": [
+            { "source": { "bn": "BPPA/DIMAPPP নাগরিক পর্যবেক্ষণ", "en": "BPPA/DIMAPPP citizen monitoring" }, "url": "https://citizen.bppa.gov.bd/about-us", "status": "verified" }
+          ]
+        },
+        {
+          "id": "r2",
+          "question": { "bn": "রাস্তার প্রস্থ নকশা অনুযায়ী আছে?", "en": "Does the road width match the drawing?" },
+          "why": { "bn": "প্রস্থ কম হলে প্রতিটি স্তরের মালামালও কম লাগে — টাকা একই থাকে।", "en": "A narrower road needs less of every layer, while the payment stays the same." },
+          "how": { "bn": "ফিতা দিয়ে কয়েক জায়গায় প্রস্থ মাপুন, শুধু এক জায়গায় নয়।", "en": "Tape the width at several points, not just one." },
+          "photo": true
+        }
+      ]
+    },
+    {
+      "id": "s2_earth",
+      "title": { "bn": "মাটির কাজ ও স্তর", "en": "Earthwork and layers" },
+      "when": { "bn": "প্রতিটি স্তর ঢাকা পড়ার আগে", "en": "Before each layer is covered" },
+      "items": [
+        {
+          "id": "r3",
+          "question": { "bn": "প্রতিটি স্তরের পুরুত্ব নকশার সঙ্গে মেলে?", "en": "Does each layer's thickness match the design?" },
+          "why": { "bn": "স্তর পাতলা হলে রাস্তা কয়েক বর্ষাতেই বসে যায়, অথচ বিলে পুরো পুরুত্বের টাকা যায়।", "en": "A thin layer settles within a couple of monsoons, while the bill is paid for the full thickness." },
+          "how": { "bn": "স্তর খোলা থাকতে কিনারায় ফিতা বসিয়ে মাপুন। ঢাকা পড়লে আর মাপা যাবে না।", "en": "Measure at the edge while the layer is still open. Once covered, it cannot be measured." },
+          "standard": { "bn": "ডিজাইনে লেখা পুরুত্ব দাবানোর পরের পুরুত্ব, আলগা অবস্থার নয়।", "en": "The thickness on the drawing is the compacted thickness, not the loose one." },
+          "photo": true,
+          "citations": [
+            { "source": { "bn": "LGED রোড ডিজাইন স্ট্যান্ডার্ডস", "en": "LGED Road Design Standards" }, "url": "https://oldweb.lged.gov.bd/UploadedDocument/UnitPublication/4/11/2005_Road%20Design%20Standards_Rural%20Roads_Final.pdf", "status": "review" }
+          ]
+        },
+        {
+          "id": "r4",
+          "question": { "bn": "রোলার দিয়ে দাবানো হচ্ছে, নাকি শুধু ছড়িয়ে দেওয়া হচ্ছে?", "en": "Is the layer being rolled, or just spread?" },
+          "why": { "bn": "দাবানো না হলে স্তর আলগা থাকে, আর আলগা স্তরের উপর কার্পেটিং টেকে না।", "en": "Unrolled material stays loose, and a surface laid over loose material does not last." },
+          "how": { "bn": "রোলার কতবার যাচ্ছে গুনুন, আর পানি ছিটানো হচ্ছে কি না দেখুন।", "en": "Count the roller passes and check whether water is being sprinkled." },
+          "photo": true
+        },
+        {
+          "id": "r5",
+          "question": { "bn": "খোয়া বা পাথর কি ভালো মানের?", "en": "Is the khoa or stone of decent quality?" },
+          "why": { "bn": "কম পোড়া ইটের খোয়া হাতে গুঁড়া হয়ে যায়, রোলারের নিচেই ভেঙে পড়ে।", "en": "Khoa from underburnt brick crumbles in the hand and breaks up under the roller itself." },
+          "how": { "bn": "কয়েক টুকরা হাতে নিয়ে চাপ দিন, আর মাটি বা ধুলা মেশানো আছে কি না দেখুন।", "en": "Squeeze a few pieces, and look for soil or dust mixed in." },
+          "photo": true
+        }
+      ]
+    },
+    {
+      "id": "s3_structures",
+      "title": { "bn": "কালভার্ট ও পাশের কাজ", "en": "Culverts and side works" },
+      "when": { "bn": "নির্মাণের সময়", "en": "During construction" },
+      "items": [
+        {
+          "id": "r6",
+          "question": { "bn": "পানি যাওয়ার কালভার্ট বা পাইপ রাখা হয়েছে?", "en": "Have culverts or pipes been provided for drainage?" },
+          "why": { "bn": "পানি বের হওয়ার পথ না থাকলে বর্ষায় রাস্তার নিচের মাটি ধুয়ে যায়।", "en": "With no way out, monsoon water washes the ground out from under the road." },
+          "how": { "bn": "যেখানে আগে পানি যেত সেখানে এখন পথ আছে কি না — এলাকাবাসী জানেন, জিজ্ঞেস করুন।", "en": "Ask neighbours where water used to run, and check whether it still can." },
+          "photo": true
+        },
+        {
+          "id": "r7",
+          "question": { "bn": "রাস্তার কিনারা (edging) ঠিকমতো বাঁধা হয়েছে?", "en": "Are the road edges properly held?" },
+          "why": { "bn": "কিনারা বাঁধা না থাকলে রাস্তা পাশ থেকে ভাঙতে শুরু করে।", "en": "Unsupported edges are where a road starts breaking up." },
+          "photo": true
+        }
+      ]
+    },
+    {
+      "id": "s4_after",
+      "title": { "bn": "কাজ শেষে", "en": "After completion" },
+      "when": { "bn": "চূড়ান্ত বিল পরিশোধের আগে", "en": "Before the final bill is paid" },
+      "items": [
+        {
+          "id": "r8",
+          "question": { "bn": "কাজ চুক্তির সময়ের মধ্যে শেষ হয়েছে?", "en": "Was the work finished within the contract period?" },
+          "why": { "bn": "সময় পার হলে চুক্তি অনুযায়ী জরিমানার বিধান থাকে।", "en": "Overrunning the period normally attracts a penalty under the contract." },
+          "how": { "bn": "সাইনবোর্ডের শেষ তারিখ আর আজকের তারিখ মেলান।", "en": "Compare the completion date on the board with today's date." },
+          "photo": true
+        },
+        {
+          "id": "r9",
+          "question": { "bn": "সাইনবোর্ডে লেখা দৈর্ঘ্য পর্যন্ত সত্যিই কাজ হয়েছে?", "en": "Was the work actually done for the full length on the board?" },
+          "why": { "bn": "শুরুর দিকটা ভালো করে শেষের দিকটা বাদ দেওয়া একটা পরিচিত কৌশল।", "en": "Doing the first stretch well and quietly dropping the last is a familiar trick." },
+          "how": { "bn": "দুই প্রান্ত হেঁটে দেখুন, প্রান্তের ছবি জিপিএস-সহ তুলুন।", "en": "Walk both ends and photograph them with GPS on." },
+          "photo": true
+        }
+      ]
+    }
+  ]
+}

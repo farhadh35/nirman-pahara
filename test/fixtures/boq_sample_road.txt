@@ -1,0 +1,89 @@
+   Report on Construction of Approach road, Boundary wall & Gate with ancillary facilities at Example LSD-1 Campus-2,
+                                Sample District. Package no-Construction/0000-00/00, Lot no-01.
+A.I.      CIVIL WORKS OF BOUNDARY WALL
+
+                                                                         Schedule   Measued    Quantity       Re-
+Sl. No.                     Short Description                     Unit                                    Construction    Schedule Amount      Measured Amount     Remaining Amount
+                                                                         Quantity   Quantity   Difference
+                                                                                                               of
+  1.01    a) Earth work in Excavation up to 1.5m depth            Cum      22.80      7.96       14.84           126.00             2,872.80            1,002.96            1,869.84
+  1.02    One layer Brick flat soling                             Sqm      19.00      8.71       10.29           420.00             7,980.00            3,659.39            4,320.61
+  1.03    a) Sand filling with FM 0.80 FM                         Cum      1.00       2.65       -1.65           635.00              635.00             1,682.75            (1,047.75)
+ 1.05     a.Concrete work in road with stone chips (1:1.5:3) in
+                                                                  Cum      3.70       2.20        1.50            7730             28,601.00           17,034.02           11,566.98
+          Footing
+          b.Concrete work in road with stone chips (1:1.5:3) in
+                                                                  Cum      5.52       3.40        2.12            7730             42,669.60           26,257.64           16,411.96
+          Column
+          c.Concrete work in road with stone chips (1:1.5:3) in
+                                                                  Cum      3.99       2.42        1.57            7517             29,992.83           18,199.61           11,793.22
+          GB
+ 1.06     Shuttering Works
+                                                                  Sqm                             0.00                                   -                   -                    -
+          Shuttering Works in footing
+                                                                  Sqm      28.40      14.35      14.05             339              9,627.60            4,863.83            4,763.77
+          Shuttering Works in column
+                                                                  Sqm      92.40      47.49      44.91             339             31,323.60           16,098.99           15,224.61
+          Shuttering Works in GB
+                                                                  Sqm      27.36      35.81      -8.45             339              9,275.04           12,140.67            (2,865.63)
+  1.07    Supplying fabrication 60 grade deformed bar              kg     2355.00    883.46     1471.54           82.00           193,110.00           72,443.90          120,666.10
+  1.08    b) 125 mm non exposed brick work                        Sqm      88.36      67.73      20.63           948.00            83,765.28           64,205.86           19,559.42
+  1.09    Minimum 12 mm thick cement sand (F.M. 1.2) plaster      Sqm
+                                                                          575.40     159.85      415.55          198.00           113,929.20           31,650.56           82,278.64
+          (1:4) on masonry surfaces In all floor
+  1.10    Dismaintling of old Boundary wall                       Sqm
+                                                                           0.00       33.46      -33.46        1,200.00                  -             40,152.00           (40,152.00)
+
+  1.11    Construction of surface drain                           Sqm
+                                                                           10.00      15.00      -5.00         4,881.00            48,810.00           73,215.00           (24,405.00)
+
+                                  Total                                                                                          602,591.95           382,607.18          219,984.77
+
+
+
+
+                                                                                                Page 1
+                                                                    Schedule   Measued     Quantity       Re-
+Sl. No.                     Short Description                Unit                                     Construction      Schedule Amount       Measured Amount      Remaining Amount
+                                                                    Quantity   Quantity    Difference
+                                                                                                           of
+A.I.      CIVIL WORKS of RCC Road-1&2
+
+
+                                                                    Schedule   Measued     Quantity
+Sl. No.                     Short Description                Unit                                                       Schedule Amount       Measured Amount      Remaining Amount
+                                                                    Quantity   Quantity    Difference
+                                                                                                        Rate in Taka
+  1.01    a) Earth work in Excavation up to 1.5m depth       Cum     258.18     316.21       -58.03            126.00            32,530.68            39,842.46             (7,311.78)
+  1.02    One layer Brick flat soling                        Sqm     860.60     830.16       30.44             420.00           361,452.00           348,665.15            12,786.85
+  1.03    a) Sand filling with FM 0.80 FM                    Cum     258.28     118.06       140.22            635.00           164,007.80            74,968.10            89,039.70
+  1.04    b) Supplying 7 Laying single layer polythene
+                                                             Sqm     860.60     830.16       30.44                34             29,260.40            28,225.27             1,035.13
+ 1.05     Concrete work in road with stone chips (1:1.5:3)
+                                                             Cum     180.73     158.13       22.60             12154           2,196,592.42         1,921,876.79          274,715.63
+  1.06    a) 250 mm Exposed brick work in supper structure   Cum
+                                                                      49.50      13.91       35.59              6040            298,980.00            84,030.97           214,949.03
+  1.07    Supplying fabrication 60 grade deformed bar         kg
+                                                                     9969.50    8967.30     1002.20               82            817,499.00           735,318.58            82,180.42
+
+                                  Total                                                                                       3,900,322.30         3,232,927.33           667,394.97
+
+
+                           Works need to done
+   1                       Barbed wire fencing               Sqm      108            108     0.00                155            16,740.00             16,740.00                  -
+   2                           M.S Gate                      Sqm                    5.49     -5.49             10064           177,668.00            177,668.00                  -
+   3                          Paints works                   Sqm      720            720     0.00                128            92,160.00             92,160.00                  -
+   5                             Total                                                                                         286,568.00            286,568.00                  -
+   5                         Grand Total                                                                                    4,186,890.30         3,519,495.33           667,394.97
+
+
+                    Total Schedule Amount                      Performed Works             Works                                        Remaining Balance
+                                                                                           need to
+                                                                                            done
+                             6140292.378                               3,232,927.33 286568.00                                                  2,620,797.05
+
+
+
+
+                                                                                            Page 2
+

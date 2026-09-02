@@ -1,0 +1,10 @@
+{
+  "content_version": 2,
+  "packs": [
+    "road.json",
+    "building.json",
+    "godown.json",
+    "repair.json",
+    "electrical.json"
+  ]
+}

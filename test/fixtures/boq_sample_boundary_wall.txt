@@ -1,0 +1,65 @@
+                  Re-Construction Of Boundary wall at Example LSD-1, Sample District, Package No-XXX 0000-00/00, Tender ID:000000
+
+
+                                                                               Schedule   Measued
+Sl. No.                         Short Description                       Unit                         Quantity Difference   Rate in     Schedule Amount      Measured Amount      Remaining Amount
+                                                                               Quantity   Quantity
+                                                                                                                            Taka
+ 1.01     a) Earth work in Excavation up to 1.5m depth                  Cum     189.96      19.11             170.85          336.00            63,826.56             6,420.96             57,405.60
+ 1.02     3" cc                                                          Sqm    109.44      1.59              107.85          541.00            59,207.04              860.19              58,346.85
+ 1.03     a) Sand filling with FM 0.80 FM                               Cum      41.60      7.96              33.64         1,167.00            48,547.20             9,289.32             39,257.88
+ 1.03     Site devlopement with earth                                   Cum     696.68      0.00              696.68          343.00           238,961.24                  -              238,961.24
+ 1.05     Concrete work with stone chips (1:2:4)
+                                                                                            0.00               0.00                                   -                    -                      -
+          Concrete work with stone chips (1:2:4) in footing
+                                                                        Cum      18.32      5.88              12.44            8677            158,962.64            50,990.58            107,972.06
+          Concrete work with stone chips (1:2:4) in gb
+                                                                        Cum      12.78      10.86              1.92            8821            112,732.38            95,794.41             16,937.97
+          Concrete work with stone chips (1:2:4) in Column
+                                                                        Cum      10.94      14.93             -3.99            9038             98,875.72          134,908.73              (36,033.01)
+ 1.06     Shuttering Works
+                                                                                                               0.00                                   -                    -                      -
+          Shuttering Works in footing
+                                                                        Sqm      93.96      26.23             67.73             516             48,483.36            13,533.01             34,950.35
+          Shuttering Works in GB
+                                                                        Sqm     149.00     157.58             -8.58             469             69,881.00            73,904.11              (4,023.11)
+          Shuttering Works In Column
+                                                                        Sqm     211.00     109.56             101.44            520            109,720.00            56,969.00             52,751.00
+ 1.07     Supplying fabrication 60 grade deformed bar                    kg
+                                                                                7332.57    2550.79         4781.78              100            733,257.00           255,078.77            478,178.23
+ 1.08     b) 125 mm non exposed brick work                               Sqm
+                                                                                178.36     265.20             -86.84           1184            211,178.24           313,991.08            (102,812.84)
+ 1.09     Minimum 12 mm thick cement sand (F.M. 1.2) plaster (1:4) on    Sqm
+                                                                                369.46     318.82             50.64             389            143,719.94           124,020.86             19,699.08
+          masonry surfaces In all floor
+ 1.10     Barbed weir fencing                                            Sqm
+                                                                                 53.63      53.67             -0.04            1055             56,579.65            56,622.91                 (43.26)
+ 1.11     250mm thick brick wall                                         Sqm
+                                                                                 41.16      0.00              41.16            8164            336,030.24                  -              336,030.24
+ 1.12     Plaster in Dado                                                Sqm     19.85     266.73          -246.88            373.00             7,404.05            99,489.78             (92,085.73)
+ 1.13     6mm thick plaster                                              Sqm    232.00     158.39             73.61           316.00            73,312.00            50,052.52             23,259.48
+
+                                        Total                                                                                                2,570,678.26        1,341,926.24           1,228,752.02
+
+
+
+
+                                                                                                     Page 1
+             Works need to done
+1                Weathercoat                  Sqm      621.76       318.82            302.94     323       200,828.48        102,978.86        97,849.62
+2               G.I Pipe Gate                 Sqm       5.49          5.49             0.00    10064        55,251.36         55,251.36              -
+3   Construction of masonary inspection pit   No          3              3             0.00     8315        24,945.00         24,945.00              -
+4               Surface drain                 rm          9              9             0.00     2760        24,840.00         24,840.00              -
+5               Surface drain                 rm         32             32             0.00     4760       152,320.00        152,320.00              -
+5                    Total                                                                                 458,184.84        360,335.22        97,849.62
+5             Grand Total                                                                              3,028,863.10      1,702,261.46     1,326,601.64
+
+       Total Schedule Amount                        Performed Works          Works need to                            Remaining Balance
+                                                                                 done
+               3799987.641                                  1,326,601.64      458184.84                                  2,015,201.16
+
+
+
+
+                                                                             Page 2
+

@@ -1,0 +1,520 @@
+{
+  "content_version": 2,
+  "updated": "2026-09-02",
+  "steps": [
+    {
+      "id": "step1_site",
+      "title": {
+        "bn": "১. সাইটের তদারককারী বা ইউনিয়ন পরিষদ",
+        "en": "1. The site supervisor or the Union Parishad"
+      },
+      "who": {
+        "bn": "উপসহকারী প্রকৌশলী (SAE) বা ইউপি চেয়ারম্যান/সদস্য",
+        "en": "The Sub-Assistant Engineer (SAE), or the UP chairman or member"
+      },
+      "how": {
+        "bn": "মৌখিকভাবে বলুন, কিন্তু একই কথা কাগজে লিখে একটা কপি জমা দিন ও প্রাপ্তি স্বীকার নিন।",
+        "en": "Say it in person, but put the same thing on paper, hand in a copy and get an acknowledgement."
+      },
+      "expect": {
+        "bn": "ছোট সমস্যা এখানেই মিটে যাওয়ার কথা — কিউরিং, মালামাল, সাইনবোর্ড।",
+        "en": "Small things should be fixed right here: curing, materials, a missing signboard."
+      },
+      "caution": {
+        "bn": "সাইটে তর্কে জড়াবেন না। একা না গিয়ে দুই-তিনজন মিলে যান।",
+        "en": "Do not get into an argument on site. Go with two or three others, not alone."
+      },
+      "track": "government"
+    },
+    {
+      "id": "step2_upazila",
+      "title": {
+        "bn": "২. উপজেলা প্রকৌশলী ও ইউএনও",
+        "en": "2. The Upazila Engineer and the UNO"
+      },
+      "who": {
+        "bn": "উপজেলা প্রকৌশলী (LGED) এবং উপজেলা নির্বাহী অফিসার",
+        "en": "The Upazila Engineer (LGED) and the Upazila Nirbahi Officer"
+      },
+      "how": {
+        "bn": "লিখিত অভিযোগ, সঙ্গে সাইনবোর্ডের ছবি, তারিখসহ ছবি ও মাপ। টেন্ডার আইডি অবশ্যই লিখুন।",
+        "en": "A written complaint with the signboard photo, dated photographs and measurements. Always include the tender ID."
+      },
+      "expect": {
+        "bn": "সরেজমিন পরিদর্শন বা ঠিকাদারকে নোটিশ।",
+        "en": "A site inspection, or a notice to the contractor."
+      },
+      "track": "government"
+    },
+    {
+      "id": "step3_ee",
+      "title": {
+        "bn": "৩. নির্বাহী প্রকৌশলী (জেলা)",
+        "en": "3. The Executive Engineer (district)"
+      },
+      "who": {
+        "bn": "সংশ্লিষ্ট দপ্তরের নির্বাহী প্রকৌশলী",
+        "en": "The Executive Engineer of the department concerned"
+      },
+      "how": {
+        "bn": "উপজেলা পর্যায়ে সাড়া না পেলে আগের অভিযোগের কপি ও তারিখ উল্লেখ করে পাঠান।",
+        "en": "If the upazila level does not respond, send it up quoting the earlier complaint and its date."
+      },
+      "expect": {
+        "bn": "বিল আটকে রাখা বা তদন্ত কমিটি — এই স্তরেই সেই ক্ষমতা থাকে।",
+        "en": "Withholding a bill or forming an inquiry — this is the level with that power."
+      },
+      "track": "government"
+    },
+    {
+      "id": "step4_grs",
+      "title": {
+        "bn": "৪. অভিযোগ প্রতিকার ব্যবস্থা (GRS) ও ৩৩৩",
+        "en": "4. The Grievance Redress System and 333"
+      },
+      "who": {
+        "bn": "সংশ্লিষ্ট দপ্তরের অভিযোগ নিষ্পত্তি কর্মকর্তা (GRO)",
+        "en": "The department's Grievance Redress Officer (GRO)"
+      },
+      "how": {
+        "bn": "grs.gov.bd-তে অনলাইনে, GRS অ্যাপে, অথবা ৩৩৩ নম্বরে ফোন করে।",
+        "en": "Online at grs.gov.bd, through the GRS app, or by calling 333."
+      },
+      "contact": {
+        "bn": "grs.gov.bd · ৩৩৩",
+        "en": "grs.gov.bd · 333"
+      },
+      "expect": {
+        "bn": "অভিযোগ নম্বর পাবেন, সেটা দিয়ে অগ্রগতি দেখা যায়।",
+        "en": "You get a complaint number and can track it."
+      },
+      "caution": {
+        "bn": "সামনাসামনি সংঘাত এড়াতে চাইলে এই পথটাই সবচেয়ে নিরাপদ।",
+        "en": "If you would rather avoid a face-to-face confrontation, this is the safest route."
+      },
+      "track": "government"
+    },
+    {
+      "id": "step5_rti",
+      "title": {
+        "bn": "৫. তথ্য অধিকার আবেদন",
+        "en": "5. A Right to Information application"
+      },
+      "who": {
+        "bn": "সংশ্লিষ্ট দপ্তরের দায়িত্বপ্রাপ্ত কর্মকর্তা",
+        "en": "The Designated Officer of the department concerned"
+      },
+      "how": {
+        "bn": "নির্ধারিত ফরমে লিখিত আবেদন। যা চাইবেন: অনুমিত হিসাব, BoQ, কার্যাদেশ, পরিমাপ বই ও পরিশোধিত বিল।",
+        "en": "A written application on the prescribed form. Ask for: the estimate, the BoQ, the work order, the measurement book and the bills paid."
+      },
+      "expect": {
+        "bn": "২০ কার্যদিবসের মধ্যে তথ্য; প্রত্যাখ্যান হলে ১০ কার্যদিবসের মধ্যে কারণসহ জানানো। না পেলে ৩০ দিনের মধ্যে আপিল, আপিল কর্তৃপক্ষ ১৫ দিনে সিদ্ধান্ত দেয়।",
+        "en": "Information within 20 working days; a refusal with reasons within 10. If nothing comes, appeal within 30 days and the appellate authority decides within 15."
+      },
+      "contact": {
+        "bn": "bdlaws.minlaw.gov.bd",
+        "en": "bdlaws.minlaw.gov.bd"
+      },
+      "track": "government"
+    },
+    {
+      "id": "step6_acc",
+      "title": {
+        "bn": "৬. দুর্নীতি দমন কমিশন",
+        "en": "6. The Anti-Corruption Commission"
+      },
+      "who": {
+        "bn": "দুদক",
+        "en": "The Anti-Corruption Commission"
+      },
+      "how": {
+        "bn": "সুনির্দিষ্ট আর্থিক অনিয়মের অভিযোগ, প্রমাণসহ। সাধারণ মান-সংক্রান্ত অভিযোগ এখানে নয়।",
+        "en": "A specific allegation of financial irregularity, with evidence. General quality complaints do not belong here."
+      },
+      "caution": {
+        "bn": "প্রমাণ ছাড়া অভিযোগ আপনাকেই ঝুঁকিতে ফেলতে পারে। আগের ধাপগুলোর কাগজ সঙ্গে রাখুন।",
+        "en": "An allegation without evidence can rebound on you. Keep the paperwork from the earlier steps."
+      },
+      "track": "government"
+    },
+    {
+      "id": "p1_contractor",
+      "track": "private",
+      "title": {
+        "bn": "১. ঠিকাদারকে লিখিতভাবে জানান",
+        "en": "1. Tell the contractor in writing"
+      },
+      "who": {
+        "bn": "যে ঠিকাদার বা রাজমিস্ত্রি কাজটা করছেন",
+        "en": "The contractor or mason doing the work"
+      },
+      "how": {
+        "bn": "কী ভুল হয়েছে, কী ঠিক করতে হবে, কত দিনের মধ্যে — তিনটাই লিখুন। খুদে বার্তা বা হোয়াটসঅ্যাপও লিখিত প্রমাণ; মুছবেন না। সঙ্গে তারিখসহ ছবি রাখুন।",
+        "en": "Write three things: what is wrong, what must be fixed, and by when. An SMS or WhatsApp message counts as writing — do not delete it. Keep dated photographs with it."
+      },
+      "expect": {
+        "bn": "বেশির ভাগ সমস্যা এই ধাপেই মেটে, কারণ বাকি টাকা তখনো আপনার হাতে।",
+        "en": "Most problems end here, because the remaining money is still in your hands."
+      },
+      "caution": {
+        "bn": "সাইটে চিৎকার নয়। লিখিত বার্তা পরে কাজে লাগে, ঝগড়া লাগে না।",
+        "en": "Do not shout on site. A written message is useful later; an argument is not."
+      }
+    },
+    {
+      "id": "p2_withhold",
+      "track": "private",
+      "title": {
+        "bn": "২. চুক্তি অনুযায়ী টাকা আটকান",
+        "en": "2. Withhold payment, as the contract allows"
+      },
+      "who": {
+        "bn": "আপনি নিজে",
+        "en": "You"
+      },
+      "how": {
+        "bn": "যে ধাপের কাজ ঠিক হয়নি, সেই ধাপের কিস্তি আটকে রাখুন — পুরো টাকা নয়, শুধু ঐ অংশ। কারণটা লিখিতভাবে জানিয়ে রাখুন।",
+        "en": "Hold the instalment for the stage that was done badly — that part, not the whole payment. Put the reason in writing."
+      },
+      "expect": {
+        "bn": "এটাই আপনার সবচেয়ে বড় হাতিয়ার, আর এটা কাজ করে কেবল আগে থেকে ধাপে ধাপে টাকা দেওয়ার ব্যবস্থা থাকলে।",
+        "en": "This is your strongest lever, and it only exists if you set the payment up in stages beforehand."
+      },
+      "caution": {
+        "bn": "চুক্তিতে যা লেখা নেই, তা আটকানো যায় না। তাই শুরুতেই লিখে রাখা জরুরি।",
+        "en": "You cannot withhold what the contract never staged. That is why it has to be written at the start."
+      }
+    },
+    {
+      "id": "p3_salish",
+      "track": "private",
+      "title": {
+        "bn": "৩. স্থানীয় মীমাংসা",
+        "en": "3. Settle it locally"
+      },
+      "who": {
+        "bn": "এলাকার গণ্যমান্য ব্যক্তি, ইউপি সদস্য বা উভয়ের পরিচিত কেউ",
+        "en": "A respected local figure, a UP member, or someone both sides know"
+      },
+      "how": {
+        "bn": "দুই পক্ষের চুক্তি, ছবি ও হিসাবের কাগজ সামনে রেখে বসুন। যা ঠিক হলো তা কাগজে লিখে দুজনেই সই করুন।",
+        "en": "Sit down with the contract, the photographs and the accounts in front of everyone. Whatever is agreed, write it down and have both sides sign."
+      },
+      "expect": {
+        "bn": "আদালতের চেয়ে দ্রুত ও সস্তা। তবে সিদ্ধান্ত লিখিত না হলে পরে কাজে লাগে না।",
+        "en": "Faster and cheaper than a court. But an unwritten settlement is worth nothing later."
+      }
+    },
+    {
+      "id": "p4_legal_aid",
+      "track": "private",
+      "title": {
+        "bn": "৪. আইনি সহায়তা ও দেওয়ানি প্রতিকার",
+        "en": "4. Legal aid and the civil remedy"
+      },
+      "who": {
+        "bn": "জেলা লিগ্যাল এইড অফিস (জেলা জজ আদালত চত্বরে)",
+        "en": "The District Legal Aid Office, in the district judge court premises"
+      },
+      "how": {
+        "bn": "চুক্তি, টাকা দেওয়ার প্রমাণ, ছবি ও লিখিত যোগাযোগ নিয়ে যান। খরচ বহনের সামর্থ্য না থাকলে সরকারি আইনি সহায়তা বিনা খরচে পাওয়া যায়।",
+        "en": "Take the contract, proof of payments, photographs and the written exchanges. If you cannot afford a lawyer, government legal aid is free."
+      },
+      "contact": {
+        "bn": "১৬৪৩০ (টোল ফ্রি) · nlaso.portal.gov.bd",
+        "en": "16430 (toll free) · nlaso.portal.gov.bd"
+      },
+      "expect": {
+        "bn": "প্রথমে পরামর্শ, তারপর প্রয়োজনে মামলা। সময় লাগে, তাই আগের ধাপগুলো আগে শেষ করুন।",
+        "en": "Advice first, then a case if it is needed. It takes time, so exhaust the earlier steps first."
+      }
+    }
+  ],
+  "letters": [
+    {
+      "id": "rti_application",
+      "title": {
+        "bn": "তথ্য অধিকার আবেদন",
+        "en": "Right to Information application"
+      },
+      "description": {
+        "bn": "নির্মাণকাজের কাগজপত্র চাওয়ার আবেদন। ছাপিয়ে সই করে দপ্তরে জমা দিন, প্রাপ্তি স্বীকার নিন।",
+        "en": "An application for the documents of a construction work. Print it, sign it, submit it and take an acknowledgement."
+      },
+      "fields": [
+        {
+          "key": "office",
+          "label": {
+            "bn": "দপ্তরের নাম ও ঠিকানা",
+            "en": "Office name and address"
+          },
+          "hint": {
+            "bn": "যেমন: উপজেলা প্রকৌশলীর কার্যালয়, LGED, …",
+            "en": "e.g. Office of the Upazila Engineer, LGED, …"
+          }
+        },
+        {
+          "key": "name",
+          "label": {
+            "bn": "আপনার নাম",
+            "en": "Your name"
+          }
+        },
+        {
+          "key": "address",
+          "label": {
+            "bn": "আপনার ঠিকানা",
+            "en": "Your address"
+          },
+          "multiline": true
+        },
+        {
+          "key": "phone",
+          "label": {
+            "bn": "মোবাইল নম্বর",
+            "en": "Mobile number"
+          },
+          "keyboard": "phone"
+        },
+        {
+          "key": "work",
+          "label": {
+            "bn": "কাজের নাম ও অবস্থান",
+            "en": "Name and location of the work"
+          },
+          "multiline": true
+        },
+        {
+          "key": "tender_id",
+          "label": {
+            "bn": "টেন্ডার / প্যাকেজ আইডি",
+            "en": "Tender or package ID"
+          },
+          "hint": {
+            "bn": "সাইনবোর্ডে লেখা থাকে",
+            "en": "It is on the signboard"
+          },
+          "keyboard": "text"
+        },
+        {
+          "key": "date",
+          "label": {
+            "bn": "আবেদনের তারিখ",
+            "en": "Date of application"
+          }
+        }
+      ],
+      "body": {
+        "bn": "বরাবর\nদায়িত্বপ্রাপ্ত কর্মকর্তা\n{{office}}\n\nবিষয়: তথ্য অধিকার আইন ২০০৯ অনুযায়ী তথ্য প্রাপ্তির আবেদন।\n\nজনাব,\n\nআমি নিম্নস্বাক্ষরকারী {{name}}, ঠিকানা {{address}}, মোবাইল {{phone}}। তথ্য অধিকার আইন ২০০৯ অনুযায়ী নিম্নলিখিত কাজের তথ্য চাইছি।\n\nকাজের নাম ও অবস্থান: {{work}}\nটেন্ডার / প্যাকেজ আইডি: {{tender_id}}\n\nযে তথ্য প্রয়োজন:\n১. অনুমোদিত অনুমিত হিসাব (estimate)-এর কপি।\n২. Bill of Quantities (BoQ)-এর কপি।\n৩. কার্যাদেশের কপি, শুরু ও সমাপ্তির তারিখসহ।\n৪. পরিমাপ বই (measurement book)-এর প্রাসঙ্গিক পাতার কপি।\n৫. এ পর্যন্ত পরিশোধিত বিলের বিবরণ।\n\nতথ্য পাওয়ার মাধ্যম: ছাপানো কপি (প্রয়োজনীয় ফি পরিশোধে আমি প্রস্তুত)।\n\nবিনীত\n{{name}}\nতারিখ: {{date}}\nস্বাক্ষর: ______________",
+        "en": "To\nThe Designated Officer\n{{office}}\n\nSubject: Application for information under the Right to Information Act 2009.\n\nSir/Madam,\n\nI, {{name}}, of {{address}}, mobile {{phone}}, request the following information under the Right to Information Act 2009.\n\nName and location of the work: {{work}}\nTender / package ID: {{tender_id}}\n\nInformation sought:\n1. A copy of the approved estimate.\n2. A copy of the Bill of Quantities (BoQ).\n3. A copy of the work order, including start and completion dates.\n4. Copies of the relevant pages of the measurement book.\n5. A statement of the bills paid to date.\n\nMode of delivery: printed copies (I am willing to pay the prescribed fee).\n\nYours faithfully,\n{{name}}\nDate: {{date}}\nSignature: ______________"
+      },
+      "footnote": {
+        "bn": "আইন অনুযায়ী ২০ কার্যদিবসের মধ্যে উত্তর পাওয়ার কথা। না পেলে ৩০ দিনের মধ্যে আপিল করা যায়। আবেদনের একটা কপি নিজের কাছে রাখুন।",
+        "en": "The Act requires a reply within 20 working days. If none comes, you may appeal within 30 days. Keep a copy of the application."
+      },
+      "track": "government"
+    },
+    {
+      "id": "written_complaint",
+      "title": {
+        "bn": "লিখিত অভিযোগ",
+        "en": "Written complaint"
+      },
+      "description": {
+        "bn": "যা দেখেছেন তা তারিখ ও প্রমাণসহ লেখার ছক। ব্যক্তিকে দোষারোপ নয় — ঘটনার বর্ণনা।",
+        "en": "A frame for writing what you saw, with dates and evidence. Describe the event; do not accuse a person."
+      },
+      "fields": [
+        {
+          "key": "office",
+          "label": {
+            "bn": "যাকে পাঠাচ্ছেন",
+            "en": "Addressed to"
+          },
+          "hint": {
+            "bn": "যেমন: উপজেলা প্রকৌশলী, …",
+            "en": "e.g. The Upazila Engineer, …"
+          }
+        },
+        {
+          "key": "name",
+          "label": {
+            "bn": "আপনার নাম",
+            "en": "Your name"
+          }
+        },
+        {
+          "key": "phone",
+          "label": {
+            "bn": "মোবাইল নম্বর",
+            "en": "Mobile number"
+          },
+          "keyboard": "phone"
+        },
+        {
+          "key": "work",
+          "label": {
+            "bn": "কাজের নাম ও অবস্থান",
+            "en": "Name and location of the work"
+          },
+          "multiline": true
+        },
+        {
+          "key": "tender_id",
+          "label": {
+            "bn": "টেন্ডার / প্যাকেজ আইডি",
+            "en": "Tender or package ID"
+          },
+          "keyboard": "text"
+        },
+        {
+          "key": "observed",
+          "label": {
+            "bn": "কী দেখেছেন",
+            "en": "What you saw"
+          },
+          "hint": {
+            "bn": "তারিখ ও সময় লিখুন। যেমন: ১২ জুলাই সকাল ৯টায় ছাদ ঢালাইয়ের পর তিন দিন কোনো পানি দেওয়া হয়নি।",
+            "en": "Include date and time. e.g. On 12 July at 9 am the slab had gone three days without any watering."
+          },
+          "multiline": true
+        },
+        {
+          "key": "standard",
+          "label": {
+            "bn": "নিয়মে কী থাকার কথা",
+            "en": "What the rule requires"
+          },
+          "multiline": true
+        },
+        {
+          "key": "ask",
+          "label": {
+            "bn": "আপনি কী চান",
+            "en": "What you are asking for"
+          },
+          "hint": {
+            "bn": "সরেজমিন পরিদর্শন, সংশোধন, নাকি বিল আটকে রাখা",
+            "en": "A site inspection, a correction, or the bill withheld"
+          },
+          "multiline": true
+        },
+        {
+          "key": "date",
+          "label": {
+            "bn": "তারিখ",
+            "en": "Date"
+          }
+        }
+      ],
+      "body": {
+        "bn": "বরাবর\n{{office}}\n\nবিষয়: নির্মাণকাজের মান সম্পর্কে অভিযোগ।\n\nজনাব,\n\nআমি {{name}}, মোবাইল {{phone}}। নিচের কাজটি সম্পর্কে আমার পর্যবেক্ষণ জানাচ্ছি।\n\nকাজের নাম ও অবস্থান: {{work}}\nটেন্ডার / প্যাকেজ আইডি: {{tender_id}}\n\nযা দেখেছি:\n{{observed}}\n\nনিয়ম অনুযায়ী যা থাকার কথা:\n{{standard}}\n\nআমার আবেদন:\n{{ask}}\n\nসঙ্গে তারিখসহ ছবি সংযুক্ত করা হলো।\n\nবিনীত\n{{name}}\nতারিখ: {{date}}",
+        "en": "To\n{{office}}\n\nSubject: Complaint regarding the quality of a construction work.\n\nSir/Madam,\n\nI am {{name}}, mobile {{phone}}. I wish to place on record what I observed at the following work.\n\nName and location of the work: {{work}}\nTender / package ID: {{tender_id}}\n\nWhat I observed:\n{{observed}}\n\nWhat the rule requires:\n{{standard}}\n\nWhat I am asking for:\n{{ask}}\n\nDated photographs are attached.\n\nYours faithfully,\n{{name}}\nDate: {{date}}"
+      },
+      "footnote": {
+        "bn": "একটা কপি নিজের কাছে রাখুন এবং জমা দেওয়ার প্রাপ্তি স্বীকার নিন। প্রাপ্তি স্বীকার না পেলে ডাকযোগে রেজিস্ট্রি করে পাঠান।",
+        "en": "Keep a copy and take an acknowledgement of submission. If no acknowledgement is given, send it by registered post."
+      },
+      "track": "government"
+    },
+    {
+      "id": "contractor_notice",
+      "track": "private",
+      "title": {
+        "bn": "ঠিকাদারকে লিখিত নোটিশ",
+        "en": "Written notice to the contractor"
+      },
+      "description": {
+        "bn": "কাজ খারাপ হলে যা লিখে পাঠাবেন। ছাপিয়ে দিন, অথবা হুবহু খুদে বার্তায় পাঠিয়ে দিন — দুটোই লিখিত প্রমাণ।",
+        "en": "What to send when the work is bad. Print it, or send it word for word as a message — both count as writing."
+      },
+      "fields": [
+        {
+          "key": "contractor",
+          "label": {
+            "bn": "ঠিকাদার / রাজমিস্ত্রির নাম",
+            "en": "Contractor or mason's name"
+          }
+        },
+        {
+          "key": "name",
+          "label": {
+            "bn": "আপনার নাম",
+            "en": "Your name"
+          }
+        },
+        {
+          "key": "phone",
+          "label": {
+            "bn": "মোবাইল নম্বর",
+            "en": "Mobile number"
+          },
+          "keyboard": "phone"
+        },
+        {
+          "key": "site",
+          "label": {
+            "bn": "কাজের ঠিকানা",
+            "en": "Address of the work"
+          },
+          "multiline": true
+        },
+        {
+          "key": "agreed",
+          "label": {
+            "bn": "চুক্তিতে যা ঠিক ছিল",
+            "en": "What was agreed"
+          },
+          "hint": {
+            "bn": "যেমন: ১:২:৪ অনুপাতে ছাদ ঢালাই, ব্র্যান্ডের সিমেন্ট",
+            "en": "e.g. slab cast at 1:2:4 with branded cement"
+          },
+          "multiline": true
+        },
+        {
+          "key": "problem",
+          "label": {
+            "bn": "যা হয়েছে",
+            "en": "What was actually done"
+          },
+          "hint": {
+            "bn": "তারিখ ও সময় লিখুন",
+            "en": "Include the date and time"
+          },
+          "multiline": true
+        },
+        {
+          "key": "fix",
+          "label": {
+            "bn": "যা ঠিক করতে হবে",
+            "en": "What must be put right"
+          },
+          "multiline": true
+        },
+        {
+          "key": "deadline",
+          "label": {
+            "bn": "কত দিনের মধ্যে",
+            "en": "By when"
+          }
+        },
+        {
+          "key": "date",
+          "label": {
+            "bn": "তারিখ",
+            "en": "Date"
+          }
+        }
+      ],
+      "body": {
+        "bn": "জনাব {{contractor}},\n\nবিষয়: কাজের মান সম্পর্কে লিখিত জানানো।\n\nআমি {{name}}, মোবাইল {{phone}}। আমার নির্মাণকাজ: {{site}}\n\nচুক্তিতে যা ঠিক ছিল:\n{{agreed}}\n\nযা হয়েছে:\n{{problem}}\n\nযা ঠিক করতে হবে:\n{{fix}}\n\nঅনুগ্রহ করে {{deadline}} দিনের মধ্যে কাজটি ঠিক করে দিন। এর মধ্যে ঠিক না হলে চুক্তি অনুযায়ী সংশ্লিষ্ট ধাপের কিস্তি আটকে রাখতে বাধ্য হব।\n\nতারিখসহ ছবি সংযুক্ত আছে।\n\n{{name}}\nতারিখ: {{date}}",
+        "en": "Dear {{contractor}},\n\nSubject: Written notice regarding the quality of the work.\n\nI am {{name}}, mobile {{phone}}. My construction work is at: {{site}}\n\nWhat the contract provided for:\n{{agreed}}\n\nWhat was actually done:\n{{problem}}\n\nWhat must be put right:\n{{fix}}\n\nPlease correct this within {{deadline}} days. If it is not corrected by then I will have to withhold the instalment for that stage, as the contract allows.\n\nDated photographs are attached.\n\n{{name}}\nDate: {{date}}"
+      },
+      "footnote": {
+        "bn": "একটা কপি নিজের কাছে রাখুন। খুদে বার্তা বা হোয়াটসঅ্যাপে পাঠালে সেটাও মুছবেন না — ওটাই প্রমাণ।",
+        "en": "Keep a copy. If you send it as a message, do not delete it — that is your evidence."
+      }
+    }
+  ]
+}

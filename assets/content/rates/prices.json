@@ -1,0 +1,226 @@
+{
+  "content_version": 1,
+  "updated": "2026-09-02",
+  "seed_usd_to_bdt": 122.7,
+  "fx_as_of": "2026-09-01",
+  "materials": [
+    {
+      "id": "cement_pcc_bag",
+      "name": { "bn": "সিমেন্ট — পিসিসি", "en": "Cement — PCC" },
+      "unit": { "bn": "প্রতি ৫০ কেজি ব্যাগ", "en": "per 50 kg bag" },
+      "low_bdt": 480,
+      "high_bdt": 530,
+      "as_of": "2026-09-02",
+      "status": "review",
+      "note": {
+        "bn": "ব্র্যান্ড, জেলা ও পরিবহন ভেদে দাম বদলায়। দোকানের খুচরা দর সাধারণত এর চেয়ে কিছুটা বেশি।",
+        "en": "Price moves with brand, district and carrying. A shop's retail rate is usually a little above this."
+      },
+      "sources": [
+        { "source": { "bn": "সিমেন্ট উৎপাদকদের প্রকাশিত মূল্যতালিকা, ২০২৬", "en": "Cement manufacturers' published price lists, 2026" }, "url": "https://www.bashundharacement.com/cement-price-in-bangladesh/", "status": "review" }
+      ]
+    },
+    {
+      "id": "cement_opc_bag",
+      "name": { "bn": "সিমেন্ট — ওপিসি", "en": "Cement — OPC" },
+      "unit": { "bn": "প্রতি ৫০ কেজি ব্যাগ", "en": "per 50 kg bag" },
+      "low_bdt": 530,
+      "high_bdt": 620,
+      "as_of": "2026-09-02",
+      "status": "review",
+      "note": {
+        "bn": "বিশেষায়িত বা প্রিমিয়াম সিমেন্ট ৭০০ টাকা পর্যন্ত উঠতে পারে।",
+        "en": "Specialised or premium cements can run up to about Tk 700."
+      },
+      "sources": [
+        { "source": { "bn": "সিমেন্ট উৎপাদকদের প্রকাশিত মূল্যতালিকা, ২০২৬", "en": "Cement manufacturers' published price lists, 2026" }, "url": "https://akijcement.com/cement-price-in-bangladesh/", "status": "review" }
+      ]
+    },
+    {
+      "id": "rod_ton",
+      "name": { "bn": "এমএস রড", "en": "MS reinforcement rod" },
+      "unit": { "bn": "প্রতি টন", "en": "per tonne" },
+      "low_bdt": 90000,
+      "high_bdt": 95000,
+      "as_of": "2026-09-02",
+      "status": "review",
+      "region": { "bn": "মিলগেট দর", "en": "Mill-gate rate" },
+      "note": {
+        "bn": "এটি মিলগেটের দর — খুচরা বাজারে পরিবহন ও ডিলারের মার্জিন যোগ হয়। ব্র্যান্ডভেদে পার্থক্য থাকে, আর এই দর অল্প দিনেই কয়েক হাজার টাকা ওঠানামা করে।",
+        "en": "This is the mill-gate rate; retail adds carrying and the dealer's margin. Brands differ, and this rate can move by thousands of taka within days."
+      },
+      "sources": [
+        { "source": { "bn": "সংবাদমাধ্যমে প্রকাশিত মিলগেট দর, ২০২৬", "en": "Mill-gate rates reported in the press, 2026" }, "url": "https://www.tbsnews.net/economy/rod-prices-jump-tk10000-tonne-10-days-cement-tk25-bag-1384486", "status": "review" }
+      ]
+    },
+    {
+      "id": "brick_first_class_1000",
+      "name": { "bn": "প্রথম শ্রেণির ইট", "en": "First class brick" },
+      "unit": { "bn": "প্রতি হাজার", "en": "per thousand" },
+      "low_bdt": 8500,
+      "high_bdt": 9000,
+      "as_of": "2026-09-02",
+      "status": "review",
+      "region": { "bn": "ইটভাটার দর", "en": "At the brickfield" },
+      "note": {
+        "bn": "ভাটার দর — সাইট পর্যন্ত আনার খরচ আলাদা, আর দূরত্ব বাড়লে সেটাই বড় খরচ হয়ে দাঁড়ায়।",
+        "en": "This is the kiln rate; carrying to site is extra and becomes the bigger cost as distance grows."
+      },
+      "sources": [
+        { "source": { "bn": "সংবাদমাধ্যমে প্রকাশিত ইটভাটার দর", "en": "Brickfield rates reported in the press" }, "url": "https://www.tbsnews.net/bangladesh/how-substandard-bricks-affect-construction-quality-drive-costs-721130", "status": "review" }
+      ]
+    },
+    {
+      "id": "sand_local_cft",
+      "name": { "bn": "স্থানীয় বালি", "en": "Local sand" },
+      "unit": { "bn": "প্রতি ঘনফুট", "en": "per cft" },
+      "low_bdt": 20,
+      "high_bdt": 27,
+      "as_of": "2026-09-02",
+      "status": "review",
+      "note": {
+        "bn": "মিহি বালি — গাঁথুনি ও ফিলিংয়ের কাজে। ঢালাইয়ের জন্য মোটা বালি লাগে।",
+        "en": "Fine sand, for masonry and filling. Concrete needs coarse sand."
+      },
+      "sources": [
+        { "source": { "bn": "সরবরাহকারীদের প্রকাশিত দর, ২০২৬", "en": "Suppliers' published rates, 2026" }, "url": "https://www.bdstall.com/sand/", "status": "review" }
+      ]
+    },
+    {
+      "id": "sand_sylhet_cft",
+      "name": { "bn": "সিলেট বালি (মোটা)", "en": "Sylhet sand (coarse)" },
+      "unit": { "bn": "প্রতি ঘনফুট", "en": "per cft" },
+      "low_bdt": 28,
+      "high_bdt": 52,
+      "as_of": "2026-09-02",
+      "status": "review",
+      "note": {
+        "bn": "ব্যবধান বড়, কারণ সিলেট থেকে দূরত্বই দাম ঠিক করে। ঢাকায় সরবরাহসহ দর আরও বেশি হতে পারে।",
+        "en": "The band is wide because distance from Sylhet sets the price. Delivered rates in Dhaka can run higher still."
+      },
+      "sources": [
+        { "source": { "bn": "সরবরাহকারীদের প্রকাশিত দর, ২০২৬", "en": "Suppliers' published rates, 2026" }, "url": "https://constructionmart.com.bd/ads/sand-stones/", "status": "review" }
+      ]
+    },
+    {
+      "id": "house_standard_sft",
+      "name": { "bn": "বাড়ি নির্মাণ — সাধারণ মান", "en": "House construction — standard quality" },
+      "unit": { "bn": "প্রতি বর্গফুট", "en": "per sft" },
+      "low_bdt": 1800,
+      "high_bdt": 2200,
+      "as_of": "2026-09-02",
+      "status": "review",
+      "note": {
+        "bn": "সাধারণ মানের সিমেন্ট, ইট, রড ও সাধারণ ফিনিশিং ধরে। ঢাকা ও চট্টগ্রামে সাধারণত ১০–২০% বেশি।",
+        "en": "Assumes ordinary cement, brick and steel with basic finishing. Dhaka and Chattogram usually run 10–20% higher."
+      },
+      "sources": [
+        { "source": { "bn": "নির্মাণ পরামর্শক প্রতিষ্ঠানের প্রকাশিত হিসাব, ২০২৬", "en": "Construction consultancies' published estimates, 2026" }, "url": "https://greenarchitectbd.com/building-construction-cost/", "status": "review" }
+      ]
+    },
+    {
+      "id": "house_medium_sft",
+      "name": { "bn": "বাড়ি নির্মাণ — মাঝারি মান", "en": "House construction — medium quality" },
+      "unit": { "bn": "প্রতি বর্গফুট", "en": "per sft" },
+      "low_bdt": 2200,
+      "high_bdt": 2800,
+      "as_of": "2026-09-02",
+      "status": "review",
+      "note": {
+        "bn": "ব্র্যান্ডের সিমেন্ট-রড, ভালো টাইলস ও স্বাভাবিক স্যানিটারি ধরে।",
+        "en": "Assumes branded cement and steel, good tiles and standard sanitary ware."
+      },
+      "sources": [
+        { "source": { "bn": "নির্মাণ পরামর্শক প্রতিষ্ঠানের প্রকাশিত হিসাব, ২০২৬", "en": "Construction consultancies' published estimates, 2026" }, "url": "https://salmondevelopersbd.com/blogs/construction-cost-in-bangladesh-full-breakdown-per-sqft", "status": "review" }
+      ]
+    },
+    {
+      "id": "house_high_sft",
+      "name": { "bn": "বাড়ি নির্মাণ — উন্নত মান", "en": "House construction — high quality" },
+      "unit": { "bn": "প্রতি বর্গফুট", "en": "per sft" },
+      "low_bdt": 2800,
+      "high_bdt": 4000,
+      "as_of": "2026-09-02",
+      "status": "review",
+      "note": {
+        "bn": "আমদানি করা টাইলস, প্রিমিয়াম রং ও উন্নত ফিটিংস ধরে।",
+        "en": "Assumes imported tiles, premium paint and high-end fittings."
+      },
+      "sources": [
+        { "source": { "bn": "নির্মাণ পরামর্শক প্রতিষ্ঠানের প্রকাশিত হিসাব, ২০২৬", "en": "Construction consultancies' published estimates, 2026" }, "url": "https://greenarchitectbd.com/building-construction-cost/", "status": "review" }
+      ]
+    }
+  ],
+  "benchmarks": [
+    {
+      "id": "china_4lane",
+      "item_id": "highway_4lane_per_km",
+      "country": { "bn": "চীন", "en": "China" },
+      "unit": { "bn": "চার লেনের মহাসড়ক, প্রতি কিলোমিটার", "en": "Four-lane highway, per km" },
+      "low_usd": 1100000,
+      "high_usd": 1300000,
+      "year": null,
+      "status": "review",
+      "comparability": {
+        "bn": "বিশ্বব্যাংকের তুলনামূলক হিসাব হিসেবে বাংলাদেশি সংবাদমাধ্যমে প্রকাশিত। মূল প্রতিবেদনের সাল ও জমির দাম ধরা আছে কি না — দুটোই যাচাই করা বাকি।",
+        "en": "Reported in the Bangladeshi press as a World Bank comparison. The year of the underlying study, and whether land cost is included, both remain to be confirmed."
+      },
+      "sources": [
+        { "source": { "bn": "বিশ্বব্যাংকের তুলনা, সংবাদমাধ্যমে প্রকাশিত", "en": "World Bank comparison, as reported in the press" }, "url": "https://www.thedailystar.net/frontpage/road-construction-cost-way-too-high-1423132", "status": "review" }
+      ]
+    },
+    {
+      "id": "india_4lane",
+      "item_id": "highway_4lane_per_km",
+      "country": { "bn": "ভারত", "en": "India" },
+      "unit": { "bn": "চার লেনের মহাসড়ক, প্রতি কিলোমিটার", "en": "Four-lane highway, per km" },
+      "low_usd": 1300000,
+      "high_usd": 1600000,
+      "year": null,
+      "status": "review",
+      "comparability": {
+        "bn": "একই বিশ্বব্যাংক তুলনা থেকে। ভারতের ভূপ্রকৃতি ও জমির ঘনত্ব বাংলাদেশের ব-দ্বীপের চেয়ে আলাদা।",
+        "en": "From the same World Bank comparison. India's terrain and land density differ from Bangladesh's delta."
+      },
+      "sources": [
+        { "source": { "bn": "বিশ্বব্যাংকের তুলনা, সংবাদমাধ্যমে প্রকাশিত", "en": "World Bank comparison, as reported in the press" }, "url": "https://www.thedailystar.net/frontpage/road-construction-cost-way-too-high-1423132", "status": "review" }
+      ]
+    },
+    {
+      "id": "bd_rangpur_hatikumrul",
+      "item_id": "highway_4lane_per_km",
+      "country": { "bn": "বাংলাদেশ", "en": "Bangladesh" },
+      "label": { "bn": "রংপুর–হাটিকুমরুল চার লেন", "en": "Rangpur–Hatikumrul four-lane" },
+      "unit": { "bn": "চার লেনের মহাসড়ক, প্রতি কিলোমিটার", "en": "Four-lane highway, per km" },
+      "low_usd": 6600000,
+      "high_usd": 6600000,
+      "year": null,
+      "status": "review",
+      "comparability": {
+        "bn": "একটি নির্দিষ্ট প্রকল্পের খরচ, দেশের গড় নয়। জমি অধিগ্রহণ ও ইউটিলিটি সরানোর খরচ এতে ধরা আছে কি না তা যাচাই করা বাকি।",
+        "en": "One named project, not a national average. Whether land acquisition and utility shifting are included has still to be confirmed."
+      },
+      "sources": [
+        { "source": { "bn": "সংবাদমাধ্যমে প্রকাশিত প্রকল্প ব্যয়", "en": "Project cost as reported in the press" }, "url": "https://www.thedailystar.net/frontpage/road-construction-cost-way-too-high-1423132", "status": "review" }
+      ]
+    },
+    {
+      "id": "bd_dhaka_mawa",
+      "item_id": "highway_4lane_per_km",
+      "country": { "bn": "বাংলাদেশ", "en": "Bangladesh" },
+      "label": { "bn": "ঢাকা–মাওয়া চার লেন", "en": "Dhaka–Mawa four-lane" },
+      "unit": { "bn": "চার লেনের মহাসড়ক, প্রতি কিলোমিটার", "en": "Four-lane highway, per km" },
+      "low_usd": 11900000,
+      "high_usd": 11900000,
+      "year": null,
+      "status": "review",
+      "comparability": {
+        "bn": "ঢাকার কাছের ঘনবসতিপূর্ণ এলাকা — জমির দাম ও পুনর্বাসনের খরচ এখানে সবচেয়ে বেশি। দেশের গড় হিসেবে ধরা ভুল হবে।",
+        "en": "A densely settled corridor near Dhaka, where land price and resettlement cost the most. Treating it as a national average would be wrong."
+      },
+      "sources": [
+        { "source": { "bn": "সংবাদমাধ্যমে প্রকাশিত প্রকল্প ব্যয়", "en": "Project cost as reported in the press" }, "url": "https://www.thedailystar.net/frontpage/road-construction-cost-way-too-high-1423132", "status": "review" }
+      ]
+    }
+  ]
+}

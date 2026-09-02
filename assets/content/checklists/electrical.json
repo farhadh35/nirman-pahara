@@ -1,0 +1,200 @@
+{
+  "id": "electrical_works",
+  "track": "both",
+  "icon": "bolt",
+  "title": {
+    "bn": "বৈদ্যুতিক কাজ",
+    "en": "Electrical works"
+  },
+  "summary": {
+    "bn": "বিদ্যুতের ভুল কাজ চোখে পড়ে না, কিন্তু আগুন আর বিদ্যুৎস্পৃষ্টের বেশির ভাগ কারণ এখানেই।",
+    "en": "Bad electrical work is invisible, and it is behind most fires and most shocks."
+  },
+  "stages": [
+    {
+      "id": "e1_wiring",
+      "title": {
+        "bn": "তার ও পাইপ",
+        "en": "Cable and conduit"
+      },
+      "when": {
+        "bn": "দেয়াল ঢাকা পড়ার আগে — পরে আর কিছু দেখা যাবে না",
+        "en": "Before the walls are closed up — after that nothing is visible"
+      },
+      "items": [
+        {
+          "id": "e1",
+          "photo": true,
+          "question": {
+            "bn": "তার পাইপের (কনডুইট) ভেতর দিয়ে গেছে?",
+            "en": "Do the cables run inside conduit?"
+          },
+          "why": {
+            "bn": "খালি তার দেয়ালে পুঁতে দিলে পরে বদলানো যায় না, আর ইঁদুর বা পেরেকে কেটে গেলে আগুন ধরে।",
+            "en": "Bare cable buried in a wall can never be replaced, and once a rat or a nail cuts it, it starts a fire."
+          },
+          "how": {
+            "bn": "দেয়াল প্লাস্টার হওয়ার আগে গিয়ে দেখুন — তারের গায়ে পাইপ আছে কি না।",
+            "en": "Go before the plaster goes on and look for pipe around the cable."
+          },
+          "citations": [
+            {
+              "source": {
+                "bn": "BNBC 2020, পার্ট ৮ — বিল্ডিং সার্ভিসেস (বৈদ্যুতিক)",
+                "en": "BNBC 2020, Part 8 — Building Services, electrical"
+              },
+              "status": "review"
+            }
+          ]
+        },
+        {
+          "id": "e2",
+          "photo": true,
+          "question": {
+            "bn": "দেয়ালের ভেতরে তারের জোড়া (জয়েন্ট) রাখা হচ্ছে?",
+            "en": "Are cable joints being buried in the wall?"
+          },
+          "why": {
+            "bn": "লুকানো জোড়া গরম হয়, আর কোথায় আছে কেউ জানে না — আগুনের সবচেয়ে সাধারণ শুরু এখান থেকেই।",
+            "en": "A hidden joint heats up and nobody knows where it is. It is the commonest place a fire starts."
+          },
+          "how": {
+            "bn": "জোড়া থাকলে তা জংশন বাক্সের ভেতরে থাকার কথা, দেয়ালের ভেতর নয়।",
+            "en": "Any joint belongs inside a junction box, not inside the wall."
+          }
+        },
+        {
+          "id": "e3",
+          "photo": true,
+          "question": {
+            "bn": "তারের মাপ (গেজ) কাজের চাপের তুলনায় যথেষ্ট?",
+            "en": "Is the cable size adequate for the load?"
+          },
+          "why": {
+            "bn": "সরু তারে বেশি চাপ দিলে তার গরম হয়ে ইনসুলেশন গলে যায়।",
+            "en": "An undersized cable overheats and its insulation melts."
+          },
+          "how": {
+            "bn": "নকশা বা তালিকায় লেখা মাপের সঙ্গে তারের গায়ে ছাপা মাপ মিলিয়ে দেখুন।",
+            "en": "Match the size printed on the cable against the size named in the drawing or the item list."
+          }
+        }
+      ]
+    },
+    {
+      "id": "e2_earth",
+      "title": {
+        "bn": "আর্থিং ও সুরক্ষা",
+        "en": "Earthing and protection"
+      },
+      "when": {
+        "bn": "বোর্ড বসানো ও সংযোগের সময়",
+        "en": "While the board is installed and connected"
+      },
+      "items": [
+        {
+          "id": "e4",
+          "photo": true,
+          "question": {
+            "bn": "আলাদা আর্থিং তার আছে এবং আর্থ পিট করা হয়েছে?",
+            "en": "Is there a separate earth wire, and an earth pit?"
+          },
+          "why": {
+            "bn": "আর্থিং না থাকলে লিক করা বিদ্যুৎ শরীরের ভেতর দিয়ে যায় — এটাই বিদ্যুৎস্পৃষ্টে মৃত্যুর প্রধান কারণ।",
+            "en": "Without earthing, leaking current goes through a person instead. That is the main reason shocks kill."
+          },
+          "how": {
+            "bn": "সুইচবোর্ড ও সকেটে তিন নম্বর তার আছে কি না, আর বাইরে আর্থ পিট আছে কি না দেখুন।",
+            "en": "Look for the third wire at boards and sockets, and for an earth pit outside."
+          },
+          "citations": [
+            {
+              "source": {
+                "bn": "BNBC 2020, পার্ট ৮ — আর্থিং",
+                "en": "BNBC 2020, Part 8 — earthing"
+              },
+              "status": "review"
+            }
+          ]
+        },
+        {
+          "id": "e5",
+          "photo": true,
+          "question": {
+            "bn": "ডিস্ট্রিবিউশন বোর্ডে সার্কিট ব্রেকার আছে, নাকি তার প্যাঁচানো?",
+            "en": "Does the distribution board have breakers, or twisted wire?"
+          },
+          "why": {
+            "bn": "ব্রেকারের বদলে তার প্যাঁচিয়ে দিলে অতিরিক্ত চাপে কিছুই বন্ধ হয় না, আর তখনই আগুন লাগে।",
+            "en": "Wire twisted in place of a breaker means nothing trips on an overload, which is when the fire happens."
+          }
+        },
+        {
+          "id": "e6",
+          "photo": true,
+          "question": {
+            "bn": "মূল সুইচ সহজে হাতের নাগালে?",
+            "en": "Is the main switch easy to reach?"
+          },
+          "why": {
+            "bn": "দুর্ঘটনার সময় বিদ্যুৎ বন্ধ করতে যত সময় লাগে, ক্ষতি তত বাড়ে।",
+            "en": "In an accident, every second spent finding the switch adds to the damage."
+          }
+        }
+      ]
+    },
+    {
+      "id": "e3_fittings",
+      "title": {
+        "bn": "ফিটিং ও অবস্থান",
+        "en": "Fittings and placement"
+      },
+      "when": {
+        "bn": "ফিনিশিংয়ের সময়",
+        "en": "During finishing"
+      },
+      "items": [
+        {
+          "id": "e7",
+          "photo": true,
+          "question": {
+            "bn": "বাথরুম বা ভেজা জায়গার সুইচ-সকেট পানি থেকে নিরাপদ দূরত্বে?",
+            "en": "Are switches and sockets in wet areas a safe distance from water?"
+          },
+          "why": {
+            "bn": "ভেজা হাতে সুইচ ধরা বিদ্যুৎস্পৃষ্টের সবচেয়ে সাধারণ ঘটনা।",
+            "en": "A wet hand on a switch is the commonest shock there is."
+          }
+        },
+        {
+          "id": "e8",
+          "photo": true,
+          "question": {
+            "bn": "বিদ্যুতের তার পানির পাইপের সঙ্গে একসঙ্গে গেছে?",
+            "en": "Do electrical cables run alongside water pipes?"
+          },
+          "why": {
+            "bn": "পাইপ লিক করলে তার ভিজে যায়, আর পুরো দেয়াল বিদ্যুতায়িত হতে পারে।",
+            "en": "If the pipe leaks the cable gets wet, and a whole wall can become live."
+          }
+        },
+        {
+          "id": "e9",
+          "photo": true,
+          "question": {
+            "bn": "কোথাও খোলা তার বা ঢাকনাহীন বাক্স আছে?",
+            "en": "Is any conductor or box left open?"
+          },
+          "why": {
+            "bn": "খোলা তার শিশুদের নাগালে থাকলে সেটা দুর্ঘটনার অপেক্ষা।",
+            "en": "An exposed conductor within a child's reach is an accident waiting."
+          },
+          "how": {
+            "bn": "প্রতিটি সুইচবোর্ড, জংশন বাক্স ও ছাদের ফ্যানের পয়েন্ট দেখুন।",
+            "en": "Check every board, junction box and fan point."
+          }
+        }
+      ]
+    }
+  ]
+}
