@@ -1,0 +1,211 @@
+{
+ "id": "m15_soil",
+ "code": "M15",
+ "track": "both",
+ "icon": "soil",
+ "title": {
+  "bn": "মাটি পরীক্ষা",
+  "en": "The soil test"
+ },
+ "summary": {
+  "bn": "ভিত বসার আগে মাটি কী বলছে — আর রিপোর্টটা আসল কি না, সেটা কীভাবে বুঝবেন।",
+  "en": "What the ground says before a foundation goes on it, and how to tell a real report from a going-through-the-motions one."
+ },
+ "cards": [
+  {
+   "id": "m15c1",
+   "tier": "general",
+   "title": {
+    "bn": "যে খরচটা বাদ দিলে আর ফেরানো যায় না",
+    "en": "The one saving you cannot undo"
+   },
+   "body": {
+    "bn": "বাড়ির আর সব ভুল কোনো না কোনোভাবে সারানো যায়। প্লাস্টার খসে পড়লে আবার করা যায়, টাইলস বদলানো যায়, রং তো প্রতি বছরই হয়। ভিত বসে গেলে কিছুই করার থাকে না — উপরের পুরো বাড়িটা ঐ ভিতের উপর দাঁড়িয়ে আছে। মাটি পরীক্ষা সেই ভিতটা কত গভীরে আর কত চওড়া হবে, তার একমাত্র ভিত্তি। খরচ পুরো বাড়ির তুলনায় সামান্য, আর এটাই সবচেয়ে বেশি বাদ পড়ে — কারণ বাদ দিলে সঙ্গে সঙ্গে কিছু হয় না।",
+    "en": "Every other mistake in a house can be undone somehow. Plaster that falls off can be redone, tiles can be changed, paint happens every year anyway. A foundation that settles cannot be put right: the whole building is standing on it. The soil test is the only basis for how deep and how wide that foundation has to be. It costs very little against the house, and it is the thing most often skipped, because skipping it does nothing at all at first."
+   },
+   "watch_for": [
+    {
+     "bn": "পাশের বাড়ির মাটি আপনার মাটি নয়। এক প্লট দূরেই স্তর বদলে যেতে পারে, বিশেষ করে পুরোনো পুকুর বা খাল ভরাট করা জমিতে।",
+     "en": "The neighbour's ground is not your ground. Layers change within one plot, especially where a pond or channel was filled in."
+    },
+    {
+     "bn": "ভরাট করা জমিতে পরীক্ষা আরও জরুরি, কম নয়।",
+     "en": "On filled land the test matters more, not less."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পঞ্চম অধ্যায়",
+      "en": "House construction and site supervision (2019), chapter 5"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m15c2",
+   "tier": "general",
+   "title": {
+    "bn": "আসল রিপোর্টে কী কী থাকে",
+    "en": "What a real report has in it"
+   },
+   "body": {
+    "bn": "সয়েল টেস্ট রিপোর্ট মানে কয়েক পাতার একটা নথি, তার মধ্যে মূল জিনিসটা হলো বোর লগ — গর্ত করতে করতে কোন গভীরতায় কী মাটি পাওয়া গেল, তার তালিকা। সঙ্গে থাকে প্রতিটি গভীরতায় নেওয়া এন-ভ্যালু, পানির স্তর কোথায় পাওয়া গেল, কয়টা বোরহোল করা হয়েছে আর কোথায় করা হয়েছে তার নকশা, এবং শেষে সুপারিশ। এক পাতার একটা চিঠিতে শুধু 'মাটি ভালো' লেখা থাকলে সেটা রিপোর্ট নয়।",
+    "en": "A soil test report is a few pages, and the heart of it is the bore log: a list of what soil was found at what depth as the hole went down. With it come the N-values taken at intervals, where water was struck, a sketch of how many boreholes were sunk and where, and a recommendation at the end. A one-page letter saying the soil is good is not a report."
+   },
+   "watch_for": [
+    {
+     "bn": "বোরহোলের অবস্থানের নকশা আছে কি না দেখুন — কোথায় গর্ত হয়েছে সেটা প্লটের ছবিতে দেখানো থাকার কথা।",
+     "en": "Look for the borehole location sketch: where the holes were sunk should be shown on a plan of the plot."
+    },
+    {
+     "bn": "রিপোর্টে তারিখ, প্রতিষ্ঠানের নাম আর দায়িত্বপ্রাপ্ত প্রকৌশলীর সই থাকার কথা।",
+     "en": "The report should carry a date, the firm's name and the signature of the engineer responsible."
+    },
+    {
+     "bn": "পানির স্তর কোন গভীরতায় পাওয়া গেল — এই একটা লাইন না থাকলে জিজ্ঞেস করুন।",
+     "en": "At what depth water was struck: if that line is missing, ask for it."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পঞ্চম অধ্যায়",
+      "en": "House construction and site supervision (2019), chapter 5"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m15c3",
+   "tier": "work",
+   "title": {
+    "bn": "কয়টা গর্ত, কত গভীর",
+    "en": "How many holes, and how deep"
+   },
+   "body": {
+    "bn": "একটা বোরহোল একটা বিন্দুর কথা বলে, পুরো প্লটের কথা নয়। ছোট বাড়িতেও একাধিক জায়গায় পরীক্ষা করানো হয়, যাতে প্লটের এক কোণে নরম মাটি থাকলে সেটা ধরা পড়ে। গভীরতার প্রচলিত আন্দাজ হলো প্রতি তলার জন্য প্রায় ৩ মিটার, আর দেশে সয়েল টেস্ট প্রতিষ্ঠানগুলো সাধারণত ৪০ থেকে ৫০ ফুট পর্যন্ত পাইপ নামায়। এগুলো অভ্যাসের হিসাব — আসল গভীরতা মাটির স্তর আর ভবনের ভার দেখে প্রকৌশলী ঠিক করবেন।",
+    "en": "One borehole speaks for one point, not for the plot. Even a small house is tested in more than one place, so that soft ground in a corner shows up. The common rule of thumb for depth is about 3 metres per storey, and testing firms in Bangladesh usually push the pipe to between 40 and 50 feet. These are habits, not requirements: the real depth is settled by an engineer from the layers found and the load the building will put on them."
+   },
+   "watch_for": [
+    {
+     "bn": "একটামাত্র বোরহোল করে পুরো প্লটের রিপোর্ট দেওয়া হলে জিজ্ঞেস করুন কেন।",
+     "en": "If one hole was sunk and a report written for the whole plot, ask why."
+    },
+    {
+     "bn": "গর্তগুলো যেখানে কলাম পড়বে তার কাছাকাছি হওয়ার কথা, প্লটের ফাঁকা কোণে নয়।",
+     "en": "The holes should be near where the columns will land, not in whichever corner was easiest."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "অনুমানের শর্টকাট — বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পঞ্চম অধ্যায়, (১-৫)",
+      "en": "Rule of thumb — House construction and site supervision (2019), chapter 5, (1-5)"
+     },
+     "status": "ruleOfThumb"
+    }
+   ]
+  },
+  {
+   "id": "m15c4",
+   "tier": "work",
+   "title": {
+    "bn": "বোর লগ পড়া, আর এন-ভ্যালু",
+    "en": "Reading the bore log, and the N-value"
+   },
+   "body": {
+    "bn": "বোর লগ একটা লম্বা ছবি — উপরে মাটির উপরিভাগ, নিচে যত গভীরে গর্ত গেছে। প্রতিটি স্তরের পাশে লেখা থাকে সেটা কী (বালি, পলি, কাদা) আর এন-ভ্যালু। এন-ভ্যালু হলো স্ট্যান্ডার্ড পেনিট্রেশন টেস্টের সংখ্যা: একটা নির্দিষ্ট ওজনের হাতুড়ি নির্দিষ্ট উচ্চতা থেকে ফেলে নলটাকে মাটিতে ঢোকাতে কতবার আঘাত লাগল। সংখ্যা যত ছোট, মাটি তত নরম। সাধারণত প্রতি ৫ ফুট পরপর এই মান নেওয়া হয়, তাই লগে সংখ্যাগুলো নিয়মিত দূরত্বে থাকার কথা।",
+    "en": "A bore log is a tall picture: ground level at the top, the bottom of the hole at the foot. Beside each layer sits what it is — sand, silt, clay — and the N-value. The N-value comes from the Standard Penetration Test: how many blows of a hammer of a set weight, falling a set height, drive the sampler into the ground. The smaller the number, the softer the soil. The values are usually taken every 5 feet, so they should appear down the log at regular intervals."
+   },
+   "watch_for": [
+    {
+     "bn": "এন-ভ্যালু নিয়মিত দূরত্বে আছে কি না দেখুন। মাঝখানে বড় ফাঁক থাকলে ঐ গভীরতায় পরীক্ষা হয়নি।",
+     "en": "Check the N-values come at regular intervals. A long gap means that depth was not tested."
+    },
+    {
+     "bn": "উপরের দিকে ছোট সংখ্যা মানে নরম স্তর — ঐ স্তরের উপর ভিত বসানো যায় কি না সেটা প্রকৌশলীর সিদ্ধান্ত।",
+     "en": "Small numbers near the top mean a soft layer; whether a foundation can sit on it is an engineer's decision."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পঞ্চম অধ্যায়, (১-৪) ও (১-৭)",
+      "en": "House construction and site supervision (2019), chapter 5, (1-4) and (1-7)"
+     },
+     "status": "review"
+    }
+   ],
+   "diagram": "bore_log"
+  },
+  {
+   "id": "m15c5",
+   "tier": "work",
+   "title": {
+    "bn": "ধারণক্ষমতার সংখ্যাগুলো যা বলে, আর যা বলে না",
+    "en": "What the bearing numbers say, and what they do not"
+   },
+   "body": {
+    "bn": "রিপোর্টে মাটির ধারণক্ষমতা লেখা থাকে — প্রতি বর্গমিটারে কত টন ভার ঐ মাটি নিতে পারে। মোটা বালি বা নুড়ির মাটিতে এই সংখ্যা যেখানে ৪৫ টনের ঘরে থাকে, খুব নরম কাদায় সেটা ৫ টনের ঘরে নেমে আসে — অর্থাৎ একই ভার ধরতে ভিতের পাটাতন কয়েক গুণ চওড়া লাগে। এই সংখ্যা দিয়ে আপনি বুঝতে পারবেন মাটি নরম না শক্ত। এই সংখ্যা দিয়ে ভিতের মাপ ঠিক করা যায় না — সেটা ভবনের ভার, স্তরের গভীরতা আর পানির স্তর মিলিয়ে হিসাব করার কাজ।",
+    "en": "A report states the soil's bearing capacity: how many tonnes per square metre that ground can carry. Where coarse sand or gravel sits around 45 tonnes, very soft clay drops to about 5 — which means a footing several times wider to carry the same load. The number tells you whether the ground is soft or firm. It does not size a foundation: that is worked out from the building's load, the depth of the layers and where the water sits."
+   },
+   "watch_for": [
+    {
+     "bn": "রিপোর্টের সুপারিশ আর নকশার ভিত এক কি না — দুটো মিলিয়ে দেখুন।",
+     "en": "Whether the report's recommendation and the foundation on the drawing agree."
+    },
+    {
+     "bn": "এই টেবিলের সংখ্যা আন্দাজের জন্য। নকশার হিসাব সবসময় সাইটের রিপোর্ট ধরেই হবে।",
+     "en": "These figures are for orientation. The design always works from the site's own report."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পঞ্চম অধ্যায়, টেবিল (১-৬) — আনুমানিক মান",
+      "en": "House construction and site supervision (2019), chapter 5, table (1-6) — indicative values only"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m15c6",
+   "tier": "general",
+   "title": {
+    "bn": "দায়সারা পরীক্ষা চেনার উপায়",
+    "en": "Telling a going-through-the-motions test"
+   },
+   "body": {
+    "bn": "সয়েল টেস্টের বিল দেওয়া হয়েছে, রিপোর্টও এসেছে — কিন্তু কাজটা আসলে হয়েছে কি না, গৃহকর্তার পক্ষে বোঝা কঠিন, কারণ গর্ত ভরাট হয়ে গেলে আর কিছু দেখার থাকে না। তাই দেখার সময়টা হলো যখন কাজ চলছে। মেশিন বা ত্রিপদী কাঠামো সাইটে এসেছে কি না, কয়টা জায়গায় গর্ত হলো, আর প্রতিটি গভীরতা থেকে মাটির নমুনা আলাদা করে সংগ্রহ করা হলো কি না — এই তিনটে চোখে দেখা যায়।",
+    "en": "The soil test has been billed and a report has arrived, but whether the work was actually done is hard for a householder to tell, because once the holes are backfilled there is nothing left to look at. So the time to look is while it is happening: whether a rig or tripod actually came to the site, how many places were bored, and whether soil samples were collected and kept separately for each depth. Those three are visible."
+   },
+   "watch_for": [
+    {
+     "bn": "কাজ চলার সময় ছবি তুলে রাখুন — যন্ত্র, গর্তের জায়গা আর নমুনার বাক্স।",
+     "en": "Photograph it while it happens: the rig, where the holes are, and the sample boxes."
+    },
+    {
+     "bn": "রিপোর্টের বোরহোলের সংখ্যা আর আপনি যতগুলো গর্ত হতে দেখেছেন — মিলিয়ে দেখুন।",
+     "en": "Compare the number of boreholes in the report with the number you watched being sunk."
+    },
+    {
+     "bn": "নমুনা প্রতিটি গভীরতার জন্য আলাদা রাখার কথা, সব একসঙ্গে ঝুড়িতে নয়।",
+     "en": "Samples are meant to be kept separately for each depth, not tipped together."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পঞ্চম অধ্যায়, (১-২) ও (১-৭)",
+      "en": "House construction and site supervision (2019), chapter 5, (1-2) and (1-7)"
+     },
+     "status": "review"
+    }
+   ]
+  }
+ ]
+}

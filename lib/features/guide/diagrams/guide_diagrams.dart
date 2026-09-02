@@ -408,6 +408,7 @@ const kGuideDiagramKeys = <String>[
   'measuring',
   'drawing_parts',
   'excavation',
+  'bore_log',
 ];
 
 Widget? guideDiagram(BuildContext context, String? key, {required bool bn}) {
@@ -488,6 +489,11 @@ Widget? guideDiagram(BuildContext context, String? key, {required bool bn}) {
         ExcavationPainter(palette: palette, bn: bn),
         1.7,
         const L10nText('গর্ত কাটা', 'Cutting a trench')
+      ),
+    'bore_log' => (
+        BoreLogPainter(palette: palette, bn: bn),
+        1.15,
+        const L10nText('বোর লগ', 'A bore log')
       ),
     _ => (null, 1.0, const L10nText('', '')),
   };

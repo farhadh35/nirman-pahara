@@ -383,3 +383,108 @@ class ExcavationPainter extends CustomPainter {
   bool shouldRepaint(covariant ExcavationPainter old) =>
       old.palette != palette || old.bn != bn;
 }
+
+/// A bore log: what came out of the hole, at what depth, with the N-values.
+///
+/// The one page of a soil report a non-engineer can actually read. Depth runs
+/// down the left, the layers sit in the middle, and the N-values run down the
+/// right at the intervals they were taken — which is itself the thing to check,
+/// because a long gap in that column is a depth nobody tested.
+///
+/// The numbers here are an illustration of the shape of a log, not values for
+/// any site. Every real report is different, which is the whole reason for
+/// having one.
+class BoreLogPainter extends CustomPainter {
+  BoreLogPainter({required this.palette, required this.bn});
+
+  final DiagramPalette palette;
+  final bool bn;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (diagramTooSmall(size)) return;
+    final w = size.width;
+    final h = size.height;
+    final col = Rect.fromLTRB(w * 0.26, h * 0.16, w * 0.56, h * 0.88);
+
+    // Layer, its share of the depth, and the N-value beside it.
+    final layers = bn
+        ? [
+            ('ভরাট মাটি', 0.14, '4'),
+            ('নরম কাদা', 0.26, '6'),
+            ('পলি মেশানো বালি', 0.24, '12'),
+            ('মাঝারি বালি', 0.20, '21'),
+            ('মোটা বালি', 0.16, '34'),
+          ]
+        : [
+            ('Filled earth', 0.14, '4'),
+            ('Soft clay', 0.26, '6'),
+            ('Silty sand', 0.24, '12'),
+            ('Medium sand', 0.20, '21'),
+            ('Coarse sand', 0.16, '34'),
+          ];
+
+    final shades = [0.18, 0.30, 0.45, 0.60, 0.78];
+    var y = col.top;
+    for (var i = 0; i < layers.length; i++) {
+      final band = Rect.fromLTRB(
+          col.left, y, col.right, y + col.height * layers[i].$2);
+      canvas.drawRect(
+          band, Paint()..color = palette.concrete.withValues(alpha: shades[i]));
+      canvas.drawRect(
+
+          band,
+          Paint()
+            ..color = palette.muted.withValues(alpha: 0.6)
+            ..strokeWidth = 0.9
+            ..style = PaintingStyle.stroke);
+
+      // What the layer is, to the left of the column.
+      paintLabel(canvas, layers[i].$1,
+          Offset(w * 0.02, band.center.dy - 6),
+          colour: palette.ink, size: 9, maxWidth: w * 0.22);
+
+      // The N-value, to the right, where the log puts it.
+      paintLabel(canvas, 'N = ${layers[i].$3}',
+          Offset(col.right + w * 0.05, band.center.dy - 6),
+          colour: palette.steel, size: 9.5, weight: FontWeight.w600,
+          maxWidth: w * 0.18);
+      canvas.drawCircle(Offset(col.right + w * 0.03, band.center.dy), 2.2,
+          Paint()..color = palette.steel);
+
+      y = band.bottom;
+    }
+
+    // Water table, which is its own line on a real log.
+    final waterY = col.top + col.height * 0.34;
+    canvas.drawLine(Offset(col.left - 8, waterY), Offset(col.right + 8, waterY),
+        Paint()
+          ..color = palette.water
+          ..strokeWidth = 2.4);
+    paintLabel(canvas, bn ? 'পানির স্তর' : 'water struck here',
+        Offset(col.right + w * 0.05, waterY - 16),
+        colour: palette.water, size: 9, weight: FontWeight.w600,
+        maxWidth: w * 0.20);
+
+    // Depth scale down the left of the column.
+    paintDimension(canvas, Offset(col.left - w * 0.03, col.top),
+        Offset(col.left - w * 0.03, col.bottom),
+        bn ? 'গভীরতা' : 'depth', palette.muted);
+
+    paintLabel(
+      canvas,
+      bn
+          ? 'এন-ভ্যালু নিয়মিত দূরত্বে থাকার কথা। কলামে বড় ফাঁক মানে ঐ গভীরতায় পরীক্ষা হয়নি।'
+          : 'N-values should come at regular intervals. A gap in that column is a '
+              'depth nobody tested.',
+      Offset(w * 0.02, h * 0.93),
+      colour: palette.muted,
+      size: 9,
+      maxWidth: w * 0.96,
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant BoreLogPainter old) =>
+      old.palette != palette || old.bn != bn;
+}
