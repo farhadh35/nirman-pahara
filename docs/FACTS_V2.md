@@ -1928,3 +1928,50 @@ The same quantity, printed twice with different values. None ships until one is 
 | Electrical installation cost as a share of building cost (footnote) | 7 | Conflicts with the 9% given in [৮-১] and in the appendix list. |
 | one hundredweight (হন্দর) expressed in kilograms | 50 | Rounded: 112 lb is 50.8 kg, so the book's own two figures in this row are inconsistent by about 1.6%. Treat 50 kg as the trade rounding (it matches the cement-bag convention). |
 | average water a person uses in a day | 30 | Conflicts with the appendix figure of a 10 gallon per person per day minimum. These are different quantities — average use versus a design minimum — so both can stand, but the app must label which is  |
+
+---
+
+## F. From the 2025 Bidhimala, read off the gazette
+
+Read directly from the rendered pages of the gazette PDF, not from its text layer,
+which is legacy-encoded Bangla and unusable for numbers. Verdict **verified**:
+each figure was read off the printed page and the rule it sits in is named.
+
+**Source for all rows:** ঢাকা মহানগর ইমারত বিধিমালা, ২০২৫ — S.R.O. 469-Ain/2025,
+Bangladesh Gazette extraordinary, 14 December 2025.
+
+### সারণি-১ — minimum setbacks (gazette page 13452)
+
+| Storeys | Between buildings on one plot (m) | Side setback (m) | Rear setback (m) |
+|---|---|---|---|
+| up to 7 | 2.00 | 1.00 | 1.25 |
+| 8 to 10 | 2.50 | 1.25 | 2.00 |
+| 11 to 15 | 5.00 | 3.00 | 3.00 |
+| 16 to 20 | 6.00 | 3.25 | 3.25 |
+| 21 to 30 | 6.5 | 3.50 | 3.50 |
+| 31 to 40 | 7 | 4.50 | 4.50 |
+| above 40 | 10.00 | 5.00 | 5.00 |
+
+Measured from the boundary line. Non-residential uses on the master plan's wider
+roads may require more. Residential hotel (A-5), education (B), health (D),
+assembly (I), commercial (F), business (E), industry (G2), godown (H), hazardous
+(J) and mixed-use buildings need a minimum 6 m wide space across the plot frontage
+kept clear for vehicles to load and unload.
+
+### Roads and FAR (gazette page 13466)
+
+| Rule | What it says |
+|---|---|
+| (7) | A plot fronting a road 2.5 m or wider but under 6 m: the road is widened to 6 m. Old Dhaka only, densely populated areas per the master plan, may be approved down to not less than 1.8 m |
+| (8) | Where widening is proposed, road-based FAR is the **average** of the existing-road and proposed-road FAR |
+| (9) | Land for widening is surrendered **half from each side**, transferred to local government by easement deed |
+| (10) | A plot with more than one road takes the **existing width of the widest** |
+| (11) | Block-based development: base FAR, maximum FAR and density are redetermined per the detailed area plan |
+| (12) | Where base FAR and maximum FAR differ by **0.1 or less**, the applicant gets maximum FAR unconditionally |
+| (14) | If a plot's use changes, the **smaller** of the two FARs applies, and a Traffic Impact Assessment is required |
+| (15) | The planning permit states the residential units and the FAR index |
+
+**Not extracted, and deliberately not shipped:** the FAR value tables themselves.
+FAR depends on master-plan zone, road width, use and the detailed area plan for the
+block, so a figure printed in the app would be read as an answer when it is at best
+an input. The module says so and sends the reader to an architect and to RAJUK.
