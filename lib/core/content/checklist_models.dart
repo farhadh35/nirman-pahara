@@ -22,6 +22,7 @@ class ChecklistItem {
     required this.id,
     required this.question,
     required this.why,
+    this.lookup,
     this.how,
     this.standard,
     this.citations = const [],
@@ -46,6 +47,14 @@ class ChecklistItem {
 
   final List<Citation> citations;
 
+  /// Id of a lookup table that answers this item, when one does.
+  ///
+  /// A checklist can ask whether the concrete was watered for long enough
+  /// without being able to say how long that is; the lookup carries the
+  /// schedule. Linking them means a reader who answers "no" is one tap from the
+  /// figure they need rather than hunting for it in the guide.
+  final String? lookup;
+
   /// Whether to prompt for a photo when the answer is a problem.
   final bool wantsPhoto;
 
@@ -57,6 +66,7 @@ class ChecklistItem {
         standard:
             j['standard'] == null ? null : L10nText.fromJson(j['standard']),
         wantsPhoto: j['photo'] as bool? ?? false,
+        lookup: j['lookup'] as String?,
         citations: (j['citations'] as List?)
                 ?.map((e) => Citation.fromJson(e as Map<String, dynamic>))
                 .toList() ??

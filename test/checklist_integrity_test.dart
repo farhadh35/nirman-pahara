@@ -107,6 +107,64 @@ void main() {
     });
   });
 
+  group('Lookup links', () {
+    test('every lookup an item points at actually exists', () async {
+      // A checklist can ask whether the slab was watered long enough without
+      // being able to say how long that is. The lookup carries the schedule, so
+      // a dangling id leaves the reader at a dead end holding a failed check.
+      final tables = {for (final t in (await repo.lookups()).tables) t.id};
+      for (final pack in await repo.checklists()) {
+        for (final stage in pack.stages) {
+          for (final item in stage.items) {
+            if (item.lookup == null) continue;
+            expect(tables, contains(item.lookup),
+                reason: '${pack.id} / ${item.id} points at a table that is '
+                    'not there');
+          }
+        }
+      }
+    });
+
+    test('the items that ask about curing and striking are linked', () async {
+      // These are the two questions the app can ask and could not answer.
+      final building = (await repo.checklists())
+          .firstWhere((p) => p.id == 'building');
+      final linked = {
+        for (final s in building.stages)
+          for (final i in s.items)
+            if (i.lookup != null) i.lookup!,
+      };
+      expect(linked, contains('curing'));
+      expect(linked, contains('striking'));
+      expect(linked, contains('mix'));
+    });
+  });
+
+  group('The building pack follows the order work is actually done', () {
+    test('site setup comes first and finishing last', () async {
+      final building = (await repo.checklists())
+          .firstWhere((p) => p.id == 'building');
+      final ids = building.stages.map((s) => s.id).toList();
+      expect(ids.first, 'b0_site');
+      expect(ids.last, 'b7_finishing');
+      // Striking cannot be asked about before the pour it follows.
+      expect(ids.indexOf('b6_striking'),
+          greaterThan(ids.indexOf('b3_pour')));
+      // Nor curing before the pour either.
+      expect(ids.indexOf('b4_curing'), greaterThan(ids.indexOf('b3_pour')));
+    });
+
+    test('the buried layers are asked about before they are buried', () async {
+      final building = (await repo.checklists())
+          .firstWhere((p) => p.id == 'building');
+      final foundation =
+          building.stages.firstWhere((s) => s.id == 'b1_layout');
+      final ids = foundation.items.map((i) => i.id).toList();
+      expect(ids, contains('b1c'));
+      expect(ids, contains('b1d'));
+    });
+  });
+
   test('the RTI application asks for the approved drawing', () async {
     // Everything the godown pack measures is measured against that drawing, so
     // the application that fetches documents has to ask for it.
