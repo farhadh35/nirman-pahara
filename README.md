@@ -21,8 +21,8 @@ invisible to the people it is for.
 | Area | State |
 |---|---|
 | Bilingual content engine (JSON packs, review badges, citations) | Working |
-| Guide — 11 modules, 42 cards, both tracks, Bangla + English, with painted labelled diagrams | Working |
-| Calculators — rod, concrete, brickwork, plaster, road layers, unit cost | Working, unit-tested against hand-computed values |
+| Guide — 22 modules, 97 cards, both tracks, Bangla + English, with painted labelled diagrams | Working |
+| Calculators — 17 of them, grouped by the moment on site they are used: checking a delivery (brick stack, brick count, rod delivery), casting day (concrete, rod weight, hook length, shuttering, soling), walls and finishing (brickwork, plaster, tiles, paint), earth and road (earthwork with bulking and trips, road layers), inside the house (stairs, water and septic), and cost | Working, unit-tested against hand-computed values |
 | Price check — market bands with dates and sources | Working |
 | Cross-country cost comparison, with mandatory caveats | Working |
 | **PWD Schedule of Rates 2022 (2nd revised)** — all 1,749 priced items, four regional columns, parsed from the official PDF | Working |
@@ -36,6 +36,10 @@ invisible to the people it is for.
 | Audio narration | Not yet — needs a voice artist |
 | Ads | Not yet integrated; policy fixed in `docs/AD_POLICY.md` |
 | Electrical (E/M) rate schedule | Working — 2,606 items, 19 subheads, four zones |
+| **Plot rules** — the road-width FAR table from the 2025 Dhaka building rules gazette, 51 rows across 39 occupancy classes and three housing zones, extracted and structurally checked rather than typed | Working — reports a ceiling, not an approval |
+| **Measuring tools** — কাঠা/বিঘা/শতাংশ and the rest against the square foot, সুতা to the millimetre bar the trade actually sells, and areas and volumes for eight shapes | Working |
+| **Reference tables** — mix ratios, curing, formwork striking times, sand fineness, cost share by element; 5 tables, 41 rows, each row carrying its source and its review status | Working |
+| Engineer's reference tier — foundation classes, pile types and caps, tie and grade beams, bore-log reading | Working — reachable only by choosing it, never by scrolling |
 
 Project page: https://farhadh35.github.io/nirman-pahara/ · Privacy policy: https://farhadh35.github.io/nirman-pahara/privacy.html
 
@@ -96,11 +100,23 @@ dart run tool/review_sheet.dart
 licensed civil engineer.** The app shows an amber badge on every one of them. Do
 not ship to Play until that number is zero for the structural modules.
 
+That count covers guide cards only. The reference tables carry their own review
+status per row, and the FAR table is the gazette's own text — neither is in the
+sheet, and neither is waiting on the same sign-off.
+
 ## Testing
 
-298 tests: the calculator engine against hand-computed values, the content packs
+365 tests: the calculator engine against hand-computed values, the content packs
 against their own schema and translation completeness, report generation for
 phrasing that never accuses, and end-to-end widget flows in both languages.
+
+Two of them are worth knowing about. `test/nan_sweep_test.dart` pushes NaN and
+both infinities into every numeric input on every calculator and fails if any of
+them answers with a number that is not a number — a guard written as `x <= 0`
+looks complete and is not, because every comparison against NaN is false.
+`test/calc_spec_ui_test.dart` runs each calculator with the values its own form
+seeds, because the screen shows its answer the moment it opens and a form that
+greets the reader with an error reads as a broken app.
 
 ```bash
 flutter test

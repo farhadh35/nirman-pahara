@@ -10,14 +10,14 @@ Public work or your own house — see for yourself whether it is built right.
 
 The road through your area sank in one monsoon, and on paper the work is
 finished. You do not need to be an engineer to understand why. You need to know
-which few things to look at, and when.
+what to look at, and where.
 
-Nirman Pahara teaches those, in Bangla and English, and works with no internet.
+Nirman Pahara teaches exactly that, in Bangla and English, with no internet.
 
 **Learn — in plain language, without the jargon**
 How to measure, how to tell good cement, steel, brick and sand from bad, why
-curing decides the strength, what tied reinforcement should look like. 42 cards,
-with labelled diagrams.
+curing decides the strength, what tied reinforcement should look like. 22
+chapters, 97 cards, with labelled diagrams drawn in the app itself.
 
 **Inspect — stage by stage, ending in a report**
 Separate checklists for rural roads, buildings, food godowns, repair works and
@@ -26,9 +26,26 @@ instruments. Photographs carry their time and, where the phone can get a fix,
 their place, and the run ends in a PDF report with the photographs in it.
 
 **Calculate — ask your question with a number**
-Rod weight, concrete materials, brickwork, plaster, road layers. And divide the
+Seventeen calculators, grouped by the moment you reach for them. When the truck
+arrives: count a brick stack, work out how many bars a tonne should be. Casting
+day: materials, rod weight, hooks, shuttering, soling. Walls and finishing:
+brickwork, plaster, tiles, paint. Earth and road: dug soil swells, so the lorry
+count runs ahead of the hole, and the tool says by how much. And divide the
 contract value from the signboard to see what each metre actually costs. Every
 result shows its formula and everything it assumed.
+
+**What the plot allows — what the gazette says**
+Give it the width of the road in front and it reads the FAR index, and your
+total floor area across every storey, off Table 5 of the 2025 Dhaka building
+rules — 39 uses against 9 road widths. It is a ceiling, not an approval:
+setbacks and ground coverage are separate rules, and RAJUK has to be asked
+before a design is paid for.
+
+**Measuring tools and reference tables**
+Katha, bigha, decimals and chatak — enter one and get the rest, including the
+way a deed writes it. Suta to millimetres: which bar 3 suta actually means. And
+mix ratios, curing, formwork striking times and sand fineness — 5 tables, every
+row carrying its source.
 
 **Check a rate schedule — where the paperwork is worth a question**
 Import the department's rate schedule as a spreadsheet or Word file. Items
@@ -37,9 +54,10 @@ scheduled, work scheduled and never done, quantity times rate not matching the
 amount — each one named, with the document to ask for.
 
 **The government rates, included**
-All 1,749 items of the PWD Schedule of Rates 2022 (2nd revised), with the four
-regional columns the schedule actually prints. Search by item number or by
-description.
+All 1,749 civil items of the PWD Schedule of Rates 2022 (2nd revised), plus
+2,606 electro-mechanical ones, each with the four regional columns the schedule
+actually prints. Search by item number or by description. Where the published
+PDF misprints a cell, it is left empty rather than guessed at.
 
 **Your rights — where to go, and in what order**
 A ready Right to Information application, a written complaint template, and a

@@ -19,6 +19,36 @@ This product bundles or draws on the following:
     published PDF on 2026-09-02. The edition and its effective date are shown
     in the app wherever a rate appears.
 
+  PWD Schedule of Rates for Electro-Mechanical Works 2022
+    Published by the Public Works Department, Government of Bangladesh.
+    Rates in assets/content/rates/pwd_sor_em_2022.json were extracted from the
+    published PDF on 2026-09-02. It is kept as its own table rather than merged
+    with the civil volume, which states a different markup basis. Where the
+    published PDF misprints a rate, the cell is recorded as unavailable rather
+    than repaired by inference.
+
+  Dhaka Mohanagar Imarat (Nirman, Unnayan, Sangrakkhan o Aparasaran) Bidhimala,
+  2025 — S.R.O. No. 469-Ain/2025
+    Bangladesh Gazette, Extraordinary, 14 December 2025. Table 5, the
+    road-width FAR index, is reproduced in assets/content/rules/far_2025.json
+    and extracted by tool/extract_far_gazette.py. It is the gazette's own text,
+    cited and not relicensed, and the app reports it as a ceiling rather than
+    as a permission.
+
+  বাড়ি নির্মাণ ও সাইট সুপারভিশন (2019)
+    Consulted as a source of facts only. No text, table or plate from it is
+    reproduced. Every figure taken from it was checked against BNBC 2020, the
+    PWD schedule or a BDS standard before use and recorded in docs/FACTS_V2.md
+    with its verdict; figures that could not be corroborated are marked in the
+    app, and its 2019 rates and wages were discarded rather than shown. Every
+    diagram in this app is drawn in code from a verified dimension, not scanned.
+
+  Directorate General of Food — 1000 MT godown type design
+    Working drawings consulted to build worked examples and measurable
+    checklist items. Dimensions from that set are presented as that type
+    design's figures, never as national standards. The consultants named on the
+    sheets are instruments of service and are not endorsers of this app.
+
   Bangladesh National Building Code (BNBC) 2020
     Cited as the source for technical content. Clause-level citations are
     marked "review" until checked by a licensed civil engineer; see

@@ -3,6 +3,25 @@
 Paste the block for the release you are shipping into Play Console.
 Keep each under 500 characters.
 
+## 2.0.0 (4)
+
+<bn-BD>
+সামনের রাস্তার মাপ দিলেই ২০২৫ সালের ইমারত বিধিমালার সারণি-৫ থেকে FAR সূচক আর
+সব তলা মিলিয়ে সর্বোচ্চ মেঝে বেরিয়ে আসে — এটা ছাদ, অনুমোদন নয়। নতুন হিসাব ১১টি:
+ইটের গাদা গুনে নেওয়া, ওজন থেকে রডের পিস, শাটারিং, টাইলস, রং, মাটি খনন ও ট্রিপ,
+সিঁড়ি, পানির ট্যাংক। সঙ্গে কাঠা-বিঘা-শতাংশের রূপান্তর, সুতা থেকে মিলিমিটার, আর
+অনুপাত-কিউরিং-শাটার খোলার সময়ের তালিকা।
+</bn-BD>
+
+<en-US>
+Give it the road in front of your plot and it reads the FAR index and your total
+floor area off Table 5 of the 2025 Dhaka building rules. That is a ceiling, not
+an approval. Eleven new calculators: counting a brick stack, bars from a weight,
+shuttering, tiles, paint, earthwork with truck trips, stairs, water and septic
+tanks. Plus land-unit conversion, suta to millimetres, and the mix, curing and
+striking tables.
+</en-US>
+
 ## 1.1.1 (3)
 
 <bn-BD>
