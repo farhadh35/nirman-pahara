@@ -94,20 +94,27 @@ class _FarFormState extends State<_FarForm> {
     final roadM = _roadInFeet ? roadValue * 0.3048 : roadValue;
     final storeys = Bn.parse(_storeys.text)?.round();
 
+    // Same rule as the calculators: an empty box is an unfinished question, not
+    // a wrong answer, and it should not be answered with a refusal.
+    final unfinished =
+        _area.text.trim().isEmpty || _road.text.trim().isEmpty;
+
     CalcResult? result;
     String? error;
-    try {
-      result = FarCalculator(pack: widget.pack).compute(
-        plotAreaSft: _areaUnit.toSquareFeet(areaValue),
-        roadWidthM: roadM,
-        useCode: _useCode,
-        zone: _isZoned ? _zone : null,
-        storeys: storeys != null && storeys > 0 ? storeys : null,
-      );
-    } on CalcException catch (e) {
-      error = e.of(locale);
-    } catch (_) {
-      error = bn ? 'ঘরগুলো পূরণ করুন।' : 'Fill in the fields.';
+    if (!unfinished) {
+      try {
+        result = FarCalculator(pack: widget.pack).compute(
+          plotAreaSft: _areaUnit.toSquareFeet(areaValue),
+          roadWidthM: roadM,
+          useCode: _useCode,
+          zone: _isZoned ? _zone : null,
+          storeys: storeys != null && storeys > 0 ? storeys : null,
+        );
+      } on CalcException catch (e) {
+        error = e.of(locale);
+      } catch (_) {
+        error = bn ? 'ঘরগুলো পূরণ করুন।' : 'Fill in the fields.';
+      }
     }
 
     return ListView(
@@ -260,7 +267,19 @@ class _FarFormState extends State<_FarForm> {
               : 'Fill it in and it also shows the average floor plate',
         ),
         const SizedBox(height: 24),
-        if (error != null)
+        if (unfinished)
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: Text(
+              bn
+                  ? 'জমির মাপ আর রাস্তার মাপ দিলে হিসাব দেখা যাবে।'
+                  : 'Fill in the plot size and the road width to see the '
+                      'answer.',
+              style: theme.textTheme.bodyMedium
+                  ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+            ),
+          )
+        else if (error != null)
           CautionBox(text: error)
         else if (result != null)
           CalcResultView(result: result),

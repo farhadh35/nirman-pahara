@@ -71,14 +71,24 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     final locale = context.locale;
     final theme = Theme.of(context);
 
+    // A box the reader has emptied to retype is not a mistake, and telling them
+    // "the area must be greater than zero" while their thumb is still on the
+    // keyboard reads as the app scolding them for nothing. A blank required box
+    // means the question is unfinished; only a value they actually typed earns
+    // the calculator's own complaint.
+    final unfinished = widget.spec.fields.any((f) =>
+        !f.isChoice && !f.optional && _controllers[f.key]!.text.trim().isEmpty);
+
     CalcResult? result;
     String? error;
-    try {
-      result = widget.spec.run(_values);
-    } on CalcException catch (e) {
-      error = e.of(locale);
-    } catch (_) {
-      error = context.t(S.fillTheFields);
+    if (!unfinished) {
+      try {
+        result = widget.spec.run(_values);
+      } on CalcException catch (e) {
+        error = e.of(locale);
+      } catch (_) {
+        error = context.t(S.fillTheFields);
+      }
     }
 
     return Scaffold(
@@ -109,7 +119,17 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             const SizedBox(height: 16),
           ],
           const SizedBox(height: 8),
-          if (error != null)
+          if (unfinished)
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              child: Text(
+                context.t(S.fillTheFields),
+                style: theme.textTheme.bodyMedium?.copyWith(
+                  color: theme.colorScheme.onSurfaceVariant,
+                ),
+              ),
+            )
+          else if (error != null)
             CautionBox(text: error)
           else if (result != null)
             CalcResultView(result: result),
