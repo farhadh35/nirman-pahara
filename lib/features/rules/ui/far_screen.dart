@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
+import '../../../core/i18n/app_locale.dart';
 import '../../../core/util/bn.dart';
 import '../../calculators/logic/calc_result.dart';
 import '../../calculators/ui/calculator_screen.dart';
@@ -55,19 +56,34 @@ class _FarFormState extends State<_FarForm> {
   String _useCode = 'A1';
   String _zone = 'central';
   bool _seeded = false;
+  AppLocale? _seededLocale;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    if (_seeded) return;
-    _seeded = true;
-    // Seeded in the reader's own digits, like every other form in the app.
     final locale = context.locale;
-    _area.text = Bn.localiseDigits('3', locale);
-    _road.text = Bn.localiseDigits('12', locale);
-    for (final c in [_area, _road, _storeys]) {
-      c.addListener(() => setState(() {}));
+    if (!_seeded) {
+      _seeded = true;
+      // Seeded in the reader's own digits, like every other form in the app.
+      _area.text = Bn.localiseDigits('3', locale);
+      _road.text = Bn.localiseDigits('12', locale);
+      for (final c in [_area, _road, _storeys]) {
+        c.addListener(() => setState(() {}));
+      }
+    } else if (_seededLocale != locale) {
+      // Changing language has to rewrite what is already in the boxes, or the
+      // form shows one script and the answer under it shows the other.
+      for (final c in [_area, _road, _storeys]) {
+        if (c.text.trim().isEmpty) continue;
+        final converted = Bn.localiseDigits(c.text, locale);
+        if (converted == c.text) continue;
+        c.value = TextEditingValue(
+          text: converted,
+          selection: TextSelection.collapsed(offset: converted.length),
+        );
+      }
     }
+    _seededLocale = locale;
   }
 
   @override

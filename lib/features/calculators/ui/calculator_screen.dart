@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
+import '../../../core/i18n/app_locale.dart';
 import '../../../core/i18n/strings.dart';
 import '../../../core/util/bn.dart';
 import '../../../core/util/grouped_number_formatter.dart';
@@ -27,11 +28,38 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   final Map<String, TextEditingController> _controllers = {};
   final Map<String, String> _choices = {};
   bool _seeded = false;
+  AppLocale? _seededLocale;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     _seed();
+    _followLocale();
+  }
+
+  /// Rewrites what is already in the boxes when the reader changes language.
+  ///
+  /// The seed runs once, so switching to English left "১০০" sitting in the area
+  /// box while the result underneath it read "100 sft" — the same number in two
+  /// scripts on one screen. Only the digits change; whatever the reader typed
+  /// is kept.
+  void _followLocale() {
+    final locale = context.locale;
+    if (_seededLocale == locale) return;
+    _seededLocale = locale;
+    for (final f in widget.spec.fields) {
+      if (f.isChoice) continue;
+      final c = _controllers[f.key]!;
+      if (c.text.trim().isEmpty) continue;
+      final converted = f.money
+          ? Bn.number(Bn.parse(c.text) ?? 0, decimals: 0, locale: locale)
+          : Bn.localiseDigits(c.text, locale);
+      if (converted == c.text) continue;
+      c.value = TextEditingValue(
+        text: converted,
+        selection: TextSelection.collapsed(offset: converted.length),
+      );
+    }
   }
 
   void _seed() {
@@ -41,6 +69,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     // written in the reader's own digits: a Bangla-first app that prints
     // "৪০ ফুট" in the answer must not put "40" in the box above it.
     final locale = context.locale;
+    _seededLocale = locale;
     for (final f in widget.spec.fields) {
       if (f.isChoice) {
         _choices[f.key] = f.initial ?? f.choices!.keys.first;
@@ -70,6 +99,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     _controllers.clear();
     _choices.clear();
     _seeded = false;
+    _seededLocale = null;
     _seed();
   }
 
