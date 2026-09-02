@@ -1,0 +1,176 @@
+{
+ "id": "m21_services",
+ "code": "M21",
+ "track": "both",
+ "icon": "services",
+ "title": {
+  "bn": "বিদ্যুৎ, পানি ও পয়ঃনিষ্কাশন",
+  "en": "Electrics, water and drainage"
+ },
+ "summary": {
+  "bn": "যা দেয়ালের ভেতরে ঢুকে যায় আর মাটির নিচে চলে যায় — ঢাকা পড়ার আগে দেখে নেওয়ার জিনিস।",
+  "en": "What goes inside the walls and under the ground, and has to be looked at before it disappears."
+ },
+ "cards": [
+  {
+   "id": "m21c1",
+   "tier": "general",
+   "title": {
+    "bn": "তার দেয়ালে ঢোকার আগে",
+    "en": "Before the wiring goes into the wall"
+   },
+   "body": {
+    "bn": "বিদ্যুতের কাজের ভুল চোখে পড়ে না, কিন্তু আগুন আর বিদ্যুৎস্পৃষ্টের বেশির ভাগ কারণ এখানেই। দেয়ালের ভেতরের তার পিভিসি কনডুইট পাইপের ভেতর দিয়ে যাওয়ার কথা — খালি তার সরাসরি প্লাস্টারের নিচে চাপা পড়লে পরে বদলানোও যায় না, আর ঘষা লেগে শর্ট হয়। আর আর্থিং: ধাতব অংশে বিদ্যুৎ এলে সেটা মাটিতে যাওয়ার আলাদা পথ না থাকলে পথটা হয় যে মানুষ ধরেছে সে। প্লাস্টারের আগেই এই দুটো দেখার সময়।",
+    "en": "Bad electrical work does not show, and it is behind most fires and most shocks. Cable inside a wall is meant to run through PVC conduit: buried bare under plaster it cannot be replaced later, and it chafes and shorts. And earthing — when a live wire touches metal, the current needs its own path to ground, and without one the path is whoever is holding it. Before the plaster is the time to look at both."
+   },
+   "watch_for": [
+    {
+     "bn": "দেয়ালে খাঁজ কাটা হয়েছে কি না, আর তার ভেতরে পাইপ বসেছে কি না — ছবি তুলে রাখুন।",
+     "en": "Whether chases were cut and conduit actually laid in them. Photograph it."
+    },
+    {
+     "bn": "আর্থিংয়ের ইলেকট্রোড আর ইন্সপেকশন পিট আছে কি না — এটা আলাদা একটা কাজ, বিলেও আলাদা লাইন।",
+     "en": "Whether there is an earth electrode and an inspection pit: it is separate work and a separate line on the bill."
+    },
+    {
+     "bn": "বিলের বৈদ্যুতিক অংশ অ্যাপের শিডিউল যাচাইয়ে মেলানো যায় — ই/এম রেট তালিকা সঙ্গেই আছে।",
+     "en": "The electrical part of a bill can be checked in the schedule section: the E/M rates ship with the app."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), একাদশ অধ্যায়",
+      "en": "House construction and site supervision (2019), chapter 11"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m21c2",
+   "tier": "work",
+   "title": {
+    "bn": "কোন ঘরে কয়টা পয়েন্ট",
+    "en": "How many points in which room"
+   },
+   "body": {
+    "bn": "সকেট আর পয়েন্টের সংখ্যা বিলের একটা বড় অংশ, আর সেটা গুনে মেলানো যায়। প্রচলিত হিসাবে ১৫ অ্যাম্পিয়ারের সকেট রান্নাঘরে ২টা, শোবার ঘর, বসার ঘর, খাবার ঘর, বারান্দা আর ফ্রিজের ঘরে ১টা করে, আর বাথরুমে কোনোটা নয় — ভেজা জায়গায় বড় সকেট রাখা হয় না। এর সঙ্গে থাকে আলো, ফ্যান আর কলবেলের আলাদা পয়েন্ট। বিলে যত পয়েন্ট, দেয়ালে তত পয়েন্ট — এটাই মেলানোর জিনিস।",
+    "en": "Socket and point counts are a large part of an electrical bill, and they can be counted. The usual allowance for 15 amp sockets is two in the kitchen, one each in a bedroom, living room, dining room, verandah and the room with the refrigerator, and none in a bathroom, where a heavy socket is not put in a wet room. Light, fan and call bell points are counted separately. What is on the bill and what is on the wall is the comparison."
+   },
+   "watch_for": [
+    {
+     "bn": "পয়েন্ট গুনুন ঘরে ঘরে। বিলে 'লাইট পয়েন্ট' আর 'ফ্যান পয়েন্ট' আলাদা লাইনে থাকে।",
+     "en": "Count them room by room. Light points and fan points are separate lines on a bill."
+    },
+    {
+     "bn": "বাথরুমে ১৫ অ্যাম্পিয়ারের সকেট বসানো থাকলে জিজ্ঞেস করুন কেন।",
+     "en": "If a 15 amp socket has gone into a bathroom, ask why."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), একাদশ অধ্যায় — ঘরভিত্তিক সকেটের ছক",
+      "en": "House construction and site supervision (2019), chapter 11 — the room by room socket table"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m21c3",
+   "tier": "work",
+   "title": {
+    "bn": "পানি কোথা থেকে, কোথায় জমবে",
+    "en": "Where the water comes from and sits"
+   },
+   "body": {
+    "bn": "বাড়িতে পানির দুটো আলাদা জায়গা — মাটির নিচের রিজার্ভার, যেখানে লাইনের পানি জমে, আর ছাদের ট্যাংক, যেখান থেকে কলে পানি নামে। একটা দিয়ে অন্যটার কাজ চলে না। আকার ঠিক হয় লোকসংখ্যা ধরে: জনপ্রতি দিনে অন্তত ১০ গ্যালন ধরলে রিজার্ভারে দুই দিনের আর ছাদের ট্যাংকে এক দিনের পানি ধরার কথা। পাইপের মাপও আলাদা — মূল লাইন থেকে মিটার পর্যন্ত ১ ইঞ্চি, রিজার্ভার থেকে ছাদে ওঠার লাইন ৩/৪ ইঞ্চি, আর ছাদ থেকে কলের বিতরণ লাইন ১/২ ইঞ্চি।",
+    "en": "A house holds water in two separate places: an underground reservoir that the mains fills, and a roof tank that feeds the taps. One does not do the other's job. Size follows the number of people: at a floor of 10 gallons a person a day, the reservoir holds two days and the roof tank one. The pipes differ too — an inch from the main to the meter, three quarters for the line pumping up to the roof, and a half inch for distribution down to the taps."
+   },
+   "watch_for": [
+    {
+     "bn": "ছাদের ট্যাংক স্ল্যাব থেকে অন্তত দেড় ফুট উঁচুতে — নইলে নিচের তলায় চাপ থাকে না।",
+     "en": "The roof tank at least a foot and a half above the slab, or the floors below get no pressure."
+    },
+    {
+     "bn": "অ্যাপের হিসাব অংশে লোকসংখ্যা দিলে দুটো ট্যাংকের মাপ বেরিয়ে আসে।",
+     "en": "The calculators size both tanks from the number of people."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), একাদশ অধ্যায়, (১১-৪)",
+      "en": "House construction and site supervision (2019), chapter 11, (11-4)"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m21c4",
+   "tier": "work",
+   "title": {
+    "bn": "পয়ঃনিষ্কাশন আর গন্ধের কারণ",
+    "en": "Drainage, and where the smell comes from"
+   },
+   "body": {
+    "bn": "টয়লেটের লাইন সাধারণত ১০০ মিলিমিটার অর্থাৎ ৪ ইঞ্চি ব্যাসের পাইপে যায়, আর সেটা গিয়ে পড়ে সেপটিক ট্যাংকে — সেখান থেকে সোকওয়েলে। ট্যাংকের মাপ ব্যবহারকারীর সংখ্যা ধরে ঠিক হয়, যেমন ১০ জনের জন্য প্রায় ৬ × ২ × ৩.৫ ফুট। আর ঘরে গন্ধ আসার প্রধান কারণ ট্র্যাপ: প্রতিটা নিষ্কাশনের মুখে একটা বাঁকা অংশ থাকে যেখানে সামান্য পানি জমে থাকে, আর ঐ পানিটাই নিচের গ্যাস আটকায়। পানি শুকিয়ে গেলে গন্ধ উঠে আসে।",
+    "en": "A toilet line usually runs in 100 millimetre — 4 inch — pipe to a septic tank, and from there to a soak well. Tank size follows the number of users: about 6 × 2 × 3.5 feet for ten people. And the usual reason a house smells is the trap: every drain outlet has a bend holding a little water, and that water is what blocks the gas below. When it dries out, the smell comes up."
+   },
+   "watch_for": [
+    {
+     "bn": "অনেকদিন ব্যবহার না হওয়া বাথরুমের ট্র্যাপ শুকিয়ে যায় — এক মগ পানি ঢাললেই সারে।",
+     "en": "A trap in a bathroom nobody uses dries out; a mug of water fixes it."
+    },
+    {
+     "bn": "সেপটিক ট্যাংক আর সোকওয়েল বিলে আলাদা আইটেম — দুটোই আছে কি না দেখুন।",
+     "en": "Septic tank and soak well are separate items on a bill; check both are there."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "PWD Schedule of Rates 2022, আইটেম ২৬.৫৬.৩ — ১০০ মিমি সয়েল পাইপ",
+      "en": "PWD Schedule of Rates 2022, item 26.56.3 — 100 mm soil pipe"
+     },
+     "status": "verified"
+    }
+   ],
+   "diagram": "traps"
+  },
+  {
+   "id": "m21c5",
+   "tier": "general",
+   "title": {
+    "bn": "গ্যাস আর লিফট",
+    "en": "Gas and lifts"
+   },
+   "body": {
+    "bn": "গ্যাসের লাইন এমএস পাইপে যায়, বাড়ির ভেতরে সাধারণত আধা ইঞ্চি থেকে এক ইঞ্চি ব্যাসের। গ্যাসের কাজ অনুমোদিত ঠিকাদার ছাড়া করানোর জিনিস নয়, আর লাইন কোথা দিয়ে গেছে সেটা নকশায় থাকা দরকার — পরে দেয়ালে পেরেক ঠুকতে গিয়ে দুর্ঘটনা এখান থেকেই হয়। লিফট সাধারণত ছয় তলার উপরে বসানো হয়, আর পনেরো-ষোলো তলায় সেটা বাদ দেওয়ার মতো জিনিস থাকে না। লিফট বসলে তার জন্য আলাদা বিদ্যুৎ আর জায়গা — দুটোই নকশায় আগে থেকে ধরা থাকতে হয়।",
+    "en": "Gas runs in MS pipe, usually half an inch to an inch inside a house. Gas work is not something to have done by anyone but an approved contractor, and where the line runs belongs on a drawing — accidents with a nail in a wall start here. Lifts generally go into buildings above six storeys, and by fifteen or sixteen they are not optional. A lift needs its own power supply and its own shaft, and both have to be in the drawing from the start."
+   },
+   "watch_for": [
+    {
+     "bn": "গ্যাস লাইনের পথ নকশায় আছে কি না — না থাকলে চেয়ে নিন।",
+     "en": "Whether the gas route is on a drawing. If not, ask for it."
+    },
+    {
+     "bn": "লিফট আর জেনারেটরের জায়গা পরে বের করা যায় না, শুরুতেই ধরতে হয়।",
+     "en": "Space for a lift or a generator cannot be found later; it is allowed for at the start."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "অনুমানের শর্টকাট — বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), একাদশ অধ্যায়, (১১-৩) ও (১১-৫)",
+      "en": "Rule of thumb — House construction and site supervision (2019), chapter 11, (11-3) and (11-5)"
+     },
+     "status": "ruleOfThumb"
+    }
+   ]
+  }
+ ]
+}

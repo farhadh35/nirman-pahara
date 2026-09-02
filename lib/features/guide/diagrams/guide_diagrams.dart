@@ -4,6 +4,7 @@ import '../../../core/i18n/app_locale.dart';
 import 'diagram_base.dart';
 import 'materials_diagrams.dart';
 import 'rebar_diagrams.dart';
+import 'services_diagrams.dart';
 import 'site_diagrams.dart';
 import 'structure_diagrams.dart';
 
@@ -410,6 +411,7 @@ const kGuideDiagramKeys = <String>[
   'excavation',
   'bore_log',
   'plot_faces',
+  'traps',
 ];
 
 Widget? guideDiagram(BuildContext context, String? key, {required bool bn}) {
@@ -500,6 +502,11 @@ Widget? guideDiagram(BuildContext context, String? key, {required bool bn}) {
         PlotFacesPainter(palette: palette, bn: bn),
         1.7,
         const L10nText('প্লটের সামনে, পাশ ও পিছন', 'Front, side and rear of a plot')
+      ),
+    'traps' => (
+        TrapPainter(palette: palette, bn: bn),
+        1.6,
+        const L10nText('ট্র্যাপ — গন্ধ আটকানোর পানি', 'The trap, and the water that stops the smell')
       ),
     _ => (null, 1.0, const L10nText('', '')),
   };
