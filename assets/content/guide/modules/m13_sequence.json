@@ -1,0 +1,181 @@
+{
+ "id": "m13_sequence",
+ "code": "M13",
+ "track": "both",
+ "icon": "sequence",
+ "title": {
+  "bn": "কাজের ক্রম",
+  "en": "The order of the work"
+ },
+ "summary": {
+  "bn": "কোন কাজের পর কোনটা, কোনটায় অপেক্ষা করতেই হবে, আর কোন জিনিস ঢেকে যাওয়ার আগে একবারই দেখা যায়।",
+  "en": "What follows what, where waiting is not optional, and what can only be seen once before it is covered."
+ },
+ "cards": [
+  {
+   "id": "m13c1",
+   "tier": "general",
+   "title": {
+    "bn": "চারটে পর্ব, একটার পর একটা",
+    "en": "Four phases, in order"
+   },
+   "body": {
+    "bn": "যেকোনো বাড়ির কাজ মোটামুটি চারটে পর্বে ভাগ হয়। প্রথমে সাইট তৈরি — জমি পরিষ্কার, লেআউট, অস্থায়ী পানি-বিদ্যুৎ, মালামাল রাখার জায়গা। তারপর ভিত — মাটি কাটা, সোলিং, মাস কনক্রিট, ফুটিং, কলামের গোড়া, ডিপিসি, ভরাট। তারপর সুপার-স্ট্রাকচার — কলাম, বিম, ছাদ, গাঁথুনি। শেষে ফিনিশিং — প্লাস্টার, দরজা-জানালা, মেঝে, স্যানিটারি, বিদ্যুৎ, রং। কোন পর্বে আছেন সেটা জানা থাকলেই বোঝা যায় এখন কী দেখার সময়।",
+    "en": "Any house divides roughly into four phases. First the site: clearing, setting out, temporary water and power, somewhere to keep materials. Then the foundation: excavation, soling, mass concrete, footings, column starters, the damp proof course, backfill. Then the superstructure: columns, beams, roof, masonry. Last the finishing: plaster, doors and windows, floors, sanitary, electrical, paint. Knowing which phase the work is in tells you what there is to look at now."
+   },
+   "watch_for": [
+    {
+     "bn": "পরের পর্ব শুরু হয়ে গেলে আগেরটার অনেক কিছু আর দেখা যায় না।",
+     "en": "Once the next phase starts, much of the last one can no longer be seen."
+    },
+    {
+     "bn": "একই সময়ে দুটো পর্ব চললে জিজ্ঞেস করুন কেন — কখনো যুক্তি থাকে, কখনো তাড়াহুড়ো।",
+     "en": "If two phases run at once, ask why: sometimes there is a reason, sometimes it is haste."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), ত্রয়োদশ অধ্যায়",
+      "en": "House construction and site supervision (2019), chapter 13"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m13c2",
+   "tier": "work",
+   "title": {
+    "bn": "যেখানে অপেক্ষা করাটাই কাজ",
+    "en": "Where the waiting is the work"
+   },
+   "body": {
+    "bn": "নির্মাণে কিছু ধাপে কিছুই ঘটতে দেখা যায় না, অথচ ঐ সময়টাই কাজের অংশ। ঢালাইয়ের পর কংক্রিট শক্তি পায় ধীরে — ছাদ আর লিন্টেলে ২৮ দিন পানি দেওয়ার কথা, গাঁথুনি আর প্লাস্টারে ৭ দিন। সাটারিং খোলারও সময় আছে: পাশের সাটারিং ২–৩ দিনে খোলা যায়, কিন্তু ছাদ বা বিমের নিচেরটা ২১ দিনের আগে নয়। এই দিনগুলো কমিয়ে দিলে কাজটা দেখতে একই থাকে, ভেতরে থাকে না।",
+    "en": "Some stages look like nothing is happening, and that time is the work. Concrete gains strength slowly: a roof or lintel wants 28 days of watering, masonry and plaster 7. Formwork has its own clock — side forms can come off in two or three days, but the forms under a slab or beam not before 21. Cut those days short and the work looks the same afterwards while not being the same."
+   },
+   "watch_for": [
+    {
+     "bn": "কিউরিং দিনে ৩–৪ বার। রোদে ঢাকা না দিলে পানি শুকিয়ে যায়, কিউরিং হয় না।",
+     "en": "Watering three or four times a day. In sun, uncovered, it dries before it does any good."
+    },
+    {
+     "bn": "বিমের সাটারিং খোলার প্রচলিত আন্দাজ: স্প্যান যত ফুট তত দিন, তবে ১৪ দিনের কম নয়।",
+     "en": "The common estimate for beam formwork: as many days as the span in feet, and never under 14."
+    },
+    {
+     "bn": "অ্যাপের 'যাচাই' অংশে কাজভেদে কিউরিং ও সাটারিংয়ের সময়সূচি আছে।",
+     "en": "The lookup section carries the curing and striking times by type of work."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), ত্রয়োদশ অধ্যায়, (১২-৫) ও (১২-৬)",
+      "en": "House construction and site supervision (2019), chapter 13, (12-5) and (12-6)"
+     },
+     "status": "review"
+    }
+   ],
+   "diagram": "curing"
+  },
+  {
+   "id": "m13c3",
+   "tier": "work",
+   "title": {
+    "bn": "এক দিনে দেয়াল কতটা ওঠে",
+    "en": "How much wall goes up in a day"
+   },
+   "body": {
+    "bn": "গাঁথুনি একবারে খুব উঁচু তোলা যায় না। নিচের সারির মশলা তখনো নরম, উপরে ভার পড়লে সেটা চেপে বেরিয়ে যায় আর দেয়াল ঝুঁকে যায়। প্রচলিত সীমা হলো এক দফায় সাড়ে চার ফুটের বেশি নয় — তারপর ঐ অংশটা বসতে দিতে হয়। দ্রুত উঠতে থাকা দেয়াল দেখতে কাজের অগ্রগতির মতো লাগে, কিন্তু জিজ্ঞেস করার মতো জিনিস।",
+    "en": "Masonry cannot go up far in one go. The mortar in the courses below is still soft, and load on top squeezes it out and leans the wall. The usual limit is no more than about four and a half feet in one lift, and then that stretch is left to set. A wall climbing quickly looks like progress and is worth a question."
+   },
+   "watch_for": [
+    {
+     "bn": "দেয়াল খাড়া আছে কি না ওলন বা সুতো ফেলে দেখা যায়।",
+     "en": "A plumb bob or a string shows whether the wall is upright."
+    },
+    {
+     "bn": "গাঁথুনি শেষ হলেই কিউরিং শুরু — ইটও পানি টানে, শুকনো গাঁথুনি দুর্বল হয়।",
+     "en": "Curing starts as soon as the masonry does: bricks draw water, and dry masonry sets weak."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), ত্রয়োদশ অধ্যায়",
+      "en": "House construction and site supervision (2019), chapter 13"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m13c4",
+   "tier": "general",
+   "title": {
+    "bn": "ঢেকে যাওয়ার আগে একবারই দেখা যায়",
+    "en": "Seen once, then covered for good"
+   },
+   "body": {
+    "bn": "কিছু জিনিস সারা জীবনে একবারই দেখা যায়, আর সেই সুযোগটা কয়েক ঘণ্টার। ঢালাইয়ের আগে রড — কয়টা, কত মোটা, ফাঁক কত, কভার ব্লক বসেছে কি না। ভরাটের আগে ভিতের স্তর — সোলিং, মাস কনক্রিট, ডিপিসি। প্লাস্টারের আগে গাঁথুনি আর কনসিল্ড পাইপ-তার। মেঝে ঢালাইয়ের আগে নিচের বালি ভরাট। এগুলোর ছবি তুলে রাখাই সবচেয়ে কাজের জিনিস, কারণ পরে তর্ক হলে ছবিটাই থাকে।",
+    "en": "Some things are visible once in the life of a building, and the window is a few hours. Before a pour: the steel — how many bars, how thick, the spacing, whether the cover blocks are in. Before backfill: the foundation layers, the soling, the mass concrete, the damp proof course. Before plaster: the masonry, and the pipes and wiring buried in it. Before the floor slab: the sand under it. Photographing these is the single most useful thing to do, because a photograph is what is left when there is an argument later."
+   },
+   "watch_for": [
+    {
+     "bn": "ঢালাইয়ের তারিখ আগে থেকে জেনে রাখুন — ঐ দিনই একমাত্র দিন।",
+     "en": "Find out the pour date in advance: that day is the only day."
+    },
+    {
+     "bn": "ছবিতে একটা ফিতে বা পরিচিত জিনিস রাখুন, যাতে মাপ বোঝা যায়।",
+     "en": "Put a tape or something of known size in the photograph, so the scale reads."
+    },
+    {
+     "bn": "অ্যাপের পরিদর্শন অংশে ছবির সঙ্গে সময় ও জায়গা আপনাআপনি যুক্ত হয়।",
+     "en": "The inspection section attaches the time and place to the photograph for you."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), ত্রয়োদশ অধ্যায়",
+      "en": "House construction and site supervision (2019), chapter 13"
+     },
+     "status": "review"
+    }
+   ],
+   "diagram": "slab_rebar"
+  },
+  {
+   "id": "m13c5",
+   "tier": "general",
+   "title": {
+    "bn": "রং শেষ ধাপ, আর সেটা তিন দফায়",
+    "en": "Paint is last, and it is three passes"
+   },
+   "body": {
+    "bn": "রং সবার শেষে, আর সেটাই সবচেয়ে বেশি তাড়াহুড়ো করা ধাপ — কারণ রং লাগলেই বাড়িটা শেষ দেখায়। ঠিকভাবে করলে রং তিন দফায় হয়: প্রাইম কোট, আন্ডার কোট, তারপর ফিনিশ কোট এক বা দুইবার। এক দফা কমিয়ে দিলে প্রথম বর্ষাতেই পার্থক্য বোঝা যায়। রঙের আগে দেয়াল শুকনো থাকা দরকার — ভেজা প্লাস্টারের উপর রং করলে পরে খসে পড়ে।",
+    "en": "Paint comes last, and it is the stage most often hurried, because paint is what makes a house look finished. Done properly it is three passes: a prime coat, an under coat, then one or two finish coats. Drop a pass and the first monsoon shows the difference. The wall also has to be dry first: paint over damp plaster comes away later."
+   },
+   "watch_for": [
+    {
+     "bn": "কয় দফা রং হলো গুনে রাখুন। প্রতিটা দফার পর একদিন শুকানোর সময় লাগে।",
+     "en": "Count the passes. Each one needs a day to dry before the next."
+    },
+    {
+     "bn": "প্লাস্টারের কিউরিং শেষ হয়ে শুকানোর আগে রং শুরু হলে জিজ্ঞেস করুন।",
+     "en": "If painting starts before the plaster has finished curing and dried, ask."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), ত্রয়োদশ অধ্যায় — রঙের তিন ধাপ",
+      "en": "House construction and site supervision (2019), chapter 13 — the three painting stages"
+     },
+     "status": "verified"
+    }
+   ]
+  }
+ ]
+}
