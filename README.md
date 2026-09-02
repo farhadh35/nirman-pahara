@@ -32,7 +32,9 @@ invisible to the people it is for.
 | Photo evidence — camera capture, stored in the app's own directory, attached per finding, viewable full-screen | Working |
 | **Sharing** — report text plus every photograph, to any app the user already has | Working |
 | **Capture context** — every photograph carries its timestamp and, where the phone can get a fix, its coordinates; when it cannot, the report says why | Working |
-| PDF layout placing photographs beside their findings | Not yet — next phase |
+| PDF layout placing photographs beside their findings | Working — each photograph renders inside its own finding's block, with its time and place under it |
+| Lift and escalator rate schedule | Not yet — the 2026 edition is a poor scan; per-cell OCR recovered 74 of ~530 rows and misread a price column, so nothing was shipped rather than something wrong. Needs a machine-readable copy from PWD |
+| Labour and gang-size calculators | Not yet — needs PWD's *analysis of rates* labour coefficients. The shipped schedule carries rates only, and the 2019 wage tables were rejected as stale rather than shown |
 | Audio narration | Not yet — needs a voice artist |
 | Ads | Not yet integrated; policy fixed in `docs/AD_POLICY.md` |
 | Electrical (E/M) rate schedule | Working — 2,606 items, 19 subheads, four zones |

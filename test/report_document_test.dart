@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -11,6 +12,9 @@ import 'package:nirman_pahara/features/inspection/report/report_document.dart';
 import 'package:nirman_pahara/features/inspection/report/report_sheet.dart';
 
 Future<String> _fromDisk(String path) => File(path).readAsString();
+
+/// An 8x8 PNG, so the layout has something real to decode.
+const _pngBytes = 'iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAEUlEQVR4nGM4EaCBFTEMLQkAaplQAc/OcKAAAAAASUVORK5CYII=';
 
 void main() {
   late ChecklistPack road;
@@ -127,4 +131,44 @@ void main() {
         )))!;
     expect(png, isNotEmpty);
   });
+
+  testWidgets('a photograph is laid out beside the finding it belongs to',
+      (tester) async {
+    // Every other test in this file passes photoFiles: {}, so the one branch
+    // the store listing actually advertises — the photograph sitting next to
+    // its finding instead of arriving as a loose attachment — was never
+    // rendered by a test. A real file goes through it here.
+    final dir = Directory.systemTemp.createTempSync('report_photo');
+    addTearDown(() => dir.deleteSync(recursive: true));
+    final file = File('${dir.path}/a.jpg')
+      ..writeAsBytesSync(base64Decode(_pngBytes));
+
+    final run = buildRun();
+    final png = await tester.runAsync(() => const ReportDocument().rasterise(
+          ReportSheet(
+            run: run,
+            locale: AppLocale.bn,
+            photoFiles: {'a.jpg': file},
+          ),
+          width: 620,
+        ));
+
+    expect(png, isNotNull);
+    expect(tester.takeException(), isNull);
+
+    // The page has to grow to hold the picture. Rendering it into a gap the
+    // same size as the text-only page would mean it was silently dropped.
+    final textOnly = await tester.runAsync(() => const ReportDocument().rasterise(
+          ReportSheet(
+            run: buildRun(),
+            locale: AppLocale.bn,
+            photoFiles: const {},
+          ),
+          width: 620,
+        ));
+    expect(png!.length, greaterThan(textOnly!.length),
+        reason: 'the report with a photograph is no bigger than the one '
+            'without, so the photograph did not render');
+  });
+
 }
