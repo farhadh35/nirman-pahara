@@ -1,0 +1,202 @@
+{
+ "id": "m12_malpractice",
+ "code": "M12",
+ "track": "government",
+ "icon": "gavel",
+ "title": {
+  "bn": "ঠিকাদারের সাধারণ কারচুপি ও করণীয়",
+  "en": "Common contractor malpractice, and what to do"
+ },
+ "summary": {
+  "bn": "কোন কারচুপি কেমন দেখায়, ঠিকাদারের লাভ কোথায়, আর আপনি ঠিক কী করতে পারেন — প্রতিটার জন্য আলাদা করে।",
+  "en": "What each trick looks like, where the contractor's gain is, and exactly what you can do about it."
+ },
+ "cards": [
+  {
+   "id": "m12c1",
+   "title": {
+    "bn": "মালামাল কম দেওয়া ও গ্রেড বদলে দেওয়া",
+    "en": "Short supply and swapped grades"
+   },
+   "body": {
+    "bn": "কেমন দেখায়: ডেলিভারির সংখ্যা কাজের তুলনায় কম; মাঝপথে সিমেন্ট বা রডের ব্র্যান্ড বদলে যায়; রড আগের চেয়ে সরু দেখায়। লাভ কোথায়: যে গ্রেড কাগজে লেখা আর যেটা সাইটে এলো, দামের পার্থক্যটাই ঠিকাদারের পকেটে যায়। টিআইবির সড়ক খাতের গবেষণায় নিম্নমানের মালামাল আর পরিমাণ কমানো — এই দুটোকেই মান নষ্ট করার প্রধান দুই কৌশল বলা হয়েছে। আপনি যা করবেন: ডেলিভারির দিন ব্র্যান্ড ও ব্যাচ দেখা যায় এমনভাবে ছবি তুলুন, খালি ব্যাগ গুনুন, আর BoQ-র কপি চেয়ে নিন — না দিলে RTI আবেদন করুন।",
+    "en": "What it looks like: fewer deliveries than the work needs, the cement or rod brand changing partway through, bars looking thinner than the last lot. Where the gain is: the price difference between the grade on paper and the grade on site goes into the contractor's pocket. TIB's road-sector study names substandard materials and reduced quantities as the two main ways quality is degraded. What you do: photograph deliveries with the brand and batch visible, count the empty bags, and ask for a copy of the BoQ — and file an RTI application if it is refused."
+   },
+   "watch_for": [
+    {
+     "bn": "ব্র্যান্ড বদল ধরার একমাত্র সময় ডেলিভারির দিন। পরে সব ব্যাগ একরকম দেখায়।",
+     "en": "Delivery day is the only time a brand swap is visible. Afterwards every bag looks the same."
+    },
+    {
+     "bn": "খালি ব্যাগ গোনা সবচেয়ে সহজ হিসাব — অ্যাপের ঢালাই হিসাব দিয়ে মিলিয়ে নিন।",
+     "en": "Counting empty bags is the easiest check there is — set it against the app's concrete calculator."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "টিআইবির সড়ক খাতের গবেষণা, সংবাদমাধ্যমে প্রকাশিত",
+      "en": "TIB road sector study, as reported in the press"
+     },
+     "status": "verified",
+     "url": "https://en.prothomalo.com/bangladesh/z7xt4wnqbg"
+    }
+   ]
+  },
+  {
+   "id": "m12c2",
+   "title": {
+    "bn": "পরিমাণ ও মাপ কমিয়ে দেওয়া",
+    "en": "Cutting quantities and dimensions"
+   },
+   "body": {
+    "bn": "কেমন দেখায়: রাস্তার স্তর পাতলা, প্রস্থ কম, ভিত অগভীর, রড কম বা ফাঁক বেশি, ছাদ পাতলা, কভার কম। লাভ কোথায়: ইস্পাত আর গভীরতাই সবচেয়ে দামি আর সবচেয়ে অদৃশ্য অংশ — এখানে কাটলে লাভ সবচেয়ে বেশি, ধরা পড়ার ঝুঁকি সবচেয়ে কম। আপনি যা করবেন: ঢালাইয়ের আগে রডের জাল, ফাঁক আর কভার ব্লকের ছবি তুলুন ফিতাসহ; স্তর খোলা থাকতে পুরুত্ব মাপুন। ঢেকে গেলে আর কিছুই দেখা যাবে না — সময়টাই সব।",
+    "en": "What it looks like: a thin pavement layer, a narrower road, a shallow foundation, fewer bars or wider spacing, a thin slab, too little cover. Where the gain is: steel and depth are the most expensive and least visible parts of a structure, so cutting them pays best and shows least. What you do: photograph the bar mesh, the spacing and the cover blocks with a tape before the pour, and measure layer thickness while the layer is open. Once it is covered there is nothing to see — the timing is the whole thing."
+   },
+   "watch_for": [
+    {
+     "bn": "রড বাঁধা শেষ, ঢালাই শুরুর আগে — এই কয়েক ঘণ্টাই একমাত্র সুযোগ।",
+     "en": "Tying finished, pour not started: those few hours are the only chance."
+    },
+    {
+     "bn": "পরে ছাদের নিচে খসে পড়া অংশে মরিচা ধরা রড দেখা গেলে বুঝবেন কভার কম ছিল।",
+     "en": "Rusted steel showing through a spalled soffit later tells you the cover was short from the start."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "টিআইবির সড়ক খাতের গবেষণা, সংবাদমাধ্যমে প্রকাশিত",
+      "en": "TIB road sector study, as reported in the press"
+     },
+     "status": "verified",
+     "url": "https://en.prothomalo.com/bangladesh/z7xt4wnqbg"
+    }
+   ]
+  },
+  {
+   "id": "m12c3",
+   "title": {
+    "bn": "না করা কাজের বিল",
+    "en": "Billing for work never done"
+   },
+   "body": {
+    "bn": "কেমন দেখায়: সাইটে কাজ থমকে আছে বা শুরুই হয়নি, অথচ শোনা যাচ্ছে কাজ শেষ ও বিল পরিশোধ হয়ে গেছে। লাভ কোথায়: এটা সরাসরি টাকা তুলে নেওয়া — কাগজে অগ্রগতি লিখে দিলেই হলো। সংবাদমাধ্যমে প্রকাশিত অনুসন্ধানে এলজিইডির একাধিক প্যাকেজে মাঠে কোনো অগ্রগতি না থাকলেও কাগজে ৯০–১০০% অগ্রগতি দেখিয়ে বিলের বড় অংশ পরিশোধের তথ্য এসেছে। আপনি যা করবেন: প্রতি মাসে একই জায়গার তারিখ ও অবস্থানসহ ছবি তুলুন। কাগজের অগ্রগতির বিপরীতে আপনার তারিখওয়ালা ছবিই সবচেয়ে শক্ত জবাব।",
+    "en": "What it looks like: the site is stalled or never started, yet word is that the work is complete and paid. Where the gain is: this is cash taken straight out — someone only has to write the progress down. Press investigations have reported LGED packages with no progress on the ground where 90–100% progress was recorded on paper and most of the bill was paid. What you do: photograph the same spot every month with the date and location on it. Against paper progress, your dated photographs are the strongest answer there is."
+   },
+   "watch_for": [
+    {
+     "bn": "একটা ছবি নয় — পুরো দৈর্ঘ্য হেঁটে দুই প্রান্তের ছবি তুলুন।",
+     "en": "Not one photograph: walk the full length and photograph both ends."
+    },
+    {
+     "bn": "বিল পরিশোধের আগে অভিযোগ করলে কাজ হয়; পরে টাকা ফেরানো অনেক কঠিন।",
+     "en": "A complaint before the bill is paid works; recovering money afterwards is far harder."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "এলজিইডির তিন প্রকল্পে কাজ ছাড়াই বিল — সংবাদমাধ্যমে প্রকাশিত",
+      "en": "Bills paid without work in three LGED projects, as reported in the press"
+     },
+     "status": "review",
+     "url": "https://www.tbsnews.net/bangladesh/corruption/3-lged-road-and-bridge-projects-tk343cr-gone-no-real-work-1237341"
+    }
+   ]
+  },
+  {
+   "id": "m12c4",
+   "title": {
+    "bn": "টেন্ডারে যোগসাজশ",
+    "en": "Collusion in tendering"
+   },
+   "body": {
+    "bn": "কেমন দেখায়: একই এলাকায় ঘুরেফিরে হাতেগোনা কয়েকটা প্রতিষ্ঠানই কাজ পায়; বড় কাজ ভেঙে ছোট ছোট প্যাকেজ করা হয়। লাভ কোথায়: প্রতিযোগিতা বাদ দিয়ে দর ঠিক করে নেওয়া যায়, আর ছোট প্যাকেজে যাচাই কম। সংবাদমাধ্যমে প্রকাশিত হিসাবে এক অর্থবছরে সড়কের অর্ধেকের বেশি কাজ মাত্র পাঁচটি প্রতিষ্ঠান পেয়েছিল। আপনি যা করবেন: এটা সাইটে ধরা যায় না, কাগজে ধরা যায়। সরকারি ক্রয় বাতায়নে (citizen.bppa.gov.bd) নিজের এলাকার কাজগুলো দেখুন — একই নাম বারবার এলে সেটা সাংবাদিক বা টিআইবিকে জানান।",
+    "en": "What it looks like: the same handful of firms keep winning in one area, and large works get split into small packages. Where the gain is: competition is removed and the price is settled in advance, while small packages attract less scrutiny. Press reporting found that in one financial year five firms took more than half of all road contracts. What you do: this cannot be caught on site, only on paper. Look your area's works up on the citizen procurement portal, and if the same name keeps appearing, take it to a journalist or to TIB."
+   },
+   "watch_for": [
+    {
+     "bn": "সাইনবোর্ডের ঠিকাদারের নাম লিখে রাখুন — কয়েকটা কাজের নাম মিলিয়ে দেখলেই ছবিটা পরিষ্কার হয়।",
+     "en": "Write down the contractor's name off each signboard. A few works compared side by side make the picture clear."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "সড়কের ৫১% কাজ পাঁচটি প্রতিষ্ঠানের — সংবাদমাধ্যমে প্রকাশিত",
+      "en": "Five firms took 51% of road contracts, as reported in the press"
+     },
+     "status": "review",
+     "url": "https://en.prothomalo.com/bangladesh/yn713xbf5h"
+    }
+   ]
+  },
+  {
+   "id": "m12c5",
+   "title": {
+    "bn": "দেরি আর পরে খরচ বাড়ানো",
+    "en": "Delay, then raising the cost"
+   },
+   "body": {
+    "bn": "কেমন দেখায়: মাসের পর মাস সাইট ফাঁকা, যন্ত্রপাতি পড়ে আছে; তারপর শোনা যায় খরচ বেড়ে গেছে। লাভ কোথায়: কম দরে কাজ নিয়ে পরে ভেরিয়েশন বা মূল্যবৃদ্ধির দাবি তুললে কর্তৃপক্ষের হাতে বিকল্প কম থাকে। বিশ্বব্যাংকের মূল্যায়নে বলা হয়েছে, বাংলাদেশে প্রায় ৭০ শতাংশ চুক্তি সময়মতো শেষ হয় না। আপনি যা করবেন: সাইনবোর্ডের শেষ তারিখ লিখে রাখুন, আর তারিখ পার হওয়ার পর নির্দিষ্ট করে লিখুন — 'কাজ ৩ মাস আগে শেষ হওয়ার কথা ছিল, আজও হয়নি'। অস্পষ্ট 'দেরি হচ্ছে' লিখলে ফাইল বন্ধ হয়ে যায়।",
+    "en": "What it looks like: months with an empty site and idle plant, and then word that the cost has gone up. Where the gain is: take the work cheap, then raise variation or escalation claims when the authority has little choice left. The World Bank's assessment found that around 70 per cent of contracts in Bangladesh are not completed on time. What you do: write down the completion date from the signboard, and once it passes put it precisely — 'this was due three months ago and is still not done'. A vague 'it is late' closes a file."
+   },
+   "watch_for": [
+    {
+     "bn": "চুক্তিতে দেরির জন্য জরিমানার বিধান থাকে। জরিমানা আদায় হয়েছে কি না, সেটাও RTI-তে চাওয়া যায়।",
+     "en": "Contracts carry penalties for delay. Whether the penalty was actually charged is itself something you can ask for under RTI."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বিশ্বব্যাংক, বাংলাদেশের সরকারি ক্রয় ব্যবস্থার মূল্যায়ন, ২০২০",
+      "en": "World Bank, Assessment of Bangladesh Public Procurement System, 2020"
+     },
+     "status": "verified",
+     "url": "https://documents1.worldbank.org/curated/en/950811591599744079/pdf/Assessment-of-Bangladesh-Public-Procurement-System.pdf"
+    }
+   ]
+  },
+  {
+   "id": "m12c6",
+   "title": {
+    "bn": "অভিযোগের আসল পথ — যেটা অনেকেই জানে না",
+    "en": "Where a citizen complaint actually goes"
+   },
+   "body": {
+    "bn": "সরকারি ক্রয় আইনে অভিযোগ ও আপিলের যে ব্যবস্থা আছে, সেটা মূলত দরপত্রে অংশ নেওয়া ঠিকাদারদের জন্য — চুক্তি সই হয়ে যাওয়ার পর সেখানে অভিযোগ করা যায় না। অর্থাৎ নির্মাণকাজের মান নিয়ে সাধারণ নাগরিকের অভিযোগের জন্য ঐ পথটা খোলা নেই। যে পথগুলো সত্যিই খোলা: এক, সংশ্লিষ্ট দপ্তরে লিখিত অভিযোগ — একমাত্র এখানেই বিল আটকানোর ক্ষমতা আছে। দুই, তথ্য অধিকার আবেদন করে অনুমিত হিসাব, BoQ ও পরিমাপ বই চাওয়া। তিন, সরকারি ক্রয় বাতায়নে পর্যবেক্ষণ তোলা। চার, আর্থিক অনিয়মের সুনির্দিষ্ট অভিযোগ হলে দুদকের হটলাইন ১০৬ — পরিচয় গোপন রাখা হয়।",
+    "en": "The complaint and appeal machinery in the procurement law is built for bidders, and a complaint cannot be filed there once the contract is signed. So for a citizen complaining about the quality of construction, that route is closed. The routes that are open: first, a written complaint to the department concerned — the only place with the power to hold a bill. Second, an RTI application for the estimate, the BoQ and the measurement book. Third, posting your observation on the citizen procurement portal. Fourth, for a specific allegation of financial irregularity, the Anti-Corruption Commission hotline 106, where the complainant's identity is kept confidential."
+   },
+   "watch_for": [
+    {
+     "bn": "দুদক হটলাইন ১০৬ — কর্মদিবসে, পরিচয় গোপন রাখা হয়।",
+     "en": "ACC hotline 106, on working days, with the caller's identity kept confidential."
+    },
+    {
+     "bn": "একসঙ্গে একাধিক জায়গায় পাঠান। এক অফিসে আটকে গেলেও বাকিগুলোতে রেকর্ড থেকে যায়।",
+     "en": "Send it to several places at once. If one office buries it, the record still exists elsewhere."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বিশ্বব্যাংক, বাংলাদেশের সরকারি ক্রয় ব্যবস্থার মূল্যায়ন, ২০২০",
+      "en": "World Bank, Assessment of Bangladesh Public Procurement System, 2020"
+     },
+     "status": "verified",
+     "url": "https://documents1.worldbank.org/curated/en/950811591599744079/pdf/Assessment-of-Bangladesh-Public-Procurement-System.pdf"
+    },
+    {
+     "source": {
+      "bn": "দুদক হটলাইন ১০৬ — সংবাদমাধ্যমে প্রকাশিত",
+      "en": "ACC hotline 106, as reported in the press"
+     },
+     "status": "verified",
+     "url": "https://www.thedailystar.net/country/bangladesh-anti-corruption-hotline-number-gets-75000-calls-first-week-1443028"
+    }
+   ]
+  }
+ ]
+}

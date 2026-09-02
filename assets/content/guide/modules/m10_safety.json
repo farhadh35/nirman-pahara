@@ -1,0 +1,69 @@
+{
+ "id": "m10_safety",
+ "code": "M10",
+ "track": "both",
+ "icon": "safety",
+ "title": {
+  "bn": "নিরাপত্তা",
+  "en": "Safety"
+ },
+ "summary": {
+  "bn": "যে শ্রমিক কাজ করছেন আর যে পথচারী পাশ দিয়ে যাচ্ছেন — দুজনের জন্যই।",
+  "en": "For the worker on the job and the neighbour walking past."
+ },
+ "cards": [
+  {
+   "id": "m10c1",
+   "title": {
+    "bn": "মাটি কাটার গর্ত",
+    "en": "Excavations"
+   },
+   "body": {
+    "bn": "গভীর গর্তের পাশ ধসে পড়ে প্রতি বছর মানুষ মারা যায়, বিশেষ করে বর্ষায় নরম মাটিতে। গর্তের পাশে ঠেকনা দেওয়া, খোঁড়া মাটি কিনারা থেকে দূরে রাখা, আর ওঠানামার সিঁড়ি বা মই রাখা — এগুলো নিয়ম, দয়া নয়। গর্তের চারপাশে ঘেরা ও রাতে আলো না থাকলে পথচারীও পড়ে যায়।",
+    "en": "The sides of deep excavations collapse and kill people every year, especially in soft monsoon ground. Shoring the sides, keeping spoil back from the edge, and providing a ladder to get in and out are requirements, not favours. Without a barrier and a light at night, passers-by fall in too."
+   },
+   "watch_for": [
+    {
+     "bn": "গর্তের কিনারায় মাটির স্তূপ থাকলে সেটাই ধসের কারণ।",
+     "en": "Spoil heaped at the edge is itself what causes the collapse."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ নিরাপত্তা",
+      "en": "BNBC 2020, Part 7 — construction safety"
+     },
+     "status": "review"
+    }
+   ],
+   "diagram": "excavation"
+  },
+  {
+   "id": "m10c2",
+   "title": {
+    "bn": "ভারা ও উঁচুতে কাজ",
+    "en": "Scaffolding and working at height"
+   },
+   "body": {
+    "bn": "বাঁশের ভারা বাংলাদেশে স্বাভাবিক, কিন্তু বাঁধন আলগা, পাটাতন ফাঁকা আর হাতল না থাকলে সেটা দুর্ঘটনার অপেক্ষা। উঁচুতে কাজ করার সময় হেলমেট ও নিরাপত্তা বেল্ট থাকার কথা। বিদ্যুতের তারের কাছে ভারা বাঁধা হলে সেটা আলাদা বিপদ — ভেজা বাঁশ বিদ্যুৎ টানে।",
+    "en": "Bamboo scaffolding is normal in Bangladesh, but loose lashings, gapped platforms and no handrail make it an accident waiting. Helmets and safety belts are required for work at height. Scaffolding tied near a power line is a separate danger — wet bamboo conducts."
+   },
+   "watch_for": [
+    {
+     "bn": "শ্রমিকের হেলমেট আছে কি না — এক নজরেই বোঝা যায়, আর এটা ছবিতে ধরা পড়ে।",
+     "en": "Whether workers have helmets takes one glance, and it shows in a photograph."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাংলাদেশ শ্রম আইন ২০০৬ ও BNBC 2020 পার্ট ৭",
+      "en": "Bangladesh Labour Act 2006 and BNBC 2020 Part 7"
+     },
+     "status": "review"
+    }
+   ]
+  }
+ ]
+}

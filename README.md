@@ -92,13 +92,13 @@ state is visible, not hidden.
 dart run tool/review_sheet.dart
 ```
 
-**64 technical claims carry citations; 49 are still awaiting sign-off by a
+**69 technical claims carry citations; 51 are still awaiting sign-off by a
 licensed civil engineer.** The app shows an amber badge on every one of them. Do
 not ship to Play until that number is zero for the structural modules.
 
 ## Testing
 
-219 tests: the calculator engine against hand-computed values, the content packs
+298 tests: the calculator engine against hand-computed values, the content packs
 against their own schema and translation completeness, report generation for
 phrasing that never accuses, and end-to-end widget flows in both languages.
 

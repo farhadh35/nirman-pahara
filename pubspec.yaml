@@ -32,6 +32,7 @@ flutter:
   assets:
     - assets/content/
     - assets/content/guide/
+    - assets/content/guide/modules/
     - assets/content/checklists/
     - assets/content/lookups/
     - assets/content/rates/

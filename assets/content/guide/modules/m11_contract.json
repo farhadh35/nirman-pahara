@@ -1,0 +1,99 @@
+{
+ "id": "m11_contract",
+ "code": "M11",
+ "track": "private",
+ "icon": "handshake",
+ "title": {
+  "bn": "ঠিকাদারের সঙ্গে চুক্তি",
+  "en": "Your contract with the builder"
+ },
+ "summary": {
+  "bn": "মুখের কথায় বাড়ি হয় না। কী লিখে রাখবেন, টাকা কীভাবে দেবেন, আর কাজ খারাপ হলে কী করবেন।",
+  "en": "A house does not get built on a spoken promise. What to put in writing, how to release money, and what to do when the work is bad."
+ },
+ "cards": [
+  {
+   "id": "m11c1",
+   "title": {
+    "bn": "লিখিত চুক্তি ছাড়া শুরু করবেন না",
+    "en": "Do not start without it in writing"
+   },
+   "body": {
+    "bn": "রাজমিস্ত্রি বা ঠিকাদারের সঙ্গে বেশির ভাগ ঝগড়া হয় একটাই কারণে — কী কথা হয়েছিল তা কোথাও লেখা নেই। সাদা কাগজে দুই পক্ষের সই থাকলেই সেটা কাজে দেয়; স্ট্যাম্প বা উকিল লাগে না। যা লিখবেন: কাজের বিবরণ ও পরিমাণ, প্রতি বর্গফুট বা মোট দর, কোন মালামাল কে দেবে (আপনি না ঠিকাদার), মালের ব্র্যান্ড ও গ্রেড, শুরু ও শেষের তারিখ, টাকা দেওয়ার ধাপ, আর দেরি হলে কী হবে।",
+    "en": "Almost every fight with a mason or contractor comes from the same place: nothing was written down. A plain sheet of paper signed by both sides is enough — you do not need stamp paper or a lawyer. Put in: the scope and quantity, the rate per square foot or the total, who supplies which materials (you or them), the brand and grade of those materials, start and finish dates, the payment stages, and what happens if it runs late."
+   },
+   "watch_for": [
+    {
+     "bn": "মালামাল কে কিনবে — এই একটা লাইন না থাকলে পরে সবচেয়ে বেশি ঝামেলা হয়।",
+     "en": "Who buys the materials: leaving this line out causes more trouble later than anything else."
+    },
+    {
+     "bn": "দুই কপি করুন, দুজনেই সই করুন, একটা আপনার কাছে রাখুন।",
+     "en": "Two copies, both signed, one stays with you."
+    }
+   ],
+   "citations": []
+  },
+  {
+   "id": "m11c2",
+   "title": {
+    "bn": "টাকা ধাপে ধাপে দিন",
+    "en": "Release the money in stages"
+   },
+   "body": {
+    "bn": "আগাম পুরো টাকা দিয়ে দিলে আপনার হাতে আর কিছু থাকে না। টাকা ভাগ করুন কাজের ধাপ ধরে — ভিত শেষে, ছাদ ঢালাই শেষে, গাঁথুনি শেষে, প্লাস্টার শেষে, ফিনিশিং শেষে। প্রতিটি ধাপের টাকা দেওয়ার আগে ঐ ধাপটা নিজে দেখে নিন। শেষ কিস্তির একটা অংশ (সাধারণত ৫–১০%) কাজ বুঝে নেওয়ার কিছুদিন পর পর্যন্ত ধরে রাখুন — ফাটল বা লিক ধরা পড়লে ওটাই আপনার একমাত্র হাতিয়ার।",
+    "en": "Pay everything up front and you have nothing left to hold. Split the money by stage — foundation done, slab cast, walls up, plaster done, finishing done — and inspect each stage before you release its payment. Hold back part of the last instalment (5–10% is usual) for a while after handover: if a crack or a leak shows up, that retention is the only leverage you have."
+   },
+   "watch_for": [
+    {
+     "bn": "প্রতিটি কিস্তির তারিখ ও অঙ্ক লিখে রাখুন, ঠিকাদারের সই নিন।",
+     "en": "Write down the date and amount of every instalment and get it signed."
+    },
+    {
+     "bn": "মালামাল আপনি কিনলে বিল ও চালান জমিয়ে রাখুন।",
+     "en": "If you buy the materials, keep every bill and delivery slip."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "নির্মাণ চুক্তির প্রচলিত চর্চা — রিটেনশন ও পর্যায়ভিত্তিক পরিশোধ",
+      "en": "Common construction contract practice: retention and stage payments"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m11c3",
+   "title": {
+    "bn": "কাজ খারাপ হলে কী করবেন",
+    "en": "When the work is bad"
+   },
+   "body": {
+    "bn": "প্রথমে সাইটেই ছবি তুলুন, তারিখসহ। তারপর ঠিকাদারকে লিখিতভাবে জানান — খুদে বার্তা বা হোয়াটসঅ্যাপও লিখিত প্রমাণ, তাই মুছবেন না। কী ঠিক করতে হবে আর কত দিনের মধ্যে, সেটা স্পষ্ট লিখুন। না মানলে চুক্তি অনুযায়ী টাকা আটকান, আর স্থানীয়ভাবে মীমাংসার চেষ্টা করুন। তাতেও না হলে দেওয়ানি প্রতিকার আছে — টাকা না থাকলে জেলা লিগ্যাল এইড অফিস বিনা খরচে আইনি সহায়তা দেয়।",
+    "en": "Photograph it on site first, with the date. Then tell the contractor in writing — an SMS or WhatsApp message is written evidence too, so do not delete it. Say plainly what must be fixed and by when. If they refuse, withhold payment as the contract allows and try to settle locally. If that fails the remedy is civil, and if money is the obstacle the District Legal Aid Office provides legal aid free of charge."
+   },
+   "watch_for": [
+    {
+     "bn": "ঝগড়ার আগে ছবি। ছবি ছাড়া পরে কিছুই প্রমাণ করা যায় না।",
+     "en": "Photographs before the argument. Without them nothing can be shown afterwards."
+    },
+    {
+     "bn": "জাতীয় আইনি সহায়তা হেল্পলাইন ১৬৪৩০ — টোল ফ্রি।",
+     "en": "National legal aid helpline 16430 — toll free."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "জাতীয় আইনগত সহায়তা প্রদান সংস্থা (NLASO), হেল্পলাইন ১৬৪৩০",
+      "en": "National Legal Aid Services Organisation (NLASO), helpline 16430"
+     },
+     "url": "https://nlaso.portal.gov.bd",
+     "status": "verified"
+    }
+   ]
+  }
+ ]
+}

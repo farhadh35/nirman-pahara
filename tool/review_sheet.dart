@@ -24,9 +24,11 @@ void main() {
     }
   }
 
-  final guide = jsonDecode(
-      File('assets/content/guide/guide.json').readAsStringSync()) as Map;
-  for (final mod in guide['modules'] as List) {
+  final guideIndex = jsonDecode(
+      File('assets/content/guide/index.json').readAsStringSync()) as Map;
+  for (final f in guideIndex['modules'] as List) {
+    final mod = jsonDecode(
+        File('assets/content/guide/modules/$f').readAsStringSync()) as Map;
     for (final card in mod['cards'] as List) {
       walkCitations('${mod['code']} · ${card['id']}',
           card['citations'] as List<dynamic>?);

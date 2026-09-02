@@ -90,11 +90,38 @@ class Citation {
 }
 
 /// One screen of the guide.
+/// Who a card is written for.
+///
+/// The guide has to serve a homeowner who has never read a drawing and an
+/// assistant engineer who reads them all day, and the way that fails is by
+/// burying the first reader under detailing tables. Tier is a field rather than
+/// a convention so a test can hold the line: nothing above [general] is
+/// reachable from the general reader's path.
+enum CardTier {
+  /// Plain language, one diagram, one number. Every reader.
+  general,
+
+  /// For the person actually having the work done: measurements, stage checks.
+  work,
+
+  /// Detailing, foundation types, bore logs. Kept behind its own entry.
+  reference;
+
+  static CardTier parse(String? s) => switch (s) {
+        'work' => CardTier.work,
+        'reference' => CardTier.reference,
+        _ => CardTier.general,
+      };
+
+  String get key => name;
+}
+
 class GuideCard {
   const GuideCard({
     required this.id,
     required this.title,
     required this.body,
+    this.tier = CardTier.general,
     this.watchFor = const [],
     this.citations = const [],
     this.audioAsset,
@@ -105,6 +132,9 @@ class GuideCard {
   final String id;
   final L10nText title;
   final L10nText body;
+
+  /// Who this card is written for.
+  final CardTier tier;
 
   /// "কী দেখবেন" — the concrete, checkable points.
   final List<L10nText> watchFor;
@@ -118,15 +148,26 @@ class GuideCard {
   /// put there — see the guide diagram library.
   final String? diagram;
 
-  ReviewStatus get status =>
-      citations.any((c) => c.status == ReviewStatus.review)
-          ? ReviewStatus.review
-          : ReviewStatus.verified;
+  /// The weakest status among this card's citations.
+  ///
+  /// A card is only as checked as its least checked number, so one unverified
+  /// citation badges the whole card. A rule of thumb outranks review here: it
+  /// needs the blunter warning.
+  ReviewStatus get status {
+    if (citations.any((c) => c.status == ReviewStatus.ruleOfThumb)) {
+      return ReviewStatus.ruleOfThumb;
+    }
+    if (citations.any((c) => c.status == ReviewStatus.review)) {
+      return ReviewStatus.review;
+    }
+    return ReviewStatus.verified;
+  }
 
   factory GuideCard.fromJson(Map<String, dynamic> j) => GuideCard(
         id: j['id'] as String,
         title: L10nText.fromJson(j['title']),
         body: L10nText.fromJson(j['body']),
+        tier: CardTier.parse(j['tier'] as String?),
         watchFor: L10nText.listFromJson(j['watch_for']),
         citations: (j['citations'] as List?)
                 ?.map((e) => Citation.fromJson(e as Map<String, dynamic>))
@@ -196,6 +237,31 @@ class GuidePack {
             .map((e) => GuideModule.fromJson(e as Map<String, dynamic>))
             .toList(),
       );
+
+  /// Built from an index plus one file per module.
+  ///
+  /// The guide is split across files because a single pack crossed the size at
+  /// which the bundle decodes on a worker isolate, which is invisible on a
+  /// device and hangs a widget test. Per-module files also mean a card can be
+  /// edited without rewriting a hundred kilobytes of JSON.
+  factory GuidePack.assembled({
+    required Map<String, dynamic> index,
+    required List<Map<String, dynamic>> modules,
+  }) =>
+      GuidePack(
+        contentVersion: index['content_version'] as int,
+        updated: index['updated'] as String,
+        modules: modules.map(GuideModule.fromJson).toList(),
+      );
+
+  /// Every card in every module, in reading order.
+  Iterable<GuideCard> get cards =>
+      modules.expand((m) => m.cards);
+
+  List<GuideModule> forTier(CardTier tier) => [
+        for (final m in modules)
+          if (m.cards.any((c) => c.tier == tier)) m,
+      ];
 
   List<GuideModule> forTrack(Track t) =>
       modules.where((m) => m.track.covers(t)).toList();

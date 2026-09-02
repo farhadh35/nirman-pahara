@@ -36,10 +36,25 @@ class ContentRepository {
     await Future.wait([guide(), checklists(), rights(), prices()]);
   }
 
+  /// The guide, assembled from an index plus one file per module.
+  ///
+  /// Split rather than held in one pack because a single file crossed the size
+  /// at which the bundle decodes on a worker isolate — invisible on a device,
+  /// and a hang in a widget test. It also means a module can be edited without
+  /// rewriting the whole guide.
   Future<GuidePack> guide() async {
     if (_guide != null) return _guide!;
-    final raw = await _read('assets/content/guide/guide.json');
-    _guide = GuidePack.fromJson(jsonDecode(raw) as Map<String, dynamic>);
+    final index = jsonDecode(
+      await _read('assets/content/guide/index.json'),
+    ) as Map<String, dynamic>;
+    final files = (index['modules'] as List).cast<String>();
+    final modules = <Map<String, dynamic>>[];
+    for (final f in files) {
+      modules.add(jsonDecode(
+        await _read('assets/content/guide/modules/$f'),
+      ) as Map<String, dynamic>);
+    }
+    _guide = GuidePack.assembled(index: index, modules: modules);
     return _guide!;
   }
 

@@ -1,0 +1,78 @@
+{
+ "id": "m8_rights",
+ "code": "M8",
+ "track": "government",
+ "icon": "rights",
+ "title": {
+  "bn": "আপনার অধিকার",
+  "en": "Your rights"
+ },
+ "summary": {
+  "bn": "সরকারি কাজ দেখা আপনার অধিকার। কী করতে পারেন আর কী পারেন না — দুটোই জেনে রাখুন।",
+  "en": "Watching a public work is your right. Know both halves: what you may do, and what you may not."
+ },
+ "cards": [
+  {
+   "id": "m8c1",
+   "title": {
+    "bn": "সাইটে আপনি কী করতে পারেন",
+    "en": "What you may do at a site"
+   },
+   "body": {
+    "bn": "পারেন: রাস্তা বা প্রকাশ্য জায়গা থেকে কাজ দেখা ও ছবি তোলা, সাইনবোর্ডের তথ্য নেওয়া, তদারককারী কর্মকর্তার নাম-পদবি জানতে চাওয়া, ইউনিয়ন পরিষদে স্কিম তালিকা চাওয়া, ওয়ার্ড সভায় গিয়ে প্রশ্ন করা, RTI আবেদনে কাগজ চাওয়া। পারেন না: কাজ বন্ধ করে দেওয়া, মালামাল আটকানো, নিরাপত্তা ঘেরার ভেতরে ঢুকে পড়া, শ্রমিকদের সঙ্গে হাতাহাতি। কাজ বন্ধ করার ক্ষমতা কর্তৃপক্ষের, আপনার নয় — আপনার ক্ষমতা তথ্য ও অভিযোগে।",
+    "en": "You may: watch and photograph from a road or public space; take down what is on the signboard; ask for the supervising officer's name and designation; ask the Union Parishad for the scheme list; raise it at the Ward Shava; and ask for documents under RTI. You may not: stop the work, seize materials, walk inside a safety barrier, or get into a confrontation with workers. Stopping work is the authority's power, not yours. Yours is information and complaint."
+   },
+   "watch_for": [
+    {
+     "bn": "একা নয়, কয়েকজন মিলে যান। দলবদ্ধ পর্যবেক্ষণ নিরাপদ এবং বেশি কার্যকর।",
+     "en": "Go as a group, not alone. Group monitoring is safer and works better."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "DIMAPPP নাগরিক পর্যবেক্ষণ মডেল — ৯ সদস্যের নাগরিক দল",
+      "en": "DIMAPPP citizen monitoring model — nine-member citizen groups"
+     },
+     "url": "https://bigd.bracu.ac.bd/all-projects/digitizing-implementation-monitoring-and-public-procurement-project/about-2/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": "m8c2",
+   "title": {
+    "bn": "তথ্য অধিকার আইন ২০০৯",
+    "en": "The Right to Information Act 2009"
+   },
+   "body": {
+    "bn": "যেকোনো নাগরিক লিখিত আবেদন করে সরকারি দপ্তরের তথ্য চাইতে পারেন। আবেদন যায় ঐ দপ্তরের দায়িত্বপ্রাপ্ত কর্মকর্তার কাছে। আইন অনুযায়ী ২০ কার্যদিবসের মধ্যে তথ্য দিতে হয়; না দিলে ১০ কার্যদিবসের মধ্যে কারণ জানিয়ে জানাতে হয়। না পেলে বা সিদ্ধান্তে অসন্তুষ্ট হলে ৩০ দিনের মধ্যে আপিল করা যায়, আপিল কর্তৃপক্ষ ১৫ দিনের মধ্যে সিদ্ধান্ত দেয়। ফি নেওয়া যায় শুধু প্রকৃত খরচ পর্যন্ত। নির্মাণকাজে যেটা চাইবেন: অনুমিত হিসাব, BoQ, কার্যাদেশ, পরিমাপ বই ও পরিশোধিত বিলের কপি।",
+    "en": "Any citizen may ask a public office for information in writing. The application goes to that office's Designated Officer. The Act requires the information within 20 working days; a refusal must come with reasons within 10 working days. If nothing comes, or the decision is unsatisfactory, you may appeal within 30 days, and the appellate authority decides within 15 days. Fees are limited to actual cost. For a construction work, ask for: the estimate, the BoQ, the work order, the measurement book and copies of bills paid."
+   },
+   "watch_for": [
+    {
+     "bn": "আবেদনে টেন্ডার আইডি ও কাজের নাম লিখুন — নির্দিষ্ট আবেদন এড়ানো কঠিন।",
+     "en": "Put the tender ID and the work's name in the application. A specific request is harder to dodge."
+    },
+    {
+     "bn": "আবেদনের একটা কপি নিজের কাছে রাখুন, প্রাপ্তি স্বীকার নিন।",
+     "en": "Keep a copy and get an acknowledgement of receipt."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "তথ্য অধিকার আইন ২০০৯",
+      "en": "Right to Information Act 2009"
+     },
+     "clause": {
+      "bn": "ধারা ৯ ও ২৪",
+      "en": "Sections 9 and 24"
+     },
+     "url": "http://bdlaws.minlaw.gov.bd/upload/act/2021-11-17-11-22-38-37.-The-Right-to-Information-Act-2009.pdf",
+     "status": "verified"
+    }
+   ]
+  }
+ ]
+}

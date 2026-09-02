@@ -1,0 +1,100 @@
+{
+ "id": "m9_complain",
+ "code": "M9",
+ "track": "government",
+ "icon": "complaint",
+ "title": {
+  "bn": "অভিযোগ",
+  "en": "Complaining, and making it stick"
+ },
+ "summary": {
+  "bn": "অভিযোগ টিকে থাকে প্রমাণে, রাগে নয়। কী লিখবেন, কোথায় পাঠাবেন, কোন ক্রমে — সেটাই এখানে।",
+  "en": "A complaint survives on evidence, not on anger. What to write, where to send it, and in what order."
+ },
+ "cards": [
+  {
+   "id": "m9c1",
+   "title": {
+    "bn": "অভিযোগে যা যা থাকতে হবে",
+    "en": "What a complaint must contain"
+   },
+   "body": {
+    "bn": "পাঁচটা জিনিস: এক, কোন কাজ — নাম, স্থান, টেন্ডার আইডি। দুই, কী দেখেছেন — তারিখ ও সময়সহ। তিন, নিয়মে কী থাকার কথা ছিল। চার, ছবি বা মাপ। পাঁচ, আপনি কী চান — তদন্ত, সংশোধন, নাকি কাজ থামানো। 'কাজ খারাপ হচ্ছে' লিখলে ফাইল বন্ধ হয়ে যায়; '১২ জুলাই সকাল ৯টায় দেখলাম ছাদের ঢালাইয়ের পর তিন দিন কোনো পানি দেওয়া হয়নি' লিখলে হয় না।",
+    "en": "Five things. One: which work — name, location, tender ID. Two: what you saw, with date and time. Three: what the rule required. Four: a photograph or a measurement. Five: what you are asking for — an inspection, a correction, or a stop. 'The work is bad' closes a file. 'On 12 July at 9 am the slab had gone three days without any watering' does not."
+   },
+   "watch_for": [
+    {
+     "bn": "অভিযোগে ব্যক্তিকে দোষারোপ নয়, ঘটনার বর্ণনা দিন। বর্ণনা প্রমাণযোগ্য, অভিযোগ নয়।",
+     "en": "Describe the event, do not accuse a person. A description can be verified; an accusation invites a fight."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "DIMAPPP নাগরিক অভিযোগ ব্যবস্থাপনা — ৪৪৩টি অভিযোগের ৪০৯টি নিষ্পত্তি",
+      "en": "DIMAPPP grievance management — 409 of 443 citizen complaints resolved"
+     },
+     "url": "https://bigd.bracu.ac.bd/all-projects/digitizing-implementation-monitoring-and-public-procurement-project/about-2/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": "m9c2",
+   "title": {
+    "bn": "কোথায় পাঠাবেন, কোন ক্রমে",
+    "en": "Where to send it, in what order"
+   },
+   "body": {
+    "bn": "নিচ থেকে শুরু করুন। প্রথমে তদারককারী প্রকৌশলী বা ইউনিয়ন পরিষদ। না হলে উপজেলা প্রকৌশলী ও উপজেলা নির্বাহী অফিসার। তারপর নির্বাহী প্রকৌশলী। এরপর অভিযোগ প্রতিকার ব্যবস্থা — grs.gov.bd বা ৩৩৩ নম্বরে ফোন। দুর্নীতির সুনির্দিষ্ট অভিযোগ হলে দুর্নীতি দমন কমিশন। উপরে গিয়ে অভিযোগ করলে সাধারণত নিচেই ফেরত আসে, তাই ক্রম মেনে চলা দ্রুততর।",
+    "en": "Start at the bottom. First the supervising engineer or the Union Parishad. If that goes nowhere, the Upazila Engineer and the UNO. Then the Executive Engineer. Then the Grievance Redress System — grs.gov.bd or the 333 call centre. For a specific allegation of corruption, the Anti-Corruption Commission. A complaint fired at the top usually comes back down, so working up the ladder is actually faster."
+   },
+   "watch_for": [
+    {
+     "bn": "প্রতিটি ধাপে তারিখ ও কার কাছে দিলেন লিখে রাখুন।",
+     "en": "Record the date and the recipient at every step."
+    },
+    {
+     "bn": "৩৩৩ নম্বরে ফোন করলে সামনাসামনি সংঘাত এড়ানো যায়।",
+     "en": "Calling 333 avoids a face-to-face confrontation."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "অভিযোগ প্রতিকার ব্যবস্থা (GRS), মন্ত্রিপরিষদ বিভাগ",
+      "en": "Grievance Redress System (GRS), Cabinet Division"
+     },
+     "url": "https://www.grs.gov.bd/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": "m9c3",
+   "title": {
+    "bn": "নিরাপদে থাকুন",
+    "en": "Stay safe"
+   },
+   "body": {
+    "bn": "স্থানীয়ভাবে প্রভাবশালী কারও কাজ নিয়ে প্রশ্ন তোলা ঝুঁকিমুক্ত নয় — এটা লুকানোর দরকার নেই। কয়েকটা সহজ নিয়ম ঝুঁকি কমায়: একা না গিয়ে দল বেঁধে যান; সাইটে তর্ক না করে লিখিত অভিযোগে যান; ছবি তুলুন দূর থেকে ও প্রকাশ্য জায়গা থেকে; পরিচয় গোপন রাখতে চাইলে ৩৩৩ বা GRS ব্যবহার করুন; স্থানীয় সাংবাদিক বা টিআইবির সচেতন নাগরিক কমিটির সঙ্গে যোগাযোগ রাখুন। নিজের নিরাপত্তা কোনো রিপোর্টের চেয়ে বড়।",
+    "en": "Questioning the work of someone locally powerful is not risk-free, and there is no point pretending otherwise. A few habits reduce the risk: go as a group, not alone; take it to a written complaint rather than an argument on site; photograph from a distance and from public ground; use 333 or GRS if you would rather not be identified; and stay in touch with a local journalist or a TIB citizens' committee. Your safety outranks any report."
+   },
+   "watch_for": [
+    {
+     "bn": "হুমকি পেলে সেটাও আলাদা অভিযোগ — থানায় সাধারণ ডায়েরি করুন।",
+     "en": "A threat is itself a separate complaint — file a General Diary at the police station."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "জাতীয় কল সেন্টার ৩৩৩ ও অভিযোগ প্রতিকার ব্যবস্থা (জিআরএস)",
+      "en": "National call centre 333 and the Grievance Redress System"
+     },
+     "status": "verified"
+    }
+   ]
+  }
+ ]
+}

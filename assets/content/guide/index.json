@@ -1,0 +1,17 @@
+{
+ "content_version": 6,
+ "updated": "2026-09-02",
+ "modules": [
+  "m0_basics.json",
+  "m1_basics.json",
+  "m2_signboard.json",
+  "m3_materials.json",
+  "m4_mixing.json",
+  "m5_rebar.json",
+  "m11_contract.json",
+  "m8_rights.json",
+  "m9_complain.json",
+  "m10_safety.json",
+  "m12_malpractice.json"
+ ]
+}

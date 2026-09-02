@@ -1,0 +1,102 @@
+{
+ "id": "m1_basics",
+ "code": "M1",
+ "track": "government",
+ "icon": "foundation",
+ "title": {
+  "bn": "শুরুর ধারণা",
+  "en": "Where to start"
+ },
+ "summary": {
+  "bn": "কাজটা কে করছে, টাকা কোথা থেকে আসছে, আর কাগজে কী কী থাকে — এটুকু জানলেই আপনি আর অন্ধ নন।",
+  "en": "Who is doing the work, where the money comes from, and what the paperwork contains. Knowing this much is the difference between watching and understanding."
+ },
+ "cards": [
+  {
+   "id": "m1c1",
+   "title": {
+    "bn": "সাইটে কে কী",
+    "en": "Who is who on site"
+   },
+   "body": {
+    "bn": "সরকারি কাজে তিন পক্ষ থাকে। এক, কর্তৃপক্ষ — যে দপ্তর কাজটা করাচ্ছে (LGED, সড়ক ও জনপথ, শিক্ষা প্রকৌশল, ইউনিয়ন পরিষদ)। দুই, ঠিকাদার — যে টেন্ডার জিতে কাজটা করছে। তিন, তদারককারী প্রকৌশলী — উপসহকারী প্রকৌশলী (SAE) মাঠে থাকেন, উপজেলা প্রকৌশলী ও নির্বাহী প্রকৌশলী উপরে। সাইটে যাকে দেখছেন তিনি প্রায়ই ঠিকাদারের লোক, প্রকৌশলী নন।",
+    "en": "A public work has three parties. First, the procuring agency — the department paying for it (LGED, Roads and Highways, Education Engineering, the Union Parishad). Second, the contractor who won the tender. Third, the supervising engineers — a Sub-Assistant Engineer on the ground, with the Upazila Engineer and Executive Engineer above. The person you see on site is usually the contractor's man, not an engineer."
+   },
+   "watch_for": [
+    {
+     "bn": "কাজ শুরুর আগে জেনে নিন কোন দপ্তরের কাজ — অভিযোগ ঐ দপ্তরেই যাবে।",
+     "en": "Find out which department owns the work before it starts — that is where a complaint has to go."
+    },
+    {
+     "bn": "তদারককারী প্রকৌশলীর নাম ও পদবি সাইনবোর্ডে থাকার কথা।",
+     "en": "The supervising engineer's name and designation should be on the signboard."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "পাবলিক প্রকিউরমেন্ট আইন ২০০৬ ও বিধিমালা ২০০৮",
+      "en": "Public Procurement Act 2006 and Rules 2008"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m1c2",
+   "title": {
+    "bn": "টাকা কোথা থেকে আসে",
+    "en": "Where the money comes from"
+   },
+   "body": {
+    "bn": "গ্রামের ছোট কাজের টাকা সাধারণত চার জায়গা থেকে আসে — বার্ষিক উন্নয়ন কর্মসূচি (ADP), ইউনিয়ন পরিষদের নিজস্ব তহবিল ও LGSP বরাদ্দ, টিআর/কাবিখা-জাতীয় কর্মসূচি, আর প্রকল্পভিত্তিক বরাদ্দ। উৎস আলাদা হলে নিয়মও আলাদা: কাবিখার কাজ প্রকল্প বাস্তবায়ন কমিটি (PIC) করে, আর টেন্ডারের কাজ ঠিকাদার করে।",
+    "en": "Money for small rural works usually comes from four places: the Annual Development Programme (ADP), the Union Parishad's own fund and its LGSP allocation, food-for-work style programmes such as TR and KABIKHA, and project-specific allocations. The source changes the rules: a KABIKHA scheme is carried out by a Project Implementation Committee (PIC), a tendered work by a contractor."
+   },
+   "watch_for": [
+    {
+     "bn": "PIC-এর কাজে ঠিকাদার থাকার কথা নয়। ঠিকাদার দেখলে প্রশ্ন করুন।",
+     "en": "A PIC scheme is not supposed to have a contractor. If you see one, ask why."
+    },
+    {
+     "bn": "ইউনিয়ন পরিষদে বছরের স্কিম তালিকা চাইতে পারেন — এটা প্রকাশ্য তথ্য।",
+     "en": "You can ask the Union Parishad for the year's scheme list — it is public information."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "স্থানীয় সরকার (ইউনিয়ন পরিষদ) আইন ২০০৯",
+      "en": "Local Government (Union Parishad) Act 2009"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m1c3",
+   "title": {
+    "bn": "যে কাগজগুলোর নাম জানা দরকার",
+    "en": "The papers worth knowing by name"
+   },
+   "body": {
+    "bn": "অনুমিত হিসাব (estimate) — কাজটার আনুমানিক খরচ। BoQ (Bill of Quantities) — কোন কাজ কতটুকু, কী দরে। কার্যাদেশ (work order) — ঠিকাদারকে কাজ শুরুর লিখিত নির্দেশ, তাতে শুরু ও শেষের তারিখ থাকে। পরিমাপ বই (measurement book বা MB) — কতটুকু কাজ হলো তার সরকারি খাতা। চলতি বিল (running bill) — অগ্রগতির বিপরীতে যে টাকা দেওয়া হয়। এই পাঁচটার নাম জানলে আপনি সঠিক জিনিসটা চাইতে পারবেন।",
+    "en": "Estimate — the approved cost of the work. BoQ (Bill of Quantities) — how much of each item, at what rate. Work order — the written instruction to the contractor to start, carrying the start and completion dates. Measurement Book (MB) — the official record of how much work was actually done. Running bill — the money paid against progress. Knowing these five names means you can ask for the right document instead of a vague one."
+   },
+   "watch_for": [
+    {
+     "bn": "তথ্য চাইলে নাম ধরে চান: 'অনুমিত হিসাব ও BoQ-এর কপি' — 'কাগজপত্র' চাইলে কিছুই পাবেন না।",
+     "en": "Ask by name: 'a copy of the estimate and the BoQ'. Asking for 'the papers' gets you nothing."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "পাবলিক প্রকিউরমেন্ট বিধিমালা ২০০৮",
+      "en": "Public Procurement Rules 2008"
+     },
+     "status": "review"
+    }
+   ]
+  }
+ ]
+}

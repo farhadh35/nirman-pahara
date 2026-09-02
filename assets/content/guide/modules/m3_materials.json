@@ -1,0 +1,142 @@
+{
+ "id": "m3_materials",
+ "code": "M3",
+ "track": "both",
+ "icon": "materials",
+ "title": {
+  "bn": "মালামাল চেনা",
+  "en": "Knowing the materials"
+ },
+ "summary": {
+  "bn": "সিমেন্ট, রড, ইট, বালি — চারটা জিনিসেই সবচেয়ে বেশি কারচুপি হয়, আর চারটাই খালি চোখে অনেকটা যাচাই করা যায়।",
+  "en": "Cement, rod, brick, sand. These four are where most of the cheating happens, and all four can be partly checked with your own eyes."
+ },
+ "cards": [
+  {
+   "id": "m3c1",
+   "title": {
+    "bn": "সিমেন্ট",
+    "en": "Cement"
+   },
+   "body": {
+    "bn": "ব্যাগে ব্র্যান্ড, ধরন ও উৎপাদনের তারিখ লেখা থাকে। পুরোনো সিমেন্ট শক্তি হারায়, তাই তারিখ দেখা জরুরি। ব্যাগ হাতে চেপে দেখুন — ভেতরে শক্ত দলা মানে ভিজে গেছে, ঐ ব্যাগ ঢালাইয়ে যাওয়ার কথা নয়। ব্যাগ মাটিতে সরাসরি রাখা যাবে না, কাঠের উপরে ও দেয়াল থেকে দূরে রাখতে হয়।",
+    "en": "The bag carries the brand, the type and the manufacturing date. Cement loses strength with age, so the date matters. Squeeze the bag: hard lumps inside mean it has taken damp and that bag should not go into a pour. Bags must be stacked off the ground on timber and away from the wall."
+   },
+   "watch_for": [
+    {
+     "bn": "খালি ব্যাগ গুনুন। এক দিনের ঢালাইয়ে যত ব্যাগ লাগার কথা, তত ব্যাগ খালি হলো কি না — এটা সবচেয়ে সহজ হিসাব।",
+     "en": "Count the empty bags. Whether the number of empties matches the number a day's pour needed is the simplest check there is."
+    },
+    {
+     "bn": "উৎপাদনের তারিখ ও গুদামে রাখার অবস্থা — দুটোরই ছবি তুলুন।",
+     "en": "Photograph both the manufacturing date and how the bags are stored."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "BNBC 2020, পার্ট ৫ — বিল্ডিং মেটেরিয়ালস",
+      "en": "BNBC 2020, Part 5 — Building Materials"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m3c2",
+   "title": {
+    "bn": "রড",
+    "en": "Reinforcement bar"
+   },
+   "body": {
+    "bn": "রডের গায়ে উৎপাদকের চিহ্ন ও গ্রেড রোল করা থাকে — সেটা পড়ুন। পাঁজর (rib) স্পষ্ট ও সমান হওয়া উচিত; ক্ষয়ে গিয়ে মসৃণ হয়ে গেলে কংক্রিটে আঁকড়ে ধরে না। হালকা মরিচা সমস্যা নয়, কিন্তু আঙুলে ঘষলে খোসার মতো উঠে এলে সমস্যা। ওজন মিলিয়ে দেখা যায়: ব্যাসের বর্গকে ১৬২ দিয়ে ভাগ করলে প্রতি মিটারে কেজি পাওয়া যায় — অ্যাপের রড হিসাব এটাই করে।",
+    "en": "The maker's mark and the grade are rolled onto the bar — read them. The ribs should be sharp and even; worn smooth, a bar cannot grip the concrete. Light rust is not a problem, but rust that flakes off under your thumb is. Weight can be checked: diameter squared divided by 162 gives kilograms per metre, which is what the app's rod calculator does."
+   },
+   "watch_for": [
+    {
+     "bn": "কাগজে যে গ্রেড লেখা আর রডের গায়ে যে গ্রেড — দুটো মেলান।",
+     "en": "Match the grade on the paperwork against the grade on the bar."
+    },
+    {
+     "bn": "এক ট্রাকে একাধিক ব্র্যান্ডের রড মেশানো থাকলে ছবি তুলুন।",
+     "en": "If one delivery mixes brands, photograph it."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "BDS ISO 6935-2 (রিইনফোর্সিং স্টিল)",
+      "en": "BDS ISO 6935-2 (reinforcing steel)"
+     },
+     "status": "review"
+    },
+    {
+     "source": {
+      "bn": "BNBC 2020, পার্ট ৫",
+      "en": "BNBC 2020, Part 5"
+     },
+     "status": "review"
+    }
+   ],
+   "diagram": "standard_hook"
+  },
+  {
+   "id": "m3c3",
+   "title": {
+    "bn": "ইট",
+    "en": "Brick"
+   },
+   "body": {
+    "bn": "ভালো ইট সমান লাল, ধার সোজা, কোণ ধারালো। দুটো ইট ঠুকলে ধাতব ঝনঝন শব্দ হয় — ভোঁতা শব্দ মানে কম পোড়া। বুকসমান উঁচু থেকে ফেললে ভালো ইট ভাঙে না। ভাঙা ইটের ভেতরটা দেখুন: ফাঁপা বা কালো কেন্দ্র মানে ঠিকমতো পোড়েনি। মাপ মেপে দেখুন — ছোট ইট মানে একই টাকায় কম গাঁথুনি।",
+    "en": "A good brick is evenly red, straight-edged and sharp-cornered. Strike two together: a metallic ring is good, a dull thud means underburnt. Dropped from chest height a good brick does not break. Look inside a broken one: a hollow or black centre means it was not fired properly. Measure it — an undersized brick means less masonry for the same money."
+   },
+   "watch_for": [
+    {
+     "bn": "একই স্তূপে ভালো ইট সামনে আর খারাপ ইট পেছনে — স্তূপের ভেতর থেকে টেনে দেখুন।",
+     "en": "Good bricks in front, bad ones behind: pull a few from inside the stack."
+    },
+    {
+     "bn": "ঢালাইয়ের খোয়া কোন ইট ভেঙে হচ্ছে, সেটাও দেখুন।",
+     "en": "Look at which bricks are being crushed into khoa for the concrete."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "BNBC 2020, পার্ট ৫ — ইটের শ্রেণি ও শক্তি",
+      "en": "BNBC 2020, Part 5 — brick classes and strength"
+     },
+     "status": "review"
+    }
+   ],
+   "diagram": "brick_bond"
+  },
+  {
+   "id": "m3c4",
+   "title": {
+    "bn": "বালি ও কাদার পরীক্ষা",
+    "en": "Sand, and the silt test"
+   },
+   "body": {
+    "bn": "কাদামাখা বালি সিমেন্টের আঁকড়ে ধরার ক্ষমতা নষ্ট করে। পরীক্ষাটা যে কেউ করতে পারে: একটা স্বচ্ছ কাচের বোতলে এক-তৃতীয়াংশ বালি নিন, পানি ভরে ঝাঁকান, তিন ঘণ্টা রেখে দিন। বালি নিচে বসবে, কাদা উপরে আলাদা স্তর হয়ে জমবে। উপরের স্তর মোটা হলে ঐ বালি ধুয়ে নিতে হবে। বালি মোটা না মিহি সেটাও দেখার বিষয় — ঢালাইয়ে মোটা বালি, প্লাস্টারে মিহি বালি।",
+    "en": "Silty sand stops cement from gripping. Anyone can run the test: fill a clear bottle one-third with sand, top up with water, shake, and leave it three hours. The sand settles; the silt forms a separate layer on top. A thick top layer means the sand needs washing. Coarseness matters too — coarse sand for concrete, fine sand for plaster."
+   },
+   "watch_for": [
+    {
+     "bn": "বোতল পরীক্ষার ছবি তুলে রাখুন — এটা রিপোর্টে দেখানোর মতো প্রমাণ।",
+     "en": "Photograph the bottle. It is evidence you can put in a report."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "BNBC 2020, পার্ট ৫ — সূক্ষ্ম সমষ্টি (fine aggregate)",
+      "en": "BNBC 2020, Part 5 — fine aggregate"
+     },
+     "status": "review"
+    }
+   ],
+   "diagram": "silt_test"
+  }
+ ]
+}
