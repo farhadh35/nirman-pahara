@@ -409,6 +409,7 @@ const kGuideDiagramKeys = <String>[
   'drawing_parts',
   'excavation',
   'bore_log',
+  'plot_faces',
 ];
 
 Widget? guideDiagram(BuildContext context, String? key, {required bool bn}) {
@@ -494,6 +495,11 @@ Widget? guideDiagram(BuildContext context, String? key, {required bool bn}) {
         BoreLogPainter(palette: palette, bn: bn),
         1.15,
         const L10nText('বোর লগ', 'A bore log')
+      ),
+    'plot_faces' => (
+        PlotFacesPainter(palette: palette, bn: bn),
+        1.7,
+        const L10nText('প্লটের সামনে, পাশ ও পিছন', 'Front, side and rear of a plot')
       ),
     _ => (null, 1.0, const L10nText('', '')),
   };

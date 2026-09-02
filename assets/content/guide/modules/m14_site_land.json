@@ -1,0 +1,176 @@
+{
+ "id": "m14_site_land",
+ "code": "M14",
+ "track": "private",
+ "icon": "land",
+ "title": {
+  "bn": "জমি ও সাইট",
+  "en": "The land and the site"
+ },
+ "summary": {
+  "bn": "কেনার আগে যা দেখলে পরে আফসোস কম — মাপ, রাস্তা, ভরাট আর প্রতিবেশী।",
+  "en": "What to look at before buying: the measure, the road, the fill, and the neighbours."
+ },
+ "cards": [
+  {
+   "id": "m14c1",
+   "tier": "general",
+   "title": {
+    "bn": "কাগজে যত, মাটিতে তত কি?",
+    "en": "Is the ground the size the paper says?"
+   },
+   "body": {
+    "bn": "জমি কেনাবেচা হয় কাঠা, বিঘা আর শতাংশে; নকশা আর হিসাব হয় বর্গফুটে। দুটোর মাঝে যাতায়াত না জানলে কম জমি বুঝে নেওয়াটা ধরা পড়ে না। এক কাঠা ৭২০ বর্গফুট, এক বিঘা ২০ কাঠা অর্থাৎ ১৪,৪০০ বর্গফুট, আর এক শতাংশ ৪৩৫.৬ বর্গফুট — এক একরে ১০০ শতাংশ, ৬০.৫ কাঠা। দলিলে যত লেখা আছে, ফিতে দিয়ে মেপে সেটা মিলিয়ে নেওয়া যায়, আর সেটা কেনার আগেই করার জিনিস।",
+    "en": "Land is bought and sold in katha, bigha and shotangsho; drawings and costs are in square feet. Without moving between the two, being handed less land than you paid for does not show. One katha is 720 square feet, one bigha is 20 katha or 14,400 square feet, and one shotangsho is 435.6 square feet — 100 of them to the acre, or 60.5 katha. What the deed says can be checked against a tape, and that is a thing to do before buying, not after."
+   },
+   "watch_for": [
+    {
+     "bn": "অনিয়মিত আকারের প্লট ত্রিভুজে ভাগ করে মাপলে ক্ষেত্রফল বেরিয়ে আসে — অ্যাপের মাপের অংশে হিসাবটা আছে।",
+     "en": "An irregular plot can be split into triangles and added up; the measuring section does the arithmetic."
+    },
+    {
+     "bn": "এক কাঠা = ১৬ ছটাক। পুরোনো দলিলে ছটাক লেখা থাকতে পারে।",
+     "en": "One katha is 16 chatak, which older deeds may be written in."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "একক ও রূপান্তরের সংজ্ঞা — বাংলাদেশের ভূমি পরিমাপ",
+      "en": "Unit definitions — Bangladeshi land measure"
+     },
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": "m14c2",
+   "tier": "general",
+   "title": {
+    "bn": "কেনার আগে প্লটে গিয়ে যা দেখবেন",
+    "en": "What to look at, standing on it"
+   },
+   "body": {
+    "bn": "ছবি আর দালালের কথায় যা বোঝা যায় না, প্লটে এক ঘণ্টা দাঁড়ালে তা বোঝা যায়। রাস্তা থেকে গাড়ি বা ট্রাক ঢুকতে পারে কি না, বর্ষায় পানি কোথায় জমে, পাশের জমি কত উঁচু, বিদ্যুতের লাইন মাথার উপর দিয়ে গেছে কি না, আর আশপাশে কী আছে — কারখানা, নালা, কবরস্থান, উঁচু ভবনের ছায়া। এর কোনোটাই দলিলে লেখা থাকে না।",
+    "en": "What photographs and an agent cannot tell you, an hour standing on the plot can. Whether a truck can get in from the road, where water stands in the monsoon, how much higher the neighbouring land is, whether a power line crosses overhead, and what is around it — a factory, a drain, a graveyard, the shadow of a tall building. None of that is written on a deed."
+   },
+   "watch_for": [
+    {
+     "bn": "বর্ষার পরে একবার দেখে আসুন। শুকনো মৌসুমে নিচু জমি চেনা যায় না।",
+     "en": "Go once after the rains. Low ground does not show in the dry season."
+    },
+    {
+     "bn": "পাশের প্লট আপনার চেয়ে উঁচু হলে তাদের পানি আপনার জমিতে নামবে।",
+     "en": "If the neighbouring plot is higher, their water comes down onto yours."
+    },
+    {
+     "bn": "মাথার উপরের বিদ্যুতের লাইন ভবনের উচ্চতা আর দূরত্ব — দুটোতেই বাধা।",
+     "en": "An overhead line limits both how high and how close you can build."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), চতুর্থ অধ্যায়",
+      "en": "House construction and site supervision (2019), chapter 4"
+     },
+     "status": "review"
+    }
+   ]
+  },
+  {
+   "id": "m14c3",
+   "tier": "work",
+   "title": {
+    "bn": "ভরাট জমি: দামটা পরে আসে",
+    "en": "Filled land: the price arrives later"
+   },
+   "body": {
+    "bn": "পুকুর, খাল বা নিচু জমি ভরাট করে বিক্রি হওয়া প্লট সস্তা হয়, আর সস্তা হওয়ার কারণটাই পরে খরচ হয়ে ফেরত আসে। ভরাট মাটি নিজের ভারে বসতে সময় নেয়, আর তার উপরের ভিত শক্ত স্তরে পৌঁছাতে গভীরে নামাতে হয় — অর্থাৎ ভিতের খরচ বাড়ে। প্রচলিত আন্দাজ হলো ৭ ফুট পর্যন্ত ভরাটে ভিতের খরচ সামলানো যায়, তার বেশি হলে হিসাব আলাদা। মেঝে ঢালাইয়ের আগে ভরাট মাটিকে অন্তত দেড় মাস বসতে দেওয়ার কথাও বলা হয়।",
+    "en": "A plot made by filling a pond, a channel or low ground is cheaper, and the reason it is cheaper comes back later as cost. Filled earth takes time to settle under its own weight, and a foundation on it has to go deeper to reach firm ground — which is money. The common estimate is that up to about 7 feet of fill the foundation cost stays manageable, and past that it is a different calculation. Filled earth is also said to want at least a month and a half to settle before a floor slab is cast on it."
+   },
+   "watch_for": [
+    {
+     "bn": "প্লটে ইট, প্লাস্টিক বা পুরোনো আবর্জনা বেরিয়ে থাকলে সেটা ভরাটের চিহ্ন।",
+     "en": "Brick, plastic or old rubbish showing in the ground is a sign of fill."
+    },
+    {
+     "bn": "দেড় মাস বা ৭ ফুট — দুটোই আন্দাজের হিসাব। আসল উত্তর মাটি পরীক্ষার রিপোর্টে।",
+     "en": "Both the month and a half and the 7 feet are rules of thumb. The real answer is in the soil report."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "অনুমানের শর্টকাট — বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), চতুর্থ অধ্যায়",
+      "en": "Rule of thumb — House construction and site supervision (2019), chapter 4"
+     },
+     "status": "ruleOfThumb"
+    }
+   ]
+  },
+  {
+   "id": "m14c4",
+   "tier": "work",
+   "title": {
+    "bn": "রাস্তা যা ঠিক করে দেয়",
+    "en": "What the road decides for you"
+   },
+   "body": {
+    "bn": "প্লটের কোন দিকটা সামনে, সেটা ঠিক করে রাস্তা — আর সামনে কোনটা, তার উপরেই নির্ভর করে কোন দিকে কতটা ফাঁকা রাখতে হবে, গেট কোথায় বসবে, আর মালামালের ট্রাক কোথায় দাঁড়াবে। পরিকল্পিত আবাসিক এলাকায় ভেতরের রাস্তা সাধারণত ১৫ ফুট চওড়া রাখা হয়। মেঝের লেভেল বিদ্যমান রাস্তার লেভেল থেকে দেড় থেকে দুই ফুট উঁচু ধরা হয়, যাতে বর্ষার পানি ঘরে না ঢোকে।",
+    "en": "Which side of a plot is the front is decided by the road, and what is the front decides how much has to be left open on each side, where the gate goes, and where a delivery truck can stand. Planned residential areas usually keep internal lanes about 15 feet wide. Floor level is taken as one and a half to two feet above the existing road, so monsoon water does not come inside."
+   },
+   "watch_for": [
+    {
+     "bn": "রাস্তা ভবিষ্যতে চওড়া হবে কি না জেনে নিন — চওড়া হলে সামনের জমির কিছু অংশ চলে যায়।",
+     "en": "Ask whether the road is due to be widened: widening takes land off the front."
+    },
+    {
+     "bn": "মেঝে রাস্তার চেয়ে নিচু হলে পরে আর সহজে ওঠানো যায় না।",
+     "en": "A floor set below road level cannot easily be raised afterwards."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), চতুর্থ অধ্যায়",
+      "en": "House construction and site supervision (2019), chapter 4"
+     },
+     "status": "review"
+    }
+   ],
+   "diagram": "plot_faces"
+  },
+  {
+   "id": "m14c5",
+   "tier": "work",
+   "title": {
+    "bn": "কত কাঠায় কী বসে",
+    "en": "What fits on how much land"
+   },
+   "body": {
+    "bn": "কাঠার সংখ্যা শুনে জমিটা কত বড় সেটা মাথায় আসে না; ফুটের মাপ শুনলে আসে। দুই কাঠা মানে প্রায় ২৯ × ৫০ ফুট, আড়াই কাঠা ৩০ × ৬০, তিন কাঠা ৩৬ × ৬০, চার কাঠা ৪৫ × ৬৪, আর পাঁচ কাঠা ৫০ × ৭২ ফুটের কাছাকাছি। এই মাপ থেকে চারদিকের ফাঁকা জায়গা বাদ দিলে যা থাকে, সেটাই আসলে ঘর তোলার জায়গা — আর সেটা শুনতে যত, দেখতে তার চেয়ে ছোট।",
+    "en": "A number of katha does not tell you how big a plot is; feet do. Two katha is roughly 29 × 50 feet, two and a half is 30 × 60, three is 36 × 60, four is 45 × 64, and five is about 50 × 72. Take the open space required on each side off those figures and what is left is the space to actually build in — which is smaller than the number sounds."
+   },
+   "watch_for": [
+    {
+     "bn": "এগুলো নমুনা মাপ। আপনার প্লটের আসল মাপ দলিল আর মাঠের ফিতেই বলবে।",
+     "en": "These are sample dimensions. Your plot's real ones come from the deed and a tape."
+    },
+    {
+     "bn": "কোন দিকে কতটা ফাঁকা রাখতে হবে, সেটা স্থানীয় ইমারত নির্মাণ বিধিমালা ঠিক করে।",
+     "en": "How much has to stay open on each side is set by the local building rules."
+    }
+   ],
+   "citations": [
+    {
+     "source": {
+      "bn": "একক রূপান্তর — ১ কাঠা = ৭২০ বর্গফুট",
+      "en": "Unit conversion — 1 katha = 720 square feet"
+     },
+     "status": "verified"
+    }
+   ]
+  }
+ ]
+}

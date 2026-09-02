@@ -488,3 +488,112 @@ class BoreLogPainter extends CustomPainter {
   bool shouldRepaint(covariant BoreLogPainter old) =>
       old.palette != palette || old.bn != bn;
 }
+
+/// Which side of a plot is the front, and what that decides.
+///
+/// Front, side and rear are not descriptions of shape — they are set by where
+/// the road is, and everything else follows: how much has to stay open on each
+/// edge, where the gate can go, and which way the building faces. A corner plot
+/// has two fronts and loses open space on both, which is a cost people meet
+/// after buying rather than before.
+class PlotFacesPainter extends CustomPainter {
+  PlotFacesPainter({required this.palette, required this.bn});
+
+  final DiagramPalette palette;
+  final bool bn;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (diagramTooSmall(size)) return;
+    final half = size.width / 2;
+    _plot(canvas, Rect.fromLTWH(0, 0, half, size.height), corner: false);
+    _plot(canvas, Rect.fromLTWH(half, 0, half, size.height), corner: true);
+  }
+
+  void _plot(Canvas canvas, Rect cell, {required bool corner}) {
+    paintLabel(
+      canvas,
+      corner
+          ? (bn ? 'কোণের প্লট — দুই দিকেই সামনে' : 'Corner plot: two fronts')
+          : (bn ? 'সাধারণ প্লট' : 'An ordinary plot'),
+      Offset(cell.center.dx, cell.top + 5),
+      colour: palette.ink,
+      size: 10.5,
+      weight: FontWeight.w600,
+      centreOnPoint: true,
+      maxWidth: cell.width,
+    );
+
+    final plot = Rect.fromLTRB(
+      cell.left + cell.width * 0.24,
+      cell.top + cell.height * 0.28,
+      cell.right - cell.width * 0.18,
+      cell.bottom - cell.height * 0.26,
+    );
+
+    // Roads. The one along the bottom makes the front; a corner plot gains a
+    // second along one side.
+    final road = Paint()..color = palette.muted.withValues(alpha: 0.30);
+    canvas.drawRect(
+        Rect.fromLTRB(cell.left, plot.bottom + cell.height * 0.05, cell.right,
+            plot.bottom + cell.height * 0.16),
+        road);
+    if (corner) {
+      canvas.drawRect(
+          Rect.fromLTRB(plot.left - cell.width * 0.14, cell.top + cell.height * 0.20,
+              plot.left - cell.width * 0.04, cell.bottom),
+          road);
+    }
+
+    // The buildable area, once the open space is taken off each edge.
+    final inset = cell.width * 0.055;
+    canvas.drawRect(plot, Paint()..color = palette.concrete.withValues(alpha: 0.4));
+    final build = Rect.fromLTRB(plot.left + (corner ? inset * 1.6 : inset),
+        plot.top + inset, plot.right - inset, plot.bottom - inset * 1.6);
+    canvas.drawRect(build, Paint()..color = palette.accent.withValues(alpha: 0.28));
+    canvas.drawRect(
+        plot,
+        Paint()
+          ..color = palette.muted
+          ..strokeWidth = 1.3
+          ..style = PaintingStyle.stroke);
+
+    final faces = bn
+        ? [('সামনে', 'পাশ', 'পিছন')]
+        : [('front', 'side', 'rear')];
+    final f = faces.first;
+    paintLabel(canvas, f.$1, Offset(plot.center.dx, plot.bottom + 3),
+        colour: palette.accent, size: 9, weight: FontWeight.w600,
+        centreOnPoint: true, maxWidth: plot.width);
+    paintLabel(canvas, f.$3, Offset(plot.center.dx, plot.top - 12),
+        colour: palette.muted, size: 9, centreOnPoint: true, maxWidth: plot.width);
+    paintLabel(canvas, f.$2, Offset(plot.right + 4, plot.center.dy - 6),
+        colour: palette.muted, size: 9, maxWidth: cell.width * 0.16);
+    if (corner) {
+      paintLabel(canvas, f.$1, Offset(plot.left - cell.width * 0.13, plot.center.dy - 6),
+          colour: palette.accent, size: 9, weight: FontWeight.w600,
+          maxWidth: cell.width * 0.12);
+    }
+
+    paintLabel(
+      canvas,
+      corner
+          ? (bn
+              ? 'দুই পাশে রাস্তা মানে দুই পাশেই ফাঁকা রাখতে হয় — ঘরের জায়গা কমে'
+              : 'A road on two sides means open space on two sides, so less to '
+                  'build in')
+          : (bn
+              ? 'রাস্তা যেদিকে, সেটাই সামনে — বাকি সব তার পরে ঠিক হয়'
+              : 'Whichever side the road is on is the front, and the rest '
+                  'follows from it'),
+      Offset(cell.left + 6, cell.bottom - cell.height * 0.10),
+      colour: palette.muted,
+      size: 9,
+      maxWidth: cell.width - 12,
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant PlotFacesPainter old) =>
+      old.palette != palette || old.bn != bn;
+}
