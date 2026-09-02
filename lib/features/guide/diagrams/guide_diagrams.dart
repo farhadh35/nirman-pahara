@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../core/i18n/app_locale.dart';
 import 'diagram_base.dart';
+import 'materials_diagrams.dart';
+import 'structure_diagrams.dart';
 
 /// Column reinforcement: main bars, stirrups with inward hooks, cover blocks,
 /// and the fact that stirrups close up near the ends.
@@ -383,6 +385,22 @@ class RccPourPainter extends CustomPainter {
 }
 
 /// Looks a diagram up by the key a guide card carries.
+/// Every diagram key the app can draw.
+///
+/// Content refers to a diagram by key, so this list and the switch below have to
+/// agree; a test walks the list through [guideDiagram] to make sure they do.
+/// Kept here rather than in the tests so there is one list and not three.
+const kGuideDiagramKeys = <String>[
+  'rod_binding',
+  'curing',
+  'plaster',
+  'rcc_pour',
+  'silt_test',
+  'brick_bond',
+  'cover_block',
+  'footing_section',
+];
+
 Widget? guideDiagram(BuildContext context, String? key, {required bool bn}) {
   if (key == null) return null;
   final palette = DiagramPalette.of(context);
@@ -406,6 +424,26 @@ Widget? guideDiagram(BuildContext context, String? key, {required bool bn}) {
         RccPourPainter(palette: palette, bn: bn),
         1.7,
         const L10nText('ঢালাই', 'The pour')
+      ),
+    'silt_test' => (
+        SiltTestPainter(palette: palette, bn: bn),
+        2.0,
+        const L10nText('বালিতে পলি আছে কি না', 'Testing sand for silt')
+      ),
+    'brick_bond' => (
+        BrickBondPainter(palette: palette, bn: bn),
+        2.0,
+        const L10nText('ইটের বন্ড', 'Brick bonds')
+      ),
+    'cover_block' => (
+        CoverBlockPainter(palette: palette, bn: bn),
+        1.9,
+        const L10nText('কভার ব্লক', 'Cover blocks')
+      ),
+    'footing_section' => (
+        FootingSectionPainter(palette: palette, bn: bn),
+        1.4,
+        const L10nText('ভিত থেকে মেঝে পর্যন্ত', 'From footing to floor')
       ),
     _ => (null, 1.0, const L10nText('', '')),
   };

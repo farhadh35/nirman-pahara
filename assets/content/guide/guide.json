@@ -1,1395 +1,1399 @@
 {
-  "content_version": 6,
-  "updated": "2026-09-02",
-  "modules": [
+ "content_version": 6,
+ "updated": "2026-09-02",
+ "modules": [
+  {
+   "id": "m0_basics",
+   "code": "M0",
+   "track": "both",
+   "icon": "school",
+   "title": {
+    "bn": "নির্মাণের প্রাথমিক জ্ঞান",
+    "en": "Construction basics"
+   },
+   "summary": {
+    "bn": "মাপ, কাঠামোর অংশ, নকশা আর সঙ্গে রাখার জিনিস — এটুকু জানলে বাকি সব বোঝা সহজ।",
+    "en": "Measurements, the parts of a structure, drawings, and what to carry. Everything else follows from this."
+   },
+   "cards": [
     {
-      "id": "m0_basics",
-      "code": "M0",
-      "track": "both",
-      "icon": "school",
-      "title": {
-        "bn": "নির্মাণের প্রাথমিক জ্ঞান",
-        "en": "Construction basics"
+     "id": "m0c1",
+     "title": {
+      "bn": "মাপ — ফুট, ইঞ্চি, ঘনফুট",
+      "en": "Measuring — feet, inches, cft"
+     },
+     "body": {
+      "bn": "বাংলাদেশের সাইটে সব হিসাব হয় ফুট আর ইঞ্চিতে। এক ফুট = ১২ ইঞ্চি। দৈর্ঘ্য × প্রস্থ = ক্ষেত্রফল, লেখা হয় বর্গফুটে। দৈর্ঘ্য × প্রস্থ × পুরুত্ব = আয়তন, লেখা হয় ঘনফুটে। পুরুত্ব ইঞ্চিতে থাকলে আগে ১২ দিয়ে ভাগ করে ফুটে আনুন — এই একটা ভুলেই বেশির ভাগ হিসাব গোলমাল হয়। যেমন ১০ ফুট × ১০ ফুট ছাদ, পুরুত্ব ৫ ইঞ্চি: ১০ × ১০ × (৫ ÷ ১২) = প্রায় ৪২ ঘনফুট ঢালাই।",
+      "en": "Sites in Bangladesh work in feet and inches. One foot is 12 inches. Length times width gives area, written in square feet. Length times width times thickness gives volume, written in cubic feet. If the thickness is in inches, divide by 12 first — forgetting that is where most site arithmetic goes wrong. A 10 ft by 10 ft slab 5 inches thick is 10 × 10 × (5 ÷ 12), about 42 cft of concrete."
+     },
+     "watch_for": [
+      {
+       "bn": "ফিতা সঙ্গে রাখুন। মাপ ছাড়া কোনো প্রশ্নেরই উত্তর নেই।",
+       "en": "Carry a tape. Without a measurement there is no answer to any question."
       },
-      "summary": {
-        "bn": "মাপ, কাঠামোর অংশ, নকশা আর সঙ্গে রাখার জিনিস — এটুকু জানলে বাকি সব বোঝা সহজ।",
-        "en": "Measurements, the parts of a structure, drawings, and what to carry. Everything else follows from this."
-      },
-      "cards": [
-        {
-          "id": "m0c1",
-          "title": {
-            "bn": "মাপ — ফুট, ইঞ্চি, ঘনফুট",
-            "en": "Measuring — feet, inches, cft"
-          },
-          "body": {
-            "bn": "বাংলাদেশের সাইটে সব হিসাব হয় ফুট আর ইঞ্চিতে। এক ফুট = ১২ ইঞ্চি। দৈর্ঘ্য × প্রস্থ = ক্ষেত্রফল, লেখা হয় বর্গফুটে। দৈর্ঘ্য × প্রস্থ × পুরুত্ব = আয়তন, লেখা হয় ঘনফুটে। পুরুত্ব ইঞ্চিতে থাকলে আগে ১২ দিয়ে ভাগ করে ফুটে আনুন — এই একটা ভুলেই বেশির ভাগ হিসাব গোলমাল হয়। যেমন ১০ ফুট × ১০ ফুট ছাদ, পুরুত্ব ৫ ইঞ্চি: ১০ × ১০ × (৫ ÷ ১২) = প্রায় ৪২ ঘনফুট ঢালাই।",
-            "en": "Sites in Bangladesh work in feet and inches. One foot is 12 inches. Length times width gives area, written in square feet. Length times width times thickness gives volume, written in cubic feet. If the thickness is in inches, divide by 12 first — forgetting that is where most site arithmetic goes wrong. A 10 ft by 10 ft slab 5 inches thick is 10 × 10 × (5 ÷ 12), about 42 cft of concrete."
-          },
-          "watch_for": [
-            {
-              "bn": "ফিতা সঙ্গে রাখুন। মাপ ছাড়া কোনো প্রশ্নেরই উত্তর নেই।",
-              "en": "Carry a tape. Without a measurement there is no answer to any question."
-            },
-            {
-              "bn": "এক জায়গায় নয়, তিন-চার জায়গায় মেপে দেখুন — গড়টাই আসল।",
-              "en": "Measure at three or four points, not one. The average is what counts."
-            }
-          ],
-          "citations": []
-        },
-        {
-          "id": "m0c2",
-          "title": {
-            "bn": "কাঠামোর অংশগুলো কী কাজ করে",
-            "en": "What each part of the structure does"
-          },
-          "body": {
-            "bn": "ভিত পুরো ওজন মাটিতে ছড়িয়ে দেয় — অগভীর বা সরু হলে ভবন বসে যায়। কলাম ওজন উপর থেকে নিচে নামায় — কলাম দুর্বল হলে পুরো তলা ভেঙে পড়তে পারে। বিম ছাদের ওজন কলামে পৌঁছায়। স্ল্যাব হলো ছাদ বা মেঝে নিজেই। লিন্টেল দরজা-জানালার উপরের ছোট বিম, না থাকলে উপরের গাঁথুনি ফেটে যায়। ফ্রেম কাঠামোয় দেয়াল সাধারণত ওজন বহন করে না — শুধু ঘর আলাদা করে; তাই দেয়ালের ফাটল আর কলামের ফাটল এক জিনিস নয়।",
-            "en": "The foundation spreads the whole weight into the ground — too shallow or too narrow and the building settles. Columns carry the load down; a weak column can take a whole floor with it. Beams pass the roof weight to the columns. The slab is the roof or floor itself. A lintel is the small beam over a door or window, without which the masonry above it cracks. In a framed building the walls usually carry nothing — they only divide space, which is why a crack in a wall and a crack in a column are not the same thing at all."
-          },
-          "watch_for": [
-            {
-              "bn": "কলামে ফাটল দেখলে সেটা সবচেয়ে জরুরি — বিশেষ করে গোড়ায় বা মাথায়।",
-              "en": "A crack in a column is the urgent one — especially at its top or bottom."
-            },
-            {
-              "bn": "দরজা-জানালার উপরে লিন্টেল আছে কি না দেখুন।",
-              "en": "Check that there is a lintel over every door and window."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৬ — কাঠামোগত নকশা",
-                "en": "BNBC 2020, Part 6 — Structural Design"
-              },
-              "status": "review"
-            }
-          ]
-        },
-        {
-          "id": "m0c3",
-          "title": {
-            "bn": "নকশা পড়ার সবচেয়ে দরকারি অংশটুকু",
-            "en": "The only part of a drawing you need"
-          },
-          "body": {
-            "bn": "পুরো নকশা বোঝার দরকার নেই। তিনটা জিনিস খুঁজুন। এক, মাপ — নকশায় প্রতিটি লাইনের পাশে যে সংখ্যা লেখা, সেটাই হওয়ার কথা। দুই, রডের বিবরণ — যেমন ১২ মিমি @ ৬ ইঞ্চি সি/সি মানে ১২ মিলিমিটার রড, প্রতি ৬ ইঞ্চি পরপর। তিন, স্তরের পুরুত্ব — রাস্তা বা মেঝের ক্ষেত্রে প্রতিটি স্তরের বেধ লেখা থাকে। এই তিনটা নিয়ে ফিতা হাতে দাঁড়ালে কাজের অর্ধেক যাচাই হয়ে যায়।",
-            "en": "You do not need to read the whole drawing. Find three things. First, dimensions: the number written beside each line is what it is supposed to be. Second, the bar callout — 12 mm at 6 inch c/c means 12 millimetre bars, one every 6 inches. Third, layer thicknesses, marked for each course of a road or a floor. Stand there with a tape and those three, and you have checked half the work."
-          },
-          "watch_for": [
-            {
-              "bn": "নকশা দেখতে চাওয়া আপনার অধিকার। না দেখালে সেটাই লিখে রাখুন।",
-              "en": "Asking to see the drawing is your right. If it is refused, write that down."
-            },
-            {
-              "bn": "সি/সি মানে center to center — এক রডের মাঝ থেকে পরের রডের মাঝ।",
-              "en": "c/c means centre to centre — the middle of one bar to the middle of the next."
-            }
-          ],
-          "citations": []
-        },
-        {
-          "id": "m0c4",
-          "title": {
-            "bn": "সঙ্গে যা রাখবেন",
-            "en": "What to carry"
-          },
-          "body": {
-            "bn": "দামি কিছু লাগে না। ফিতা (অন্তত ৫ মিটার) — মাপের জন্য। মোবাইলের টর্চ — গর্ত, ছাদের নিচ, কোনা দেখার জন্য। মোবাইলের ক্যামেরা — তারিখসহ প্রমাণ। একটা স্বচ্ছ কাচের বোতল — বালিতে কাদা আছে কি না দেখার জন্য। খাতা-কলম — কী দেখলেন, কখন দেখলেন। আর সবচেয়ে কাজের জিনিস: সঙ্গে আরেকজন মানুষ।",
-            "en": "None of it is expensive. A tape, at least 5 metres, for measuring. Your phone torch, for pits, undersides and corners. Your phone camera, for dated evidence. A clear glass bottle, to test sand for silt. A notebook and pen, for what you saw and when. And the most useful item of all: another person with you."
-          },
-          "watch_for": [
-            {
-              "bn": "একা যাবেন না। দুজন থাকলে নিরাপদ, আর একজন সাক্ষীও থাকে।",
-              "en": "Do not go alone. Two people is safer, and gives you a witness."
-            }
-          ],
-          "citations": []
-        },
-        {
-          "id": "m0c5",
-          "title": {
-            "bn": "ভবন কীভাবে নষ্ট হয়",
-            "en": "How buildings go wrong"
-          },
-          "body": {
-            "bn": "খারাপ কাজ সঙ্গে সঙ্গে ভাঙে না — সেখানেই বিপদ। তিনটা পথে নষ্ট হয়। এক, বসে যাওয়া: ভিত দুর্বল হলে ভবন ধীরে ধীরে বসে, দেয়ালে তির্যক ফাটল ধরে। দুই, মরিচা: কভার কম বা কংক্রিট ছিদ্রযুক্ত হলে ভেতরের রডে মরিচা ধরে, রড ফুলে কংক্রিট খসে পড়ে — প্রায়ই পাঁচ থেকে দশ বছরে। তিন, পানি: ছাদ বা দেয়াল দিয়ে পানি ঢুকলে ভেতর থেকে সব নষ্ট হয়। তিনটারই মূল কারণ নির্মাণের সময়ের কয়েকটা দিন — তাই তখনই দেখা জরুরি।",
-            "en": "Bad work does not fall down at once, which is exactly what makes it dangerous. It fails three ways. Settlement: a weak foundation lets the building sink unevenly and opens diagonal cracks in the walls. Corrosion: with too little cover or porous concrete, the steel inside rusts, swells, and spalls the concrete off, often within five to ten years. Water: once it gets in through a roof or a wall it destroys everything from the inside. All three are decided during a handful of days of construction, which is why those are the days to be there."
-          },
-          "watch_for": [
-            {
-              "bn": "দেয়ালে তির্যক ফাটল = বসে যাওয়ার লক্ষণ। খাড়া চুল-ফাটল সাধারণত প্লাস্টারের।",
-              "en": "Diagonal cracks in a wall suggest settlement. Fine hairline cracks are usually just the plaster."
-            },
-            {
-              "bn": "ছাদের নিচে বাদামি দাগ বা খসে পড়া অংশ = পানি ঢুকছে, রডে মরিচা ধরছে।",
-              "en": "Brown stains or flaking on a soffit mean water is getting in and the steel is rusting."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৬ — কংক্রিট কভার ও স্থায়িত্ব",
-                "en": "BNBC 2020, Part 6 — cover and durability"
-              },
-              "status": "review"
-            }
-          ]
-        },
-        {
-          "id": "m0c6",
-          "title": {
-            "bn": "কীভাবে মাপবেন — ধাপে ধাপে",
-            "en": "How to measure, step by step"
-          },
-          "body": {
-            "bn": "মাপার আগে তিনটা নিয়ম। এক, ফিতার শূন্য দাগ থেকে শুরু করুন — অনেক ফিতার মাথায় ধাতব হুক থাকে, ওটা শূন্য নয়। দুই, ফিতা টান টান রাখুন, ঝুলে গেলে মাপ বেশি আসে। তিন, এক জায়গায় নয় — অন্তত তিন জায়গায় মেপে গড় নিন।\n\nস্তরের পুরুত্ব: স্তর খোলা থাকতে কিনারায় ফিতা খাড়া করে বসান, উপরের তল থেকে নিচের তল পর্যন্ত পড়ুন। মাটিতে গেঁথে থাকা অংশ ধরবেন না।\n\nরাস্তার প্রস্থ: এক কিনারা থেকে অন্য কিনারা, রাস্তার সঙ্গে সমকোণে। তেরছা করে মাপলে প্রস্থ বেশি আসে।\n\nরডের ফাঁক: জালির উপর ফিতা রেখে এক রডের মাঝ থেকে পরের রডের মাঝ পর্যন্ত পড়ুন — একে বলে সি/সি। কিনারা থেকে কিনারা মাপলে রডের পুরুত্বটুকু কম আসে।\n\nগর্তের গভীরতা: সোজা লাঠি নামিয়ে ভেজা বা মাটি লাগা দাগ পর্যন্ত চিহ্ন দিন, তারপর লাঠিটা মাপুন।\n\nদেয়ালের ক্ষেত্রফল: দৈর্ঘ্য × উচ্চতা, তারপর দরজা-জানালার ক্ষেত্রফল বাদ দিন।",
-            "en": "Three rules before you start. First, measure from the zero mark — the metal hook at the end of many tapes is not zero. Second, keep the tape taut; a sagging tape reads long. Third, never one reading — take at least three and use the average.\n\nLayer thickness: while the layer is still open, stand the tape upright at the edge and read from the top surface to the bottom of that layer. Do not include what is buried in the ground below it.\n\nRoad width: edge to edge, square across the road. Measured on a slant it reads wider than it is.\n\nBar spacing: lay the tape across the mesh and read from the middle of one bar to the middle of the next — that is what c/c means. Edge to edge loses one bar's thickness every time.\n\nPit depth: lower a straight stick, mark it where the wet or soiled line ends, then measure the stick.\n\nWall area: length times height, then subtract the area of the doors and windows."
-          },
-          "watch_for": [
-            {
-              "bn": "মাপার সময় ফিতাসহ ছবি তুলুন — সংখ্যা পরে কেউ মানতে না চাইলে ছবিটাই প্রমাণ।",
-              "en": "Photograph the tape in place as you read it. If the number is disputed later, the photograph is what settles it."
-            },
-            {
-              "bn": "তিনটা মাপ আলাদা হলে তিনটাই লিখে রাখুন — গড় নয়, তিনটাই।",
-              "en": "If the three readings differ, write down all three, not just the average."
-            },
-            {
-              "bn": "যা ঢেকে যাবে, সেটা ঢাকার আগেই মাপুন। পরে আর সুযোগ নেই।",
-              "en": "Measure anything that is going to be covered before it is covered. There is no second chance."
-            }
-          ],
-          "citations": []
-        }
-      ]
+      {
+       "bn": "এক জায়গায় নয়, তিন-চার জায়গায় মেপে দেখুন — গড়টাই আসল।",
+       "en": "Measure at three or four points, not one. The average is what counts."
+      }
+     ],
+     "citations": []
     },
     {
-      "id": "m1_basics",
-      "code": "M1",
-      "track": "government",
-      "icon": "foundation",
-      "title": {
-        "bn": "শুরুর ধারণা",
-        "en": "Where to start"
+     "id": "m0c2",
+     "title": {
+      "bn": "কাঠামোর অংশগুলো কী কাজ করে",
+      "en": "What each part of the structure does"
+     },
+     "body": {
+      "bn": "ভিত পুরো ওজন মাটিতে ছড়িয়ে দেয় — অগভীর বা সরু হলে ভবন বসে যায়। কলাম ওজন উপর থেকে নিচে নামায় — কলাম দুর্বল হলে পুরো তলা ভেঙে পড়তে পারে। বিম ছাদের ওজন কলামে পৌঁছায়। স্ল্যাব হলো ছাদ বা মেঝে নিজেই। লিন্টেল দরজা-জানালার উপরের ছোট বিম, না থাকলে উপরের গাঁথুনি ফেটে যায়। ফ্রেম কাঠামোয় দেয়াল সাধারণত ওজন বহন করে না — শুধু ঘর আলাদা করে; তাই দেয়ালের ফাটল আর কলামের ফাটল এক জিনিস নয়।",
+      "en": "The foundation spreads the whole weight into the ground — too shallow or too narrow and the building settles. Columns carry the load down; a weak column can take a whole floor with it. Beams pass the roof weight to the columns. The slab is the roof or floor itself. A lintel is the small beam over a door or window, without which the masonry above it cracks. In a framed building the walls usually carry nothing — they only divide space, which is why a crack in a wall and a crack in a column are not the same thing at all."
+     },
+     "watch_for": [
+      {
+       "bn": "কলামে ফাটল দেখলে সেটা সবচেয়ে জরুরি — বিশেষ করে গোড়ায় বা মাথায়।",
+       "en": "A crack in a column is the urgent one — especially at its top or bottom."
       },
-      "summary": {
-        "bn": "কাজটা কে করছে, টাকা কোথা থেকে আসছে, আর কাগজে কী কী থাকে — এটুকু জানলেই আপনি আর অন্ধ নন।",
-        "en": "Who is doing the work, where the money comes from, and what the paperwork contains. Knowing this much is the difference between watching and understanding."
-      },
-      "cards": [
-        {
-          "id": "m1c1",
-          "title": {
-            "bn": "সাইটে কে কী",
-            "en": "Who is who on site"
-          },
-          "body": {
-            "bn": "সরকারি কাজে তিন পক্ষ থাকে। এক, কর্তৃপক্ষ — যে দপ্তর কাজটা করাচ্ছে (LGED, সড়ক ও জনপথ, শিক্ষা প্রকৌশল, ইউনিয়ন পরিষদ)। দুই, ঠিকাদার — যে টেন্ডার জিতে কাজটা করছে। তিন, তদারককারী প্রকৌশলী — উপসহকারী প্রকৌশলী (SAE) মাঠে থাকেন, উপজেলা প্রকৌশলী ও নির্বাহী প্রকৌশলী উপরে। সাইটে যাকে দেখছেন তিনি প্রায়ই ঠিকাদারের লোক, প্রকৌশলী নন।",
-            "en": "A public work has three parties. First, the procuring agency — the department paying for it (LGED, Roads and Highways, Education Engineering, the Union Parishad). Second, the contractor who won the tender. Third, the supervising engineers — a Sub-Assistant Engineer on the ground, with the Upazila Engineer and Executive Engineer above. The person you see on site is usually the contractor's man, not an engineer."
-          },
-          "watch_for": [
-            {
-              "bn": "কাজ শুরুর আগে জেনে নিন কোন দপ্তরের কাজ — অভিযোগ ঐ দপ্তরেই যাবে।",
-              "en": "Find out which department owns the work before it starts — that is where a complaint has to go."
-            },
-            {
-              "bn": "তদারককারী প্রকৌশলীর নাম ও পদবি সাইনবোর্ডে থাকার কথা।",
-              "en": "The supervising engineer's name and designation should be on the signboard."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "পাবলিক প্রকিউরমেন্ট আইন ২০০৬ ও বিধিমালা ২০০৮",
-                "en": "Public Procurement Act 2006 and Rules 2008"
-              },
-              "status": "review"
-            }
-          ]
-        },
-        {
-          "id": "m1c2",
-          "title": {
-            "bn": "টাকা কোথা থেকে আসে",
-            "en": "Where the money comes from"
-          },
-          "body": {
-            "bn": "গ্রামের ছোট কাজের টাকা সাধারণত চার জায়গা থেকে আসে — বার্ষিক উন্নয়ন কর্মসূচি (ADP), ইউনিয়ন পরিষদের নিজস্ব তহবিল ও LGSP বরাদ্দ, টিআর/কাবিখা-জাতীয় কর্মসূচি, আর প্রকল্পভিত্তিক বরাদ্দ। উৎস আলাদা হলে নিয়মও আলাদা: কাবিখার কাজ প্রকল্প বাস্তবায়ন কমিটি (PIC) করে, আর টেন্ডারের কাজ ঠিকাদার করে।",
-            "en": "Money for small rural works usually comes from four places: the Annual Development Programme (ADP), the Union Parishad's own fund and its LGSP allocation, food-for-work style programmes such as TR and KABIKHA, and project-specific allocations. The source changes the rules: a KABIKHA scheme is carried out by a Project Implementation Committee (PIC), a tendered work by a contractor."
-          },
-          "watch_for": [
-            {
-              "bn": "PIC-এর কাজে ঠিকাদার থাকার কথা নয়। ঠিকাদার দেখলে প্রশ্ন করুন।",
-              "en": "A PIC scheme is not supposed to have a contractor. If you see one, ask why."
-            },
-            {
-              "bn": "ইউনিয়ন পরিষদে বছরের স্কিম তালিকা চাইতে পারেন — এটা প্রকাশ্য তথ্য।",
-              "en": "You can ask the Union Parishad for the year's scheme list — it is public information."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "স্থানীয় সরকার (ইউনিয়ন পরিষদ) আইন ২০০৯",
-                "en": "Local Government (Union Parishad) Act 2009"
-              },
-              "status": "review"
-            }
-          ]
-        },
-        {
-          "id": "m1c3",
-          "title": {
-            "bn": "যে কাগজগুলোর নাম জানা দরকার",
-            "en": "The papers worth knowing by name"
-          },
-          "body": {
-            "bn": "অনুমিত হিসাব (estimate) — কাজটার আনুমানিক খরচ। BoQ (Bill of Quantities) — কোন কাজ কতটুকু, কী দরে। কার্যাদেশ (work order) — ঠিকাদারকে কাজ শুরুর লিখিত নির্দেশ, তাতে শুরু ও শেষের তারিখ থাকে। পরিমাপ বই (measurement book বা MB) — কতটুকু কাজ হলো তার সরকারি খাতা। চলতি বিল (running bill) — অগ্রগতির বিপরীতে যে টাকা দেওয়া হয়। এই পাঁচটার নাম জানলে আপনি সঠিক জিনিসটা চাইতে পারবেন।",
-            "en": "Estimate — the approved cost of the work. BoQ (Bill of Quantities) — how much of each item, at what rate. Work order — the written instruction to the contractor to start, carrying the start and completion dates. Measurement Book (MB) — the official record of how much work was actually done. Running bill — the money paid against progress. Knowing these five names means you can ask for the right document instead of a vague one."
-          },
-          "watch_for": [
-            {
-              "bn": "তথ্য চাইলে নাম ধরে চান: 'অনুমিত হিসাব ও BoQ-এর কপি' — 'কাগজপত্র' চাইলে কিছুই পাবেন না।",
-              "en": "Ask by name: 'a copy of the estimate and the BoQ'. Asking for 'the papers' gets you nothing."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "পাবলিক প্রকিউরমেন্ট বিধিমালা ২০০৮",
-                "en": "Public Procurement Rules 2008"
-              },
-              "status": "review"
-            }
-          ]
-        }
-      ]
+      {
+       "bn": "দরজা-জানালার উপরে লিন্টেল আছে কি না দেখুন।",
+       "en": "Check that there is a lintel over every door and window."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৬ — কাঠামোগত নকশা",
+        "en": "BNBC 2020, Part 6 — Structural Design"
+       },
+       "status": "review"
+      }
+     ],
+     "diagram": "footing_section"
     },
     {
-      "id": "m2_signboard",
-      "code": "M2",
-      "track": "government",
-      "icon": "signboard",
-      "title": {
-        "bn": "সাইনবোর্ড পড়া",
-        "en": "Reading the signboard"
+     "id": "m0c3",
+     "title": {
+      "bn": "নকশা পড়ার সবচেয়ে দরকারি অংশটুকু",
+      "en": "The only part of a drawing you need"
+     },
+     "body": {
+      "bn": "পুরো নকশা বোঝার দরকার নেই। তিনটা জিনিস খুঁজুন। এক, মাপ — নকশায় প্রতিটি লাইনের পাশে যে সংখ্যা লেখা, সেটাই হওয়ার কথা। দুই, রডের বিবরণ — যেমন ১২ মিমি @ ৬ ইঞ্চি সি/সি মানে ১২ মিলিমিটার রড, প্রতি ৬ ইঞ্চি পরপর। তিন, স্তরের পুরুত্ব — রাস্তা বা মেঝের ক্ষেত্রে প্রতিটি স্তরের বেধ লেখা থাকে। এই তিনটা নিয়ে ফিতা হাতে দাঁড়ালে কাজের অর্ধেক যাচাই হয়ে যায়।",
+      "en": "You do not need to read the whole drawing. Find three things. First, dimensions: the number written beside each line is what it is supposed to be. Second, the bar callout — 12 mm at 6 inch c/c means 12 millimetre bars, one every 6 inches. Third, layer thicknesses, marked for each course of a road or a floor. Stand there with a tape and those three, and you have checked half the work."
+     },
+     "watch_for": [
+      {
+       "bn": "নকশা দেখতে চাওয়া আপনার অধিকার। না দেখালে সেটাই লিখে রাখুন।",
+       "en": "Asking to see the drawing is your right. If it is refused, write that down."
       },
-      "summary": {
-        "bn": "সাইনবোর্ড হলো সরকারি কাজের একমাত্র জিনিস যা সবার জন্য খোলা। ওটা পড়তে শিখলে বাকিটা সহজ।",
-        "en": "The signboard is the one part of a public work that is open to everyone. Learn to read it and the rest follows."
-      },
-      "cards": [
-        {
-          "id": "m2c1",
-          "title": {
-            "bn": "বোর্ডে কী কী থাকার কথা",
-            "en": "What the board should carry"
-          },
-          "body": {
-            "bn": "কাজের নাম ও অবস্থান। প্যাকেজ বা টেন্ডার আইডি। কোন দপ্তরের কাজ। ঠিকাদারি প্রতিষ্ঠানের নাম। চুক্তিমূল্য। কাজ শুরুর তারিখ ও শেষের তারিখ। কাজের পরিমাণ — রাস্তা হলে দৈর্ঘ্য ও প্রস্থ, ভবন হলে আয়তন। এই সাতটার একটাও না থাকলে সেটাই প্রথম প্রশ্ন।",
-            "en": "Name and location of the work. Package or tender ID. The department. The contractor's firm. Contract value. Start date and completion date. Quantity — length and width for a road, floor area for a building. If any one of these seven is missing, that is your first question."
-          },
-          "watch_for": [
-            {
-              "bn": "বোর্ডের ছবি তুলে রাখুন — বোর্ড হারিয়ে যায়, ছবি থাকে।",
-              "en": "Photograph the board. Boards disappear; photographs do not."
-            },
-            {
-              "bn": "শেষের তারিখ পার হয়ে গেলে সেটা নিজেই একটা অভিযোগের কারণ।",
-              "en": "A completion date that has already passed is a complaint in itself."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BPPA/DIMAPPP নাগরিক পর্যবেক্ষণ কার্যক্রম — প্রতিটি সাইটে তথ্যবোর্ড",
-                "en": "BPPA/DIMAPPP citizen monitoring — an information signboard at every site"
-              },
-              "url": "https://citizen.bppa.gov.bd/about-us",
-              "status": "verified"
-            }
-          ]
-        },
-        {
-          "id": "m2c2",
-          "title": {
-            "bn": "টেন্ডার আইডি দিয়ে খোঁজা",
-            "en": "Looking the work up by tender ID"
-          },
-          "body": {
-            "bn": "বোর্ডে লেখা টেন্ডার বা প্যাকেজ আইডি দিয়ে সরকারি ক্রয় বাতায়নে (citizen.bppa.gov.bd) এবং ই-জিপি পোর্টালে (eprocure.gov.bd) কাজটা খুঁজে দেখা যায়। ওখানে দরপত্রের তথ্য ও কার্যাদেশের তথ্য পাওয়া যায়। ইন্টারনেট না থাকলে আইডিটা লিখে রাখুন — উপজেলা প্রকৌশল অফিসে বা RTI আবেদনে ওই আইডিই কাজে লাগবে।",
-            "en": "With the tender or package ID from the board you can look the work up on the citizen procurement portal (citizen.bppa.gov.bd) and on e-GP (eprocure.gov.bd), where tender and award information is published. No internet? Write the ID down anyway — it is what makes an enquiry at the Upazila engineering office, or an RTI application, specific."
-          },
-          "watch_for": [
-            {
-              "bn": "পোর্টালের তথ্য আর বোর্ডের তথ্য না মিললে দুটোরই ছবি রাখুন।",
-              "en": "If the portal and the board disagree, screenshot both."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "সরকারি ক্রয় বাতায়ন, বিপিপিএ",
-                "en": "Citizen procurement portal, BPPA"
-              },
-              "url": "https://citizen.bppa.gov.bd",
-              "status": "verified"
-            },
-            {
-              "source": {
-                "bn": "জাতীয় ই-জিপি পোর্টাল",
-                "en": "National e-GP portal"
-              },
-              "url": "https://www.eprocure.gov.bd",
-              "status": "verified"
-            }
-          ]
-        },
-        {
-          "id": "m2c3",
-          "title": {
-            "bn": "চুক্তিমূল্যকে ভাগ করে দেখুন",
-            "en": "Divide the contract value"
-          },
-          "body": {
-            "bn": "চুক্তিমূল্য একটা বড় সংখ্যা, বোঝা যায় না। ভাগ করলে বোঝা যায়। ৪২ লাখ টাকায় ১,২০০ মিটার রাস্তা মানে প্রতি মিটারে প্রায় ৩,৫০০ টাকা। এই সংখ্যাটা মাথায় রাখা যায়, পাশের ইউনিয়নের কাজের সঙ্গে মেলানো যায়, তফসিল রেটের সঙ্গেও মেলানো যায়। অ্যাপের 'চুক্তি বনাম বাস্তব' হিসাবটা এটাই করে।",
-            "en": "A contract value is a big number and means nothing on its own. Divided, it means something. Tk 42 lakh for 1,200 metres of road is about Tk 3,500 per metre — a number you can carry in your head, compare with the next union's work, and compare with the schedule of rates. That is what the app's unit-cost calculator does."
-          },
-          "watch_for": [
-            {
-              "bn": "পার্থক্য পেলেই অভিযোগ নয়। আগে অনুমিত হিসাব ও BoQ চান — কারণ থাকতেই পারে।",
-              "en": "A gap is not a complaint. Ask for the estimate and BoQ first — there may be a good reason."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "PWD Schedule of Rates 2022 (২য় সংশোধিত)",
-                "en": "PWD Schedule of Rates 2022 (2nd revised)"
-              },
-              "url": "https://ss.pwd.gov.bd/document/sor/Final_SoR_2022%20_2nd_Revised.pdf",
-              "status": "verified"
-            }
-          ]
-        }
-      ]
+      {
+       "bn": "সি/সি মানে center to center — এক রডের মাঝ থেকে পরের রডের মাঝ।",
+       "en": "c/c means centre to centre — the middle of one bar to the middle of the next."
+      }
+     ],
+     "citations": []
     },
     {
-      "id": "m3_materials",
-      "code": "M3",
-      "track": "both",
-      "icon": "materials",
-      "title": {
-        "bn": "মালামাল চেনা",
-        "en": "Knowing the materials"
-      },
-      "summary": {
-        "bn": "সিমেন্ট, রড, ইট, বালি — চারটা জিনিসেই সবচেয়ে বেশি কারচুপি হয়, আর চারটাই খালি চোখে অনেকটা যাচাই করা যায়।",
-        "en": "Cement, rod, brick, sand. These four are where most of the cheating happens, and all four can be partly checked with your own eyes."
-      },
-      "cards": [
-        {
-          "id": "m3c1",
-          "title": {
-            "bn": "সিমেন্ট",
-            "en": "Cement"
-          },
-          "body": {
-            "bn": "ব্যাগে ব্র্যান্ড, ধরন ও উৎপাদনের তারিখ লেখা থাকে। পুরোনো সিমেন্ট শক্তি হারায়, তাই তারিখ দেখা জরুরি। ব্যাগ হাতে চেপে দেখুন — ভেতরে শক্ত দলা মানে ভিজে গেছে, ঐ ব্যাগ ঢালাইয়ে যাওয়ার কথা নয়। ব্যাগ মাটিতে সরাসরি রাখা যাবে না, কাঠের উপরে ও দেয়াল থেকে দূরে রাখতে হয়।",
-            "en": "The bag carries the brand, the type and the manufacturing date. Cement loses strength with age, so the date matters. Squeeze the bag: hard lumps inside mean it has taken damp and that bag should not go into a pour. Bags must be stacked off the ground on timber and away from the wall."
-          },
-          "watch_for": [
-            {
-              "bn": "খালি ব্যাগ গুনুন। এক দিনের ঢালাইয়ে যত ব্যাগ লাগার কথা, তত ব্যাগ খালি হলো কি না — এটা সবচেয়ে সহজ হিসাব।",
-              "en": "Count the empty bags. Whether the number of empties matches the number a day's pour needed is the simplest check there is."
-            },
-            {
-              "bn": "উৎপাদনের তারিখ ও গুদামে রাখার অবস্থা — দুটোরই ছবি তুলুন।",
-              "en": "Photograph both the manufacturing date and how the bags are stored."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৫ — বিল্ডিং মেটেরিয়ালস",
-                "en": "BNBC 2020, Part 5 — Building Materials"
-              },
-              "status": "review"
-            }
-          ]
-        },
-        {
-          "id": "m3c2",
-          "title": {
-            "bn": "রড",
-            "en": "Reinforcement bar"
-          },
-          "body": {
-            "bn": "রডের গায়ে উৎপাদকের চিহ্ন ও গ্রেড রোল করা থাকে — সেটা পড়ুন। পাঁজর (rib) স্পষ্ট ও সমান হওয়া উচিত; ক্ষয়ে গিয়ে মসৃণ হয়ে গেলে কংক্রিটে আঁকড়ে ধরে না। হালকা মরিচা সমস্যা নয়, কিন্তু আঙুলে ঘষলে খোসার মতো উঠে এলে সমস্যা। ওজন মিলিয়ে দেখা যায়: ব্যাসের বর্গকে ১৬২ দিয়ে ভাগ করলে প্রতি মিটারে কেজি পাওয়া যায় — অ্যাপের রড হিসাব এটাই করে।",
-            "en": "The maker's mark and the grade are rolled onto the bar — read them. The ribs should be sharp and even; worn smooth, a bar cannot grip the concrete. Light rust is not a problem, but rust that flakes off under your thumb is. Weight can be checked: diameter squared divided by 162 gives kilograms per metre, which is what the app's rod calculator does."
-          },
-          "watch_for": [
-            {
-              "bn": "কাগজে যে গ্রেড লেখা আর রডের গায়ে যে গ্রেড — দুটো মেলান।",
-              "en": "Match the grade on the paperwork against the grade on the bar."
-            },
-            {
-              "bn": "এক ট্রাকে একাধিক ব্র্যান্ডের রড মেশানো থাকলে ছবি তুলুন।",
-              "en": "If one delivery mixes brands, photograph it."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BDS ISO 6935-2 (রিইনফোর্সিং স্টিল)",
-                "en": "BDS ISO 6935-2 (reinforcing steel)"
-              },
-              "status": "review"
-            },
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৫",
-                "en": "BNBC 2020, Part 5"
-              },
-              "status": "review"
-            }
-          ]
-        },
-        {
-          "id": "m3c3",
-          "title": {
-            "bn": "ইট",
-            "en": "Brick"
-          },
-          "body": {
-            "bn": "ভালো ইট সমান লাল, ধার সোজা, কোণ ধারালো। দুটো ইট ঠুকলে ধাতব ঝনঝন শব্দ হয় — ভোঁতা শব্দ মানে কম পোড়া। বুকসমান উঁচু থেকে ফেললে ভালো ইট ভাঙে না। ভাঙা ইটের ভেতরটা দেখুন: ফাঁপা বা কালো কেন্দ্র মানে ঠিকমতো পোড়েনি। মাপ মেপে দেখুন — ছোট ইট মানে একই টাকায় কম গাঁথুনি।",
-            "en": "A good brick is evenly red, straight-edged and sharp-cornered. Strike two together: a metallic ring is good, a dull thud means underburnt. Dropped from chest height a good brick does not break. Look inside a broken one: a hollow or black centre means it was not fired properly. Measure it — an undersized brick means less masonry for the same money."
-          },
-          "watch_for": [
-            {
-              "bn": "একই স্তূপে ভালো ইট সামনে আর খারাপ ইট পেছনে — স্তূপের ভেতর থেকে টেনে দেখুন।",
-              "en": "Good bricks in front, bad ones behind: pull a few from inside the stack."
-            },
-            {
-              "bn": "ঢালাইয়ের খোয়া কোন ইট ভেঙে হচ্ছে, সেটাও দেখুন।",
-              "en": "Look at which bricks are being crushed into khoa for the concrete."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৫ — ইটের শ্রেণি ও শক্তি",
-                "en": "BNBC 2020, Part 5 — brick classes and strength"
-              },
-              "status": "review"
-            }
-          ]
-        },
-        {
-          "id": "m3c4",
-          "title": {
-            "bn": "বালি ও কাদার পরীক্ষা",
-            "en": "Sand, and the silt test"
-          },
-          "body": {
-            "bn": "কাদামাখা বালি সিমেন্টের আঁকড়ে ধরার ক্ষমতা নষ্ট করে। পরীক্ষাটা যে কেউ করতে পারে: একটা স্বচ্ছ কাচের বোতলে এক-তৃতীয়াংশ বালি নিন, পানি ভরে ঝাঁকান, তিন ঘণ্টা রেখে দিন। বালি নিচে বসবে, কাদা উপরে আলাদা স্তর হয়ে জমবে। উপরের স্তর মোটা হলে ঐ বালি ধুয়ে নিতে হবে। বালি মোটা না মিহি সেটাও দেখার বিষয় — ঢালাইয়ে মোটা বালি, প্লাস্টারে মিহি বালি।",
-            "en": "Silty sand stops cement from gripping. Anyone can run the test: fill a clear bottle one-third with sand, top up with water, shake, and leave it three hours. The sand settles; the silt forms a separate layer on top. A thick top layer means the sand needs washing. Coarseness matters too — coarse sand for concrete, fine sand for plaster."
-          },
-          "watch_for": [
-            {
-              "bn": "বোতল পরীক্ষার ছবি তুলে রাখুন — এটা রিপোর্টে দেখানোর মতো প্রমাণ।",
-              "en": "Photograph the bottle. It is evidence you can put in a report."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৫ — সূক্ষ্ম সমষ্টি (fine aggregate)",
-                "en": "BNBC 2020, Part 5 — fine aggregate"
-              },
-              "status": "review"
-            }
-          ]
-        }
-      ]
+     "id": "m0c4",
+     "title": {
+      "bn": "সঙ্গে যা রাখবেন",
+      "en": "What to carry"
+     },
+     "body": {
+      "bn": "দামি কিছু লাগে না। ফিতা (অন্তত ৫ মিটার) — মাপের জন্য। মোবাইলের টর্চ — গর্ত, ছাদের নিচ, কোনা দেখার জন্য। মোবাইলের ক্যামেরা — তারিখসহ প্রমাণ। একটা স্বচ্ছ কাচের বোতল — বালিতে কাদা আছে কি না দেখার জন্য। খাতা-কলম — কী দেখলেন, কখন দেখলেন। আর সবচেয়ে কাজের জিনিস: সঙ্গে আরেকজন মানুষ।",
+      "en": "None of it is expensive. A tape, at least 5 metres, for measuring. Your phone torch, for pits, undersides and corners. Your phone camera, for dated evidence. A clear glass bottle, to test sand for silt. A notebook and pen, for what you saw and when. And the most useful item of all: another person with you."
+     },
+     "watch_for": [
+      {
+       "bn": "একা যাবেন না। দুজন থাকলে নিরাপদ, আর একজন সাক্ষীও থাকে।",
+       "en": "Do not go alone. Two people is safer, and gives you a witness."
+      }
+     ],
+     "citations": []
     },
     {
-      "id": "m4_mixing",
-      "code": "M4",
-      "track": "both",
-      "icon": "concrete",
-      "title": {
-        "bn": "মিশ্রণ ও ঢালাই",
-        "en": "Mixing and casting"
+     "id": "m0c5",
+     "title": {
+      "bn": "ভবন কীভাবে নষ্ট হয়",
+      "en": "How buildings go wrong"
+     },
+     "body": {
+      "bn": "খারাপ কাজ সঙ্গে সঙ্গে ভাঙে না — সেখানেই বিপদ। তিনটা পথে নষ্ট হয়। এক, বসে যাওয়া: ভিত দুর্বল হলে ভবন ধীরে ধীরে বসে, দেয়ালে তির্যক ফাটল ধরে। দুই, মরিচা: কভার কম বা কংক্রিট ছিদ্রযুক্ত হলে ভেতরের রডে মরিচা ধরে, রড ফুলে কংক্রিট খসে পড়ে — প্রায়ই পাঁচ থেকে দশ বছরে। তিন, পানি: ছাদ বা দেয়াল দিয়ে পানি ঢুকলে ভেতর থেকে সব নষ্ট হয়। তিনটারই মূল কারণ নির্মাণের সময়ের কয়েকটা দিন — তাই তখনই দেখা জরুরি।",
+      "en": "Bad work does not fall down at once, which is exactly what makes it dangerous. It fails three ways. Settlement: a weak foundation lets the building sink unevenly and opens diagonal cracks in the walls. Corrosion: with too little cover or porous concrete, the steel inside rusts, swells, and spalls the concrete off, often within five to ten years. Water: once it gets in through a roof or a wall it destroys everything from the inside. All three are decided during a handful of days of construction, which is why those are the days to be there."
+     },
+     "watch_for": [
+      {
+       "bn": "দেয়ালে তির্যক ফাটল = বসে যাওয়ার লক্ষণ। খাড়া চুল-ফাটল সাধারণত প্লাস্টারের।",
+       "en": "Diagonal cracks in a wall suggest settlement. Fine hairline cracks are usually just the plaster."
       },
-      "summary": {
-        "bn": "বেশি পানি — সবচেয়ে সাধারণ আর সবচেয়ে ক্ষতিকর কারচুপি, অথচ খরচ বাঁচে না। কারণটা জানুন।",
-        "en": "Extra water is the most common and most damaging shortcut on a Bangladeshi site — and it saves nobody money. Here is why it happens anyway."
-      },
-      "cards": [
-        {
-          "id": "m4c1",
-          "title": {
-            "bn": "অনুপাত মানে কী",
-            "en": "What the ratio means"
-          },
-          "body": {
-            "bn": "১:২:৪ মানে এক ভাগ সিমেন্ট, দুই ভাগ বালি, চার ভাগ খোয়া বা পাথর — আয়তনের হিসাবে, ওজনে নয়। মাপার জন্য বাক্স (ফর্মা) ব্যবহার করার কথা; বেলচা দিয়ে গোনা হলে অনুপাত ঠিক থাকে না। মনে রাখবেন, বড় কাঠামোর কাজে BNBC 2020 অনুপাত দিয়ে নয়, শক্তি (f′c) দিয়ে কংক্রিট নির্দিষ্ট করে — অনুপাত শুধু আভাস।",
-            "en": "1:2:4 means one part cement, two parts sand, four parts khoa or stone — by volume, not by weight. Measuring boxes are meant to be used; counted shovelfuls do not hold a ratio. And note that for structural work BNBC 2020 specifies concrete by characteristic strength (f′c), not by ratio — the ratio is only an indication."
-          },
-          "watch_for": [
-            {
-              "bn": "মাপার বাক্স আছে কি না দেখুন। না থাকলে সেটাই প্রথম সমস্যা।",
-              "en": "Check whether measuring boxes exist at all. If not, that is the first problem."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৬ — কংক্রিটের শক্তি নির্ধারণ",
-                "en": "BNBC 2020, Part 6 — specifying concrete strength"
-              },
-              "status": "review"
-            }
-          ]
-        },
-        {
-          "id": "m4c2",
-          "title": {
-            "bn": "পানি কেন সমস্যা",
-            "en": "Why water is the problem"
-          },
-          "body": {
-            "bn": "পানি বেশি দিলে মিশ্রণ পাতলা হয়, ঢালতে সহজ হয়, শ্রমিকের কষ্ট কমে। কিন্তু শুকানোর পর ঐ বাড়তি পানির জায়গায় অসংখ্য ছিদ্র থেকে যায়, আর কংক্রিট দুর্বল হয়। উপরে দেখে বোঝার উপায় নেই — এখানেই বিপদ। তাই ঢালাইয়ের সময় উপস্থিত থাকা জরুরি, পরে এসে লাভ নেই।",
-            "en": "Extra water thins the mix, makes it easier to place, and saves the crew effort. But when it dries, the space that water occupied is left behind as pores, and the concrete is weaker. Nothing on the surface shows it — which is exactly the danger. This is why being present during the pour matters and inspecting afterwards does not."
-          },
-          "watch_for": [
-            {
-              "bn": "মিশ্রণ পানির মতো গড়িয়ে পড়লে পানি বেশি। ভিডিও করে রাখুন।",
-              "en": "If the mix runs like water, there is too much water. Take a video."
-            },
-            {
-              "bn": "ঢালাইয়ের নমুনা (সিলিন্ডার) নেওয়া হচ্ছে কি না জিজ্ঞেস করুন।",
-              "en": "Ask whether test cylinders are being cast from the pour."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
-                "en": "BNBC 2020, Part 7 — Construction Practices"
-              },
-              "status": "review"
-            }
-          ]
-        },
-        {
-          "id": "m4c3",
-          "title": {
-            "bn": "কিউরিং — ঢালাইয়ের পর পানি দেওয়া",
-            "en": "Curing — watering after the pour"
-          },
-          "body": {
-            "bn": "ঢালাই শেষ মানে কাজ শেষ নয়। কংক্রিট শক্তি পায় ধীরে ধীরে, আর তার জন্য ভেজা থাকতে হয়। কয়েক দিন নিয়মিত পানি না দিলে শক্তি অনেকটা কমে যায় এবং ফাটল ধরে। চটের বস্তা ভিজিয়ে ঢেকে রাখা, পানি জমিয়ে রাখা — দুটোই প্রচলিত পদ্ধতি। কিউরিং না করা সবচেয়ে সহজে ধরা পড়ে, কারণ এটা দিনের পর দিন চোখে পড়ে।",
-            "en": "The pour is not the end of the job. Concrete gains strength slowly and needs to stay wet to do it. Skip the watering for a few days and it loses a large part of its strength and cracks. Wet hessian and ponding are the usual methods. Missed curing is the easiest defect for a citizen to catch, because it is visible day after day."
-          },
-          "watch_for": [
-            {
-              "bn": "একই জায়গার ছবি কয়েক দিন ধরে তুলুন — শুকনা ঢালাইয়ের ধারাবাহিক ছবি শক্ত প্রমাণ।",
-              "en": "Photograph the same spot on successive days. A run of dry-slab photographs is strong evidence."
-            },
-            {
-              "bn": "কত দিন পানি দিতে হবে তা সিমেন্টের ধরনের উপর নির্ভর করে — দপ্তরের স্পেসিফিকেশন দেখুন।",
-              "en": "How many days depends on the cement type — check the department's specification."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৭ — কিউরিং",
-                "en": "BNBC 2020, Part 7 — curing"
-              },
-              "status": "review"
-            }
-          ]
-        },
-        {
-          "id": "m4c4",
-          "title": {
-            "bn": "ঢালাই — ধাপে ধাপে কী হওয়ার কথা",
-            "en": "A pour, step by step"
-          },
-          "body": {
-            "bn": "ঢালাইয়ের দিন যা হওয়ার কথা, ক্রম মেনে। এক, ঢালাইয়ের আগে ফর্মা ও শাটারিং পরীক্ষা — ফাঁক থাকলে সিমেন্টের পানি বেরিয়ে যায়, ভেতরে ফাঁপা থেকে যায়। দুই, রড ও কভার ব্লক দেখা — একবার ঢাললে আর দেখা যাবে না। তিন, মাপার বাক্সে মিশ্রণ, বেলচা গুনে নয়। চার, মিক্সার মেশিনে মেশানো, হাতে নয়। পাঁচ, ঢালার পর ভাইব্রেটর দিয়ে চাপা — বাতাস বের করার জন্য, কিন্তু একই জায়গায় বেশিক্ষণ নয়। ছয়, উপরটা সমান করা। সাত, নমুনা (সিলিন্ডার) নেওয়া। আট, সেদিন থেকেই কিউরিং শুরু।\n\nএকটানা ঢালাই জরুরি। মাঝপথে অনেকক্ষণ থেমে গেলে দুই অংশ ঠিকমতো জোড়া লাগে না — একে বলে কোল্ড জয়েন্ট, আর ওখান থেকেই পরে পানি ঢোকে।",
-            "en": "What should happen on pour day, in order. One: check the formwork and shuttering before anything is poured — gaps let the cement paste run out and leave voids inside. Two: look at the steel and the cover blocks; once it is poured you will never see them again. Three: batch with measuring boxes, not counted shovels. Four: mix in the machine, not on the ground. Five: compact with a vibrator after placing — to drive the air out, but never held in one spot. Six: level the top. Seven: cast the test cylinders. Eight: start curing the same day.\n\nA pour should be continuous. A long stop in the middle leaves the two parts imperfectly joined — a cold joint — and that is where water gets in later."
-          },
-          "watch_for": [
-            {
-              "bn": "ঢালাই শুরুর আগে ফর্মার ফাঁক আর কভার ব্লক — এই দুটোই একবার দেখলে অর্ধেক কাজ হয়ে যায়।",
-              "en": "Gaps in the formwork and the cover blocks: check those two before the pour and you have covered half of it."
-            },
-            {
-              "bn": "মাঝপথে দীর্ঘ বিরতি হলে সময় লিখে রাখুন — কোল্ড জয়েন্টের প্রমাণ ওটাই।",
-              "en": "If there is a long break mid-pour, write down the times. That is your evidence of a cold joint."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
-                "en": "BNBC 2020, Part 7 — Construction Practices"
-              },
-              "status": "review"
-            }
-          ],
-          "diagram": "rcc_pour"
-        },
-        {
-          "id": "m4c5",
-          "title": {
-            "bn": "কিউরিং — কীভাবে করতে হয়",
-            "en": "Curing, and how it is actually done"
-          },
-          "body": {
-            "bn": "কিউরিং মানে ঢালাই ভেজা রাখা, যাতে সিমেন্ট ধীরে ধীরে শক্তি পায়। শুকিয়ে গেলে সেই শক্তি আর কখনো ফিরে আসে না — পরে পানি দিলেও না।\n\nছাদ বা মেঝেতে: চারপাশে মাটি বা বালির আলপথ তুলে পানি জমিয়ে রাখা হয় — একে বলে পন্ডিং। পানি যেন সারাক্ষণ থাকে; শুকিয়ে গেলে আবার দিতে হবে।\n\nকলাম, বিম ও দেয়ালে: ভেজা চটের বস্তা জড়িয়ে রাখা হয়, আর দিনে কয়েকবার পানি দেওয়া হয়। বস্তা শুকিয়ে গেলে কিউরিং হচ্ছে না।\n\nকত দিন: সিমেন্টের ধরন আর আবহাওয়ার উপর নির্ভর করে, আর দপ্তরের স্পেসিফিকেশনে লেখা থাকে। গরমে ও বাতাসে পানি দ্রুত শুকায়, তাই তখন বেশি বার দিতে হয়।",
-            "en": "Curing means keeping a pour wet so the cement can go on gaining strength. Strength lost to early drying never comes back, no matter how much water is added afterwards.\n\nOn a slab or floor: a low bund of earth or sand is raised around the edge and water kept standing on it — ponding. The water has to stay there; once it dries it must be topped up.\n\nOn columns, beams and walls: wet hessian is wrapped around and watered several times a day. If the hessian is dry, no curing is happening.\n\nFor how long: it depends on the cement type and the weather, and the department's specification says. Heat and wind dry it faster, so it needs watering more often, not less."
-          },
-          "watch_for": [
-            {
-              "bn": "সকালে গিয়ে দেখুন — রাতভর পানি ছিল কি না তখনই বোঝা যায়।",
-              "en": "Go in the morning. That is when you can tell whether it stayed wet overnight."
-            },
-            {
-              "bn": "শুকনা চটের বস্তা মানে কিউরিং হচ্ছে না — বস্তা থাকলেই হলো না।",
-              "en": "Dry hessian means no curing. The sacking being there is not the point."
-            },
-            {
-              "bn": "পরপর কয়েক দিনের ছবিই সবচেয়ে শক্ত প্রমাণ।",
-              "en": "Photographs on consecutive days are the strongest evidence there is."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
-                "en": "BNBC 2020, Part 7 — Construction Practices"
-              },
-              "status": "review"
-            }
-          ],
-          "diagram": "curing"
-        },
-        {
-          "id": "m4c6",
-          "title": {
-            "bn": "প্লাস্টার — কীভাবে হওয়ার কথা",
-            "en": "Plaster, and how it should be done"
-          },
-          "body": {
-            "bn": "আগে প্রস্তুতি। গাঁথুনির জোড়া থেকে বাড়তি মসলা চেঁছে ফেলা হয়, পৃষ্ঠ পরিষ্কার করা হয়, আর প্লাস্টারের আগের দিন ও ঠিক আগে ভিজিয়ে নেওয়া হয়। শুকনা দেয়ালে প্লাস্টার করলে দেয়াল মসলার পানি টেনে নেয়, আর প্লাস্টার ঝুরঝুরে হয়ে যায়।\n\nসমান পুরুত্বের জন্য দেয়ালে কয়েক জায়গায় ছোট ছোট গাইড (থাই বা পাটি) বসানো হয়, তারপর তার সমান করে প্লাস্টার টানা হয়। গাইড ছাড়া করলে কোথাও পাতলা কোথাও মোটা হয়।\n\nপুরুত্ব: ভেতরের দেয়ালে সাধারণত আধা ইঞ্চি, বাইরের দেয়ালে তিন-চতুর্থাংশ ইঞ্চি, ছাদের নিচে আরও পাতলা — তবে নির্দিষ্ট মাপ স্পেসিফিকেশনে থাকে।\n\nএবং প্লাস্টারেও কিউরিং লাগে। শেষ হওয়ার পর কয়েক দিন পানি না দিলে চুল-ফাটল ধরবেই।",
-            "en": "Preparation first. The joints of the masonry are raked out, the surface cleaned, and the wall wetted the day before and again just before work starts. Plaster on a dry wall loses its water into the wall and goes powdery.\n\nTo keep the thickness even, small guide patches are set on the wall and the plaster is then screeded flush with them. Without guides it ends up thick in places and thin in others.\n\nThickness: an inner wall is usually about half an inch, an outer wall three quarters, a ceiling soffit thinner still — but the specification gives the figure that applies.\n\nAnd plaster needs curing too. Without water for a few days after it is finished, it will craze."
-          },
-          "watch_for": [
-            {
-              "bn": "দেয়াল ভেজানো হয়েছে কি না — প্লাস্টার শুরুর আগে দেখুন।",
-              "en": "Was the wall wetted? Check before the plastering starts."
-            },
-            {
-              "bn": "গাইড আছে কি না দেখুন। না থাকলে পুরুত্ব সমান হবে না, আর বিলে কিন্তু পূর্ণ পুরুত্বের টাকা যাবে।",
-              "en": "Look for the guide patches. Without them the thickness will not be even, though the bill will be for the full thickness."
-            },
-            {
-              "bn": "কিনারায় ফিতা বসিয়ে পুরুত্ব মাপা যায় — দরজার চৌকাঠের পাশে সবচেয়ে সহজ।",
-              "en": "Thickness can be measured at an edge — beside a door frame is easiest."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
-                "en": "BNBC 2020, Part 7 — Construction Practices"
-              },
-              "status": "review"
-            }
-          ],
-          "diagram": "plaster"
-        }
-      ]
+      {
+       "bn": "ছাদের নিচে বাদামি দাগ বা খসে পড়া অংশ = পানি ঢুকছে, রডে মরিচা ধরছে।",
+       "en": "Brown stains or flaking on a soffit mean water is getting in and the steel is rusting."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৬ — কংক্রিট কভার ও স্থায়িত্ব",
+        "en": "BNBC 2020, Part 6 — cover and durability"
+       },
+       "status": "review"
+      }
+     ]
     },
     {
-      "id": "m5_rebar",
-      "code": "M5",
-      "track": "both",
-      "icon": "rebar",
-      "title": {
-        "bn": "রড ও ঢালাইয়ের ভেতর",
-        "en": "Inside the concrete"
+     "id": "m0c6",
+     "title": {
+      "bn": "কীভাবে মাপবেন — ধাপে ধাপে",
+      "en": "How to measure, step by step"
+     },
+     "body": {
+      "bn": "মাপার আগে তিনটা নিয়ম। এক, ফিতার শূন্য দাগ থেকে শুরু করুন — অনেক ফিতার মাথায় ধাতব হুক থাকে, ওটা শূন্য নয়। দুই, ফিতা টান টান রাখুন, ঝুলে গেলে মাপ বেশি আসে। তিন, এক জায়গায় নয় — অন্তত তিন জায়গায় মেপে গড় নিন।\n\nস্তরের পুরুত্ব: স্তর খোলা থাকতে কিনারায় ফিতা খাড়া করে বসান, উপরের তল থেকে নিচের তল পর্যন্ত পড়ুন। মাটিতে গেঁথে থাকা অংশ ধরবেন না।\n\nরাস্তার প্রস্থ: এক কিনারা থেকে অন্য কিনারা, রাস্তার সঙ্গে সমকোণে। তেরছা করে মাপলে প্রস্থ বেশি আসে।\n\nরডের ফাঁক: জালির উপর ফিতা রেখে এক রডের মাঝ থেকে পরের রডের মাঝ পর্যন্ত পড়ুন — একে বলে সি/সি। কিনারা থেকে কিনারা মাপলে রডের পুরুত্বটুকু কম আসে।\n\nগর্তের গভীরতা: সোজা লাঠি নামিয়ে ভেজা বা মাটি লাগা দাগ পর্যন্ত চিহ্ন দিন, তারপর লাঠিটা মাপুন।\n\nদেয়ালের ক্ষেত্রফল: দৈর্ঘ্য × উচ্চতা, তারপর দরজা-জানালার ক্ষেত্রফল বাদ দিন।",
+      "en": "Three rules before you start. First, measure from the zero mark — the metal hook at the end of many tapes is not zero. Second, keep the tape taut; a sagging tape reads long. Third, never one reading — take at least three and use the average.\n\nLayer thickness: while the layer is still open, stand the tape upright at the edge and read from the top surface to the bottom of that layer. Do not include what is buried in the ground below it.\n\nRoad width: edge to edge, square across the road. Measured on a slant it reads wider than it is.\n\nBar spacing: lay the tape across the mesh and read from the middle of one bar to the middle of the next — that is what c/c means. Edge to edge loses one bar's thickness every time.\n\nPit depth: lower a straight stick, mark it where the wet or soiled line ends, then measure the stick.\n\nWall area: length times height, then subtract the area of the doors and windows."
+     },
+     "watch_for": [
+      {
+       "bn": "মাপার সময় ফিতাসহ ছবি তুলুন — সংখ্যা পরে কেউ মানতে না চাইলে ছবিটাই প্রমাণ।",
+       "en": "Photograph the tape in place as you read it. If the number is disputed later, the photograph is what settles it."
       },
-      "summary": {
-        "bn": "গুনতে পারলেই হবে। ডিজাইন বোঝার দরকার নেই — সংখ্যা, দূরত্ব আর ঢাকনা মিলিয়ে দেখুন।",
-        "en": "You only need to count. You do not need to understand the design — check number, spacing and cover against the drawing."
+      {
+       "bn": "তিনটা মাপ আলাদা হলে তিনটাই লিখে রাখুন — গড় নয়, তিনটাই।",
+       "en": "If the three readings differ, write down all three, not just the average."
       },
-      "cards": [
-        {
-          "id": "m5c1",
-          "title": {
-            "bn": "রড গুনুন, দূরত্ব মাপুন",
-            "en": "Count the bars, measure the spacing"
-          },
-          "body": {
-            "bn": "নকশায় লেখা থাকে কয়টা রড আর কত দূরত্বে। ঢালাইয়ের আগে সেটা মেলানো যায় — গুনতে ইঞ্জিনিয়ার লাগে না। ছাদের রডের জালিতে দুই রডের মাঝের ফাঁক ফিতা দিয়ে মাপুন। ফাঁক বেশি মানে রড কম, আর রড কম মানে ঐ টাকা কোথাও গেছে।",
-            "en": "The drawing says how many bars and at what spacing. Before the pour, that can be checked — counting takes no engineer. Put a tape across the mesh and measure the gap between bars. A bigger gap means fewer bars, and fewer bars means the money for them went somewhere."
-          },
-          "watch_for": [
-            {
-              "bn": "রড বাঁধা শেষ, ঢালাই শুরুর আগে — এই সময়টাই একমাত্র সুযোগ।",
-              "en": "After tying, before pouring. That window is the only chance."
-            },
-            {
-              "bn": "নকশা দেখতে চান। না দেখালে সেটাও রিপোর্টে লিখুন।",
-              "en": "Ask to see the drawing. If it is refused, record that too."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৬ — রিইনফোর্সমেন্ট ডিটেইলিং",
-                "en": "BNBC 2020, Part 6 — reinforcement detailing"
-              },
-              "status": "review"
-            }
-          ]
-        },
-        {
-          "id": "m5c2",
-          "title": {
-            "bn": "কভার ব্লক",
-            "en": "Cover blocks"
-          },
-          "body": {
-            "bn": "রড কংক্রিটের ভেতরে থাকতে হয়, একদম কিনারায় নয়। রড আর বাইরের পৃষ্ঠের মাঝের এই দূরত্বকে বলে কভার। কভার কম হলে বাতাস ও পানি রডে পৌঁছে যায়, রডে মরিচা ধরে, কংক্রিট ফুলে ফেটে যায় — কয়েক বছরেই। ঠিক রাখার জন্য রডের নিচে ছোট সিমেন্টের ব্লক দেওয়া হয়। ইটের টুকরা দিয়ে কাজ চালানো হলে সেটা সমস্যা।",
-            "en": "Steel has to sit inside the concrete, not at its edge. The distance from the bar to the outer surface is the cover. Too little and air and water reach the steel, it rusts, and the concrete spalls — within a few years. Small cement blocks under the bars keep the cover right. Broken brick used instead is a defect."
-          },
-          "watch_for": [
-            {
-              "bn": "কভার ব্লক আছে কি না, আর সেগুলো সিমেন্টের না ইটের টুকরা — ছবি তুলুন।",
-              "en": "Check that cover blocks exist and whether they are cement or brick chips. Photograph it."
-            },
-            {
-              "bn": "কত কভার লাগবে তা কোন অংশ ও কী পরিবেশ তার উপর নির্ভর করে — নকশা দেখুন।",
-              "en": "How much cover depends on the member and the exposure — read it off the drawing."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৬ — কংক্রিট কভার",
-                "en": "BNBC 2020, Part 6 — concrete cover"
-              },
-              "status": "review"
-            }
-          ]
-        },
-        {
-          "id": "m5c3",
-          "title": {
-            "bn": "ল্যাপ ও রিং",
-            "en": "Laps and stirrups"
-          },
-          "body": {
-            "bn": "রড লম্বায় কম পড়লে দুটো রড পাশাপাশি রেখে বাঁধা হয় — একে বলে ল্যাপ। ল্যাপ কত লম্বা হবে তা নিয়ম দিয়ে ঠিক করা, চোখের আন্দাজে নয়, আর কিছু জায়গায় ল্যাপ দেওয়াই নিষেধ। কলাম ও বিমে চারপাশে যে রিং (স্টিরাপ) থাকে, সেগুলো ঠেকনার কাছাকাছি ঘন হওয়ার কথা। রিং ফাঁক ফাঁক হলে ভূমিকম্পে সেটাই আগে ভাঙে।",
-            "en": "When a bar is not long enough, two are overlapped and tied — a lap. How long the lap must be is set by rule, not by eye, and in some locations laps are not allowed at all. The rings (stirrups) around a column or beam are meant to be closer together near the supports. Widely spaced rings are what fail first in an earthquake."
-          },
-          "watch_for": [
-            {
-              "bn": "সব ল্যাপ এক জায়গায় জড়ো হয়ে থাকলে প্রশ্ন করুন।",
-              "en": "If all the laps are bunched at the same section, ask about it."
-            },
-            {
-              "bn": "কলামের গোড়ায় ও মাথায় রিং ঘন আছে কি না দেখুন।",
-              "en": "Check that stirrups are closer together at the top and bottom of a column."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৬ — ল্যাপ ও ডেভেলপমেন্ট লেংথ",
-                "en": "BNBC 2020, Part 6 — lap and development length"
-              },
-              "status": "review"
-            }
-          ]
-        },
-        {
-          "id": "m5c4",
-          "title": {
-            "bn": "রড বাঁধা — কেমন দেখতে হওয়ার কথা",
-            "en": "Rod binding, and what it should look like"
-          },
-          "body": {
-            "bn": "রড শুধু রাখলেই হয় না, বাঁধতে হয় — নইলে ঢালাইয়ের সময় নড়ে যায় আর জায়গা বদলে যায়।\n\nজালিতে: প্রতিটি ক্রসিং-এ বা এক ঘর পরপর সরু বাঁধন তার দিয়ে বাঁধা হয়। বাঁধন আলগা হলে হাত দিলেই নড়ে — সেটাই পরীক্ষা।\n\nকলাম ও বিমে: চারপাশের রিং (স্টিরাপ) মূল রডের সঙ্গে বাঁধা থাকে, আর রিংয়ের দুই মাথা ভেতরের দিকে বাঁকানো থাকে — একে বলে হুক। হুক বাইরের দিকে থাকলে বা না থাকলে ভূমিকম্পে রিং খুলে যায়।\n\nরিংয়ের ঘনত্ব: কলামের গোড়ায় ও মাথায়, আর বিমের দুই প্রান্তে রিং ঘন থাকার কথা — মাঝখানে ফাঁক বেশি চলে। এটাই সবচেয়ে সহজে চোখে পড়ে।\n\nকভার ব্লক: রডের নিচে ও পাশে ছোট সিমেন্টের ব্লক, যাতে রড ফর্মা ছুঁয়ে না থাকে। ইটের টুকরা দিয়ে কাজ চালানো চলবে না।",
-            "en": "Steel is not just laid, it is tied — otherwise it shifts during the pour and ends up somewhere else.\n\nIn a mesh: the crossings are tied with binding wire, every one or every alternate one. If the mesh moves when you press it, the tying is loose. That is the test.\n\nIn columns and beams: the rings around the main bars are tied to them, and each ring's two ends are bent inwards — the hook. Hooks turned outwards, or missing, let the ring open in an earthquake.\n\nRing spacing: they should be closer together at the top and bottom of a column and at both ends of a beam, and may be wider in the middle. This is the easiest thing of all to see.\n\nCover blocks: small cement blocks under and beside the steel so no bar touches the formwork. Broken brick used instead will not do."
-          },
-          "watch_for": [
-            {
-              "bn": "জালিতে হাত দিয়ে চাপ দিন — নড়লে বাঁধন আলগা।",
-              "en": "Press the mesh with your hand. If it moves, the tying is loose."
-            },
-            {
-              "bn": "কলামের গোড়ার দিকে রিং ঘন আছে কি না — এক নজরেই বোঝা যায়, আর ছবিতেও ধরা পড়ে।",
-              "en": "Whether the rings tighten up near the foot of a column takes one glance, and it shows in a photograph."
-            },
-            {
-              "bn": "রিংয়ের মাথা ভেতরের দিকে বাঁকানো কি না দেখুন।",
-              "en": "Check that the ring ends are bent inwards."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৬ — রিইনফোর্সমেন্ট ডিটেইলিং",
-                "en": "BNBC 2020, Part 6 — reinforcement detailing"
-              },
-              "status": "review"
-            }
-          ],
-          "diagram": "rod_binding"
-        }
-      ]
-    },
-    {
-      "id": "m11_contract",
-      "code": "M11",
-      "track": "private",
-      "icon": "handshake",
-      "title": {
-        "bn": "ঠিকাদারের সঙ্গে চুক্তি",
-        "en": "Your contract with the builder"
-      },
-      "summary": {
-        "bn": "মুখের কথায় বাড়ি হয় না। কী লিখে রাখবেন, টাকা কীভাবে দেবেন, আর কাজ খারাপ হলে কী করবেন।",
-        "en": "A house does not get built on a spoken promise. What to put in writing, how to release money, and what to do when the work is bad."
-      },
-      "cards": [
-        {
-          "id": "m11c1",
-          "title": {
-            "bn": "লিখিত চুক্তি ছাড়া শুরু করবেন না",
-            "en": "Do not start without it in writing"
-          },
-          "body": {
-            "bn": "রাজমিস্ত্রি বা ঠিকাদারের সঙ্গে বেশির ভাগ ঝগড়া হয় একটাই কারণে — কী কথা হয়েছিল তা কোথাও লেখা নেই। সাদা কাগজে দুই পক্ষের সই থাকলেই সেটা কাজে দেয়; স্ট্যাম্প বা উকিল লাগে না। যা লিখবেন: কাজের বিবরণ ও পরিমাণ, প্রতি বর্গফুট বা মোট দর, কোন মালামাল কে দেবে (আপনি না ঠিকাদার), মালের ব্র্যান্ড ও গ্রেড, শুরু ও শেষের তারিখ, টাকা দেওয়ার ধাপ, আর দেরি হলে কী হবে।",
-            "en": "Almost every fight with a mason or contractor comes from the same place: nothing was written down. A plain sheet of paper signed by both sides is enough — you do not need stamp paper or a lawyer. Put in: the scope and quantity, the rate per square foot or the total, who supplies which materials (you or them), the brand and grade of those materials, start and finish dates, the payment stages, and what happens if it runs late."
-          },
-          "watch_for": [
-            {
-              "bn": "মালামাল কে কিনবে — এই একটা লাইন না থাকলে পরে সবচেয়ে বেশি ঝামেলা হয়।",
-              "en": "Who buys the materials: leaving this line out causes more trouble later than anything else."
-            },
-            {
-              "bn": "দুই কপি করুন, দুজনেই সই করুন, একটা আপনার কাছে রাখুন।",
-              "en": "Two copies, both signed, one stays with you."
-            }
-          ],
-          "citations": []
-        },
-        {
-          "id": "m11c2",
-          "title": {
-            "bn": "টাকা ধাপে ধাপে দিন",
-            "en": "Release the money in stages"
-          },
-          "body": {
-            "bn": "আগাম পুরো টাকা দিয়ে দিলে আপনার হাতে আর কিছু থাকে না। টাকা ভাগ করুন কাজের ধাপ ধরে — ভিত শেষে, ছাদ ঢালাই শেষে, গাঁথুনি শেষে, প্লাস্টার শেষে, ফিনিশিং শেষে। প্রতিটি ধাপের টাকা দেওয়ার আগে ঐ ধাপটা নিজে দেখে নিন। শেষ কিস্তির একটা অংশ (সাধারণত ৫–১০%) কাজ বুঝে নেওয়ার কিছুদিন পর পর্যন্ত ধরে রাখুন — ফাটল বা লিক ধরা পড়লে ওটাই আপনার একমাত্র হাতিয়ার।",
-            "en": "Pay everything up front and you have nothing left to hold. Split the money by stage — foundation done, slab cast, walls up, plaster done, finishing done — and inspect each stage before you release its payment. Hold back part of the last instalment (5–10% is usual) for a while after handover: if a crack or a leak shows up, that retention is the only leverage you have."
-          },
-          "watch_for": [
-            {
-              "bn": "প্রতিটি কিস্তির তারিখ ও অঙ্ক লিখে রাখুন, ঠিকাদারের সই নিন।",
-              "en": "Write down the date and amount of every instalment and get it signed."
-            },
-            {
-              "bn": "মালামাল আপনি কিনলে বিল ও চালান জমিয়ে রাখুন।",
-              "en": "If you buy the materials, keep every bill and delivery slip."
-            }
-          ],
-          "citations": []
-        },
-        {
-          "id": "m11c3",
-          "title": {
-            "bn": "কাজ খারাপ হলে কী করবেন",
-            "en": "When the work is bad"
-          },
-          "body": {
-            "bn": "প্রথমে সাইটেই ছবি তুলুন, তারিখসহ। তারপর ঠিকাদারকে লিখিতভাবে জানান — খুদে বার্তা বা হোয়াটসঅ্যাপও লিখিত প্রমাণ, তাই মুছবেন না। কী ঠিক করতে হবে আর কত দিনের মধ্যে, সেটা স্পষ্ট লিখুন। না মানলে চুক্তি অনুযায়ী টাকা আটকান, আর স্থানীয়ভাবে মীমাংসার চেষ্টা করুন। তাতেও না হলে দেওয়ানি প্রতিকার আছে — টাকা না থাকলে জেলা লিগ্যাল এইড অফিস বিনা খরচে আইনি সহায়তা দেয়।",
-            "en": "Photograph it on site first, with the date. Then tell the contractor in writing — an SMS or WhatsApp message is written evidence too, so do not delete it. Say plainly what must be fixed and by when. If they refuse, withhold payment as the contract allows and try to settle locally. If that fails the remedy is civil, and if money is the obstacle the District Legal Aid Office provides legal aid free of charge."
-          },
-          "watch_for": [
-            {
-              "bn": "ঝগড়ার আগে ছবি। ছবি ছাড়া পরে কিছুই প্রমাণ করা যায় না।",
-              "en": "Photographs before the argument. Without them nothing can be shown afterwards."
-            },
-            {
-              "bn": "জাতীয় আইনি সহায়তা হেল্পলাইন ১৬৪৩০ — টোল ফ্রি।",
-              "en": "National legal aid helpline 16430 — toll free."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "জাতীয় আইনগত সহায়তা প্রদান সংস্থা (NLASO), হেল্পলাইন ১৬৪৩০",
-                "en": "National Legal Aid Services Organisation (NLASO), helpline 16430"
-              },
-              "url": "https://nlaso.portal.gov.bd",
-              "status": "verified"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "m8_rights",
-      "code": "M8",
-      "track": "government",
-      "icon": "rights",
-      "title": {
-        "bn": "আপনার অধিকার",
-        "en": "Your rights"
-      },
-      "summary": {
-        "bn": "সরকারি কাজ দেখা আপনার অধিকার। কী করতে পারেন আর কী পারেন না — দুটোই জেনে রাখুন।",
-        "en": "Watching a public work is your right. Know both halves: what you may do, and what you may not."
-      },
-      "cards": [
-        {
-          "id": "m8c1",
-          "title": {
-            "bn": "সাইটে আপনি কী করতে পারেন",
-            "en": "What you may do at a site"
-          },
-          "body": {
-            "bn": "পারেন: রাস্তা বা প্রকাশ্য জায়গা থেকে কাজ দেখা ও ছবি তোলা, সাইনবোর্ডের তথ্য নেওয়া, তদারককারী কর্মকর্তার নাম-পদবি জানতে চাওয়া, ইউনিয়ন পরিষদে স্কিম তালিকা চাওয়া, ওয়ার্ড সভায় গিয়ে প্রশ্ন করা, RTI আবেদনে কাগজ চাওয়া। পারেন না: কাজ বন্ধ করে দেওয়া, মালামাল আটকানো, নিরাপত্তা ঘেরার ভেতরে ঢুকে পড়া, শ্রমিকদের সঙ্গে হাতাহাতি। কাজ বন্ধ করার ক্ষমতা কর্তৃপক্ষের, আপনার নয় — আপনার ক্ষমতা তথ্য ও অভিযোগে।",
-            "en": "You may: watch and photograph from a road or public space; take down what is on the signboard; ask for the supervising officer's name and designation; ask the Union Parishad for the scheme list; raise it at the Ward Shava; and ask for documents under RTI. You may not: stop the work, seize materials, walk inside a safety barrier, or get into a confrontation with workers. Stopping work is the authority's power, not yours. Yours is information and complaint."
-          },
-          "watch_for": [
-            {
-              "bn": "একা নয়, কয়েকজন মিলে যান। দলবদ্ধ পর্যবেক্ষণ নিরাপদ এবং বেশি কার্যকর।",
-              "en": "Go as a group, not alone. Group monitoring is safer and works better."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "DIMAPPP নাগরিক পর্যবেক্ষণ মডেল — ৯ সদস্যের নাগরিক দল",
-                "en": "DIMAPPP citizen monitoring model — nine-member citizen groups"
-              },
-              "url": "https://bigd.bracu.ac.bd/all-projects/digitizing-implementation-monitoring-and-public-procurement-project/about-2/",
-              "status": "verified"
-            }
-          ]
-        },
-        {
-          "id": "m8c2",
-          "title": {
-            "bn": "তথ্য অধিকার আইন ২০০৯",
-            "en": "The Right to Information Act 2009"
-          },
-          "body": {
-            "bn": "যেকোনো নাগরিক লিখিত আবেদন করে সরকারি দপ্তরের তথ্য চাইতে পারেন। আবেদন যায় ঐ দপ্তরের দায়িত্বপ্রাপ্ত কর্মকর্তার কাছে। আইন অনুযায়ী ২০ কার্যদিবসের মধ্যে তথ্য দিতে হয়; না দিলে ১০ কার্যদিবসের মধ্যে কারণ জানিয়ে জানাতে হয়। না পেলে বা সিদ্ধান্তে অসন্তুষ্ট হলে ৩০ দিনের মধ্যে আপিল করা যায়, আপিল কর্তৃপক্ষ ১৫ দিনের মধ্যে সিদ্ধান্ত দেয়। ফি নেওয়া যায় শুধু প্রকৃত খরচ পর্যন্ত। নির্মাণকাজে যেটা চাইবেন: অনুমিত হিসাব, BoQ, কার্যাদেশ, পরিমাপ বই ও পরিশোধিত বিলের কপি।",
-            "en": "Any citizen may ask a public office for information in writing. The application goes to that office's Designated Officer. The Act requires the information within 20 working days; a refusal must come with reasons within 10 working days. If nothing comes, or the decision is unsatisfactory, you may appeal within 30 days, and the appellate authority decides within 15 days. Fees are limited to actual cost. For a construction work, ask for: the estimate, the BoQ, the work order, the measurement book and copies of bills paid."
-          },
-          "watch_for": [
-            {
-              "bn": "আবেদনে টেন্ডার আইডি ও কাজের নাম লিখুন — নির্দিষ্ট আবেদন এড়ানো কঠিন।",
-              "en": "Put the tender ID and the work's name in the application. A specific request is harder to dodge."
-            },
-            {
-              "bn": "আবেদনের একটা কপি নিজের কাছে রাখুন, প্রাপ্তি স্বীকার নিন।",
-              "en": "Keep a copy and get an acknowledgement of receipt."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "তথ্য অধিকার আইন ২০০৯",
-                "en": "Right to Information Act 2009"
-              },
-              "clause": {
-                "bn": "ধারা ৯ ও ২৪",
-                "en": "Sections 9 and 24"
-              },
-              "url": "http://bdlaws.minlaw.gov.bd/upload/act/2021-11-17-11-22-38-37.-The-Right-to-Information-Act-2009.pdf",
-              "status": "verified"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "m9_complain",
-      "code": "M9",
-      "track": "government",
-      "icon": "complaint",
-      "title": {
-        "bn": "অভিযোগ",
-        "en": "Complaining, and making it stick"
-      },
-      "summary": {
-        "bn": "অভিযোগ টিকে থাকে প্রমাণে, রাগে নয়। কী লিখবেন, কোথায় পাঠাবেন, কোন ক্রমে — সেটাই এখানে।",
-        "en": "A complaint survives on evidence, not on anger. What to write, where to send it, and in what order."
-      },
-      "cards": [
-        {
-          "id": "m9c1",
-          "title": {
-            "bn": "অভিযোগে যা যা থাকতে হবে",
-            "en": "What a complaint must contain"
-          },
-          "body": {
-            "bn": "পাঁচটা জিনিস: এক, কোন কাজ — নাম, স্থান, টেন্ডার আইডি। দুই, কী দেখেছেন — তারিখ ও সময়সহ। তিন, নিয়মে কী থাকার কথা ছিল। চার, ছবি বা মাপ। পাঁচ, আপনি কী চান — তদন্ত, সংশোধন, নাকি কাজ থামানো। 'কাজ খারাপ হচ্ছে' লিখলে ফাইল বন্ধ হয়ে যায়; '১২ জুলাই সকাল ৯টায় দেখলাম ছাদের ঢালাইয়ের পর তিন দিন কোনো পানি দেওয়া হয়নি' লিখলে হয় না।",
-            "en": "Five things. One: which work — name, location, tender ID. Two: what you saw, with date and time. Three: what the rule required. Four: a photograph or a measurement. Five: what you are asking for — an inspection, a correction, or a stop. 'The work is bad' closes a file. 'On 12 July at 9 am the slab had gone three days without any watering' does not."
-          },
-          "watch_for": [
-            {
-              "bn": "অভিযোগে ব্যক্তিকে দোষারোপ নয়, ঘটনার বর্ণনা দিন। বর্ণনা প্রমাণযোগ্য, অভিযোগ নয়।",
-              "en": "Describe the event, do not accuse a person. A description can be verified; an accusation invites a fight."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "DIMAPPP নাগরিক অভিযোগ ব্যবস্থাপনা — ৪৪৩টি অভিযোগের ৪০৯টি নিষ্পত্তি",
-                "en": "DIMAPPP grievance management — 409 of 443 citizen complaints resolved"
-              },
-              "url": "https://bigd.bracu.ac.bd/all-projects/digitizing-implementation-monitoring-and-public-procurement-project/about-2/",
-              "status": "verified"
-            }
-          ]
-        },
-        {
-          "id": "m9c2",
-          "title": {
-            "bn": "কোথায় পাঠাবেন, কোন ক্রমে",
-            "en": "Where to send it, in what order"
-          },
-          "body": {
-            "bn": "নিচ থেকে শুরু করুন। প্রথমে তদারককারী প্রকৌশলী বা ইউনিয়ন পরিষদ। না হলে উপজেলা প্রকৌশলী ও উপজেলা নির্বাহী অফিসার। তারপর নির্বাহী প্রকৌশলী। এরপর অভিযোগ প্রতিকার ব্যবস্থা — grs.gov.bd বা ৩৩৩ নম্বরে ফোন। দুর্নীতির সুনির্দিষ্ট অভিযোগ হলে দুর্নীতি দমন কমিশন। উপরে গিয়ে অভিযোগ করলে সাধারণত নিচেই ফেরত আসে, তাই ক্রম মেনে চলা দ্রুততর।",
-            "en": "Start at the bottom. First the supervising engineer or the Union Parishad. If that goes nowhere, the Upazila Engineer and the UNO. Then the Executive Engineer. Then the Grievance Redress System — grs.gov.bd or the 333 call centre. For a specific allegation of corruption, the Anti-Corruption Commission. A complaint fired at the top usually comes back down, so working up the ladder is actually faster."
-          },
-          "watch_for": [
-            {
-              "bn": "প্রতিটি ধাপে তারিখ ও কার কাছে দিলেন লিখে রাখুন।",
-              "en": "Record the date and the recipient at every step."
-            },
-            {
-              "bn": "৩৩৩ নম্বরে ফোন করলে সামনাসামনি সংঘাত এড়ানো যায়।",
-              "en": "Calling 333 avoids a face-to-face confrontation."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "অভিযোগ প্রতিকার ব্যবস্থা (GRS), মন্ত্রিপরিষদ বিভাগ",
-                "en": "Grievance Redress System (GRS), Cabinet Division"
-              },
-              "url": "https://www.grs.gov.bd/",
-              "status": "verified"
-            }
-          ]
-        },
-        {
-          "id": "m9c3",
-          "title": {
-            "bn": "নিরাপদে থাকুন",
-            "en": "Stay safe"
-          },
-          "body": {
-            "bn": "স্থানীয়ভাবে প্রভাবশালী কারও কাজ নিয়ে প্রশ্ন তোলা ঝুঁকিমুক্ত নয় — এটা লুকানোর দরকার নেই। কয়েকটা সহজ নিয়ম ঝুঁকি কমায়: একা না গিয়ে দল বেঁধে যান; সাইটে তর্ক না করে লিখিত অভিযোগে যান; ছবি তুলুন দূর থেকে ও প্রকাশ্য জায়গা থেকে; পরিচয় গোপন রাখতে চাইলে ৩৩৩ বা GRS ব্যবহার করুন; স্থানীয় সাংবাদিক বা টিআইবির সচেতন নাগরিক কমিটির সঙ্গে যোগাযোগ রাখুন। নিজের নিরাপত্তা কোনো রিপোর্টের চেয়ে বড়।",
-            "en": "Questioning the work of someone locally powerful is not risk-free, and there is no point pretending otherwise. A few habits reduce the risk: go as a group, not alone; take it to a written complaint rather than an argument on site; photograph from a distance and from public ground; use 333 or GRS if you would rather not be identified; and stay in touch with a local journalist or a TIB citizens' committee. Your safety outranks any report."
-          },
-          "watch_for": [
-            {
-              "bn": "হুমকি পেলে সেটাও আলাদা অভিযোগ — থানায় সাধারণ ডায়েরি করুন।",
-              "en": "A threat is itself a separate complaint — file a General Diary at the police station."
-            }
-          ],
-          "citations": []
-        }
-      ]
-    },
-    {
-      "id": "m10_safety",
-      "code": "M10",
-      "track": "both",
-      "icon": "safety",
-      "title": {
-        "bn": "নিরাপত্তা",
-        "en": "Safety"
-      },
-      "summary": {
-        "bn": "যে শ্রমিক কাজ করছেন আর যে পথচারী পাশ দিয়ে যাচ্ছেন — দুজনের জন্যই।",
-        "en": "For the worker on the job and the neighbour walking past."
-      },
-      "cards": [
-        {
-          "id": "m10c1",
-          "title": {
-            "bn": "মাটি কাটার গর্ত",
-            "en": "Excavations"
-          },
-          "body": {
-            "bn": "গভীর গর্তের পাশ ধসে পড়ে প্রতি বছর মানুষ মারা যায়, বিশেষ করে বর্ষায় নরম মাটিতে। গর্তের পাশে ঠেকনা দেওয়া, খোঁড়া মাটি কিনারা থেকে দূরে রাখা, আর ওঠানামার সিঁড়ি বা মই রাখা — এগুলো নিয়ম, দয়া নয়। গর্তের চারপাশে ঘেরা ও রাতে আলো না থাকলে পথচারীও পড়ে যায়।",
-            "en": "The sides of deep excavations collapse and kill people every year, especially in soft monsoon ground. Shoring the sides, keeping spoil back from the edge, and providing a ladder to get in and out are requirements, not favours. Without a barrier and a light at night, passers-by fall in too."
-          },
-          "watch_for": [
-            {
-              "bn": "গর্তের কিনারায় মাটির স্তূপ থাকলে সেটাই ধসের কারণ।",
-              "en": "Spoil heaped at the edge is itself what causes the collapse."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ নিরাপত্তা",
-                "en": "BNBC 2020, Part 7 — construction safety"
-              },
-              "status": "review"
-            }
-          ]
-        },
-        {
-          "id": "m10c2",
-          "title": {
-            "bn": "ভারা ও উঁচুতে কাজ",
-            "en": "Scaffolding and working at height"
-          },
-          "body": {
-            "bn": "বাঁশের ভারা বাংলাদেশে স্বাভাবিক, কিন্তু বাঁধন আলগা, পাটাতন ফাঁকা আর হাতল না থাকলে সেটা দুর্ঘটনার অপেক্ষা। উঁচুতে কাজ করার সময় হেলমেট ও নিরাপত্তা বেল্ট থাকার কথা। বিদ্যুতের তারের কাছে ভারা বাঁধা হলে সেটা আলাদা বিপদ — ভেজা বাঁশ বিদ্যুৎ টানে।",
-            "en": "Bamboo scaffolding is normal in Bangladesh, but loose lashings, gapped platforms and no handrail make it an accident waiting. Helmets and safety belts are required for work at height. Scaffolding tied near a power line is a separate danger — wet bamboo conducts."
-          },
-          "watch_for": [
-            {
-              "bn": "শ্রমিকের হেলমেট আছে কি না — এক নজরেই বোঝা যায়, আর এটা ছবিতে ধরা পড়ে।",
-              "en": "Whether workers have helmets takes one glance, and it shows in a photograph."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "বাংলাদেশ শ্রম আইন ২০০৬ ও BNBC 2020 পার্ট ৭",
-                "en": "Bangladesh Labour Act 2006 and BNBC 2020 Part 7"
-              },
-              "status": "review"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "m12_malpractice",
-      "code": "M12",
-      "track": "government",
-      "icon": "gavel",
-      "title": {
-        "bn": "ঠিকাদারের সাধারণ কারচুপি ও করণীয়",
-        "en": "Common contractor malpractice, and what to do"
-      },
-      "summary": {
-        "bn": "কোন কারচুপি কেমন দেখায়, ঠিকাদারের লাভ কোথায়, আর আপনি ঠিক কী করতে পারেন — প্রতিটার জন্য আলাদা করে।",
-        "en": "What each trick looks like, where the contractor's gain is, and exactly what you can do about it."
-      },
-      "cards": [
-        {
-          "id": "m12c1",
-          "title": {
-            "bn": "মালামাল কম দেওয়া ও গ্রেড বদলে দেওয়া",
-            "en": "Short supply and swapped grades"
-          },
-          "body": {
-            "bn": "কেমন দেখায়: ডেলিভারির সংখ্যা কাজের তুলনায় কম; মাঝপথে সিমেন্ট বা রডের ব্র্যান্ড বদলে যায়; রড আগের চেয়ে সরু দেখায়। লাভ কোথায়: যে গ্রেড কাগজে লেখা আর যেটা সাইটে এলো, দামের পার্থক্যটাই ঠিকাদারের পকেটে যায়। টিআইবির সড়ক খাতের গবেষণায় নিম্নমানের মালামাল আর পরিমাণ কমানো — এই দুটোকেই মান নষ্ট করার প্রধান দুই কৌশল বলা হয়েছে। আপনি যা করবেন: ডেলিভারির দিন ব্র্যান্ড ও ব্যাচ দেখা যায় এমনভাবে ছবি তুলুন, খালি ব্যাগ গুনুন, আর BoQ-র কপি চেয়ে নিন — না দিলে RTI আবেদন করুন।",
-            "en": "What it looks like: fewer deliveries than the work needs, the cement or rod brand changing partway through, bars looking thinner than the last lot. Where the gain is: the price difference between the grade on paper and the grade on site goes into the contractor's pocket. TIB's road-sector study names substandard materials and reduced quantities as the two main ways quality is degraded. What you do: photograph deliveries with the brand and batch visible, count the empty bags, and ask for a copy of the BoQ — and file an RTI application if it is refused."
-          },
-          "watch_for": [
-            {
-              "bn": "ব্র্যান্ড বদল ধরার একমাত্র সময় ডেলিভারির দিন। পরে সব ব্যাগ একরকম দেখায়।",
-              "en": "Delivery day is the only time a brand swap is visible. Afterwards every bag looks the same."
-            },
-            {
-              "bn": "খালি ব্যাগ গোনা সবচেয়ে সহজ হিসাব — অ্যাপের ঢালাই হিসাব দিয়ে মিলিয়ে নিন।",
-              "en": "Counting empty bags is the easiest check there is — set it against the app's concrete calculator."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "টিআইবির সড়ক খাতের গবেষণা, সংবাদমাধ্যমে প্রকাশিত",
-                "en": "TIB road sector study, as reported in the press"
-              },
-              "status": "verified",
-              "url": "https://en.prothomalo.com/bangladesh/z7xt4wnqbg"
-            }
-          ]
-        },
-        {
-          "id": "m12c2",
-          "title": {
-            "bn": "পরিমাণ ও মাপ কমিয়ে দেওয়া",
-            "en": "Cutting quantities and dimensions"
-          },
-          "body": {
-            "bn": "কেমন দেখায়: রাস্তার স্তর পাতলা, প্রস্থ কম, ভিত অগভীর, রড কম বা ফাঁক বেশি, ছাদ পাতলা, কভার কম। লাভ কোথায়: ইস্পাত আর গভীরতাই সবচেয়ে দামি আর সবচেয়ে অদৃশ্য অংশ — এখানে কাটলে লাভ সবচেয়ে বেশি, ধরা পড়ার ঝুঁকি সবচেয়ে কম। আপনি যা করবেন: ঢালাইয়ের আগে রডের জাল, ফাঁক আর কভার ব্লকের ছবি তুলুন ফিতাসহ; স্তর খোলা থাকতে পুরুত্ব মাপুন। ঢেকে গেলে আর কিছুই দেখা যাবে না — সময়টাই সব।",
-            "en": "What it looks like: a thin pavement layer, a narrower road, a shallow foundation, fewer bars or wider spacing, a thin slab, too little cover. Where the gain is: steel and depth are the most expensive and least visible parts of a structure, so cutting them pays best and shows least. What you do: photograph the bar mesh, the spacing and the cover blocks with a tape before the pour, and measure layer thickness while the layer is open. Once it is covered there is nothing to see — the timing is the whole thing."
-          },
-          "watch_for": [
-            {
-              "bn": "রড বাঁধা শেষ, ঢালাই শুরুর আগে — এই কয়েক ঘণ্টাই একমাত্র সুযোগ।",
-              "en": "Tying finished, pour not started: those few hours are the only chance."
-            },
-            {
-              "bn": "পরে ছাদের নিচে খসে পড়া অংশে মরিচা ধরা রড দেখা গেলে বুঝবেন কভার কম ছিল।",
-              "en": "Rusted steel showing through a spalled soffit later tells you the cover was short from the start."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "টিআইবির সড়ক খাতের গবেষণা, সংবাদমাধ্যমে প্রকাশিত",
-                "en": "TIB road sector study, as reported in the press"
-              },
-              "status": "verified",
-              "url": "https://en.prothomalo.com/bangladesh/z7xt4wnqbg"
-            }
-          ]
-        },
-        {
-          "id": "m12c3",
-          "title": {
-            "bn": "না করা কাজের বিল",
-            "en": "Billing for work never done"
-          },
-          "body": {
-            "bn": "কেমন দেখায়: সাইটে কাজ থমকে আছে বা শুরুই হয়নি, অথচ শোনা যাচ্ছে কাজ শেষ ও বিল পরিশোধ হয়ে গেছে। লাভ কোথায়: এটা সরাসরি টাকা তুলে নেওয়া — কাগজে অগ্রগতি লিখে দিলেই হলো। সংবাদমাধ্যমে প্রকাশিত অনুসন্ধানে এলজিইডির একাধিক প্যাকেজে মাঠে কোনো অগ্রগতি না থাকলেও কাগজে ৯০–১০০% অগ্রগতি দেখিয়ে বিলের বড় অংশ পরিশোধের তথ্য এসেছে। আপনি যা করবেন: প্রতি মাসে একই জায়গার তারিখ ও অবস্থানসহ ছবি তুলুন। কাগজের অগ্রগতির বিপরীতে আপনার তারিখওয়ালা ছবিই সবচেয়ে শক্ত জবাব।",
-            "en": "What it looks like: the site is stalled or never started, yet word is that the work is complete and paid. Where the gain is: this is cash taken straight out — someone only has to write the progress down. Press investigations have reported LGED packages with no progress on the ground where 90–100% progress was recorded on paper and most of the bill was paid. What you do: photograph the same spot every month with the date and location on it. Against paper progress, your dated photographs are the strongest answer there is."
-          },
-          "watch_for": [
-            {
-              "bn": "একটা ছবি নয় — পুরো দৈর্ঘ্য হেঁটে দুই প্রান্তের ছবি তুলুন।",
-              "en": "Not one photograph: walk the full length and photograph both ends."
-            },
-            {
-              "bn": "বিল পরিশোধের আগে অভিযোগ করলে কাজ হয়; পরে টাকা ফেরানো অনেক কঠিন।",
-              "en": "A complaint before the bill is paid works; recovering money afterwards is far harder."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "এলজিইডির তিন প্রকল্পে কাজ ছাড়াই বিল — সংবাদমাধ্যমে প্রকাশিত",
-                "en": "Bills paid without work in three LGED projects, as reported in the press"
-              },
-              "status": "review",
-              "url": "https://www.tbsnews.net/bangladesh/corruption/3-lged-road-and-bridge-projects-tk343cr-gone-no-real-work-1237341"
-            }
-          ]
-        },
-        {
-          "id": "m12c4",
-          "title": {
-            "bn": "টেন্ডারে যোগসাজশ",
-            "en": "Collusion in tendering"
-          },
-          "body": {
-            "bn": "কেমন দেখায়: একই এলাকায় ঘুরেফিরে হাতেগোনা কয়েকটা প্রতিষ্ঠানই কাজ পায়; বড় কাজ ভেঙে ছোট ছোট প্যাকেজ করা হয়। লাভ কোথায়: প্রতিযোগিতা বাদ দিয়ে দর ঠিক করে নেওয়া যায়, আর ছোট প্যাকেজে যাচাই কম। সংবাদমাধ্যমে প্রকাশিত হিসাবে এক অর্থবছরে সড়কের অর্ধেকের বেশি কাজ মাত্র পাঁচটি প্রতিষ্ঠান পেয়েছিল। আপনি যা করবেন: এটা সাইটে ধরা যায় না, কাগজে ধরা যায়। সরকারি ক্রয় বাতায়নে (citizen.bppa.gov.bd) নিজের এলাকার কাজগুলো দেখুন — একই নাম বারবার এলে সেটা সাংবাদিক বা টিআইবিকে জানান।",
-            "en": "What it looks like: the same handful of firms keep winning in one area, and large works get split into small packages. Where the gain is: competition is removed and the price is settled in advance, while small packages attract less scrutiny. Press reporting found that in one financial year five firms took more than half of all road contracts. What you do: this cannot be caught on site, only on paper. Look your area's works up on the citizen procurement portal, and if the same name keeps appearing, take it to a journalist or to TIB."
-          },
-          "watch_for": [
-            {
-              "bn": "সাইনবোর্ডের ঠিকাদারের নাম লিখে রাখুন — কয়েকটা কাজের নাম মিলিয়ে দেখলেই ছবিটা পরিষ্কার হয়।",
-              "en": "Write down the contractor's name off each signboard. A few works compared side by side make the picture clear."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "সড়কের ৫১% কাজ পাঁচটি প্রতিষ্ঠানের — সংবাদমাধ্যমে প্রকাশিত",
-                "en": "Five firms took 51% of road contracts, as reported in the press"
-              },
-              "status": "review",
-              "url": "https://en.prothomalo.com/bangladesh/yn713xbf5h"
-            }
-          ]
-        },
-        {
-          "id": "m12c5",
-          "title": {
-            "bn": "দেরি আর পরে খরচ বাড়ানো",
-            "en": "Delay, then raising the cost"
-          },
-          "body": {
-            "bn": "কেমন দেখায়: মাসের পর মাস সাইট ফাঁকা, যন্ত্রপাতি পড়ে আছে; তারপর শোনা যায় খরচ বেড়ে গেছে। লাভ কোথায়: কম দরে কাজ নিয়ে পরে ভেরিয়েশন বা মূল্যবৃদ্ধির দাবি তুললে কর্তৃপক্ষের হাতে বিকল্প কম থাকে। বিশ্বব্যাংকের মূল্যায়নে বলা হয়েছে, বাংলাদেশে প্রায় ৭০ শতাংশ চুক্তি সময়মতো শেষ হয় না। আপনি যা করবেন: সাইনবোর্ডের শেষ তারিখ লিখে রাখুন, আর তারিখ পার হওয়ার পর নির্দিষ্ট করে লিখুন — 'কাজ ৩ মাস আগে শেষ হওয়ার কথা ছিল, আজও হয়নি'। অস্পষ্ট 'দেরি হচ্ছে' লিখলে ফাইল বন্ধ হয়ে যায়।",
-            "en": "What it looks like: months with an empty site and idle plant, and then word that the cost has gone up. Where the gain is: take the work cheap, then raise variation or escalation claims when the authority has little choice left. The World Bank's assessment found that around 70 per cent of contracts in Bangladesh are not completed on time. What you do: write down the completion date from the signboard, and once it passes put it precisely — 'this was due three months ago and is still not done'. A vague 'it is late' closes a file."
-          },
-          "watch_for": [
-            {
-              "bn": "চুক্তিতে দেরির জন্য জরিমানার বিধান থাকে। জরিমানা আদায় হয়েছে কি না, সেটাও RTI-তে চাওয়া যায়।",
-              "en": "Contracts carry penalties for delay. Whether the penalty was actually charged is itself something you can ask for under RTI."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "বিশ্বব্যাংক, বাংলাদেশের সরকারি ক্রয় ব্যবস্থার মূল্যায়ন, ২০২০",
-                "en": "World Bank, Assessment of Bangladesh Public Procurement System, 2020"
-              },
-              "status": "verified",
-              "url": "https://documents1.worldbank.org/curated/en/950811591599744079/pdf/Assessment-of-Bangladesh-Public-Procurement-System.pdf"
-            }
-          ]
-        },
-        {
-          "id": "m12c6",
-          "title": {
-            "bn": "অভিযোগের আসল পথ — যেটা অনেকেই জানে না",
-            "en": "Where a citizen complaint actually goes"
-          },
-          "body": {
-            "bn": "সরকারি ক্রয় আইনে অভিযোগ ও আপিলের যে ব্যবস্থা আছে, সেটা মূলত দরপত্রে অংশ নেওয়া ঠিকাদারদের জন্য — চুক্তি সই হয়ে যাওয়ার পর সেখানে অভিযোগ করা যায় না। অর্থাৎ নির্মাণকাজের মান নিয়ে সাধারণ নাগরিকের অভিযোগের জন্য ঐ পথটা খোলা নেই। যে পথগুলো সত্যিই খোলা: এক, সংশ্লিষ্ট দপ্তরে লিখিত অভিযোগ — একমাত্র এখানেই বিল আটকানোর ক্ষমতা আছে। দুই, তথ্য অধিকার আবেদন করে অনুমিত হিসাব, BoQ ও পরিমাপ বই চাওয়া। তিন, সরকারি ক্রয় বাতায়নে পর্যবেক্ষণ তোলা। চার, আর্থিক অনিয়মের সুনির্দিষ্ট অভিযোগ হলে দুদকের হটলাইন ১০৬ — পরিচয় গোপন রাখা হয়।",
-            "en": "The complaint and appeal machinery in the procurement law is built for bidders, and a complaint cannot be filed there once the contract is signed. So for a citizen complaining about the quality of construction, that route is closed. The routes that are open: first, a written complaint to the department concerned — the only place with the power to hold a bill. Second, an RTI application for the estimate, the BoQ and the measurement book. Third, posting your observation on the citizen procurement portal. Fourth, for a specific allegation of financial irregularity, the Anti-Corruption Commission hotline 106, where the complainant's identity is kept confidential."
-          },
-          "watch_for": [
-            {
-              "bn": "দুদক হটলাইন ১০৬ — কর্মদিবসে, পরিচয় গোপন রাখা হয়।",
-              "en": "ACC hotline 106, on working days, with the caller's identity kept confidential."
-            },
-            {
-              "bn": "একসঙ্গে একাধিক জায়গায় পাঠান। এক অফিসে আটকে গেলেও বাকিগুলোতে রেকর্ড থেকে যায়।",
-              "en": "Send it to several places at once. If one office buries it, the record still exists elsewhere."
-            }
-          ],
-          "citations": [
-            {
-              "source": {
-                "bn": "বিশ্বব্যাংক, বাংলাদেশের সরকারি ক্রয় ব্যবস্থার মূল্যায়ন, ২০২০",
-                "en": "World Bank, Assessment of Bangladesh Public Procurement System, 2020"
-              },
-              "status": "verified",
-              "url": "https://documents1.worldbank.org/curated/en/950811591599744079/pdf/Assessment-of-Bangladesh-Public-Procurement-System.pdf"
-            },
-            {
-              "source": {
-                "bn": "দুদক হটলাইন ১০৬ — সংবাদমাধ্যমে প্রকাশিত",
-                "en": "ACC hotline 106, as reported in the press"
-              },
-              "status": "verified",
-              "url": "https://www.thedailystar.net/country/bangladesh-anti-corruption-hotline-number-gets-75000-calls-first-week-1443028"
-            }
-          ]
-        }
-      ]
+      {
+       "bn": "যা ঢেকে যাবে, সেটা ঢাকার আগেই মাপুন। পরে আর সুযোগ নেই।",
+       "en": "Measure anything that is going to be covered before it is covered. There is no second chance."
+      }
+     ],
+     "citations": []
     }
-  ]
+   ]
+  },
+  {
+   "id": "m1_basics",
+   "code": "M1",
+   "track": "government",
+   "icon": "foundation",
+   "title": {
+    "bn": "শুরুর ধারণা",
+    "en": "Where to start"
+   },
+   "summary": {
+    "bn": "কাজটা কে করছে, টাকা কোথা থেকে আসছে, আর কাগজে কী কী থাকে — এটুকু জানলেই আপনি আর অন্ধ নন।",
+    "en": "Who is doing the work, where the money comes from, and what the paperwork contains. Knowing this much is the difference between watching and understanding."
+   },
+   "cards": [
+    {
+     "id": "m1c1",
+     "title": {
+      "bn": "সাইটে কে কী",
+      "en": "Who is who on site"
+     },
+     "body": {
+      "bn": "সরকারি কাজে তিন পক্ষ থাকে। এক, কর্তৃপক্ষ — যে দপ্তর কাজটা করাচ্ছে (LGED, সড়ক ও জনপথ, শিক্ষা প্রকৌশল, ইউনিয়ন পরিষদ)। দুই, ঠিকাদার — যে টেন্ডার জিতে কাজটা করছে। তিন, তদারককারী প্রকৌশলী — উপসহকারী প্রকৌশলী (SAE) মাঠে থাকেন, উপজেলা প্রকৌশলী ও নির্বাহী প্রকৌশলী উপরে। সাইটে যাকে দেখছেন তিনি প্রায়ই ঠিকাদারের লোক, প্রকৌশলী নন।",
+      "en": "A public work has three parties. First, the procuring agency — the department paying for it (LGED, Roads and Highways, Education Engineering, the Union Parishad). Second, the contractor who won the tender. Third, the supervising engineers — a Sub-Assistant Engineer on the ground, with the Upazila Engineer and Executive Engineer above. The person you see on site is usually the contractor's man, not an engineer."
+     },
+     "watch_for": [
+      {
+       "bn": "কাজ শুরুর আগে জেনে নিন কোন দপ্তরের কাজ — অভিযোগ ঐ দপ্তরেই যাবে।",
+       "en": "Find out which department owns the work before it starts — that is where a complaint has to go."
+      },
+      {
+       "bn": "তদারককারী প্রকৌশলীর নাম ও পদবি সাইনবোর্ডে থাকার কথা।",
+       "en": "The supervising engineer's name and designation should be on the signboard."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "পাবলিক প্রকিউরমেন্ট আইন ২০০৬ ও বিধিমালা ২০০৮",
+        "en": "Public Procurement Act 2006 and Rules 2008"
+       },
+       "status": "review"
+      }
+     ]
+    },
+    {
+     "id": "m1c2",
+     "title": {
+      "bn": "টাকা কোথা থেকে আসে",
+      "en": "Where the money comes from"
+     },
+     "body": {
+      "bn": "গ্রামের ছোট কাজের টাকা সাধারণত চার জায়গা থেকে আসে — বার্ষিক উন্নয়ন কর্মসূচি (ADP), ইউনিয়ন পরিষদের নিজস্ব তহবিল ও LGSP বরাদ্দ, টিআর/কাবিখা-জাতীয় কর্মসূচি, আর প্রকল্পভিত্তিক বরাদ্দ। উৎস আলাদা হলে নিয়মও আলাদা: কাবিখার কাজ প্রকল্প বাস্তবায়ন কমিটি (PIC) করে, আর টেন্ডারের কাজ ঠিকাদার করে।",
+      "en": "Money for small rural works usually comes from four places: the Annual Development Programme (ADP), the Union Parishad's own fund and its LGSP allocation, food-for-work style programmes such as TR and KABIKHA, and project-specific allocations. The source changes the rules: a KABIKHA scheme is carried out by a Project Implementation Committee (PIC), a tendered work by a contractor."
+     },
+     "watch_for": [
+      {
+       "bn": "PIC-এর কাজে ঠিকাদার থাকার কথা নয়। ঠিকাদার দেখলে প্রশ্ন করুন।",
+       "en": "A PIC scheme is not supposed to have a contractor. If you see one, ask why."
+      },
+      {
+       "bn": "ইউনিয়ন পরিষদে বছরের স্কিম তালিকা চাইতে পারেন — এটা প্রকাশ্য তথ্য।",
+       "en": "You can ask the Union Parishad for the year's scheme list — it is public information."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "স্থানীয় সরকার (ইউনিয়ন পরিষদ) আইন ২০০৯",
+        "en": "Local Government (Union Parishad) Act 2009"
+       },
+       "status": "review"
+      }
+     ]
+    },
+    {
+     "id": "m1c3",
+     "title": {
+      "bn": "যে কাগজগুলোর নাম জানা দরকার",
+      "en": "The papers worth knowing by name"
+     },
+     "body": {
+      "bn": "অনুমিত হিসাব (estimate) — কাজটার আনুমানিক খরচ। BoQ (Bill of Quantities) — কোন কাজ কতটুকু, কী দরে। কার্যাদেশ (work order) — ঠিকাদারকে কাজ শুরুর লিখিত নির্দেশ, তাতে শুরু ও শেষের তারিখ থাকে। পরিমাপ বই (measurement book বা MB) — কতটুকু কাজ হলো তার সরকারি খাতা। চলতি বিল (running bill) — অগ্রগতির বিপরীতে যে টাকা দেওয়া হয়। এই পাঁচটার নাম জানলে আপনি সঠিক জিনিসটা চাইতে পারবেন।",
+      "en": "Estimate — the approved cost of the work. BoQ (Bill of Quantities) — how much of each item, at what rate. Work order — the written instruction to the contractor to start, carrying the start and completion dates. Measurement Book (MB) — the official record of how much work was actually done. Running bill — the money paid against progress. Knowing these five names means you can ask for the right document instead of a vague one."
+     },
+     "watch_for": [
+      {
+       "bn": "তথ্য চাইলে নাম ধরে চান: 'অনুমিত হিসাব ও BoQ-এর কপি' — 'কাগজপত্র' চাইলে কিছুই পাবেন না।",
+       "en": "Ask by name: 'a copy of the estimate and the BoQ'. Asking for 'the papers' gets you nothing."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "পাবলিক প্রকিউরমেন্ট বিধিমালা ২০০৮",
+        "en": "Public Procurement Rules 2008"
+       },
+       "status": "review"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "m2_signboard",
+   "code": "M2",
+   "track": "government",
+   "icon": "signboard",
+   "title": {
+    "bn": "সাইনবোর্ড পড়া",
+    "en": "Reading the signboard"
+   },
+   "summary": {
+    "bn": "সাইনবোর্ড হলো সরকারি কাজের একমাত্র জিনিস যা সবার জন্য খোলা। ওটা পড়তে শিখলে বাকিটা সহজ।",
+    "en": "The signboard is the one part of a public work that is open to everyone. Learn to read it and the rest follows."
+   },
+   "cards": [
+    {
+     "id": "m2c1",
+     "title": {
+      "bn": "বোর্ডে কী কী থাকার কথা",
+      "en": "What the board should carry"
+     },
+     "body": {
+      "bn": "কাজের নাম ও অবস্থান। প্যাকেজ বা টেন্ডার আইডি। কোন দপ্তরের কাজ। ঠিকাদারি প্রতিষ্ঠানের নাম। চুক্তিমূল্য। কাজ শুরুর তারিখ ও শেষের তারিখ। কাজের পরিমাণ — রাস্তা হলে দৈর্ঘ্য ও প্রস্থ, ভবন হলে আয়তন। এই সাতটার একটাও না থাকলে সেটাই প্রথম প্রশ্ন।",
+      "en": "Name and location of the work. Package or tender ID. The department. The contractor's firm. Contract value. Start date and completion date. Quantity — length and width for a road, floor area for a building. If any one of these seven is missing, that is your first question."
+     },
+     "watch_for": [
+      {
+       "bn": "বোর্ডের ছবি তুলে রাখুন — বোর্ড হারিয়ে যায়, ছবি থাকে।",
+       "en": "Photograph the board. Boards disappear; photographs do not."
+      },
+      {
+       "bn": "শেষের তারিখ পার হয়ে গেলে সেটা নিজেই একটা অভিযোগের কারণ।",
+       "en": "A completion date that has already passed is a complaint in itself."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BPPA/DIMAPPP নাগরিক পর্যবেক্ষণ কার্যক্রম — প্রতিটি সাইটে তথ্যবোর্ড",
+        "en": "BPPA/DIMAPPP citizen monitoring — an information signboard at every site"
+       },
+       "url": "https://citizen.bppa.gov.bd/about-us",
+       "status": "verified"
+      }
+     ]
+    },
+    {
+     "id": "m2c2",
+     "title": {
+      "bn": "টেন্ডার আইডি দিয়ে খোঁজা",
+      "en": "Looking the work up by tender ID"
+     },
+     "body": {
+      "bn": "বোর্ডে লেখা টেন্ডার বা প্যাকেজ আইডি দিয়ে সরকারি ক্রয় বাতায়নে (citizen.bppa.gov.bd) এবং ই-জিপি পোর্টালে (eprocure.gov.bd) কাজটা খুঁজে দেখা যায়। ওখানে দরপত্রের তথ্য ও কার্যাদেশের তথ্য পাওয়া যায়। ইন্টারনেট না থাকলে আইডিটা লিখে রাখুন — উপজেলা প্রকৌশল অফিসে বা RTI আবেদনে ওই আইডিই কাজে লাগবে।",
+      "en": "With the tender or package ID from the board you can look the work up on the citizen procurement portal (citizen.bppa.gov.bd) and on e-GP (eprocure.gov.bd), where tender and award information is published. No internet? Write the ID down anyway — it is what makes an enquiry at the Upazila engineering office, or an RTI application, specific."
+     },
+     "watch_for": [
+      {
+       "bn": "পোর্টালের তথ্য আর বোর্ডের তথ্য না মিললে দুটোরই ছবি রাখুন।",
+       "en": "If the portal and the board disagree, screenshot both."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "সরকারি ক্রয় বাতায়ন, বিপিপিএ",
+        "en": "Citizen procurement portal, BPPA"
+       },
+       "url": "https://citizen.bppa.gov.bd",
+       "status": "verified"
+      },
+      {
+       "source": {
+        "bn": "জাতীয় ই-জিপি পোর্টাল",
+        "en": "National e-GP portal"
+       },
+       "url": "https://www.eprocure.gov.bd",
+       "status": "verified"
+      }
+     ]
+    },
+    {
+     "id": "m2c3",
+     "title": {
+      "bn": "চুক্তিমূল্যকে ভাগ করে দেখুন",
+      "en": "Divide the contract value"
+     },
+     "body": {
+      "bn": "চুক্তিমূল্য একটা বড় সংখ্যা, বোঝা যায় না। ভাগ করলে বোঝা যায়। ৪২ লাখ টাকায় ১,২০০ মিটার রাস্তা মানে প্রতি মিটারে প্রায় ৩,৫০০ টাকা। এই সংখ্যাটা মাথায় রাখা যায়, পাশের ইউনিয়নের কাজের সঙ্গে মেলানো যায়, তফসিল রেটের সঙ্গেও মেলানো যায়। অ্যাপের 'চুক্তি বনাম বাস্তব' হিসাবটা এটাই করে।",
+      "en": "A contract value is a big number and means nothing on its own. Divided, it means something. Tk 42 lakh for 1,200 metres of road is about Tk 3,500 per metre — a number you can carry in your head, compare with the next union's work, and compare with the schedule of rates. That is what the app's unit-cost calculator does."
+     },
+     "watch_for": [
+      {
+       "bn": "পার্থক্য পেলেই অভিযোগ নয়। আগে অনুমিত হিসাব ও BoQ চান — কারণ থাকতেই পারে।",
+       "en": "A gap is not a complaint. Ask for the estimate and BoQ first — there may be a good reason."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "PWD Schedule of Rates 2022 (২য় সংশোধিত)",
+        "en": "PWD Schedule of Rates 2022 (2nd revised)"
+       },
+       "url": "https://ss.pwd.gov.bd/document/sor/Final_SoR_2022%20_2nd_Revised.pdf",
+       "status": "verified"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "m3_materials",
+   "code": "M3",
+   "track": "both",
+   "icon": "materials",
+   "title": {
+    "bn": "মালামাল চেনা",
+    "en": "Knowing the materials"
+   },
+   "summary": {
+    "bn": "সিমেন্ট, রড, ইট, বালি — চারটা জিনিসেই সবচেয়ে বেশি কারচুপি হয়, আর চারটাই খালি চোখে অনেকটা যাচাই করা যায়।",
+    "en": "Cement, rod, brick, sand. These four are where most of the cheating happens, and all four can be partly checked with your own eyes."
+   },
+   "cards": [
+    {
+     "id": "m3c1",
+     "title": {
+      "bn": "সিমেন্ট",
+      "en": "Cement"
+     },
+     "body": {
+      "bn": "ব্যাগে ব্র্যান্ড, ধরন ও উৎপাদনের তারিখ লেখা থাকে। পুরোনো সিমেন্ট শক্তি হারায়, তাই তারিখ দেখা জরুরি। ব্যাগ হাতে চেপে দেখুন — ভেতরে শক্ত দলা মানে ভিজে গেছে, ঐ ব্যাগ ঢালাইয়ে যাওয়ার কথা নয়। ব্যাগ মাটিতে সরাসরি রাখা যাবে না, কাঠের উপরে ও দেয়াল থেকে দূরে রাখতে হয়।",
+      "en": "The bag carries the brand, the type and the manufacturing date. Cement loses strength with age, so the date matters. Squeeze the bag: hard lumps inside mean it has taken damp and that bag should not go into a pour. Bags must be stacked off the ground on timber and away from the wall."
+     },
+     "watch_for": [
+      {
+       "bn": "খালি ব্যাগ গুনুন। এক দিনের ঢালাইয়ে যত ব্যাগ লাগার কথা, তত ব্যাগ খালি হলো কি না — এটা সবচেয়ে সহজ হিসাব।",
+       "en": "Count the empty bags. Whether the number of empties matches the number a day's pour needed is the simplest check there is."
+      },
+      {
+       "bn": "উৎপাদনের তারিখ ও গুদামে রাখার অবস্থা — দুটোরই ছবি তুলুন।",
+       "en": "Photograph both the manufacturing date and how the bags are stored."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৫ — বিল্ডিং মেটেরিয়ালস",
+        "en": "BNBC 2020, Part 5 — Building Materials"
+       },
+       "status": "review"
+      }
+     ]
+    },
+    {
+     "id": "m3c2",
+     "title": {
+      "bn": "রড",
+      "en": "Reinforcement bar"
+     },
+     "body": {
+      "bn": "রডের গায়ে উৎপাদকের চিহ্ন ও গ্রেড রোল করা থাকে — সেটা পড়ুন। পাঁজর (rib) স্পষ্ট ও সমান হওয়া উচিত; ক্ষয়ে গিয়ে মসৃণ হয়ে গেলে কংক্রিটে আঁকড়ে ধরে না। হালকা মরিচা সমস্যা নয়, কিন্তু আঙুলে ঘষলে খোসার মতো উঠে এলে সমস্যা। ওজন মিলিয়ে দেখা যায়: ব্যাসের বর্গকে ১৬২ দিয়ে ভাগ করলে প্রতি মিটারে কেজি পাওয়া যায় — অ্যাপের রড হিসাব এটাই করে।",
+      "en": "The maker's mark and the grade are rolled onto the bar — read them. The ribs should be sharp and even; worn smooth, a bar cannot grip the concrete. Light rust is not a problem, but rust that flakes off under your thumb is. Weight can be checked: diameter squared divided by 162 gives kilograms per metre, which is what the app's rod calculator does."
+     },
+     "watch_for": [
+      {
+       "bn": "কাগজে যে গ্রেড লেখা আর রডের গায়ে যে গ্রেড — দুটো মেলান।",
+       "en": "Match the grade on the paperwork against the grade on the bar."
+      },
+      {
+       "bn": "এক ট্রাকে একাধিক ব্র্যান্ডের রড মেশানো থাকলে ছবি তুলুন।",
+       "en": "If one delivery mixes brands, photograph it."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BDS ISO 6935-2 (রিইনফোর্সিং স্টিল)",
+        "en": "BDS ISO 6935-2 (reinforcing steel)"
+       },
+       "status": "review"
+      },
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৫",
+        "en": "BNBC 2020, Part 5"
+       },
+       "status": "review"
+      }
+     ]
+    },
+    {
+     "id": "m3c3",
+     "title": {
+      "bn": "ইট",
+      "en": "Brick"
+     },
+     "body": {
+      "bn": "ভালো ইট সমান লাল, ধার সোজা, কোণ ধারালো। দুটো ইট ঠুকলে ধাতব ঝনঝন শব্দ হয় — ভোঁতা শব্দ মানে কম পোড়া। বুকসমান উঁচু থেকে ফেললে ভালো ইট ভাঙে না। ভাঙা ইটের ভেতরটা দেখুন: ফাঁপা বা কালো কেন্দ্র মানে ঠিকমতো পোড়েনি। মাপ মেপে দেখুন — ছোট ইট মানে একই টাকায় কম গাঁথুনি।",
+      "en": "A good brick is evenly red, straight-edged and sharp-cornered. Strike two together: a metallic ring is good, a dull thud means underburnt. Dropped from chest height a good brick does not break. Look inside a broken one: a hollow or black centre means it was not fired properly. Measure it — an undersized brick means less masonry for the same money."
+     },
+     "watch_for": [
+      {
+       "bn": "একই স্তূপে ভালো ইট সামনে আর খারাপ ইট পেছনে — স্তূপের ভেতর থেকে টেনে দেখুন।",
+       "en": "Good bricks in front, bad ones behind: pull a few from inside the stack."
+      },
+      {
+       "bn": "ঢালাইয়ের খোয়া কোন ইট ভেঙে হচ্ছে, সেটাও দেখুন।",
+       "en": "Look at which bricks are being crushed into khoa for the concrete."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৫ — ইটের শ্রেণি ও শক্তি",
+        "en": "BNBC 2020, Part 5 — brick classes and strength"
+       },
+       "status": "review"
+      }
+     ],
+     "diagram": "brick_bond"
+    },
+    {
+     "id": "m3c4",
+     "title": {
+      "bn": "বালি ও কাদার পরীক্ষা",
+      "en": "Sand, and the silt test"
+     },
+     "body": {
+      "bn": "কাদামাখা বালি সিমেন্টের আঁকড়ে ধরার ক্ষমতা নষ্ট করে। পরীক্ষাটা যে কেউ করতে পারে: একটা স্বচ্ছ কাচের বোতলে এক-তৃতীয়াংশ বালি নিন, পানি ভরে ঝাঁকান, তিন ঘণ্টা রেখে দিন। বালি নিচে বসবে, কাদা উপরে আলাদা স্তর হয়ে জমবে। উপরের স্তর মোটা হলে ঐ বালি ধুয়ে নিতে হবে। বালি মোটা না মিহি সেটাও দেখার বিষয় — ঢালাইয়ে মোটা বালি, প্লাস্টারে মিহি বালি।",
+      "en": "Silty sand stops cement from gripping. Anyone can run the test: fill a clear bottle one-third with sand, top up with water, shake, and leave it three hours. The sand settles; the silt forms a separate layer on top. A thick top layer means the sand needs washing. Coarseness matters too — coarse sand for concrete, fine sand for plaster."
+     },
+     "watch_for": [
+      {
+       "bn": "বোতল পরীক্ষার ছবি তুলে রাখুন — এটা রিপোর্টে দেখানোর মতো প্রমাণ।",
+       "en": "Photograph the bottle. It is evidence you can put in a report."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৫ — সূক্ষ্ম সমষ্টি (fine aggregate)",
+        "en": "BNBC 2020, Part 5 — fine aggregate"
+       },
+       "status": "review"
+      }
+     ],
+     "diagram": "silt_test"
+    }
+   ]
+  },
+  {
+   "id": "m4_mixing",
+   "code": "M4",
+   "track": "both",
+   "icon": "concrete",
+   "title": {
+    "bn": "মিশ্রণ ও ঢালাই",
+    "en": "Mixing and casting"
+   },
+   "summary": {
+    "bn": "বেশি পানি — সবচেয়ে সাধারণ আর সবচেয়ে ক্ষতিকর কারচুপি, অথচ খরচ বাঁচে না। কারণটা জানুন।",
+    "en": "Extra water is the most common and most damaging shortcut on a Bangladeshi site — and it saves nobody money. Here is why it happens anyway."
+   },
+   "cards": [
+    {
+     "id": "m4c1",
+     "title": {
+      "bn": "অনুপাত মানে কী",
+      "en": "What the ratio means"
+     },
+     "body": {
+      "bn": "১:২:৪ মানে এক ভাগ সিমেন্ট, দুই ভাগ বালি, চার ভাগ খোয়া বা পাথর — আয়তনের হিসাবে, ওজনে নয়। মাপার জন্য বাক্স (ফর্মা) ব্যবহার করার কথা; বেলচা দিয়ে গোনা হলে অনুপাত ঠিক থাকে না। মনে রাখবেন, বড় কাঠামোর কাজে BNBC 2020 অনুপাত দিয়ে নয়, শক্তি (f′c) দিয়ে কংক্রিট নির্দিষ্ট করে — অনুপাত শুধু আভাস।",
+      "en": "1:2:4 means one part cement, two parts sand, four parts khoa or stone — by volume, not by weight. Measuring boxes are meant to be used; counted shovelfuls do not hold a ratio. And note that for structural work BNBC 2020 specifies concrete by characteristic strength (f′c), not by ratio — the ratio is only an indication."
+     },
+     "watch_for": [
+      {
+       "bn": "মাপার বাক্স আছে কি না দেখুন। না থাকলে সেটাই প্রথম সমস্যা।",
+       "en": "Check whether measuring boxes exist at all. If not, that is the first problem."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৬ — কংক্রিটের শক্তি নির্ধারণ",
+        "en": "BNBC 2020, Part 6 — specifying concrete strength"
+       },
+       "status": "review"
+      }
+     ]
+    },
+    {
+     "id": "m4c2",
+     "title": {
+      "bn": "পানি কেন সমস্যা",
+      "en": "Why water is the problem"
+     },
+     "body": {
+      "bn": "পানি বেশি দিলে মিশ্রণ পাতলা হয়, ঢালতে সহজ হয়, শ্রমিকের কষ্ট কমে। কিন্তু শুকানোর পর ঐ বাড়তি পানির জায়গায় অসংখ্য ছিদ্র থেকে যায়, আর কংক্রিট দুর্বল হয়। উপরে দেখে বোঝার উপায় নেই — এখানেই বিপদ। তাই ঢালাইয়ের সময় উপস্থিত থাকা জরুরি, পরে এসে লাভ নেই।",
+      "en": "Extra water thins the mix, makes it easier to place, and saves the crew effort. But when it dries, the space that water occupied is left behind as pores, and the concrete is weaker. Nothing on the surface shows it — which is exactly the danger. This is why being present during the pour matters and inspecting afterwards does not."
+     },
+     "watch_for": [
+      {
+       "bn": "মিশ্রণ পানির মতো গড়িয়ে পড়লে পানি বেশি। ভিডিও করে রাখুন।",
+       "en": "If the mix runs like water, there is too much water. Take a video."
+      },
+      {
+       "bn": "ঢালাইয়ের নমুনা (সিলিন্ডার) নেওয়া হচ্ছে কি না জিজ্ঞেস করুন।",
+       "en": "Ask whether test cylinders are being cast from the pour."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
+        "en": "BNBC 2020, Part 7 — Construction Practices"
+       },
+       "status": "review"
+      }
+     ]
+    },
+    {
+     "id": "m4c3",
+     "title": {
+      "bn": "কিউরিং — ঢালাইয়ের পর পানি দেওয়া",
+      "en": "Curing — watering after the pour"
+     },
+     "body": {
+      "bn": "ঢালাই শেষ মানে কাজ শেষ নয়। কংক্রিট শক্তি পায় ধীরে ধীরে, আর তার জন্য ভেজা থাকতে হয়। কয়েক দিন নিয়মিত পানি না দিলে শক্তি অনেকটা কমে যায় এবং ফাটল ধরে। চটের বস্তা ভিজিয়ে ঢেকে রাখা, পানি জমিয়ে রাখা — দুটোই প্রচলিত পদ্ধতি। কিউরিং না করা সবচেয়ে সহজে ধরা পড়ে, কারণ এটা দিনের পর দিন চোখে পড়ে।",
+      "en": "The pour is not the end of the job. Concrete gains strength slowly and needs to stay wet to do it. Skip the watering for a few days and it loses a large part of its strength and cracks. Wet hessian and ponding are the usual methods. Missed curing is the easiest defect for a citizen to catch, because it is visible day after day."
+     },
+     "watch_for": [
+      {
+       "bn": "একই জায়গার ছবি কয়েক দিন ধরে তুলুন — শুকনা ঢালাইয়ের ধারাবাহিক ছবি শক্ত প্রমাণ।",
+       "en": "Photograph the same spot on successive days. A run of dry-slab photographs is strong evidence."
+      },
+      {
+       "bn": "কত দিন পানি দিতে হবে তা সিমেন্টের ধরনের উপর নির্ভর করে — দপ্তরের স্পেসিফিকেশন দেখুন।",
+       "en": "How many days depends on the cement type — check the department's specification."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৭ — কিউরিং",
+        "en": "BNBC 2020, Part 7 — curing"
+       },
+       "status": "review"
+      }
+     ]
+    },
+    {
+     "id": "m4c4",
+     "title": {
+      "bn": "ঢালাই — ধাপে ধাপে কী হওয়ার কথা",
+      "en": "A pour, step by step"
+     },
+     "body": {
+      "bn": "ঢালাইয়ের দিন যা হওয়ার কথা, ক্রম মেনে। এক, ঢালাইয়ের আগে ফর্মা ও শাটারিং পরীক্ষা — ফাঁক থাকলে সিমেন্টের পানি বেরিয়ে যায়, ভেতরে ফাঁপা থেকে যায়। দুই, রড ও কভার ব্লক দেখা — একবার ঢাললে আর দেখা যাবে না। তিন, মাপার বাক্সে মিশ্রণ, বেলচা গুনে নয়। চার, মিক্সার মেশিনে মেশানো, হাতে নয়। পাঁচ, ঢালার পর ভাইব্রেটর দিয়ে চাপা — বাতাস বের করার জন্য, কিন্তু একই জায়গায় বেশিক্ষণ নয়। ছয়, উপরটা সমান করা। সাত, নমুনা (সিলিন্ডার) নেওয়া। আট, সেদিন থেকেই কিউরিং শুরু।\n\nএকটানা ঢালাই জরুরি। মাঝপথে অনেকক্ষণ থেমে গেলে দুই অংশ ঠিকমতো জোড়া লাগে না — একে বলে কোল্ড জয়েন্ট, আর ওখান থেকেই পরে পানি ঢোকে।",
+      "en": "What should happen on pour day, in order. One: check the formwork and shuttering before anything is poured — gaps let the cement paste run out and leave voids inside. Two: look at the steel and the cover blocks; once it is poured you will never see them again. Three: batch with measuring boxes, not counted shovels. Four: mix in the machine, not on the ground. Five: compact with a vibrator after placing — to drive the air out, but never held in one spot. Six: level the top. Seven: cast the test cylinders. Eight: start curing the same day.\n\nA pour should be continuous. A long stop in the middle leaves the two parts imperfectly joined — a cold joint — and that is where water gets in later."
+     },
+     "watch_for": [
+      {
+       "bn": "ঢালাই শুরুর আগে ফর্মার ফাঁক আর কভার ব্লক — এই দুটোই একবার দেখলে অর্ধেক কাজ হয়ে যায়।",
+       "en": "Gaps in the formwork and the cover blocks: check those two before the pour and you have covered half of it."
+      },
+      {
+       "bn": "মাঝপথে দীর্ঘ বিরতি হলে সময় লিখে রাখুন — কোল্ড জয়েন্টের প্রমাণ ওটাই।",
+       "en": "If there is a long break mid-pour, write down the times. That is your evidence of a cold joint."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
+        "en": "BNBC 2020, Part 7 — Construction Practices"
+       },
+       "status": "review"
+      }
+     ],
+     "diagram": "rcc_pour"
+    },
+    {
+     "id": "m4c5",
+     "title": {
+      "bn": "কিউরিং — কীভাবে করতে হয়",
+      "en": "Curing, and how it is actually done"
+     },
+     "body": {
+      "bn": "কিউরিং মানে ঢালাই ভেজা রাখা, যাতে সিমেন্ট ধীরে ধীরে শক্তি পায়। শুকিয়ে গেলে সেই শক্তি আর কখনো ফিরে আসে না — পরে পানি দিলেও না।\n\nছাদ বা মেঝেতে: চারপাশে মাটি বা বালির আলপথ তুলে পানি জমিয়ে রাখা হয় — একে বলে পন্ডিং। পানি যেন সারাক্ষণ থাকে; শুকিয়ে গেলে আবার দিতে হবে।\n\nকলাম, বিম ও দেয়ালে: ভেজা চটের বস্তা জড়িয়ে রাখা হয়, আর দিনে কয়েকবার পানি দেওয়া হয়। বস্তা শুকিয়ে গেলে কিউরিং হচ্ছে না।\n\nকত দিন: সিমেন্টের ধরন আর আবহাওয়ার উপর নির্ভর করে, আর দপ্তরের স্পেসিফিকেশনে লেখা থাকে। গরমে ও বাতাসে পানি দ্রুত শুকায়, তাই তখন বেশি বার দিতে হয়।",
+      "en": "Curing means keeping a pour wet so the cement can go on gaining strength. Strength lost to early drying never comes back, no matter how much water is added afterwards.\n\nOn a slab or floor: a low bund of earth or sand is raised around the edge and water kept standing on it — ponding. The water has to stay there; once it dries it must be topped up.\n\nOn columns, beams and walls: wet hessian is wrapped around and watered several times a day. If the hessian is dry, no curing is happening.\n\nFor how long: it depends on the cement type and the weather, and the department's specification says. Heat and wind dry it faster, so it needs watering more often, not less."
+     },
+     "watch_for": [
+      {
+       "bn": "সকালে গিয়ে দেখুন — রাতভর পানি ছিল কি না তখনই বোঝা যায়।",
+       "en": "Go in the morning. That is when you can tell whether it stayed wet overnight."
+      },
+      {
+       "bn": "শুকনা চটের বস্তা মানে কিউরিং হচ্ছে না — বস্তা থাকলেই হলো না।",
+       "en": "Dry hessian means no curing. The sacking being there is not the point."
+      },
+      {
+       "bn": "পরপর কয়েক দিনের ছবিই সবচেয়ে শক্ত প্রমাণ।",
+       "en": "Photographs on consecutive days are the strongest evidence there is."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
+        "en": "BNBC 2020, Part 7 — Construction Practices"
+       },
+       "status": "review"
+      }
+     ],
+     "diagram": "curing"
+    },
+    {
+     "id": "m4c6",
+     "title": {
+      "bn": "প্লাস্টার — কীভাবে হওয়ার কথা",
+      "en": "Plaster, and how it should be done"
+     },
+     "body": {
+      "bn": "আগে প্রস্তুতি। গাঁথুনির জোড়া থেকে বাড়তি মসলা চেঁছে ফেলা হয়, পৃষ্ঠ পরিষ্কার করা হয়, আর প্লাস্টারের আগের দিন ও ঠিক আগে ভিজিয়ে নেওয়া হয়। শুকনা দেয়ালে প্লাস্টার করলে দেয়াল মসলার পানি টেনে নেয়, আর প্লাস্টার ঝুরঝুরে হয়ে যায়।\n\nসমান পুরুত্বের জন্য দেয়ালে কয়েক জায়গায় ছোট ছোট গাইড (থাই বা পাটি) বসানো হয়, তারপর তার সমান করে প্লাস্টার টানা হয়। গাইড ছাড়া করলে কোথাও পাতলা কোথাও মোটা হয়।\n\nপুরুত্ব: ভেতরের দেয়ালে সাধারণত আধা ইঞ্চি, বাইরের দেয়ালে তিন-চতুর্থাংশ ইঞ্চি, ছাদের নিচে আরও পাতলা — তবে নির্দিষ্ট মাপ স্পেসিফিকেশনে থাকে।\n\nএবং প্লাস্টারেও কিউরিং লাগে। শেষ হওয়ার পর কয়েক দিন পানি না দিলে চুল-ফাটল ধরবেই।",
+      "en": "Preparation first. The joints of the masonry are raked out, the surface cleaned, and the wall wetted the day before and again just before work starts. Plaster on a dry wall loses its water into the wall and goes powdery.\n\nTo keep the thickness even, small guide patches are set on the wall and the plaster is then screeded flush with them. Without guides it ends up thick in places and thin in others.\n\nThickness: an inner wall is usually about half an inch, an outer wall three quarters, a ceiling soffit thinner still — but the specification gives the figure that applies.\n\nAnd plaster needs curing too. Without water for a few days after it is finished, it will craze."
+     },
+     "watch_for": [
+      {
+       "bn": "দেয়াল ভেজানো হয়েছে কি না — প্লাস্টার শুরুর আগে দেখুন।",
+       "en": "Was the wall wetted? Check before the plastering starts."
+      },
+      {
+       "bn": "গাইড আছে কি না দেখুন। না থাকলে পুরুত্ব সমান হবে না, আর বিলে কিন্তু পূর্ণ পুরুত্বের টাকা যাবে।",
+       "en": "Look for the guide patches. Without them the thickness will not be even, though the bill will be for the full thickness."
+      },
+      {
+       "bn": "কিনারায় ফিতা বসিয়ে পুরুত্ব মাপা যায় — দরজার চৌকাঠের পাশে সবচেয়ে সহজ।",
+       "en": "Thickness can be measured at an edge — beside a door frame is easiest."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
+        "en": "BNBC 2020, Part 7 — Construction Practices"
+       },
+       "status": "review"
+      }
+     ],
+     "diagram": "plaster"
+    }
+   ]
+  },
+  {
+   "id": "m5_rebar",
+   "code": "M5",
+   "track": "both",
+   "icon": "rebar",
+   "title": {
+    "bn": "রড ও ঢালাইয়ের ভেতর",
+    "en": "Inside the concrete"
+   },
+   "summary": {
+    "bn": "গুনতে পারলেই হবে। ডিজাইন বোঝার দরকার নেই — সংখ্যা, দূরত্ব আর ঢাকনা মিলিয়ে দেখুন।",
+    "en": "You only need to count. You do not need to understand the design — check number, spacing and cover against the drawing."
+   },
+   "cards": [
+    {
+     "id": "m5c1",
+     "title": {
+      "bn": "রড গুনুন, দূরত্ব মাপুন",
+      "en": "Count the bars, measure the spacing"
+     },
+     "body": {
+      "bn": "নকশায় লেখা থাকে কয়টা রড আর কত দূরত্বে। ঢালাইয়ের আগে সেটা মেলানো যায় — গুনতে ইঞ্জিনিয়ার লাগে না। ছাদের রডের জালিতে দুই রডের মাঝের ফাঁক ফিতা দিয়ে মাপুন। ফাঁক বেশি মানে রড কম, আর রড কম মানে ঐ টাকা কোথাও গেছে।",
+      "en": "The drawing says how many bars and at what spacing. Before the pour, that can be checked — counting takes no engineer. Put a tape across the mesh and measure the gap between bars. A bigger gap means fewer bars, and fewer bars means the money for them went somewhere."
+     },
+     "watch_for": [
+      {
+       "bn": "রড বাঁধা শেষ, ঢালাই শুরুর আগে — এই সময়টাই একমাত্র সুযোগ।",
+       "en": "After tying, before pouring. That window is the only chance."
+      },
+      {
+       "bn": "নকশা দেখতে চান। না দেখালে সেটাও রিপোর্টে লিখুন।",
+       "en": "Ask to see the drawing. If it is refused, record that too."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৬ — রিইনফোর্সমেন্ট ডিটেইলিং",
+        "en": "BNBC 2020, Part 6 — reinforcement detailing"
+       },
+       "status": "review"
+      }
+     ]
+    },
+    {
+     "id": "m5c2",
+     "title": {
+      "bn": "কভার ব্লক",
+      "en": "Cover blocks"
+     },
+     "body": {
+      "bn": "রড কংক্রিটের ভেতরে থাকতে হয়, একদম কিনারায় নয়। রড আর বাইরের পৃষ্ঠের মাঝের এই দূরত্বকে বলে কভার। কভার কম হলে বাতাস ও পানি রডে পৌঁছে যায়, রডে মরিচা ধরে, কংক্রিট ফুলে ফেটে যায় — কয়েক বছরেই। ঠিক রাখার জন্য রডের নিচে ছোট সিমেন্টের ব্লক দেওয়া হয়। ইটের টুকরা দিয়ে কাজ চালানো হলে সেটা সমস্যা।",
+      "en": "Steel has to sit inside the concrete, not at its edge. The distance from the bar to the outer surface is the cover. Too little and air and water reach the steel, it rusts, and the concrete spalls — within a few years. Small cement blocks under the bars keep the cover right. Broken brick used instead is a defect."
+     },
+     "watch_for": [
+      {
+       "bn": "কভার ব্লক আছে কি না, আর সেগুলো সিমেন্টের না ইটের টুকরা — ছবি তুলুন।",
+       "en": "Check that cover blocks exist and whether they are cement or brick chips. Photograph it."
+      },
+      {
+       "bn": "কত কভার লাগবে তা কোন অংশ ও কী পরিবেশ তার উপর নির্ভর করে — নকশা দেখুন।",
+       "en": "How much cover depends on the member and the exposure — read it off the drawing."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৬ — কংক্রিট কভার",
+        "en": "BNBC 2020, Part 6 — concrete cover"
+       },
+       "status": "review"
+      }
+     ],
+     "diagram": "cover_block"
+    },
+    {
+     "id": "m5c3",
+     "title": {
+      "bn": "ল্যাপ ও রিং",
+      "en": "Laps and stirrups"
+     },
+     "body": {
+      "bn": "রড লম্বায় কম পড়লে দুটো রড পাশাপাশি রেখে বাঁধা হয় — একে বলে ল্যাপ। ল্যাপ কত লম্বা হবে তা নিয়ম দিয়ে ঠিক করা, চোখের আন্দাজে নয়, আর কিছু জায়গায় ল্যাপ দেওয়াই নিষেধ। কলাম ও বিমে চারপাশে যে রিং (স্টিরাপ) থাকে, সেগুলো ঠেকনার কাছাকাছি ঘন হওয়ার কথা। রিং ফাঁক ফাঁক হলে ভূমিকম্পে সেটাই আগে ভাঙে।",
+      "en": "When a bar is not long enough, two are overlapped and tied — a lap. How long the lap must be is set by rule, not by eye, and in some locations laps are not allowed at all. The rings (stirrups) around a column or beam are meant to be closer together near the supports. Widely spaced rings are what fail first in an earthquake."
+     },
+     "watch_for": [
+      {
+       "bn": "সব ল্যাপ এক জায়গায় জড়ো হয়ে থাকলে প্রশ্ন করুন।",
+       "en": "If all the laps are bunched at the same section, ask about it."
+      },
+      {
+       "bn": "কলামের গোড়ায় ও মাথায় রিং ঘন আছে কি না দেখুন।",
+       "en": "Check that stirrups are closer together at the top and bottom of a column."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৬ — ল্যাপ ও ডেভেলপমেন্ট লেংথ",
+        "en": "BNBC 2020, Part 6 — lap and development length"
+       },
+       "status": "review"
+      }
+     ]
+    },
+    {
+     "id": "m5c4",
+     "title": {
+      "bn": "রড বাঁধা — কেমন দেখতে হওয়ার কথা",
+      "en": "Rod binding, and what it should look like"
+     },
+     "body": {
+      "bn": "রড শুধু রাখলেই হয় না, বাঁধতে হয় — নইলে ঢালাইয়ের সময় নড়ে যায় আর জায়গা বদলে যায়।\n\nজালিতে: প্রতিটি ক্রসিং-এ বা এক ঘর পরপর সরু বাঁধন তার দিয়ে বাঁধা হয়। বাঁধন আলগা হলে হাত দিলেই নড়ে — সেটাই পরীক্ষা।\n\nকলাম ও বিমে: চারপাশের রিং (স্টিরাপ) মূল রডের সঙ্গে বাঁধা থাকে, আর রিংয়ের দুই মাথা ভেতরের দিকে বাঁকানো থাকে — একে বলে হুক। হুক বাইরের দিকে থাকলে বা না থাকলে ভূমিকম্পে রিং খুলে যায়।\n\nরিংয়ের ঘনত্ব: কলামের গোড়ায় ও মাথায়, আর বিমের দুই প্রান্তে রিং ঘন থাকার কথা — মাঝখানে ফাঁক বেশি চলে। এটাই সবচেয়ে সহজে চোখে পড়ে।\n\nকভার ব্লক: রডের নিচে ও পাশে ছোট সিমেন্টের ব্লক, যাতে রড ফর্মা ছুঁয়ে না থাকে। ইটের টুকরা দিয়ে কাজ চালানো চলবে না।",
+      "en": "Steel is not just laid, it is tied — otherwise it shifts during the pour and ends up somewhere else.\n\nIn a mesh: the crossings are tied with binding wire, every one or every alternate one. If the mesh moves when you press it, the tying is loose. That is the test.\n\nIn columns and beams: the rings around the main bars are tied to them, and each ring's two ends are bent inwards — the hook. Hooks turned outwards, or missing, let the ring open in an earthquake.\n\nRing spacing: they should be closer together at the top and bottom of a column and at both ends of a beam, and may be wider in the middle. This is the easiest thing of all to see.\n\nCover blocks: small cement blocks under and beside the steel so no bar touches the formwork. Broken brick used instead will not do."
+     },
+     "watch_for": [
+      {
+       "bn": "জালিতে হাত দিয়ে চাপ দিন — নড়লে বাঁধন আলগা।",
+       "en": "Press the mesh with your hand. If it moves, the tying is loose."
+      },
+      {
+       "bn": "কলামের গোড়ার দিকে রিং ঘন আছে কি না — এক নজরেই বোঝা যায়, আর ছবিতেও ধরা পড়ে।",
+       "en": "Whether the rings tighten up near the foot of a column takes one glance, and it shows in a photograph."
+      },
+      {
+       "bn": "রিংয়ের মাথা ভেতরের দিকে বাঁকানো কি না দেখুন।",
+       "en": "Check that the ring ends are bent inwards."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৬ — রিইনফোর্সমেন্ট ডিটেইলিং",
+        "en": "BNBC 2020, Part 6 — reinforcement detailing"
+       },
+       "status": "review"
+      }
+     ],
+     "diagram": "rod_binding"
+    }
+   ]
+  },
+  {
+   "id": "m11_contract",
+   "code": "M11",
+   "track": "private",
+   "icon": "handshake",
+   "title": {
+    "bn": "ঠিকাদারের সঙ্গে চুক্তি",
+    "en": "Your contract with the builder"
+   },
+   "summary": {
+    "bn": "মুখের কথায় বাড়ি হয় না। কী লিখে রাখবেন, টাকা কীভাবে দেবেন, আর কাজ খারাপ হলে কী করবেন।",
+    "en": "A house does not get built on a spoken promise. What to put in writing, how to release money, and what to do when the work is bad."
+   },
+   "cards": [
+    {
+     "id": "m11c1",
+     "title": {
+      "bn": "লিখিত চুক্তি ছাড়া শুরু করবেন না",
+      "en": "Do not start without it in writing"
+     },
+     "body": {
+      "bn": "রাজমিস্ত্রি বা ঠিকাদারের সঙ্গে বেশির ভাগ ঝগড়া হয় একটাই কারণে — কী কথা হয়েছিল তা কোথাও লেখা নেই। সাদা কাগজে দুই পক্ষের সই থাকলেই সেটা কাজে দেয়; স্ট্যাম্প বা উকিল লাগে না। যা লিখবেন: কাজের বিবরণ ও পরিমাণ, প্রতি বর্গফুট বা মোট দর, কোন মালামাল কে দেবে (আপনি না ঠিকাদার), মালের ব্র্যান্ড ও গ্রেড, শুরু ও শেষের তারিখ, টাকা দেওয়ার ধাপ, আর দেরি হলে কী হবে।",
+      "en": "Almost every fight with a mason or contractor comes from the same place: nothing was written down. A plain sheet of paper signed by both sides is enough — you do not need stamp paper or a lawyer. Put in: the scope and quantity, the rate per square foot or the total, who supplies which materials (you or them), the brand and grade of those materials, start and finish dates, the payment stages, and what happens if it runs late."
+     },
+     "watch_for": [
+      {
+       "bn": "মালামাল কে কিনবে — এই একটা লাইন না থাকলে পরে সবচেয়ে বেশি ঝামেলা হয়।",
+       "en": "Who buys the materials: leaving this line out causes more trouble later than anything else."
+      },
+      {
+       "bn": "দুই কপি করুন, দুজনেই সই করুন, একটা আপনার কাছে রাখুন।",
+       "en": "Two copies, both signed, one stays with you."
+      }
+     ],
+     "citations": []
+    },
+    {
+     "id": "m11c2",
+     "title": {
+      "bn": "টাকা ধাপে ধাপে দিন",
+      "en": "Release the money in stages"
+     },
+     "body": {
+      "bn": "আগাম পুরো টাকা দিয়ে দিলে আপনার হাতে আর কিছু থাকে না। টাকা ভাগ করুন কাজের ধাপ ধরে — ভিত শেষে, ছাদ ঢালাই শেষে, গাঁথুনি শেষে, প্লাস্টার শেষে, ফিনিশিং শেষে। প্রতিটি ধাপের টাকা দেওয়ার আগে ঐ ধাপটা নিজে দেখে নিন। শেষ কিস্তির একটা অংশ (সাধারণত ৫–১০%) কাজ বুঝে নেওয়ার কিছুদিন পর পর্যন্ত ধরে রাখুন — ফাটল বা লিক ধরা পড়লে ওটাই আপনার একমাত্র হাতিয়ার।",
+      "en": "Pay everything up front and you have nothing left to hold. Split the money by stage — foundation done, slab cast, walls up, plaster done, finishing done — and inspect each stage before you release its payment. Hold back part of the last instalment (5–10% is usual) for a while after handover: if a crack or a leak shows up, that retention is the only leverage you have."
+     },
+     "watch_for": [
+      {
+       "bn": "প্রতিটি কিস্তির তারিখ ও অঙ্ক লিখে রাখুন, ঠিকাদারের সই নিন।",
+       "en": "Write down the date and amount of every instalment and get it signed."
+      },
+      {
+       "bn": "মালামাল আপনি কিনলে বিল ও চালান জমিয়ে রাখুন।",
+       "en": "If you buy the materials, keep every bill and delivery slip."
+      }
+     ],
+     "citations": []
+    },
+    {
+     "id": "m11c3",
+     "title": {
+      "bn": "কাজ খারাপ হলে কী করবেন",
+      "en": "When the work is bad"
+     },
+     "body": {
+      "bn": "প্রথমে সাইটেই ছবি তুলুন, তারিখসহ। তারপর ঠিকাদারকে লিখিতভাবে জানান — খুদে বার্তা বা হোয়াটসঅ্যাপও লিখিত প্রমাণ, তাই মুছবেন না। কী ঠিক করতে হবে আর কত দিনের মধ্যে, সেটা স্পষ্ট লিখুন। না মানলে চুক্তি অনুযায়ী টাকা আটকান, আর স্থানীয়ভাবে মীমাংসার চেষ্টা করুন। তাতেও না হলে দেওয়ানি প্রতিকার আছে — টাকা না থাকলে জেলা লিগ্যাল এইড অফিস বিনা খরচে আইনি সহায়তা দেয়।",
+      "en": "Photograph it on site first, with the date. Then tell the contractor in writing — an SMS or WhatsApp message is written evidence too, so do not delete it. Say plainly what must be fixed and by when. If they refuse, withhold payment as the contract allows and try to settle locally. If that fails the remedy is civil, and if money is the obstacle the District Legal Aid Office provides legal aid free of charge."
+     },
+     "watch_for": [
+      {
+       "bn": "ঝগড়ার আগে ছবি। ছবি ছাড়া পরে কিছুই প্রমাণ করা যায় না।",
+       "en": "Photographs before the argument. Without them nothing can be shown afterwards."
+      },
+      {
+       "bn": "জাতীয় আইনি সহায়তা হেল্পলাইন ১৬৪৩০ — টোল ফ্রি।",
+       "en": "National legal aid helpline 16430 — toll free."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "জাতীয় আইনগত সহায়তা প্রদান সংস্থা (NLASO), হেল্পলাইন ১৬৪৩০",
+        "en": "National Legal Aid Services Organisation (NLASO), helpline 16430"
+       },
+       "url": "https://nlaso.portal.gov.bd",
+       "status": "verified"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "m8_rights",
+   "code": "M8",
+   "track": "government",
+   "icon": "rights",
+   "title": {
+    "bn": "আপনার অধিকার",
+    "en": "Your rights"
+   },
+   "summary": {
+    "bn": "সরকারি কাজ দেখা আপনার অধিকার। কী করতে পারেন আর কী পারেন না — দুটোই জেনে রাখুন।",
+    "en": "Watching a public work is your right. Know both halves: what you may do, and what you may not."
+   },
+   "cards": [
+    {
+     "id": "m8c1",
+     "title": {
+      "bn": "সাইটে আপনি কী করতে পারেন",
+      "en": "What you may do at a site"
+     },
+     "body": {
+      "bn": "পারেন: রাস্তা বা প্রকাশ্য জায়গা থেকে কাজ দেখা ও ছবি তোলা, সাইনবোর্ডের তথ্য নেওয়া, তদারককারী কর্মকর্তার নাম-পদবি জানতে চাওয়া, ইউনিয়ন পরিষদে স্কিম তালিকা চাওয়া, ওয়ার্ড সভায় গিয়ে প্রশ্ন করা, RTI আবেদনে কাগজ চাওয়া। পারেন না: কাজ বন্ধ করে দেওয়া, মালামাল আটকানো, নিরাপত্তা ঘেরার ভেতরে ঢুকে পড়া, শ্রমিকদের সঙ্গে হাতাহাতি। কাজ বন্ধ করার ক্ষমতা কর্তৃপক্ষের, আপনার নয় — আপনার ক্ষমতা তথ্য ও অভিযোগে।",
+      "en": "You may: watch and photograph from a road or public space; take down what is on the signboard; ask for the supervising officer's name and designation; ask the Union Parishad for the scheme list; raise it at the Ward Shava; and ask for documents under RTI. You may not: stop the work, seize materials, walk inside a safety barrier, or get into a confrontation with workers. Stopping work is the authority's power, not yours. Yours is information and complaint."
+     },
+     "watch_for": [
+      {
+       "bn": "একা নয়, কয়েকজন মিলে যান। দলবদ্ধ পর্যবেক্ষণ নিরাপদ এবং বেশি কার্যকর।",
+       "en": "Go as a group, not alone. Group monitoring is safer and works better."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "DIMAPPP নাগরিক পর্যবেক্ষণ মডেল — ৯ সদস্যের নাগরিক দল",
+        "en": "DIMAPPP citizen monitoring model — nine-member citizen groups"
+       },
+       "url": "https://bigd.bracu.ac.bd/all-projects/digitizing-implementation-monitoring-and-public-procurement-project/about-2/",
+       "status": "verified"
+      }
+     ]
+    },
+    {
+     "id": "m8c2",
+     "title": {
+      "bn": "তথ্য অধিকার আইন ২০০৯",
+      "en": "The Right to Information Act 2009"
+     },
+     "body": {
+      "bn": "যেকোনো নাগরিক লিখিত আবেদন করে সরকারি দপ্তরের তথ্য চাইতে পারেন। আবেদন যায় ঐ দপ্তরের দায়িত্বপ্রাপ্ত কর্মকর্তার কাছে। আইন অনুযায়ী ২০ কার্যদিবসের মধ্যে তথ্য দিতে হয়; না দিলে ১০ কার্যদিবসের মধ্যে কারণ জানিয়ে জানাতে হয়। না পেলে বা সিদ্ধান্তে অসন্তুষ্ট হলে ৩০ দিনের মধ্যে আপিল করা যায়, আপিল কর্তৃপক্ষ ১৫ দিনের মধ্যে সিদ্ধান্ত দেয়। ফি নেওয়া যায় শুধু প্রকৃত খরচ পর্যন্ত। নির্মাণকাজে যেটা চাইবেন: অনুমিত হিসাব, BoQ, কার্যাদেশ, পরিমাপ বই ও পরিশোধিত বিলের কপি।",
+      "en": "Any citizen may ask a public office for information in writing. The application goes to that office's Designated Officer. The Act requires the information within 20 working days; a refusal must come with reasons within 10 working days. If nothing comes, or the decision is unsatisfactory, you may appeal within 30 days, and the appellate authority decides within 15 days. Fees are limited to actual cost. For a construction work, ask for: the estimate, the BoQ, the work order, the measurement book and copies of bills paid."
+     },
+     "watch_for": [
+      {
+       "bn": "আবেদনে টেন্ডার আইডি ও কাজের নাম লিখুন — নির্দিষ্ট আবেদন এড়ানো কঠিন।",
+       "en": "Put the tender ID and the work's name in the application. A specific request is harder to dodge."
+      },
+      {
+       "bn": "আবেদনের একটা কপি নিজের কাছে রাখুন, প্রাপ্তি স্বীকার নিন।",
+       "en": "Keep a copy and get an acknowledgement of receipt."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "তথ্য অধিকার আইন ২০০৯",
+        "en": "Right to Information Act 2009"
+       },
+       "clause": {
+        "bn": "ধারা ৯ ও ২৪",
+        "en": "Sections 9 and 24"
+       },
+       "url": "http://bdlaws.minlaw.gov.bd/upload/act/2021-11-17-11-22-38-37.-The-Right-to-Information-Act-2009.pdf",
+       "status": "verified"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "m9_complain",
+   "code": "M9",
+   "track": "government",
+   "icon": "complaint",
+   "title": {
+    "bn": "অভিযোগ",
+    "en": "Complaining, and making it stick"
+   },
+   "summary": {
+    "bn": "অভিযোগ টিকে থাকে প্রমাণে, রাগে নয়। কী লিখবেন, কোথায় পাঠাবেন, কোন ক্রমে — সেটাই এখানে।",
+    "en": "A complaint survives on evidence, not on anger. What to write, where to send it, and in what order."
+   },
+   "cards": [
+    {
+     "id": "m9c1",
+     "title": {
+      "bn": "অভিযোগে যা যা থাকতে হবে",
+      "en": "What a complaint must contain"
+     },
+     "body": {
+      "bn": "পাঁচটা জিনিস: এক, কোন কাজ — নাম, স্থান, টেন্ডার আইডি। দুই, কী দেখেছেন — তারিখ ও সময়সহ। তিন, নিয়মে কী থাকার কথা ছিল। চার, ছবি বা মাপ। পাঁচ, আপনি কী চান — তদন্ত, সংশোধন, নাকি কাজ থামানো। 'কাজ খারাপ হচ্ছে' লিখলে ফাইল বন্ধ হয়ে যায়; '১২ জুলাই সকাল ৯টায় দেখলাম ছাদের ঢালাইয়ের পর তিন দিন কোনো পানি দেওয়া হয়নি' লিখলে হয় না।",
+      "en": "Five things. One: which work — name, location, tender ID. Two: what you saw, with date and time. Three: what the rule required. Four: a photograph or a measurement. Five: what you are asking for — an inspection, a correction, or a stop. 'The work is bad' closes a file. 'On 12 July at 9 am the slab had gone three days without any watering' does not."
+     },
+     "watch_for": [
+      {
+       "bn": "অভিযোগে ব্যক্তিকে দোষারোপ নয়, ঘটনার বর্ণনা দিন। বর্ণনা প্রমাণযোগ্য, অভিযোগ নয়।",
+       "en": "Describe the event, do not accuse a person. A description can be verified; an accusation invites a fight."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "DIMAPPP নাগরিক অভিযোগ ব্যবস্থাপনা — ৪৪৩টি অভিযোগের ৪০৯টি নিষ্পত্তি",
+        "en": "DIMAPPP grievance management — 409 of 443 citizen complaints resolved"
+       },
+       "url": "https://bigd.bracu.ac.bd/all-projects/digitizing-implementation-monitoring-and-public-procurement-project/about-2/",
+       "status": "verified"
+      }
+     ]
+    },
+    {
+     "id": "m9c2",
+     "title": {
+      "bn": "কোথায় পাঠাবেন, কোন ক্রমে",
+      "en": "Where to send it, in what order"
+     },
+     "body": {
+      "bn": "নিচ থেকে শুরু করুন। প্রথমে তদারককারী প্রকৌশলী বা ইউনিয়ন পরিষদ। না হলে উপজেলা প্রকৌশলী ও উপজেলা নির্বাহী অফিসার। তারপর নির্বাহী প্রকৌশলী। এরপর অভিযোগ প্রতিকার ব্যবস্থা — grs.gov.bd বা ৩৩৩ নম্বরে ফোন। দুর্নীতির সুনির্দিষ্ট অভিযোগ হলে দুর্নীতি দমন কমিশন। উপরে গিয়ে অভিযোগ করলে সাধারণত নিচেই ফেরত আসে, তাই ক্রম মেনে চলা দ্রুততর।",
+      "en": "Start at the bottom. First the supervising engineer or the Union Parishad. If that goes nowhere, the Upazila Engineer and the UNO. Then the Executive Engineer. Then the Grievance Redress System — grs.gov.bd or the 333 call centre. For a specific allegation of corruption, the Anti-Corruption Commission. A complaint fired at the top usually comes back down, so working up the ladder is actually faster."
+     },
+     "watch_for": [
+      {
+       "bn": "প্রতিটি ধাপে তারিখ ও কার কাছে দিলেন লিখে রাখুন।",
+       "en": "Record the date and the recipient at every step."
+      },
+      {
+       "bn": "৩৩৩ নম্বরে ফোন করলে সামনাসামনি সংঘাত এড়ানো যায়।",
+       "en": "Calling 333 avoids a face-to-face confrontation."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "অভিযোগ প্রতিকার ব্যবস্থা (GRS), মন্ত্রিপরিষদ বিভাগ",
+        "en": "Grievance Redress System (GRS), Cabinet Division"
+       },
+       "url": "https://www.grs.gov.bd/",
+       "status": "verified"
+      }
+     ]
+    },
+    {
+     "id": "m9c3",
+     "title": {
+      "bn": "নিরাপদে থাকুন",
+      "en": "Stay safe"
+     },
+     "body": {
+      "bn": "স্থানীয়ভাবে প্রভাবশালী কারও কাজ নিয়ে প্রশ্ন তোলা ঝুঁকিমুক্ত নয় — এটা লুকানোর দরকার নেই। কয়েকটা সহজ নিয়ম ঝুঁকি কমায়: একা না গিয়ে দল বেঁধে যান; সাইটে তর্ক না করে লিখিত অভিযোগে যান; ছবি তুলুন দূর থেকে ও প্রকাশ্য জায়গা থেকে; পরিচয় গোপন রাখতে চাইলে ৩৩৩ বা GRS ব্যবহার করুন; স্থানীয় সাংবাদিক বা টিআইবির সচেতন নাগরিক কমিটির সঙ্গে যোগাযোগ রাখুন। নিজের নিরাপত্তা কোনো রিপোর্টের চেয়ে বড়।",
+      "en": "Questioning the work of someone locally powerful is not risk-free, and there is no point pretending otherwise. A few habits reduce the risk: go as a group, not alone; take it to a written complaint rather than an argument on site; photograph from a distance and from public ground; use 333 or GRS if you would rather not be identified; and stay in touch with a local journalist or a TIB citizens' committee. Your safety outranks any report."
+     },
+     "watch_for": [
+      {
+       "bn": "হুমকি পেলে সেটাও আলাদা অভিযোগ — থানায় সাধারণ ডায়েরি করুন।",
+       "en": "A threat is itself a separate complaint — file a General Diary at the police station."
+      }
+     ],
+     "citations": []
+    }
+   ]
+  },
+  {
+   "id": "m10_safety",
+   "code": "M10",
+   "track": "both",
+   "icon": "safety",
+   "title": {
+    "bn": "নিরাপত্তা",
+    "en": "Safety"
+   },
+   "summary": {
+    "bn": "যে শ্রমিক কাজ করছেন আর যে পথচারী পাশ দিয়ে যাচ্ছেন — দুজনের জন্যই।",
+    "en": "For the worker on the job and the neighbour walking past."
+   },
+   "cards": [
+    {
+     "id": "m10c1",
+     "title": {
+      "bn": "মাটি কাটার গর্ত",
+      "en": "Excavations"
+     },
+     "body": {
+      "bn": "গভীর গর্তের পাশ ধসে পড়ে প্রতি বছর মানুষ মারা যায়, বিশেষ করে বর্ষায় নরম মাটিতে। গর্তের পাশে ঠেকনা দেওয়া, খোঁড়া মাটি কিনারা থেকে দূরে রাখা, আর ওঠানামার সিঁড়ি বা মই রাখা — এগুলো নিয়ম, দয়া নয়। গর্তের চারপাশে ঘেরা ও রাতে আলো না থাকলে পথচারীও পড়ে যায়।",
+      "en": "The sides of deep excavations collapse and kill people every year, especially in soft monsoon ground. Shoring the sides, keeping spoil back from the edge, and providing a ladder to get in and out are requirements, not favours. Without a barrier and a light at night, passers-by fall in too."
+     },
+     "watch_for": [
+      {
+       "bn": "গর্তের কিনারায় মাটির স্তূপ থাকলে সেটাই ধসের কারণ।",
+       "en": "Spoil heaped at the edge is itself what causes the collapse."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ নিরাপত্তা",
+        "en": "BNBC 2020, Part 7 — construction safety"
+       },
+       "status": "review"
+      }
+     ]
+    },
+    {
+     "id": "m10c2",
+     "title": {
+      "bn": "ভারা ও উঁচুতে কাজ",
+      "en": "Scaffolding and working at height"
+     },
+     "body": {
+      "bn": "বাঁশের ভারা বাংলাদেশে স্বাভাবিক, কিন্তু বাঁধন আলগা, পাটাতন ফাঁকা আর হাতল না থাকলে সেটা দুর্ঘটনার অপেক্ষা। উঁচুতে কাজ করার সময় হেলমেট ও নিরাপত্তা বেল্ট থাকার কথা। বিদ্যুতের তারের কাছে ভারা বাঁধা হলে সেটা আলাদা বিপদ — ভেজা বাঁশ বিদ্যুৎ টানে।",
+      "en": "Bamboo scaffolding is normal in Bangladesh, but loose lashings, gapped platforms and no handrail make it an accident waiting. Helmets and safety belts are required for work at height. Scaffolding tied near a power line is a separate danger — wet bamboo conducts."
+     },
+     "watch_for": [
+      {
+       "bn": "শ্রমিকের হেলমেট আছে কি না — এক নজরেই বোঝা যায়, আর এটা ছবিতে ধরা পড়ে।",
+       "en": "Whether workers have helmets takes one glance, and it shows in a photograph."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "বাংলাদেশ শ্রম আইন ২০০৬ ও BNBC 2020 পার্ট ৭",
+        "en": "Bangladesh Labour Act 2006 and BNBC 2020 Part 7"
+       },
+       "status": "review"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "m12_malpractice",
+   "code": "M12",
+   "track": "government",
+   "icon": "gavel",
+   "title": {
+    "bn": "ঠিকাদারের সাধারণ কারচুপি ও করণীয়",
+    "en": "Common contractor malpractice, and what to do"
+   },
+   "summary": {
+    "bn": "কোন কারচুপি কেমন দেখায়, ঠিকাদারের লাভ কোথায়, আর আপনি ঠিক কী করতে পারেন — প্রতিটার জন্য আলাদা করে।",
+    "en": "What each trick looks like, where the contractor's gain is, and exactly what you can do about it."
+   },
+   "cards": [
+    {
+     "id": "m12c1",
+     "title": {
+      "bn": "মালামাল কম দেওয়া ও গ্রেড বদলে দেওয়া",
+      "en": "Short supply and swapped grades"
+     },
+     "body": {
+      "bn": "কেমন দেখায়: ডেলিভারির সংখ্যা কাজের তুলনায় কম; মাঝপথে সিমেন্ট বা রডের ব্র্যান্ড বদলে যায়; রড আগের চেয়ে সরু দেখায়। লাভ কোথায়: যে গ্রেড কাগজে লেখা আর যেটা সাইটে এলো, দামের পার্থক্যটাই ঠিকাদারের পকেটে যায়। টিআইবির সড়ক খাতের গবেষণায় নিম্নমানের মালামাল আর পরিমাণ কমানো — এই দুটোকেই মান নষ্ট করার প্রধান দুই কৌশল বলা হয়েছে। আপনি যা করবেন: ডেলিভারির দিন ব্র্যান্ড ও ব্যাচ দেখা যায় এমনভাবে ছবি তুলুন, খালি ব্যাগ গুনুন, আর BoQ-র কপি চেয়ে নিন — না দিলে RTI আবেদন করুন।",
+      "en": "What it looks like: fewer deliveries than the work needs, the cement or rod brand changing partway through, bars looking thinner than the last lot. Where the gain is: the price difference between the grade on paper and the grade on site goes into the contractor's pocket. TIB's road-sector study names substandard materials and reduced quantities as the two main ways quality is degraded. What you do: photograph deliveries with the brand and batch visible, count the empty bags, and ask for a copy of the BoQ — and file an RTI application if it is refused."
+     },
+     "watch_for": [
+      {
+       "bn": "ব্র্যান্ড বদল ধরার একমাত্র সময় ডেলিভারির দিন। পরে সব ব্যাগ একরকম দেখায়।",
+       "en": "Delivery day is the only time a brand swap is visible. Afterwards every bag looks the same."
+      },
+      {
+       "bn": "খালি ব্যাগ গোনা সবচেয়ে সহজ হিসাব — অ্যাপের ঢালাই হিসাব দিয়ে মিলিয়ে নিন।",
+       "en": "Counting empty bags is the easiest check there is — set it against the app's concrete calculator."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "টিআইবির সড়ক খাতের গবেষণা, সংবাদমাধ্যমে প্রকাশিত",
+        "en": "TIB road sector study, as reported in the press"
+       },
+       "status": "verified",
+       "url": "https://en.prothomalo.com/bangladesh/z7xt4wnqbg"
+      }
+     ]
+    },
+    {
+     "id": "m12c2",
+     "title": {
+      "bn": "পরিমাণ ও মাপ কমিয়ে দেওয়া",
+      "en": "Cutting quantities and dimensions"
+     },
+     "body": {
+      "bn": "কেমন দেখায়: রাস্তার স্তর পাতলা, প্রস্থ কম, ভিত অগভীর, রড কম বা ফাঁক বেশি, ছাদ পাতলা, কভার কম। লাভ কোথায়: ইস্পাত আর গভীরতাই সবচেয়ে দামি আর সবচেয়ে অদৃশ্য অংশ — এখানে কাটলে লাভ সবচেয়ে বেশি, ধরা পড়ার ঝুঁকি সবচেয়ে কম। আপনি যা করবেন: ঢালাইয়ের আগে রডের জাল, ফাঁক আর কভার ব্লকের ছবি তুলুন ফিতাসহ; স্তর খোলা থাকতে পুরুত্ব মাপুন। ঢেকে গেলে আর কিছুই দেখা যাবে না — সময়টাই সব।",
+      "en": "What it looks like: a thin pavement layer, a narrower road, a shallow foundation, fewer bars or wider spacing, a thin slab, too little cover. Where the gain is: steel and depth are the most expensive and least visible parts of a structure, so cutting them pays best and shows least. What you do: photograph the bar mesh, the spacing and the cover blocks with a tape before the pour, and measure layer thickness while the layer is open. Once it is covered there is nothing to see — the timing is the whole thing."
+     },
+     "watch_for": [
+      {
+       "bn": "রড বাঁধা শেষ, ঢালাই শুরুর আগে — এই কয়েক ঘণ্টাই একমাত্র সুযোগ।",
+       "en": "Tying finished, pour not started: those few hours are the only chance."
+      },
+      {
+       "bn": "পরে ছাদের নিচে খসে পড়া অংশে মরিচা ধরা রড দেখা গেলে বুঝবেন কভার কম ছিল।",
+       "en": "Rusted steel showing through a spalled soffit later tells you the cover was short from the start."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "টিআইবির সড়ক খাতের গবেষণা, সংবাদমাধ্যমে প্রকাশিত",
+        "en": "TIB road sector study, as reported in the press"
+       },
+       "status": "verified",
+       "url": "https://en.prothomalo.com/bangladesh/z7xt4wnqbg"
+      }
+     ]
+    },
+    {
+     "id": "m12c3",
+     "title": {
+      "bn": "না করা কাজের বিল",
+      "en": "Billing for work never done"
+     },
+     "body": {
+      "bn": "কেমন দেখায়: সাইটে কাজ থমকে আছে বা শুরুই হয়নি, অথচ শোনা যাচ্ছে কাজ শেষ ও বিল পরিশোধ হয়ে গেছে। লাভ কোথায়: এটা সরাসরি টাকা তুলে নেওয়া — কাগজে অগ্রগতি লিখে দিলেই হলো। সংবাদমাধ্যমে প্রকাশিত অনুসন্ধানে এলজিইডির একাধিক প্যাকেজে মাঠে কোনো অগ্রগতি না থাকলেও কাগজে ৯০–১০০% অগ্রগতি দেখিয়ে বিলের বড় অংশ পরিশোধের তথ্য এসেছে। আপনি যা করবেন: প্রতি মাসে একই জায়গার তারিখ ও অবস্থানসহ ছবি তুলুন। কাগজের অগ্রগতির বিপরীতে আপনার তারিখওয়ালা ছবিই সবচেয়ে শক্ত জবাব।",
+      "en": "What it looks like: the site is stalled or never started, yet word is that the work is complete and paid. Where the gain is: this is cash taken straight out — someone only has to write the progress down. Press investigations have reported LGED packages with no progress on the ground where 90–100% progress was recorded on paper and most of the bill was paid. What you do: photograph the same spot every month with the date and location on it. Against paper progress, your dated photographs are the strongest answer there is."
+     },
+     "watch_for": [
+      {
+       "bn": "একটা ছবি নয় — পুরো দৈর্ঘ্য হেঁটে দুই প্রান্তের ছবি তুলুন।",
+       "en": "Not one photograph: walk the full length and photograph both ends."
+      },
+      {
+       "bn": "বিল পরিশোধের আগে অভিযোগ করলে কাজ হয়; পরে টাকা ফেরানো অনেক কঠিন।",
+       "en": "A complaint before the bill is paid works; recovering money afterwards is far harder."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "এলজিইডির তিন প্রকল্পে কাজ ছাড়াই বিল — সংবাদমাধ্যমে প্রকাশিত",
+        "en": "Bills paid without work in three LGED projects, as reported in the press"
+       },
+       "status": "review",
+       "url": "https://www.tbsnews.net/bangladesh/corruption/3-lged-road-and-bridge-projects-tk343cr-gone-no-real-work-1237341"
+      }
+     ]
+    },
+    {
+     "id": "m12c4",
+     "title": {
+      "bn": "টেন্ডারে যোগসাজশ",
+      "en": "Collusion in tendering"
+     },
+     "body": {
+      "bn": "কেমন দেখায়: একই এলাকায় ঘুরেফিরে হাতেগোনা কয়েকটা প্রতিষ্ঠানই কাজ পায়; বড় কাজ ভেঙে ছোট ছোট প্যাকেজ করা হয়। লাভ কোথায়: প্রতিযোগিতা বাদ দিয়ে দর ঠিক করে নেওয়া যায়, আর ছোট প্যাকেজে যাচাই কম। সংবাদমাধ্যমে প্রকাশিত হিসাবে এক অর্থবছরে সড়কের অর্ধেকের বেশি কাজ মাত্র পাঁচটি প্রতিষ্ঠান পেয়েছিল। আপনি যা করবেন: এটা সাইটে ধরা যায় না, কাগজে ধরা যায়। সরকারি ক্রয় বাতায়নে (citizen.bppa.gov.bd) নিজের এলাকার কাজগুলো দেখুন — একই নাম বারবার এলে সেটা সাংবাদিক বা টিআইবিকে জানান।",
+      "en": "What it looks like: the same handful of firms keep winning in one area, and large works get split into small packages. Where the gain is: competition is removed and the price is settled in advance, while small packages attract less scrutiny. Press reporting found that in one financial year five firms took more than half of all road contracts. What you do: this cannot be caught on site, only on paper. Look your area's works up on the citizen procurement portal, and if the same name keeps appearing, take it to a journalist or to TIB."
+     },
+     "watch_for": [
+      {
+       "bn": "সাইনবোর্ডের ঠিকাদারের নাম লিখে রাখুন — কয়েকটা কাজের নাম মিলিয়ে দেখলেই ছবিটা পরিষ্কার হয়।",
+       "en": "Write down the contractor's name off each signboard. A few works compared side by side make the picture clear."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "সড়কের ৫১% কাজ পাঁচটি প্রতিষ্ঠানের — সংবাদমাধ্যমে প্রকাশিত",
+        "en": "Five firms took 51% of road contracts, as reported in the press"
+       },
+       "status": "review",
+       "url": "https://en.prothomalo.com/bangladesh/yn713xbf5h"
+      }
+     ]
+    },
+    {
+     "id": "m12c5",
+     "title": {
+      "bn": "দেরি আর পরে খরচ বাড়ানো",
+      "en": "Delay, then raising the cost"
+     },
+     "body": {
+      "bn": "কেমন দেখায়: মাসের পর মাস সাইট ফাঁকা, যন্ত্রপাতি পড়ে আছে; তারপর শোনা যায় খরচ বেড়ে গেছে। লাভ কোথায়: কম দরে কাজ নিয়ে পরে ভেরিয়েশন বা মূল্যবৃদ্ধির দাবি তুললে কর্তৃপক্ষের হাতে বিকল্প কম থাকে। বিশ্বব্যাংকের মূল্যায়নে বলা হয়েছে, বাংলাদেশে প্রায় ৭০ শতাংশ চুক্তি সময়মতো শেষ হয় না। আপনি যা করবেন: সাইনবোর্ডের শেষ তারিখ লিখে রাখুন, আর তারিখ পার হওয়ার পর নির্দিষ্ট করে লিখুন — 'কাজ ৩ মাস আগে শেষ হওয়ার কথা ছিল, আজও হয়নি'। অস্পষ্ট 'দেরি হচ্ছে' লিখলে ফাইল বন্ধ হয়ে যায়।",
+      "en": "What it looks like: months with an empty site and idle plant, and then word that the cost has gone up. Where the gain is: take the work cheap, then raise variation or escalation claims when the authority has little choice left. The World Bank's assessment found that around 70 per cent of contracts in Bangladesh are not completed on time. What you do: write down the completion date from the signboard, and once it passes put it precisely — 'this was due three months ago and is still not done'. A vague 'it is late' closes a file."
+     },
+     "watch_for": [
+      {
+       "bn": "চুক্তিতে দেরির জন্য জরিমানার বিধান থাকে। জরিমানা আদায় হয়েছে কি না, সেটাও RTI-তে চাওয়া যায়।",
+       "en": "Contracts carry penalties for delay. Whether the penalty was actually charged is itself something you can ask for under RTI."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "বিশ্বব্যাংক, বাংলাদেশের সরকারি ক্রয় ব্যবস্থার মূল্যায়ন, ২০২০",
+        "en": "World Bank, Assessment of Bangladesh Public Procurement System, 2020"
+       },
+       "status": "verified",
+       "url": "https://documents1.worldbank.org/curated/en/950811591599744079/pdf/Assessment-of-Bangladesh-Public-Procurement-System.pdf"
+      }
+     ]
+    },
+    {
+     "id": "m12c6",
+     "title": {
+      "bn": "অভিযোগের আসল পথ — যেটা অনেকেই জানে না",
+      "en": "Where a citizen complaint actually goes"
+     },
+     "body": {
+      "bn": "সরকারি ক্রয় আইনে অভিযোগ ও আপিলের যে ব্যবস্থা আছে, সেটা মূলত দরপত্রে অংশ নেওয়া ঠিকাদারদের জন্য — চুক্তি সই হয়ে যাওয়ার পর সেখানে অভিযোগ করা যায় না। অর্থাৎ নির্মাণকাজের মান নিয়ে সাধারণ নাগরিকের অভিযোগের জন্য ঐ পথটা খোলা নেই। যে পথগুলো সত্যিই খোলা: এক, সংশ্লিষ্ট দপ্তরে লিখিত অভিযোগ — একমাত্র এখানেই বিল আটকানোর ক্ষমতা আছে। দুই, তথ্য অধিকার আবেদন করে অনুমিত হিসাব, BoQ ও পরিমাপ বই চাওয়া। তিন, সরকারি ক্রয় বাতায়নে পর্যবেক্ষণ তোলা। চার, আর্থিক অনিয়মের সুনির্দিষ্ট অভিযোগ হলে দুদকের হটলাইন ১০৬ — পরিচয় গোপন রাখা হয়।",
+      "en": "The complaint and appeal machinery in the procurement law is built for bidders, and a complaint cannot be filed there once the contract is signed. So for a citizen complaining about the quality of construction, that route is closed. The routes that are open: first, a written complaint to the department concerned — the only place with the power to hold a bill. Second, an RTI application for the estimate, the BoQ and the measurement book. Third, posting your observation on the citizen procurement portal. Fourth, for a specific allegation of financial irregularity, the Anti-Corruption Commission hotline 106, where the complainant's identity is kept confidential."
+     },
+     "watch_for": [
+      {
+       "bn": "দুদক হটলাইন ১০৬ — কর্মদিবসে, পরিচয় গোপন রাখা হয়।",
+       "en": "ACC hotline 106, on working days, with the caller's identity kept confidential."
+      },
+      {
+       "bn": "একসঙ্গে একাধিক জায়গায় পাঠান। এক অফিসে আটকে গেলেও বাকিগুলোতে রেকর্ড থেকে যায়।",
+       "en": "Send it to several places at once. If one office buries it, the record still exists elsewhere."
+      }
+     ],
+     "citations": [
+      {
+       "source": {
+        "bn": "বিশ্বব্যাংক, বাংলাদেশের সরকারি ক্রয় ব্যবস্থার মূল্যায়ন, ২০২০",
+        "en": "World Bank, Assessment of Bangladesh Public Procurement System, 2020"
+       },
+       "status": "verified",
+       "url": "https://documents1.worldbank.org/curated/en/950811591599744079/pdf/Assessment-of-Bangladesh-Public-Procurement-System.pdf"
+      },
+      {
+       "source": {
+        "bn": "দুদক হটলাইন ১০৬ — সংবাদমাধ্যমে প্রকাশিত",
+        "en": "ACC hotline 106, as reported in the press"
+       },
+       "status": "verified",
+       "url": "https://www.thedailystar.net/country/bangladesh-anti-corruption-hotline-number-gets-75000-calls-first-week-1443028"
+      }
+     ]
+    }
+   ]
+  }
+ ]
 }

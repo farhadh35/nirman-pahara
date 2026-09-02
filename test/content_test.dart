@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nirman_pahara/core/content/checklist_models.dart';
 import 'package:nirman_pahara/core/content/content_repository.dart';
+import 'package:nirman_pahara/features/guide/diagrams/guide_diagrams.dart';
 import 'package:nirman_pahara/core/content/models.dart';
 import 'package:nirman_pahara/core/content/rights_models.dart';
 import 'package:nirman_pahara/core/i18n/app_locale.dart';
@@ -58,7 +59,7 @@ void main() {
     test('every diagram key a card names is one the app can draw', () async {
       // A card pointing at a diagram that does not exist would render as a
       // silent gap where an explanation should be.
-      const known = {'rod_binding', 'curing', 'plaster', 'rcc_pour'};
+      const known = kGuideDiagramKeys;
       for (final m in (await repo.guide()).modules) {
         for (final c in m.cards) {
           if (c.diagram == null) continue;

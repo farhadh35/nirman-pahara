@@ -66,12 +66,27 @@ Size paintLabel(
     ),
     textDirection: TextDirection.ltr,
     textAlign: align,
-  )..layout(maxWidth: maxWidth);
+    // A caller working in fractions of the canvas can hand this a negative
+    // width on a very small one, and TextPainter asserts rather than coping.
+  )..layout(maxWidth: maxWidth.isFinite && maxWidth > 0 ? maxWidth : 0);
   final origin =
       centreOnPoint ? at - Offset(painter.width / 2, painter.height / 2) : at;
   painter.paint(canvas, origin);
   return painter.size;
 }
+
+/// Whether a canvas is too small to draw anything a reader could use.
+///
+/// Painters lay out in fractions of the size they are given, which is what lets
+/// one diagram serve a 320 px phone and a tablet. It also means a degenerate
+/// size produces degenerate arithmetic — inverted rectangles, negative text
+/// widths — so every painter checks this first and draws nothing rather than
+/// asserting inside the guide screen.
+bool diagramTooSmall(Size size) =>
+    !size.width.isFinite ||
+    !size.height.isFinite ||
+    size.width < 80 ||
+    size.height < 50;
 
 /// A thin leader line from a label to the thing it names.
 void paintLeader(Canvas canvas, Offset from, Offset to, Color colour) {
