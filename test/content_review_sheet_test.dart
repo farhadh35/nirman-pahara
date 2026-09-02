@@ -66,14 +66,14 @@ void main() {
 
     expect(stated('Claims with a citation'), countClaims(onlyPending: false),
         reason: 'run: dart run tool/review_sheet.dart');
-    expect(stated('Awaiting engineer sign-off'), countClaims(onlyPending: true),
+    expect(stated('Awaiting sign-off'), countClaims(onlyPending: true),
         reason: 'run: dart run tool/review_sheet.dart');
   });
 
   test('the README reports the same backlog the sheet does', () {
     final sheet = File('docs/CONTENT_REVIEW.md').readAsStringSync();
     final readme = File('README.md').readAsStringSync();
-    for (final label in ['Claims with a citation', 'Awaiting engineer sign-off']) {
+    for (final label in ['Claims with a citation', 'Awaiting sign-off']) {
       final n = RegExp('$label: \\*\\*(\\d+)\\*\\*').firstMatch(sheet)!.group(1)!;
       expect(readme, contains(n),
           reason: 'README does not mention $label = $n');

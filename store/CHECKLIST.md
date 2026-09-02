@@ -27,12 +27,34 @@ Source: https://github.com/farhadh35/nirman-pahara
 
 ## Needs the account holder
 
-- [ ] **Back the keystore up off this machine.** `android/keystore/nirman-upload.jks`
-      and `android/key.properties` are gitignored, so they exist in exactly one
-      place. Losing them means this listing can never be updated again: a new
-      app, a new listing, and every existing install left behind on the last
-      version it got. Copy both somewhere off this machine before the next
-      upload — this is still not done.
+- [ ] **Get the keystore off this machine.** A staging copy of
+      `nirman-upload.jks` now sits in `~/nirman-pahara-signing-backup/` with a
+      checksum and instructions, but that is the same disk as the original: it
+      survives a mistaken delete and nothing else. Move it to an encrypted
+      drive or an encrypted archive in cloud storage, then delete the folder.
+      The password is deliberately **not** in that folder — put it in a
+      password manager, because a key and its password in one place is one
+      leak rather than two.
+      Losing both means this listing can never be updated again: a new app ID,
+      a new listing, and every existing install left on the version it has.
+- [ ] **Confirm Play App Signing is enabled** (Play Console → the app → Test and
+      release → Setup → App signing). If it is, a lost upload key can be reset
+      by registering a new one. If it is not, there is no recovery — which
+      makes the item above the single most important line on this page.
+
+The upload certificate, for checking a restored key or an upload that is
+refused. None of this is secret; the fingerprint ships inside every APK:
+
+```
+Owner   CN=Nirman Pahara, OU=Nirman Pahara, O=Nirman Pahara, L=Dhaka, ST=Dhaka, C=BD
+Alias   nirman-upload
+SHA256  F9:99:42:F9:43:CE:96:49:77:E7:C1:80:62:97:3B:EE:12:43:32:B1:AC:41:D8:CE:05:48:4A:D2:E2:8C:31:47
+Valid   2026-09-02 to 2054-01-18
+```
+
+Verified against the shipped artifact: `apksigner verify --print-certs` on
+`app-arm64-v8a-release.apk` reports the same digest, so release builds really
+are signed with this key and not with a debug fallback.
 - [x] Privacy policy published at https://farhadh35.github.io/nirman-pahara/privacy.html
       — paste that URL into the listing and the Data safety form
 - [x] Contact email in the privacy policy and the listing
