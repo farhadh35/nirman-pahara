@@ -126,11 +126,11 @@ class StirrupSpacingPainter extends CustomPainter {
       canvas,
       correct
           ? (bn
-              ? 'দুই মাথার কাছে রিং ঘন — বিম ভাঙে ওখানেই, মাঝখানে নয়'
+              ? 'দুই প্রান্তের কাছে রিং ঘন — বিম ভাঙে ওখানেই, মাঝখানে নয়'
               : 'Rings close near the supports: a beam fails there, not at '
                   'mid-span')
           : (bn
-              ? 'পুরো বিমে সমান ফাঁক — দেখতে পরিপাটি, মাথার দিকে দুর্বল'
+              ? 'পুরো বিমে সমান ফাঁক — দেখতে পরিপাটি, প্রান্তের দিকে দুর্বল'
               : 'Evenly spaced all along: tidier, and weak exactly where it '
                   'matters'),
       Offset(cell.left + 6, beam.bottom + cell.height * 0.14),

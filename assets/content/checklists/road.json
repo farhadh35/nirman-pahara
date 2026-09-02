@@ -58,7 +58,7 @@
         },
         {
           "id": "r5",
-          "question": { "bn": "খোয়া বা পাথর কি ভালো মানের?", "en": "Is the khoa or stone of decent quality?" },
+          "question": { "bn": "খোয়া বা পাথর কি শক্ত ও পরিষ্কার?", "en": "Is the khoa or stone of decent quality?" },
           "why": { "bn": "কম পোড়া ইটের খোয়া হাতে গুঁড়া হয়ে যায়, রোলারের নিচেই ভেঙে পড়ে।", "en": "Khoa from underburnt brick crumbles in the hand and breaks up under the roller itself." },
           "how": { "bn": "কয়েক টুকরা হাতে নিয়ে চাপ দিন, আর মাটি বা ধুলা মেশানো আছে কি না দেখুন।", "en": "Squeeze a few pieces, and look for soil or dust mixed in." },
           "photo": true

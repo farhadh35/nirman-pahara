@@ -51,7 +51,7 @@
     "en": "What a real report has in it"
    },
    "body": {
-    "bn": "সয়েল টেস্ট রিপোর্ট মানে কয়েক পাতার একটা নথি, তার মধ্যে মূল জিনিসটা হলো বোর লগ — গর্ত করতে করতে কোন গভীরতায় কী মাটি পাওয়া গেল, তার তালিকা। সঙ্গে থাকে প্রতিটি গভীরতায় নেওয়া এন-ভ্যালু, পানির স্তর কোথায় পাওয়া গেল, কয়টা বোরহোল করা হয়েছে আর কোথায় করা হয়েছে তার নকশা, এবং শেষে সুপারিশ। এক পাতার একটা চিঠিতে শুধু 'মাটি ভালো' লেখা থাকলে সেটা রিপোর্ট নয়।",
+    "bn": "সয়েল টেস্ট রিপোর্ট মানে কয়েক পাতার একটা নথি, তার মধ্যে মূল অংশটা হলো বোর লগ — গর্ত করতে করতে কোন গভীরতায় কী মাটি পাওয়া গেল, তার তালিকা। সঙ্গে থাকে প্রতিটি গভীরতায় নেওয়া এন-ভ্যালু, পানির স্তর কোথায় পাওয়া গেল, কয়টা বোরহোল করা হয়েছে আর কোথায় করা হয়েছে তার নকশা, এবং শেষে সুপারিশ। এক পাতার একটা চিঠিতে শুধু 'মাটি ভালো' লেখা থাকলে সেটা রিপোর্ট নয়।",
     "en": "A soil test report is a few pages, and the heart of it is the bore log: a list of what soil was found at what depth as the hole went down. With it come the N-values taken at intervals, where water was struck, a sketch of how many boreholes were sunk and where, and a recommendation at the end. A one-page letter saying the soil is good is not a report."
    },
    "watch_for": [
@@ -185,7 +185,7 @@
    },
    "watch_for": [
     {
-     "bn": "কাজ চলার সময় ছবি তুলে রাখুন — যন্ত্র, গর্তের জায়গা আর নমুনার বাক্স।",
+     "bn": "কাজ চলার সময় ছবি তুলে রাখুন — যন্ত্র, গর্তের অবস্থান আর নমুনার বাক্স।",
      "en": "Photograph it while it happens: the rig, where the holes are, and the sample boxes."
     },
     {
