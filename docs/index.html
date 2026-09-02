@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nirman Pahara</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1a1c19; --muted:#5a5f58; --rule:#cbd2c6; --accent:#006a4e; --bg:#f7f7f4; --card:#fff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e3e3dd; --muted:#a8afa4; --rule:#3a3f3a; --accent:#7fd1b0; --bg:#121412; --card:#1b1e1b; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Noto Sans","Noto Sans Bengali",system-ui,sans-serif; line-height:1.75; }
+  .wrap { max-width:44rem; margin:0 auto; padding:3rem 1.25rem 5rem; }
+  h1 { font-size:2.1rem; margin:0 0 .25rem; color:var(--accent); line-height:1.3; }
+  .bn { font-family:"Noto Sans Bengali",sans-serif; }
+  .tag { color:var(--muted); font-size:1.05rem; margin-bottom:2rem; }
+  .card { background:var(--card); border:1px solid var(--rule); border-radius:12px;
+    padding:1.1rem 1.25rem; margin:1rem 0; }
+  h2 { font-size:1.2rem; margin:2rem 0 .5rem; }
+  a { color:var(--accent); }
+  footer { margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--rule);
+    color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 class="bn">নির্মাণ পাহারা</h1>
+  <div class="tag">Nirman Pahara — a Bangla-first Android app that lets a citizen
+  check whether a construction work is being done properly. Public works, or
+  your own house.</div>
+
+  <div class="card">
+    <p style="margin-top:0">The road through your area sank in one monsoon, and on
+    paper the work is finished. You do not need to be an engineer to understand
+    why — you need to know which few things to look at, and when.</p>
+    <p style="margin-bottom:0">Everything works offline. Nothing you record
+    leaves your phone. There is no paywall.</p>
+  </div>
+
+  <h2>What it does</h2>
+  <ul>
+    <li><strong>Learn</strong> — materials, concrete, steel and your rights, in
+      plain language, with labelled diagrams.</li>
+    <li><strong>Inspect</strong> — stage-by-stage checklists for roads,
+      buildings, food godowns, repairs and electrical work, ending in a PDF
+      report with each photograph beside its finding.</li>
+    <li><strong>Calculate</strong> — how much material a job needs, and what the
+      contract implies per metre.</li>
+    <li><strong>Check a rate schedule</strong> — import the department's schedule
+      and see what is worth asking about.</li>
+    <li><strong>Your rights</strong> — where to complain, in what order, with the
+      letters ready to send.</li>
+  </ul>
+
+  <h2>How it talks about what it finds</h2>
+  <div class="card">
+    Every finding is phrased as <em>the standard requires X; what was seen is
+    Y</em> — never as an accusation. That is what an inspecting officer can
+    verify, and it is what keeps the person filing it out of an argument they
+    cannot win.
+  </div>
+
+  <h2>Links</h2>
+  <p>
+    <a href="privacy.html">Privacy policy</a> ·
+    <a href="https://github.com/farhadh35/nirman-pahara">Source code</a>
+  </p>
+
+  <footer>
+    Code under Apache-2.0; written content and diagrams under CC BY-SA 4.0.<br>
+    Technical content is written from BNBC 2020 and the published government
+    rate schedules. Anything a licensed civil engineer has not yet signed off
+    carries a visible mark in the app saying so.
+  </footer>
+</div>
+</body>
+</html>
