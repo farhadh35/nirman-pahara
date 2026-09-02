@@ -130,14 +130,33 @@ class S {
     'কে এই অ্যাপ চালায়, টাকা কোথা থেকে আসে',
     'Who runs this app, and where the money comes from',
   );
+  /// What the app is funded by.
+  ///
+  /// This said "this app runs on advertising" while no advertising SDK had ever
+  /// been in the build. Telling a reader their app is ad-funded when it is not
+  /// is a small lie about a thing they have every reason to care about, and it
+  /// was in the one section headed "where the money comes from".
   static const adDisclosure = L10nText(
-    'এই অ্যাপ বিজ্ঞাপনে চলে। সিমেন্ট, রড, ইট, টাইলস, রং, ঠিকাদারি বা আবাসন '
-        'কোম্পানির বিজ্ঞাপন এখানে নেওয়া হয় না — কারণ এই অ্যাপ ঠিক ওই জিনিসগুলোর '
-        'মান নিয়েই কথা বলে। পরিদর্শন, ফলাফল ও অভিযোগের পর্দায় কোনো বিজ্ঞাপন থাকে না।',
-    'This app runs on advertising. It takes no ads from cement, steel, brick, '
-        'tile, paint, contracting or real-estate companies — because those are '
-        'exactly the things the app judges. No ads appear on inspection, verdict '
-        'or complaint screens.',
+    'এই অ্যাপে এখন কোনো বিজ্ঞাপন নেই। কখনো যদি আসে, সিমেন্ট, রড, ইট, টাইলস, '
+        'রং, ঠিকাদারি বা আবাসন কোম্পানির বিজ্ঞাপন নেওয়া হবে না — কারণ এই অ্যাপ '
+        'ঠিক ওইগুলোর মান নিয়েই কথা বলে। পরিদর্শন, ফলাফল ও অভিযোগের পর্দায় '
+        'কোনো বিজ্ঞাপন কখনোই থাকবে না।',
+    'There are no ads in this app today. If any ever come, none will be taken '
+        'from cement, steel, brick, tile, paint, contracting or real-estate '
+        'companies, because those are exactly what the app judges. No ad will '
+        'ever appear on an inspection, a verdict or a complaint screen.',
+  );
+
+  /// Said plainly, because the app is about government works and a reader could
+  /// reasonably assume otherwise.
+  static const notGovernment = L10nText(
+    'এটি কোনো সরকারি অ্যাপ নয়। কোনো দপ্তর, ঠিকাদার বা কোম্পানির সঙ্গে এর '
+        'সম্পর্ক নেই, আর এটি কোনো সরকারি সিদ্ধান্তও নয়। অ্যাপটি দেখায় নিয়মে কী '
+        'থাকার কথা আর আপনি কী দেখলেন — যাচাই করবে কর্তৃপক্ষ।',
+    'This is not a government app. It is not connected to any department, '
+        'contractor or company, and nothing in it is an official decision. It '
+        'shows what the rule requires beside what you saw; the authority is who '
+        'checks.',
   );
   static const privacyLine = L10nText(
     'আপনার ছবি, অবস্থান ও পরিদর্শনের তথ্য আপনার ফোনেই থাকে। কোথাও পাঠানো হয় না।',

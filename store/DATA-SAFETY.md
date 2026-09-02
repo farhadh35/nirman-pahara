@@ -1,72 +1,95 @@
 # Play Data safety form — the answers
 
+**For version 2.0.0 (versionCode 4).**
+
 Fill the form in Play Console → App content → Data safety with these. Every
-answer follows from the code; where an answer would be a judgement call, the
-reason is given.
+answer follows from the code, and the decisive fact is checkable in one command:
+
+```bash
+aapt2 dump permissions build/app/outputs/flutter-apk/app-release.apk
+```
+
+The release APK declares `ACCESS_FINE_LOCATION` and `ACCESS_COARSE_LOCATION`,
+and **no `INTERNET` permission at all**. The app cannot transmit anything,
+because Android will not let it. There is no server, no account, no analytics
+and — in this version — no advertising SDK.
+
+> **This file previously described a build with ads in it.** It answered "Yes"
+> to collection, declared device identifiers as collected and shared by an
+> advertising SDK, and told you to declare ads. None of that is true of what
+> ships: there is no ad SDK in `pubspec.yaml` or the manifest. Those answers
+> would have been false statements to Google about the uploaded binary. What
+> to change when ads do ship is at the bottom.
 
 ## Does your app collect or share any of the required user data types?
 
-**Yes** — but only through the advertising SDK. Nothing the user records is
-collected by us.
+**No.**
 
-## Location
+Play defines *collection* as data transmitted off the device. Photographs,
+coordinates and inspection notes are written to the app's private storage and
+stay there. The app has no network permission, so none of it can leave except
+when the user themselves taps share and picks an app to send it to — which
+Play's own guidance treats as the user acting, not the app collecting.
 
-- **Approximate location**: Not collected by us.
-- **Precise location**: **Collected, not shared.**
-  - Purpose: **App functionality** — stamped onto an inspection photograph so a
-    report can say where a defect was seen.
-  - Is it processed ephemerally? **No** — it is stored with the photograph.
-  - Is collection optional? **Yes.** Refusing the permission still lets the
-    photograph be taken; the report then states that the location was not
-    recorded.
-  - Note in the form: the data stays on the device and is not transmitted to
-    the developer.
+Answering "Yes" here because the app *records* things would be the common
+mistake, and it misrepresents the app in the direction of sounding worse than it
+is.
 
-## Photos and videos
+## If the form still asks per type
 
-- **Photos**: **Collected, not shared.**
-  - Purpose: **App functionality** — evidence attached to an inspection.
-  - Stored in the app's private directory, not the shared gallery.
-  - Not transmitted to the developer. Shared only if the user taps share.
-
-## Files and docs
-
-- **Files and docs**: **Not collected.** The app reads only the single file the
-  user selects in the system file picker, in memory, to parse a rate schedule.
-  It is not retained or transmitted.
-
-## Device or other identifiers
-
-- **Collected and shared** — by the advertising SDK, for **Advertising or
-  marketing** and **Analytics**. Declare according to the ad network's own
-  published data-safety guidance for the SDK version you ship.
-
-## Personal info, financial info, health, messages, contacts, calendar
-
-**Not collected.** The app has no account system and no server.
+- **Location** — not collected. Precise location is read at the moment a
+  photograph is taken and stored beside it on the device. Refusing the
+  permission still lets the photograph be taken; the report then states that
+  the location was not recorded, rather than leaving a silent gap.
+- **Photos** — not collected. Written to the app's private directory, not the
+  shared gallery.
+- **Files and docs** — not collected. One file is read from the system picker,
+  parsed in memory to check a rate schedule, and not retained.
+- **Device or other identifiers** — not collected. Nothing generates or reads
+  one.
+- **Personal info, financial info, health, messages, contacts, calendar** —
+  not collected. There is no account system and no server.
 
 ## Security practices
 
-- **Is data encrypted in transit?** The app itself transmits no user data. Ad
-  SDK traffic is over HTTPS.
-- **Can users request data deletion?** **Yes** — everything is on the device;
-  deleting an inspection or uninstalling removes it. There is no server copy to
-  request deletion from.
+- **Is data encrypted in transit?** Not applicable — the app transmits nothing
+  and holds no `INTERNET` permission. If the form will not accept "not
+  applicable", the honest answer is that no data is transmitted.
+- **Can users request data deletion?** **Yes.** Everything is on the device.
+  Deleting an inspection removes it; uninstalling removes all of it. There is no
+  server copy for anyone to request deletion from, including us.
 
-## Sensitive permissions to justify elsewhere in Console
+## Sensitive permissions, justified
 
-- `ACCESS_FINE_LOCATION` / `ACCESS_COARSE_LOCATION` — foreground only, at photo
-  capture. No background location. No location declaration form is required
-  because background access is not requested.
-- `CAMERA` is not declared in the manifest; the camera is reached through the
-  system camera app via an intent.
+- `ACCESS_FINE_LOCATION` / `ACCESS_COARSE_LOCATION` — **foreground only**, read
+  at the moment a photograph is captured, so a finding can say where it was
+  seen. No background access is requested, so the background-location
+  declaration form does not apply.
+- `CAMERA` is **not** declared. The camera is reached through the system camera
+  app by intent, so the app never holds the permission.
 
 ## Ads declaration
 
-Under **App content → Ads**, answer **Yes, my app contains ads**.
+**No, my app does not contain ads.** There is no ad SDK in the build. See
+`docs/AD_POLICY.md` for why the funding model is constrained, and what would
+have to be true before any ad shipped.
 
 ## Content rating
 
 Answer the questionnaire as a **Reference / Education** utility: no violence, no
-sexual content, no gambling, no user-generated content shared between users, no
-in-app purchases.
+sexual content, no gambling, no in-app purchases, and no user-generated content
+shared between users — reports go only where the user sends them.
+
+## What changes when ads ship
+
+Do all of this in the same release that first contains an SDK, not before:
+
+1. Collection answer becomes **Yes**.
+2. **Device or other identifiers** — collected and shared, for *Advertising or
+   marketing* and *Analytics*, declared to match the ad network's own published
+   data-safety guidance for the exact SDK version shipped.
+3. Ads declaration becomes **Yes**.
+4. Encryption in transit becomes **Yes** — ad traffic over HTTPS.
+5. Category blocking configured first, per `docs/AD_POLICY.md`: no cement,
+   steel, brick, tile, paint, contractor or developer advertising, because the
+   app exists to tell someone whether those things are sound.

@@ -88,6 +88,10 @@ class SettingsScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Text(context.t(S.notGovernment),
+                    style: theme.textTheme.bodyMedium
+                        ?.copyWith(fontWeight: FontWeight.w600)),
+                const SizedBox(height: 12),
                 Text(context.t(S.adDisclosure),
                     style: theme.textTheme.bodyMedium),
                 const SizedBox(height: 12),
