@@ -86,17 +86,23 @@ class _LandUnitsTabState extends State<_LandUnitsTab> {
   late final TextEditingController _controller;
   LandUnit _unit = LandUnit.decimal;
   bool _seeded = false;
+  AppLocale? _seededLocale;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    if (_seeded) return;
-    _seeded = true;
-    // Seeded here, not initState: the box has to show the reader's own
-    // digits, the same as the answer below it will.
-    _controller = TextEditingController(
-      text: Bn.localiseDigits('5', context.locale),
-    )..addListener(() => setState(() {}));
+    final locale = context.locale;
+    if (!_seeded) {
+      _seeded = true;
+      // Seeded here, not initState: the box has to show the reader's own
+      // digits, the same as the answer below it will.
+      _controller = TextEditingController(
+        text: Bn.localiseDigits('5', locale),
+      )..addListener(() => setState(() {}));
+    } else if (_seededLocale != locale) {
+      _followLocale([_controller], locale);
+    }
+    _seededLocale = locale;
   }
 
   @override
@@ -108,12 +114,13 @@ class _LandUnitsTabState extends State<_LandUnitsTab> {
   @override
   Widget build(BuildContext context) {
     final locale = context.locale;
+    final unfinished = _controller.text.trim().isEmpty;
     final value = Bn.parse(_controller.text) ?? 0.0;
 
     LandArea? area;
     String? error;
     try {
-      area = LandArea.of(value, _unit);
+      if (!unfinished) area = LandArea.of(value, _unit);
     } on ArgumentError {
       error = locale.isBangla
           ? 'শূন্য বা তার বেশি একটি সংখ্যা দিন।'
@@ -152,7 +159,14 @@ class _LandUnitsTabState extends State<_LandUnitsTab> {
           onChanged: (u) => u == null ? null : setState(() => _unit = u),
         ),
         const SizedBox(height: 20),
-        if (error != null)
+        if (unfinished)
+          _unfinishedHint(
+            context,
+            locale.isBangla
+                ? 'একটি মাপ লিখলে বাকি সব একক দেখা যাবে।'
+                : 'Enter a measurement to see it in every other unit.',
+          )
+        else if (error != null)
           CautionBox(text: error)
         else if (area != null) ...[
           SectionCard(
@@ -216,15 +230,21 @@ class _SutaTab extends StatefulWidget {
 class _SutaTabState extends State<_SutaTab> {
   late final TextEditingController _controller;
   bool _seeded = false;
+  AppLocale? _seededLocale;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    if (_seeded) return;
-    _seeded = true;
-    _controller = TextEditingController(
-      text: Bn.localiseDigits('12', context.locale),
-    )..addListener(() => setState(() {}));
+    final locale = context.locale;
+    if (!_seeded) {
+      _seeded = true;
+      _controller = TextEditingController(
+        text: Bn.localiseDigits('12', locale),
+      )..addListener(() => setState(() {}));
+    } else if (_seededLocale != locale) {
+      _followLocale([_controller], locale);
+    }
+    _seededLocale = locale;
   }
 
   @override
@@ -339,6 +359,36 @@ class _SutaTabState extends State<_SutaTab> {
 
 /// ---------------------------------------------------------------- জ্যামিতি
 
+/// Rewrites what is already in a box when the reader changes language.
+///
+/// Every tab here seeds its starting value once, in the reader's own script. A
+/// language change afterwards left the old digits sitting in the box while the
+/// answer below them switched — the same number in two scripts on one screen.
+/// Only the digits change; whatever was typed is kept.
+void _followLocale(Iterable<TextEditingController> cs, AppLocale locale) {
+  for (final c in cs) {
+    if (c.text.trim().isEmpty) continue;
+    final converted = Bn.localiseDigits(c.text, locale);
+    if (converted == c.text) continue;
+    c.value = TextEditingValue(
+      text: converted,
+      selection: TextSelection.collapsed(offset: converted.length),
+    );
+  }
+}
+
+/// Shown instead of a complaint while a required box is empty. A box the reader
+/// has cleared to retype is an unfinished question, not a wrong answer.
+Widget _unfinishedHint(BuildContext context, String text) => Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Text(
+        text,
+        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+              color: Theme.of(context).colorScheme.onSurfaceVariant,
+            ),
+      ),
+    );
+
 class _GeometryTab extends StatefulWidget {
   const _GeometryTab();
 
@@ -350,16 +400,27 @@ class _GeometryTabState extends State<_GeometryTab> {
   Shape _shape = Shape.rectangle;
   final List<TextEditingController> _controllers = [];
   bool _seeded = false;
+  AppLocale? _seededLocale;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    if (_seeded) return;
-    _seeded = true;
-    _buildControllers();
+    final locale = context.locale;
+    if (!_seeded) {
+      _seeded = true;
+      _buildControllers();
+    } else if (_seededLocale != locale) {
+      _followLocale(_controllers, locale);
+    }
+    _seededLocale = locale;
   }
 
   void _buildControllers() {
+    // What the reader has already typed is carried across by position. A
+    // rectangle's length and width are a box's length and width, so measuring
+    // a room and then asking for its volume should not make them type the two
+    // numbers they just entered a second time.
+    final kept = [for (final c in _controllers) c.text];
     for (final c in _controllers) {
       c.dispose();
     }
@@ -367,7 +428,7 @@ class _GeometryTabState extends State<_GeometryTab> {
     final locale = context.locale;
     for (var i = 0; i < _shape.inputs.length; i++) {
       _controllers.add(TextEditingController(
-        text: Bn.localiseDigits('10', locale),
+        text: i < kept.length ? kept[i] : Bn.localiseDigits('10', locale),
       )..addListener(() => setState(() {})));
     }
   }
@@ -396,14 +457,17 @@ class _GeometryTabState extends State<_GeometryTab> {
   @override
   Widget build(BuildContext context) {
     final locale = context.locale;
+    final unfinished = _controllers.any((c) => c.text.trim().isEmpty);
     final dims = [for (final c in _controllers) Bn.parse(c.text) ?? 0.0];
 
     CalcResult? result;
     String? error;
-    try {
-      result = const Geometry().compute(_shape, dims);
-    } on CalcException catch (e) {
-      error = e.of(locale);
+    if (!unfinished) {
+      try {
+        result = const Geometry().compute(_shape, dims);
+      } on CalcException catch (e) {
+        error = e.of(locale);
+      }
     }
 
     final inputs = _shape.inputs;
@@ -450,7 +514,14 @@ class _GeometryTabState extends State<_GeometryTab> {
           const SizedBox(height: 16),
         ],
         const SizedBox(height: 8),
-        if (error != null)
+        if (unfinished)
+          _unfinishedHint(
+            context,
+            locale.isBangla
+                ? 'প্রতিটি ঘরে মাপ দিলে হিসাব দেখা যাবে।'
+                : 'Fill in every measurement to see the answer.',
+          )
+        else if (error != null)
           CautionBox(text: error)
         else if (result != null)
           CalcResultView(result: result),
