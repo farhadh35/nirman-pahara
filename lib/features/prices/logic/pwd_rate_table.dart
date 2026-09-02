@@ -45,12 +45,45 @@ class PwdRateItem {
   double rateFor(int regionIndex) =>
       rates[regionIndex.clamp(0, rates.length - 1)];
 
+  /// Whether this item answers [query].
+  ///
+  /// The item code matches on a plain substring, because people type a partial
+  /// number like "07.1". The description matches on **word boundaries**: a bare
+  /// substring search returns "damp proof course" for "roof", which is the sort
+  /// of near-miss that wastes a person's time at a site and makes the search
+  /// look broken.
   bool matches(String query) {
     final q = query.trim().toLowerCase();
     if (q.isEmpty) return true;
-    return code.toLowerCase().contains(q) ||
-        description.toLowerCase().contains(q);
+    if (code.toLowerCase().contains(q)) return true;
+
+    final haystack = description.toLowerCase();
+    final terms = q.split(RegExp(r'\s+')).where((t) => t.isNotEmpty);
+    if (terms.isEmpty) return false;
+    // Every term must appear, so "roof slab" narrows rather than widens.
+    return terms.every((term) => _containsWord(haystack, term));
   }
+
+  /// True when [term] appears in [haystack] at the start of a word.
+  ///
+  /// Only the start is anchored. Anchoring the end too would stop "plaster"
+  /// finding "plastering", and the schedule's wording varies far too much for
+  /// that to be safe.
+  static bool _containsWord(String haystack, String term) {
+    var from = 0;
+    while (from <= haystack.length - term.length) {
+      final at = haystack.indexOf(term, from);
+      if (at < 0) return false;
+      final startsWord = at == 0 || !_isWordChar(haystack.codeUnitAt(at - 1));
+      if (startsWord) return true;
+      from = at + 1;
+    }
+    return false;
+  }
+
+  static bool _isWordChar(int c) =>
+      (c >= 0x61 && c <= 0x7A) || (c >= 0x41 && c <= 0x5A) ||
+      (c >= 0x30 && c <= 0x39);
 
   factory PwdRateItem.fromJson(Map<String, dynamic> j) => PwdRateItem(
         code: j['code'] as String,

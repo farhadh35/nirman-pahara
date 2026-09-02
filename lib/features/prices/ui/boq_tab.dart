@@ -105,6 +105,7 @@ class _BoqTabState extends State<BoqTab> {
             helperText: bn
                 ? 'আইটেম নম্বর বা কাজের বর্ণনা দিয়ে খুঁজুন — যেমন 07.1.3'
                 : 'Search by item number or description — for example 07.1.3',
+            helperMaxLines: 2,
           ),
         ),
         const SizedBox(height: 12),

@@ -97,7 +97,7 @@ not ship to Play until that number is zero for the structural modules.
 
 ## Testing
 
-207 tests: the calculator engine against hand-computed values, the content packs
+211 tests: the calculator engine against hand-computed values, the content packs
 against their own schema and translation completeness, report generation for
 phrasing that never accuses, and end-to-end widget flows in both languages.
 

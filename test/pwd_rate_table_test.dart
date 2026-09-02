@@ -58,6 +58,38 @@ void main() {
     expect(t.search('zzzznothing'), isEmpty);
   });
 
+  test('a search matches whole words, not any run of letters', () async {
+    final t = await repo.pwdRates();
+    // "proof" contains "roof". A plain substring search hands somebody looking
+    // for a roof slab a damp proof course instead.
+    final roof = t.search('roof');
+    expect(roof, isNotEmpty);
+    for (final item in roof) {
+      expect(item.description.toLowerCase(), isNot(contains('damp proof')),
+          reason: '${item.code} came back for "roof"');
+    }
+    expect(t.search('damp proof'), isNotEmpty);
+  });
+
+  test('every term has to appear, so more words narrow the result', () async {
+    final t = await repo.pwdRates();
+    final broad = t.search('slab', limit: 500);
+    final narrow = t.search('roof slab', limit: 500);
+    expect(narrow.length, lessThanOrEqualTo(broad.length));
+    expect(narrow, isNotEmpty);
+  });
+
+  test('a partial item number still matches', () async {
+    final t = await repo.pwdRates();
+    expect(t.search('07.1').map((i) => i.code), contains('07.1.3'));
+  });
+
+  test('a word prefix still matches, so plaster finds plastering', () async {
+    final t = await repo.pwdRates();
+    // Only the start of the word is anchored; endings vary too much.
+    expect(t.search('plaster'), isNotEmpty);
+  });
+
   test('the markups built into every rate are carried', () async {
     final t = await repo.pwdRates();
     expect(t.profitPercent, 10.0);
