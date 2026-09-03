@@ -16,6 +16,7 @@ import '../logic/photo_ref.dart';
 import '../report/report_document.dart';
 import '../report/report_sheet.dart';
 import '../logic/inspection_store.dart';
+import '../logic/lost_capture.dart';
 
 /// Saved inspections first, then the packs to start a new one.
 class InspectionScreen extends StatefulWidget {
@@ -317,6 +318,50 @@ class InspectionRunScreen extends StatefulWidget {
 }
 
 class _InspectionRunScreenState extends State<InspectionRunScreen> {
+  bool _askedForLostPhoto = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_askedForLostPhoto) return;
+    _askedForLostPhoto = true;
+    _recoverLostPhoto();
+  }
+
+  /// Collect a photograph Android took while this app was being killed.
+  ///
+  /// Only ever attaches it to the item that was named before the camera
+  /// opened, and only for this inspection — see [LostCapture].
+  Future<void> _recoverLostPhoto() async {
+    final evidence = context.evidence;
+    final messenger = ScaffoldMessenger.of(context);
+    final bn = context.locale.isBangla;
+    final run = widget.run;
+
+    final found = await LostCapture().recover(run.id);
+    if (found == null || !mounted) return;
+
+    final finding = run.findings[found.itemId];
+    if (finding == null) return;
+    try {
+      finding.photos.add(await evidence.addWithContext(
+        found.file,
+        runId: run.id,
+        itemId: found.itemId,
+        takenAt: DateTime.now(),
+      ));
+    } catch (_) {
+      return;
+    }
+    if (!mounted) return;
+    _persist();
+    messenger.showSnackBar(SnackBar(
+      content: Text(bn
+          ? 'ক্যামেরা বন্ধ হয়ে যাওয়ার আগে তোলা ছবিটি যোগ করা হয়েছে।'
+          : 'Added the photograph taken before the camera closed.'),
+    ));
+  }
+
   /// Saved on every change rather than on exit: someone standing at a site
   /// closes the app, takes a call, or runs out of battery, and none of that
   /// should cost them the walk they have already done.
@@ -831,6 +876,11 @@ class _PhotoRow extends StatelessWidget {
     final messenger = ScaffoldMessenger.of(context);
     final bn = context.locale.isBangla;
     try {
+      // Written down before the camera opens, because if Android kills this
+      // process while the camera is in front the picture still gets taken and
+      // this is the only record of what it was of. Cleared on every way out.
+      final lost = LostCapture();
+      await lost.awaiting(runId: runId, itemId: finding.item.id);
       final shot = await ImagePicker().pickImage(
         source: ImageSource.camera,
         // Enough to read a signboard or a tape measure, small enough that a
@@ -838,6 +888,7 @@ class _PhotoRow extends StatelessWidget {
         maxWidth: 1600,
         imageQuality: 80,
       );
+      await lost.settled();
       if (shot == null) return;
       final photo = await evidence.addWithContext(
         File(shot.path),
