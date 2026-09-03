@@ -53,29 +53,33 @@ class SourcesScreen extends StatelessWidget {
     final theme = Theme.of(context);
     final locale = context.locale;
 
-    // Kept in enum order, which runs from the codes a claim can be checked
-    // against down to the conventions that are only ever practice.
-    final byKind = <WorkKind, List<SourceEntry>>{};
-    for (final e in index.entries) {
-      byKind.putIfAbsent(e.kind, () => []).add(e);
+    // Grouped by the heading, not by the enum value. Two kinds share the words
+    // "codes and standards" — a building code and a materials standard belong
+    // under one heading — and grouping by the value printed that heading twice,
+    // on the page whose entire point is that nothing appears twice.
+    final byHeading = <String, List<SourceEntry>>{};
+    for (final kind in WorkKind.values) {
+      for (final e in index.entries) {
+        if (e.kind != kind) continue;
+        byHeading.putIfAbsent(kind.label.of(locale), () => []).add(e);
+      }
     }
 
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 40),
       children: [
-        for (final kind in WorkKind.values)
-          if (byKind[kind] != null) ...[
+        for (final heading in byHeading.keys) ...[
             Padding(
               padding: const EdgeInsets.only(top: 8, bottom: 10),
               child: Text(
-                kind.label.of(locale),
+                heading,
                 style: theme.textTheme.titleSmall?.copyWith(
                   color: theme.colorScheme.primary,
                   fontWeight: FontWeight.w600,
                 ),
               ),
             ),
-            for (final entry in byKind[kind]!)
+            for (final entry in byHeading[heading]!)
               Padding(
                 padding: const EdgeInsets.only(bottom: 14),
                 child: Column(
