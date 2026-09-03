@@ -677,10 +677,11 @@ class _InspectionReportScreenState extends State<InspectionReportScreen> {
           CautionBox(
             icon: Icons.shield_outlined,
             text: bn
-                ? 'অভিযোগ দেওয়ার আগে অধিকার অংশটা দেখে নিন — কোথায়, কোন ক্রমে '
-                    'পাঠাতে হয় সেটা ওখানে আছে। একা না গিয়ে দল বেঁধে যান।'
-                : 'Before you file, read the rights section — it says where to '
-                    'send this and in what order. Go as a group, not alone.',
+                ? 'পাঠানোর আগে অধিকার অংশে চিঠির খসড়া দেখে নিন — তথ্য চাওয়া ও '
+                    'লিখিতভাবে জানানোর নমুনা ওখানে আছে। একা না গিয়ে দল বেঁধে যান।'
+                : 'Before you send this, see the letter templates in the rights '
+                    'section — drafts for requesting information and giving '
+                    'notice. Go as a group, not alone.',
           ),
         ],
       ),

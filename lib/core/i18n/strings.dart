@@ -46,8 +46,8 @@ class S {
 
   static const rights = L10nText('অধিকার', 'Your rights');
   static const rightsSub = L10nText(
-    'কী চাইতে পারেন, কোথায় অভিযোগ করবেন',
-    'What you may ask for, and where to complain',
+    'তথ্য চাওয়া ও লিখিতভাবে জানানোর খসড়া চিঠি',
+    'Draft letters to request information and give notice',
   );
 
   // Common -----------------------------------------------------------------
@@ -111,7 +111,7 @@ class S {
   );
 
   // Rights -----------------------------------------------------------------
-  static const letters = L10nText('আবেদন ও অভিযোগের নমুনা', 'Letter templates');
+  static const letters = L10nText('আবেদন ও নোটিশের নমুনা', 'Letter templates');
   static const caution = L10nText('সাবধানতা', 'Caution');
   static const preview = L10nText('চিঠির খসড়া', 'Draft letter');
 
@@ -134,10 +134,10 @@ class S {
   static const adDisclosure = L10nText(
     'এই অ্যাপে কোনো বিজ্ঞাপন নেই। এলেও সিমেন্ট, রড, ইট, টাইলস, রং, ঠিকাদারি '
         'বা আবাসন কোম্পানির নয় — অ্যাপটি ঠিক ওইগুলোর মানই যাচাই করে। '
-        'পরিদর্শন, ফলাফল ও অভিযোগের পর্দা বিজ্ঞাপনমুক্ত থাকবে।',
+        'পরিদর্শন, ফলাফল ও রিপোর্টের পর্দা বিজ্ঞাপনমুক্ত থাকবে।',
     'There are no ads in this app. If any come, none will be from cement, '
         'steel, brick, tile, paint, contracting or real estate — those are '
-        'what the app judges. Inspection, verdict and complaint screens stay '
+        'what the app judges. Inspection, verdict and report screens stay '
         'free of them.',
   );
 
