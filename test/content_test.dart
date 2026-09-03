@@ -166,7 +166,7 @@ void main() {
         () async {
       final guide = await repo.guide();
       for (final m in guide.forTrack(Track.private)) {
-        if (m.track != Track.private && m.track != Track.both) continue;
+        if (m.track != Track.private && m.track != Track.either) continue;
         final text = flatten([
           m.title.bn,
           m.summary.bn,

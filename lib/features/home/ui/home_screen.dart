@@ -141,7 +141,7 @@ class _TrackChips extends StatelessWidget {
     return Wrap(
       spacing: 8,
       children: [
-        for (final t in Track.values)
+        for (final t in Track.choices)
           ChoiceChip(
             label: Text(t.label.of(locale)),
             selected: context.appState.track == t,
@@ -249,7 +249,7 @@ class OnboardingScreen extends StatelessWidget {
               onChanged: (v) => state.track = v!,
               child: Column(
                 children: [
-                  for (final t in Track.values)
+                  for (final t in Track.choices)
                     RadioListTile<Track>(
                       value: t,
                       contentPadding: EdgeInsets.zero,

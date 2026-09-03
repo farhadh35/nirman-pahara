@@ -12,7 +12,7 @@ import 'theme.dart';
 class AppState extends ChangeNotifier {
   AppState._(this._prefs)
       : _locale = AppLocale.parse(_prefs.getString(_kLocale)),
-        _track = Track.parse(_prefs.getString(_kTrack)),
+        _track = Track.parseChoice(_prefs.getString(_kTrack)),
         _textScale = TextScalePreference.values.firstWhere(
           (t) => t.name == _prefs.getString(_kTextScale),
           orElse: () => TextScalePreference.normal,

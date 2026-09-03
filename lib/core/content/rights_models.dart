@@ -12,7 +12,7 @@ class ComplaintStep {
     required this.title,
     required this.who,
     required this.how,
-    this.track = Track.both,
+    this.track = Track.either,
     this.contact,
     this.expect,
     this.caution,
@@ -65,7 +65,7 @@ class LetterTemplate {
     required this.description,
     required this.fields,
     required this.body,
-    this.track = Track.both,
+    this.track = Track.either,
     this.footnote,
   });
 

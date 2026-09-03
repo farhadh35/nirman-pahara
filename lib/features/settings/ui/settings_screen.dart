@@ -72,7 +72,7 @@ class SettingsScreen extends StatelessWidget {
               onChanged: (v) => state.track = v!,
               child: Column(
                 children: [
-                  for (final t in Track.values)
+                  for (final t in Track.choices)
                     RadioListTile<Track>(
                       value: t,
                       contentPadding: EdgeInsets.zero,

@@ -4,7 +4,16 @@ import '../i18n/app_locale.dart';
 enum Track {
   government('সরকারি কাজ', 'Government works'),
   private('নিজের বাড়ি', 'Your own house'),
-  both('দুটোই', 'Both');
+
+  /// Content that applies whichever the reader picked — how to tell good
+  /// cement, what curing is for, how to read a drawing.
+  ///
+  /// This is a property of a card, never an answer a reader gives. It used to
+  /// be offered in the picker as "দুটোই", which asked someone watching a road
+  /// or building a house to describe themselves as both, and told the app
+  /// nothing it could act on: choosing it simply showed everything. The two
+  /// real answers are the two real situations.
+  either('', '');
 
   const Track(this._bn, this._en);
 
@@ -13,16 +22,28 @@ enum Track {
 
   L10nText get label => L10nText(_bn, _en);
 
+  /// The answers a reader can give. [either] is not among them.
+  static const choices = [Track.government, Track.private];
+
+  /// Reads a content pack's track. Content may be marked [either].
   static Track parse(String? s) => switch (s) {
         'government' => Track.government,
         'private' => Track.private,
-        _ => Track.both,
+        _ => Track.either,
       };
+
+  /// Reads a reader's stored choice.
+  ///
+  /// Anyone who picked "দুটোই" before it was withdrawn is moved to government
+  /// works, which is the wider of the two sets and the app's first purpose.
+  /// The chips on the home page change it in one tap.
+  static Track parseChoice(String? s) =>
+      s == 'private' ? Track.private : Track.government;
 
   String get key => name;
 
   bool covers(Track selected) =>
-      this == Track.both || selected == Track.both || this == selected;
+      this == Track.either || selected == Track.either || this == selected;
 }
 
 /// Review state of a technical claim.
