@@ -175,6 +175,11 @@ class ReportSheet extends StatelessWidget {
       for (final p in f.photos)
         if (photoFiles[p.name] != null) (p, photoFiles[p.name]!),
     ];
+    // A photograph whose file has gone — storage cleared, or removed outside
+    // the app — was dropped from the report without a word. The reader takes
+    // this document to an authority believing it carries the evidence they
+    // gathered, so a report missing a picture has to say it is missing one.
+    final missing = f.photos.length - files.length;
 
     return Container(
       margin: const EdgeInsets.only(bottom: 18),
@@ -202,6 +207,23 @@ class ReportSheet extends StatelessWidget {
               _bn ? 'যা দেখা গেছে' : 'What was seen',
               f.note.trim(),
               emphasise: true,
+            ),
+          if (missing > 0)
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: Text(
+                _bn
+                    ? '$missing টি ছবি এই রিপোর্টে যুক্ত করা যায়নি — '
+                        'ফাইলটি ফোনে আর পাওয়া যাচ্ছে না।'
+                    : '$missing photograph${missing == 1 ? '' : 's'} could not '
+                        'be included: the file is no longer on the phone.',
+                style: TextStyle(
+                  fontSize: 13,
+                  height: 1.4,
+                  color: _accent,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
             ),
           if (files.isNotEmpty) ...[
             const SizedBox(height: 12),

@@ -171,4 +171,58 @@ void main() {
             'without, so the photograph did not render');
   });
 
+  testWidgets('a report says when a photograph could not be included',
+      (tester) async {
+    // The run records a photograph; its file is gone. Before, the report was
+    // generated silently without it, and the reader handed an authority a
+    // document they believed carried evidence it did not.
+    final run = buildRun();
+    final withNote = await tester.runAsync(() => const ReportDocument()
+        .rasterise(
+          ReportSheet(run: run, locale: AppLocale.bn, photoFiles: const {}),
+          width: 620,
+        ));
+    expect(withNote, isNotNull);
+
+    // Rendered as a widget so the sentence itself can be found.
+    tester.view.physicalSize = const Size(1240, 6000);
+    tester.view.devicePixelRatio = 2.0;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(MaterialApp(
+      home: SingleChildScrollView(
+        child: ReportSheet(
+          run: run,
+          locale: AppLocale.bn,
+          photoFiles: const {},
+        ),
+      ),
+    ));
+    await tester.pumpAndSettle();
+    expect(find.textContaining('যুক্ত করা যায়নি'), findsOneWidget,
+        reason: 'the report is quietly short of a photograph');
+  });
+
+  testWidgets('a report with every photograph present says nothing about it',
+      (tester) async {
+    final dir = Directory.systemTemp.createTempSync('report_ok');
+    addTearDown(() => dir.deleteSync(recursive: true));
+    final file = File('${dir.path}/a.jpg')
+      ..writeAsBytesSync(base64Decode(_pngBytes));
+
+    tester.view.physicalSize = const Size(1240, 6000);
+    tester.view.devicePixelRatio = 2.0;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(MaterialApp(
+      home: SingleChildScrollView(
+        child: ReportSheet(
+          run: buildRun(),
+          locale: AppLocale.bn,
+          photoFiles: {'a.jpg': file},
+        ),
+      ),
+    ));
+    await tester.pumpAndSettle();
+    expect(find.textContaining('যুক্ত করা যায়নি'), findsNothing,
+        reason: 'a complete report should not warn about nothing');
+  });
 }
