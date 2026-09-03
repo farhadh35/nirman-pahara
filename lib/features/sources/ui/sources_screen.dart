@@ -4,53 +4,35 @@ import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
 import '../../../core/content/checklist_models.dart';
 import '../../../core/content/models.dart';
-import '../../../core/util/bn.dart';
 import '../../lookups/logic/lookup_tables.dart';
 import '../../prices/logic/price_models.dart';
+import '../logic/reference_work.dart';
 import '../logic/source_index.dart';
 
-/// Everything the app rests on, in one place.
+/// The works this app is built on, listed once each.
 ///
 /// A source button used to hang off every card, every checklist item, every
-/// table row and both price screens. That put a reference affordance in front
-/// of readers who wanted to read, and still left anyone asking "what is this
-/// app based on?" with no way to answer except walking the whole of it.
-class SourcesScreen extends StatefulWidget {
+/// table row and both price screens. Collected here they came to a hundred and
+/// twelve entries, most of them the same work cited at different depths —
+/// BNBC 2020 five times over, the 2019 book twenty times by chapter. A list
+/// that repeats itself is not a reference list, so the entries are works.
+class SourcesScreen extends StatelessWidget {
   const SourcesScreen({super.key});
-
-  @override
-  State<SourcesScreen> createState() => _SourcesScreenState();
-}
-
-class _SourcesScreenState extends State<SourcesScreen> {
-  final _search = TextEditingController();
-
-  @override
-  void initState() {
-    super.initState();
-    _search.addListener(() => setState(() {}));
-  }
-
-  @override
-  void dispose() {
-    _search.dispose();
-    super.dispose();
-  }
 
   Future<SourceIndex> _load(BuildContext context) async {
     final content = context.content;
     final locale = context.locale;
-    final results = await Future.wait<Object>([
+    final packs = await Future.wait<Object>([
       content.guide(),
       content.checklists(),
       content.lookups(),
       content.prices(),
     ]);
     return SourceIndex.build(
-      guide: results[0] as GuidePack,
-      checklists: results[1] as List<ChecklistPack>,
-      lookups: results[2] as LookupPack,
-      prices: results[3] as PricePack,
+      guide: packs[0] as GuidePack,
+      checklists: packs[1] as List<ChecklistPack>,
+      lookups: packs[2] as LookupPack,
+      prices: packs[3] as PricePack,
       locale: locale,
     );
   }
@@ -59,165 +41,65 @@ class _SourcesScreenState extends State<SourcesScreen> {
   Widget build(BuildContext context) {
     final bn = context.locale.isBangla;
     return Scaffold(
-      appBar: AppBar(title: Text(bn ? 'সূত্র' : 'Sources')),
+      appBar: AppBar(title: Text(bn ? 'সূত্র' : 'References')),
       body: ContentBuilder<SourceIndex>(
         future: _load(context),
-        builder: (context, index) => _body(context, index),
+        builder: (context, index) => _list(context, index),
       ),
     );
   }
 
-  Widget _body(BuildContext context, SourceIndex index) {
+  Widget _list(BuildContext context, SourceIndex index) {
     final theme = Theme.of(context);
     final locale = context.locale;
-    final bn = locale.isBangla;
-    final shown = index.search(_search.text);
 
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
-          child: TextField(
-            controller: _search,
-            decoration: InputDecoration(
-              prefixIcon: const Icon(Icons.search),
-              hintText: bn
-                  ? 'যেমন: BNBC, তফসিল, বিধিমালা'
-                  : 'e.g. BNBC, schedule, gazette',
-              suffixIcon: _search.text.isEmpty
-                  ? null
-                  : IconButton(
-                      icon: const Icon(Icons.close),
-                      onPressed: () => _search.clear(),
-                    ),
-            ),
-          ),
-        ),
-        Expanded(
-          child: ListView(
-            padding: const EdgeInsets.fromLTRB(16, 4, 16, 32),
-            children: [
-              if (_search.text.isEmpty) ...[
-                Text(
-                  bn
-                      ? '${Bn.digits('${index.useCount}')}টি কারিগরি বক্তব্য '
-                          '${Bn.digits('${index.entries.length}')}টি সূত্রের '
-                          'উপর দাঁড়ানো। এর '
-                          '${Bn.digits('${index.pendingCount}')}টি প্রকৌশলীর '
-                          'যাচাই বাকি, অ্যাপে হলুদ চিহ্ন দেওয়া।'
-                      : '${index.useCount} technical statements, resting on '
-                          '${index.entries.length} sources. '
-                          '${index.pendingCount} await an engineer\'s check '
-                          'and are marked amber in the app.',
-                  style: theme.textTheme.bodyMedium
-                      ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
-                ),
-                const SizedBox(height: 16),
-              ],
-              if (shown.isEmpty)
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 32),
-                  child: Text(
-                    bn ? 'কোনো সূত্র মেলেনি।' : 'No matching source.',
-                    textAlign: TextAlign.center,
-                    style: theme.textTheme.bodyMedium
-                        ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
-                  ),
-                ),
-              for (final entry in shown) _SourceCard(entry: entry),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class _SourceCard extends StatelessWidget {
-  const _SourceCard({required this.entry});
-
-  final SourceEntry entry;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final locale = context.locale;
-    final bn = locale.isBangla;
-
-    // Grouped by area so a reader can see at a glance whether a source is
-    // behind the guide, the checklists, the tables or the prices.
-    final byArea = <String, List<SourceUse>>{};
-    for (final u in entry.uses) {
-      byArea.putIfAbsent(u.area.of(locale), () => []).add(u);
+    // Kept in enum order, which runs from the codes a claim can be checked
+    // against down to the conventions that are only ever practice.
+    final byKind = <WorkKind, List<SourceEntry>>{};
+    for (final e in index.entries) {
+      byKind.putIfAbsent(e.kind, () => []).add(e);
     }
 
-    return Card(
-      margin: const EdgeInsets.only(bottom: 12),
-      child: ExpansionTile(
-        tilePadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-        childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
-        title: Text(entry.source.of(locale),
-            style: theme.textTheme.titleSmall
-                ?.copyWith(fontWeight: FontWeight.w600)),
-        subtitle: Padding(
-          padding: const EdgeInsets.only(top: 4),
-          child: Row(
-            children: [
-              Text(
-                bn
-                    ? '${Bn.digits('${entry.uses.length}')}টি বক্তব্যে'
-                    : '${entry.uses.length} statement'
-                        '${entry.uses.length == 1 ? '' : 's'}',
-                style: theme.textTheme.bodySmall
-                    ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
-              ),
-              if (entry.pending > 0) ...[
-                const SizedBox(width: 8),
-                const ReviewBadge(status: ReviewStatus.review),
-              ],
-            ],
-          ),
-        ),
-        children: [
-          for (final area in byArea.keys) ...[
-            Align(
-              alignment: AlignmentDirectional.centerStart,
-              child: Padding(
-                padding: const EdgeInsets.only(top: 8, bottom: 4),
-                child: Text(area,
-                    style: theme.textTheme.labelLarge
-                        ?.copyWith(color: theme.colorScheme.primary)),
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 40),
+      children: [
+        for (final kind in WorkKind.values)
+          if (byKind[kind] != null) ...[
+            Padding(
+              padding: const EdgeInsets.only(top: 8, bottom: 10),
+              child: Text(
+                kind.label.of(locale),
+                style: theme.textTheme.titleSmall?.copyWith(
+                  color: theme.colorScheme.primary,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
-            for (final use in byArea[area]!)
+            for (final entry in byKind[kind]!)
               Padding(
-                padding: const EdgeInsets.only(bottom: 6),
-                child: Row(
+                padding: const EdgeInsets.only(bottom: 14),
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('• '),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(use.where,
-                              style: theme.textTheme.bodyMedium),
-                          if (use.clause.isNotEmpty)
-                            Text(
-                              use.clause,
-                              style: theme.textTheme.bodySmall?.copyWith(
-                                color: theme.colorScheme.onSurfaceVariant,
-                              ),
-                            ),
-                        ],
+                    Text(entry.source.of(locale),
+                        style: theme.textTheme.bodyLarge),
+                    if (entry.work?.detail != null)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 3),
+                        child: Text(
+                          entry.work!.detail!.of(locale),
+                          style: theme.textTheme.bodySmall?.copyWith(
+                            color: theme.colorScheme.onSurfaceVariant,
+                            height: 1.5,
+                          ),
+                        ),
                       ),
-                    ),
                   ],
                 ),
               ),
+            const SizedBox(height: 6),
           ],
-        ],
-      ),
+      ],
     );
   }
 }

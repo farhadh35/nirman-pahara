@@ -3,6 +3,7 @@ import '../../../core/content/models.dart';
 import '../../../core/i18n/app_locale.dart';
 import '../../lookups/logic/lookup_tables.dart';
 import '../../prices/logic/price_models.dart';
+import 'reference_work.dart';
 
 /// One place a source is used.
 class SourceUse {
@@ -75,9 +76,14 @@ class SourceIndex {
     final label = <String, L10nText>{};
 
     void add(L10nText source, SourceUse use) {
-      final key = source.bn.trim();
-      if (key.isEmpty) return;
-      label.putIfAbsent(key, () => source);
+      final raw = source.bn.trim();
+      if (raw.isEmpty) return;
+      // Cite at the precision the claim needs, list at the level of the work:
+      // "BNBC 2020, পার্ট ৬ — ল্যাপ ও ডেভেলপমেন্ট লেংথ" is BNBC 2020 on a
+      // reference list, not a fifth separate code.
+      final work = ReferenceWork.match(raw);
+      final key = work?.id ?? raw;
+      label.putIfAbsent(key, () => work?.title ?? source);
       bySource.putIfAbsent(key, () => []).add(use);
     }
 
@@ -163,22 +169,36 @@ class SourceIndex {
 
     final entries = [
       for (final key in bySource.keys)
-        SourceEntry(source: label[key]!, uses: bySource[key]!),
+        SourceEntry(
+          source: label[key]!,
+          uses: bySource[key]!,
+          work: ReferenceWork.all.where((w) => w.id == key).firstOrNull,
+        ),
     ]..sort((a, b) {
-        // Most-relied-upon first: a source behind forty claims matters more to
-        // a reader checking the app than one behind a single row.
-        final byUses = b.uses.length.compareTo(a.uses.length);
-        return byUses != 0 ? byUses : a.source.bn.compareTo(b.source.bn);
+        // Grouped by kind on the page, so order within a kind is alphabetical.
+        final byKind = a.kindOrder.compareTo(b.kindOrder);
+        return byKind != 0 ? byKind : a.source.bn.compareTo(b.source.bn);
       });
     return SourceIndex(entries);
   }
 }
 
 class SourceEntry {
-  const SourceEntry({required this.source, required this.uses});
+  const SourceEntry({
+    required this.source,
+    required this.uses,
+    this.work,
+  });
 
   final L10nText source;
   final List<SourceUse> uses;
+
+  /// Null when a citation matched no known work and stands as its own entry.
+  final ReferenceWork? work;
+
+  WorkKind get kind => work?.kind ?? WorkKind.practice;
+
+  int get kindOrder => WorkKind.values.indexOf(kind);
 
   /// True when nothing resting on this source has been signed off yet.
   bool get allPending => uses.every((u) => u.status.needsBadge);

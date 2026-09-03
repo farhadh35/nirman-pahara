@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nirman_pahara/core/content/content_repository.dart';
 import 'package:nirman_pahara/core/i18n/app_locale.dart';
+import 'package:nirman_pahara/features/sources/logic/reference_work.dart';
 import 'package:nirman_pahara/features/sources/logic/source_index.dart';
 
 Future<String> _fromDisk(String path) => File(path).readAsString();
@@ -23,8 +24,10 @@ void main() {
         locale: AppLocale.bn,
       );
 
-  test('every citation in the app reaches the sources page', () async {
-    // Counted straight off the packs, independently of the index.
+  test('every citation in the app lands under some reference', () async {
+    // Counted straight off the packs, independently of the index. Nothing may
+    // be dropped on the way to the page: a number whose source is unreachable
+    // is worse than a cluttered screen.
     final guide = await repo.guide();
     final checklists = await repo.checklists();
     final lookups = await repo.lookups();
@@ -55,8 +58,41 @@ void main() {
 
     final index = await build();
     expect(index.useCount, expected,
-        reason: 'the page carries ${index.useCount} of $expected citations; '
-            'the rest are now unreachable from anywhere in the app');
+        reason: 'the page accounts for ${index.useCount} of $expected '
+            'citations; the rest are unreachable from anywhere in the app');
+  });
+
+  test('the list has no duplicate references', () async {
+    // The reason this page exists in this shape. Cited at claim precision the
+    // same work appears many times over — BNBC 2020 five ways, the 2019 book
+    // once per chapter. On a reference list that is one entry each.
+    final index = await build();
+    final titles = [for (final e in index.entries) e.source.bn];
+    expect(titles.toSet().length, titles.length,
+        reason: 'the same work is listed more than once');
+    // And no entry may be a chapter or clause of another.
+    for (final a in titles) {
+      for (final b in titles) {
+        if (identical(a, b) || a == b) continue;
+        expect(a.startsWith('\$b,'), isFalse,
+            reason: 'one entry is a chapter of another and should fold '
+                'into it');
+      }
+    }
+  });
+
+  test('every citation matches a known work', () async {
+    // An unmatched citation stands as its own entry, which is safe but is how
+    // a list starts repeating itself again. If this fails, add the pattern to
+    // ReferenceWork rather than letting it through.
+    final index = await build();
+    final unmatched = [
+      for (final e in index.entries)
+        if (e.work == null) e.source.bn,
+    ];
+    expect(unmatched, isEmpty,
+        reason: 'these cite something the reference list does not know: '
+            '$unmatched');
   });
 
   test('all four parts of the app are represented', () async {
@@ -79,12 +115,15 @@ void main() {
     expect(index.entries.first.uses.length, greaterThan(1));
   });
 
-  test('the most relied-upon source is listed first', () async {
+  test('the list is ordered by kind, codes before conventions', () async {
+    // A reader checking what the app rests on should meet the things a claim
+    // can be verified against before the things that are only ever practice.
     final index = await build();
-    final counts = [for (final e in index.entries) e.uses.length];
-    expect(counts, orderedEquals([...counts]..sort((a, b) => b.compareTo(a))),
-        reason: 'a reader checking what the app rests on should meet the '
-            'load-bearing sources first');
+    final order = [for (final e in index.entries) e.kindOrder];
+    expect(order, orderedEquals([...order]..sort()),
+        reason: 'the kinds are interleaved instead of grouped');
+    expect(index.entries.first.kind, WorkKind.code);
+    expect(index.entries.last.kind, WorkKind.practice);
   });
 
   test('the unverified count matches what the badges claim', () async {
