@@ -35,7 +35,14 @@ Screens are laid out in a single scrolling column, so the capture is just
 - Tap coordinates are per-device and have to be re-derived from a home-screen
   capture each time; a 10-inch emulator is slow enough that a tap five seconds
   after launch can land before the list has drawn, which silently leaves you
-  with a second copy of the home screen. Check every shot.
+  with a second copy of the home screen. Check every shot — comparing file
+  hashes does not work, because the clock in the status bar makes two captures
+  of the same screen differ. Compare a crop of the top strip against the home
+  capture instead: a pushed screen has a back arrow where home has the title,
+  and the mean pixel difference over that band separates them cleanly.
+- The measuring-tools door is the one that misses. It sits mid-list where the
+  row spacing is tightest, and 1063 is the y that lands on a 1600 x 2560
+  tablet.
 - `adb shell am start -S` force-restarts the activity, so each capture begins
   from a known home screen rather than wherever the last one left off. Backing
   out with the back key walks off the app and into the launcher.
