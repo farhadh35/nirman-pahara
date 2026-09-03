@@ -144,7 +144,7 @@ signing — see `store/CHECKLIST.md`.
 ## 9. Store listing accuracy
 
 The listing describes what the build does, checked against it for this release:
-17 calculators, 22 guide chapters, 97 cards, both rate volumes, the gazette FAR
+17 calculators, 21 guide chapters, 94 cards, both rate volumes, the gazette FAR
 table. It was wrong at 1.1.1 — still promising six calculators and 42 cards —
 and the README was wrong in the other direction, calling a shipped feature "not
 yet". Both are corrected. Anything the app does not do is named as not done, in

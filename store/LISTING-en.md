@@ -29,8 +29,8 @@ works and on your own house — in Bangla and English, with no internet.
 
 **Learn — in plain language, without the jargon**
 How to measure, how to tell good cement, steel, brick and sand from bad, why
-curing decides the strength, what tied reinforcement should look like. 22
-chapters, 97 cards, with labelled diagrams drawn in the app itself.
+curing decides the strength, what tied reinforcement should look like. 21
+chapters, 94 cards, with labelled diagrams drawn in the app itself.
 
 **Inspect — stage by stage, ending in a report**
 Separate checklists for rural roads, buildings, food godowns, repair works and
