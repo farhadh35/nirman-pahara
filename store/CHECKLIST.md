@@ -74,6 +74,17 @@ are signed with this key and not with a debug fallback.
 - [ ] Configure the ad network's category blocking before the first ad is
       served — see `docs/AD_POLICY.md`
 
+## Answering the Play Console declarations
+
+- [ ] **Foreground service declaration.** If the Console asks, the answer is
+      that the app does not use one. The location plugin declares
+      `GeolocatorLocationService` with `foregroundServiceType="location"` and
+      the plugin binds it at launch, but nothing in this app ever starts it in
+      the foreground — that happens only through `enableBackgroundMode`, which
+      needs a position stream this app does not open.
+      `docs/PLAY-POLICY-2.0.0.md` section 7 has the detail and the `aapt2 dump
+      xmltree` command that shows the declaration.
+
 ## Should be done before the first public release
 
 - [ ] **Engineer sign-off on the technical content.** `docs/CONTENT_REVIEW.md`

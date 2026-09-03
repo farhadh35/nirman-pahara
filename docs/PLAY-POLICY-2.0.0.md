@@ -11,6 +11,9 @@ than none.
 ```bash
 flutter build apk --release --target-platform android-arm64
 aapt2 dump permissions build/app/outputs/flutter-apk/app-release.apk
+# Permissions alone will not show a <service>. This is what section 7 describes:
+aapt2 dump xmltree build/app/outputs/flutter-apk/app-release.apk \
+  --file AndroidManifest.xml | grep -A 4 "E: service"
 apksigner verify --print-certs build/app/outputs/flutter-apk/app-release.apk
 ```
 
@@ -104,8 +107,32 @@ Content rating questionnaire: **Reference / Education** utility.
 
 ## 7. Device and network abuse, background work
 
-No background services, no foreground services, no scheduled jobs, no wake
-locks, no boot receiver. The app does nothing when it is not open.
+No scheduled jobs, no wake locks, no boot receiver, and no work of the app's own
+while it is closed.
+
+Two services are declared, both by plugins rather than by this app, and they are
+in the shipped binary whatever this section says — so they are named here rather
+than left for a reviewer to find:
+
+- `com.baseflow.geolocator.GeolocatorLocationService`, from the location plugin,
+  declared with `android:foregroundServiceType="location"`. The plugin binds it
+  when the Flutter engine attaches, which is why a device log shows "Binding to
+  location service" at every launch. It only enters the foreground through the
+  plugin's `enableBackgroundMode`, which this app never calls: the app asks for
+  one fix at the moment a photograph is taken and never subscribes to a stream.
+  So the service is bound but never foregrounded, and takes no wake lock.
+- `com.google.android.gms.metadata.ModuleDependencies`, from the image picker,
+  declared `android:enabled="false"`. It exists to tell Play Services which
+  module to install and does not run.
+
+Both are left in place. The geolocator declaration could be deleted with
+`tools:node="remove"` without breaking what this app does — a one-shot position
+is served by the plugin's `GeolocationManager`, not by the service, which
+carries position streams and background mode. But removing it would make the
+plugin's `bindService` call fail at every launch and would break any later use
+of a position stream, in exchange for nothing a reviewer needs: Play asks what
+a foreground service is *used* for, and this one is never started. Declaring it
+accurately here is the honest answer, not editing it out of the binary.
 
 ## 8. Technical requirements
 
