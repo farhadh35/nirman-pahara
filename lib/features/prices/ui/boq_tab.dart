@@ -211,6 +211,26 @@ class _BoqTabState extends State<BoqTab> {
             ),
           ),
           const SizedBox(height: 20),
+          // Nearly a third of the electro-mechanical items carry at least one
+          // zone the published PDF misprints, and those cells are recorded as
+          // unavailable rather than repaired by guesswork. That is the right
+          // call, and it used to render as an empty space: the reader picked an
+          // item, picked their region and got silence, which reads as the app
+          // being broken rather than as the schedule being unreadable.
+          if (scheduleRate == null)
+            CautionBox(
+              text: bn
+                  ? 'ছাপা তফসিলে এই আইটেমের '
+                      '${table.regions[_region].name.of(locale)} অঞ্চলের দরটি পড়া '
+                      'যায় না, তাই এখানে কিছু বসানো হয়নি — অনুমান করে বসানোর '
+                      'চেয়ে ফাঁকা রাখা ভালো। অন্য অঞ্চল দেখুন, অথবা ছাপা '
+                      'তফসিলে এই আইটেমটি মিলিয়ে নিন।'
+                  : 'The printed schedule\'s rate for this item in '
+                      '${table.regions[_region].name.of(locale)} cannot be read, so '
+                      'nothing was put here — an empty cell is better than a '
+                      'guessed one. Try another region, or check this item '
+                      'against the printed schedule.',
+            ),
           if (result != null) _Result(result: result),
           const SizedBox(height: 16),
           if (table.profitPercent != null && table.overheadPercent != null)

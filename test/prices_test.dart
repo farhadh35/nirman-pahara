@@ -12,6 +12,7 @@ import 'package:nirman_pahara/features/prices/logic/price_models.dart';
 Future<String> _fromDisk(String path) => File(path).readAsString();
 
 void main() {
+  _unavailableRates();
   late ContentRepository repo;
 
   setUp(() => repo = ContentRepository(reader: _fromDisk));
@@ -208,6 +209,44 @@ void main() {
             fxAsOf: 'x'),
         throwsA(isA<CalcException>()),
       );
+    });
+  });
+}
+
+/// Nearly a third of the electro-mechanical items carry a zone the published
+/// PDF misprints. Those cells are recorded as unavailable rather than repaired
+/// by guesswork, which is the right call — and it used to reach the reader as
+/// an empty space where the comparison should be.
+void _unavailableRates() {
+  group('an unreadable rate', () {
+    test('is common enough in the E/M volume to be worth a sentence', () async {
+      final table = await ContentRepository(reader: _fromDisk).pwdEmRates();
+      final withGap = table.items
+          .where((i) => List.generate(table.regions.length, i.rateFor)
+              .any((r) => r == null))
+          .length;
+      // If this ever drops to zero the schedule was re-extracted or repaired,
+      // and the message below stops being reachable.
+      expect(withGap, greaterThan(0),
+          reason: 'no item has an unavailable zone any more');
+      expect(withGap / table.items.length, greaterThan(0.1),
+          reason: 'this is a common case, not a rare one: '
+              '$withGap of ${table.items.length}');
+    });
+
+    test('is a null, never a zero', () async {
+      // A zero would compare as a real rate and make a BoQ look like a
+      // hundred-per-cent overcharge.
+      final table = await ContentRepository(reader: _fromDisk).pwdEmRates();
+      for (final item in table.items) {
+        for (var r = 0; r < table.regions.length; r++) {
+          final rate = item.rateFor(r);
+          if (rate != null) {
+            expect(rate, greaterThan(0),
+                reason: '${item.code} zone $r is zero, not absent');
+          }
+        }
+      }
     });
   });
 }
