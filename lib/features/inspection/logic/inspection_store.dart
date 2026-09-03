@@ -39,9 +39,19 @@ class PrefsInspectionStore extends InspectionStore {
   /// Injectable so tests can assert on ordering without sleeping.
   final DateTime Function() _now;
 
+  /// The saved entries, without trusting what is under the key.
+  ///
+  /// getStringList casts, so a key holding anything else throws — and it is
+  /// read by save and delete as well as load, which would mean the reader
+  /// could neither see their inspections nor record a new one.
+  List<String> _stored() {
+    final value = _prefs.get(_key);
+    return value is List<String> ? value : const [];
+  }
+
   @override
   Future<List<InspectionRun>> load(List<ChecklistPack> packs) async {
-    final raw = _prefs.getStringList(_key) ?? const [];
+    final raw = _stored();
     final runs = <InspectionRun>[];
     for (final entry in raw) {
       try {
@@ -50,8 +60,14 @@ class PrefsInspectionStore extends InspectionStore {
           packs,
         );
         if (run != null) runs.add(run);
-      } on FormatException {
-        // A corrupt entry must not take the whole list down with it.
+      } catch (_) {
+        // Deliberately catching everything, not just Exception. Text that is
+        // not JSON raises a FormatException, but valid JSON of the wrong shape
+        // raises a TypeError — an Error, which `on Exception` does not catch —
+        // and one entry written by a different schema would then throw out of
+        // load() and take every inspection with it. This list is the reader's
+        // record of walks they have already made; no single bad row in it is
+        // worth losing the rest.
         continue;
       }
     }
@@ -63,7 +79,7 @@ class PrefsInspectionStore extends InspectionStore {
   @override
   Future<void> save(InspectionRun run) async {
     run.updatedAt = _now();
-    final raw = List<String>.from(_prefs.getStringList(_key) ?? const []);
+    final raw = List<String>.from(_stored());
     raw.removeWhere((e) => _idOf(e) == run.id);
     raw.add(jsonEncode(run.toJson()));
     await _prefs.setStringList(_key, raw);
@@ -72,7 +88,7 @@ class PrefsInspectionStore extends InspectionStore {
 
   @override
   Future<void> delete(String id) async {
-    final raw = List<String>.from(_prefs.getStringList(_key) ?? const []);
+    final raw = List<String>.from(_stored());
     raw.removeWhere((e) => _idOf(e) == id);
     await _prefs.setStringList(_key, raw);
     notifyListeners();

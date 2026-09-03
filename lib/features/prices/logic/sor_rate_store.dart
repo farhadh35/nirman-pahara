@@ -40,7 +40,8 @@ class SorRateStore extends ChangeNotifier {
   final SharedPreferences _prefs;
 
   Map<String, SavedRate> all() {
-    final raw = _prefs.getString(_key);
+    final stored = _prefs.get(_key);
+    final raw = stored is String ? stored : null;
     if (raw == null || raw.isEmpty) return {};
     try {
       final decoded = (jsonDecode(raw) as Map).cast<String, dynamic>();
@@ -48,7 +49,12 @@ class SorRateStore extends ChangeNotifier {
         for (final e in decoded.entries)
           e.key: SavedRate.fromJson((e.value as Map).cast<String, dynamic>()),
       };
-    } on FormatException {
+    } catch (_) {
+      // Everything, not just Exception: text that is not JSON raises a
+      // FormatException, but valid JSON of the wrong shape raises a TypeError,
+      // which `on Exception` does not catch. These are rates the reader typed
+      // in to compare against a bill — worth starting again from empty, never
+      // worth throwing out of a getter that the prices screen calls to build.
       return {};
     }
   }

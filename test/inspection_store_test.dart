@@ -236,4 +236,43 @@ void main() {
           isNot(InspectionRun.idFor(t.add(const Duration(minutes: 1)))));
     });
   });
+
+  test('one unreadable saved inspection does not take the rest with it',
+      () async {
+    // The catch here is `on FormatException`, which covers text that is not
+    // JSON. It does not cover valid JSON of the wrong shape: `jsonDecode(...)
+    // as Map<String, dynamic>` throws a TypeError, and a TypeError is an Error,
+    // not an Exception. A single entry written by a different schema would
+    // then throw straight out of load() — and load() is how the reader's list
+    // of inspections is built, so every inspection they have would disappear
+    // from the app at once.
+    final good = newRun(name: 'Good run');
+    await store.save(good);
+
+    final prefs = await SharedPreferences.getInstance();
+    final raw = List<String>.from(prefs.getStringList('inspection_runs') ?? []);
+    await prefs.setStringList('inspection_runs', [
+      'not json at all',
+      '[1, 2, 3]', // valid JSON, wrong shape
+      '{"id": 42}', // valid JSON object, wrong field types
+      ...raw,
+    ]);
+
+    final loaded = await store.load(packs);
+    expect(loaded.map((r) => r.projectName), contains('Good run'),
+        reason: 'a readable inspection was lost with the unreadable ones');
+  });
+
+  test('a preferences key holding the wrong type does not break the list',
+      () async {
+    // getStringList casts. The key is read by save and delete as well as load,
+    // so a wrong type there would leave the reader unable to see any
+    // inspection or to record a new one.
+    SharedPreferences.setMockInitialValues({'inspection_runs': 'not a list'});
+    final fresh =
+        PrefsInspectionStore(await SharedPreferences.getInstance());
+    expect(await fresh.load(packs), isEmpty);
+    await fresh.save(newRun(name: 'After the damage'));
+    expect((await fresh.load(packs)).single.projectName, 'After the damage');
+  });
 }

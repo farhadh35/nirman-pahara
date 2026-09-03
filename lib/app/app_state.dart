@@ -11,13 +11,26 @@ import 'theme.dart';
 /// usable on a slow phone with no network, so nothing here waits on anything.
 class AppState extends ChangeNotifier {
   AppState._(this._prefs)
-      : _locale = AppLocale.parse(_prefs.getString(_kLocale)),
-        _track = Track.parseChoice(_prefs.getString(_kTrack)),
+      : _locale = AppLocale.parse(_text(_prefs, _kLocale)),
+        _track = Track.parseChoice(_text(_prefs, _kTrack)),
         _textScale = TextScalePreference.values.firstWhere(
-          (t) => t.name == _prefs.getString(_kTextScale),
+          (t) => t.name == _text(_prefs, _kTextScale),
           orElse: () => TextScalePreference.normal,
         ),
-        _onboarded = _prefs.getBool(_kOnboarded) ?? false;
+        _onboarded = _prefs.get(_kOnboarded) == true;
+
+  /// Read a stored string without trusting what is stored.
+  ///
+  /// getString casts, so a key that ever held another type throws — and this
+  /// constructor runs in main(), before the first frame. The app would then
+  /// fail to start on every launch, and since the inspections live in these
+  /// same preferences, the only way out for the reader would take their saved
+  /// work with it. Nothing here is worth an unopenable app, so a value of the
+  /// wrong type is treated exactly like a value that was never written.
+  static String? _text(SharedPreferences prefs, String key) {
+    final value = prefs.get(key);
+    return value is String ? value : null;
+  }
 
   static const _kLocale = 'locale';
   static const _kTrack = 'track';
