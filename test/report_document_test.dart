@@ -166,9 +166,14 @@ void main() {
           ),
           width: 620,
         ));
+    // This proves the page grew to hold the picture, which is a layout claim,
+    // not a painting one: the box is reserved whether or not anything is drawn
+    // into it. For years this test read as proof the photograph rendered, and
+    // it was not — see report_photo_pixels_test.dart, which looks for the
+    // photograph's own colour in the output and found none.
     expect(png!.length, greaterThan(textOnly!.length),
         reason: 'the report with a photograph is no bigger than the one '
-            'without, so the photograph did not render');
+            'without, so no room was made for it');
   });
 
   testWidgets('a photograph on an item marked fine still reaches the page',

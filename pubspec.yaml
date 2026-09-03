@@ -23,6 +23,9 @@ dependencies:
   xml: ^6.6.1
 
 dev_dependencies:
+  # Used by test/report_photo_pixels_test.dart to write a photograph of a
+  # known colour and then look for that colour in the rendered report.
+  image: ^4.3.0
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0

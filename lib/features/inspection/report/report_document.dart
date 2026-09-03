@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
@@ -6,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
+
+import 'report_sheet.dart';
 
 /// Turns a laid-out report widget into a PDF.
 ///
@@ -27,11 +30,49 @@ class ReportDocument {
   /// Built off-screen through its own pipeline so the user never sees a flash
   /// of the print layout, and so the capture is not clipped to the viewport
   /// the way a RepaintBoundary inside a scroll view would be.
+  /// Decode every photograph before the page is drawn.
+  ///
+  /// [rasterise] builds, lays out and paints synchronously and then captures
+  /// the layer tree. Image.file resolves asynchronously — a file read and a
+  /// JPEG decode — so unless the image is already in the global image cache,
+  /// RenderImage has nothing to paint and the report goes out with an empty
+  /// box where the evidence should be.
+  ///
+  /// Nothing said so. The file exists, so the sheet's "could not be included"
+  /// line stayed quiet, and the page comes out the same height either way,
+  /// which is why a test comparing rendered sizes reported this as working.
+  ///
+  /// Resolving through FileImage populates the cache under the same key
+  /// Image.file uses, so the synchronous paint then finds a decoded image.
+  static Future<void> _decode(Iterable<File> files) async {
+    await Future.wait(files.map((file) {
+      final done = Completer<void>();
+      final stream = FileImage(file).resolve(ImageConfiguration.empty);
+      late final ImageStreamListener listener;
+      void finish() {
+        stream.removeListener(listener);
+        if (!done.isCompleted) done.complete();
+      }
+
+      listener = ImageStreamListener(
+        (_, _) => finish(),
+        // A photograph that will not decode is left to the sheet, which counts
+        // it as missing and says so on the page.
+        onError: (_, _) => finish(),
+      );
+      stream.addListener(listener);
+      return done.future;
+    }));
+  }
+
   Future<Uint8List> rasterise(
     Widget child, {
     double width = 1240,
     double pixelRatio = 1.0,
   }) async {
+    // Done here rather than at the call site so that no caller can forget it
+    // and ship a report full of empty boxes.
+    if (child is ReportSheet) await _decode(child.photoFiles.values);
     final boundary = RenderRepaintBoundary();
     final view = WidgetsBinding.instance.platformDispatcher.views.first;
 
