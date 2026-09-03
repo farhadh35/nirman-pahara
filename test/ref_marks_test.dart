@@ -5,6 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:nirman_pahara/app/app_scope.dart';
 import 'package:nirman_pahara/app/app_state.dart';
 import 'package:nirman_pahara/core/content/content_repository.dart';
+import 'package:nirman_pahara/core/util/bn.dart';
 import 'package:nirman_pahara/features/inspection/logic/evidence_store.dart';
 import 'package:nirman_pahara/features/inspection/logic/inspection_store.dart';
 import 'package:nirman_pahara/features/prices/logic/sor_rate_store.dart';
@@ -95,5 +96,27 @@ void main() {
     // And the work it was asked for is actually on the page it landed on.
     expect(find.textContaining(work.title.bn), findsWidgets);
     expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('a screen reader is told what the number is for', (tester) async {
+    // "[৫]" spoken aloud is nothing at all. The mark has to announce itself as
+    // a reference, and as a button, or it is unusable without sight.
+    const cited = 'BNBC 2020, পার্ট ৬';
+    final n = ReferenceWork.numberFor(cited)!;
+    final spoken = 'সূত্র [${Bn.digits('$n')}]';
+
+    final handle = tester.ensureSemantics();
+    late Widget app;
+    await tester.runAsync(
+        () async => app = await _host(const RefMarks(sources: [cited])));
+    await tester.pumpWidget(app);
+    await tester.pumpAndSettle();
+
+    expect(find.bySemanticsLabel(spoken), findsOneWidget,
+        reason: 'the mark announces itself as "[$n]" or not at all');
+    final node = tester.getSemantics(find.byType(InkWell));
+    expect(node.flagsCollection.isButton, isTrue,
+        reason: 'the mark does not announce that it can be activated');
+    handle.dispose();
   });
 }

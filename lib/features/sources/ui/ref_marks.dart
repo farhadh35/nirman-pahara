@@ -39,23 +39,37 @@ class RefMarks extends StatelessWidget {
     final label =
         '[${numbers.map((n) => Bn.localiseDigits('$n', locale)).join(', ')}]';
 
+    // Read aloud, "[৫]" is nothing. Say what the number is for.
+    final spoken = numbers.length == 1
+        ? (locale.isBangla ? 'সূত্র $label' : 'Reference $label')
+        : (locale.isBangla ? 'সূত্র $label' : 'References $label');
+
     return Align(
       alignment: Alignment.centerLeft,
-      child: InkWell(
-        borderRadius: BorderRadius.circular(6),
-        onTap: () => Navigator.of(context).push(
-          MaterialPageRoute<void>(
-            builder: (_) => SourcesScreen(focus: numbers.first),
+      child: Semantics(
+        button: true,
+        label: spoken,
+        excludeSemantics: true,
+        child: InkWell(
+          borderRadius: BorderRadius.circular(6),
+          onTap: () => Navigator.of(context).push(
+            MaterialPageRoute<void>(
+              builder: (_) => SourcesScreen(focus: numbers.first),
+            ),
           ),
-        ),
-        child: Padding(
-          // Small, but the tap target still clears a fingertip.
-          padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 2),
-          child: Text(
-            label,
-            style: theme.textTheme.labelMedium?.copyWith(
-              color: theme.colorScheme.primary,
-              fontFeatures: const [FontFeature.tabularFigures()],
+          child: Padding(
+            // Deliberately smaller than AppTheme.minTapTarget: this is a
+            // secondary mark beside a sentence, not an action, and a 56dp
+            // block of empty space beside every claim would push the content
+            // it annotates off the screen. The padding still brings it to
+            // about 40dp at normal text and past 50 at the largest.
+            padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 6),
+            child: Text(
+              label,
+              style: theme.textTheme.labelMedium?.copyWith(
+                color: theme.colorScheme.primary,
+                fontFeatures: const [FontFeature.tabularFigures()],
+              ),
             ),
           ),
         ),

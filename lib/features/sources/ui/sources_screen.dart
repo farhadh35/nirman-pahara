@@ -31,7 +31,20 @@ class SourcesScreen extends StatefulWidget {
 
 class _SourcesScreenState extends State<SourcesScreen> {
   final _focusKey = GlobalKey();
+  final _controller = ScrollController();
   bool _scrolled = false;
+  int _attempts = 0;
+
+  /// Where the focused entry sits in the list, and how many entries there are.
+  /// Only needed when that entry has not been built yet — see [_revealFocus].
+  int? _focusIndex;
+  int _entryCount = 0;
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   Future<SourceIndex> _load(BuildContext context) async {
     final content = context.content;
@@ -51,13 +64,47 @@ class _SourcesScreenState extends State<SourcesScreen> {
     );
   }
 
+  /// Bring the tapped entry into view.
+  ///
+  /// The obvious version — hang a GlobalKey on the entry and call
+  /// [Scrollable.ensureVisible] — works only for an entry already on screen. A
+  /// ListView builds just the children its viewport can see, so for anything
+  /// below the fold the key has no context and ensureVisible does nothing at
+  /// all, silently: the reader taps [২১] and arrives at the top of the page
+  /// with no idea which of twenty-one works they asked for. On a phone that is
+  /// most of them.
+  ///
+  /// So: jump to roughly where the entry must be, let the viewport build it,
+  /// then ask again on the next frame and scroll exactly. The estimate is
+  /// crude — headings make entries uneven — but it only has to get close
+  /// enough for the target to be built, and each pass gets closer.
   void _revealFocus() {
-    if (_scrolled || widget.focus == null) return;
+    if (_scrolled || widget.focus == null || !mounted) return;
+    if (!_controller.hasClients) return;
+
     final target = _focusKey.currentContext;
-    if (target == null) return;
-    _scrolled = true;
-    Scrollable.ensureVisible(target,
-        duration: const Duration(milliseconds: 250), alignment: 0.15);
+    if (target != null) {
+      _scrolled = true;
+      Scrollable.ensureVisible(target,
+          duration: const Duration(milliseconds: 250), alignment: 0.15);
+      return;
+    }
+
+    // Not built yet. Give up rather than loop if the entry does not exist, or
+    // if the estimate stops moving.
+    if (_focusIndex == null || _entryCount == 0 || _attempts >= 6) {
+      _scrolled = true;
+      return;
+    }
+    _attempts++;
+    final max = _controller.position.maxScrollExtent;
+    final approx = (max * (_focusIndex! / _entryCount)).clamp(0.0, max);
+    if ((approx - _controller.offset).abs() < 1) {
+      _scrolled = true;
+      return;
+    }
+    _controller.jumpTo(approx);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _revealFocus());
   }
 
   @override
@@ -89,7 +136,21 @@ class _SourcesScreenState extends State<SourcesScreen> {
       }
     }
 
+    // Flat position of each entry, so an unbuilt focus target can still be
+    // aimed at. Counted over the same order the page renders in.
+    _entryCount = 0;
+    _focusIndex = null;
+    for (final heading in byHeading.keys) {
+      for (final e in byHeading[heading]!) {
+        if (e.number != null && e.number == widget.focus) {
+          _focusIndex = _entryCount;
+        }
+        _entryCount++;
+      }
+    }
+
     return ListView(
+      controller: _controller,
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 40),
       children: [
         for (final heading in byHeading.keys) ...[
