@@ -120,6 +120,22 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
+  testWidgets('the tables print their numbers in the reader\'s own digits',
+      (tester) async {
+    await _boot(tester);
+    await _open(tester, 'মাপ ও তালিকা');
+
+    // The mix ratios are stored as "1:6" and were rendered raw, so a Bangla
+    // reader saw western digits in the value column while the work beside it
+    // read "১০ ইঞ্চি দেয়ালের গাঁথুনি" — the one screen in the app that did
+    // not localise its numbers.
+    expect(find.textContaining('১:৬'), findsWidgets,
+        reason: 'the value is still in western digits under a Bangla page');
+    expect(find.textContaining('1:6'), findsNothing,
+        reason: 'western digits are still on a Bangla page');
+    expect(tester.takeException(), isNull);
+  });
+
   testWidgets('every calculator screen opens and shows an answer',
       (tester) async {
     await _boot(tester);

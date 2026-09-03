@@ -1,4 +1,5 @@
 import '../../../core/content/models.dart';
+import '../../../core/util/bn.dart';
 import '../../../core/i18n/app_locale.dart';
 
 /// The "what should it be?" tables.
@@ -105,10 +106,25 @@ class LookupRow {
   /// Where the figure came from, shown on the সূত্র tap.
   final String source;
 
-  bool matches(String lowerQuery) =>
-      subject.bn.toLowerCase().contains(lowerQuery) ||
-      (subject.en ?? '').toLowerCase().contains(lowerQuery) ||
-      value.toLowerCase().contains(lowerQuery);
+  /// Whether this row answers [lowerQuery].
+  ///
+  /// Digits are compared in western form on both sides. The values are stored
+  /// western and shown in the reader's own script, so a Bangla reader looking
+  /// at "২৮" and typing what they see would otherwise match nothing at all.
+  ///
+  /// The second column and the source are searched too: someone who wants
+  /// every figure resting on BNBC should be able to ask for them.
+  bool matches(String lowerQuery) {
+    final q = Bn.toWestern(lowerQuery);
+    bool has(String? s) =>
+        s != null && Bn.toWestern(s.toLowerCase()).contains(q);
+    return has(subject.bn) ||
+        has(subject.en) ||
+        has(value) ||
+        has(extra.bn) ||
+        has(extra.en) ||
+        has(source);
+  }
 
   factory LookupRow.fromJson(Map<String, dynamic> j) => LookupRow(
         subject: _text(j['k'])!,

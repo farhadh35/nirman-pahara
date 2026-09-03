@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
 import '../../../core/i18n/strings.dart';
+import '../../../core/util/bn.dart';
 import '../logic/lookup_tables.dart';
 
 /// The "what should it be?" screen — mix ratios, curing days, striking times,
@@ -229,7 +230,10 @@ class _LookupRowTile extends StatelessWidget {
                 ),
                 const SizedBox(width: 12),
                 Text(
-                  row.value,
+                  // Stored western, shown in the reader's script — the row's
+                  // second column was already Bangla, so "28" sat next to
+                  // "২০ ঘণ্টা" in the same line.
+                  Bn.localiseDigits(row.value, context.locale),
                   style: theme.textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.w600,
                   ),

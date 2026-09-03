@@ -3,10 +3,12 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nirman_pahara/core/content/content_repository.dart';
 import 'package:nirman_pahara/core/content/models.dart';
+import 'package:nirman_pahara/features/lookups/logic/lookup_tables.dart';
 
 Future<String> _fromDisk(String path) => File(path).readAsString();
 
 void main() {
+  _searchAndDisplay();
   late ContentRepository repo;
   setUp(() => repo = ContentRepository(reader: _fromDisk));
 
@@ -109,6 +111,58 @@ void main() {
       expect(ReviewStatus.verified.needsBadge, isFalse);
       expect(ReviewStatus.review.needsBadge, isTrue);
       expect(ReviewStatus.ruleOfThumb.needsBadge, isTrue);
+    });
+  });
+}
+
+/// Search and display, from the reader's side.
+///
+/// The values are stored in western digits and every other number in this app
+/// is shown in the reader's own script. This screen was showing "28" beside
+/// "২০ ঘণ্টা" in the same row, and a Bangla reader typing what they saw —
+/// "২৮" — matched nothing, because the search compared their Bangla digits
+/// against a western string.
+void _searchAndDisplay() {
+  group('lookup search', () {
+    late LookupPack pack;
+    setUp(() async {
+      pack = await ContentRepository(reader: _fromDisk).lookups();
+    });
+
+    test('a number typed in Bangla digits finds the row that shows it', () {
+      final curing = pack.tables.firstWhere((t) => t.id == 'curing');
+      final western = curing.search('28');
+      final bangla = curing.search('২৮');
+      expect(western, isNotEmpty, reason: 'nothing cures for 28 days?');
+      expect(bangla.length, western.length,
+          reason: 'searching in the script the app displays finds nothing');
+    });
+
+    test('the second column is searchable, not just the headline value', () {
+      // Every curing row carries its start time in the second column.
+      final curing = pack.tables.firstWhere((t) => t.id == 'curing');
+      expect(curing.search('ঘণ্টা'), isNotEmpty,
+          reason: 'the column the reader can see is not searchable');
+    });
+
+    test('a source can be searched for', () {
+      // Someone who wants to know what rests on the published schedule.
+      final hits = [
+        for (final t in pack.tables) ...t.search('pwd'),
+      ];
+      expect(hits, isNotEmpty);
+    });
+
+    test('an empty query returns the whole table, not nothing', () {
+      for (final t in pack.tables) {
+        expect(t.search('   ').length, t.rows.length);
+      }
+    });
+
+    test('a query that matches nothing returns nothing, not everything', () {
+      for (final t in pack.tables) {
+        expect(t.search('zzzznotathing'), isEmpty);
+      }
     });
   });
 }
