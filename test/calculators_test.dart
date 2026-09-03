@@ -192,6 +192,34 @@ void main() {
       expect(r.valueOf('net_value'), closeTo(3527500, 1));
     });
 
+    test('deductions cannot swallow the whole contract', () {
+      // Income tax is a free-typed percentage on a screen about a government
+      // contract. Typing 100 where 10 was meant made the deduction bigger than
+      // the contract, and the result printed a negative "contractor receives"
+      // as an ordinary row with nothing marking it as nonsense.
+      expect(
+        () => c.compute(
+          contractValue: 4250000,
+          quantity: 1200,
+          quantityUnit: const L10nText('মিটার', 'metre'),
+          incomeTaxPercent: 100,
+        ),
+        throwsA(isA<CalcException>()),
+      );
+      // The ordinary case is untouched.
+      expect(
+        c
+            .compute(
+              contractValue: 4250000,
+              quantity: 1200,
+              quantityUnit: const L10nText('মিটার', 'metre'),
+              incomeTaxPercent: 7,
+            )
+            .valueOf('net_value'),
+        greaterThan(0),
+      );
+    });
+
     test('comparison against a reference rate reports the gap', () {
       final r = c.compute(
         contractValue: 1000000,

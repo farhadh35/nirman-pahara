@@ -136,4 +136,33 @@ void main() {
     expect(find.text('ফলাফল'), findsOneWidget);
     expect(find.textContaining('সংখ্যা হিসেবে পড়া যাচ্ছে না'), findsNothing);
   });
+
+  testWidgets('clearing an optional box uses its stated default, not zero',
+      (tester) async {
+    // The brick stack seeds a 5% gap and says so underneath. Clearing that box
+    // used to hand the calculator 0.0 rather than nothing, so the default was
+    // never reached: the expected brick count rose by about 5% and the
+    // assumption line claimed 0% had been chosen. On the calculator whose
+    // purpose is to tell someone a delivery came up short, that inflates the
+    // number a short delivery is measured against.
+    tester.view.physicalSize = const Size(1200, 3000);
+    tester.view.devicePixelRatio = 3.0;
+    addTearDown(tester.view.reset);
+
+    final spec = CalcSpec.byId('brick_stack')!;
+    await tester.pumpWidget(await _wrap(tester, CalculatorScreen(spec: spec)));
+    await tester.pumpAndSettle();
+    expect(find.textContaining('৫% ফাঁক'), findsOneWidget,
+        reason: 'the seeded gap is not being stated');
+
+    // Clear the optional gap box. It is optional, so nothing blocks the run.
+    final gap = find.byType(TextField).at(3);
+    await tester.enterText(gap, '');
+    await tester.pumpAndSettle();
+
+    expect(find.textContaining('০% ফাঁক'), findsNothing,
+        reason: 'an empty box was read as a deliberate zero');
+    expect(find.textContaining('৫% ফাঁক'), findsOneWidget,
+        reason: 'the stated default was not applied');
+  });
 }

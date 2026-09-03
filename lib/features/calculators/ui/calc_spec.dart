@@ -427,9 +427,14 @@ class CalcSpec {
         const CalcField(
           key: 'quantity',
           label: L10nText('কাজের পরিমাণ', 'Work quantity'),
+          // The hint used to name units — "metres for a road, square feet for
+          // a building" — while the dropdown underneath decides what the rate
+          // is actually labelled per. Someone who picked কিলোমিটার and
+          // followed the hint entered metres, and read a rate per kilometre
+          // that was a thousand times too small.
           hint: L10nText(
-            'রাস্তা হলে মিটার, ভবন হলে বর্গফুট',
-            'Metres for a road, square feet for a building',
+            'নিচে যে একক বেছেছেন, সেই এককেই পরিমাণ লিখুন',
+            'Enter the quantity in the unit you pick below',
           ),
           initial: '1200',
         ),

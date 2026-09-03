@@ -275,4 +275,25 @@ void main() {
     await fresh.save(newRun(name: 'After the damage'));
     expect((await fresh.load(packs)).single.projectName, 'After the damage');
   });
+
+  test('a photograph on an item with no answer and no note still survives',
+      () async {
+    // The commonest reason to photograph something is that you cannot judge it
+    // — so this is not an edge case, it is the main one. The finding was only
+    // written when it had an answer or a note, so adding a photograph saved a
+    // run that did not contain it, orphaned the image file, and showed nothing
+    // when the inspection was reopened.
+    final run = newRun(name: 'Photo only');
+    final f = run.findings.values.first;
+    expect(f.isAnswered, isFalse);
+    expect(f.note, isEmpty);
+    f.photos.add(PhotoRef(name: 'seen.jpg', takenAt: DateTime(2026, 7, 12, 9)));
+
+    await store.save(run);
+    final reopened = (await store.load(packs))
+        .firstWhere((r) => r.projectName == 'Photo only');
+    expect(reopened.photoCount, 1,
+        reason: 'the photograph was dropped by the save that added it');
+    expect(reopened.findings[f.item.id]!.photos.single.name, 'seen.jpg');
+  });
 }

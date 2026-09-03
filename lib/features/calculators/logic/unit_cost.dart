@@ -38,6 +38,21 @@ class UnitCostCalculator {
     }
 
     final deductionPercent = vatPercent + incomeTaxPercent;
+    // Every other percentage in these calculators is bounded; this one was
+    // not, and it is the one a reader types a government rate into. A typo of
+    // 100 for 10 made the deduction larger than the contract and printed a
+    // negative "contractor receives" as an ordinary row, with nothing to say
+    // it was nonsense.
+    if (!deductionPercent.isFinite ||
+        deductionPercent < 0 ||
+        deductionPercent >= 100) {
+      throw CalcException(const L10nText(
+        'ভ্যাট ও আয়কর মিলে ১০০%-এর কম হতে হবে। কর্তন চুক্তিমূল্যের চেয়ে বেশি '
+            'হতে পারে না।',
+        'VAT and income tax together must come to less than 100%. The '
+            'deduction cannot exceed the contract value.',
+      ));
+    }
     final netToContractor = contractValue * (1 - deductionPercent / 100);
     final grossRate = contractValue / quantity;
     final netRate = netToContractor / quantity;

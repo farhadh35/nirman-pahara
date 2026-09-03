@@ -105,10 +105,26 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 
   Map<String, dynamic> get _values => {
         for (final f in widget.spec.fields)
-          f.key: f.isChoice
-              ? _choices[f.key]
-              : Bn.parse(_controllers[f.key]!.text) ?? 0.0,
+          f.key: f.isChoice ? _choices[f.key] : _typed(f.key),
       };
+
+  /// What is in a box, or null when it is empty.
+  ///
+  /// Null rather than zero, because several optional fields carry a default of
+  /// their own — a 5% wastage on soling and on paint, a 5% gap in a brick
+  /// stack, a 10% wastage on tiles — and the calculator only reaches that
+  /// default when the value is absent. Handing it 0.0 instead meant clearing
+  /// the box silently swapped the stated allowance for none: the brick-stack
+  /// count rose about 5%, on the calculator whose whole purpose is telling
+  /// someone their delivery came up short, and the assumption line underneath
+  /// read "০% ফাঁক ধরা হয়েছে" as though they had chosen it.
+  ///
+  /// A blank required box is caught before the run; text that will not parse
+  /// is caught too. So this returns null only where null is the right answer.
+  double? _typed(String key) {
+    final text = _controllers[key]!.text;
+    return text.trim().isEmpty ? null : Bn.parse(text);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -313,7 +329,12 @@ class CalcResultView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(result.formula.of(locale),
+              // The formula and the assumptions are built in the logic layer,
+              // which has no locale, so their numbers arrive western while the
+              // headline above them has already been rendered in Bangla. Same
+              // card, two scripts, explaining the same figure. These are
+              // numbers a person reads, so they follow the reader's script.
+              Text(Bn.localiseDigits(result.formula.of(locale), locale),
                   style: theme.textTheme.bodyMedium),
               const SizedBox(height: 16),
               Text(context.t(S.assumptions),
@@ -327,7 +348,8 @@ class CalcResultView extends StatelessWidget {
                     children: [
                       const Text('• '),
                       Expanded(
-                        child: Text(a.of(locale),
+                        child: Text(
+                            Bn.localiseDigits(a.of(locale), locale),
                             style: theme.textTheme.bodySmall),
                       ),
                     ],
@@ -355,9 +377,9 @@ class CalcResultView extends StatelessWidget {
           '${l.unit.of(locale)}');
     }
     b.writeln();
-    b.writeln(result.formula.of(locale));
+    b.writeln(Bn.localiseDigits(result.formula.of(locale), locale));
     for (final a in result.assumptions) {
-      b.writeln('• ${a.of(locale)}');
+      b.writeln('• ${Bn.localiseDigits(a.of(locale), locale)}');
     }
     if (result.note != null) {
       b.writeln();

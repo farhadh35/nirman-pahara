@@ -119,4 +119,46 @@ void main() {
     expect(RegExp(r'^[0-9,]+$').hasMatch(after), isTrue,
         reason: 'English shows Bangla digits: $after');
   });
+
+  testWidgets('the formula reads in the same script as the answer above it',
+      (tester) async {
+    // The headline is formatted through Bn.number and comes out in Bangla; the
+    // formula and the assumptions are built in the logic layer, which has no
+    // locale, and arrived western. So one card explained "২,৭৯৩ টি" with a line
+    // reading "= 2793 টি" — two scripts, same figure, six lines apart.
+    tester.view.physicalSize = const Size(1200, 3000);
+    tester.view.devicePixelRatio = 3.0;
+    addTearDown(tester.view.reset);
+
+    final state = await _state();
+    state.locale = AppLocale.bn;
+    final prefs = await SharedPreferences.getInstance();
+    await tester.pumpWidget(_app(
+        state, prefs, CalculatorScreen(spec: CalcSpec.byId('brick_stack')!)));
+    await tester.pumpAndSettle();
+
+    final shown = tester
+        .widgetList<Text>(find.byType(Text))
+        .map((t) => t.data ?? '')
+        .where((t) => t.contains('ইট =') || t.contains('ফাঁক ধরা'))
+        .toList();
+    expect(shown, isNotEmpty, reason: 'no formula or assumption was drawn');
+    for (final line in shown) {
+      expect(RegExp(r'[0-9]').hasMatch(line), isFalse,
+          reason: 'western digits in Bangla prose: "$line"');
+    }
+
+    // And in English they stay western rather than being pushed into Bangla.
+    state.locale = AppLocale.en;
+    await tester.pumpAndSettle();
+    final english = tester
+        .widgetList<Text>(find.byType(Text))
+        .map((t) => t.data ?? '')
+        .where((t) => t.contains('Bricks =') || t.contains('gap'))
+        .toList();
+    for (final line in english) {
+      expect(RegExp(r'[\u09E6-\u09EF]').hasMatch(line), isFalse,
+          reason: 'Bangla digits in English prose: "$line"');
+    }
+  });
 }

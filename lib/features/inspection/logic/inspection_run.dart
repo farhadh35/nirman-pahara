@@ -243,8 +243,15 @@ class InspectionRun {
         'date': date.toIso8601String(),
         'updated_at': updatedAt.toIso8601String(),
         'findings': {
+          // A photograph counts as work done, the same as an answer or a note.
+          // Without it, someone who photographs a thing they cannot yet judge
+          // — the commonest reason to take a picture at all — loses it on the
+          // very save that adding it triggers: the finding is not written, the
+          // image file is orphaned, and reopening the inspection shows nothing.
           for (final e in findings.entries)
-            if (e.value.isAnswered || e.value.note.trim().isNotEmpty)
+            if (e.value.isAnswered ||
+                e.value.hasPhotos ||
+                e.value.note.trim().isNotEmpty)
               e.key: e.value.toJson(),
         },
       };
