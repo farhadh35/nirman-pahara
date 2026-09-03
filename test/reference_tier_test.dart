@@ -1,5 +1,14 @@
 import 'dart:io';
 
+import 'package:flutter/material.dart';
+import 'package:nirman_pahara/app/widgets/common.dart';
+import 'package:nirman_pahara/features/guide/ui/guide_screens.dart';
+import 'package:nirman_pahara/app/app_scope.dart';
+import 'package:nirman_pahara/app/app_state.dart';
+import 'package:nirman_pahara/features/inspection/logic/evidence_store.dart';
+import 'package:nirman_pahara/features/inspection/logic/inspection_store.dart';
+import 'package:nirman_pahara/features/prices/logic/sor_rate_store.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nirman_pahara/core/content/content_repository.dart';
 import 'package:nirman_pahara/core/content/models.dart';
@@ -7,6 +16,7 @@ import 'package:nirman_pahara/core/content/models.dart';
 Future<String> _fromDisk(String path) => File(path).readAsString();
 
 void main() {
+  _referenceCardsAreBadged();
   late ContentRepository repo;
   setUp(() => repo = ContentRepository(reader: _fromDisk));
 
@@ -60,5 +70,75 @@ void main() {
         expect(c.citations, isNotEmpty, reason: '${m.id} / ${c.id}');
       }
     }
+  });
+}
+
+/// The reference tier is the app's most technical content — foundation
+/// classes, pile caps, tie beams, reading a bore log — and every one of its
+/// claims is still `review`, meaning no licensed engineer has signed it off.
+///
+/// Its index screen renders no badge and no citation button, which looked like
+/// a hole until you follow where it navigates: it pushes the same
+/// GuideModuleScreen the guide uses, and the badge and the source live on the
+/// card renderer inside it. So the honesty holds — by reuse rather than by
+/// anything asserting it, which is what this adds.
+void _referenceCardsAreBadged() {
+  group('the reference tier wears its badges', () {
+    late ContentRepository repo;
+    setUp(() => repo = ContentRepository(reader: _fromDisk));
+
+    test('every reference claim is still unverified, and says so in its data',
+        () async {
+      final pack = await repo.guide();
+      expect(pack.reference, isNotEmpty);
+      for (final module in pack.reference) {
+        for (final card in module.cards) {
+          expect(card.citations, isNotEmpty,
+              reason: '${card.id} states detailing with no source at all');
+          for (final c in card.citations) {
+            expect(c.status.needsBadge, isTrue,
+                reason: '${card.id} claims a verified source; if an engineer '
+                    'really has signed this off, docs/CONTENT_REVIEW.md '
+                    'should say so too');
+          }
+        }
+      }
+    });
+
+    testWidgets('a reference card renders the badge and offers its source',
+        (tester) async {
+      // Tall on purpose: the card is a lazily built list and the source
+      // button sits under the body text.
+      tester.view.physicalSize = const Size(1200, 12000);
+      tester.view.devicePixelRatio = 3.0;
+      addTearDown(tester.view.reset);
+
+      late GuideModule module;
+      await tester.runAsync(() async {
+        module = (await repo.guide()).reference.first;
+      });
+
+      SharedPreferences.setMockInitialValues({'onboarded': true});
+      final prefs = await SharedPreferences.getInstance();
+      await tester.pumpWidget(AppScope(
+        state: await AppState.load(),
+        content: repo,
+        store: PrefsInspectionStore(prefs),
+        evidence: EvidenceStore(
+          directory: () async => Directory.systemTemp.createTempSync('ref'),
+        ),
+        rates: SorRateStore(prefs),
+        child: MaterialApp(home: GuideModuleScreen(module: module)),
+      ));
+      await tester.pumpAndSettle();
+
+      // The amber badge, on the tier a reader is most likely to trust.
+      expect(find.byType(ReviewBadge), findsWidgets,
+          reason: 'unverified detailing is being shown as settled');
+      // And the source has to be reachable, not just recorded.
+      expect(find.byIcon(Icons.menu_book_outlined), findsWidgets,
+          reason: 'the citation cannot be opened from the card');
+      expect(tester.takeException(), isNull);
+    });
   });
 }
