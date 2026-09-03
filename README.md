@@ -28,7 +28,7 @@ invisible to the people it is for.
 | **PWD Schedule of Rates 2022 (2nd revised)** — all 1,749 priced items, four regional columns, parsed from the official PDF | Working |
 | **Rate schedule check** — work-type profiles flag items that should be present and are not; — import a departmental rate schedule (.xlsx / .csv / .docx / .txt) and get the unscheduled items, quantity overruns, unexecuted work, arithmetic mismatches and inconsistent rates, each with the document to ask for | Working |
 | Inspection — checklist run, findings, text report, saved and resumable | Working |
-| Rights — separate complaint ladders per track, RTI / complaint / contractor-notice templates | Working |
+| Rights — RTI application and contractor-notice letter templates | Working |
 | Photo evidence — camera capture, stored in the app's own directory, attached per finding, viewable full-screen | Working |
 | **Sharing** — report text plus every photograph, to any app the user already has | Working |
 | **Capture context** — every photograph carries its timestamp and, where the phone can get a fix, its coordinates; when it cannot, the report says why | Working |
@@ -105,7 +105,7 @@ lib/
     calculators/  pure-Dart calc engine + one declarative form screen
     prices/       market band comparison, cross-country benchmarks
     inspection/   checklist run and report generation
-    rights/       complaint ladder, letter templates
+    rights/       letter templates
     home/         home and onboarding
     settings/     language, text size, track, disclosure
 assets/content/   the content packs — this is the product's core IP

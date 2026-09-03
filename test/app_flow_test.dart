@@ -184,11 +184,9 @@ void main() {
     expect(find.textContaining('সাল নিশ্চিত নয়'), findsWidgets);
   });
 
-  testWidgets('the rights screen lists the ladder and opens a letter',
-      (tester) async {
+  testWidgets('the rights screen opens a letter', (tester) async {
     await _boot(tester);
     await _tapText(tester, 'অধিকার');
-    expect(find.text('অভিযোগের ধাপ'), findsOneWidget);
 
     await _tapText(tester, 'তথ্য অধিকার আবেদন');
     expect(find.text('চিঠির খসড়া'), findsOneWidget);

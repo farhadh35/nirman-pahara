@@ -6,57 +6,6 @@ import 'models.dart';
 /// The order matters. A complaint fired at the top usually comes back down,
 /// and confronting a contractor alone on site can be unsafe. The app walks the
 /// ladder from the bottom up.
-class ComplaintStep {
-  const ComplaintStep({
-    required this.id,
-    required this.title,
-    required this.who,
-    required this.how,
-    this.track = Track.either,
-    this.contact,
-    this.expect,
-    this.caution,
-  });
-
-  final String id;
-
-  /// Whose ladder this rung belongs to. The public-works ladder runs through
-  /// the Upazila Engineer, the UNO and GRS; none of that applies to someone
-  /// arguing with the mason building their own house, and showing it to them
-  /// is worse than showing nothing.
-  final Track track;
-
-  final L10nText title;
-
-  /// Which office or person this step goes to.
-  final L10nText who;
-
-  /// What to hand over, and in what form.
-  final L10nText how;
-
-  /// Phone, web address or office, where there is a standing one. Localised
-  /// because a helpline number carries digits and a parenthetical.
-  final L10nText? contact;
-
-  /// What should happen next, and in how long.
-  final L10nText? expect;
-
-  /// Safety or practicality warning for this step.
-  final L10nText? caution;
-
-  factory ComplaintStep.fromJson(Map<String, dynamic> j) => ComplaintStep(
-        id: j['id'] as String,
-        title: L10nText.fromJson(j['title']),
-        who: L10nText.fromJson(j['who']),
-        how: L10nText.fromJson(j['how']),
-        track: Track.parse(j['track'] as String?),
-        contact:
-            j['contact'] == null ? null : L10nText.fromJson(j['contact']),
-        expect: j['expect'] == null ? null : L10nText.fromJson(j['expect']),
-        caution: j['caution'] == null ? null : L10nText.fromJson(j['caution']),
-      );
-}
-
 /// A fill-in-the-blanks letter: an RTI application, a written complaint.
 class LetterTemplate {
   const LetterTemplate({
@@ -157,21 +106,16 @@ class RightsPack {
   const RightsPack({
     required this.contentVersion,
     required this.updated,
-    required this.steps,
     required this.letters,
   });
 
   final int contentVersion;
   final String updated;
-  final List<ComplaintStep> steps;
   final List<LetterTemplate> letters;
 
   factory RightsPack.fromJson(Map<String, dynamic> j) => RightsPack(
         contentVersion: j['content_version'] as int,
         updated: j['updated'] as String,
-        steps: (j['steps'] as List)
-            .map((e) => ComplaintStep.fromJson(e as Map<String, dynamic>))
-            .toList(),
         letters: (j['letters'] as List)
             .map((e) => LetterTemplate.fromJson(e as Map<String, dynamic>))
             .toList(),
@@ -183,9 +127,6 @@ class RightsPack {
     }
     return null;
   }
-
-  List<ComplaintStep> stepsFor(Track t) =>
-      steps.where((s) => s.track.covers(t)).toList();
 
   List<LetterTemplate> lettersFor(Track t) =>
       letters.where((l) => l.track.covers(t)).toList();

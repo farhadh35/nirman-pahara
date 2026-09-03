@@ -111,12 +111,7 @@ class S {
   );
 
   // Rights -----------------------------------------------------------------
-  static const complaintLadder =
-      L10nText('অভিযোগের ধাপ', 'The complaint ladder');
   static const letters = L10nText('আবেদন ও অভিযোগের নমুনা', 'Letter templates');
-  static const whoTo = L10nText('কার কাছে', 'Who to');
-  static const howTo = L10nText('কীভাবে', 'How');
-  static const whatToExpect = L10nText('কী হওয়ার কথা', 'What to expect');
   static const caution = L10nText('সাবধানতা', 'Caution');
   static const preview = L10nText('চিঠির খসড়া', 'Draft letter');
 

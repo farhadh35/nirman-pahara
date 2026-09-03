@@ -184,24 +184,10 @@ void main() {
       }
     });
 
-    test('the private complaint ladder does not route through public offices',
-        () async {
-      final rights = await repo.rights();
-      for (final s in rights.stepsFor(Track.private)) {
-        final text = flatten([s.title.bn, s.who.bn, s.how.bn]);
-        for (final term in governmentOnly) {
-          expect(text.contains(term), isFalse,
-              reason: 'step ${s.id} is on the private track but mentions '
-                  '"$term"');
-        }
-      }
-    });
-
-    test('both tracks have somewhere to complain and something to send',
+    test('both tracks have a letter to send',
         () async {
       final rights = await repo.rights();
       for (final t in [Track.government, Track.private]) {
-        expect(rights.stepsFor(t), isNotEmpty, reason: t.name);
         expect(rights.lettersFor(t), isNotEmpty, reason: t.name);
       }
     });
@@ -216,19 +202,13 @@ void main() {
   });
 
   group('Rights pack', () {
-    test('parses with a complaint ladder and letters', () async {
+    test('parses with letters', () async {
       final r = await repo.rights();
-      expect(r.steps.length, greaterThanOrEqualTo(4));
       expect(r.letters, isNotEmpty);
     });
 
-    test('every step and letter is fully translated', () async {
+    test('every letter is fully translated', () async {
       final r = await repo.rights();
-      for (final s in r.steps) {
-        expect(s.title.needsTranslation, isFalse, reason: s.id);
-        expect(s.who.needsTranslation, isFalse, reason: s.id);
-        expect(s.how.needsTranslation, isFalse, reason: s.id);
-      }
       for (final l in r.letters) {
         expect(l.title.needsTranslation, isFalse, reason: l.id);
         expect(l.body.needsTranslation, isFalse, reason: l.id);
@@ -274,16 +254,6 @@ void main() {
           expect(line.replaceAll(RegExp('[_\\s]'), ''), isNotEmpty,
               reason: 'a blank rule must carry a label: "\$line"');
         }
-      }
-    });
-
-    test('a contact line is translated, digits and all', () async {
-      final r = await repo.rights();
-      for (final st in r.steps.where((s) => s.contact != null)) {
-        expect(st.contact!.needsTranslation, isFalse, reason: st.id);
-        // A Bangla helpline number must not survive into the English screen.
-        expect(RegExp('[০-৯]').hasMatch(st.contact!.en!), isFalse,
-            reason: '${st.id}: Bangla digits leaked into English');
       }
     });
 

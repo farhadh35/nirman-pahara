@@ -84,8 +84,6 @@ void main() {
       expect(modules.fold<int>(0, (a, m) => a + m.cards.length),
           greaterThan(50), reason: '${t.name}: too few cards');
       expect(packs, isNotEmpty, reason: '${t.name}: no checklist to run');
-      expect(rights.stepsFor(t), isNotEmpty,
-          reason: '${t.name}: no complaint ladder');
       expect(rights.lettersFor(t), isNotEmpty,
           reason: '${t.name}: no letter to send');
     }

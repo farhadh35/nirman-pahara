@@ -19,21 +19,10 @@ class RightsScreen extends StatelessWidget {
         future: context.content.rights(),
         builder: (context, pack) {
           final track = context.appState.track;
-          final steps = pack.stepsFor(track);
           final letters = pack.lettersFor(track);
           return ListView(
             padding: const EdgeInsets.fromLTRB(16, 12, 16, 40),
             children: [
-              Text(
-                context.t(S.complaintLadder),
-                style: theme.textTheme.titleLarge,
-              ),
-              const SizedBox(height: 12),
-              for (final s in steps) ...[
-                _StepCard(step: s),
-                const SizedBox(height: 12),
-              ],
-              const SizedBox(height: 12),
               Text(context.t(S.letters), style: theme.textTheme.titleLarge),
               const SizedBox(height: 12),
               for (final l in letters) ...[
@@ -67,60 +56,6 @@ class RightsScreen extends StatelessWidget {
       ),
     );
   }
-}
-
-class _StepCard extends StatelessWidget {
-  const _StepCard({required this.step});
-
-  final ComplaintStep step;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    return SectionCard(
-      title: context.t(step.title),
-      icon: Icons.north_east,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _line(theme, context.t(S.whoTo), context.t(step.who)),
-          _line(theme, context.t(S.howTo), context.t(step.how)),
-          if (step.expect != null)
-            _line(theme, context.t(S.whatToExpect), context.t(step.expect!)),
-          if (step.contact != null) ...[
-            const SizedBox(height: 8),
-            SelectableText(
-              context.t(step.contact!),
-              style: theme.textTheme.bodyMedium?.copyWith(
-                color: theme.colorScheme.primary,
-              ),
-            ),
-          ],
-          if (step.caution != null) ...[
-            const SizedBox(height: 12),
-            CautionBox(text: context.t(step.caution!)),
-          ],
-        ],
-      ),
-    );
-  }
-
-  Widget _line(ThemeData theme, String label, String value) => Padding(
-    padding: const EdgeInsets.only(bottom: 10),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: theme.textTheme.labelMedium?.copyWith(
-            color: theme.colorScheme.onSurfaceVariant,
-          ),
-        ),
-        const SizedBox(height: 2),
-        Text(value, style: theme.textTheme.bodyMedium),
-      ],
-    ),
-  );
 }
 
 /// Fills a letter template in and lets the user copy the result out.
