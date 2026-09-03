@@ -79,8 +79,12 @@ class EvidenceStore {
         ),
       );
       return (position: position, outcome: LocationOutcome.recorded);
-    } on Exception {
-      // Timed out, or no provider could produce a fix.
+    } catch (_) {
+      // Timed out, or no provider could produce a fix. Caught unconditionally
+      // rather than `on Exception`: this method's contract is to return an
+      // outcome, and a platform channel that throws an Error instead would
+      // otherwise escape into the photo capture and lose the picture along
+      // with the location.
       return (position: null, outcome: LocationOutcome.noFix);
     }
   }

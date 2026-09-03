@@ -624,7 +624,12 @@ class InspectionReportScreen extends StatelessWidget {
       await SharePlus.instance.share(
         ShareParams(files: [XFile(out.path)], subject: run.projectName),
       );
-    } on Exception {
+    } catch (_) {
+      // Not `on Exception`. Rendering a page and encoding a PDF is exactly
+      // where an Error turns up — a bad image, memory, an unsupported
+      // operation — and one escaping here left the progress snackbar sitting
+      // on screen with nothing ever replacing it, so the export looked like it
+      // was still running.
       messenger
         ..hideCurrentSnackBar()
         ..showSnackBar(SnackBar(
@@ -664,7 +669,7 @@ class InspectionReportScreen extends StatelessWidget {
           subject: run.projectName,
         ),
       );
-    } on Exception {
+    } catch (_) {
       messenger.showSnackBar(SnackBar(
         content: Text(bn ? 'পাঠানো গেল না।' : 'Could not send.'),
       ));
@@ -791,7 +796,7 @@ class _PhotoRow extends StatelessWidget {
       );
       finding.photos.add(photo);
       onChanged();
-    } on Exception {
+    } catch (_) {
       messenger.showSnackBar(SnackBar(
         content: Text(bn
             ? 'ছবি তোলা গেল না। ক্যামেরার অনুমতি আছে কি না দেখুন।'
