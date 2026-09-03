@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'boq_models.dart';
 
 /// Reads a rate schedule out of tabular rows — a spreadsheet, or the cells of
@@ -32,6 +33,27 @@ class ScheduleRowParser {
   static const _scheduleAmtWords = ['schedule amount', 'তফসিল টাকা'];
   static const _measuredAmtWords = ['measured amount', 'measued amount',
       'মাপা টাকা'];
+
+  /// The Bangla column headings this parser can actually find.
+  ///
+  /// The Right to Information letter in assets/content/rights.json asks an
+  /// office to supply a BoQ with these columns kept separate, because a sheet
+  /// headed any other way imports with the quantity or the amount missing and
+  /// every line then looks as though it was billed against nothing. The letter
+  /// and this list have to say the same thing, so a test holds them together:
+  /// widening the parser without widening the letter is fine, but narrowing it
+  /// leaves the reader asking for a shape the app can no longer read.
+  @visibleForTesting
+  static const columnHeadingsBn = <String>[
+    'ক্রমিক',
+    'বিবরণ',
+    'একক',
+    'পরিমাণ',
+    'দর',
+    'টাকা',
+    'তফসিল পরিমাণ',
+    'মাপা পরিমাণ',
+  ];
 
   BoqDocument parse(List<List<String>> rows, {String title = ''}) {
     final header = _findHeader(rows);

@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nirman_pahara/core/content/content_repository.dart';
 import 'package:nirman_pahara/core/i18n/app_locale.dart';
+import 'package:nirman_pahara/features/boq/logic/schedule_row_parser.dart';
 
 Future<String> _fromDisk(String path) => File(path).readAsString();
 
@@ -68,5 +69,43 @@ void main() {
     final out = letter.render({key: '   '}, AppLocale.bn);
     expect(out, contains('['),
         reason: 'a field holding only spaces was treated as filled');
+  });
+
+  test('the RTI letter asks for a document the app can actually read',
+      () async {
+    // The app can check a BoQ line by line, but only if the BoQ arrives as a
+    // sheet rather than as a photograph of one. The letter used to ask for
+    // "printed copies", which guarantees the checker cannot be used on what
+    // comes back — the reader files an application, waits twenty working days,
+    // and receives something the app can do nothing with.
+    final pack = await ContentRepository(reader: _fromDisk).rights();
+    final rti = pack.letters.firstWhere((l) => l.id == 'rti_application');
+
+    for (final locale in AppLocale.values) {
+      final body = rti.body.of(locale);
+      expect(body.toLowerCase(), contains(locale == AppLocale.bn ? 'এক্সেল' : 'excel'),
+          reason: 'the letter does not ask for a machine-readable copy');
+      // And it must not close the door: an office with no soft copy should
+      // still send paper rather than refuse the application over its form.
+      expect(body, contains(locale == AppLocale.bn ? 'ছাপানো কপি' : 'printed copy'),
+          reason: 'the letter demands a format the office may not have, which '
+              'invites a refusal instead of an answer');
+    }
+  });
+
+  test('the columns the letter asks for are the columns the parser finds',
+      () async {
+    // If these two drift apart, the reader asks an office for a shape the
+    // importer can no longer read, and finds out twenty working days later.
+    final pack = await ContentRepository(reader: _fromDisk).rights();
+    final body =
+        pack.letters.firstWhere((l) => l.id == 'rti_application').body.bn;
+    final missing = [
+      for (final heading in ScheduleRowParser.columnHeadingsBn)
+        if (!body.contains(heading)) heading,
+    ];
+    expect(missing, isEmpty,
+        reason: 'the letter does not name these columns the importer looks '
+            'for, so a sheet supplied to the letter may still import empty');
   });
 }

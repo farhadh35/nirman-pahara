@@ -719,7 +719,12 @@ class _InspectionReportScreenState extends State<InspectionReportScreen> {
       final out = await document.write(
         pdf,
         await evidence.exportDirectory(),
-        '${InspectionReportScreen.safeFileName(run.projectName)}.pdf',
+        // The run id, not just the name. Two inspections of "school building"
+        // resolved to one file, so exporting the second overwrote the first
+        // and the reader could share last week's report believing it was
+        // today's. It also gives removeForRun something to match on.
+        '${InspectionReportScreen.safeFileName(run.projectName)}'
+            '_${run.id}.pdf',
       );
 
       messenger.hideCurrentSnackBar();

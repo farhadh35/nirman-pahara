@@ -130,6 +130,16 @@ class EvidenceStore {
         entity.deleteSync();
       }
     }
+    // Exported reports too. Deleting an inspection used to leave its PDF on
+    // the phone — a document naming the site, the tender and what was seen,
+    // still there after the reader had deleted the thing that produced it.
+    final exports = await exportDirectory();
+    for (final entity in exports.listSync()) {
+      if (entity is File &&
+          entity.uri.pathSegments.last.contains('_$runId.')) {
+        entity.deleteSync();
+      }
+    }
   }
 
   static String _extension(String path) {

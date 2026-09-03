@@ -1,6 +1,8 @@
+import 'dart:io';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:nirman_pahara/features/inspection/logic/evidence_store.dart';
 import 'package:nirman_pahara/features/inspection/ui/inspection_screens.dart';
 
 /// The name a shared report file gets.
@@ -54,5 +56,26 @@ void main() {
     expect(bytes('$name.pdf'), lessThan(255));
     // Re-encoding must round-trip: a split cluster would not.
     expect(utf8.decode(utf8.encode(name)), name);
+  });
+
+  test('deleting an inspection takes its exported report with it', () async {
+    // A report PDF names the site, the tender and what was seen. Deleting the
+    // inspection removed its photographs and left that document on the phone.
+    final tmp = Directory.systemTemp.createTempSync('exports');
+    addTearDown(() => tmp.deleteSync(recursive: true));
+    final evidence = EvidenceStore(directory: () async => tmp);
+
+    final exports = await evidence.exportDirectory();
+    final mine = File('${exports.path}/Ward-3-Road_r1770000000.pdf')
+      ..writeAsStringSync('report');
+    final someoneElses = File('${exports.path}/Other-work_r1780000000.pdf')
+      ..writeAsStringSync('report');
+
+    await evidence.removeForRun('r1770000000');
+
+    expect(mine.existsSync(), isFalse,
+        reason: 'the deleted inspection left its report behind');
+    expect(someoneElses.existsSync(), isTrue,
+        reason: 'deleting one inspection removed another one report');
   });
 }
