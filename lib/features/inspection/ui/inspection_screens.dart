@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -608,7 +609,7 @@ class InspectionReportScreen extends StatelessWidget {
       final out = await document.write(
         pdf,
         await evidence.exportDirectory(),
-        '${_safeFileName(run.projectName)}.pdf',
+        '${safeFileName(run.projectName)}.pdf',
       );
 
       messenger.hideCurrentSnackBar();
@@ -633,9 +634,27 @@ class InspectionReportScreen extends StatelessWidget {
 
   /// Keeps the shared file name recognisable without letting a project name
   /// containing a slash or a colon break the write.
-  static String _safeFileName(String name) {
+  @visibleForTesting
+  static String safeFileName(String name) {
     final cleaned = name.replaceAll(RegExp(r'[^\w\u0980-\u09FF -]'), '').trim();
-    return cleaned.isEmpty ? 'report' : cleaned;
+    if (cleaned.isEmpty) return 'report';
+
+    // Filenames are capped at 255 bytes on the filesystems Android uses, and a
+    // Bangla character is three bytes in UTF-8 — about eighty-five characters.
+    // A government project name off a signboard goes past that without
+    // trying: "ওয়ার্ড ৩ নম্বর সড়ক পুনর্নির্মাণ ও সম্প্রসারণ প্রকল্প, দ্বিতীয়
+    // পর্যায়, ..." is a hundred and twenty. The write then failed and the
+    // reader was told the PDF could not be built, which was not true — the
+    // page had rendered, and only the name was too long.
+    //
+    // Trimmed by grapheme so a Bangla cluster is never cut in half.
+    const maxBytes = 200;
+    var chars = cleaned.characters;
+    while (utf8.encode(chars.toString()).length > maxBytes && chars.isNotEmpty) {
+      chars = chars.take(chars.length - 1);
+    }
+    final out = chars.toString().trim();
+    return out.isEmpty ? 'report' : out;
   }
 
   /// Hands the report and its photographs to whatever the user already uses —
