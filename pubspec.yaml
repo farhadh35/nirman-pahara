@@ -23,6 +23,9 @@ dependencies:
   xml: ^6.6.1
 
 dev_dependencies:
+  # Lets test/boq_import_flow_test.dart stand in for the file picker, so the
+  # import screen can be driven the way a reader drives it.
+  plugin_platform_interface: ^2.1.8
   # Used by test/report_photo_pixels_test.dart to write a photograph of a
   # known colour and then look for that colour in the rendered report.
   image: ^4.3.0
