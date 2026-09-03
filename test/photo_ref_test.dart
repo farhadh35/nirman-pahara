@@ -17,7 +17,7 @@ void main() {
       );
       expect(p.describe(AppLocale.en), '2026-07-12 09:05 · 24.89431, 89.37215');
       expect(p.describe(AppLocale.bn),
-          '২০২৬-০৭-১২ ০৯:০৫ · ২৪.৮৯৪৩১, ৮৯.৩৭২১৫');
+          '২০২৬-০৭-১২ ০৯:০৫ · 24.89431, 89.37215');
     });
 
     test('says why the location is missing, not merely that it is', () {

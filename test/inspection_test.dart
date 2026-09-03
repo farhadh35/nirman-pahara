@@ -44,7 +44,8 @@ void main() {
     run.findings.values.first.answer = ItemAnswer.ok;
     final r = run.report(AppLocale.bn);
     expect(r, contains('পালাশবাড়ি–গোবিন্দগঞ্জ সড়ক'));
-    expect(r, contains('LGED-২০২৬-০১৪২'));
+    expect(r, contains('LGED-2026-0142'),
+        reason: 'a tender ID is looked up, not read: it stays as it was given');
     expect(r, contains('২০২৬-০৭-১২'));
   });
 
