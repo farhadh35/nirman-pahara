@@ -22,10 +22,36 @@ class AppTheme {
   static const Color primary = Color(0xFF006A4E);
   static const Color primaryDark = Color(0xFF004D39);
 
-  /// Used for "look at this", never for decoration.
-  static const Color warning = Color(0xFFE8890C);
-  static const Color danger = Color(0xFFC62828);
-  static const Color ok = Color(0xFF2E7D32);
+  /// "Look at this", "this is fine", "this is wrong" — never decoration.
+  ///
+  /// Two values each, resolved against the theme, because no single colour
+  /// clears the 4.5:1 contrast body text needs on both a near-white page and a
+  /// near-black one. The amber that reads well on the dark theme sits at 2.4:1
+  /// on the light one — fainter than the page's own hairlines, and the light
+  /// theme is the default. Reach for [warningOn] and its pair, not a constant.
+  static const Color _warningLight = Color(0xFF8A5200);
+  static const Color _warningDark = Color(0xFFE8890C);
+  static const Color _dangerLight = Color(0xFFC62828);
+  static const Color _dangerDark = Color(0xFFE57373);
+  static const Color _okLight = Color(0xFF2E7D32);
+  static const Color _okDark = Color(0xFF66BB6A);
+
+  static Color warningOn(BuildContext context) =>
+      _pick(context, _warningLight, _warningDark);
+  static Color dangerOn(BuildContext context) =>
+      _pick(context, _dangerLight, _dangerDark);
+  static Color okOn(BuildContext context) => _pick(context, _okLight, _okDark);
+
+  static Color _pick(BuildContext context, Color light, Color dark) =>
+      Theme.of(context).brightness == Brightness.dark ? dark : light;
+
+  /// The same three, for tests and for code that already knows its brightness.
+  @visibleForTesting
+  static Color statusColour(String name, Brightness brightness) => switch (name) {
+        'warning' => brightness == Brightness.dark ? _warningDark : _warningLight,
+        'danger' => brightness == Brightness.dark ? _dangerDark : _dangerLight,
+        _ => brightness == Brightness.dark ? _okDark : _okLight,
+      };
 
   static const String fontFamily = 'NotoSansBengali';
 
@@ -41,7 +67,7 @@ class AppTheme {
       seedColor: primary,
       brightness: brightness,
     ).copyWith(
-      error: danger,
+      error: brightness == Brightness.dark ? _dangerDark : _dangerLight,
     );
 
     final base = ThemeData(

@@ -101,11 +101,11 @@ class SettingsScreen extends StatelessWidget {
                 const SizedBox(height: 12),
                 Row(
                   children: [
-                    Icon(Icons.lock_open, size: 18, color: AppTheme.ok),
+                    Icon(Icons.lock_open, size: 18, color: AppTheme.okOn(context)),
                     const SizedBox(width: 8),
                     Text(context.t(S.noPaywall),
                         style: theme.textTheme.titleSmall
-                            ?.copyWith(color: AppTheme.ok)),
+                            ?.copyWith(color: AppTheme.okOn(context))),
                   ],
                 ),
               ],

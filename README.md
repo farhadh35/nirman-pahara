@@ -20,7 +20,7 @@ invisible to the people it is for.
 
 | Area | State |
 |---|---|
-| Bilingual content engine (JSON packs, review badges, citations) | Working |
+| Bilingual content engine (JSON packs, numbered references, citations) | Working |
 | Guide — 22 modules, 97 cards, both tracks, Bangla + English, with painted labelled diagrams | Working |
 | Calculators — 17 of them, grouped by the moment on site they are used: checking a delivery (brick stack, brick count, rod delivery), casting day (concrete, rod weight, hook length, shuttering, soling), walls and finishing (brickwork, plaster, tiles, paint), earth and road (earthwork with bulking and trips, road layers), inside the house (stairs, water and septic), and cost | Working, unit-tested against hand-computed values |
 | Price check — market bands with dates and sources | Working |
@@ -131,8 +131,9 @@ dart run tool/review_sheet.dart
 ```
 
 **136 technical claims carry citations; 103 are still awaiting sign-off by a
-licensed civil engineer.** The app shows an amber badge on every one of them. Do
-not ship to Play until that number is zero for the structural modules.
+licensed civil engineer.** Review state lives in this sheet, not in the app; what
+the app shows on each claim is a numbered reference to its source. Do not ship to
+Play until that number is zero for the structural modules.
 
 That count covers guide cards only. The reference tables carry their own review
 status per row, and the FAR table is the gazette's own text — neither is in the

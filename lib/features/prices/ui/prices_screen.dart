@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import '../../sources/ui/ref_marks.dart';
 
 import '../../../app/app_scope.dart';
 import '../../../core/i18n/app_locale.dart';
@@ -173,7 +174,7 @@ class _MarketTabState extends State<_MarketTab> {
                 Text(_material.note!.of(locale),
                     style: theme.textTheme.bodySmall),
               ],
-              ReviewBadge(status: _material.status),
+              RefMarks(sources: [for (final c in _material.sources) c.source.bn]),
             ],
           ),
         ),
@@ -448,7 +449,7 @@ class _BenchmarkTable extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(b.comparability.of(locale),
                       style: theme.textTheme.bodySmall),
-                  ReviewBadge(status: b.status),
+                  RefMarks(sources: [for (final c in b.sources) c.source.bn]),
                 ],
               ),
             ),

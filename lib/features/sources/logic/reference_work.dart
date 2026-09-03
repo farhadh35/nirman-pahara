@@ -68,6 +68,33 @@ class ReferenceWork {
       'অনুপাত থেকে গণনা'],
   };
 
+  /// The number this work is listed under on the reference page.
+  ///
+  /// A claim carries the number, not the source line. The same three works
+  /// were being reprinted down every screen; a number costs four characters
+  /// and sends the reader to one list that states each work once.
+  ///
+  /// The order is the page's own — grouped by kind, alphabetical by Bangla
+  /// title within a kind — so the numbers run 1 upward straight down it.
+  static final List<ReferenceWork> numbered = [...all]..sort((a, b) {
+      final byKind = WorkKind.values
+          .indexOf(a.kind)
+          .compareTo(WorkKind.values.indexOf(b.kind));
+      return byKind != 0 ? byKind : a.title.bn.compareTo(b.title.bn);
+    });
+
+  static final Map<String, int> _numbers = {
+    for (var i = 0; i < numbered.length; i++) numbered[i].id: i + 1,
+  };
+
+  /// 1-based. Every work in [all] has one.
+  int get number => _numbers[id]!;
+
+  /// The number to print beside a claim citing [source], or null when the text
+  /// matches no known work — in which case nothing is printed rather than a
+  /// number that leads nowhere.
+  static int? numberFor(String source) => match(source)?.number;
+
   static const all = <ReferenceWork>[
     ReferenceWork(
       id: 'bnbc',

@@ -32,13 +32,18 @@ corruption". Three reasons, in order of importance:
 There are tests enforcing this in `test/inspection_test.dart` and
 `test/prices_test.dart`.
 
-## 4. Review state is visible, not hidden
+## 4. Review state is tracked in the repo; the source is shown in the product
 
 Content is `status: "review"` until a licensed civil engineer has checked it
-against the cited source. Anything in review shows an amber
-**ইঞ্জিনিয়ার যাচাই বাকি** badge. Never mark something `verified` to make the badge
-go away. `docs/CONTENT_REVIEW.md` is generated from the packs — regenerate it
-with `dart run tool/review_sheet.dart` after any content change.
+against the cited source. Never mark something `verified` to shorten the
+backlog — `docs/CONTENT_REVIEW.md` is generated from the packs, so a false
+`verified` hides a real gap. Regenerate it with `dart run tool/review_sheet.dart`
+after any content change.
+
+What a reader sees on a claim is not its review state but its source: a numbered
+reference into the reference page. A citation written in a form the matcher does
+not recognise renders no number at all, which is silent — so
+`test/reference_numbers_test.dart` fails the moment one is written.
 
 ## 5. Prices are bands with dates, never single numbers
 

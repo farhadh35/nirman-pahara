@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import '../../sources/ui/ref_marks.dart';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -444,6 +445,7 @@ class _ItemCardState extends State<_ItemCard> {
                 ],
               ),
             ],
+            RefMarks(sources: [for (final c in item.citations) c.source.bn]),
             const SizedBox(height: 12),
             Wrap(
               spacing: 8,

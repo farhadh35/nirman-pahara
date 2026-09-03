@@ -68,17 +68,6 @@ class S {
       L10nText('কিছু একটা সমস্যা হয়েছে।', 'Something went wrong.');
   static const retry = L10nText('আবার চেষ্টা করুন', 'Try again');
 
-  // Review badge -----------------------------------------------------------
-  static const reviewPending =
-      L10nText('ইঞ্জিনিয়ার যাচাই বাকি', 'Engineer review pending');
-  static const reviewPendingWhy = L10nText(
-    'এই তথ্যের সংখ্যাগুলো সূত্র ধরে লেখা, কিন্তু একজন সনদপ্রাপ্ত পুরকৌশলী এখনো '
-        'যাচাই করেননি। সিদ্ধান্ত নেওয়ার আগে মূল নথি দেখে নিন।',
-    'These figures were written from the cited source, but a licensed civil '
-        'engineer has not signed them off yet. Check the original document '
-        'before acting on them.',
-  );
-
   // Calculators ------------------------------------------------------------
   static const calcRebar = L10nText('রডের ওজন', 'Rod weight');
   static const calcConcrete = L10nText('ঢালাইয়ের মালামাল', 'Concrete materials');

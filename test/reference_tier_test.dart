@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:nirman_pahara/app/widgets/common.dart';
 import 'package:nirman_pahara/features/guide/ui/guide_screens.dart';
 import 'package:nirman_pahara/app/app_scope.dart';
 import 'package:nirman_pahara/app/app_state.dart';
@@ -96,7 +95,7 @@ void _referenceCardsAreBadged() {
           expect(card.citations, isNotEmpty,
               reason: '${card.id} states detailing with no source at all');
           for (final c in card.citations) {
-            expect(c.status.needsBadge, isTrue,
+            expect(c.status, isNot(ReviewStatus.verified),
                 reason: '${card.id} claims a verified source; if an engineer '
                     'really has signed this off, docs/CONTENT_REVIEW.md '
                     'should say so too');
@@ -132,12 +131,11 @@ void _referenceCardsAreBadged() {
       ));
       await tester.pumpAndSettle();
 
-      // The amber badge stays on the card, because it is a warning about the
-      // sentence in front of the reader rather than a reference. The source
-      // itself moved to the sources page — see source_index_test.dart, which
+      // Nothing on the card says where the sentence came from. That question
+      // is answered in one place — the sources page — and source_index_test
       // holds that every citation in the app reaches it.
-      expect(find.byType(ReviewBadge), findsWidgets,
-          reason: 'unverified detailing is being shown as settled');
+      expect(find.textContaining('যাচাই বাকি'), findsNothing,
+          reason: 'the review-pending badge is back on the card');
       expect(find.byIcon(Icons.menu_book_outlined), findsNothing,
           reason: 'the per-card source button is back; citations belong on the '
               'sources page');

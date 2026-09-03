@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:nirman_pahara/core/content/models.dart';
 import 'package:nirman_pahara/core/content/content_repository.dart';
 import 'package:nirman_pahara/core/i18n/app_locale.dart';
 import 'package:nirman_pahara/features/sources/logic/reference_work.dart';
@@ -126,15 +127,18 @@ void main() {
     expect(index.entries.last.kind, WorkKind.practice);
   });
 
-  test('the unverified count matches what the badges claim', () async {
+  test('every use reaching the page carries the status it was written with',
+      () async {
+    // The page lists works, not verdicts, but the status still travels with
+    // each use — a later pass that wants to sort or group by it should not
+    // have to re-derive it from the content.
     final index = await build();
-    var pending = 0;
-    for (final e in index.entries) {
-      pending += e.uses.where((u) => u.status.needsBadge).length;
-    }
-    expect(index.pendingCount, pending);
-    expect(index.pendingCount, greaterThan(0),
-        reason: 'if nothing is pending, the amber badge should be gone too');
+    final statuses = {
+      for (final e in index.entries)
+        for (final u in e.uses) u.status,
+    };
+    expect(statuses, isNotEmpty);
+    expect(statuses, contains(ReviewStatus.review));
   });
 
   test('search finds a source by its name and by where it is used', () async {

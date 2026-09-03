@@ -107,10 +107,13 @@ void main() {
       expect(ReviewStatus.parse('anything else'), ReviewStatus.review);
     });
 
-    test('everything unverified carries a badge', () {
-      expect(ReviewStatus.verified.needsBadge, isFalse);
-      expect(ReviewStatus.review.needsBadge, isTrue);
-      expect(ReviewStatus.ruleOfThumb.needsBadge, isTrue);
+    test('only a rule of thumb is marked on the card itself', () {
+      // Where a number came from is answered once, on the reference page, so
+      // an unreviewed figure looks like any other. A rule of thumb still gets
+      // a note, because that is a fact about the number rather than about who
+      // has read it.
+      expect(ReviewStatus.ruleOfThumb, isNot(ReviewStatus.review));
+      expect(ReviewStatus.parse('ruleOfThumb'), ReviewStatus.ruleOfThumb);
     });
   });
 }

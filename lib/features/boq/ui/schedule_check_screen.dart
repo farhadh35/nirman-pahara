@@ -302,7 +302,7 @@ class _FindingCard extends StatelessWidget {
     final theme = Theme.of(context);
     final colour = switch (finding.severity) {
       BoqSeverity.flag => theme.colorScheme.error,
-      BoqSeverity.question => AppTheme.warning,
+      BoqSeverity.question => AppTheme.warningOn(context),
       BoqSeverity.note => theme.colorScheme.onSurfaceVariant,
     };
 

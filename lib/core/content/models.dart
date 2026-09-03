@@ -73,7 +73,6 @@ enum ReviewStatus {
       };
 
   /// Whether a badge is shown against a claim with this status.
-  bool get needsBadge => this != ReviewStatus.verified;
 }
 
 /// Where a number came from.

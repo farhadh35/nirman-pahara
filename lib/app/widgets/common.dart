@@ -1,61 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../core/content/models.dart';
 import '../../core/i18n/strings.dart';
 import '../app_scope.dart';
 import '../theme.dart';
-
-/// Amber chip shown on any content whose numbers a licensed engineer has not
-/// signed off yet. Tapping it explains what that means — the app never hides
-/// the difference between "checked" and "written from a source".
-class ReviewBadge extends StatelessWidget {
-  const ReviewBadge({super.key, required this.status});
-
-  final ReviewStatus status;
-
-  @override
-  Widget build(BuildContext context) {
-    if (status == ReviewStatus.verified) return const SizedBox.shrink();
-    return Align(
-      alignment: Alignment.centerLeft,
-      child: InkWell(
-        borderRadius: BorderRadius.circular(8),
-        onTap: () => showDialog<void>(
-          context: context,
-          builder: (_) => AlertDialog(
-            title: Text(context.t(S.reviewPending)),
-            content: Text(context.t(S.reviewPendingWhy)),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.of(context).pop(),
-                child: Text(context.t(S.close)),
-              ),
-            ],
-          ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 4),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(Icons.info_outline, size: 18, color: AppTheme.warning),
-              const SizedBox(width: 6),
-              Flexible(
-                child: Text(
-                  context.t(S.reviewPending),
-                  style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                        color: AppTheme.warning,
-                      ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 /// Bottom sheet listing where a screen's numbers came from.
 class SectionCard extends StatelessWidget {
@@ -120,19 +68,19 @@ class CautionBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final colour = AppTheme.warningOn(context);
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: AppTheme.warning.withValues(alpha: 0.10),
+        color: colour.withValues(alpha: 0.10),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppTheme.warning.withValues(alpha: 0.35)),
+        border: Border.all(color: colour.withValues(alpha: 0.35)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(icon ?? Icons.warning_amber_rounded,
-              size: 20, color: AppTheme.warning),
+          Icon(icon ?? Icons.warning_amber_rounded, size: 20, color: colour),
           const SizedBox(width: 10),
           Expanded(
             child: Text(text, style: theme.textTheme.bodyMedium),

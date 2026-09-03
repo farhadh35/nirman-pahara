@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../sources/ui/ref_marks.dart';
 
 import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
@@ -187,7 +188,7 @@ class _GuideCardView extends StatelessWidget {
       children: [
         Text(context.t(card.title), style: theme.textTheme.headlineSmall),
         const SizedBox(height: 6),
-        ReviewBadge(status: card.status),
+        RefMarks(sources: [for (final c in card.citations) c.source.bn]),
         const SizedBox(height: 10),
         Text(context.t(card.body), style: theme.textTheme.bodyLarge),
         if (diagram != null) ...[

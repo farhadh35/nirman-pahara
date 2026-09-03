@@ -48,9 +48,6 @@ class SourceIndex {
   int get useCount =>
       entries.fold(0, (sum, e) => sum + e.uses.length);
 
-  int get pendingCount => entries.fold(
-      0, (sum, e) => sum + e.uses.where((u) => u.status.needsBadge).length);
-
   List<SourceEntry> search(String query) {
     final q = query.trim().toLowerCase();
     if (q.isEmpty) return entries;
@@ -198,12 +195,11 @@ class SourceEntry {
 
   WorkKind get kind => work?.kind ?? WorkKind.practice;
 
+  /// The number printed beside this entry, and beside every claim that
+  /// rests on it. Null only for a source matching no known work.
+  int? get number => work?.number;
+
   int get kindOrder => WorkKind.values.indexOf(kind);
-
-  /// True when nothing resting on this source has been signed off yet.
-  bool get allPending => uses.every((u) => u.status.needsBadge);
-
-  int get pending => uses.where((u) => u.status.needsBadge).length;
 
   bool matches(String lowerQuery) =>
       source.bn.toLowerCase().contains(lowerQuery) ||

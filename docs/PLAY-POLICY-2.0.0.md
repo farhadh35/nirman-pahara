@@ -75,12 +75,13 @@ This is the policy that matters most for an app about government works.
   Report generation is tested for phrasing that never asserts fraud.
 - **It does not overstate what it is.** The listing and the app both say this is
   not an engineering test and not legal advice.
-- **Unverified claims are labelled in the product, not just in the repo.** 103
-  of 136 cited technical claims have not yet been checked by a licensed civil
-  engineer, and every one wears an amber "ইঞ্জিনিয়ার যাচাই বাকি" badge where it
-  appears. The store screenshots deliberately include a screen showing that
-  badge: a listing that only showed signed-off content would misrepresent what
-  a new user opens. Backlog: `docs/CONTENT_REVIEW.md`.
+- **It never presents an unchecked claim as settled.** 103 of 136 cited
+  technical claims have not been checked by a licensed civil engineer. The app
+  does not call any claim verified, approved or engineer-checked anywhere in the
+  product. What it shows on every claim instead is a numbered reference to the
+  work the figure came from, resolving to one reference page that lists each of
+  the twenty-one works once — so a reader can go to the source rather than take
+  the app's word for it. Review backlog: `docs/CONTENT_REVIEW.md`.
 
 ## 5. Government data and published schedules
 

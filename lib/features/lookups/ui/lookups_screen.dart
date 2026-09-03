@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../sources/ui/ref_marks.dart';
 
 import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
@@ -219,7 +220,7 @@ class _LookupRowTile extends StatelessWidget {
                   ),
                 ),
               ),
-            ReviewBadge(status: row.status),
+            RefMarks(sources: [row.source]),
           ],
         ),
       ),

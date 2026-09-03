@@ -77,9 +77,9 @@ are signed with this key and not with a debug fallback.
 ## Should be done before the first public release
 
 - [ ] **Engineer sign-off on the technical content.** `docs/CONTENT_REVIEW.md`
-      lists every cited claim; the ones still marked `review` show an amber
-      badge in the app. Publishing with structural claims unreviewed is the
-      main outstanding risk, not a build problem.
+      lists every cited claim and which are still marked `review`. That state
+      is tracked in the repo, not shown in the app. Publishing with structural
+      claims unreviewed is the main outstanding risk, not a build problem.
 
 ## Uploading 2.0.0
 

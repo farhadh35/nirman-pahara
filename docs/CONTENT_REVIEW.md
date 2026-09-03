@@ -19,7 +19,7 @@ Mark each block and send it back however is easiest — a marked copy of this fi
 
 The rights and procurement claims need someone who has actually filed RTI applications in Bangladesh, not a civil engineer.
 
-Until a claim is signed off the app shows an amber "ইঞ্জিনিয়ার যাচাই বাকি" badge on it, so nothing here is being presented to a reader as settled.
+The app never calls a claim verified or engineer-checked, so nothing here is being presented to a reader as settled.
 
 ## What is left, by area
 
