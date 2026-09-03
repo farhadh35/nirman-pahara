@@ -91,7 +91,13 @@ The listing text changed this release, so it is not a bundle-only upload.
    the `<bn-BD>` text into Bengali and the `<en-US>` text into English. Both are
    inside Play's 500-character limit.
 3. **Store listing** — `store/LISTING-bn.md` and `store/LISTING-en.md` under
-   Main store listing. The full descriptions changed: they were still
+   Main store listing. These are **two separate listings**, one per language,
+   each with its own title and short description — set the language in Play
+   Console before pasting, or the English text overwrites the Bangla one.
+   The English title is deliberately "Nirman Pahara: Civil Works" and the
+   Bangla one is "নির্মাণ পাহারা" alone: Play has no keywords field, so the
+   title and short description are what English search matches against, and
+   a Bangla searcher is already typing the name. The full descriptions changed: they were still
    describing six calculators and 42 guide cards, and the app now has seventeen
    and ninety-seven. Both are under the 4,000-character limit.
 4. **What is new to mention if asked**: the plot-rules screen reads the FAR

@@ -1,10 +1,22 @@
 # Play Store listing — English
 
 ## App name (30 chars)
-Nirman Pahara
+Nirman Pahara: Civil Works
+
+<!-- 26 of 30. Play has no keywords field: everything is indexed from the
+     title, the short description and the full description, and the first two
+     carry the most weight. "Nirman Pahara" alone spent 13 characters and
+     matched nothing anyone types in English — not construction, not civil
+     works, not rates. The Bangla listing keeps নির্মাণ পাহারা on its own,
+     because a Bangla searcher is already typing the name. -->
 
 ## Short description (80 chars)
-Public work or your own house — see for yourself whether it is built right.
+Check civil works and your own house: measurements, PWD rates, calculators.
+
+<!-- 75 of 80. Carries the four terms an English search actually uses — civil
+     works, measurements, rates, calculators — without stuffing or a claim.
+     The previous line ("see for yourself whether it is built right") read
+     better and contained none of them. -->
 
 ## Full description
 
@@ -12,7 +24,8 @@ The road through your area sank in one monsoon, and on paper the work is
 finished. You do not need to be an engineer to understand why. You need to know
 what to look at, and where.
 
-Nirman Pahara teaches exactly that, in Bangla and English, with no internet.
+Nirman Pahara teaches exactly that — checking construction work, on civil
+works and on your own house — in Bangla and English, with no internet.
 
 **Learn — in plain language, without the jargon**
 How to measure, how to tell good cement, steel, brick and sand from bad, why
@@ -47,8 +60,9 @@ way a deed writes it. Suta to millimetres: which bar 3 suta actually means. And
 mix ratios, curing, formwork striking times and sand fineness — 5 tables, every
 row carrying its source.
 
-**Check a rate schedule — where the paperwork is worth a question**
-Import the department's rate schedule as a spreadsheet or Word file. Items
+**Check a rate schedule, an estimate or a tender BoQ**
+Import the department's rate schedule, estimate or bill of quantities as a
+spreadsheet or Word file. Items
 billed that the schedule never carried, quantities far beyond what was
 scheduled, work scheduled and never done, quantity times rate not matching the
 amount — each one named, with the document to ask for.
