@@ -71,8 +71,6 @@ are signed with this key and not with a debug fallback.
       (`docs/AD_POLICY.md`).
 - [ ] Target audience: adults
 - [ ] Countries: Bangladesh at minimum
-- [ ] Configure the ad network's category blocking before the first ad is
-      served — see `docs/AD_POLICY.md`
 
 ## Answering the Play Console declarations
 
