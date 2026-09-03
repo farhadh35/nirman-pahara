@@ -119,4 +119,29 @@ void main() {
         reason: 'the mark does not announce that it can be activated');
     handle.dispose();
   });
+
+  testWidgets('a screen reader can actually activate the mark', (tester) async {
+    // Announcing "button" is a promise. TalkBack activates by dispatching a
+    // tap action against the semantics node, not by touching pixels — so a
+    // node that says button and carries no tap action is a control that reads
+    // as usable and does nothing.
+    const cited = 'BNBC 2020, পার্ট ৬';
+    final spoken = 'সূত্র [${Bn.digits('${ReferenceWork.numberFor(cited)}')}]';
+    final handle = tester.ensureSemantics();
+    late Widget app;
+    await tester.runAsync(
+        () async => app = await _host(const RefMarks(sources: [cited])));
+    await tester.pumpWidget(app);
+    await tester.pumpAndSettle();
+
+    // Exactly what TalkBack does on a double-tap: dispatch the tap action
+    // against the semantics node, never touching a pixel.
+    tester.semantics.tap(find.semantics.byLabel(spoken));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(SourcesScreen), findsOneWidget,
+        reason: 'the mark announces itself as a button but activating it does '
+            'nothing');
+    handle.dispose();
+  });
 }

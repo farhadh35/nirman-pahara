@@ -102,6 +102,13 @@ class InspectionRun {
   Iterable<Finding> get problems => all.where((f) => f.isProblem);
   Iterable<Finding> get unsure => all.where((f) => f.isUnsure);
 
+  /// Findings that carry a photograph but appear in neither of the report's
+  /// two named sections — an item marked fine, or not applicable, that somebody
+  /// photographed anyway. The text report has always listed these under
+  /// PHOTOGRAPHS; the printable one dropped them on the floor.
+  Iterable<Finding> get otherWithPhotos =>
+      all.where((f) => f.hasPhotos && !f.isProblem && !f.isUnsure);
+
   int get total => findings.length;
   double get progress => total == 0 ? 0 : answered.length / total;
 
@@ -109,7 +116,12 @@ class InspectionRun {
   /// "the standard requires X; what was seen was Y" — never as an accusation.
   /// That phrasing is what makes a complaint checkable, and it is also what
   /// keeps the person filing it out of a defamation argument.
-  String report(AppLocale locale) {
+  /// [missingPhotos] names photographs whose file is no longer on disk. The
+  /// share path already drops those from what it attaches, so a report that
+  /// counted them said "৩টি সংযুক্ত" while two files went out — a number an
+  /// office would check against the envelope. The caller resolves the files,
+  /// because this runs inside a build and cannot touch the disk itself.
+  String report(AppLocale locale, {Set<String> missingPhotos = const {}}) {
     final bn = locale.isBangla;
     final b = StringBuffer();
     String d(String s) => Bn.localiseDigits(s, locale);
@@ -157,9 +169,18 @@ class InspectionRun {
               ': ${f.note.trim()}');
         }
         if (f.hasPhotos) {
-          b.writeln('   ${bn ? 'ছবি' : 'Photographs'}'
-              ': ${d('${f.photos.length}')} '
-              '${bn ? 'টি সংযুক্ত' : 'attached'}');
+          final present =
+              f.photos.where((p) => !missingPhotos.contains(p.name)).length;
+          final lost = f.photos.length - present;
+          // "২টি", not "২ টি": the classifier joins the numeral in Bangla.
+          final attached =
+              bn ? '${d('$present')}টি সংযুক্ত' : '$present attached';
+          final lostNote = lost == 0
+              ? ''
+              : (bn
+                  ? ', ${d('$lost')}টির ফাইল পাওয়া যায়নি'
+                  : ', $lost could not be found');
+          b.writeln('   ${bn ? 'ছবি' : 'Photographs'}: $attached$lostNote');
         }
         b.writeln();
       }
@@ -176,7 +197,9 @@ class InspectionRun {
         b.writeln('${f.item.question.of(locale)}'
             '${f.answer == null ? '' : ' — ${f.answer!.label.of(locale)}'}');
         for (final photo in f.photos) {
-          b.writeln('  - ${photo.describe(locale)}');
+          final lost = missingPhotos.contains(photo.name);
+          b.writeln('  - ${photo.describe(locale)}'
+              '${lost ? (bn ? '  [ফাইল পাওয়া যায়নি]' : '  [file not found]') : ''}');
         }
       }
       b.writeln();

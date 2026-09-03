@@ -67,6 +67,18 @@ class ReportSheet extends StatelessWidget {
               for (final f in run.unsure) _finding(f),
               const SizedBox(height: 12),
             ],
+            // Photographs on items that were not a problem. The sheet showed
+            // only problems and unsure, so a photograph taken against an item
+            // the reader had marked fine was in the count on page one and
+            // nowhere in the document — and the PDF is the version that gets
+            // handed to an office.
+            if (run.otherWithPhotos.isNotEmpty) ...[
+              _sectionTitle(_bn
+                  ? 'আরও যেসব ছবি তোলা হয়েছে'
+                  : 'Other photographs taken'),
+              for (final f in run.otherWithPhotos) _finding(f),
+              const SizedBox(height: 12),
+            ],
             _footer(),
           ],
         ),

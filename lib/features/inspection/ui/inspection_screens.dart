@@ -498,16 +498,79 @@ class _ItemCardState extends State<_ItemCard> {
 }
 
 /// The finished report, ready to copy into a complaint.
-class InspectionReportScreen extends StatelessWidget {
+class InspectionReportScreen extends StatefulWidget {
   const InspectionReportScreen({super.key, required this.run});
 
   final InspectionRun run;
+
+  /// Keeps the shared file name recognisable without letting a project name
+  /// containing a slash or a colon break the write.
+  @visibleForTesting
+  static String safeFileName(String name) {
+    final cleaned = name.replaceAll(RegExp(r'[^\w\u0980-\u09FF -]'), '').trim();
+    if (cleaned.isEmpty) return 'report';
+
+    // Filenames are capped at 255 bytes on the filesystems Android uses, and a
+    // Bangla character is three bytes in UTF-8 — about eighty-five characters.
+    // A government project name off a signboard goes past that without
+    // trying: "ওয়ার্ড ৩ নম্বর সড়ক পুনর্নির্মাণ ও সম্প্রসারণ প্রকল্প, দ্বিতীয়
+    // পর্যায়, ..." is a hundred and twenty. The write then failed and the
+    // reader was told the PDF could not be built, which was not true — the
+    // page had rendered, and only the name was too long.
+    //
+    // Trimmed by grapheme so a Bangla cluster is never cut in half.
+    const maxBytes = 200;
+    var chars = cleaned.characters;
+    while (utf8.encode(chars.toString()).length > maxBytes && chars.isNotEmpty) {
+      chars = chars.take(chars.length - 1);
+    }
+    final out = chars.toString().trim();
+    return out.isEmpty ? 'report' : out;
+  }
+
+  @override
+  State<InspectionReportScreen> createState() => _InspectionReportScreenState();
+}
+
+class _InspectionReportScreenState extends State<InspectionReportScreen> {
+  /// Photographs whose file is no longer on disk.
+  ///
+  /// The share path has always dropped these from what it attaches, while the
+  /// text kept counting them — so a report could say three were attached while
+  /// two went out, which is exactly the sort of number an office checks against
+  /// the envelope. Resolved once when the screen opens; until it comes back the
+  /// report reads as it always did, which is right, because on the ordinary
+  /// path nothing is missing.
+  Set<String> _missing = const {};
+  bool _checked = false;
+
+  InspectionRun get run => widget.run;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_checked) return;
+    _checked = true;
+    _findMissing();
+  }
+
+  Future<void> _findMissing() async {
+    final evidence = context.evidence;
+    final gone = <String>{};
+    for (final finding in run.withPhotos) {
+      for (final photo in finding.photos) {
+        if (await evidence.file(photo.name) == null) gone.add(photo.name);
+      }
+    }
+    if (!mounted || gone.isEmpty) return;
+    setState(() => _missing = gone);
+  }
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final bn = context.locale.isBangla;
-    final text = run.report(context.locale);
+    final text = run.report(context.locale, missingPhotos: _missing);
 
     return Scaffold(
       appBar: AppBar(title: Text(bn ? 'রিপোর্ট' : 'Report')),
@@ -611,7 +674,7 @@ class InspectionReportScreen extends StatelessWidget {
       final out = await document.write(
         pdf,
         await evidence.exportDirectory(),
-        '${safeFileName(run.projectName)}.pdf',
+        '${InspectionReportScreen.safeFileName(run.projectName)}.pdf',
       );
 
       messenger.hideCurrentSnackBar();
@@ -634,30 +697,6 @@ class InspectionReportScreen extends StatelessWidget {
     }
   }
 
-  /// Keeps the shared file name recognisable without letting a project name
-  /// containing a slash or a colon break the write.
-  @visibleForTesting
-  static String safeFileName(String name) {
-    final cleaned = name.replaceAll(RegExp(r'[^\w\u0980-\u09FF -]'), '').trim();
-    if (cleaned.isEmpty) return 'report';
-
-    // Filenames are capped at 255 bytes on the filesystems Android uses, and a
-    // Bangla character is three bytes in UTF-8 — about eighty-five characters.
-    // A government project name off a signboard goes past that without
-    // trying: "ওয়ার্ড ৩ নম্বর সড়ক পুনর্নির্মাণ ও সম্প্রসারণ প্রকল্প, দ্বিতীয়
-    // পর্যায়, ..." is a hundred and twenty. The write then failed and the
-    // reader was told the PDF could not be built, which was not true — the
-    // page had rendered, and only the name was too long.
-    //
-    // Trimmed by grapheme so a Bangla cluster is never cut in half.
-    const maxBytes = 200;
-    var chars = cleaned.characters;
-    while (utf8.encode(chars.toString()).length > maxBytes && chars.isNotEmpty) {
-      chars = chars.take(chars.length - 1);
-    }
-    final out = chars.toString().trim();
-    return out.isEmpty ? 'report' : out;
-  }
 
   /// Hands the report and its photographs to whatever the user already uses —
   /// WhatsApp, Messenger, email, Drive. Copying text alone left the evidence

@@ -61,8 +61,16 @@ class BoqTextParser {
       if (_totalRow.hasMatch(line) && numbers.length >= 2) {
         totalRows++;
         // The document's own totals: schedule first, then measured.
-        statedSchedule ??= numbers[numbers.length - 3 < 0 ? 0 : numbers.length - 3];
-        statedMeasured ??= numbers[numbers.length - 2];
+        // A grand total normally prints three figures — schedule, measured,
+        // balance — and the two wanted are the third and second from the end.
+        // With only two printed there is no balance column, so they are simply
+        // schedule then measured. Clamping the first index to 0 and leaving
+        // the second at length-2 made both of them numbers[0], which handed
+        // the analyser a measured total identical to the schedule total: it
+        // then checked the measured lines against the schedule's figure.
+        final threeUp = numbers.length >= 3;
+        statedSchedule ??= numbers[threeUp ? numbers.length - 3 : 0];
+        statedMeasured ??= numbers[threeUp ? numbers.length - 2 : 1];
         serial = '';
         description = '';
         continue;

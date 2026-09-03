@@ -44,19 +44,27 @@ class RefMarks extends StatelessWidget {
         ? (locale.isBangla ? 'সূত্র $label' : 'Reference $label')
         : (locale.isBangla ? 'সূত্র $label' : 'References $label');
 
+    void open() => Navigator.of(context).push(
+          MaterialPageRoute<void>(
+            builder: (_) => SourcesScreen(focus: numbers.first),
+          ),
+        );
+
     return Align(
       alignment: Alignment.centerLeft,
       child: Semantics(
         button: true,
         label: spoken,
+        // excludeSemantics drops everything the child contributed, the
+        // InkWell's tap action included — so the action has to be given again
+        // here. Without it the node announces "button" and does nothing when
+        // a screen reader activates it, which is worse than being unlabelled:
+        // it reads as a working control.
+        onTap: open,
         excludeSemantics: true,
         child: InkWell(
           borderRadius: BorderRadius.circular(6),
-          onTap: () => Navigator.of(context).push(
-            MaterialPageRoute<void>(
-              builder: (_) => SourcesScreen(focus: numbers.first),
-            ),
-          ),
+          onTap: open,
           child: Padding(
             // Deliberately smaller than AppTheme.minTapTarget: this is a
             // secondary mark beside a sentence, not an action, and a 56dp

@@ -42,7 +42,15 @@ class DiagramPalette {
       // be seen within. Lightened for dark to 6.4:1 and 3.7:1, same hue.
       steel: dark ? const Color(0xFFE8794A) : const Color(0xFF9A3412),
       accent: scheme.primary,
-      water: dark ? const Color(0xFF2A4A5A) : const Color(0xFFBFE0F0),
+      // Water had the same fault steel had, and worse. A pale blue on the
+      // light theme sat at 1.3:1 against the page and 1.06:1 against concrete
+      // — and the curing diagram strokes the wet wrap in it directly over a
+      // concrete column, so the one thing that drawing exists to show was
+      // very nearly not there. Water is also written in, not just drawn:
+      // "পানির স্তর" on the bore log and "এই টুকু পানিই" on the trap are
+      // labels, so this has to clear the 4.5:1 text floor, not only the 3:1
+      // one for shapes.
+      water: dark ? const Color(0xFF8ECBE8) : const Color(0xFF0E4A66),
     );
   }
 }

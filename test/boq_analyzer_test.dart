@@ -109,6 +109,30 @@ void main() {
     });
   });
 
+  test('a total row printing two figures gives two different totals', () {
+    // A grand total normally prints schedule, measured and balance. Where the
+    // sheet omits the balance column, the two figures are simply schedule then
+    // measured — but both were being read out of the same slot, so the
+    // measured total came back identical to the schedule total and the
+    // analyser then checked the measured lines against the schedule's figure.
+    //
+    // Built from the real statement with its section totals removed, so the
+    // document prints exactly one total, which is the only shape the totals
+    // check runs on anyway.
+    final oneTotal = [
+      for (final line in _fixture('boq_sample_boundary_wall.txt').split('\n'))
+        if (!RegExp(r'\bTotal\b', caseSensitive: false).hasMatch(line))
+          line,
+      'Grand Total                       3,028,863.10      1,702,261.46',
+    ].join('\n');
+
+    final doc = parser.parse(oneTotal);
+    expect(doc.totalRowCount, 1);
+    expect(doc.statedScheduleTotal, closeTo(3028863.10, 0.01));
+    expect(doc.statedMeasuredTotal, closeTo(1702261.46, 0.01),
+        reason: 'the measured total is just the schedule total again');
+  });
+
   group('Checks on constructed cases', () {
     BoqDocument doc(List<BoqLine> lines,
             {double? schedule, double? measured}) =>
@@ -138,6 +162,31 @@ void main() {
       final arithmetic =
           findings.where((f) => f.title.en!.contains('does not equal'));
       expect(arithmetic, isNotEmpty);
+      expect(arithmetic.first.amount, closeTo(500, 0.01));
+    });
+
+    test('checks a deduction line, which is printed negative', () {
+      // A sheet prints an omission in brackets and the parser reads it as a
+      // negative. gap is an absolute value, so dividing it by a negative
+      // stated amount was always below the threshold and every deduction line
+      // in the document went through unchecked — the one kind of line most
+      // worth checking, because it is where quantities leave a bill.
+      final findings = analyzer.analyse(doc([
+        const BoqLine(
+          serial: '1.05',
+          description: 'Omission — brickwork not executed',
+          unit: 'Cum',
+          scheduleQuantity: -10,
+          measuredQuantity: -10,
+          rate: 100,
+          scheduleAmount: -1500, // rate times quantity is -1000
+          measuredAmount: -1000,
+        ),
+      ]));
+      final arithmetic =
+          findings.where((f) => f.title.en!.contains('does not equal'));
+      expect(arithmetic, isNotEmpty,
+          reason: 'a deduction line is never arithmetic-checked');
       expect(arithmetic.first.amount, closeTo(500, 0.01));
     });
 

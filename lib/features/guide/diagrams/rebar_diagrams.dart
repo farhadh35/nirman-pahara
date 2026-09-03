@@ -216,7 +216,11 @@ class SlabRebarPainter extends CustomPainter {
         maxWidth: plan.width * 0.45);
     paintLabel(canvas, bn ? 'আড়াআড়ি রড' : 'distribution bars',
         Offset(plan.left + plan.width * 0.5, plan.bottom + 8),
-        colour: palette.steel.withValues(alpha: 0.7), size: 9,
+        // Full strength: the alpha was there to rank this label below the one
+        // above it, but it is nine-point text and 0.7 dropped it to 3.7:1,
+        // under the 4.5:1 text floor. The words already say which bars these
+        // are; the colour does not have to.
+        colour: palette.steel, size: 9,
         maxWidth: plan.width * 0.5);
 
     // Section: the slab, bottom steel, and the extra top steel over a support.

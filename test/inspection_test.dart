@@ -5,6 +5,7 @@ import 'package:nirman_pahara/core/content/checklist_models.dart';
 import 'package:nirman_pahara/core/content/content_repository.dart';
 import 'package:nirman_pahara/core/i18n/app_locale.dart';
 import 'package:nirman_pahara/features/inspection/logic/inspection_run.dart';
+import 'package:nirman_pahara/features/inspection/logic/photo_ref.dart';
 
 Future<String> _fromDisk(String path) => File(path).readAsString();
 
@@ -47,6 +48,29 @@ void main() {
     expect(r, contains('LGED-2026-0142'),
         reason: 'a tender ID is looked up, not read: it stays as it was given');
     expect(r, contains('২০২৬-০৭-১২'));
+  });
+
+  test('the report counts the photographs that will actually be sent', () {
+    // The share path drops a photograph whose file has gone. The text kept
+    // counting it, so a report could say three were attached while two went
+    // out — the kind of number an office checks against the envelope.
+    final run = newRun();
+    final f = run.findings['r3']!
+      ..answer = ItemAnswer.problem
+      ..photos.add(PhotoRef(name: 'a.jpg', takenAt: DateTime(2026, 7, 12)))
+      ..photos.add(PhotoRef(name: 'b.jpg', takenAt: DateTime(2026, 7, 12)));
+    expect(f.photos.length, 2);
+
+    final whole = run.report(AppLocale.bn);
+    expect(whole, contains('২টি সংযুক্ত'));
+    expect(whole, isNot(contains('পাওয়া যায়নি')));
+
+    final partial = run.report(AppLocale.bn, missingPhotos: {'b.jpg'});
+    expect(partial, contains('১টি সংযুক্ত'),
+        reason: 'the report still counts a photograph that will not be sent');
+    expect(partial, contains('১টির ফাইল পাওয়া যায়নি'));
+    expect(partial, contains('ফাইল পাওয়া যায়নি]'),
+        reason: 'the photograph list does not mark the one that is gone');
   });
 
   test('a problem is reported as rule versus observation, never as an accusation',

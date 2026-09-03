@@ -61,6 +61,23 @@ void main() {
               'is what every cover and stirrup drawing is showing');
     });
 
+    testWidgets('water carries in ${brightness.name} mode', (tester) async {
+      // Water is written in as well as drawn — "পানির স্তর" on the bore log,
+      // "এই টুকু পানিই" on the trap — so it answers to the text floor. And the
+      // curing diagram strokes the wet wrap over the concrete column, which is
+      // the pairing that made steel a bug.
+      final p = await _paletteFor(tester, brightness);
+      final background = brightness == Brightness.dark
+          ? const Color(0xFF121412)
+          : const Color(0xFFF7F7F4);
+      expect(_contrast(p.water, background), greaterThanOrEqualTo(4.5),
+          reason: 'the water labels cannot be read off the page');
+      expect(_contrast(p.water, p.concrete),
+          greaterThanOrEqualTo(_graphicMinimum),
+          reason: 'the wet wrap cannot be picked out of the concrete it is '
+              'drawn on, which is the whole of the curing diagram');
+    });
+
     testWidgets('ink and the accent carry in ${brightness.name} mode',
         (tester) async {
       final p = await _paletteFor(tester, brightness);
@@ -75,6 +92,19 @@ void main() {
           reason: 'the colour that marks the thing to look at does not stand out');
     });
   }
+
+  testWidgets('no palette colour serves both themes from one constant',
+      (tester) async {
+    // The regression that started this, generalised: steel was one constant
+    // for two backgrounds, and water turned out to be the same fault, still
+    // sitting there after steel was fixed.
+    final light = await _paletteFor(tester, Brightness.light);
+    final lightWater = light.water;
+    await tester.pumpWidget(const SizedBox());
+    final dark = await _paletteFor(tester, Brightness.dark);
+    expect(dark.water, isNot(equals(lightWater)),
+        reason: 'water is one constant serving two backgrounds again');
+  });
 
   testWidgets('steel is not the same colour in both themes', (tester) async {
     // The regression that started this: one constant serving two backgrounds.

@@ -171,6 +171,50 @@ void main() {
             'without, so the photograph did not render');
   });
 
+  testWidgets('a photograph on an item marked fine still reaches the page',
+      (tester) async {
+    // The sheet printed only the problems and the unsure items. A photograph
+    // taken against an item the reader had marked fine was counted on page one
+    // and appeared nowhere in the document — and this is the version that gets
+    // handed to an office.
+    final dir = Directory.systemTemp.createTempSync('report_ok_photo');
+    addTearDown(() => dir.deleteSync(recursive: true));
+    final file = File('${dir.path}/ok.jpg')
+      ..writeAsBytesSync(base64Decode(_pngBytes));
+
+    final run = buildRun();
+    final fine = run.findings.values.firstWhere((f) =>
+        f.answer != ItemAnswer.problem && f.answer != ItemAnswer.unsure);
+    fine
+      ..answer = ItemAnswer.ok
+      ..photos.add(PhotoRef(
+        name: 'ok.jpg',
+        takenAt: DateTime(2026, 7, 12, 10, 5),
+      ));
+
+    expect(run.otherWithPhotos, isNotEmpty);
+
+    await tester.pumpWidget(MaterialApp(
+      home: SingleChildScrollView(
+        child: SizedBox(
+          width: 620,
+          child: ReportSheet(
+            run: run,
+            locale: AppLocale.bn,
+            photoFiles: {'ok.jpg': file},
+          ),
+        ),
+      ),
+    ));
+    await tester.pump();
+
+    expect(find.text('আরও যেসব ছবি তোলা হয়েছে'), findsOneWidget,
+        reason: 'a photograph on an item marked fine is missing from the '
+            'printable report');
+    expect(find.textContaining(fine.item.question.bn), findsWidgets);
+    expect(tester.takeException(), isNull);
+  });
+
   testWidgets('a report says when a photograph could not be included',
       (tester) async {
     // The run records a photograph; its file is gone. Before, the report was

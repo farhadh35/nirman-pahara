@@ -198,7 +198,11 @@ class BoqAnalyzer {
       ]) {
         if (implied == null || stated == null || stated == 0) continue;
         final gap = (implied - stated).abs();
-        if (gap <= arithmeticTolerance || gap / stated < 0.005) continue;
+        // stated.abs(): a deduction line is printed in brackets and parsed
+        // negative, and gap is already an absolute value — so gap / stated was
+        // negative for every such line and always under the threshold, which
+        // waved through every omission line in the sheet without checking it.
+        if (gap <= arithmeticTolerance || gap / stated.abs() < 0.005) continue;
         out.add(BoqFinding(
           severity: BoqSeverity.flag,
           serial: l.serial,
