@@ -73,10 +73,11 @@ All 1,749 civil items of the PWD Schedule of Rates 2022 (2nd revised), plus
 actually prints. Search by item number or by description. Where the published
 PDF misprints a cell, it is left empty rather than guessed at.
 
-**Your rights — where to go, and in what order**
-A ready Right to Information application, a written complaint template, and a
-notice to a contractor. Separate paths for public works and for your own house,
-because the two are genuinely different.
+**Your rights — letters ready to send**
+A ready Right to Information application that asks for the estimate, the BoQ
+and the measurement book in a form the app can check, and a written notice to a
+contractor. Separate letters for public works and for your own house, because
+the two are genuinely different.
 
 ---
 
@@ -92,8 +93,9 @@ judges.
 **To be clear about what this is:** it is not an engineering test and not legal
 advice. It states what the rule requires and what you observed, separately, so
 that the authority can verify it themselves. The technical content is written
-from BNBC 2020 and the published government rate schedules; anything a licensed
-civil engineer has not yet signed off carries a visible mark saying so.
+from BNBC 2020 and the published government rate schedules, and every figure
+carries a numbered reference to the work it came from, listed once on a
+reference page.
 
 ---
 
