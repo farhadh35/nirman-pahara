@@ -108,7 +108,9 @@ class ReportSheet extends StatelessWidget {
           Text(line(_bn ? 'অবস্থান' : 'Location', run.location)),
         if (run.tenderId.isNotEmpty)
           Text(line(_bn ? 'টেন্ডার আইডি' : 'Tender ID',
-              Bn.localiseDigits(run.tenderId, locale))),
+              // Left as given: this is looked up, not read. See the note in
+              // InspectionRun.report.
+              run.tenderId)),
         Text(line(_bn ? 'ধরন' : 'Type', run.pack.title.of(locale))),
         Text(line(_bn ? 'তারিখ' : 'Date', date)),
       ],

@@ -122,10 +122,11 @@ class PhotoRef {
       // Never leave a dangling separator with nothing after it.
       return why.isEmpty ? when : '$when · $why';
     }
-    final where = Bn.localiseDigits(
-      '${latitude!.toStringAsFixed(5)}, ${longitude!.toStringAsFixed(5)}',
-      locale,
-    );
+    // Left in western digits whatever the language. A coordinate exists to be
+    // put into a map, and no mapping tool accepts "২৪.৮৯৪৩১, ৮৯.৩৭২১৫". The
+    // time beside it is read rather than re-entered, so that stays Bangla.
+    final where =
+        '${latitude!.toStringAsFixed(5)}, ${longitude!.toStringAsFixed(5)}';
     return '$when · $where';
   }
 

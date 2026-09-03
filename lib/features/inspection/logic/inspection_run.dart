@@ -121,7 +121,11 @@ class InspectionRun {
       b.writeln('${bn ? 'অবস্থান' : 'Location'}: $location');
     }
     if (tenderId.isNotEmpty) {
-      b.writeln('${bn ? 'টেন্ডার আইডি' : 'Tender ID'}: ${d(tenderId)}');
+      // Not localised. A tender ID is typed back into the e-GP portal or
+      // matched against a file by an official — "LGED-২০২৬-০১৪২" matches
+      // nothing. Digits that are read become Bangla; digits that are re-entered
+      // into a machine stay as they were given.
+      b.writeln('${bn ? 'টেন্ডার আইডি' : 'Tender ID'}: $tenderId');
     }
     b.writeln('${bn ? 'ধরন' : 'Type'}: ${pack.title.of(locale)}');
     b.writeln('${bn ? 'তারিখ' : 'Date'}: '

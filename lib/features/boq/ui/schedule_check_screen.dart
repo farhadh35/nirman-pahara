@@ -331,7 +331,11 @@ class _FindingCard extends StatelessWidget {
                 ),
                 if (finding.serial != null)
                   Text(
-                    Bn.localiseDigits(finding.serial!, locale),
+                    // The serial as the document prints it. A reader points at
+                    // this line on the paper and an official finds the same row
+                    // — converting it to Bangla digits would mean the two are
+                    // no longer looking at the same thing.
+                    finding.serial!,
                     style: theme.textTheme.labelMedium?.copyWith(
                       color: theme.colorScheme.onSurfaceVariant,
                     ),
