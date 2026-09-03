@@ -32,6 +32,20 @@ that only showed signed-off content would misrepresent what a new user opens.
 Screens are laid out in a single scrolling column, so the capture is just
 "start the app, tap a door, screenshot". Two things bite:
 
+- **Do not hard-code where the onboarding button is.** It has moved twice —
+  once when the layout changed, once when the "both" track option was
+  withdrawn — and each time every coordinate after it was wrong and the whole
+  set came back as one screen repeated. Find it: it is the only wide block of
+  the brand green on the page.
+- **Diff the content column, not the whole screen.** On the ten-inch tablet the
+  page is held to 600dp and centred, so a quarter of the width is identical
+  painted margin on every screen. A whole-image comparison diluted a real
+  navigation down to 7 or 8, below the threshold, and rejected three screens in
+  a row — which looked like a stubborn emulator and was arithmetic. Compare the
+  middle 70%.
+- **Check every shot against every other shot, not just against home.** A set
+  once passed with six of the seven being the same screen: each was
+  legitimately "not home".
 - **Scroll the home page to the top before every tap.** This is the one that
   actually matters, and it took three sessions of blaming timing to find. Android
   restores the list's scroll position across a restart, so `am start -S` gives
