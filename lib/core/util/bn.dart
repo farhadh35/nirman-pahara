@@ -38,6 +38,21 @@ class Bn {
   }
 
   /// Applies Bangla digits only when the locale is Bangla.
+  ///
+  /// Ask one question before calling this: **does a person read this number, or
+  /// do they put it back into a machine?**
+  ///
+  /// Read — a date, a quantity, a rate, a measurement, a chapter number someone
+  /// turns pages to find. Bangla digits, always: that is the whole point of a
+  /// Bangla-first app.
+  ///
+  /// Re-entered — a tender ID typed into the e-GP portal's search box, a
+  /// coordinate pasted into a map, a serial an official matches against a
+  /// printed row, a schedule item code. Leave these exactly as they were given.
+  /// "LGED-২০২৬-০১৪২" matches nothing, and no map has ever accepted
+  /// "২৪.৮৯৪৩১". The app once converted all three and, worse, carries a card
+  /// teaching people to search by tender ID — it explained a lookup and then
+  /// made it impossible, in the document handed to an authority.
   static String localiseDigits(String s, AppLocale locale) =>
       locale.isBangla ? digits(s) : toWestern(s);
 
