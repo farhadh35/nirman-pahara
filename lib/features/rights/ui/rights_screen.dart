@@ -4,6 +4,7 @@ import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
 import '../../../core/content/rights_models.dart';
 import '../../../core/i18n/strings.dart';
+import '../../../core/util/bn.dart';
 
 /// The complaint ladder and the letter templates.
 class RightsScreen extends StatelessWidget {
@@ -151,6 +152,15 @@ class _LetterScreenState extends State<LetterScreen> {
       for (final e in _controllers.entries) e.key: e.value.text,
     };
     final rendered = widget.template.render(values, context.locale);
+    // A field left blank renders as its label in brackets, which is visible in
+    // the preview but easy to miss near the bottom of a long letter. This one
+    // goes to a government office, and an application with "[আপনার নাম]" still
+    // in it is one that comes back — after the twenty working days the reader
+    // was waiting on.
+    final blank = [
+      for (final f in widget.template.fields)
+        if ((values[f.key] ?? '').trim().isEmpty) f.label.of(context.locale),
+    ];
 
     return Scaffold(
       appBar: AppBar(title: Text(context.t(widget.template.title))),
@@ -196,6 +206,19 @@ class _LetterScreenState extends State<LetterScreen> {
             ),
           ],
           const SizedBox(height: 16),
+          if (blank.isNotEmpty) ...[
+            CautionBox(
+              text: context.locale.isBangla
+                  ? '${Bn.digits('${blank.length}')}টি ঘর এখনো খালি — '
+                      '${blank.join(', ')}. খালি ঘরগুলো চিঠিতে বর্গবন্ধনীর '
+                      'মধ্যে দেখা যাচ্ছে; ওভাবে পাঠালে আবেদন ফেরত আসতে পারে।'
+                  : '${blank.length} field${blank.length == 1 ? '' : 's'} still '
+                      'empty — ${blank.join(', ')}. They appear in the letter '
+                      'inside square brackets, and an application sent like '
+                      'that can come back.',
+            ),
+            const SizedBox(height: 12),
+          ],
           FilledButton.icon(
             onPressed: () => copyToClipboard(context, rendered),
             icon: const Icon(Icons.copy_all_outlined),
