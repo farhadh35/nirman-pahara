@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nirman_pahara/core/content/content_repository.dart';
 import 'package:nirman_pahara/core/i18n/app_locale.dart';
+import 'package:nirman_pahara/features/boq/logic/schedule_importer.dart';
 import 'package:nirman_pahara/features/boq/logic/schedule_row_parser.dart';
 
 Future<String> _fromDisk(String path) => File(path).readAsString();
@@ -85,11 +86,36 @@ void main() {
       final body = rti.body.of(locale);
       expect(body.toLowerCase(), contains(locale == AppLocale.bn ? 'এক্সেল' : 'excel'),
           reason: 'the letter does not ask for a machine-readable copy');
+      // Naming PDF is fine, and the letter does — to say it cannot be used.
+      // What must not happen is asking for one: an earlier version requested
+      // "a PDF whose text can be selected", and the importer declines every
+      // PDF on purpose, because guessing which number belongs in which column
+      // turns into a confident claim about someone's money. That reader would
+      // have waited twenty working days for a file the app will not open.
+      // The extension check below is what enforces it.
+      expect(ScheduleImporter.supportedExtensions, isNot(contains('pdf')));
       // And it must not close the door: an office with no soft copy should
       // still send paper rather than refuse the application over its form.
       expect(body, contains(locale == AppLocale.bn ? 'ছাপানো কপি' : 'printed copy'),
           reason: 'the letter demands a format the office may not have, which '
               'invites a refusal instead of an answer');
+    }
+  });
+
+  test('every file type the letter names is one the importer reads', () async {
+    // The letter and the importer have to agree about format as well as
+    // columns: an office sends what it was asked for, once.
+    final pack = await ContentRepository(reader: _fromDisk).rights();
+    final body =
+        pack.letters.firstWhere((l) => l.id == 'rti_application').body.en!;
+    final named = RegExp(r'\.([a-z]{2,5})\b')
+        .allMatches(body)
+        .map((m) => m.group(1)!)
+        .toSet();
+    expect(named, isNotEmpty, reason: 'the letter names no file type at all');
+    for (final ext in named) {
+      expect(ScheduleImporter.supportedExtensions, contains(ext),
+          reason: 'the letter asks for .$ext, which the importer cannot read');
     }
   });
 
