@@ -134,8 +134,20 @@ class _GuideModuleScreenState extends State<GuideModuleScreen> {
                 style: theme.textTheme.labelLarge,
               ),
               const SizedBox(width: 12),
-              if (_page > 0) ...[
-                Expanded(
+              // The back button's space is held even on the first card, where
+              // there is nothing to go back to. Inserting it only from the
+              // second card onwards halved the width of "next" the moment the
+              // reader used it, so the primary button jumped left out from
+              // under the thumb that had just pressed it — and a second tap in
+              // the same place landed on "back", returning them to the card
+              // they had just left. Tapping through a module bounced between
+              // the first two cards.
+              Expanded(
+                child: Visibility(
+                  visible: _page > 0,
+                  maintainSize: true,
+                  maintainAnimation: true,
+                  maintainState: true,
                   child: OutlinedButton(
                     onPressed: () => _controller.previousPage(
                       duration: const Duration(milliseconds: 220),
@@ -148,8 +160,8 @@ class _GuideModuleScreenState extends State<GuideModuleScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(width: 8),
-              ],
+              ),
+              const SizedBox(width: 8),
               Expanded(
                 child: FilledButton(
                   onPressed: _page == cards.length - 1
