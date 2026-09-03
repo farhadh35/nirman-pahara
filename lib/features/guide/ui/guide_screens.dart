@@ -4,6 +4,7 @@ import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
 import '../../../core/content/models.dart';
 import '../../../core/i18n/strings.dart';
+import '../../sources/ui/sources_screen.dart';
 import '../../../core/util/bn.dart';
 import '../diagrams/guide_diagrams.dart';
 
@@ -52,6 +53,25 @@ class GuideScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
               ],
+              const SizedBox(height: 8),
+              // One link, at the end. The source used to hang off every card,
+              // which put a reference affordance in front of someone who came
+              // here to read.
+              Card(
+                child: ListTile(
+                  leading: const Icon(Icons.menu_book_outlined),
+                  title: Text(
+                      context.locale.isBangla ? 'সূত্র' : 'Sources'),
+                  subtitle: Text(context.locale.isBangla
+                      ? 'এখানকার প্রতিটি কথা কোথা থেকে এসেছে'
+                      : 'Where all of this comes from'),
+                  trailing: const Icon(Icons.chevron_right),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                        builder: (_) => const SourcesScreen()),
+                  ),
+                ),
+              ),
             ],
           );
         },
@@ -208,17 +228,7 @@ class _GuideCardView extends StatelessWidget {
             ),
           ),
         ],
-        if (card.citations.isNotEmpty) ...[
-          const SizedBox(height: 16),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: TextButton.icon(
-              onPressed: () => CitationSheet.show(context, card.citations),
-              icon: const Icon(Icons.menu_book_outlined, size: 18),
-              label: Text(context.t(S.source)),
-            ),
-          ),
-        ],
+
       ],
     );
   }

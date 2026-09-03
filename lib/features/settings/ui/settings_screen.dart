@@ -8,6 +8,7 @@ import '../../../core/util/bn.dart';
 import '../../../core/content/models.dart';
 import '../../../core/i18n/app_locale.dart';
 import '../../../core/i18n/strings.dart';
+import '../../sources/ui/sources_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -108,6 +109,20 @@ class SettingsScreen extends StatelessWidget {
                   ],
                 ),
               ],
+            ),
+          ),
+          const SizedBox(height: 12),
+          Card(
+            child: ListTile(
+              leading: const Icon(Icons.menu_book_outlined),
+              title: Text(context.locale.isBangla ? 'সূত্র' : 'Sources'),
+              subtitle: Text(context.locale.isBangla
+                  ? 'অ্যাপের কারিগরি বক্তব্য কোথা থেকে এসেছে'
+                  : 'What the technical content rests on'),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute<void>(builder: (_) => const SourcesScreen()),
+              ),
             ),
           ),
           const SizedBox(height: 12),

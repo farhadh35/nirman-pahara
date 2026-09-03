@@ -487,15 +487,6 @@ class _ItemCardState extends State<_ItemCard> {
                 ),
               ),
             ],
-            if (item.citations.isNotEmpty)
-              Align(
-                alignment: Alignment.centerLeft,
-                child: TextButton.icon(
-                  onPressed: () => CitationSheet.show(context, item.citations),
-                  icon: const Icon(Icons.menu_book_outlined, size: 16),
-                  label: Text(context.t(S.source)),
-                ),
-              ),
           ],
         ),
       ),

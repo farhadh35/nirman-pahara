@@ -174,16 +174,6 @@ class _MarketTabState extends State<_MarketTab> {
                     style: theme.textTheme.bodySmall),
               ],
               ReviewBadge(status: _material.status),
-              if (_material.sources.isNotEmpty)
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: TextButton.icon(
-                    onPressed: () =>
-                        CitationSheet.show(context, _material.sources),
-                    icon: const Icon(Icons.menu_book_outlined, size: 18),
-                    label: Text(context.t(S.source)),
-                  ),
-                ),
             ],
           ),
         ),
@@ -462,18 +452,6 @@ class _BenchmarkTable extends StatelessWidget {
                       style: theme.textTheme.bodySmall),
                   ReviewBadge(status: b.status),
                 ],
-              ),
-            ),
-          if (item.benchmarks.any((b) => b.sources.isNotEmpty))
-            Align(
-              alignment: Alignment.centerLeft,
-              child: TextButton.icon(
-                onPressed: () => CitationSheet.show(
-                  context,
-                  [for (final b in item.benchmarks) ...b.sources],
-                ),
-                icon: const Icon(Icons.menu_book_outlined, size: 18),
-                label: Text(context.t(S.sources)),
               ),
             ),
         ],

@@ -58,59 +58,6 @@ class ReviewBadge extends StatelessWidget {
 }
 
 /// Bottom sheet listing where a screen's numbers came from.
-class CitationSheet extends StatelessWidget {
-  const CitationSheet({super.key, required this.citations});
-
-  final List<Citation> citations;
-
-  static void show(BuildContext context, List<Citation> citations) {
-    if (citations.isEmpty) return;
-    showModalBottomSheet<void>(
-      context: context,
-      showDragHandle: true,
-      builder: (_) => CitationSheet(citations: citations),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(context.t(S.sources), style: theme.textTheme.titleLarge),
-            const SizedBox(height: 12),
-            for (final c in citations)
-              Padding(
-                padding: const EdgeInsets.only(bottom: 14),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(c.display(context.locale),
-                        style: theme.textTheme.bodyMedium),
-                    if (c.url != null)
-                      Text(
-                        c.url!,
-                        style: theme.textTheme.bodySmall?.copyWith(
-                          color: theme.colorScheme.primary,
-                        ),
-                      ),
-                    ReviewBadge(status: c.status),
-                  ],
-                ),
-              ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-/// A titled card used across the app for a block of related content.
 class SectionCard extends StatelessWidget {
   const SectionCard({
     super.key,

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
-import '../../../core/i18n/strings.dart';
 import '../../../core/util/bn.dart';
 import '../logic/lookup_tables.dart';
 
@@ -179,44 +178,14 @@ class _LookupRowTile extends StatelessWidget {
 
   final LookupRow row;
 
-  void _showSource(BuildContext context) {
-    final locale = context.locale;
-    showModalBottomSheet<void>(
-      context: context,
-      showDragHandle: true,
-      builder: (_) => SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(row.subject.of(locale),
-                  style: Theme.of(context).textTheme.titleMedium),
-              const SizedBox(height: 4),
-              Text(context.t(S.sources),
-                  style: Theme.of(context).textTheme.labelLarge),
-              const SizedBox(height: 6),
-              Text(row.source, style: Theme.of(context).textTheme.bodyMedium),
-              const SizedBox(height: 10),
-              ReviewBadge(status: row.status),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final extra = context.t(row.extra);
-    return InkWell(
-      onTap: () => _showSource(context),
-      borderRadius: BorderRadius.circular(8),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8),
-        child: Column(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Builder(
+        builder: (context) => Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
@@ -238,9 +207,6 @@ class _LookupRowTile extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                const SizedBox(width: 4),
-                Icon(Icons.info_outline,
-                    size: 16, color: theme.colorScheme.onSurfaceVariant),
               ],
             ),
             if (extra.isNotEmpty)

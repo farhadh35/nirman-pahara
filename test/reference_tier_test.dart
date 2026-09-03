@@ -132,12 +132,15 @@ void _referenceCardsAreBadged() {
       ));
       await tester.pumpAndSettle();
 
-      // The amber badge, on the tier a reader is most likely to trust.
+      // The amber badge stays on the card, because it is a warning about the
+      // sentence in front of the reader rather than a reference. The source
+      // itself moved to the sources page — see source_index_test.dart, which
+      // holds that every citation in the app reaches it.
       expect(find.byType(ReviewBadge), findsWidgets,
           reason: 'unverified detailing is being shown as settled');
-      // And the source has to be reachable, not just recorded.
-      expect(find.byIcon(Icons.menu_book_outlined), findsWidgets,
-          reason: 'the citation cannot be opened from the card');
+      expect(find.byIcon(Icons.menu_book_outlined), findsNothing,
+          reason: 'the per-card source button is back; citations belong on the '
+              'sources page');
       expect(tester.takeException(), isNull);
     });
   });
