@@ -233,7 +233,7 @@ class _FarFormState extends State<_FarForm> {
               DropdownMenuItem(
                 value: code,
                 child: Text(
-                  '$code — ${_labelFor(code)}',
+                  '$code — ${_labelFor(code, context.locale)}',
                   overflow: TextOverflow.ellipsis,
                 ),
               )
@@ -252,7 +252,8 @@ class _FarFormState extends State<_FarForm> {
               for (final z in widget.pack.zones)
                 DropdownMenuItem(
                   value: z.id,
-                  child: Text(z.labelBn, overflow: TextOverflow.ellipsis),
+                  child: Text(z.label(context.locale),
+                      overflow: TextOverflow.ellipsis),
                 )
             ],
             onChanged: (v) => setState(() => _zone = v ?? _zone),
@@ -302,9 +303,9 @@ class _FarFormState extends State<_FarForm> {
     );
   }
 
-  String _labelFor(String code) {
+  String _labelFor(String code, AppLocale locale) {
     for (final u in widget.pack.uses) {
-      if (u.code == code) return u.labelBn;
+      if (u.code == code) return u.label(locale);
     }
     return code;
   }

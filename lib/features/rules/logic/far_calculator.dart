@@ -68,7 +68,8 @@ class FarCalculator {
         '${use.labelBn} — এই ব্যবহার ${RoadBand.fmtMetres(roadWidthM)} মিটার চওড়া '
             'রাস্তায় সারণি-৫ অনুযায়ী অনুমোদনযোগ্য নয়। এটা শূন্য FAR নয়, '
             'এই রাস্তায় এই ব্যবহারই নয়।',
-        '${use.labelBn}: Table 5 does not permit this use on a road '
+        '${use.label(AppLocale.en)}: Table 5 does not permit this use on a '
+            'road '
             '${RoadBand.fmtMetres(roadWidthM)} m wide. That is not a FAR of zero, it '
             'is a use the road does not carry.',
       ));
@@ -114,12 +115,13 @@ class FarCalculator {
             '${bandLabel.bn}।',
         'Maximum floor area = plot area × FAR = ${_fmt(plotAreaSft)} sft × '
             '${_fmt(far)} = ${_fmt(maxFloorArea)} sft. The FAR of ${_fmt(far)} '
-            'comes from Table 5: ${use.labelBn}, road ${bandLabel.en}.',
+            'comes from Table 5: ${use.label(AppLocale.en)}, road '
+            '${bandLabel.en}.',
       ),
       assumptions: [
         L10nText(
           'সূত্র: ${pack.sourceBn}।',
-          'Source: ${pack.sourceBn}.',
+          'Source: ${pack.sourceEn}.',
         ),
         L10nText(
           'রাস্তার প্রশস্ততা ধরা হয়েছে ${RoadBand.fmtMetres(roadWidthM)} মিটার, যা '

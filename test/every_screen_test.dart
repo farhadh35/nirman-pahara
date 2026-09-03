@@ -20,6 +20,11 @@ import 'package:nirman_pahara/features/inspection/logic/inspection_store.dart';
 import 'package:nirman_pahara/features/inspection/ui/inspection_screens.dart';
 import 'package:nirman_pahara/features/prices/logic/sor_rate_store.dart';
 import 'package:nirman_pahara/features/reference/ui/reference_screen.dart';
+import 'package:nirman_pahara/features/lookups/ui/lookups_screen.dart';
+import 'package:nirman_pahara/features/measure/ui/measure_screen.dart';
+import 'package:nirman_pahara/features/prices/ui/prices_screen.dart';
+import 'package:nirman_pahara/features/rules/ui/far_screen.dart';
+import 'package:nirman_pahara/features/sources/ui/sources_screen.dart';
 import 'package:nirman_pahara/features/rights/ui/rights_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -53,6 +58,7 @@ Future<Widget> _wrap(
   await content.rights();
   await content.pwdRates();
   await content.pwdEmRates();
+  await content.far();
   return AppScope(
     state: await AppState.load(),
     content: content,
@@ -130,6 +136,14 @@ void main() {
         ('inspection list', const InspectionScreen()),
         ('inspection setup', InspectionSetupScreen(pack: packs.first)),
         ('inspection run', InspectionRunScreen(run: run())),
+        // The five that the first English sweep left out. Leaving them out is
+        // how the FAR screen came to show a reader who had chosen English a
+        // screenful of Bangla gazette terms with no gloss at all.
+        ('far', const FarScreen()),
+        ('measure', const MeasureScreen()),
+        ('lookups', const LookupsScreen()),
+        ('prices', const PricesScreen()),
+        ('sources', const SourcesScreen()),
       ];
 
   for (final brightness in Brightness.values) {
@@ -145,6 +159,11 @@ void main() {
       ('inspection list', 0),
       ('inspection setup', 0),
       ('inspection run', 0),
+      ('far', 0),
+      ('measure', 0),
+      ('lookups', 0),
+      ('prices', 0),
+      ('sources', 0),
     ]) {
       testWidgets('$name draws in $theme', (tester) async {
         final screen = screens().firstWhere((s) => s.$1 == name).$2;
@@ -169,6 +188,11 @@ void main() {
     ('inspection list', 0),
     ('inspection setup', 0),
     ('inspection run', 0),
+    ('far', 0),
+    ('measure', 0),
+    ('lookups', 0),
+    ('prices', 0),
+    ('sources', 0),
   ]) {
     testWidgets('$name holds together on a small phone at the largest text',
         (tester) async {
@@ -234,6 +258,11 @@ void main() {
     ('inspection list', 0),
     ('inspection setup', 0),
     ('inspection run', 0),
+    ('far', 0),
+    ('measure', 0),
+    ('lookups', 0),
+    ('prices', 0),
+    ('sources', 0),
   ]) {
     testWidgets('$name draws in English', (tester) async {
       final screen = screens().firstWhere((s) => s.$1 == name).$2;
@@ -241,14 +270,22 @@ void main() {
           brightness: Brightness.light, locale: AppLocale.en);
       expect(tester.takeException(), isNull);
 
-      // Every visible string should have been written in English. Bangla text
-      // on an English screen means an L10nText was built without an `en`, and
-      // the reader who chose English gets a script they may not read at all.
+      // Bangla with no English anywhere in the same string means an L10nText
+      // was built without an `en`, and the reader who chose English gets a
+      // script they may not read.
+      //
+      // Bangla *beside* English is a different thing and is allowed: the FAR
+      // screen deliberately keeps the gazette's own wording next to its gloss
+      // — "Single-family dwelling (একক পরিবারের বাড়ি)" — because a reader
+      // checking the printed gazette has to find the row by the words that
+      // are actually in it. So the test is that every string carrying Bangla
+      // also carries Latin, not that no string carries Bangla.
       final bangla = RegExp(r'[\u0980-\u09FF]');
+      final latin = RegExp(r'[A-Za-z]');
       final leaked = <String>[];
       for (final t in tester.widgetList<Text>(find.byType(Text))) {
         final v = t.data ?? '';
-        if (bangla.hasMatch(v)) leaked.add(v);
+        if (bangla.hasMatch(v) && !latin.hasMatch(v)) leaked.add(v);
       }
       expect(leaked, isEmpty,
           reason: '$name shows Bangla to a reader who chose English');

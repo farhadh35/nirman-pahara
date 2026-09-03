@@ -17,6 +17,7 @@ class FarPack {
   const FarPack({
     required this.table,
     required this.sourceBn,
+    required this.sourceEn,
     required this.roadBands,
     required this.zones,
     required this.uses,
@@ -24,6 +25,14 @@ class FarPack {
 
   final String table;
   final String sourceBn;
+
+  /// The citation in English. The S.R.O. number and the gazette page
+  /// numbers are what a reader matches against the printed volume, and
+  /// those are the same in either script.
+  final String sourceEn;
+
+  String source(AppLocale locale) =>
+      locale.isBangla ? sourceBn : sourceEn;
 
   /// The nine road-width columns, in the gazette's order.
   final List<RoadBand> roadBands;
@@ -36,6 +45,7 @@ class FarPack {
   static FarPack fromJson(Map<String, dynamic> json) => FarPack(
         table: json['table'] as String,
         sourceBn: json['source_bn'] as String,
+        sourceEn: json['source_en'] as String,
         roadBands: [
           for (final b in json['road_bands'] as List)
             RoadBand(
@@ -45,7 +55,11 @@ class FarPack {
         ],
         zones: [
           for (final z in json['zones'] as List)
-            FarZone(id: z['id'] as String, labelBn: z['label_bn'] as String),
+            FarZone(
+              id: z['id'] as String,
+              labelBn: z['label_bn'] as String,
+              labelEn: z['label_en'] as String,
+            ),
         ],
         uses: [
           for (final u in json['uses'] as List)
@@ -53,6 +67,7 @@ class FarPack {
               code: u['code'] as String,
               zone: u['zone'] as String?,
               labelBn: u['label_bn'] as String,
+              labelEn: u['label_en'] as String,
               far: [
                 for (final f in u['far'] as List) (f as num?)?.toDouble(),
               ],
@@ -110,10 +125,20 @@ class RoadBand {
 }
 
 class FarZone {
-  const FarZone({required this.id, required this.labelBn});
+  const FarZone({
+    required this.id,
+    required this.labelBn,
+    required this.labelEn,
+  });
 
   final String id;
   final String labelBn;
+
+  /// A gloss, not a replacement — see [FarUse.labelEn].
+  final String labelEn;
+
+  String label(AppLocale locale) =>
+      locale.isBangla ? labelBn : '$labelEn ($labelBn)';
 }
 
 class FarUse {
@@ -121,6 +146,7 @@ class FarUse {
     required this.code,
     required this.zone,
     required this.labelBn,
+    required this.labelEn,
     required this.far,
     required this.notRecommended,
   });
@@ -131,6 +157,15 @@ class FarUse {
   final String? zone;
 
   final String labelBn;
+
+  /// The English gloss. The Bangla is the gazette's own wording and stays
+  /// beside it rather than being replaced: a reader checking this against the
+  /// printed gazette has to find the row by the words actually in it, and an
+  /// English-only label would take that away.
+  final String labelEn;
+
+  String label(AppLocale locale) =>
+      locale.isBangla ? labelBn : '$labelEn ($labelBn)';
 
   /// Nine entries, one per road band. Null means the gazette permits this use
   /// on no road that narrow — which is a refusal, not a zero.
