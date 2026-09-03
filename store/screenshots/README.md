@@ -32,17 +32,20 @@ that only showed signed-off content would misrepresent what a new user opens.
 Screens are laid out in a single scrolling column, so the capture is just
 "start the app, tap a door, screenshot". Two things bite:
 
-- Tap coordinates are per-device and have to be re-derived from a home-screen
-  capture each time; a 10-inch emulator is slow enough that a tap five seconds
-  after launch can land before the list has drawn, which silently leaves you
-  with a second copy of the home screen. Check every shot — comparing file
-  hashes does not work, because the clock in the status bar makes two captures
-  of the same screen differ. Compare a crop of the top strip against the home
-  capture instead: a pushed screen has a back arrow where home has the title,
-  and the mean pixel difference over that band separates them cleanly.
-- The measuring-tools door is the one that misses. It sits mid-list where the
-  row spacing is tightest, and 1063 is the y that lands on a 1600 x 2560
-  tablet.
+- **Scroll the home page to the top before every tap.** This is the one that
+  actually matters, and it took three sessions of blaming timing to find. Android
+  restores the list's scroll position across a restart, so `am start -S` gives
+  you the home screen sitting wherever it was left — and every y coordinate then
+  lands on the wrong door. It produced a screenshot of the engineer's reference
+  filed as the inspection screen, and a calculators shot opening halfway down
+  the list instead of on the first group. Three upward swipes, then verify.
+- Verify every shot. Comparing file hashes does not work, because the status-bar
+  clock makes two captures of the same screen differ. Compare the whole image
+  against a known-good home capture: a different screen scores above 10, home at
+  the same scroll position scores 0. A crop of the top strip alone is too weak —
+  some screens share the app bar's colouring and score around 6.
+- Tap coordinates are per-device and have to be re-derived from a home capture
+  each time. On the 1600 x 2560 tablet the measuring-tools door is at y 1063.
 - `adb shell am start -S` force-restarts the activity, so each capture begins
   from a known home screen rather than wherever the last one left off. Backing
   out with the back key walks off the app and into the launcher.
