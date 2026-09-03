@@ -148,14 +148,13 @@ class S {
   /// is a small lie about a thing they have every reason to care about, and it
   /// was in the one section headed "where the money comes from".
   static const adDisclosure = L10nText(
-    'এই অ্যাপে এখন কোনো বিজ্ঞাপন নেই। কখনো যদি আসে, সিমেন্ট, রড, ইট, টাইলস, '
-        'রং, ঠিকাদারি বা আবাসন কোম্পানির বিজ্ঞাপন নেওয়া হবে না — কারণ এই অ্যাপ '
-        'ঠিক ওইগুলোর মান নিয়েই কথা বলে। পরিদর্শন, ফলাফল ও অভিযোগের পর্দায় '
-        'কোনো বিজ্ঞাপন কখনোই থাকবে না।',
-    'There are no ads in this app today. If any ever come, none will be taken '
-        'from cement, steel, brick, tile, paint, contracting or real-estate '
-        'companies, because those are exactly what the app judges. No ad will '
-        'ever appear on an inspection, a verdict or a complaint screen.',
+    'এই অ্যাপে কোনো বিজ্ঞাপন নেই। এলেও সিমেন্ট, রড, ইট, টাইলস, রং, ঠিকাদারি '
+        'বা আবাসন কোম্পানির নয় — অ্যাপটি ঠিক ওইগুলোর মানই যাচাই করে। '
+        'পরিদর্শন, ফলাফল ও অভিযোগের পর্দা বিজ্ঞাপনমুক্ত থাকবে।',
+    'There are no ads in this app. If any come, none will be from cement, '
+        'steel, brick, tile, paint, contracting or real estate — those are '
+        'what the app judges. Inspection, verdict and complaint screens stay '
+        'free of them.',
   );
 
   /// Said plainly, because the app is about government works and a reader could

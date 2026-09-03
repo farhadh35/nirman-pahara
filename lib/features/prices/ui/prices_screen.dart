@@ -318,15 +318,13 @@ class _CountryTabState extends State<_CountryTab> {
           icon: Icons.report_gmailerrorred_outlined,
           child: Text(
             locale.isBangla
-                ? 'এই পর্দা এক দেশের খরচের সঙ্গে আরেক দেশের খরচ মেলায়। '
-                    'সংখ্যাগুলো এক রকম জিনিস বোঝায় না — জমি, মাটি, সেতু, '
-                    'স্পেসিফিকেশন আর সাল সবই আলাদা। ফলাফলের সঙ্গের সতর্কবার্তাগুলো '
-                    'না পড়ে কোনো সিদ্ধান্তে যাবেন না।'
-                : 'This screen lines one country\'s cost up against another\'s. '
-                    'The figures do not mean the same thing — land, ground '
-                    'conditions, structures, specification and year all differ. '
-                    'Do not act on the result without reading the warnings that '
-                    'come with it.',
+                ? 'দুই দেশের খরচ পাশাপাশি বসে, কিন্তু সংখ্যা দুটি এক জিনিস '
+                    'বোঝায় না — জমি, মাটি, সেতু, স্পেসিফিকেশন, সাল সবই আলাদা। '
+                    'সতর্কবার্তা না পড়ে সিদ্ধান্তে যাবেন না।'
+                : 'Two countries\' costs sit side by side, but the figures do '
+                    'not mean the same thing — land, ground, structures, '
+                    'specification and year all differ. Read the cautions '
+                    'before acting on the result.',
             style: theme.textTheme.bodyMedium,
           ),
         ),

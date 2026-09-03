@@ -298,24 +298,6 @@ class _FarFormState extends State<_FarForm> {
           CautionBox(text: error)
         else if (result != null)
           CalcResultView(result: result),
-        const SizedBox(height: 20),
-        SectionCard(
-          title: bn ? 'এই সারণি কী বলে না' : 'What this table does not say',
-          icon: Icons.gavel_outlined,
-          child: Text(
-            bn
-                ? 'FAR শুধু বলে সব তলা মিলিয়ে কত মেঝে হতে পারে। কতটুকু জমিতে '
-                    'ইমারত বসবে, চারপাশে কত জায়গা ছাড়তে হবে, কত উঁচু করা যাবে — '
-                    'এগুলো আলাদা নিয়ম, আর সেগুলোও একই খাম ছোট করে। যেটি আগে বাধে '
-                    'সেটিই চূড়ান্ত। নকশা করানোর আগে রাজউকে যাচাই করে নিন।'
-                : 'FAR only caps the floor area added across every storey. How '
-                    'much of the plot may be built on, how much has to be left '
-                    'clear on each side, and how high it may go are separate '
-                    'rules that cut the same envelope. Whichever bites first '
-                    'governs. Check with RAJUK before paying for a design.',
-            style: theme.textTheme.bodyMedium,
-          ),
-        ),
       ],
     );
   }

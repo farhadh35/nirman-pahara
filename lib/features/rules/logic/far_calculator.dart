@@ -150,15 +150,17 @@ class FarCalculator {
                 'figure is printed, but it is not recommended.',
           ),
       ],
+      // Said once, here, rather than repeated in a card underneath it: this
+      // note travels with the result when it is copied, which is where it
+      // needs to be.
       note: const L10nText(
-        'এটি শুধু রাস্তাভিত্তিক FAR-এর ছাদ, অনুমোদন নয়। সেটব্যাক, সর্বোচ্চ '
-            'ভূমি আচ্ছাদন, উচ্চতার সীমা আর বিস্তারিত এলাকা পরিকল্পনা একই খাম '
-            'ছোট করে, আর যেটি আগে বাধে সেটিই চূড়ান্ত। নকশা অনুমোদনের আগে '
-            'রাজউকে যাচাই করুন।',
-        'This is the road-based FAR ceiling only, not an approval. Setbacks, '
-            'maximum ground coverage, height limits and the detailed area plan '
-            'cut into the same envelope, and whichever bites first is the one '
-            'that governs. Check with RAJUK before designing to it.',
+        'রাস্তাভিত্তিক FAR-এর ছাদ, অনুমোদন নয়। সেটব্যাক, ভূমি আচ্ছাদন, '
+            'উচ্চতার সীমা ও ড্যাপ একই খাম ছোট করে — যেটি আগে বাধে সেটিই '
+            'চূড়ান্ত। নকশার আগে রাজউকে যাচাই করে নিন।',
+        'The road-based FAR ceiling, not an approval. Setbacks, ground '
+            'coverage, height limits and the DAP cut the same envelope — '
+            'whichever binds first governs. Check with RAJUK before you '
+            'design to it.',
       ),
     );
   }
