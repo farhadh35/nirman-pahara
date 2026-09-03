@@ -100,6 +100,16 @@ void main() {
     expect(find.text('নির্মাণ পাহারা'), findsWidgets);
     expect(find.text('ভাষা'), findsOneWidget);
 
+    // Onboarding no longer answers for the reader: the button stays disabled
+    // until one of the two tracks is chosen. Tapping straight through used to
+    // hand a homeowner the government complaint ladder.
+    expect(find.text('দুটোর একটি বেছে নিন — পরে সেটিংসে বদলানো যাবে।'),
+        findsOneWidget);
+    await _tapText(tester, 'পরবর্তী');
+    expect(find.text('শিখুন'), findsNothing,
+        reason: 'onboarding let the reader past without answering');
+
+    await _tapText(tester, 'নিজের বাড়ি');
     await _tapText(tester, 'পরবর্তী');
     // The track chips sit above the doors, so they are checked before the page
     // is scrolled down past them.

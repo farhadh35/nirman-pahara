@@ -69,4 +69,37 @@ void main() {
     expect(Track.parseChoice(null), Track.government);
     expect(Track.parseChoice('both'), Track.government);
   });
+
+  test('neither track is a hollow app', () async {
+    // Content is tagged per track, so a mis-tag could leave one of the two
+    // readers with an app that has nothing in it — and only the reader in that
+    // situation would ever find out.
+    final repo = ContentRepository(reader: (p) => File(p).readAsString());
+    final guide = await repo.guide();
+    final rights = await repo.rights();
+    for (final t in Track.choices) {
+      final modules = guide.forTrack(t);
+      final packs = await repo.checklistsForTrack(t);
+      expect(modules.length, greaterThan(10), reason: '${t.name}: too few modules');
+      expect(modules.fold<int>(0, (a, m) => a + m.cards.length),
+          greaterThan(50), reason: '${t.name}: too few cards');
+      expect(packs, isNotEmpty, reason: '${t.name}: no checklist to run');
+      expect(rights.stepsFor(t), isNotEmpty,
+          reason: '${t.name}: no complaint ladder');
+      expect(rights.lettersFor(t), isNotEmpty,
+          reason: '${t.name}: no letter to send');
+    }
+  });
+
+  test('the government ladder is not offered to a homeowner', () async {
+    // The reason onboarding now insists on an answer. A Right to Information
+    // application is addressed to a public authority; a homeowner arguing with
+    // their own contractor has no authority to file it against.
+    final repo = ContentRepository(reader: (p) => File(p).readAsString());
+    final rights = await repo.rights();
+    final privateLetters = rights.lettersFor(Track.private).map((l) => l.id);
+    expect(privateLetters, isNot(contains('rti_application')));
+    expect(rights.lettersFor(Track.government).map((l) => l.id),
+        contains('rti_application'));
+  });
 }

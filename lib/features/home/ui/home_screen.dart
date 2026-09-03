@@ -210,8 +210,24 @@ class _Door extends StatelessWidget {
 
 /// First run: language, then what the user is looking at. Two taps, no more —
 /// anything longer and a first-time user on a borrowed phone gives up.
-class OnboardingScreen extends StatelessWidget {
+class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
+
+  @override
+  State<OnboardingScreen> createState() => _OnboardingScreenState();
+}
+
+class _OnboardingScreenState extends State<OnboardingScreen> {
+  /// Null until the reader answers.
+  ///
+  /// The radio used to open with "সরকারি কাজ" already filled in, so anyone who
+  /// tapped straight through had not answered the question — they had accepted
+  /// a default. That is the wrong thing to guess at: the two tracks carry
+  /// different complaint ladders, and a homeowner put on the government one is
+  /// shown how to file a Right to Information application against their own
+  /// contractor. One tap is a small price for the app knowing who it is
+  /// talking to.
+  Track? _picked;
 
   @override
   Widget build(BuildContext context) {
@@ -245,8 +261,8 @@ class OnboardingScreen extends StatelessWidget {
             Text(context.t(S.track), style: theme.textTheme.titleMedium),
             const SizedBox(height: 8),
             RadioGroup<Track>(
-              groupValue: state.track,
-              onChanged: (v) => state.track = v!,
+              groupValue: _picked,
+              onChanged: (v) => setState(() => _picked = v),
               child: Column(
                 children: [
                   for (final t in Track.choices)
@@ -260,9 +276,26 @@ class OnboardingScreen extends StatelessWidget {
             ),
             const SizedBox(height: 28),
             FilledButton(
-              onPressed: state.completeOnboarding,
+              onPressed: _picked == null
+                  ? null
+                  : () {
+                      state.track = _picked!;
+                      state.completeOnboarding();
+                    },
               child: Text(context.t(S.next)),
             ),
+            if (_picked == null)
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Text(
+                  locale.isBangla
+                      ? 'দুটোর একটি বেছে নিন — পরে সেটিংসে বদলানো যাবে।'
+                      : 'Pick one — it can be changed later in settings.',
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: theme.colorScheme.onSurfaceVariant,
+                  ),
+                ),
+              ),
           ],
         ),
       ),
