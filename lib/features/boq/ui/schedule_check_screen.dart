@@ -58,12 +58,23 @@ class _ScheduleCheckScreenState extends State<ScheduleCheckScreen> {
             const BoqAnalyzer().analyse(result.document, profile: _profile);
         _busy = false;
       });
-    } on Exception {
+    } catch (_) {
+      // Not `on Exception`. A file that is not really a spreadsheet — renamed,
+      // half-downloaded, or a photo with the wrong extension — throws
+      // UnsupportedError, which is an Error and not an Exception, so it walked
+      // straight past that clause. The screen was then left with _busy still
+      // true: a spinner that never stopped, on the likeliest failure there is.
+      if (!mounted) return;
       setState(() {
         _busy = false;
         _error = context.locale.isBangla
-            ? 'ফাইলটি পড়া গেল না।'
-            : 'The file could not be read.';
+            ? 'ফাইলটি পড়া গেল না। এটি হয়তো আসল স্প্রেডশিট নয় — নাম বদলানো, '
+                'অসম্পূর্ণ ডাউনলোড, বা অন্য কোনো ফাইল। যে সফটওয়্যারে শিডিউলটি '
+                'আছে সেখান থেকে আবার .xlsx বা .csv করে সেভ করে দেখুন।'
+            : 'The file could not be read. It may not be a real spreadsheet — '
+                'renamed, half-downloaded, or something else entirely. Try '
+                'saving it again as .xlsx or .csv from whatever holds the '
+                'schedule.';
       });
     }
   }
