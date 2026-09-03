@@ -171,6 +171,18 @@ class FarUse {
   /// on no road that narrow — which is a refusal, not a zero.
   final List<double?> far;
 
+  /// The narrowest road this use carries a figure on, or null when the
+  /// gazette gives it none at any width.
+  ///
+  /// A refusal on its own leaves the reader nowhere: they know this road will
+  /// not do, and not what would. This is the one fact that answers that.
+  int? get narrowestPermittedBand {
+    for (var i = 0; i < far.length; i++) {
+      if (far[i] != null) return i;
+    }
+    return null;
+  }
+
   /// The gazette marks the widest-road figure "*NR" on some rows.
   final bool notRecommended;
 }

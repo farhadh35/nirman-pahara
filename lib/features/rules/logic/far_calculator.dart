@@ -64,14 +64,28 @@ class FarCalculator {
 
     final far = use.far[band];
     if (far == null) {
+      // Say what road would carry it. A refusal on its own tells the reader
+      // their road will not do and leaves them with nowhere to go next; the
+      // table already knows the answer, so it may as well be read out.
+      final narrowest = use.narrowestPermittedBand;
+      final needs = narrowest == null
+          ? const L10nText(
+              'সারণি-৫ কোনো প্রশস্ততার রাস্তাতেই এই ব্যবহারের জন্য FAR দেয় না।',
+              'Table 5 gives this use no figure at any road width.',
+            )
+          : L10nText(
+              'সারণি-৫ অনুযায়ী এই ব্যবহার সবচেয়ে সরু যে রাস্তায় চলে, তা '
+                  '${pack.roadBands[narrowest].label.bn}।',
+              'The narrowest road Table 5 allows this use on is '
+                  '${pack.roadBands[narrowest].label.en}.',
+            );
       throw CalcException(L10nText(
         '${use.labelBn} — এই ব্যবহার ${RoadBand.fmtMetres(roadWidthM)} মিটার চওড়া '
             'রাস্তায় সারণি-৫ অনুযায়ী অনুমোদনযোগ্য নয়। এটা শূন্য FAR নয়, '
-            'এই রাস্তায় এই ব্যবহারই নয়।',
+            'এই রাস্তায় এই ব্যবহারই নয়। ${needs.bn}',
         '${use.label(AppLocale.en)}: Table 5 does not permit this use on a '
-            'road '
-            '${RoadBand.fmtMetres(roadWidthM)} m wide. That is not a FAR of zero, it '
-            'is a use the road does not carry.',
+            'road ${RoadBand.fmtMetres(roadWidthM)} m wide. That is not a FAR '
+            'of zero, it is a use the road does not carry. ${needs.en}',
       ));
     }
 

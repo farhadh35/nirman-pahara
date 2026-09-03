@@ -295,8 +295,18 @@ class _FarFormState extends State<_FarForm> {
                   ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
             ),
           )
-        else if (error != null)
-          CautionBox(text: error)
+        else if (error != null) ...[
+          CautionBox(text: error),
+          const SizedBox(height: 12),
+          // The refusal says this road will not carry the use. The row says
+          // which roads will, and what each one allows — which is the question
+          // the refusal leaves the reader holding.
+          _Table5Row(
+            pack: widget.pack,
+            use: widget.pack.use(_useCode, zone: _isZoned ? _zone : null),
+            band: widget.pack.bandIndex(roadM),
+          ),
+        ]
         else if (result != null)
           CalcResultView(result: result),
       ],
@@ -326,6 +336,78 @@ class _FarFormState extends State<_FarForm> {
         labelText: label,
         helperText: hint,
         helperMaxLines: 3,
+      ),
+    );
+  }
+}
+
+/// One row of Table 5, drawn when the calculator has had to refuse.
+///
+/// Being told "not on this road" and nothing else is a dead end: the reader
+/// still does not know what road would do, or what it would allow them. The
+/// gazette's own row answers both, so it is put in front of them rather than
+/// described.
+class _Table5Row extends StatelessWidget {
+  const _Table5Row({required this.pack, required this.use, required this.band});
+
+  final FarPack pack;
+  final FarUse? use;
+  final int? band;
+
+  @override
+  Widget build(BuildContext context) {
+    final use = this.use;
+    if (use == null) return const SizedBox.shrink();
+    final theme = Theme.of(context);
+    final locale = context.locale;
+    final bn = locale.isBangla;
+
+    return SectionCard(
+      title: bn ? 'সারণি-৫ — এই ব্যবহারের সারি' : 'Table 5 — this row',
+      icon: Icons.table_chart_outlined,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            use.label(locale),
+            style: theme.textTheme.bodyMedium
+                ?.copyWith(fontWeight: FontWeight.w600),
+          ),
+          const SizedBox(height: 8),
+          for (var i = 0; i < pack.roadBands.length; i++)
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
+              decoration: BoxDecoration(
+                color: i == band
+                    ? theme.colorScheme.primary.withValues(alpha: 0.08)
+                    : null,
+                borderRadius: BorderRadius.circular(6),
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Text(pack.roadBands[i].label.of(locale),
+                        style: theme.textTheme.bodySmall),
+                  ),
+                  Text(
+                    // A dash is the gazette's refusal, and it is left as a
+                    // dash: writing 0 here would read as "no floor area
+                    // allowed", when what it means is "not this use, here".
+                    use.far[i] == null
+                        ? '—'
+                        : Bn.number(use.far[i]!, decimals: 2, locale: locale),
+                    style: theme.textTheme.bodyMedium?.copyWith(
+                      fontWeight:
+                          i == band ? FontWeight.w700 : FontWeight.w500,
+                      color: use.far[i] == null
+                          ? theme.colorScheme.onSurfaceVariant
+                          : null,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+        ],
       ),
     );
   }
