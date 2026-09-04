@@ -3,6 +3,24 @@
 Paste the block for the release you are shipping into Play Console.
 Keep each under 500 characters.
 
+## 2.0.1 (5)
+
+<bn-BD>
+সূত্র পাতায় এখন প্রতিটি সরকারি নথির পাশে প্রকাশকের নিজস্ব ঠিকানা দেওয়া আছে —
+গণপূর্তের রেট শিডিউল, BNBC ২০২০, ২০২৫ সালের ঢাকা ইমারত বিধিমালা, তথ্য অধিকার
+আইন। সঙ্গে স্পষ্ট করে লেখা: নির্মাণ পাহারা কোনো সরকারি দপ্তর নয়, কোনো সরকারি
+সংস্থার সঙ্গে যুক্তও নয়। যে নম্বরটা দেখছেন, সেটা মূল নথিতে গিয়ে মিলিয়ে নিতে
+পারবেন।
+</bn-BD>
+
+<en-GB>
+The references page now shows, beside each government document, the address its
+own publisher issues it from: the PWD rate schedules, BNBC 2020, the 2025 Dhaka
+building rules, the Right to Information Act. It also states plainly that
+Nirman Pahara is not a government body and is not affiliated with any
+government entity. Any figure you read here can be checked against the original.
+</en-GB>
+
 ## 2.0.0 (4)
 
 <bn-BD>
