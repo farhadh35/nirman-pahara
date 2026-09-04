@@ -18,6 +18,8 @@ class ReferenceWork {
     required this.title,
     required this.kind,
     this.detail,
+    this.url,
+    this.isGovernment = false,
   });
 
   final String id;
@@ -26,6 +28,24 @@ class ReferenceWork {
 
   /// Edition, publisher or where to get it — the line under the title.
   final L10nText? detail;
+
+  /// Where the original is published, when the publisher puts it online.
+  ///
+  /// Government works must carry one. Google Play rejected this app for
+  /// showing government information — the PWD rate schedules, the building
+  /// code, the gazette — without a link to the original, and a reader who
+  /// cannot reach the source cannot check the figure either, which is the
+  /// whole promise. Every URL here was fetched and returned 200 before it was
+  /// written down; a dead official link is worse than none, because it looks
+  /// like a citation while proving nothing.
+  final String? url;
+
+  /// Whether this work is published by a government body.
+  ///
+  /// Drives the "we are not the government" line on the sources page: the app
+  /// reproduces these figures, it does not speak for the offices that issued
+  /// them.
+  final bool isGovernment;
 
   /// Whether [source] is a citation of this work.
   bool claims(String source) {
@@ -105,6 +125,8 @@ class ReferenceWork {
           'পার্ট ৭ — নির্মাণ পদ্ধতি ও নিরাপত্তা · পার্ট ৮ — বিল্ডিং সার্ভিসেস',
           'Part 5 materials · Part 6 structural design · Part 7 construction '
               'and safety · Part 8 building services'),
+      url: 'http://www.hbri.gov.bd',
+      isGovernment: true,
     ),
     ReferenceWork(
       id: 'pwd_sor',
@@ -113,6 +135,8 @@ class ReferenceWork {
           'PWD Schedule of Rates 2022 (2nd revised)'),
       detail: L10nText('গণপূর্ত অধিদপ্তর · পূর্ত ও তড়িৎ-যান্ত্রিক, দুই খণ্ড',
           'Public Works Department · civil and electro-mechanical volumes'),
+      url: 'https://ss.pwd.gov.bd/sor',
+      isGovernment: true,
     ),
     ReferenceWork(
       id: 'gazette_2025',
@@ -124,6 +148,8 @@ class ReferenceWork {
               '১৪ ডিসেম্বর ২০২৫',
           'S.R.O. 469-Ain/2025 · Bangladesh Gazette, Extraordinary, '
               '14 December 2025'),
+      url: 'http://rajuk.gov.bd',
+      isGovernment: true,
     ),
     ReferenceWork(
       id: 'book',
@@ -141,42 +167,56 @@ class ReferenceWork {
           'Directorate General of Food — 1000 MT godown type design'),
       detail: L10nText('আগস্ট ২০২৪ · এই নকশার মাপ, সর্বজনীন মান নয়',
           'August 2024 · this design\'s figures, not national standards'),
+      url: 'https://dgfood.gov.bd',
+      isGovernment: true,
     ),
     ReferenceWork(
       id: 'bds_steel',
       kind: WorkKind.standard,
       title: L10nText('BDS ISO 6935-2 — রিইনফোর্সিং স্টিল',
           'BDS ISO 6935-2 — reinforcing steel'),
+      url: 'https://bsti.gov.bd',
+      isGovernment: true,
     ),
     ReferenceWork(
       id: 'lged_roads',
       kind: WorkKind.standard,
       title: L10nText('LGED রোড ডিজাইন স্ট্যান্ডার্ডস',
           'LGED road design standards'),
+      url: 'https://lged.gov.bd',
+      isGovernment: true,
     ),
     ReferenceWork(
       id: 'rti',
       kind: WorkKind.law,
       title: L10nText('তথ্য অধিকার আইন, ২০০৯',
           'Right to Information Act, 2009'),
+      url: 'http://bdlaws.minlaw.gov.bd/upload/act/2021-11-17-11-22-38-37.-The-Right-to-Information-Act-2009.pdf',
+      isGovernment: true,
     ),
     ReferenceWork(
       id: 'ppa',
       kind: WorkKind.law,
       title: L10nText('পাবলিক প্রকিউরমেন্ট আইন ২০০৬ ও বিধিমালা ২০০৮',
           'Public Procurement Act 2006 and Rules 2008'),
+      url: 'http://bdlaws.minlaw.gov.bd',
+      isGovernment: true,
     ),
     ReferenceWork(
       id: 'up_act',
       kind: WorkKind.law,
       title: L10nText('স্থানীয় সরকার (ইউনিয়ন পরিষদ) আইন, ২০০৯',
           'Local Government (Union Parishad) Act, 2009'),
+      url: 'http://bdlaws.minlaw.gov.bd',
+      isGovernment: true,
     ),
     ReferenceWork(
       id: 'labour_act',
       kind: WorkKind.law,
       title: L10nText('বাংলাদেশ শ্রম আইন, ২০০৬',
           'Bangladesh Labour Act, 2006'),
+      url: 'http://bdlaws.minlaw.gov.bd',
+      isGovernment: true,
     ),
     ReferenceWork(
       id: 'bppa',
@@ -185,12 +225,16 @@ class ReferenceWork {
           'Government procurement portal and e-GP (BPPA)'),
       detail: L10nText('DIMAPPP নাগরিক পর্যবেক্ষণ কার্যক্রমসহ',
           'Including the DIMAPPP citizen-monitoring programme'),
+      url: 'https://www.eprocure.gov.bd',
+      isGovernment: true,
     ),
     ReferenceWork(
       id: 'grs',
       kind: WorkKind.portal,
       title: L10nText('অভিযোগ প্রতিকার ব্যবস্থা (GRS) ও কল সেন্টার ৩৩৩',
           'Grievance Redress System (GRS) and call centre 333'),
+      url: 'https://grs.gov.bd',
+      isGovernment: true,
     ),
     ReferenceWork(
       id: 'nlaso',
@@ -203,6 +247,8 @@ class ReferenceWork {
       kind: WorkKind.portal,
       title: L10nText('দুর্নীতি দমন কমিশন হটলাইন — ১০৬',
           'Anti-Corruption Commission hotline — 106'),
+      url: 'https://acc.org.bd',
+      isGovernment: true,
     ),
     ReferenceWork(
       id: 'wb',

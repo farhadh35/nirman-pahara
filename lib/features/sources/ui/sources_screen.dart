@@ -153,6 +153,26 @@ class _SourcesScreenState extends State<SourcesScreen> {
       controller: _controller,
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 40),
       children: [
+        // Google Play rejected this app for showing government figures — the
+        // PWD rate schedules, the building code, the gazette — without saying
+        // where they came from or who the app is. Both halves of that are
+        // fixed here: every government work below carries the address its
+        // publisher issues it from, and this says plainly that reproducing a
+        // figure is not the same as speaking for the office that set it.
+        CautionBox(
+          icon: Icons.account_balance_outlined,
+          text: locale.isBangla
+              ? 'নির্মাণ পাহারা কোনো সরকারি দপ্তর নয় এবং কোনো সরকারি সংস্থার '
+                  'সঙ্গে যুক্ত নয়। নিচের সরকারি নথিগুলোর তথ্য এখানে তুলে ধরা '
+                  'হয়েছে মাত্র; প্রতিটির সঙ্গে প্রকাশকের নিজস্ব ঠিকানা দেওয়া '
+                  'আছে, মিলিয়ে দেখে নিন।'
+              : 'Nirman Pahara is not a government body and is not affiliated '
+                  'with or endorsed by any government entity. The government '
+                  'documents below are reproduced here for reference only; '
+                  'each carries the address its own publisher issues it from, '
+                  'so you can check it against the original.',
+        ),
+        const SizedBox(height: 16),
         for (final heading in byHeading.keys) ...[
             Padding(
               padding: const EdgeInsets.only(top: 8, bottom: 10),
@@ -204,6 +224,21 @@ class _SourcesScreenState extends State<SourcesScreen> {
                                 style: theme.textTheme.bodySmall?.copyWith(
                                   color: theme.colorScheme.onSurfaceVariant,
                                   height: 1.5,
+                                ),
+                              ),
+                            ),
+                          // Selectable rather than tappable: the app opens no
+                          // browser and asks for no network, so the address is
+                          // put where it can be read and copied instead of
+                          // hidden behind a link that would need both.
+                          if (entry.work?.url != null)
+                            Padding(
+                              padding: const EdgeInsets.only(top: 4),
+                              child: SelectableText(
+                                entry.work!.url!,
+                                style: theme.textTheme.bodySmall?.copyWith(
+                                  color: theme.colorScheme.primary,
+                                  height: 1.4,
                                 ),
                               ),
                             ),

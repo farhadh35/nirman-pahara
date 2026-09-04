@@ -21,6 +21,13 @@ void main() {
           reason: '$path still promises an escalation order that was removed');
       expect(text, isNot(contains('অভিযোগের ধাপ')),
           reason: '$path still names the removed complaint ladder');
+      // The Bangla listing kept offering "লিখিত অভিযোগের ছক" long after the
+      // template was deleted, because the checks above were written against
+      // the English wording only.
+      expect(text, isNot(contains('অভিযোগের ছক')),
+          reason: '$path still offers the removed complaint template');
+      expect(text, isNot(contains('কোন ক্রমে')),
+          reason: '$path still promises the removed escalation order');
     }
   });
 

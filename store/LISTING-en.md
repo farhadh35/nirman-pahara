@@ -71,13 +71,35 @@ amount — each one named, with the document to ask for.
 All 1,749 civil items of the PWD Schedule of Rates 2022 (2nd revised), plus
 2,606 electro-mechanical ones, each with the four regional columns the schedule
 actually prints. Search by item number or by description. Where the published
-PDF misprints a cell, it is left empty rather than guessed at.
+PDF misprints a cell, it is left empty rather than guessed at. Published by the
+Public Works Department at https://ss.pwd.gov.bd/sor
 
 **Your rights — letters ready to send**
 A ready Right to Information application that asks for the estimate, the BoQ
 and the measurement book in a form the app can check, and a written notice to a
 contractor. Separate letters for public works and for your own house, because
 the two are genuinely different.
+
+**Where the government information comes from**
+Nirman Pahara is not a government body and is not affiliated with, endorsed by
+or authorised by any government entity. It reproduces published government
+documents for reference only. Every source is listed in the app, and the
+originals are published here:
+
+PWD Schedule of Rates 2022 (civil and electro-mechanical) — Public Works
+Department: https://ss.pwd.gov.bd/sor
+Bangladesh National Building Code (BNBC) 2020 — Housing and Building Research
+Institute: http://www.hbri.gov.bd
+Dhaka Mohanagar Imarat Bidhimala 2025, S.R.O. 469-Ain/2025 — RAJUK:
+http://rajuk.gov.bd
+Right to Information Act 2009 — Ministry of Law:
+http://bdlaws.minlaw.gov.bd
+Public Procurement Act 2006 and Rules 2008 — Ministry of Law:
+http://bdlaws.minlaw.gov.bd
+Government procurement and e-GP portal: https://www.eprocure.gov.bd
+Grievance Redress System: https://grs.gov.bd
+LGED road standards: https://lged.gov.bd
+BDS steel standards — BSTI: https://bsti.gov.bd
 
 ---
 
