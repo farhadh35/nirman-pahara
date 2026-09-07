@@ -3,6 +3,24 @@
 Paste the block for the release you are shipping into Play Console.
 Keep each under 500 characters.
 
+## 2.0.2 (6)
+
+<bn-BD>
+সরকারি নথির তথ্য যেসব পর্দায় দেখানো হয় — রেট, গেজেটের FAR সারণি, মান ও তালিকা,
+শিডিউল যাচাই, চিঠি, অধ্যায় — প্রতিটির উপরেই এখন স্পষ্ট করে লেখা: নির্মাণ পাহারা
+সরকারি অ্যাপ নয়, কোনো সরকারি দপ্তরের সঙ্গে যুক্ত নয়। লেখাটায় চাপ দিলেই সূত্রের
+তালিকা খোলে, যেখানে প্রতিটি সরকারি নথির পাশে প্রকাশকের নিজস্ব ঠিকানা দেওয়া।
+</bn-BD>
+
+<en-GB>
+Every screen that shows government information — rates, the gazette's FAR
+table, the standards tables, the schedule check, the letters and the chapters —
+now carries the line at the top: Nirman Pahara is not a government app and is
+not affiliated with any government body. Tapping it opens the source list,
+where each government document sits beside the address its publisher issues it
+from.
+</en-GB>
+
 ## 2.0.1 (5)
 
 <bn-BD>
