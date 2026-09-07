@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../app/app_scope.dart';
-import '../../../app/theme.dart';
 import 'sources_screen.dart';
 
 /// "This is not a government app", said where somebody actually looks.
@@ -40,15 +39,19 @@ class NotGovernmentNotice extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final bangla = context.locale.isBangla;
-    final colour = AppTheme.warningOn(context);
+    // Brand green rather than the amber CautionBox uses. On the prices screen
+    // the two sit one above the other, and in amber they read as a single
+    // block of warning — which flattens both. This is a standing fact about
+    // who the app is, not a caution about what the reader just typed.
+    final colour = theme.colorScheme.primary;
 
     final body = Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       decoration: BoxDecoration(
-        color: colour.withValues(alpha: 0.10),
+        color: colour.withValues(alpha: 0.08),
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: colour.withValues(alpha: 0.35)),
+        border: Border.all(color: colour.withValues(alpha: 0.32)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
