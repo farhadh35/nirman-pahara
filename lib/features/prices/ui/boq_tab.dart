@@ -9,6 +9,7 @@ import '../../../core/i18n/strings.dart';
 import '../../../core/util/bn.dart';
 import '../../../core/util/grouped_number_formatter.dart';
 import '../../calculators/logic/calc_result.dart';
+import '../../sources/ui/not_government_notice.dart';
 import '../logic/boq_compare.dart';
 import '../logic/pwd_rate_table.dart';
 
@@ -100,6 +101,9 @@ class _BoqTabState extends State<BoqTab> {
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 40),
       children: [
+        // This tab is the PWD Schedule of Rates, read out verbatim.
+        const NotGovernmentNotice(),
+        const SizedBox(height: 12),
         if (widget.tables.length > 1) ...[
           Text(
             bn ? 'কোন তফসিল' : 'Which schedule',

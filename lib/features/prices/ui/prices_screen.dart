@@ -5,6 +5,7 @@ import '../../sources/ui/ref_marks.dart';
 import '../../../app/app_scope.dart';
 import '../../../core/i18n/app_locale.dart';
 import '../../../app/widgets/common.dart';
+import '../../sources/ui/not_government_notice.dart';
 import '../../../app/widgets/locale_fields.dart';
 import '../../../core/i18n/strings.dart';
 import '../../../core/util/bn.dart';
@@ -55,6 +56,11 @@ class PricesScreen extends StatelessWidget {
             ],
           ),
         ),
+        // The notice goes inside each tab's list rather than in a Column above
+        // the TabBarView. Above the tabs it is fixed height, and at 1.79x text
+        // on a 320dp phone it is taller than what is left of the screen — the
+        // layout tests caught it overflowing by 340 pixels. Inside the list it
+        // scrolls like everything else.
         body: ContentBuilder<({PricePack prices, List<PwdRateTable> rates})>(
           future: _load(context),
           builder: (context, data) => TabBarView(
@@ -135,6 +141,8 @@ class _MarketTabState extends State<_MarketTab> {
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 40),
       children: [
+        const NotGovernmentNotice(),
+        const SizedBox(height: 12),
         CautionBox(text: context.t(S.pricesMove), icon: Icons.schedule),
         const SizedBox(height: 16),
         DropdownButtonFormField<String>(
@@ -314,6 +322,8 @@ class _CountryTabState extends State<_CountryTab> {
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 40),
       children: [
+        const NotGovernmentNotice(),
+        const SizedBox(height: 12),
         SectionCard(
           title: context.t(S.readThisFirst),
           icon: Icons.report_gmailerrorred_outlined,

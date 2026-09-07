@@ -3,6 +3,7 @@ import '../../sources/ui/ref_marks.dart';
 
 import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
+import '../../sources/ui/not_government_notice.dart';
 import '../../../core/util/bn.dart';
 import '../logic/lookup_tables.dart';
 
@@ -114,6 +115,10 @@ class _Results extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 4, 16, 32),
       children: [
+        // Mix ratios, curing times and sand fineness are read out of BNBC
+        // 2020. Whose code that is, and whose app this is not, is said here.
+        const NotGovernmentNotice(),
+        const SizedBox(height: 12),
         if (q.isEmpty) ...[
           Card(
             color: theme.colorScheme.surfaceContainerHighest,

@@ -1,30 +1,3 @@
-# Play Store listing — English
-
-## App name (30 chars)
-Nirman Pahara: Civil Works
-
-<!-- 26 of 30. Play has no keywords field: everything is indexed from the
-     title, the short description and the full description, and the first two
-     carry the most weight. "Nirman Pahara" alone spent 13 characters and
-     matched nothing anyone types in English — not construction, not civil
-     works, not rates. The Bangla listing keeps নির্মাণ পাহারা on its own,
-     because a Bangla searcher is already typing the name. -->
-
-## Short description (80 chars)
-Not a government app. Check civil works: measures, PWD rates, calculators.
-
-<!-- 74 of 80. Verbatim from store/play-short-description-en.txt, which
-     is the file that gets pasted into Play. It opens with the disclaimer
-     because this line is what a search result and a store card show, and the
-     second rejection turned on the disclaimer being somewhere nobody looked. -->
-
-## Full description
-
-<!-- Verbatim from store/play-description-en.txt — 3984 of 4000. Paste
-     that file, not this section; test/government_disclaimer_test.dart holds
-     the two apart from drifting. Markdown emphasis is deliberately absent:
-     Play renders none of it. -->
-
 NOT A GOVERNMENT APP — Nirman Pahara is independent. It is NOT a government body and is NOT affiliated with, endorsed by or authorised by any government entity. Government documents are reproduced for reference only; the official sources are linked below and inside the app.
 
 The road through your area sank in one monsoon, and on paper the work is finished. You do not need to be an engineer to understand why. You need to know what to look at, and where. Nirman Pahara teaches exactly that — on civil works and on your own house — in Bangla and English, with no internet.
@@ -82,9 +55,3 @@ No paywall. No account. Everything works offline. Your photographs, location and
 This app takes no advertising from cement, steel, brick, tile, paint, contracting or real-estate companies — those are exactly the things it judges.
 
 It is not an engineering test and not legal advice, and it does not represent any government entity. It states what the rule requires and what you observed, separately, so the authority can verify it.
-
-## Links
-
-Privacy policy: https://farhadh35.github.io/nirman-pahara/privacy.html
-Website: https://farhadh35.github.io/nirman-pahara/
-Source code: https://github.com/farhadh35/nirman-pahara

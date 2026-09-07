@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import '../../../app/app_scope.dart';
 import '../../../app/theme.dart';
 import '../../../app/widgets/common.dart';
+import '../../sources/ui/not_government_notice.dart';
 import '../../../core/i18n/strings.dart';
 import '../../../core/util/bn.dart';
 import '../logic/boq_analyzer.dart';
@@ -92,6 +93,10 @@ class _ScheduleCheckScreenState extends State<ScheduleCheckScreen> {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 40),
         children: [
+          // What this screen checks a bill against is a government rate
+          // schedule, and what it cites is the procurement law.
+          const NotGovernmentNotice(),
+          const SizedBox(height: 14),
           if (result == null) _intro(context),
           const SizedBox(height: 16),
           DropdownButtonFormField<String?>(

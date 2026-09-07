@@ -98,6 +98,44 @@ is not an approval, because setbacks, ground coverage and the detailed area plan
 cut the same envelope and RAJUK decides. Presenting it as a permission would be
 the kind of misleading claim this policy exists to stop.
 
+### 5a. What the two Misleading Claims rejections taught
+
+Play enforced against this app twice under Misleading Claims, both times as
+"Missing Source Link for Government Information", and it is worth writing down
+why the first fix did not take.
+
+**4 September 2026, submission 1 — rejected.** No source URL and no disclaimer
+anywhere. Fixed by adding a URL to every government work in
+`ReferenceWork.all`, a disclaimer and link list to the sources page, and a
+source block to the store description.
+
+**7 September 2026, submission 2 — rejected under the same heading.** Every
+URL still resolved; that was not the problem. The problem was placement:
+
+- The store disclaimer sat in the last third of a 3,867-character description,
+  roughly 2,500 characters in. Play collapses the description after about
+  eighty characters, so nothing about it was, in Play's phrase, "easy-to-see".
+- The short description named PWD rates and disclaimed nothing. It is the line
+  shown on every store card and search result.
+- In the app, the disclaimer lived only on the sources page, which is reached
+  through Settings or by tapping a reference mark. A reviewer opening the app
+  and touring the screens that actually show government figures — rates, the
+  gazette table, the standards tables, the schedule check, the letters — met no
+  disclaimer on any of them.
+- Eight of the thirteen government works were linked. Play asked for a source
+  "for all of the government information(s) shared in your app".
+
+The rule this yields: **a disclaimer is a placement problem, not a wording
+problem.** Fixing the location Play quotes is not the same as fixing the issue,
+and Play says so in the notice itself — "this issue may also be found in other
+locations".
+
+Version 2.0.2 puts `NotGovernmentNotice` at the top of onboarding, home and
+every screen that shows a government figure; opens the description and the
+short description with the disclaimer; and links all thirteen works.
+`test/government_disclaimer_test.dart` holds each of those in place, position
+included.
+
 ## 6. Families, content rating, and audience
 
 Not directed at children. Target audience is adults. No violence, sexual

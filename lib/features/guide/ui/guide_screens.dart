@@ -6,6 +6,7 @@ import '../../../app/widgets/common.dart';
 import '../../../core/content/models.dart';
 import '../../../core/i18n/strings.dart';
 import '../../sources/ui/sources_screen.dart';
+import '../../sources/ui/not_government_notice.dart';
 import '../../../core/util/bn.dart';
 import '../diagrams/guide_diagrams.dart';
 
@@ -32,6 +33,10 @@ class GuideScreen extends StatelessWidget {
                   color: theme.colorScheme.onSurfaceVariant,
                 ),
               ),
+              const SizedBox(height: 12),
+              // The chapters quote BNBC 2020 throughout. Said here, not only
+              // on the sources page the link at the bottom leads to.
+              const NotGovernmentNotice(),
               const SizedBox(height: 16),
               for (final m in modules) ...[
                 Card(

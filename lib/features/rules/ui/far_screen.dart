@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
+import '../../sources/ui/not_government_notice.dart';
 import '../../../app/widgets/locale_fields.dart';
 import '../../../core/i18n/app_locale.dart';
 import '../../../core/i18n/strings.dart';
@@ -133,6 +134,11 @@ class _FarFormState extends State<_FarForm> {
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 8, 16, 40),
       children: [
+        // This screen reads a table straight out of the 2025 gazette. Saying
+        // whose table it is, and whose app this is not, belongs at the top of
+        // it rather than on a reference page three taps away.
+        const NotGovernmentNotice(),
+        const SizedBox(height: 14),
         Text(
           bn
               ? 'রাস্তা যত চওড়া, ইমারত তত বড় — গেজেট এই হিসাবটাই সারণিতে বেঁধে '

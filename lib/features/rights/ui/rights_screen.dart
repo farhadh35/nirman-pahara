@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../app/app_scope.dart';
 import '../../../app/widgets/common.dart';
+import '../../sources/ui/not_government_notice.dart';
 import '../../../core/content/rights_models.dart';
 import '../../../core/i18n/strings.dart';
 import '../../../core/util/bn.dart';
@@ -23,6 +24,11 @@ class RightsScreen extends StatelessWidget {
           return ListView(
             padding: const EdgeInsets.fromLTRB(16, 12, 16, 40),
             children: [
+              // These letters are written under the Right to Information Act
+              // and the procurement rules. Drafting a letter under an Act is
+              // not acting for the office that will receive it.
+              const NotGovernmentNotice(),
+              const SizedBox(height: 14),
               Text(context.t(S.letters), style: theme.textTheme.titleLarge),
               const SizedBox(height: 12),
               for (final l in letters) ...[

@@ -16,6 +16,7 @@ import '../../boq/ui/schedule_check_screen.dart';
 import '../../reference/ui/reference_screen.dart';
 import '../../rights/ui/rights_screen.dart';
 import '../../settings/ui/settings_screen.dart';
+import '../../sources/ui/not_government_notice.dart';
 
 /// Five doors, deliberately large. Nothing else competes for attention.
 class HomeScreen extends StatelessWidget {
@@ -42,7 +43,12 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 32),
         children: [
           Text(context.t(S.tagline), style: theme.textTheme.bodyLarge),
-          const SizedBox(height: 8),
+          const SizedBox(height: 10),
+          // Above the doors, not below them. A reviewer — and a reader who
+          // half-expects a government app because the app talks about
+          // government work — has to meet this before anything else.
+          const NotGovernmentNotice(),
+          const SizedBox(height: 12),
           const _TrackChips(),
           const SizedBox(height: 20),
           _Door(
@@ -243,7 +249,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             Text(context.t(S.appName), style: theme.textTheme.displaySmall),
             const SizedBox(height: 8),
             Text(context.t(S.tagline), style: theme.textTheme.bodyLarge),
-            const SizedBox(height: 36),
+            const SizedBox(height: 16),
+            const NotGovernmentNotice(tappable: false),
+            const SizedBox(height: 28),
             Text(context.t(S.language), style: theme.textTheme.titleMedium),
             const SizedBox(height: 8),
             Wrap(
