@@ -3,6 +3,23 @@
 Paste the block for the release you are shipping into Play Console.
 Keep each under 500 characters.
 
+## 2.0.3 (7)
+
+<bn-BD>
+সূত্র পাতায় এখন সেই ঠিকানাগুলোই দেওয়া, যেগুলো যেকোনো জায়গা থেকে খোলে — গণপূর্তের
+রেট শিডিউল, আইন মন্ত্রণালয়ের আইন, ই-জিপি, জিআরএস। বাকি নথিগুলোর প্রকাশক, সংস্করণ ও
+অধ্যায় পুরোটা লেখা আছে, ঠিকানা ছাড়া; কারণ ঐ সাইটগুলো সবখান থেকে খোলে না, আর যে
+লিংক খোলে না সেটা সূত্র নয়।
+</bn-BD>
+
+<en-GB>
+The reference page now gives an address only where that address actually opens
+from anywhere: the PWD rate schedule, the Acts at the Ministry of Law, the e-GP
+portal and the Grievance Redress System. The remaining works are still named in
+full — publisher, edition and part — but without a web address, because those
+publishers' sites do not open reliably and a link that fails is not a citation.
+</en-GB>
+
 ## 2.0.2 (6)
 
 <bn-BD>
