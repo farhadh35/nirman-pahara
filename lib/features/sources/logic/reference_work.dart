@@ -29,16 +29,39 @@ class ReferenceWork {
   /// Edition, publisher or where to get it — the line under the title.
   final L10nText? detail;
 
-  /// Where the original is published, when the publisher puts it online.
+  /// Where the original is published — only when that address actually opens
+  /// for a reader anywhere in the world.
   ///
-  /// Government works must carry one. Google Play rejected this app for
-  /// showing government information — the PWD rate schedules, the building
-  /// code, the gazette — without a link to the original, and a reader who
-  /// cannot reach the source cannot check the figure either, which is the
-  /// whole promise. Every URL here was fetched and returned 200 before it was
-  /// written down; a dead official link is worse than none, because it looks
-  /// like a citation while proving nothing.
+  /// This started as "government works must carry one", and every URL was
+  /// checked with curl from a machine in Dhaka before it was written down.
+  /// Play rejected the app anyway, for "Broken or Inaccessible Source Link":
+  /// six of the ten publishers serve an incomplete TLS certificate chain, so
+  /// hbri.gov.bd, rajuk.gov.bd, dgfood.gov.bd, bsti.gov.bd, lged.gov.bd and
+  /// acc.org.bd fail with "unable to verify the first certificate" for every
+  /// client that has not already cached the missing intermediate. The Dhaka
+  /// machine had cached it. Nobody else has.
+  ///
+  /// We cannot fix somebody else's certificate, and a link that shows a
+  /// security warning is not a citation — it is a claim the reader cannot
+  /// check. So those six carry no URL, and [kKnownUnreachableHosts] keeps them
+  /// from being written back in. What remains was verified from outside
+  /// Bangladesh, not from here.
   final String? url;
+
+  /// Publishers whose own servers make their address unusable as a citation.
+  ///
+  /// Checked from outside Bangladesh on 9 September 2026; each fails TLS chain
+  /// verification. Kept as data rather than a comment so a test can fail when
+  /// one reappears — which is how the third rejection happened.
+  static const kKnownUnreachableHosts = <String>[
+    'hbri.gov.bd',
+    'rajuk.gov.bd',
+    'dgfood.gov.bd',
+    'bsti.gov.bd',
+    'lged.gov.bd',
+    'acc.org.bd',
+    'mohpw.gov.bd',
+  ];
 
   /// Whether this work is published by a government body.
   ///
@@ -125,7 +148,6 @@ class ReferenceWork {
           'পার্ট ৭ — নির্মাণ পদ্ধতি ও নিরাপত্তা · পার্ট ৮ — বিল্ডিং সার্ভিসেস',
           'Part 5 materials · Part 6 structural design · Part 7 construction '
               'and safety · Part 8 building services'),
-      url: 'http://www.hbri.gov.bd',
       isGovernment: true,
     ),
     ReferenceWork(
@@ -148,7 +170,6 @@ class ReferenceWork {
               '১৪ ডিসেম্বর ২০২৫',
           'S.R.O. 469-Ain/2025 · Bangladesh Gazette, Extraordinary, '
               '14 December 2025'),
-      url: 'http://rajuk.gov.bd',
       isGovernment: true,
     ),
     ReferenceWork(
@@ -167,7 +188,6 @@ class ReferenceWork {
           'Directorate General of Food — 1000 MT godown type design'),
       detail: L10nText('আগস্ট ২০২৪ · এই নকশার মাপ, সর্বজনীন মান নয়',
           'August 2024 · this design\'s figures, not national standards'),
-      url: 'https://dgfood.gov.bd',
       isGovernment: true,
     ),
     ReferenceWork(
@@ -175,7 +195,6 @@ class ReferenceWork {
       kind: WorkKind.standard,
       title: L10nText('BDS ISO 6935-2 — রিইনফোর্সিং স্টিল',
           'BDS ISO 6935-2 — reinforcing steel'),
-      url: 'https://bsti.gov.bd',
       isGovernment: true,
     ),
     ReferenceWork(
@@ -183,7 +202,6 @@ class ReferenceWork {
       kind: WorkKind.standard,
       title: L10nText('LGED রোড ডিজাইন স্ট্যান্ডার্ডস',
           'LGED road design standards'),
-      url: 'https://lged.gov.bd',
       isGovernment: true,
     ),
     ReferenceWork(
@@ -191,7 +209,7 @@ class ReferenceWork {
       kind: WorkKind.law,
       title: L10nText('তথ্য অধিকার আইন, ২০০৯',
           'Right to Information Act, 2009'),
-      url: 'http://bdlaws.minlaw.gov.bd/upload/act/2021-11-17-11-22-38-37.-The-Right-to-Information-Act-2009.pdf',
+      url: 'https://bdlaws.minlaw.gov.bd/upload/act/2021-11-17-11-22-38-37.-The-Right-to-Information-Act-2009.pdf',
       isGovernment: true,
     ),
     ReferenceWork(
@@ -199,7 +217,7 @@ class ReferenceWork {
       kind: WorkKind.law,
       title: L10nText('পাবলিক প্রকিউরমেন্ট আইন ২০০৬ ও বিধিমালা ২০০৮',
           'Public Procurement Act 2006 and Rules 2008'),
-      url: 'http://bdlaws.minlaw.gov.bd',
+      url: 'https://bdlaws.minlaw.gov.bd',
       isGovernment: true,
     ),
     ReferenceWork(
@@ -207,7 +225,7 @@ class ReferenceWork {
       kind: WorkKind.law,
       title: L10nText('স্থানীয় সরকার (ইউনিয়ন পরিষদ) আইন, ২০০৯',
           'Local Government (Union Parishad) Act, 2009'),
-      url: 'http://bdlaws.minlaw.gov.bd',
+      url: 'https://bdlaws.minlaw.gov.bd',
       isGovernment: true,
     ),
     ReferenceWork(
@@ -215,7 +233,7 @@ class ReferenceWork {
       kind: WorkKind.law,
       title: L10nText('বাংলাদেশ শ্রম আইন, ২০০৬',
           'Bangladesh Labour Act, 2006'),
-      url: 'http://bdlaws.minlaw.gov.bd',
+      url: 'https://bdlaws.minlaw.gov.bd',
       isGovernment: true,
     ),
     ReferenceWork(
@@ -247,7 +265,6 @@ class ReferenceWork {
       kind: WorkKind.portal,
       title: L10nText('দুর্নীতি দমন কমিশন হটলাইন — ১০৬',
           'Anti-Corruption Commission hotline — 106'),
-      url: 'https://acc.org.bd',
       isGovernment: true,
     ),
     ReferenceWork(

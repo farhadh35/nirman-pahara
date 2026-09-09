@@ -11,21 +11,22 @@ Nirman Pahara: Civil Works
      because a Bangla searcher is already typing the name. -->
 
 ## Short description (80 chars)
-Not a government app. Check civil works: measures, PWD rates, calculators.
+Not a government app. Check civil works: measures, rate schedules, calculators.
 
-<!-- 74 of 80. Verbatim from store/play-short-description-en.txt, which
-     is the file that gets pasted into Play. It opens with the disclaimer
-     because this line is what a search result and a store card show, and the
-     second rejection turned on the disclaimer being somewhere nobody looked. -->
+<!-- 79 of 80. Verbatim from store/play-short-description-en.txt. -->
 
 ## Full description
 
-<!-- Verbatim from store/play-description-en.txt — 3984 of 4000. Paste
-     that file, not this section; test/government_disclaimer_test.dart holds
-     the two apart from drifting. Markdown emphasis is deliberately absent:
-     Play renders none of it. -->
+<!-- Verbatim from store/play-description-en.txt — 3805 of 4000.
+     Paste that file, not this section.
 
-NOT A GOVERNMENT APP — Nirman Pahara is independent. It is NOT a government body and is NOT affiliated with, endorsed by or authorised by any government entity. Government documents are reproduced for reference only; the official sources are linked below and inside the app.
+     Third rejection, 8 Sept 2026: "Broken or Inaccessible Source Link". Six of
+     the ten publishers we linked serve an incomplete TLS chain and fail for
+     every client outside Bangladesh. They cannot be fixed from here, so the
+     listing now names only the four addresses that were verified to open from
+     outside, and stops claiming the documents it cannot link. -->
+
+NOT A GOVERNMENT APP — Nirman Pahara is independent. It is NOT a government body and is NOT affiliated with, endorsed by or authorised by any government entity. It does not provide any government service. Published reference documents are used for their technical figures only, and every source that can be linked is linked below.
 
 The road through your area sank in one monsoon, and on paper the work is finished. You do not need to be an engineer to understand why. You need to know what to look at, and where. Nirman Pahara teaches exactly that — on civil works and on your own house — in Bangla and English, with no internet.
 
@@ -38,44 +39,31 @@ Separate checklists for rural roads, buildings, food godowns, repair works and e
 Calculate — ask your question with a number
 Seventeen calculators: count a brick stack, bars from a tonne, materials for a pour, rod weight, hooks, shuttering, soling, brickwork, plaster, tiles, paint, earthwork and lorry trips. Every result shows its formula.
 
-What the plot allows — what the gazette says
-Give it the width of the road in front and it reads the FAR index off Table 5 of the 2025 Dhaka building rules — 39 uses against 9 road widths. It is a ceiling, not an approval: RAJUK has to be asked before a design is paid for.
-
 Measuring tools and reference tables
-Katha, bigha, decimals and chatak — enter one and get the rest, as a deed writes it. Suta to millimetres. Mix ratios, curing, striking times and sand fineness, every row carrying its source.
+Katha, bigha, decimals and chatak — enter one and get the rest, as a deed writes it. Suta to millimetres. Mix ratios, curing times, formwork striking times and sand fineness, every row naming the work it was taken from.
 
 Check a rate schedule, an estimate or a tender BoQ
 Import a rate schedule, estimate or BoQ as a spreadsheet or Word file. Items billed that the schedule never carried, quantities beyond what was scheduled, work never done, quantity times rate not matching the amount — each one named.
 
-The government rates, included
-All 1,749 civil items of the PWD Schedule of Rates 2022 (2nd revised) plus 2,606 electro-mechanical ones, each with the four regional columns the schedule prints.
+The published rate schedule, included
+All 1,749 civil items of the PWD Schedule of Rates 2022 (2nd revised) plus 2,606 electro-mechanical ones, each with the four regional columns the schedule prints. Where the published PDF misprints a cell it is left empty rather than guessed at.
 
-Your rights — letters ready to send
+Letters ready to send
 A Right to Information application asking for the estimate, the BoQ and the measurement book in a form the app can check, and a written notice to a contractor.
 
-WHERE THE GOVERNMENT INFORMATION COMES FROM
-Every government figure here is reproduced from a published document. The originals are published at:
+WHERE THE PUBLISHED FIGURES COME FROM
+Nirman Pahara reproduces no government service and speaks for no office. Where a document it draws on is published online at an address that opens reliably, that address is given here:
 
 PWD Schedule of Rates 2022 — Public Works Department:
 https://ss.pwd.gov.bd/sor
-Bangladesh National Building Code 2020 — Housing and Building Research Institute:
-http://www.hbri.gov.bd
-Dhaka Mohanagar Imarat Bidhimala 2025, S.R.O. 469-Ain/2025 — RAJUK:
-http://rajuk.gov.bd
 Right to Information Act 2009, Public Procurement Act 2006, Union Parishad Act 2009, Labour Act 2006 — Ministry of Law:
-http://bdlaws.minlaw.gov.bd
-1000 MT godown type design — Directorate General of Food:
-https://dgfood.gov.bd
-BDS ISO 6935-2 steel standard — BSTI:
-https://bsti.gov.bd
-LGED road design standards:
-https://lged.gov.bd
-Government procurement and e-GP portal:
+https://bdlaws.minlaw.gov.bd
+Public procurement and e-GP portal:
 https://www.eprocure.gov.bd
 Grievance Redress System:
 https://grs.gov.bd
-Anti-Corruption Commission:
-https://acc.org.bd
+
+Other works the app cites are named in full on its own reference page — publisher, edition and part — so any reader can find the original for themselves. They are listed without a web address because those publishers' sites do not open reliably, and a link that fails is not a citation.
 
 No paywall. No account. Everything works offline. Your photographs, location and inspection records stay on your phone. Nothing is uploaded.
 

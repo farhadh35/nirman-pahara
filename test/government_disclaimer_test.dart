@@ -102,20 +102,42 @@ void main() {
           reason: 'the line most readers see makes no disclaimer');
     });
 
-    test('every government work in the app is linked from the description', () {
-      // Play asked for a source "for all of the government information(s)
-      // shared in your app" — not for the three it happened to quote. Eight of
-      // the thirteen were listed last time.
+    test('every link the app holds is also given in the description', () {
+      // The rule used to be "every government work must be linked". That
+      // produced ten addresses, six of which opened a security warning for
+      // anyone outside Bangladesh, and the third rejection. Now the app keeps
+      // a link only where the publisher's site actually opens, and the
+      // description has to carry exactly those.
       final text = _description();
-      final unlinked = <String>[];
+      final missing = <String>[];
       for (final w in ReferenceWork.all) {
-        if (!w.isGovernment) continue;
+        if (w.url == null) continue;
         final host = Uri.parse(w.url!).host.replaceFirst('www.', '');
-        if (!text.contains(host)) unlinked.add('${w.id} ($host)');
+        if (!text.contains(host)) missing.add('${w.id} ($host)');
       }
-      expect(unlinked, isEmpty,
-          reason: 'these government works are cited in the app but their '
-              'publisher is not linked in the store description: $unlinked');
+      expect(missing, isEmpty,
+          reason: 'the app cites these addresses but the store description '
+              'does not: $missing');
+    });
+
+    test('the description promises no source it cannot open', () {
+      // The failure the third rejection was actually about.
+      final text = _description();
+      final dead = [
+        for (final host in ReferenceWork.kKnownUnreachableHosts)
+          if (text.contains(host)) host,
+      ];
+      expect(dead, isEmpty,
+          reason: 'the description links $dead, whose certificate chain is '
+              'broken for every reader outside Bangladesh');
+    });
+
+    test('the description still says where the unlinked works are named', () {
+      // Six works lost their address. Saying nothing about them would read as
+      // figures with no provenance at all, which is the first rejection.
+      expect(_description().toLowerCase(), contains('reference page'),
+          reason: 'the description drops the works it cannot link without '
+              'telling the reader they are named inside the app');
     });
 
     test('the description links nothing the app does not cite', () {

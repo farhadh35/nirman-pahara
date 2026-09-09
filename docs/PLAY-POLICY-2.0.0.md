@@ -136,6 +136,50 @@ short description with the disclaimer; and links all thirteen works.
 `test/government_disclaimer_test.dart` holds each of those in place, position
 included.
 
+### 5b. The third rejection: a link that opens only for us
+
+**8 September 2026, v2.0.2/6 — "Broken or Inaccessible Source Link".**
+
+Ten official addresses had been written into the listing, and every one was
+checked with `curl -L` from this machine in Dhaka before it shipped. All ten
+returned 200. That verification was worthless: six of the publishers serve an
+**incomplete TLS certificate chain**, and this machine's trust store already
+held the missing intermediate. Every client that does not — a reviewer's
+browser, an automated checker, anything outside Bangladesh — gets
+`unable to verify the first certificate` and a security warning.
+
+Broken for everyone else: `hbri.gov.bd` (BNBC 2020), `rajuk.gov.bd` (the 2025
+gazette), `dgfood.gov.bd`, `bsti.gov.bd`, `lged.gov.bd`, `acc.org.bd`. Checked
+for alternatives — `mohpw.gov.bd` and `hbri.portal.gov.bd` fail the same way and
+`bgpress.gov.bd` does not resolve — so it is the national hosting, not one bad
+server, and it is not ours to fix.
+
+Still reachable, verified from outside Bangladesh: `ss.pwd.gov.bd`,
+`bdlaws.minlaw.gov.bd`, `grs.gov.bd`, `www.eprocure.gov.bd`.
+
+**What changed.** A work now carries a URL only if that URL opens for a
+stranger. The six carry none, `ReferenceWork.kKnownUnreachableHosts` stops them
+being written back, and the listing names only the four that work — dropping the
+gazette, BNBC and FAR claims it could no longer source, and saying plainly that
+the remaining works are named in full on the app's own reference page without an
+address because those sites do not open reliably.
+
+The listing also now states outright that the app **does not provide any
+government service**, which is what the published policy text actually
+prohibits falsely claiming: *"Apps that falsely claim affiliation with a
+government entity or to provide or facilitate government services for which they
+are not properly authorized."*
+
+**The rule this yields:** a citation is not an address somebody typed, it is an
+address a stranger can open. Verify from outside the country before publishing;
+a local `curl` returning 200 is not evidence.
+
+**Known residual risk.** The app still shows BNBC-derived tables and a FAR
+screen built from the 2025 gazette, and neither has a linkable source any more.
+The listing no longer claims them, but a reviewer opening the app sees them. If
+there is a fourth rejection, that is where it comes from, and the question then
+is whether those features stay.
+
 ## 6. Families, content rating, and audience
 
 Not directed at children. Target audience is adults. No violence, sexual
