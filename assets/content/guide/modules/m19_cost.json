@@ -1,140 +1,140 @@
 {
- "id": "m19_cost",
- "code": "M19",
- "track": "both",
- "icon": "cost",
- "title": {
-  "bn": "খরচ কমানো",
-  "en": "Bringing the cost down"
- },
- "summary": {
-  "bn": "টাকা আসলে কোথায় যায়, কোন সাশ্রয় সত্যিই সাশ্রয়, আর কোনটা পরে দ্বিগুণ হয়ে ফেরত আসে।",
-  "en": "Where the money actually goes, which savings are savings, and which come back doubled."
- },
- "cards": [
-  {
-   "id": "m19c1",
-   "tier": "general",
-   "title": {
-    "bn": "টাকা কোথায় যায়",
-    "en": "Where the money goes"
-   },
-   "body": {
-    "bn": "কোথায় সাশ্রয় খোঁজা যায় সেটা বুঝতে হলে আগে দেখতে হয় টাকাটা কোথায় যাচ্ছে। মোটা দাগে নির্মাণ খরচের প্রায় ৬০ শতাংশ মালামালে, ২০ শতাংশ মিস্ত্রী ও লেবারে, ৩ শতাংশ যন্ত্রপাতিতে, আর বাকিটা ঠিকাদারের লাভ, ওভারহেড আর বিবিধ। কাঠামোর দিক থেকে দেখলে ইটের কাজেই সবচেয়ে বেশি — ৩০ শতাংশের আশপাশে, ছাদে ২০, দরজা-জানালায় ১৬, প্লাস্টার ও রঙে ১০।",
-    "en": "To know where a saving might be, it helps to see where the money is going. Broadly, about 60 per cent of construction cost is materials, 20 per cent masons and labourers, 3 per cent plant, and the rest contractor profit, overhead and sundries. Looked at by part of the building, masonry is the largest at around 30 per cent, the roof 20, doors and windows 16, plaster and paint 10."
-   },
-   "watch_for": [
-    {
-     "bn": "এগুলো আন্দাজের ভাগ, নিয়ম নয় — বইয়েরই আলাদা দুটো ছকে ইটের কাজ ৩০% আর ৩৪% দুরকম লেখা।",
-     "en": "These are rough shares, not rules: two tables in the same book put masonry at 30 and at 34 per cent."
-    },
-    {
-     "bn": "কোনো একটা আইটেমের বিল এই ভাগের অনেক বাইরে গেলে সেটা প্রশ্ন করার জায়গা, প্রমাণ নয়।",
-     "en": "An item far outside these shares is a place to ask a question, not evidence of anything."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "অনুমানের শর্টকাট — বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), দশম অধ্যায়",
-      "en": "Rule of thumb — House construction and site supervision (2019), chapter 10"
-     },
-     "status": "ruleOfThumb"
-    }
-   ]
+  "id": "m19_cost",
+  "code": "M19",
+  "track": "both",
+  "icon": "cost",
+  "title": {
+    "bn": "খরচ কমানো",
+    "en": "Bringing the cost down"
   },
-  {
-   "id": "m19c2",
-   "tier": "general",
-   "title": {
-    "bn": "যে সাশ্রয়গুলো পরে দ্বিগুণ হয়ে ফেরে",
-    "en": "The savings that come back doubled"
-   },
-   "body": {
-    "bn": "খরচ কমানোর কিছু উপায় আছে যেগুলো তাৎক্ষণিক সস্তা আর দীর্ঘমেয়াদে দামি, আর এগুলোর মিল একটাই — বাদ দিলে সঙ্গে সঙ্গে কিছু বোঝা যায় না। ডিপিসি বাদ দেওয়া (খরচের এক শতাংশেরও কম, কিন্তু ছাড়া দেয়াল সারাজীবন ভিজবে), কিউরিং কমিয়ে দেওয়া (পানির দাম শূন্য, কিন্তু কংক্রিট শক্তি পায় না), পাতলা প্লাস্টার, কম গ্রেডের ইট, আর মাটি পরীক্ষা না করানো। এর কোনোটাই হস্তান্তরের দিন চোখে পড়ে না।",
-    "en": "Some ways of cutting cost are cheap now and expensive later, and they have one thing in common: leaving them out shows nothing at the time. Dropping the damp proof course — under one per cent of the cost, and without it the wall takes water for the life of the building. Cutting the curing short: water costs nothing and the concrete never reaches its strength. Thin plaster, low grade bricks, and skipping the soil test. None of these is visible on handover day."
-   },
-   "watch_for": [
-    {
-     "bn": "যেকোনো সাশ্রয়ের প্রস্তাবে জিজ্ঞেস করুন: এটা কি হস্তান্তরের দিন দেখা যাবে?",
-     "en": "Of any proposed saving, ask: would this show on handover day?"
-    },
-    {
-     "bn": "যেটা ঢেকে যায় সেটাই কমানো সবচেয়ে সহজ — আর সেটাই সবচেয়ে ব্যয়বহুল।",
-     "en": "What gets covered is the easiest thing to cut, and the most expensive one."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), দশম অধ্যায়",
-      "en": "House construction and site supervision (2019), chapter 10"
-     },
-     "status": "review"
-    }
-   ]
+  "summary": {
+    "bn": "টাকা আসলে কোথায় যায়, কোন সাশ্রয় সত্যিই সাশ্রয়, আর কোনটা পরে দ্বিগুণ হয়ে ফেরত আসে।",
+    "en": "Where the money actually goes, which savings are savings, and which come back doubled."
   },
-  {
-   "id": "m19c3",
-   "tier": "general",
-   "title": {
-    "bn": "যেগুলো সত্যিই সাশ্রয় করে",
-    "en": "What actually saves money"
-   },
-   "body": {
-    "bn": "সত্যিকারের সাশ্রয় আসে নকশা আর পরিকল্পনা থেকে, মালামালের মান কমিয়ে নয়। সরল আকারের প্ল্যানে দেয়াল কম লাগে; কোণা আর খাঁজ যত বেশি, ভিত আর দেয়াল তত বেশি। দরজা-জানালা প্রচলিত মাপে রাখলে বানানোর খরচ কমে। এক দফায় মালামাল কিনলে দাম কম পড়ে। আর সবচেয়ে বড়টা: কাজ শুরুর পরে নকশা বদলানো — ঢালাই হয়ে যাওয়া জিনিস ভাঙা মানে দুবার টাকা দেওয়া, একবার বানাতে আর একবার ভাঙতে।",
-    "en": "Real savings come from the design and the planning rather than from lowering the specification. A simple plan shape needs less wall; every corner and recess adds foundation and masonry. Doors and windows in standard sizes cost less to make. Buying materials in one lot costs less than buying piecemeal. And the largest of all: changing the drawing after work has started. Breaking out something already cast is paying twice, once to build it and once to remove it."
-   },
-   "watch_for": [
+  "cards": [
     {
-     "bn": "নকশা চূড়ান্ত করে তারপর শুরু করুন। মাঝপথে বদল সবচেয়ে দামি সিদ্ধান্ত।",
-     "en": "Settle the drawing, then start. A change midway is the most expensive decision available."
+      "id": "m19c1",
+      "tier": "general",
+      "title": {
+        "bn": "টাকা কোথায় যায়",
+        "en": "Where the money goes"
+      },
+      "body": {
+        "bn": "কোথায় সাশ্রয় খোঁজা যায় সেটা বুঝতে হলে আগে দেখতে হয় টাকাটা কোথায় যাচ্ছে। মোটা দাগে নির্মাণ খরচের প্রায় ৬০ শতাংশ মালামালে, ২০ শতাংশ মিস্ত্রী ও লেবারে, ৩ শতাংশ যন্ত্রপাতিতে, আর বাকিটা ঠিকাদারের লাভ, ওভারহেড আর বিবিধ। কাঠামোর দিক থেকে দেখলে ইটের কাজেই সবচেয়ে বেশি — ৩০ শতাংশের আশপাশে, ছাদে ২০, দরজা-জানালায় ১৬, প্লাস্টার ও রঙে ১০।",
+        "en": "To know where a saving might be, it helps to see where the money is going. Broadly, about 60 per cent of construction cost is materials, 20 per cent masons and labourers, 3 per cent plant, and the rest contractor profit, overhead and sundries. Looked at by part of the building, masonry is the largest at around 30 per cent, the roof 20, doors and windows 16, plaster and paint 10."
+      },
+      "watch_for": [
+        {
+          "bn": "এগুলো আন্দাজের ভাগ, নিয়ম নয় — বইয়েরই আলাদা দুটো ছকে ইটের কাজ ৩০% আর ৩৪% দুরকম লেখা।",
+          "en": "These are rough shares, not rules: two tables in the same book put masonry at 30 and at 34 per cent."
+        },
+        {
+          "bn": "কোনো একটা আইটেমের বিল এই ভাগের অনেক বাইরে গেলে সেটা প্রশ্ন করার জায়গা, প্রমাণ নয়।",
+          "en": "An item far outside these shares is a place to ask a question, not evidence of anything."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "অনুমানের শর্টকাট — বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), দশম অধ্যায়",
+            "en": "Rule of thumb — House construction and site supervision (2019), chapter 10"
+          },
+          "status": "ruleOfThumb"
+        }
+      ]
     },
     {
-     "bn": "দুই তলা এখন, তিন তলা পরে — ভিত আগেই সেই হিসাবে করালে পরে সস্তা পড়ে।",
-     "en": "Two floors now and a third later is cheaper if the foundation was designed for three at the start."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), দশম অধ্যায়",
-      "en": "House construction and site supervision (2019), chapter 10"
-     },
-     "status": "review"
-    }
-   ]
-  },
-  {
-   "id": "m19c4",
-   "tier": "work",
-   "title": {
-    "bn": "ফি আর লাভ: কোনটা কার",
-    "en": "Fees and profit: whose is which"
-   },
-   "body": {
-    "bn": "খরচের হিসাবে দুটো জিনিস আলাদা করে বোঝা দরকার। এক, কনসালট্যান্ট ফি — নকশার জন্য প্রায় ৬ শতাংশ আর তদারকির জন্য প্রায় ১ শতাংশ, মিলে ৭-এর আশপাশে। দুই, ঠিকাদারের লাভ ও ওভারহেড — প্রায় ১০ আর ৪.৫ শতাংশ। সরকারি রেট শিডিউলের দরে এই দুটো আগে থেকেই ধরা থাকে, তাই শিডিউলের দরের উপরে আবার লাভ যোগ হওয়ার কথা নয়। নিজের বাড়ির চুক্তিতে এগুলো লেখা থাকা ভালো, যাতে পরে তর্ক না হয়।",
-    "en": "Two things are worth separating in a cost. First, consultant fees: roughly 6 per cent for design and about 1 for supervision, so around 7 together. Second, contractor profit and overhead, at about 10 and 4.5 per cent. The government schedule's civil rates already contain both, so profit is not added again on top of a schedule rate. On a private contract it is worth having them written down, so the argument does not happen later."
-   },
-   "watch_for": [
-    {
-     "bn": "শিডিউল রেটের উপরে আবার 'ঠিকাদারের লাভ' লাইন থাকলে জিজ্ঞেস করুন।",
-     "en": "A separate contractor profit line added on top of schedule rates is worth asking about."
+      "id": "m19c2",
+      "tier": "general",
+      "title": {
+        "bn": "যে সাশ্রয়গুলো পরে দ্বিগুণ হয়ে ফেরে",
+        "en": "The savings that come back doubled"
+      },
+      "body": {
+        "bn": "খরচ কমানোর কিছু উপায় আছে যেগুলো তাৎক্ষণিক সস্তা আর দীর্ঘমেয়াদে দামি, আর এগুলোর মিল একটাই — বাদ দিলে সঙ্গে সঙ্গে কিছু বোঝা যায় না। ডিপিসি বাদ দেওয়া (খরচের এক শতাংশেরও কম, কিন্তু ছাড়া দেয়াল সারাজীবন ভিজবে), কিউরিং কমিয়ে দেওয়া (পানির দাম শূন্য, কিন্তু কংক্রিট শক্তি পায় না), পাতলা প্লাস্টার, কম গ্রেডের ইট, আর মাটি পরীক্ষা না করানো। এর কোনোটাই হস্তান্তরের দিন চোখে পড়ে না।",
+        "en": "Some ways of cutting cost are cheap now and expensive later, and they have one thing in common: leaving them out shows nothing at the time. Dropping the damp proof course — under one per cent of the cost, and without it the wall takes water for the life of the building. Cutting the curing short: water costs nothing and the concrete never reaches its strength. Thin plaster, low grade bricks, and skipping the soil test. None of these is visible on handover day."
+      },
+      "watch_for": [
+        {
+          "bn": "যেকোনো সাশ্রয়ের প্রস্তাবে জিজ্ঞেস করুন: এটা কি হস্তান্তরের দিন দেখা যাবে?",
+          "en": "Of any proposed saving, ask: would this show on handover day?"
+        },
+        {
+          "bn": "যেটা ঢেকে যায় সেটাই কমানো সবচেয়ে সহজ — আর সেটাই সবচেয়ে ব্যয়বহুল।",
+          "en": "What gets covered is the easiest thing to cut, and the most expensive one."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), দশম অধ্যায়",
+            "en": "House construction and site supervision (2019), chapter 10"
+          },
+          "status": "review"
+        }
+      ]
     },
     {
-     "bn": "তদারকির ফি আলাদা — নকশা বানানো আর কাজ দেখা এক জিনিস নয়।",
-     "en": "The supervision fee is separate: drawing a design and watching the work are not the same job."
-    }
-   ],
-   "citations": [
+      "id": "m19c3",
+      "tier": "general",
+      "title": {
+        "bn": "যেগুলো সত্যিই সাশ্রয় করে",
+        "en": "What actually saves money"
+      },
+      "body": {
+        "bn": "সত্যিকারের সাশ্রয় আসে নকশা আর পরিকল্পনা থেকে, মালামালের মান কমিয়ে নয়। সরল আকারের প্ল্যানে দেয়াল কম লাগে; কোণা আর খাঁজ যত বেশি, ভিত আর দেয়াল তত বেশি। দরজা-জানালা প্রচলিত মাপে রাখলে বানানোর খরচ কমে। এক দফায় মালামাল কিনলে দাম কম পড়ে। আর সবচেয়ে বড়টা: কাজ শুরুর পরে নকশা বদলানো — ঢালাই হয়ে যাওয়া জিনিস ভাঙা মানে দুবার টাকা দেওয়া, একবার বানাতে আর একবার ভাঙতে।",
+        "en": "Real savings come from the design and the planning rather than from lowering the specification. A simple plan shape needs less wall; every corner and recess adds foundation and masonry. Doors and windows in standard sizes cost less to make. Buying materials in one lot costs less than buying piecemeal. And the largest of all: changing the drawing after work has started. Breaking out something already cast is paying twice, once to build it and once to remove it."
+      },
+      "watch_for": [
+        {
+          "bn": "নকশা চূড়ান্ত করে তারপর শুরু করুন। মাঝপথে বদল সবচেয়ে দামি সিদ্ধান্ত।",
+          "en": "Settle the drawing, then start. A change midway is the most expensive decision available."
+        },
+        {
+          "bn": "দুই তলা এখন, তিন তলা পরে — ভিত আগেই সেই হিসাবে করালে পরে সস্তা পড়ে।",
+          "en": "Two floors now and a third later is cheaper if the foundation was designed for three at the start."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), দশম অধ্যায়",
+            "en": "House construction and site supervision (2019), chapter 10"
+          },
+          "status": "review"
+        }
+      ]
+    },
     {
-     "source": {
-      "bn": "অনুমানের শর্টকাট — বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), দশম অধ্যায়",
-      "en": "Rule of thumb — House construction and site supervision (2019), chapter 10"
-     },
-     "status": "ruleOfThumb"
+      "id": "m19c4",
+      "tier": "work",
+      "title": {
+        "bn": "ফি আর লাভ: কোনটা কার",
+        "en": "Fees and profit: whose is which"
+      },
+      "body": {
+        "bn": "খরচের হিসাবে দুটো জিনিস আলাদা করে বোঝা দরকার। এক, কনসালট্যান্ট ফি — নকশার জন্য প্রায় ৬ শতাংশ আর তদারকির জন্য প্রায় ১ শতাংশ, মিলে ৭-এর আশপাশে। দুই, ঠিকাদারের লাভ ও ওভারহেড — প্রায় ১০ আর ৩.৫ শতাংশ। সরকারি রেট শিডিউলের দরে এই দুটো আগে থেকেই ধরা থাকে, তাই শিডিউলের দরের উপরে আবার লাভ যোগ হওয়ার কথা নয়। নিজের বাড়ির চুক্তিতে এগুলো লেখা থাকা ভালো, যাতে পরে তর্ক না হয়।",
+        "en": "Two things are worth separating in a cost. First, consultant fees: roughly 6 per cent for design and about 1 for supervision, so around 7 together. Second, contractor profit and overhead, at about 10 and 3.5 per cent. The government schedule's civil rates already contain both, so profit is not added again on top of a schedule rate. On a private contract it is worth having them written down, so the argument does not happen later."
+      },
+      "watch_for": [
+        {
+          "bn": "শিডিউল রেটের উপরে আবার 'ঠিকাদারের লাভ' লাইন থাকলে জিজ্ঞেস করুন।",
+          "en": "A separate contractor profit line added on top of schedule rates is worth asking about."
+        },
+        {
+          "bn": "তদারকির ফি আলাদা — নকশা বানানো আর কাজ দেখা এক জিনিস নয়।",
+          "en": "The supervision fee is separate: drawing a design and watching the work are not the same job."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "অনুমানের শর্টকাট — বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), দশম অধ্যায়",
+            "en": "Rule of thumb — House construction and site supervision (2019), chapter 10"
+          },
+          "status": "ruleOfThumb"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

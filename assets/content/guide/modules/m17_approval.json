@@ -1,200 +1,200 @@
 {
- "id": "m17_approval",
- "code": "M17",
- "track": "private",
- "icon": "approval",
- "title": {
-  "bn": "নকশা অনুমোদন",
-  "en": "Getting the plan approved"
- },
- "summary": {
-  "bn": "ঢাকা মহানগরে কোন নিয়ম চলছে, সেটব্যাক কত, রাস্তা কীভাবে FAR ঠিক করে — চলতি বিধিমালা ধরে।",
-  "en": "Which rules are in force in metropolitan Dhaka, what the setbacks are, and how the road decides your FAR."
- },
- "cards": [
-  {
-   "id": "m17c1",
-   "tier": "general",
-   "title": {
-    "bn": "কোন বিধিমালা এখন চলছে",
-    "en": "Which rules are in force now"
-   },
-   "body": {
-    "bn": "ঢাকা মহানগর এলাকায় এখন চলছে ঢাকা মহানগর ইমারত বিধিমালা, ২০২৫ — ১৪ ডিসেম্বর ২০২৫ তারিখের গেজেটে প্রকাশিত, এস.আর.ও. নং ৪৬৯-আইন/২০২৫, আর প্রকাশের সঙ্গে সঙ্গেই কার্যকর। ইন্টারনেট, পুরোনো বই আর অনেক ওয়েবসাইটে এখনো আগের বিধিমালার সেটব্যাক আর FAR-এর সংখ্যা ঘুরছে; সেগুলো দিয়ে হিসাব করলে নকশা ফেরত আসে। বিধিমালা অনুমোদিত নকশার সংজ্ঞাই দিয়েছে বাংলাদেশ ন্যাশনাল বিল্ডিং কোড ২০২০ ধরে, অর্থাৎ দুটো একসঙ্গে পড়তে হয়।",
-    "en": "In metropolitan Dhaka the rules in force are the Dhaka Mohanagar Imarat Bidhimala 2025, published in the gazette of 14 December 2025 as S.R.O. 469-Ain/2025 and effective immediately on publication. Setback and FAR figures from the previous rules are still circulating in books and on many websites; designing to those gets a drawing sent back. The Bidhimala defines an approved drawing by reference to the Bangladesh National Building Code 2020, so the two are read together."
-   },
-   "watch_for": [
-    {
-     "bn": "কোনো সংখ্যা পেলে দেখে নিন সেটা কোন বিধিমালার — সাল ছাড়া সংখ্যা কাজে আসে না।",
-     "en": "Of any figure, check which edition of the rules it is from. A number without its year is no use."
-    },
-    {
-     "bn": "স্থপতির কাছে জিজ্ঞেস করুন নকশাটা কোন বিধিমালা আর কোন কোড ধরে করা।",
-     "en": "Ask the architect which rules and which code the drawing was worked to."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "ঢাকা মহানগর ইমারত বিধিমালা, ২০২৫ — এস.আর.ও. নং ৪৬৯-আইন/২০২৫, বাংলাদেশ গেজেট অতিরিক্ত, ১৪ ডিসেম্বর ২০২৫",
-      "en": "Dhaka Mohanagar Imarat Bidhimala 2025 — S.R.O. 469-Ain/2025, Bangladesh Gazette extraordinary, 14 December 2025"
-     },
-     "clause": {
-      "bn": "বিধি ১ ও ২",
-      "en": "Rules 1 and 2"
-     },
-     "status": "verified"
-    }
-   ]
+  "id": "m17_approval",
+  "code": "M17",
+  "track": "private",
+  "icon": "approval",
+  "title": {
+    "bn": "নকশা অনুমোদন",
+    "en": "Getting the plan approved"
   },
-  {
-   "id": "m17c2",
-   "tier": "work",
-   "title": {
-    "bn": "সেটব্যাক: কতটা ফাঁকা রাখতেই হবে",
-    "en": "Setbacks: what has to stay open"
-   },
-   "body": {
-    "bn": "বিধিমালার সারণি-১ ভবনের তলা অনুযায়ী ন্যূনতম সেটব্যাক ঠিক করে দিয়েছে। ৭ তলা পর্যন্ত ভবনে সীমানা রেখা থেকে পাশে ১.০০ মিটার আর পিছনে ১.২৫ মিটার; ৮ থেকে ১০ তলায় পাশে ১.২৫ আর পিছনে ২.০০; ১১ থেকে ১৫ তলায় দুই দিকেই ৩.০০ মিটার। এর সঙ্গে একই প্লটে একাধিক ভবন থাকলে তাদের মধ্যেও ন্যূনতম দূরত্ব রাখতে হয় — ৭ তলা পর্যন্ত ২.০০ মিটার, ১১ থেকে ১৫ তলায় ৫.০০ মিটার।",
-    "en": "Table 1 of the Bidhimala sets the minimum setbacks by the number of storeys. Up to 7 storeys: 1.00 metre at the side and 1.25 at the rear, measured from the boundary line. From 8 to 10 storeys: 1.25 at the side and 2.00 at the rear. From 11 to 15: 3.00 metres both. Where a plot carries more than one building there is also a minimum distance between them — 2.00 metres up to 7 storeys, and 5.00 metres from 11 to 15."
-   },
-   "watch_for": [
-    {
-     "bn": "সেটব্যাক মাপা হয় সীমানা রেখা থেকে, দেয়ালের বাইরের দিক থেকে নয়।",
-     "en": "Setbacks are measured from the boundary line, not from the face of a wall."
-    },
-    {
-     "bn": "সামনের সেটব্যাক আলাদা বিধিতে — রাস্তা আর ব্যবহারভেদে বদলায়।",
-     "en": "The front setback sits in a different rule and changes with the road and the use."
-    },
-    {
-     "bn": "এগুলো ন্যূনতম। বাণিজ্যিক, শিক্ষা, স্বাস্থ্য বা গুদামের মতো ব্যবহারে মহাপরিকল্পনা অনুযায়ী বাড়তি সেটব্যাক লাগতে পারে।",
-     "en": "These are minimums. Commercial, educational, health or godown uses can need more under the master plan."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "ঢাকা মহানগর ইমারত বিধিমালা, ২০২৫ — এস.আর.ও. নং ৪৬৯-আইন/২০২৫, বাংলাদেশ গেজেট অতিরিক্ত, ১৪ ডিসেম্বর ২০২৫",
-      "en": "Dhaka Mohanagar Imarat Bidhimala 2025 — S.R.O. 469-Ain/2025, Bangladesh Gazette extraordinary, 14 December 2025"
-     },
-     "clause": {
-      "bn": "সারণি-১ — ইমারতের ন্যূনতম সেটব্যাক",
-      "en": "Table 1 — minimum setbacks"
-     },
-     "status": "verified"
-    }
-   ],
-   "diagram": "plot_faces"
+  "summary": {
+    "bn": "ঢাকা মহানগরে কোন নিয়ম চলছে, সেটব্যাক কত, রাস্তা কীভাবে FAR ঠিক করে — চলতি বিধিমালা ধরে।",
+    "en": "Which rules are in force in metropolitan Dhaka, what the setbacks are, and how the road decides your FAR."
   },
-  {
-   "id": "m17c3",
-   "tier": "work",
-   "title": {
-    "bn": "রাস্তাই ঠিক করে কতটা তুলতে পারবেন",
-    "en": "The road decides how much you can build"
-   },
-   "body": {
-    "bn": "প্লটের সামনের রাস্তার প্রশস্ততা সরাসরি FAR ঠিক করে, অর্থাৎ জমির তুলনায় কত মেঝে-ক্ষেত্র তোলা যাবে। বিধিমালা বলছে, ২.৫ মিটার বা তার বেশি কিন্তু ৬ মিটারের কম চওড়া রাস্তা-সংলগ্ন প্লটের ক্ষেত্রে রাস্তা ৬ মিটার পর্যন্ত প্রশস্ত করতে হবে। প্রশস্তকরণের প্রস্তাব থাকলে বিদ্যমান আর প্রস্তাবিত রাস্তার FAR-এর গড়টাই ধরা হয়। আর প্লটে একাধিক রাস্তা থাকলে সবচেয়ে চওড়া রাস্তার বিদ্যমান প্রশস্ততা বিবেচনা করা হয়।",
-    "en": "The width of the road a plot faces sets its FAR directly — how much floor area may be built against the size of the land. The Bidhimala requires that where a plot fronts a road 2.5 metres or wider but under 6 metres, the road must be widened to 6 metres. Where a widening is proposed, the FAR used is the average of the existing-road and proposed-road figures. Where a plot has more than one road, the existing width of the widest is what counts."
-   },
-   "watch_for": [
+  "cards": [
     {
-     "bn": "রাস্তা প্রশস্ত করতে দুই পাশের প্লট থেকে অর্ধেক করে জমি ছাড়তে হয়, আর সেটা ইজমেন্ট দলিলে স্থানীয় সরকারকে দিতে হয়।",
-     "en": "Widening takes half the needed land from the plots on each side, transferred to local government by easement deed."
+      "id": "m17c1",
+      "tier": "general",
+      "title": {
+        "bn": "কোন বিধিমালা এখন চলছে",
+        "en": "Which rules are in force now"
+      },
+      "body": {
+        "bn": "ঢাকা মহানগর এলাকায় এখন চলছে ঢাকা মহানগর ইমারত বিধিমালা, ২০২৫ — ১৪ ডিসেম্বর ২০২৫ তারিখের গেজেটে প্রকাশিত, এস.আর.ও. নং ৪৬৯-আইন/২০২৫, আর প্রকাশের সঙ্গে সঙ্গেই কার্যকর। ইন্টারনেট, পুরোনো বই আর অনেক ওয়েবসাইটে এখনো আগের বিধিমালার সেটব্যাক আর FAR-এর সংখ্যা ঘুরছে; সেগুলো দিয়ে হিসাব করলে নকশা ফেরত আসে। বিধিমালা অনুমোদিত নকশার সংজ্ঞাই দিয়েছে বাংলাদেশ ন্যাশনাল বিল্ডিং কোড ২০২০ ধরে, অর্থাৎ দুটো একসঙ্গে পড়তে হয়।",
+        "en": "In metropolitan Dhaka the rules in force are the Dhaka Mohanagar Imarat Bidhimala 2025, published in the gazette of 14 December 2025 as S.R.O. 469-Ain/2025 and effective immediately on publication. Setback and FAR figures from the previous rules are still circulating in books and on many websites; designing to those gets a drawing sent back. The Bidhimala defines an approved drawing by reference to the Bangladesh National Building Code 2020, so the two are read together."
+      },
+      "watch_for": [
+        {
+          "bn": "কোনো সংখ্যা পেলে দেখে নিন সেটা কোন বিধিমালার — সাল ছাড়া সংখ্যা কাজে আসে না।",
+          "en": "Of any figure, check which edition of the rules it is from. A number without its year is no use."
+        },
+        {
+          "bn": "স্থপতির কাছে জিজ্ঞেস করুন নকশাটা কোন বিধিমালা আর কোন কোড ধরে করা।",
+          "en": "Ask the architect which rules and which code the drawing was worked to."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "ঢাকা মহানগর ইমারত বিধিমালা, ২০২৫ — এস.আর.ও. নং ৪৬৯-আইন/২০২৫, বাংলাদেশ গেজেট অতিরিক্ত, ১৪ ডিসেম্বর ২০২৫",
+            "en": "Dhaka Mohanagar Imarat Bidhimala 2025 — S.R.O. 469-Ain/2025, Bangladesh Gazette extraordinary, 14 December 2025"
+          },
+          "clause": {
+            "bn": "বিধি ১ ও ২",
+            "en": "Rules 1 and 2"
+          },
+          "status": "verified"
+        }
+      ]
     },
     {
-     "bn": "ভিত্তি FAR আর সর্বোচ্চ FAR-এর পার্থক্য ০.১ বা তার কম হলে আবেদনকারী শর্তহীনভাবে সর্বোচ্চ FAR পাবেন।",
-     "en": "Where the difference between base FAR and maximum FAR is 0.1 or less, the applicant gets the maximum unconditionally."
+      "id": "m17c2",
+      "tier": "work",
+      "title": {
+        "bn": "সেটব্যাক: কতটা ফাঁকা রাখতেই হবে",
+        "en": "Setbacks: what has to stay open"
+      },
+      "body": {
+        "bn": "বিধিমালার সারণি-১ ভবনের তলা অনুযায়ী ন্যূনতম সেটব্যাক ঠিক করে দিয়েছে। ৭ তলা পর্যন্ত ভবনে সীমানা রেখা থেকে পাশে ১.০০ মিটার আর পিছনে ১.২৫ মিটার; ৮ থেকে ১০ তলায় পাশে ১.২৫ আর পিছনে ২.০০; ১১ থেকে ১৫ তলায় দুই দিকেই ৩.০০ মিটার। এর সঙ্গে একই প্লটে একাধিক ভবন থাকলে তাদের মধ্যেও ন্যূনতম দূরত্ব রাখতে হয় — ৭ তলা পর্যন্ত ২.০০ মিটার, ১১ থেকে ১৫ তলায় ৫.০০ মিটার।",
+        "en": "Table 1 of the Bidhimala sets the minimum setbacks by the number of storeys. Up to 7 storeys: 1.00 metre at the side and 1.25 at the rear, measured from the boundary line. From 8 to 10 storeys: 1.25 at the side and 2.00 at the rear. From 11 to 15: 3.00 metres both. Where a plot carries more than one building there is also a minimum distance between them — 2.00 metres up to 7 storeys, and 5.00 metres from 11 to 15."
+      },
+      "watch_for": [
+        {
+          "bn": "সেটব্যাক মাপা হয় সীমানা রেখা থেকে, দেয়ালের বাইরের দিক থেকে নয়।",
+          "en": "Setbacks are measured from the boundary line, not from the face of a wall."
+        },
+        {
+          "bn": "সামনের সেটব্যাক আলাদা বিধিতে — রাস্তা আর ব্যবহারভেদে বদলায়।",
+          "en": "The front setback sits in a different rule and changes with the road and the use."
+        },
+        {
+          "bn": "এগুলো ন্যূনতম। বাণিজ্যিক, শিক্ষা, স্বাস্থ্য বা গুদামের মতো ব্যবহারে মহাপরিকল্পনা অনুযায়ী বাড়তি সেটব্যাক লাগতে পারে।",
+          "en": "These are minimums. Commercial, educational, health or godown uses can need more under the master plan."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "ঢাকা মহানগর ইমারত বিধিমালা, ২০২৫ — এস.আর.ও. নং ৪৬৯-আইন/২০২৫, বাংলাদেশ গেজেট অতিরিক্ত, ১৪ ডিসেম্বর ২০২৫",
+            "en": "Dhaka Mohanagar Imarat Bidhimala 2025 — S.R.O. 469-Ain/2025, Bangladesh Gazette extraordinary, 14 December 2025"
+          },
+          "clause": {
+            "bn": "সারণি-১ — ইমারতের ন্যূনতম সেটব্যাক",
+            "en": "Table 1 — minimum setbacks"
+          },
+          "status": "verified"
+        }
+      ],
+      "diagram": "plot_faces"
     },
     {
-     "bn": "প্লটের ব্যবহার বদলালে দুই ব্যবহারের FAR-এর মধ্যে ছোটটি প্রযোজ্য, আর ট্রাফিক ইমপ্যাক্ট অ্যাসেসমেন্ট লাগে।",
-     "en": "If the use of a plot changes, the smaller of the two FARs applies and a Traffic Impact Assessment is required."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "ঢাকা মহানগর ইমারত বিধিমালা, ২০২৫ — এস.আর.ও. নং ৪৬৯-আইন/২০২৫, বাংলাদেশ গেজেট অতিরিক্ত, ১৪ ডিসেম্বর ২০২৫",
-      "en": "Dhaka Mohanagar Imarat Bidhimala 2025 — S.R.O. 469-Ain/2025, Bangladesh Gazette extraordinary, 14 December 2025"
-     },
-     "clause": {
-      "bn": "রাস্তা ও FAR সংক্রান্ত উপ-বিধি (৭)–(১৫)",
-      "en": "Sub-rules (7) to (15) on roads and FAR"
-     },
-     "status": "verified"
-    }
-   ]
-  },
-  {
-   "id": "m17c4",
-   "tier": "general",
-   "title": {
-    "bn": "অনুমোদনপত্রে কী লেখা থাকে",
-    "en": "What the permit itself says"
-   },
-   "body": {
-    "bn": "পরিকল্পনা অনুমোদনপত্রে মহাপরিকল্পনা অনুযায়ী প্রস্তাবিত প্লটের বিবেচ্য আবাসিক ইউনিট এবং FAR সূচক উল্লেখ থাকে। অর্থাৎ কাগজটাই বলে দেয় কতটা তোলার অনুমতি আপনি পেয়েছেন — এটা মুখের কথা বা ঠিকাদারের আশ্বাসের বিষয় নয়। অনুমোদনপত্র আর অনুমোদিত নকশা দুটোই নিজের কাছে রাখুন, আর কাজের সময় সাইটে যে নকশা ঝুলছে সেটার সঙ্গে মিলিয়ে দেখুন।",
-    "en": "A planning permit states the residential units and the FAR index considered for the plot under the master plan. The paper itself says how much you were given permission to build — it is not a matter of what anyone said. Keep both the permit and the approved drawing, and check them against whatever drawing is hanging on site while the work runs."
-   },
-   "watch_for": [
-    {
-     "bn": "অনুমোদনপত্রের FAR আর নকশার মেঝে-ক্ষেত্র মিলছে কি না — এটা নিজেই মিলিয়ে দেখা যায়।",
-     "en": "Whether the FAR on the permit and the floor area on the drawing agree. That is checkable by hand."
+      "id": "m17c3",
+      "tier": "work",
+      "title": {
+        "bn": "রাস্তাই ঠিক করে কতটা তুলতে পারবেন",
+        "en": "The road decides how much you can build"
+      },
+      "body": {
+        "bn": "প্লটের সামনের রাস্তার প্রশস্ততা সরাসরি FAR ঠিক করে, অর্থাৎ জমির তুলনায় কত মেঝে-ক্ষেত্র তোলা যাবে। বিধিমালা বলছে, ২.৫ মিটার বা তার বেশি কিন্তু ৬ মিটারের কম চওড়া রাস্তা-সংলগ্ন প্লটের ক্ষেত্রে রাস্তা ৬ মিটার পর্যন্ত প্রশস্ত করতে হবে। প্রশস্তকরণের প্রস্তাব থাকলে বিদ্যমান আর প্রস্তাবিত রাস্তার FAR-এর গড়টাই ধরা হয়। আর প্লটে একাধিক রাস্তা থাকলে সবচেয়ে চওড়া রাস্তার বিদ্যমান প্রশস্ততা বিবেচনা করা হয়।",
+        "en": "The width of the road a plot faces sets its FAR directly — how much floor area may be built against the size of the land. The Bidhimala requires that where a plot fronts a road 2.5 metres or wider but under 6 metres, the road must be widened to 6 metres. Where a widening is proposed, the FAR used is the average of the existing-road and proposed-road figures. Where a plot has more than one road, the existing width of the widest is what counts."
+      },
+      "watch_for": [
+        {
+          "bn": "রাস্তা প্রশস্ত করতে দুই পাশের প্লট থেকে অর্ধেক করে জমি ছাড়তে হয়, আর সেটা ইজমেন্ট দলিলে স্থানীয় সরকারকে দিতে হয়।",
+          "en": "Widening takes half the needed land from the plots on each side, transferred to local government by easement deed."
+        },
+        {
+          "bn": "ভিত্তি FAR আর সর্বোচ্চ FAR-এর পার্থক্য ০.১ বা তার কম হলে আবেদনকারী শর্তহীনভাবে সর্বোচ্চ FAR পাবেন।",
+          "en": "Where the difference between base FAR and maximum FAR is 0.1 or less, the applicant gets the maximum unconditionally."
+        },
+        {
+          "bn": "প্লটের ব্যবহার বদলালে দুই ব্যবহারের FAR-এর মধ্যে ছোটটি প্রযোজ্য, আর ট্রাফিক ইমপ্যাক্ট অ্যাসেসমেন্ট লাগে।",
+          "en": "If the use of a plot changes, the smaller of the two FARs applies and a Traffic Impact Assessment is required."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "ঢাকা মহানগর ইমারত বিধিমালা, ২০২৫ — এস.আর.ও. নং ৪৬৯-আইন/২০২৫, বাংলাদেশ গেজেট অতিরিক্ত, ১৪ ডিসেম্বর ২০২৫",
+            "en": "Dhaka Mohanagar Imarat Bidhimala 2025 — S.R.O. 469-Ain/2025, Bangladesh Gazette extraordinary, 14 December 2025"
+          },
+          "clause": {
+            "bn": "রাস্তা ও FAR সংক্রান্ত উপ-বিধি (৭)–(১৫)",
+            "en": "Sub-rules (7) to (15) on roads and FAR"
+          },
+          "status": "verified"
+        }
+      ]
     },
     {
-     "bn": "অনুমোদনের বাইরে তোলা অংশ পরে নিয়মিত করানোর ভরসায় থাকবেন না।",
-     "en": "Do not build beyond the permit on the assumption it can be regularised later."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "ঢাকা মহানগর ইমারত বিধিমালা, ২০২৫ — এস.আর.ও. নং ৪৬৯-আইন/২০২৫, বাংলাদেশ গেজেট অতিরিক্ত, ১৪ ডিসেম্বর ২০২৫",
-      "en": "Dhaka Mohanagar Imarat Bidhimala 2025 — S.R.O. 469-Ain/2025, Bangladesh Gazette extraordinary, 14 December 2025"
-     },
-     "clause": {
-      "bn": "উপ-বিধি (১৫)",
-      "en": "Sub-rule (15)"
-     },
-     "status": "verified"
-    }
-   ]
-  },
-  {
-   "id": "m17c5",
-   "tier": "general",
-   "title": {
-    "bn": "এই অ্যাপ যা বলতে পারে না",
-    "en": "What this app cannot tell you"
-   },
-   "body": {
-    "bn": "সেটব্যাকের সারণি আর রাস্তার নিয়ম এখানে দেওয়া গেল, কারণ ওগুলো সরাসরি ছাপা আছে। কিন্তু আপনার প্লটে ঠিক কত FAR পাবেন, সেটা এখান থেকে বলা যায় না — ওটা নির্ভর করে মহাপরিকল্পনায় আপনার জমি কোন অঞ্চলে, রাস্তা কত চওড়া, জমির ব্যবহার কী, আর বিশদ অঞ্চল পরিকল্পনায় ঐ ব্লকের জন্য কী নির্ধারিত আছে তার উপর। এই হিসাবটা স্থপতি বা নগর পরিকল্পনাবিদের কাজ, আর চূড়ান্ত উত্তর কর্তৃপক্ষের।",
-    "en": "The setback table and the road rules are here because they are printed plainly. What FAR your particular plot gets is not something this app can say: it depends on which zone the land falls in under the master plan, how wide the road is, what the use is, and what the detailed area plan sets for that block. That calculation is an architect's or a planner's work, and the final answer is the authority's."
-   },
-   "watch_for": [
-    {
-     "bn": "কেউ ফোনে FAR বলে দিলে সেটা যাচাই করুন — প্লট ধরে হিসাব না করে বলা সংখ্যা আন্দাজ।",
-     "en": "A FAR quoted over the phone is a guess unless it was worked from your plot."
+      "id": "m17c4",
+      "tier": "general",
+      "title": {
+        "bn": "অনুমোদনপত্রে কী লেখা থাকে",
+        "en": "What the permit itself says"
+      },
+      "body": {
+        "bn": "পরিকল্পনা অনুমোদনপত্রে মহাপরিকল্পনা অনুযায়ী প্রস্তাবিত প্লটের বিবেচ্য আবাসিক ইউনিট এবং FAR সূচক উল্লেখ থাকে। অর্থাৎ কাগজটাই বলে দেয় কতটা তোলার অনুমতি আপনি পেয়েছেন — এটা মুখের কথা বা ঠিকাদারের আশ্বাসের বিষয় নয়। অনুমোদনপত্র আর অনুমোদিত নকশা দুটোই নিজের কাছে রাখুন, আর কাজের সময় সাইটে যে নকশা ঝুলছে সেটার সঙ্গে মিলিয়ে দেখুন।",
+        "en": "A planning permit states the residential units and the FAR index considered for the plot under the master plan. The paper itself says how much you were given permission to build — it is not a matter of what anyone said. Keep both the permit and the approved drawing, and check them against whatever drawing is hanging on site while the work runs."
+      },
+      "watch_for": [
+        {
+          "bn": "অনুমোদনপত্রের FAR আর নকশার মেঝে-ক্ষেত্র মিলছে কি না — এটা নিজেই মিলিয়ে দেখা যায়।",
+          "en": "Whether the FAR on the permit and the floor area on the drawing agree. That is checkable by hand."
+        },
+        {
+          "bn": "অনুমোদনের বাইরে তোলা অংশ পরে নিয়মিত করানোর ভরসায় থাকবেন না।",
+          "en": "Do not build beyond the permit on the assumption it can be regularised later."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "ঢাকা মহানগর ইমারত বিধিমালা, ২০২৫ — এস.আর.ও. নং ৪৬৯-আইন/২০২৫, বাংলাদেশ গেজেট অতিরিক্ত, ১৪ ডিসেম্বর ২০২৫",
+            "en": "Dhaka Mohanagar Imarat Bidhimala 2025 — S.R.O. 469-Ain/2025, Bangladesh Gazette extraordinary, 14 December 2025"
+          },
+          "clause": {
+            "bn": "উপ-বিধি (১৫)",
+            "en": "Sub-rule (15)"
+          },
+          "status": "verified"
+        }
+      ]
     },
     {
-     "bn": "বিধিমালার পুরো বইটি রাজউকের ওয়েবসাইটে আছে; সংখ্যাগুলো ওখান থেকেই মেলানো ভালো।",
-     "en": "The full rules are on RAJUK's website, and that is where a figure is best checked."
+      "id": "m17c5",
+      "tier": "general",
+      "title": {
+        "bn": "FAR: অ্যাপ যতটা বলতে পারে, আর যতটা পারে না",
+        "en": "FAR: what the app can tell you, and what it cannot"
+      },
+      "body": {
+        "bn": "সেটব্যাকের সারণি আর রাস্তার নিয়ম এখানে দেওয়া গেল, কারণ ওগুলো সরাসরি ছাপা আছে। এই অ্যাপের \"জমিতে কতটুকু করা যাবে\" পর্দা সারণি-৫ থেকে আপনার প্লটের FAR-এর সর্বোচ্চ সীমাটা পড়ে দেয় — সামনের রাস্তার মাপ আর ব্যবহারের ধরন দিলে। কিন্তু ওটা ছাদ, অনুমোদন নয়। চূড়ান্তে কত পাবেন তা নির্ভর করে মহাপরিকল্পনায় আপনার জমি কোন অঞ্চলে, রাস্তা কত চওড়া, জমির ব্যবহার কী, আর বিশদ অঞ্চল পরিকল্পনায় ঐ ব্লকের জন্য কী নির্ধারিত আছে তার উপর। এই হিসাবটা স্থপতি বা নগর পরিকল্পনাবিদের কাজ, আর চূড়ান্ত উত্তর কর্তৃপক্ষের।",
+        "en": "The setback table and the road rules are here because they are printed plainly. The app's \"What the plot allows\" screen reads the FAR ceiling for your plot straight off Table 5, once you give it the road width in front and the use. That is a ceiling, not an approval. What you finally get depends on which zone the land falls in under the master plan, how wide the road is, what the use is, and what the detailed area plan sets for that block. That calculation is an architect's or a planner's work, and the final answer is the authority's."
+      },
+      "watch_for": [
+        {
+          "bn": "কেউ ফোনে FAR বলে দিলে সেটা যাচাই করুন — প্লট ধরে হিসাব না করে বলা সংখ্যা আন্দাজ।",
+          "en": "A FAR quoted over the phone is a guess unless it was worked from your plot."
+        },
+        {
+          "bn": "বিধিমালার পুরো বইটি রাজউকের ওয়েবসাইটে আছে; সংখ্যাগুলো ওখান থেকেই মেলানো ভালো।",
+          "en": "The full rules are on RAJUK's website, and that is where a figure is best checked."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "ঢাকা মহানগর ইমারত বিধিমালা, ২০২৫ — এস.আর.ও. নং ৪৬৯-আইন/২০২৫, বাংলাদেশ গেজেট অতিরিক্ত, ১৪ ডিসেম্বর ২০২৫",
+            "en": "Dhaka Mohanagar Imarat Bidhimala 2025 — S.R.O. 469-Ain/2025, Bangladesh Gazette extraordinary, 14 December 2025"
+          },
+          "clause": {
+            "bn": "বিধিমালার প্রয়োগ ও কর্তৃপক্ষের এখতিয়ার",
+            "en": "Application of the rules and the authority's jurisdiction"
+          },
+          "status": "verified"
+        }
+      ]
     }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "ঢাকা মহানগর ইমারত বিধিমালা, ২০২৫ — এস.আর.ও. নং ৪৬৯-আইন/২০২৫, বাংলাদেশ গেজেট অতিরিক্ত, ১৪ ডিসেম্বর ২০২৫",
-      "en": "Dhaka Mohanagar Imarat Bidhimala 2025 — S.R.O. 469-Ain/2025, Bangladesh Gazette extraordinary, 14 December 2025"
-     },
-     "clause": {
-      "bn": "বিধিমালার প্রয়োগ ও কর্তৃপক্ষের এখতিয়ার",
-      "en": "Application of the rules and the authority's jurisdiction"
-     },
-     "status": "verified"
-    }
-   ]
-  }
- ]
+  ]
 }
