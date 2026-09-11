@@ -188,6 +188,20 @@ class BrickBondPainter extends CustomPainter {
       // English alternates whole courses; Flemish alternates within a course.
       final headerCourse = english && c.isOdd;
       var useHeader = !english && c.isEven;
+
+      // The queen closer. Without it the header course starts flush with the
+      // stretcher course, every fourth joint lines up with the one above, and
+      // the drawing shows a straight vertical joint running down the wall —
+      // the exact fault this diagram is here to warn against. A real English
+      // bond opens the header course with a half-header so the joints break.
+      if (headerCourse) {
+        final closer = header / 2;
+        final r = Rect.fromLTWH(x, y + 1, closer - 1, ch - 2);
+        canvas.drawRect(r, headerFace);
+        canvas.drawRect(r, joint);
+        x += closer;
+      }
+
       while (x < area.right - 0.5) {
         final isHeader = headerCourse || (!english && useHeader);
         final bw = isHeader ? header : stretcher;

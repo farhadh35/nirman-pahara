@@ -8,7 +8,17 @@ import 'services_diagrams.dart';
 import 'site_diagrams.dart';
 import 'structure_diagrams.dart';
 
-/// Column reinforcement: main bars, stirrups with inward hooks, cover blocks,
+/// Column reinforcement: main bars, stirrup spacing, cover blocks,
+///
+/// Not the hook direction. This comment used to say "stirrups with inward
+/// hooks", and card m5c4 tells the reader that the hook is the easiest thing
+/// to check - "hooks turned outwards, or missing, let the ring open in an
+/// earthquake". Neither was ever drawn, because a tie seen from the side is a
+/// straight line and its ends are hidden behind the bars; the hook is only
+/// visible looking down at the cage. A plan inset was tried here and crowded
+/// the elevation badly, so the honest position is that this diagram shows
+/// spacing and the card carries the hook in words. A separate plan diagram is
+/// the fix, not a corner of this one.
 /// and the fact that stirrups close up near the ends.
 class RodBindingPainter extends CustomPainter {
   RodBindingPainter({required this.palette, required this.bn});

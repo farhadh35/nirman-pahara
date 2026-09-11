@@ -273,6 +273,12 @@ class SlabRebarPainter extends CustomPainter {
 /// front of them rather than look up. Drawn with the bend and the straight tail
 /// separated, because "12d" means the tail, and a hook bent short is the common
 /// way of saving steel that nobody notices.
+///
+/// The bend is ninety degrees, and that is not a drawing choice. 12d is the
+/// extension a *90 degree* hook takes; a 180 degree hook takes 4d, with a
+/// 65 mm floor. This diagram used to sweep a full half-circle while labelling
+/// the tail 12d — one hook's geometry wearing the other hook's rule — which is
+/// exactly the sort of thing a reader would copy on site.
 class StandardHookPainter extends CustomPainter {
   StandardHookPainter({required this.palette, required this.bn});
 
@@ -290,41 +296,46 @@ class StandardHookPainter extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round;
 
-    final y = h * 0.54;
+    final y = h * 0.62;
     final startX = w * 0.10;
-    final bendX = w * 0.62;
-    final radius = h * 0.13;
+    final bendX = w * 0.66;
+    final radius = h * 0.10;
 
-    // The straight run, then a 180 degree bend, then the tail that is measured.
-    canvas.drawLine(Offset(startX, y), Offset(bendX, y), bar);
+    // The straight run, a quarter-turn, then the tail that is measured.
+    canvas.drawLine(Offset(startX, y), Offset(bendX - radius, y), bar);
     final arc = Rect.fromCircle(
-        center: Offset(bendX, y - radius), radius: radius);
-    canvas.drawArc(arc, 1.5708, -3.1416, false, bar);
-    final tailY = y - radius * 2;
-    final tailEnd = bendX - w * 0.22;
-    canvas.drawLine(Offset(bendX, tailY), Offset(tailEnd, tailY), bar);
+        center: Offset(bendX - radius, y - radius), radius: radius);
+    canvas.drawArc(arc, 1.5708, -1.5708, false, bar);
+    final tailTop = y - radius - h * 0.30;
+    canvas.drawLine(Offset(bendX, y - radius), Offset(bendX, tailTop), bar);
 
+    // Measured along the tail, which is what 12d refers to.
     paintDimension(
       canvas,
-      Offset(tailEnd, tailY - h * 0.14),
-      Offset(bendX, tailY - h * 0.14),
+      Offset(bendX + w * 0.10, tailTop),
+      Offset(bendX + w * 0.10, y - radius),
       bn ? '১২ × ব্যাস' : '12 × diameter',
       palette.accent,
     );
 
-    paintLeader(canvas, Offset(w * 0.16, y + h * 0.20),
+    // Kept clear of the caption below. Moving the bar down to make room for the
+    // upright tail put this label straight on top of it.
+    paintLeader(canvas, Offset(w * 0.16, y + h * 0.08),
         Offset(startX + w * 0.16, y), palette.muted);
     paintLabel(canvas, bn ? 'রডের মূল অংশ' : 'the bar itself',
-        Offset(w * 0.06, y + h * 0.22),
+        Offset(w * 0.06, y + h * 0.10),
         colour: palette.muted, size: 9.5, maxWidth: w * 0.34);
 
     paintLabel(
       canvas,
       bn
           ? '১২ গুণ মানে রডের ব্যাসের ১২ গুণ — ১০ মিমি রডে ১২০ মিমি। '
-              'বাঁকের পরের সোজা অংশটাই মাপা হয়।'
+              'বাঁকের পরের সোজা অংশটাই মাপা হয়। এটা ৯০ ডিগ্রি হুকের নিয়ম; '
+              '১৮০ ডিগ্রি হুক হলে লেজ ৪ গুণ, সর্বনিম্ন ৬৫ মিমি।'
           : 'Twelve times the bar diameter: 120 mm on a 10 mm bar. What is '
-              'measured is the straight tail after the bend.',
+              'measured is the straight tail after the bend. That is the rule '
+              'for a 90 degree hook; a 180 degree hook takes 4 diameters, '
+              'minimum 65 mm.',
       Offset(w * 0.06, h * 0.84),
       colour: palette.muted,
       size: 9.5,
