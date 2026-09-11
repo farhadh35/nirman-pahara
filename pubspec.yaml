@@ -21,6 +21,14 @@ dependencies:
   excel: ^4.0.6
   archive: ^3.6.1
   xml: ^6.6.1
+  # Play's own update check. The app makes no network call of its own for this:
+  # Play services does the lookup and reports back, so nothing is collected and
+  # the offline promise in the listing stays true - with no connection the
+  # check simply fails and the app carries on.
+  in_app_update: ^5.0.0
+  # Opens the store page when the Play check is unavailable, which is every
+  # sideloaded copy.
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   # Lets test/boq_import_flow_test.dart stand in for the file picker, so the

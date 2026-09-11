@@ -17,6 +17,7 @@ import '../../reference/ui/reference_screen.dart';
 import '../../rights/ui/rights_screen.dart';
 import '../../settings/ui/settings_screen.dart';
 import '../../sources/ui/not_government_notice.dart';
+import '../../update/ui/update_prompt.dart';
 
 /// Five doors, deliberately large. Nothing else competes for attention.
 class HomeScreen extends StatelessWidget {
@@ -49,6 +50,8 @@ class HomeScreen extends StatelessWidget {
           // government work — has to meet this before anything else.
           const NotGovernmentNotice(),
           const SizedBox(height: 12),
+          // Draws nothing unless Play has confirmed a newer version exists.
+          const UpdatePrompt(),
           const _TrackChips(),
           const SizedBox(height: 20),
           _Door(
