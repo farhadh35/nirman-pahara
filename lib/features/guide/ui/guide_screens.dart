@@ -6,6 +6,7 @@ import '../../../app/widgets/common.dart';
 import '../../../core/content/models.dart';
 import '../../../core/i18n/strings.dart';
 import '../../sources/ui/sources_screen.dart';
+import '../../directory/ui/directory_screen.dart';
 import '../../sources/ui/not_government_notice.dart';
 import '../../../core/util/bn.dart';
 import '../diagrams/guide_diagrams.dart';
@@ -60,6 +61,26 @@ class GuideScreen extends StatelessWidget {
                 const SizedBox(height: 12),
               ],
               const SizedBox(height: 8),
+              // Signposted rather than silently absent: a reader who has just
+              // been told to commission a soil test reasonably wonders where
+              // the app's list of firms is. It says why there isn't one.
+              Card(
+                child: ListTile(
+                  leading: const Icon(Icons.apartment_outlined),
+                  title: Text(context.locale.isBangla
+                      ? 'প্রতিষ্ঠানের তালিকা'
+                      : 'Directory of firms'),
+                  subtitle: Text(context.locale.isBangla
+                      ? 'মাটি পরীক্ষা, আর্কিটেক্ট — এখনো আসেনি, কেন তা লেখা আছে'
+                      : 'Soil test, architects — not here yet, and why'),
+                  trailing: const Icon(Icons.chevron_right),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                        builder: (_) => const DirectoryScreen()),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 12),
               // One link, at the end. The source used to hang off every card,
               // which put a reference affordance in front of someone who came
               // here to read.
