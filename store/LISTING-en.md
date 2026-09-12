@@ -17,7 +17,7 @@ Not a government app. Check civil works: measures, rate schedules, calculators.
 
 ## Full description
 
-<!-- Verbatim from store/play-description-en.txt — 3805 of 4000.
+<!-- Verbatim from store/play-description-en.txt — 3806 of 4000.
      Paste that file, not this section.
 
      Third rejection, 8 Sept 2026: "Broken or Inaccessible Source Link". Six of
@@ -31,7 +31,7 @@ NOT A GOVERNMENT APP — Nirman Pahara is independent. It is NOT a government bo
 The road through your area sank in one monsoon, and on paper the work is finished. You do not need to be an engineer to understand why. You need to know what to look at, and where. Nirman Pahara teaches exactly that — on civil works and on your own house — in Bangla and English, with no internet.
 
 Learn — in plain language, without the jargon
-How to measure, how to tell good cement, steel, brick and sand from bad, why curing decides the strength, what tied reinforcement should look like. 21 chapters, 97 cards, with labelled diagrams drawn in the app itself.
+How to measure, how to tell good cement, steel, brick and sand from bad, why curing decides the strength, what tied reinforcement should look like. 22 chapters, 102 cards, with labelled diagrams drawn in the app itself.
 
 Inspect — stage by stage, ending in a report
 Separate checklists for rural roads, buildings, food godowns, repair works and electrical work. Every question says why it matters and how to check it without instruments. Photographs carry their time and place, and the run ends in a PDF report.

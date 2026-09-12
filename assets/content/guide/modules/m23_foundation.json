@@ -1,0 +1,193 @@
+{
+  "id": "m23_foundation",
+  "code": "M23",
+  "track": "both",
+  "icon": "foundation",
+  "title": {
+    "bn": "ফাউন্ডেশন — যেটুকু মালিকের জানা দরকার",
+    "en": "Foundations, for the person paying for one"
+  },
+  "summary": {
+    "bn": "ফাউন্ডেশন কী করে, কেন ব্যর্থ হয়, কীসের উপর গভীরতা নির্ভর করে, কোন ফুটিং কখন, আর ঢালাইয়ের কোন ধাপগুলো আর ফেরানো যায় না।",
+    "en": "What a foundation does, why they fail, what decides the depth, which footing suits which situation, and which steps of the pour cannot be revisited."
+  },
+  "cards": [
+    {
+      "id": "m23c1",
+      "tier": "general",
+      "title": {
+        "bn": "ফাউন্ডেশন আসলে কী করছে",
+        "en": "What a foundation is actually doing"
+      },
+      "body": {
+        "bn": "ভবনের সমস্ত ওজন শেষ পর্যন্ত মাটিতে গিয়ে দাঁড়ায়। মাটি সেই ওজন নিতে পারে, কিন্তু একটি নির্দিষ্ট সীমা পর্যন্ত — প্রতি বর্গফুটে কতটুকু, সেটাই মাটির ভারবহন ক্ষমতা। ফাউন্ডেশনের কাজ ওজনটাকে এত চওড়া জায়গায় ছড়িয়ে দেওয়া যাতে প্রতি বর্গফুটে পড়া চাপ ঐ সীমার নিচে থাকে।\n\nদ্বিতীয় কাজ কাঠামোটিকে স্থির রাখা — বাতাস বা ভূমিকম্পে যেন সেটি কাত হয়ে না পড়ে।\n\nতৃতীয়টি সবচেয়ে কম বোঝা যায়: ভবন বসবে, এটাই স্বাভাবিক। সমস্যা বসাটা নয়, অসমান বসা। পুরো ভবন সমানভাবে এক ইঞ্চি নামলে কেউ টেরও পায় না; এক কোণ আধা ইঞ্চি বেশি নামলে দেয়াল ফাটে। ভালো ফাউন্ডেশন বসা ঠেকায় না, বসাটাকে সমান রাখে।",
+        "en": "The whole weight of a building ends up standing on soil. Soil can carry weight, but only up to a limit — how much per square foot is its bearing capacity. A foundation's job is to spread the load over an area wide enough that the pressure at any point stays under that limit.\n\nIts second job is to keep the structure stable, so that wind or an earthquake does not tip it.\n\nThe third is the least understood: buildings settle, and that is normal. The problem is not settlement but uneven settlement. A building that sinks an inch uniformly goes unnoticed; a corner that sinks half an inch more than the rest cracks the walls above it. A good foundation does not prevent settlement — it keeps it even."
+      },
+      "watch_for": [
+        {
+          "bn": "ভারবহন ক্ষমতা জানা যায় মাটি পরীক্ষায় — অনুমানে নয়।",
+          "en": "Bearing capacity comes from the soil test, not from an assumption."
+        },
+        {
+          "bn": "দেয়ালের ফাটল প্রায়ই ফাউন্ডেশনের খবর দেয়, দেয়ালের নয়।",
+          "en": "A crack in a wall is often reporting on the foundation, not the wall."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), অতিরিক্ত অধ্যায়-১ ও ২",
+            "en": "Bari Nirman o Site Supervision (2019), supplementary chapters 1 and 2"
+          },
+          "clause": {
+            "bn": "ফাউন্ডেশনের উদ্দেশ্য",
+            "en": "Object of foundation"
+          },
+          "status": "review"
+        }
+      ]
+    },
+    {
+      "id": "m23c2",
+      "tier": "general",
+      "title": {
+        "bn": "ফাউন্ডেশন কেন ব্যর্থ হয়",
+        "en": "Why foundations fail"
+      },
+      "body": {
+        "bn": "ব্যর্থতার কারণগুলো নাম ধরে চিহ্নিত করা যায়, এবং প্রায় সবগুলোই দুই ধরনের।\n\n**মাটি অসমানভাবে নড়ে।** নিচের সাব-সয়েল একেক জায়গায় একেক রকম বসে; গাঁথুনি নিজেও অসমানভাবে বসতে পারে; পাশের জমির মাটি আনুভূমিকভাবে সরে গেলে টান পড়ে; আর সাব-সয়েল থেকে পানি টেনে নেওয়া হলে — গভীর নলকূপ, পাশের গর্ত, শুকনো মৌসুম — মাটি সংকুচিত হয়ে বসে যায়।\n\n**উপরের কাঠামো পাশ থেকে চাপ দেয়।** সুপার-স্ট্রাকচারের পার্শ্বচাপ ফাউন্ডেশনকে কেবল নিচে নয়, পাশেও ঠেলে।\n\nএর ব্যবহারিক অর্থ: ফাউন্ডেশনের সমস্যা প্রায়ই ফাউন্ডেশনের দোষে হয় না। পাশের প্লটে গভীর খনন, নতুন নলকূপ, কিংবা লাগোয়া জমিতে ভারী নির্মাণ — এসবও আপনার ভবনের নিচের অবস্থা বদলে দিতে পারে অনেক পরে।",
+        "en": "The causes have names, and nearly all of them fall into two kinds.\n\n**The ground moves unevenly.** The sub-soil settles by different amounts in different places; the masonry itself can settle unevenly; soil in the adjoining plot can move sideways and drag; and moisture withdrawn from the sub-soil — a deep tubewell, an excavation next door, a dry season — lets it shrink and drop.\n\n**The structure above pushes sideways.** Lateral pressure from the super-structure loads the foundation across as well as down.\n\nThe practical consequence: foundation trouble frequently is not the foundation's fault. Deep excavation on the neighbouring plot, a new tubewell, or heavy construction next door can change the conditions under your building long after yours is finished."
+      },
+      "watch_for": [
+        {
+          "bn": "পাশের প্লটে গভীর খনন শুরু হলে নিজের দেয়ালে নজর রাখুন।",
+          "en": "When deep excavation starts next door, watch your own walls."
+        },
+        {
+          "bn": "নতুন ফাটল দেখলে তারিখসহ ছবি তুলুন — বাড়ছে কি না সেটাই আসল প্রশ্ন।",
+          "en": "Photograph a new crack with the date. Whether it is widening is the question."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), অতিরিক্ত অধ্যায়-১ ও ২",
+            "en": "Bari Nirman o Site Supervision (2019), supplementary chapters 1 and 2"
+          },
+          "clause": {
+            "bn": "ফাউন্ডেশন বিপর্যয়ের কারণসমূহ",
+            "en": "Causes of failure of foundation"
+          },
+          "status": "review"
+        }
+      ]
+    },
+    {
+      "id": "m23c3",
+      "tier": "general",
+      "title": {
+        "bn": "অগভীর না গভীর, আর কতটা গভীর",
+        "en": "Shallow or deep, and how deep"
+      },
+      "body": {
+        "bn": "ফাউন্ডেশন দুই শ্রেণিতে ভাগ করা হয়। অগভীর ফাউন্ডেশন ভবনের ওজন মাটির তুলনামূলক কাছের স্তরে পৌঁছে দেয় — সাধারণ বাড়ির বেশিরভাগ এই শ্রেণিরই। গভীর ফাউন্ডেশন ওজনকে আরও নিচের শক্ত স্তরে নিয়ে যায়, যখন উপরের মাটি ভরসাযোগ্য নয়।\n\nগভীরতা তিনটি জিনিসের উপর নির্ভর করে, এবং তিনটিই সাইট-নির্দিষ্ট: কাঠামোর ওজন, মাটির অবস্থা, আর সাইটের চারপাশের অবস্থা — পাশে কী আছে, কতটা কাছে।\n\nএই সিদ্ধান্তটি মাটি পরীক্ষার রিপোর্ট দেখে প্রকৌশলী নেন। ঠিকাদারের \"এই এলাকায় আমরা সবসময় এতটা দিই\" যুক্তি হিসেবে যথেষ্ট নয় — একই মহল্লায় দুই প্লটের মাটি আলাদা হতে পারে, বিশেষত ভরাট করা জমিতে।",
+        "en": "Foundations divide into two classes. A shallow foundation delivers the load to soil relatively near the surface — most ordinary houses sit on one. A deep foundation carries the load down to a firmer stratum, used when the soil nearer the surface cannot be relied on.\n\nThe depth depends on three things, all of them specific to the site: the load of the structure, the condition of the soil, and the surroundings — what is adjacent, and how close.\n\nThat decision belongs to an engineer reading the soil report. A contractor's \"we always go this deep around here\" is not a reason. Two plots in one neighbourhood can differ, particularly on filled land."
+      },
+      "watch_for": [
+        {
+          "bn": "গভীরতা বদলালে জিজ্ঞেস করুন রিপোর্টের কোন অংশ ধরে বদলাল।",
+          "en": "If the depth changes, ask which part of the report changed it."
+        },
+        {
+          "bn": "ভরাট জমিতে পাশের প্লটের অভিজ্ঞতা প্রায়ই কাজে আসে না।",
+          "en": "On filled land the neighbouring plot's experience often does not transfer."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), অতিরিক্ত অধ্যায়-১ ও ২",
+            "en": "Bari Nirman o Site Supervision (2019), supplementary chapters 1 and 2"
+          },
+          "clause": {
+            "bn": "ফাউন্ডেশনের গভীরতা নির্ধারক বিষয়সমূহ",
+            "en": "Factors affecting depth of foundation"
+          },
+          "status": "review"
+        }
+      ]
+    },
+    {
+      "id": "m23c4",
+      "tier": "general",
+      "diagram": "footing_section",
+      "title": {
+        "bn": "কোন ধরনের ফুটিং, কখন",
+        "en": "Which footing, and when"
+      },
+      "body": {
+        "bn": "সাধারণ বাড়িতে প্রতিটি কলামের নিচে আলাদা একটি চওড়া পাদদেশ থাকে — কলাম ফুটিং। এটাই সবচেয়ে প্রচলিত, এবং এটিই ধরে নেওয়া হয় যতক্ষণ না অন্য কিছুর কারণ থাকে।\n\nদুটি কলাম পরস্পরের খুব কাছাকাছি পড়লে তাদের আলাদা ফুটিং ওভারল্যাপ করতে চায়; তখন দুটিকে একটি ফুটিংয়ের উপর বসানো হয় — কম্বাইন্ড ফুটিং। একই সমাধান লাগে যখন কোনো কলাম সীমানার এত কাছে যে তার চারপাশে সমান ফুটিং দেওয়ার জায়গাই নেই।\n\nমাটি যদি সামগ্রিকভাবে দুর্বল হয়, আলাদা ফুটিং যথেষ্ট চওড়া করা যায় না — তখন পুরো ভবনের নিচের জায়গাটাই একটি একক পুরু স্ল্যাব হিসেবে ঢালাই হয়, সব কলাম যার উপরে দাঁড়ায়। একে ম্যাট বা র‍্যাফট ফাউন্ডেশন বলে। এবং যেখানে উপরের মাটি কোনোভাবেই ভরসাযোগ্য নয়, সেখানে পাইল — অর্থাৎ গভীর শক্ত স্তরে ওজন পৌঁছে দেওয়া।\n\nধরনটি বদলালে খরচও বদলায়, তাই এস্টিমেটে যেটা ধরা ছিল আর সাইটে যেটা হচ্ছে — দুটো এক কি না দেখে নিন।",
+        "en": "In an ordinary house each column stands on its own widened base — a column footing. This is the common case, and the one assumed unless something forces otherwise.\n\nWhere two columns fall close together their separate footings would want to overlap; the two are then carried on one — a combined footing. The same answer applies where a column sits so near the boundary that there is no room for an even footing around it.\n\nWhere the soil is weak across the whole site, individual footings cannot be made wide enough. The entire area beneath the building is then cast as a single thick slab with every column standing on it — a mat or raft foundation. And where the upper soil cannot be relied on at all, piles carry the load down to a firm stratum instead.\n\nChanging the type changes the cost, so check that what the estimate assumed and what is being built are still the same thing."
+      },
+      "watch_for": [
+        {
+          "bn": "র‍্যাফট বা পাইলে গেলে এস্টিমেট নতুন করে করাতে হয় — পুরোনোটা আর খাটে না।",
+          "en": "Moving to a raft or piles means a fresh estimate; the old one no longer applies."
+        },
+        {
+          "bn": "সীমানার কাছের কলামের ফুটিং প্রতিবেশীর জমিতে ঢুকে পড়ছে কি না দেখুন।",
+          "en": "Check that a footing near the boundary is not encroaching next door."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), অতিরিক্ত অধ্যায়-১ ও ২",
+            "en": "Bari Nirman o Site Supervision (2019), supplementary chapters 1 and 2"
+          },
+          "clause": {
+            "bn": "অগভীর ও গভীর ফাউন্ডেশনের প্রকারভেদ",
+            "en": "Types of shallow and deep foundation"
+          },
+          "status": "review"
+        }
+      ]
+    },
+    {
+      "id": "m23c5",
+      "tier": "general",
+      "diagram": "excavation",
+      "title": {
+        "bn": "ঢালাইয়ের ধাপ, আর কোনটা আর দেখা যাবে না",
+        "en": "The sequence, and what stops being visible"
+      },
+      "body": {
+        "bn": "ফুটিং তৈরির ধাপগুলো নির্দিষ্ট ক্রমে চলে, এবং মালিকের দিক থেকে সেগুলোকে তিন ভাগে দেখা সবচেয়ে কাজের।\n\n**যা এখনো খোলা।** মাটি কাটা, তলা সমান করা, ব্রিক ফ্ল্যাট সলিং, তার উপর সিমেন্ট কনক্রিটের একটি পাতলা স্তর। এই পর্যায়ে গর্তের গভীরতা আর তলার সমতা নিজের চোখে মেপে দেখা যায়।\n\n**যা ঢালাইয়ের আগে শেষ সুযোগ।** ফর্মওয়ার্ক বাঁধা আর রডের কাজ। রড গোনা, ব্যবধান মাপা আর কভার ব্লক আছে কি না দেখা — এই মুহূর্তের পরে আর সম্ভব নয়। ছবি তোলার সবচেয়ে গুরুত্বপূর্ণ সময় এটাই।\n\n**যা ঢেকে যায়।** কনক্রিট ঢালাই, ফর্মওয়ার্ক খোলা, কিউরিং, তারপর মাটি বা বালি দিয়ে ভরাট। ভরাট হয়ে গেলে নিচের কিছুই আর যাচাইযোগ্য থাকে না — কেবল ছবি আর কাগজ থাকে।\n\nকিউরিং এই তালিকার মধ্যে একমাত্র ধাপ যা দিনের পর দিন চলে, এবং সেজন্যই সবচেয়ে বেশি কাটছাঁট হয়।",
+        "en": "Building a footing runs in a fixed order, and from the owner's side it is most useful seen in three parts.\n\n**Still open.** Excavation, levelling the bottom, brick flat soling, and a thin layer of cement concrete over it. At this stage the depth of the hole and the flatness of the bottom can still be measured by eye and tape.\n\n**The last chance before the pour.** Formwork and the steel. Counting bars, measuring their spacing and confirming the cover blocks are in place is possible now and never again. This is the single most important moment to photograph.\n\n**What gets covered.** The concrete pour, striking the formwork, curing, then backfilling with soil or sand. Once the backfill is in, nothing below it can be verified — only the photographs and the paperwork remain.\n\nCuring is the one step here that runs over days rather than hours, which is exactly why it is the one most often cut short."
+      },
+      "watch_for": [
+        {
+          "bn": "রড ঢাকা পড়ার আগের ছবিটাই পরে একমাত্র প্রমাণ।",
+          "en": "The photograph taken before the steel is covered is later the only evidence."
+        },
+        {
+          "bn": "ভরাটের আগে গভীরতা আরেকবার মেপে নিন — নকশার সঙ্গে মেলে কি না।",
+          "en": "Measure the depth once more before backfilling, against the drawing."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), অতিরিক্ত অধ্যায়-১ ও ২",
+            "en": "Bari Nirman o Site Supervision (2019), supplementary chapters 1 and 2"
+          },
+          "clause": {
+            "bn": "কলাম ফুটিং নির্মাণের ধাপসমূহ",
+            "en": "Steps of construction of column footing"
+          },
+          "status": "review"
+        }
+      ]
+    }
+  ]
+}

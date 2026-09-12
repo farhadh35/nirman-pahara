@@ -1,5 +1,5 @@
 {
-  "content_version": 6,
+  "content_version": 7,
   "updated": "2026-09-02",
   "modules": [
     "m0_basics.json",
@@ -22,6 +22,7 @@
     "m22_maintenance.json",
     "m19_cost.json",
     "m20_earthquake.json",
+    "m23_foundation.json",
     "r1_foundations.json"
   ]
 }
