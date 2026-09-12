@@ -107,7 +107,8 @@
           },
           "status": "review"
         }
-      ]
+      ],
+      "calc": "water_store"
     },
     {
       "id": "m21c4",

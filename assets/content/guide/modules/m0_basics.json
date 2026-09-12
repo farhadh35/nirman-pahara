@@ -1,191 +1,192 @@
 {
- "id": "m0_basics",
- "code": "M0",
- "track": "both",
- "icon": "school",
- "title": {
-  "bn": "নির্মাণের প্রাথমিক জ্ঞান",
-  "en": "Construction basics"
- },
- "summary": {
-  "bn": "মাপ, কাঠামোর অংশ, নকশা আর সঙ্গে রাখার জিনিস — এটুকু জানলে বাকি সব বোঝা সহজ।",
-  "en": "Measurements, the parts of a structure, drawings, and what to carry. Everything else follows from this."
- },
- "cards": [
-  {
-   "id": "m0c1",
-   "title": {
-    "bn": "মাপ — ফুট, ইঞ্চি, ঘনফুট",
-    "en": "Measuring — feet, inches, cft"
-   },
-   "body": {
-    "bn": "বাংলাদেশের সাইটে সব হিসাব হয় ফুট আর ইঞ্চিতে। এক ফুট = ১২ ইঞ্চি। দৈর্ঘ্য × প্রস্থ = ক্ষেত্রফল, লেখা হয় বর্গফুটে। দৈর্ঘ্য × প্রস্থ × পুরুত্ব = আয়তন, লেখা হয় ঘনফুটে। পুরুত্ব ইঞ্চিতে থাকলে আগে ১২ দিয়ে ভাগ করে ফুটে আনুন — এই একটা ভুলেই বেশির ভাগ হিসাব গোলমাল হয়। যেমন ১০ ফুট × ১০ ফুট ছাদ, পুরুত্ব ৫ ইঞ্চি: ১০ × ১০ × (৫ ÷ ১২) = প্রায় ৪২ ঘনফুট ঢালাই।",
-    "en": "Sites in Bangladesh work in feet and inches. One foot is 12 inches. Length times width gives area, written in square feet. Length times width times thickness gives volume, written in cubic feet. If the thickness is in inches, divide by 12 first — forgetting that is where most site arithmetic goes wrong. A 10 ft by 10 ft slab 5 inches thick is 10 × 10 × (5 ÷ 12), about 42 cft of concrete."
-   },
-   "watch_for": [
-    {
-     "bn": "ফিতা সঙ্গে রাখুন। মাপ ছাড়া কোনো প্রশ্নেরই উত্তর নেই।",
-     "en": "Carry a tape. Without a measurement there is no answer to any question."
-    },
-    {
-     "bn": "এক জায়গায় নয়, তিন-চার জায়গায় মেপে দেখুন — গড়টাই আসল।",
-     "en": "Measure at three or four points, not one. The average is what counts."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "একক ও রূপান্তরের সংজ্ঞা (১ ফুট = ১২ ইঞ্চি)",
-      "en": "Unit definitions (1 foot = 12 inches)"
-     },
-     "status": "verified"
-    }
-   ]
+  "id": "m0_basics",
+  "code": "M0",
+  "track": "both",
+  "icon": "school",
+  "title": {
+    "bn": "নির্মাণের প্রাথমিক জ্ঞান",
+    "en": "Construction basics"
   },
-  {
-   "id": "m0c2",
-   "title": {
-    "bn": "কাঠামোর অংশগুলো কী কাজ করে",
-    "en": "What each part of the structure does"
-   },
-   "body": {
-    "bn": "ভিত পুরো ওজন মাটিতে ছড়িয়ে দেয় — অগভীর বা সরু হলে ভবন বসে যায়। কলাম ওজন উপর থেকে নিচে নামায় — কলাম দুর্বল হলে পুরো তলা ভেঙে পড়তে পারে। বিম ছাদের ওজন কলামে পৌঁছায়। স্ল্যাব হলো ছাদ বা মেঝে নিজেই। লিন্টেল দরজা-জানালার উপরের ছোট বিম, না থাকলে উপরের গাঁথুনি ফেটে যায়। ফ্রেম কাঠামোয় দেয়াল সাধারণত ওজন বহন করে না — শুধু ঘর আলাদা করে; তাই দেয়ালের ফাটল আর কলামের ফাটল এক জিনিস নয়।",
-    "en": "The foundation spreads the whole weight into the ground — too shallow or too narrow and the building settles. Columns carry the load down; a weak column can take a whole floor with it. Beams pass the roof weight to the columns. The slab is the roof or floor itself. A lintel is the small beam over a door or window, without which the masonry above it cracks. In a framed building the walls usually carry nothing — they only divide space, which is why a crack in a wall and a crack in a column are not the same thing at all."
-   },
-   "watch_for": [
-    {
-     "bn": "কলামে ফাটল দেখলে সেটা সবচেয়ে জরুরি — বিশেষ করে গোড়ায় বা মাথায়।",
-     "en": "A crack in a column is the urgent one — especially at its top or bottom."
-    },
-    {
-     "bn": "দরজা-জানালার উপরে লিন্টেল আছে কি না দেখুন।",
-     "en": "Check that there is a lintel over every door and window."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৬ — কাঠামোগত নকশা",
-      "en": "BNBC 2020, Part 6 — Structural Design"
-     },
-     "status": "review"
-    }
-   ],
-   "diagram": "footing_section"
+  "summary": {
+    "bn": "মাপ, কাঠামোর অংশ, নকশা আর সঙ্গে রাখার জিনিস — এটুকু জানলে বাকি সব বোঝা সহজ।",
+    "en": "Measurements, the parts of a structure, drawings, and what to carry. Everything else follows from this."
   },
-  {
-   "id": "m0c3",
-   "title": {
-    "bn": "নকশা পড়ার সবচেয়ে দরকারি অংশটুকু",
-    "en": "The only part of a drawing you need"
-   },
-   "body": {
-    "bn": "পুরো নকশা বোঝার দরকার নেই। তিনটা জিনিস খুঁজুন। এক, মাপ — নকশায় প্রতিটি লাইনের পাশে যে সংখ্যা লেখা, সেটাই হওয়ার কথা। দুই, রডের বিবরণ — যেমন ১২ মিমি @ ৬ ইঞ্চি সি/সি মানে ১২ মিলিমিটার রড, প্রতি ৬ ইঞ্চি পরপর। তিন, স্তরের পুরুত্ব — রাস্তা বা মেঝের ক্ষেত্রে প্রতিটি স্তরের বেধ লেখা থাকে। এই তিনটা নিয়ে ফিতা হাতে দাঁড়ালে কাজের অর্ধেক যাচাই হয়ে যায়।",
-    "en": "You do not need to read the whole drawing. Find three things. First, dimensions: the number written beside each line is what it is supposed to be. Second, the bar callout — 12 mm at 6 inch c/c means 12 millimetre bars, one every 6 inches. Third, layer thicknesses, marked for each course of a road or a floor. Stand there with a tape and those three, and you have checked half the work."
-   },
-   "watch_for": [
+  "cards": [
     {
-     "bn": "নকশা দেখতে চাওয়া আপনার অধিকার। না দেখালে সেটাই লিখে রাখুন।",
-     "en": "Asking to see the drawing is your right. If it is refused, write that down."
+      "id": "m0c1",
+      "title": {
+        "bn": "মাপ — ফুট, ইঞ্চি, ঘনফুট",
+        "en": "Measuring — feet, inches, cft"
+      },
+      "body": {
+        "bn": "বাংলাদেশের সাইটে সব হিসাব হয় ফুট আর ইঞ্চিতে। এক ফুট = ১২ ইঞ্চি। দৈর্ঘ্য × প্রস্থ = ক্ষেত্রফল, লেখা হয় বর্গফুটে। দৈর্ঘ্য × প্রস্থ × পুরুত্ব = আয়তন, লেখা হয় ঘনফুটে। পুরুত্ব ইঞ্চিতে থাকলে আগে ১২ দিয়ে ভাগ করে ফুটে আনুন — এই একটা ভুলেই বেশির ভাগ হিসাব গোলমাল হয়। যেমন ১০ ফুট × ১০ ফুট ছাদ, পুরুত্ব ৫ ইঞ্চি: ১০ × ১০ × (৫ ÷ ১২) = প্রায় ৪২ ঘনফুট ঢালাই।",
+        "en": "Sites in Bangladesh work in feet and inches. One foot is 12 inches. Length times width gives area, written in square feet. Length times width times thickness gives volume, written in cubic feet. If the thickness is in inches, divide by 12 first — forgetting that is where most site arithmetic goes wrong. A 10 ft by 10 ft slab 5 inches thick is 10 × 10 × (5 ÷ 12), about 42 cft of concrete."
+      },
+      "watch_for": [
+        {
+          "bn": "ফিতা সঙ্গে রাখুন। মাপ ছাড়া কোনো প্রশ্নেরই উত্তর নেই।",
+          "en": "Carry a tape. Without a measurement there is no answer to any question."
+        },
+        {
+          "bn": "এক জায়গায় নয়, তিন-চার জায়গায় মেপে দেখুন — গড়টাই আসল।",
+          "en": "Measure at three or four points, not one. The average is what counts."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "একক ও রূপান্তরের সংজ্ঞা (১ ফুট = ১২ ইঞ্চি)",
+            "en": "Unit definitions (1 foot = 12 inches)"
+          },
+          "status": "verified"
+        }
+      ]
     },
     {
-     "bn": "সি/সি মানে center to center — এক রডের মাঝ থেকে পরের রডের মাঝ।",
-     "en": "c/c means centre to centre — the middle of one bar to the middle of the next."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "একক ও রূপান্তরের সংজ্ঞা — মিলিমিটার ও ইঞ্চি",
-      "en": "Unit definitions — millimetres and inches"
-     },
-     "status": "verified"
-    }
-   ],
-   "diagram": "drawing_parts"
-  },
-  {
-   "id": "m0c4",
-   "title": {
-    "bn": "সঙ্গে যা রাখবেন",
-    "en": "What to carry"
-   },
-   "body": {
-    "bn": "দামি কিছু লাগে না। ফিতা (অন্তত ৫ মিটার) — মাপের জন্য। মোবাইলের টর্চ — গর্ত, ছাদের নিচ, কোনা দেখার জন্য। মোবাইলের ক্যামেরা — তারিখসহ প্রমাণ। একটা স্বচ্ছ কাচের বোতল — বালিতে কাদা আছে কি না দেখার জন্য। খাতা-কলম — কী দেখলেন, কখন দেখলেন। আর সবচেয়ে কাজের জিনিস: সঙ্গে আরেকজন মানুষ।",
-    "en": "None of it is expensive. A tape, at least 5 metres, for measuring. Your phone torch, for pits, undersides and corners. Your phone camera, for dated evidence. A clear glass bottle, to test sand for silt. A notebook and pen, for what you saw and when. And the most useful item of all: another person with you."
-   },
-   "watch_for": [
-    {
-     "bn": "একা যাবেন না। দুজন থাকলে নিরাপদ, আর একজন সাক্ষীও থাকে।",
-     "en": "Do not go alone. Two people is safer, and gives you a witness."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "মাঠপর্যায়ের প্রচলিত চর্চা — কী সঙ্গে রাখলে মাপা যায়",
-      "en": "Common field practice for what makes a site measurable"
-     },
-     "status": "review"
-    }
-   ]
-  },
-  {
-   "id": "m0c5",
-   "title": {
-    "bn": "ভবন কীভাবে নষ্ট হয়",
-    "en": "How buildings go wrong"
-   },
-   "body": {
-    "bn": "খারাপ কাজ সঙ্গে সঙ্গে ভাঙে না — সেখানেই বিপদ। তিনটা পথে নষ্ট হয়। এক, বসে যাওয়া: ভিত দুর্বল হলে ভবন ধীরে ধীরে বসে, দেয়ালে তির্যক ফাটল ধরে। দুই, মরিচা: কভার কম বা কংক্রিট ছিদ্রযুক্ত হলে ভেতরের রডে মরিচা ধরে, রড ফুলে কংক্রিট খসে পড়ে — প্রায়ই পাঁচ থেকে দশ বছরে। তিন, পানি: ছাদ বা দেয়াল দিয়ে পানি ঢুকলে ভেতর থেকে সব নষ্ট হয়। তিনটারই মূল কারণ নির্মাণের সময়ের কয়েকটা দিন — তাই তখনই দেখা জরুরি।",
-    "en": "Bad work does not fall down at once, which is exactly what makes it dangerous. It fails three ways. Settlement: a weak foundation lets the building sink unevenly and opens diagonal cracks in the walls. Corrosion: with too little cover or porous concrete, the steel inside rusts, swells, and spalls the concrete off, often within five to ten years. Water: once it gets in through a roof or a wall it destroys everything from the inside. All three are decided during a handful of days of construction, which is why those are the days to be there."
-   },
-   "watch_for": [
-    {
-     "bn": "দেয়ালে তির্যক ফাটল = বসে যাওয়ার লক্ষণ। খাড়া চুল-ফাটল সাধারণত প্লাস্টারের।",
-     "en": "Diagonal cracks in a wall suggest settlement. Fine hairline cracks are usually just the plaster."
+      "id": "m0c2",
+      "title": {
+        "bn": "কাঠামোর অংশগুলো কী কাজ করে",
+        "en": "What each part of the structure does"
+      },
+      "body": {
+        "bn": "ভিত পুরো ওজন মাটিতে ছড়িয়ে দেয় — অগভীর বা সরু হলে ভবন বসে যায়। কলাম ওজন উপর থেকে নিচে নামায় — কলাম দুর্বল হলে পুরো তলা ভেঙে পড়তে পারে। বিম ছাদের ওজন কলামে পৌঁছায়। স্ল্যাব হলো ছাদ বা মেঝে নিজেই। লিন্টেল দরজা-জানালার উপরের ছোট বিম, না থাকলে উপরের গাঁথুনি ফেটে যায়। ফ্রেম কাঠামোয় দেয়াল সাধারণত ওজন বহন করে না — শুধু ঘর আলাদা করে; তাই দেয়ালের ফাটল আর কলামের ফাটল এক জিনিস নয়।",
+        "en": "The foundation spreads the whole weight into the ground — too shallow or too narrow and the building settles. Columns carry the load down; a weak column can take a whole floor with it. Beams pass the roof weight to the columns. The slab is the roof or floor itself. A lintel is the small beam over a door or window, without which the masonry above it cracks. In a framed building the walls usually carry nothing — they only divide space, which is why a crack in a wall and a crack in a column are not the same thing at all."
+      },
+      "watch_for": [
+        {
+          "bn": "কলামে ফাটল দেখলে সেটা সবচেয়ে জরুরি — বিশেষ করে গোড়ায় বা মাথায়।",
+          "en": "A crack in a column is the urgent one — especially at its top or bottom."
+        },
+        {
+          "bn": "দরজা-জানালার উপরে লিন্টেল আছে কি না দেখুন।",
+          "en": "Check that there is a lintel over every door and window."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৬ — কাঠামোগত নকশা",
+            "en": "BNBC 2020, Part 6 — Structural Design"
+          },
+          "status": "review"
+        }
+      ],
+      "diagram": "footing_section"
     },
     {
-     "bn": "ছাদের নিচে বাদামি দাগ বা খসে পড়া অংশ = পানি ঢুকছে, রডে মরিচা ধরছে।",
-     "en": "Brown stains or flaking on a soffit mean water is getting in and the steel is rusting."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৬ — কংক্রিট কভার ও স্থায়িত্ব",
-      "en": "BNBC 2020, Part 6 — cover and durability"
-     },
-     "status": "review"
-    }
-   ]
-  },
-  {
-   "id": "m0c6",
-   "title": {
-    "bn": "কীভাবে মাপবেন — ধাপে ধাপে",
-    "en": "How to measure, step by step"
-   },
-   "body": {
-    "bn": "মাপার আগে তিনটা নিয়ম। এক, ফিতার শূন্য দাগ থেকে শুরু করুন — অনেক ফিতার মাথায় ধাতব হুক থাকে, ওটা শূন্য নয়। দুই, ফিতা টান টান রাখুন, ঝুলে গেলে মাপ বেশি আসে। তিন, এক জায়গায় নয় — অন্তত তিন জায়গায় মেপে গড় নিন।\n\nস্তরের পুরুত্ব: স্তর খোলা থাকতে কিনারায় ফিতা খাড়া করে বসান, উপরের তল থেকে নিচের তল পর্যন্ত পড়ুন। মাটিতে গেঁথে থাকা অংশ ধরবেন না।\n\nরাস্তার প্রস্থ: এক কিনারা থেকে অন্য কিনারা, রাস্তার সঙ্গে সমকোণে। তেরছা করে মাপলে প্রস্থ বেশি আসে।\n\nরডের ফাঁক: জালির উপর ফিতা রেখে এক রডের মাঝ থেকে পরের রডের মাঝ পর্যন্ত পড়ুন — একে বলে সি/সি। কিনারা থেকে কিনারা মাপলে রডের পুরুত্বটুকু কম আসে।\n\nগর্তের গভীরতা: সোজা লাঠি নামিয়ে ভেজা বা মাটি লাগা দাগ পর্যন্ত চিহ্ন দিন, তারপর লাঠিটা মাপুন।\n\nদেয়ালের ক্ষেত্রফল: দৈর্ঘ্য × উচ্চতা, তারপর দরজা-জানালার ক্ষেত্রফল বাদ দিন।",
-    "en": "Three rules before you start. First, measure from the zero mark — the metal hook at the end of many tapes is not zero. Second, keep the tape taut; a sagging tape reads long. Third, never one reading — take at least three and use the average.\n\nLayer thickness: while the layer is still open, stand the tape upright at the edge and read from the top surface to the bottom of that layer. Do not include what is buried in the ground below it.\n\nRoad width: edge to edge, square across the road. Measured on a slant it reads wider than it is.\n\nBar spacing: lay the tape across the mesh and read from the middle of one bar to the middle of the next — that is what c/c means. Edge to edge loses one bar's thickness every time.\n\nPit depth: lower a straight stick, mark it where the wet or soiled line ends, then measure the stick.\n\nWall area: length times height, then subtract the area of the doors and windows."
-   },
-   "watch_for": [
-    {
-     "bn": "মাপার সময় ফিতাসহ ছবি তুলুন — সংখ্যা পরে কেউ মানতে না চাইলে ছবিটাই প্রমাণ।",
-     "en": "Photograph the tape in place as you read it. If the number is disputed later, the photograph is what settles it."
+      "id": "m0c3",
+      "title": {
+        "bn": "নকশা পড়ার সবচেয়ে দরকারি অংশটুকু",
+        "en": "The only part of a drawing you need"
+      },
+      "body": {
+        "bn": "পুরো নকশা বোঝার দরকার নেই। তিনটা জিনিস খুঁজুন। এক, মাপ — নকশায় প্রতিটি লাইনের পাশে যে সংখ্যা লেখা, সেটাই হওয়ার কথা। দুই, রডের বিবরণ — যেমন ১২ মিমি @ ৬ ইঞ্চি সি/সি মানে ১২ মিলিমিটার রড, প্রতি ৬ ইঞ্চি পরপর। তিন, স্তরের পুরুত্ব — রাস্তা বা মেঝের ক্ষেত্রে প্রতিটি স্তরের বেধ লেখা থাকে। এই তিনটা নিয়ে ফিতা হাতে দাঁড়ালে কাজের অর্ধেক যাচাই হয়ে যায়।",
+        "en": "You do not need to read the whole drawing. Find three things. First, dimensions: the number written beside each line is what it is supposed to be. Second, the bar callout — 12 mm at 6 inch c/c means 12 millimetre bars, one every 6 inches. Third, layer thicknesses, marked for each course of a road or a floor. Stand there with a tape and those three, and you have checked half the work."
+      },
+      "watch_for": [
+        {
+          "bn": "নকশা দেখতে চাওয়া আপনার অধিকার। না দেখালে সেটাই লিখে রাখুন।",
+          "en": "Asking to see the drawing is your right. If it is refused, write that down."
+        },
+        {
+          "bn": "সি/সি মানে center to center — এক রডের মাঝ থেকে পরের রডের মাঝ।",
+          "en": "c/c means centre to centre — the middle of one bar to the middle of the next."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "একক ও রূপান্তরের সংজ্ঞা — মিলিমিটার ও ইঞ্চি",
+            "en": "Unit definitions — millimetres and inches"
+          },
+          "status": "verified"
+        }
+      ],
+      "diagram": "drawing_parts"
     },
     {
-     "bn": "তিনটা মাপ আলাদা হলে তিনটাই লিখে রাখুন — গড় নয়, তিনটাই।",
-     "en": "If the three readings differ, write down all three, not just the average."
+      "id": "m0c4",
+      "title": {
+        "bn": "সঙ্গে যা রাখবেন",
+        "en": "What to carry"
+      },
+      "body": {
+        "bn": "দামি কিছু লাগে না। ফিতা (অন্তত ৫ মিটার) — মাপের জন্য। মোবাইলের টর্চ — গর্ত, ছাদের নিচ, কোনা দেখার জন্য। মোবাইলের ক্যামেরা — তারিখসহ প্রমাণ। একটা স্বচ্ছ কাচের বোতল — বালিতে কাদা আছে কি না দেখার জন্য। খাতা-কলম — কী দেখলেন, কখন দেখলেন। আর সবচেয়ে কাজের জিনিস: সঙ্গে আরেকজন মানুষ।",
+        "en": "None of it is expensive. A tape, at least 5 metres, for measuring. Your phone torch, for pits, undersides and corners. Your phone camera, for dated evidence. A clear glass bottle, to test sand for silt. A notebook and pen, for what you saw and when. And the most useful item of all: another person with you."
+      },
+      "watch_for": [
+        {
+          "bn": "একা যাবেন না। দুজন থাকলে নিরাপদ, আর একজন সাক্ষীও থাকে।",
+          "en": "Do not go alone. Two people is safer, and gives you a witness."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "মাঠপর্যায়ের প্রচলিত চর্চা — কী সঙ্গে রাখলে মাপা যায়",
+            "en": "Common field practice for what makes a site measurable"
+          },
+          "status": "review"
+        }
+      ]
     },
     {
-     "bn": "যা ঢেকে যাবে, সেটা ঢাকার আগেই মাপুন। পরে আর সুযোগ নেই।",
-     "en": "Measure anything that is going to be covered before it is covered. There is no second chance."
+      "id": "m0c5",
+      "title": {
+        "bn": "ভবন কীভাবে নষ্ট হয়",
+        "en": "How buildings go wrong"
+      },
+      "body": {
+        "bn": "খারাপ কাজ সঙ্গে সঙ্গে ভাঙে না — সেখানেই বিপদ। তিনটা পথে নষ্ট হয়। এক, বসে যাওয়া: ভিত দুর্বল হলে ভবন ধীরে ধীরে বসে, দেয়ালে তির্যক ফাটল ধরে। দুই, মরিচা: কভার কম বা কংক্রিট ছিদ্রযুক্ত হলে ভেতরের রডে মরিচা ধরে, রড ফুলে কংক্রিট খসে পড়ে — প্রায়ই পাঁচ থেকে দশ বছরে। তিন, পানি: ছাদ বা দেয়াল দিয়ে পানি ঢুকলে ভেতর থেকে সব নষ্ট হয়। তিনটারই মূল কারণ নির্মাণের সময়ের কয়েকটা দিন — তাই তখনই দেখা জরুরি।",
+        "en": "Bad work does not fall down at once, which is exactly what makes it dangerous. It fails three ways. Settlement: a weak foundation lets the building sink unevenly and opens diagonal cracks in the walls. Corrosion: with too little cover or porous concrete, the steel inside rusts, swells, and spalls the concrete off, often within five to ten years. Water: once it gets in through a roof or a wall it destroys everything from the inside. All three are decided during a handful of days of construction, which is why those are the days to be there."
+      },
+      "watch_for": [
+        {
+          "bn": "দেয়ালে তির্যক ফাটল = বসে যাওয়ার লক্ষণ। খাড়া চুল-ফাটল সাধারণত প্লাস্টারের।",
+          "en": "Diagonal cracks in a wall suggest settlement. Fine hairline cracks are usually just the plaster."
+        },
+        {
+          "bn": "ছাদের নিচে বাদামি দাগ বা খসে পড়া অংশ = পানি ঢুকছে, রডে মরিচা ধরছে।",
+          "en": "Brown stains or flaking on a soffit mean water is getting in and the steel is rusting."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৬ — কংক্রিট কভার ও স্থায়িত্ব",
+            "en": "BNBC 2020, Part 6 — cover and durability"
+          },
+          "status": "review"
+        }
+      ]
+    },
+    {
+      "id": "m0c6",
+      "title": {
+        "bn": "কীভাবে মাপবেন — ধাপে ধাপে",
+        "en": "How to measure, step by step"
+      },
+      "body": {
+        "bn": "মাপার আগে তিনটা নিয়ম। এক, ফিতার শূন্য দাগ থেকে শুরু করুন — অনেক ফিতার মাথায় ধাতব হুক থাকে, ওটা শূন্য নয়। দুই, ফিতা টান টান রাখুন, ঝুলে গেলে মাপ বেশি আসে। তিন, এক জায়গায় নয় — অন্তত তিন জায়গায় মেপে গড় নিন।\n\nস্তরের পুরুত্ব: স্তর খোলা থাকতে কিনারায় ফিতা খাড়া করে বসান, উপরের তল থেকে নিচের তল পর্যন্ত পড়ুন। মাটিতে গেঁথে থাকা অংশ ধরবেন না।\n\nরাস্তার প্রস্থ: এক কিনারা থেকে অন্য কিনারা, রাস্তার সঙ্গে সমকোণে। তেরছা করে মাপলে প্রস্থ বেশি আসে।\n\nরডের ফাঁক: জালির উপর ফিতা রেখে এক রডের মাঝ থেকে পরের রডের মাঝ পর্যন্ত পড়ুন — একে বলে সি/সি। কিনারা থেকে কিনারা মাপলে রডের পুরুত্বটুকু কম আসে।\n\nগর্তের গভীরতা: সোজা লাঠি নামিয়ে ভেজা বা মাটি লাগা দাগ পর্যন্ত চিহ্ন দিন, তারপর লাঠিটা মাপুন।\n\nদেয়ালের ক্ষেত্রফল: দৈর্ঘ্য × উচ্চতা, তারপর দরজা-জানালার ক্ষেত্রফল বাদ দিন।",
+        "en": "Three rules before you start. First, measure from the zero mark — the metal hook at the end of many tapes is not zero. Second, keep the tape taut; a sagging tape reads long. Third, never one reading — take at least three and use the average.\n\nLayer thickness: while the layer is still open, stand the tape upright at the edge and read from the top surface to the bottom of that layer. Do not include what is buried in the ground below it.\n\nRoad width: edge to edge, square across the road. Measured on a slant it reads wider than it is.\n\nBar spacing: lay the tape across the mesh and read from the middle of one bar to the middle of the next — that is what c/c means. Edge to edge loses one bar's thickness every time.\n\nPit depth: lower a straight stick, mark it where the wet or soiled line ends, then measure the stick.\n\nWall area: length times height, then subtract the area of the doors and windows."
+      },
+      "watch_for": [
+        {
+          "bn": "মাপার সময় ফিতাসহ ছবি তুলুন — সংখ্যা পরে কেউ মানতে না চাইলে ছবিটাই প্রমাণ।",
+          "en": "Photograph the tape in place as you read it. If the number is disputed later, the photograph is what settles it."
+        },
+        {
+          "bn": "তিনটা মাপ আলাদা হলে তিনটাই লিখে রাখুন — গড় নয়, তিনটাই।",
+          "en": "If the three readings differ, write down all three, not just the average."
+        },
+        {
+          "bn": "যা ঢেকে যাবে, সেটা ঢাকার আগেই মাপুন। পরে আর সুযোগ নেই।",
+          "en": "Measure anything that is going to be covered before it is covered. There is no second chance."
+        }
+      ],
+      "citations": [],
+      "diagram": "measuring",
+      "calc": "earthwork"
     }
-   ],
-   "citations": [],
-   "diagram": "measuring"
-  }
- ]
+  ]
 }

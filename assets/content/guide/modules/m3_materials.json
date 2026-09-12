@@ -78,7 +78,8 @@
           "status": "review"
         }
       ],
-      "diagram": "standard_hook"
+      "diagram": "standard_hook",
+      "calc": "rod_delivery"
     },
     {
       "id": "m3c3",
@@ -109,7 +110,8 @@
           "status": "review"
         }
       ],
-      "diagram": "brick_bond"
+      "diagram": "brick_bond",
+      "calc": "brick_stack"
     },
     {
       "id": "m3c4",
@@ -238,7 +240,8 @@
           },
           "status": "review"
         }
-      ]
+      ],
+      "calc": "concrete"
     },
     {
       "id": "m3c8",
@@ -374,7 +377,8 @@
           },
           "status": "review"
         }
-      ]
+      ],
+      "calc": "rod_delivery"
     },
     {
       "id": "m3c12",

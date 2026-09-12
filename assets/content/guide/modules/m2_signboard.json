@@ -1,110 +1,111 @@
 {
- "id": "m2_signboard",
- "code": "M2",
- "track": "government",
- "icon": "signboard",
- "title": {
-  "bn": "সাইনবোর্ড পড়া",
-  "en": "Reading the signboard"
- },
- "summary": {
-  "bn": "সাইনবোর্ড হলো সরকারি কাজের একমাত্র জিনিস যা সবার জন্য খোলা। ওটা পড়তে শিখলে বাকিটা সহজ।",
-  "en": "The signboard is the one part of a public work that is open to everyone. Learn to read it and the rest follows."
- },
- "cards": [
-  {
-   "id": "m2c1",
-   "title": {
-    "bn": "বোর্ডে কী কী থাকার কথা",
-    "en": "What the board should carry"
-   },
-   "body": {
-    "bn": "কাজের নাম ও অবস্থান। প্যাকেজ বা টেন্ডার আইডি। কোন দপ্তরের কাজ। ঠিকাদারি প্রতিষ্ঠানের নাম। চুক্তিমূল্য। কাজ শুরুর তারিখ ও শেষের তারিখ। কাজের পরিমাণ — রাস্তা হলে দৈর্ঘ্য ও প্রস্থ, ভবন হলে আয়তন। এই সাতটার একটাও না থাকলে সেটাই প্রথম প্রশ্ন।",
-    "en": "Name and location of the work. Package or tender ID. The department. The contractor's firm. Contract value. Start date and completion date. Quantity — length and width for a road, floor area for a building. If any one of these seven is missing, that is your first question."
-   },
-   "watch_for": [
+  "id": "m2_signboard",
+  "code": "M2",
+  "track": "government",
+  "icon": "signboard",
+  "title": {
+    "bn": "সাইনবোর্ড পড়া",
+    "en": "Reading the signboard"
+  },
+  "summary": {
+    "bn": "সাইনবোর্ড হলো সরকারি কাজের একমাত্র জিনিস যা সবার জন্য খোলা। ওটা পড়তে শিখলে বাকিটা সহজ।",
+    "en": "The signboard is the one part of a public work that is open to everyone. Learn to read it and the rest follows."
+  },
+  "cards": [
     {
-     "bn": "বোর্ডের ছবি তুলে রাখুন — বোর্ড হারিয়ে যায়, ছবি থাকে।",
-     "en": "Photograph the board. Boards disappear; photographs do not."
+      "id": "m2c1",
+      "title": {
+        "bn": "বোর্ডে কী কী থাকার কথা",
+        "en": "What the board should carry"
+      },
+      "body": {
+        "bn": "কাজের নাম ও অবস্থান। প্যাকেজ বা টেন্ডার আইডি। কোন দপ্তরের কাজ। ঠিকাদারি প্রতিষ্ঠানের নাম। চুক্তিমূল্য। কাজ শুরুর তারিখ ও শেষের তারিখ। কাজের পরিমাণ — রাস্তা হলে দৈর্ঘ্য ও প্রস্থ, ভবন হলে আয়তন। এই সাতটার একটাও না থাকলে সেটাই প্রথম প্রশ্ন।",
+        "en": "Name and location of the work. Package or tender ID. The department. The contractor's firm. Contract value. Start date and completion date. Quantity — length and width for a road, floor area for a building. If any one of these seven is missing, that is your first question."
+      },
+      "watch_for": [
+        {
+          "bn": "বোর্ডের ছবি তুলে রাখুন — বোর্ড হারিয়ে যায়, ছবি থাকে।",
+          "en": "Photograph the board. Boards disappear; photographs do not."
+        },
+        {
+          "bn": "শেষের তারিখ পার হয়ে গেলে সেটা নিজেই একটা অভিযোগের কারণ।",
+          "en": "A completion date that has already passed is a complaint in itself."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BPPA/DIMAPPP নাগরিক পর্যবেক্ষণ কার্যক্রম — প্রতিটি সাইটে তথ্যবোর্ড",
+            "en": "BPPA/DIMAPPP citizen monitoring — an information signboard at every site"
+          },
+          "url": "https://citizen.bppa.gov.bd/about-us",
+          "status": "verified"
+        }
+      ],
+      "diagram": "signboard"
     },
     {
-     "bn": "শেষের তারিখ পার হয়ে গেলে সেটা নিজেই একটা অভিযোগের কারণ।",
-     "en": "A completion date that has already passed is a complaint in itself."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "BPPA/DIMAPPP নাগরিক পর্যবেক্ষণ কার্যক্রম — প্রতিটি সাইটে তথ্যবোর্ড",
-      "en": "BPPA/DIMAPPP citizen monitoring — an information signboard at every site"
-     },
-     "url": "https://citizen.bppa.gov.bd/about-us",
-     "status": "verified"
-    }
-   ],
-   "diagram": "signboard"
-  },
-  {
-   "id": "m2c2",
-   "title": {
-    "bn": "টেন্ডার আইডি দিয়ে খোঁজা",
-    "en": "Looking the work up by tender ID"
-   },
-   "body": {
-    "bn": "বোর্ডে লেখা টেন্ডার বা প্যাকেজ আইডি দিয়ে সরকারি ক্রয় বাতায়নে (citizen.bppa.gov.bd) এবং ই-জিপি পোর্টালে (eprocure.gov.bd) কাজটা খুঁজে দেখা যায়। ওখানে দরপত্রের তথ্য ও কার্যাদেশের তথ্য পাওয়া যায়। ইন্টারনেট না থাকলে আইডিটা লিখে রাখুন — উপজেলা প্রকৌশল অফিসে বা RTI আবেদনে ওই আইডিই কাজে লাগবে।",
-    "en": "With the tender or package ID from the board you can look the work up on the citizen procurement portal (citizen.bppa.gov.bd) and on e-GP (eprocure.gov.bd), where tender and award information is published. No internet? Write the ID down anyway — it is what makes an enquiry at the Upazila engineering office, or an RTI application, specific."
-   },
-   "watch_for": [
-    {
-     "bn": "পোর্টালের তথ্য আর বোর্ডের তথ্য না মিললে দুটোরই ছবি রাখুন।",
-     "en": "If the portal and the board disagree, screenshot both."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "সরকারি ক্রয় বাতায়ন, বিপিপিএ",
-      "en": "Citizen procurement portal, BPPA"
-     },
-     "url": "https://citizen.bppa.gov.bd",
-     "status": "verified"
+      "id": "m2c2",
+      "title": {
+        "bn": "টেন্ডার আইডি দিয়ে খোঁজা",
+        "en": "Looking the work up by tender ID"
+      },
+      "body": {
+        "bn": "বোর্ডে লেখা টেন্ডার বা প্যাকেজ আইডি দিয়ে সরকারি ক্রয় বাতায়নে (citizen.bppa.gov.bd) এবং ই-জিপি পোর্টালে (eprocure.gov.bd) কাজটা খুঁজে দেখা যায়। ওখানে দরপত্রের তথ্য ও কার্যাদেশের তথ্য পাওয়া যায়। ইন্টারনেট না থাকলে আইডিটা লিখে রাখুন — উপজেলা প্রকৌশল অফিসে বা RTI আবেদনে ওই আইডিই কাজে লাগবে।",
+        "en": "With the tender or package ID from the board you can look the work up on the citizen procurement portal (citizen.bppa.gov.bd) and on e-GP (eprocure.gov.bd), where tender and award information is published. No internet? Write the ID down anyway — it is what makes an enquiry at the Upazila engineering office, or an RTI application, specific."
+      },
+      "watch_for": [
+        {
+          "bn": "পোর্টালের তথ্য আর বোর্ডের তথ্য না মিললে দুটোরই ছবি রাখুন।",
+          "en": "If the portal and the board disagree, screenshot both."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "সরকারি ক্রয় বাতায়ন, বিপিপিএ",
+            "en": "Citizen procurement portal, BPPA"
+          },
+          "url": "https://citizen.bppa.gov.bd",
+          "status": "verified"
+        },
+        {
+          "source": {
+            "bn": "জাতীয় ই-জিপি পোর্টাল",
+            "en": "National e-GP portal"
+          },
+          "url": "https://www.eprocure.gov.bd",
+          "status": "verified"
+        }
+      ]
     },
     {
-     "source": {
-      "bn": "জাতীয় ই-জিপি পোর্টাল",
-      "en": "National e-GP portal"
-     },
-     "url": "https://www.eprocure.gov.bd",
-     "status": "verified"
+      "id": "m2c3",
+      "title": {
+        "bn": "চুক্তিমূল্যকে ভাগ করে দেখুন",
+        "en": "Divide the contract value"
+      },
+      "body": {
+        "bn": "চুক্তিমূল্য একটা বড় সংখ্যা, বোঝা যায় না। ভাগ করলে বোঝা যায়। ৪২ লাখ টাকায় ১,২০০ মিটার রাস্তা মানে প্রতি মিটারে প্রায় ৩,৫০০ টাকা। এই সংখ্যাটা মাথায় রাখা যায়, পাশের ইউনিয়নের কাজের সঙ্গে মেলানো যায়, তফসিল রেটের সঙ্গেও মেলানো যায়। অ্যাপের 'চুক্তি বনাম বাস্তব' হিসাবটা এটাই করে।",
+        "en": "A contract value is a big number and means nothing on its own. Divided, it means something. Tk 42 lakh for 1,200 metres of road is about Tk 3,500 per metre — a number you can carry in your head, compare with the next union's work, and compare with the schedule of rates. That is what the app's unit-cost calculator does."
+      },
+      "watch_for": [
+        {
+          "bn": "পার্থক্য পেলেই অভিযোগ নয়। আগে অনুমিত হিসাব ও BoQ চান — কারণ থাকতেই পারে।",
+          "en": "A gap is not a complaint. Ask for the estimate and BoQ first — there may be a good reason."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "PWD Schedule of Rates 2022 (২য় সংশোধিত)",
+            "en": "PWD Schedule of Rates 2022 (2nd revised)"
+          },
+          "url": "https://ss.pwd.gov.bd/document/sor/Final_SoR_2022%20_2nd_Revised.pdf",
+          "status": "verified"
+        }
+      ],
+      "calc": "unit_cost"
     }
-   ]
-  },
-  {
-   "id": "m2c3",
-   "title": {
-    "bn": "চুক্তিমূল্যকে ভাগ করে দেখুন",
-    "en": "Divide the contract value"
-   },
-   "body": {
-    "bn": "চুক্তিমূল্য একটা বড় সংখ্যা, বোঝা যায় না। ভাগ করলে বোঝা যায়। ৪২ লাখ টাকায় ১,২০০ মিটার রাস্তা মানে প্রতি মিটারে প্রায় ৩,৫০০ টাকা। এই সংখ্যাটা মাথায় রাখা যায়, পাশের ইউনিয়নের কাজের সঙ্গে মেলানো যায়, তফসিল রেটের সঙ্গেও মেলানো যায়। অ্যাপের 'চুক্তি বনাম বাস্তব' হিসাবটা এটাই করে।",
-    "en": "A contract value is a big number and means nothing on its own. Divided, it means something. Tk 42 lakh for 1,200 metres of road is about Tk 3,500 per metre — a number you can carry in your head, compare with the next union's work, and compare with the schedule of rates. That is what the app's unit-cost calculator does."
-   },
-   "watch_for": [
-    {
-     "bn": "পার্থক্য পেলেই অভিযোগ নয়। আগে অনুমিত হিসাব ও BoQ চান — কারণ থাকতেই পারে।",
-     "en": "A gap is not a complaint. Ask for the estimate and BoQ first — there may be a good reason."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "PWD Schedule of Rates 2022 (২য় সংশোধিত)",
-      "en": "PWD Schedule of Rates 2022 (2nd revised)"
-     },
-     "url": "https://ss.pwd.gov.bd/document/sor/Final_SoR_2022%20_2nd_Revised.pdf",
-     "status": "verified"
-    }
-   ]
-  }
- ]
+  ]
 }

@@ -6,6 +6,8 @@ import '../../../app/widgets/common.dart';
 import '../../../core/content/models.dart';
 import '../../../core/i18n/strings.dart';
 import '../../sources/ui/sources_screen.dart';
+import '../../calculators/ui/calculator_screen.dart';
+import '../../calculators/ui/calc_spec.dart';
 import '../../directory/ui/directory_screen.dart';
 import '../../sources/ui/not_government_notice.dart';
 import '../../../core/util/bn.dart';
@@ -233,6 +235,10 @@ class _GuideCardView extends StatelessWidget {
           const SizedBox(height: 20),
           diagram,
         ],
+        if (card.calc != null) ...[
+          const SizedBox(height: 20),
+          _CalcLink(id: card.calc!),
+        ],
         if (card.watchFor.isNotEmpty) ...[
           const SizedBox(height: 22),
           SectionCard(
@@ -269,6 +275,40 @@ class _GuideCardView extends StatelessWidget {
         ],
 
       ],
+    );
+  }
+}
+
+/// Opens the calculator a card names, from inside the card.
+///
+/// Deliberately a link rather than an embedded calculator: the reader is in
+/// the middle of a chapter, and dropping a form into the page would change
+/// what they came here to do. Tapping goes to the same screen the calculators
+/// door opens, so there is one calculator, reached two ways.
+class _CalcLink extends StatelessWidget {
+  const _CalcLink({required this.id});
+
+  final String id;
+
+  @override
+  Widget build(BuildContext context) {
+    final spec = CalcSpec.all.where((s) => s.id == id).firstOrNull;
+    // A card naming a calculator that no longer exists shows nothing rather
+    // than a button that throws. The test keeps this from happening quietly.
+    if (spec == null) return const SizedBox.shrink();
+    final theme = Theme.of(context);
+    final bn = context.locale.isBangla;
+    return Card(
+      margin: EdgeInsets.zero,
+      child: ListTile(
+        leading: Icon(Icons.calculate_outlined, color: theme.colorScheme.primary),
+        title: Text(bn ? 'এই হিসাবটা করে দেখুন' : 'Work this one out'),
+        subtitle: Text(context.t(spec.title)),
+        trailing: const Icon(Icons.chevron_right),
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute<void>(builder: (_) => CalculatorScreen(spec: spec)),
+        ),
+      ),
     );
   }
 }

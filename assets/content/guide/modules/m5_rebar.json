@@ -41,7 +41,8 @@
           "status": "review"
         }
       ],
-      "diagram": "slab_rebar"
+      "diagram": "slab_rebar",
+      "calc": "rebar"
     },
     {
       "id": "m5c2",
@@ -103,7 +104,8 @@
           "status": "review"
         }
       ],
-      "diagram": "stirrup_spacing"
+      "diagram": "stirrup_spacing",
+      "calc": "hook"
     },
     {
       "id": "m5c4",
@@ -138,7 +140,8 @@
           "status": "review"
         }
       ],
-      "diagram": "rod_binding"
+      "diagram": "rod_binding",
+      "calc": "rebar"
     },
     {
       "id": "m5c5",

@@ -76,7 +76,8 @@
           },
           "status": "verified"
         }
-      ]
+      ],
+      "calc": "concrete"
     },
     {
       "id": "m18c3",
@@ -108,7 +109,8 @@
           "status": "review"
         }
       ],
-      "diagram": "brick_bond"
+      "diagram": "brick_bond",
+      "calc": "brickwork"
     },
     {
       "id": "m18c4",

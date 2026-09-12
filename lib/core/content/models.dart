@@ -147,6 +147,7 @@ class GuideCard {
     this.audioAsset,
     this.imageAsset,
     this.diagram,
+    this.calc,
   });
 
   final String id;
@@ -167,6 +168,18 @@ class GuideCard {
   /// than shipped as pictures so that every dimension shown is one the code
   /// put there — see the guide diagram library.
   final String? diagram;
+
+  /// Id of a calculator this card's reader is likely to want next.
+  ///
+  /// The seventeen calculators have always lived behind one door of their own,
+  /// which is fine for somebody who knows what they are looking for and no use
+  /// at all to a reader who has just been told how many bricks a stack should
+  /// hold. A card naming a calculator puts the tool at the moment of the
+  /// question. The door stays: this is a second way in, not a replacement.
+  ///
+  /// Must match a [CalcSpec] id; a test holds the two lists together, the same
+  /// way diagram keys are held.
+  final String? calc;
 
   /// The weakest status among this card's citations.
   ///
@@ -196,6 +209,7 @@ class GuideCard {
         audioAsset: j['audio'] as String?,
         imageAsset: j['image'] as String?,
         diagram: j['diagram'] as String?,
+        calc: j['calc'] as String?,
       );
 }
 

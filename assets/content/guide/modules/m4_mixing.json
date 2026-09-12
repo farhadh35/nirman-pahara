@@ -36,7 +36,8 @@
           },
           "status": "review"
         }
-      ]
+      ],
+      "calc": "concrete"
     },
     {
       "id": "m4c2",
@@ -127,7 +128,8 @@
           "status": "review"
         }
       ],
-      "diagram": "rcc_pour"
+      "diagram": "rcc_pour",
+      "calc": "concrete"
     },
     {
       "id": "m4c5",
@@ -197,7 +199,8 @@
           "status": "review"
         }
       ],
-      "diagram": "plaster"
+      "diagram": "plaster",
+      "calc": "plaster"
     },
     {
       "id": "m4c7",
