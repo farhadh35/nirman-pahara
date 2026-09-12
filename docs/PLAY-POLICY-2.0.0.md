@@ -21,16 +21,30 @@ aapt2 dump xmltree build/app/outputs/flutter-apk/app-release.apk \
 apksigner verify --print-certs build/app/outputs/flutter-apk/app-release.apk
 ```
 
-Expected: two location permissions, no `INTERNET`, and signer SHA-256
-`f999…3147` (full fingerprint in `store/CHECKLIST.md`).
+Expected from 2.0.4: `ACCESS_COARSE_LOCATION` and `INTERNET` — **not**
+`ACCESS_FINE_LOCATION`, which the geolocator plugin declares and this app
+removes — and signer SHA-256 `f999…3147` (full fingerprint in
+`store/CHECKLIST.md`). Earlier builds showed both location permissions and no
+`INTERNET`; a reviewer comparing against an old note will see the difference.
 
 ---
 
 ## 1. User Data — no collection
 
-The app declares **no `INTERNET` permission**. It cannot transmit anything;
-Android enforces that, not our good intentions. There is no server, no account,
-no analytics and no advertising SDK.
+No user data is collected. There is no server, no account, no analytics and no
+advertising SDK.
+
+Until 2.0.3 this section said the app declared **no `INTERNET` permission** and
+so could not transmit anything, with Android enforcing it rather than our good
+intentions. That was the stronger claim and it is gone: `INTERNET` is declared
+from 2.0.4, ahead of a feature that will need it rather than alongside one.
+
+What replaces it is weaker and worth stating plainly. No HTTP client is in the
+dependency list, none is called anywhere in `lib/`, and the update check
+reaches Play services by IPC rather than a socket — all three held by
+`test/update_check_test.dart`. So the app does not transmit, rather than cannot.
+Anyone adding an SDK that does must revisit this section, `store/DATA-SAFETY.md`
+and the Play Data safety form in the same change.
 
 Photographs, coordinates and inspection notes live in the app's private
 directory. They leave only when the user taps share and chooses where to send
@@ -49,7 +63,7 @@ asked.
 
 No background location, so the background-location declaration does not apply.
 `CAMERA` is deliberately **not** declared — the system camera is invoked by
-intent. `INTERNET` is not declared. No storage permission is requested; files
+intent. `INTERNET` is declared from 2.0.4, ahead of a feature rather than alongside one; nothing in the build opens a connection and a test holds that. No storage permission is requested; files
 arrive through the system picker.
 
 Refusing location is a supported path, not a degraded one: the photograph is

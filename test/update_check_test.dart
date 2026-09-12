@@ -59,17 +59,42 @@ void main() {
     }
   });
 
-  test('the app asks for no INTERNET permission at all', () {
-    // The strongest form of the offline promise, and the reason adding the
-    // Play update check cost nothing: it goes through Play services by IPC,
-    // not through a socket of ours. An app with no INTERNET permission cannot
-    // upload anything, whatever its code says. If this ever fails, the
-    // listing's "Everything works offline. Nothing is uploaded." needs
-    // rewriting and Data safety needs revisiting in the same change.
-    final manifest =
-        File('android/app/src/main/AndroidManifest.xml').readAsStringSync();
-    expect(manifest, isNot(contains('android.permission.INTERNET')),
-        reason: 'something now wants network access directly');
+  test('nothing in the build can actually transmit', () {
+    // This replaced a stronger test. The app used to hold no INTERNET
+    // permission at all, which made "nothing is uploaded" a property of the
+    // binary rather than a promise about its code: it could not transmit
+    // whatever it did. INTERNET is now declared so that a later feature which
+    // genuinely needs it is not blocked by a manifest edit at an awkward
+    // moment.
+    //
+    // The guarantee therefore moves from the manifest into here, and it is
+    // weaker: "does not" rather than "cannot". What is still checkable is that
+    // no HTTP client is shipped and none is called, and that is what this
+    // holds. If it fails, store/DATA-SAFETY.md, the Play Data safety form and
+    // the listing's "Nothing is uploaded" all need revisiting in the same
+    // change — not afterwards.
+    final pubspec = File('pubspec.yaml').readAsStringSync();
+    for (final client in ['http:', 'dio:', 'chopper:', 'retrofit:',
+      'web_socket_channel:', 'grpc:']) {
+      expect(RegExp('^\\s+' + RegExp.escape(client), multiLine: true)
+              .hasMatch(pubspec),
+          isFalse,
+          reason: 'a network client ($client) is now a dependency');
+    }
+
+    final offenders = <String>[];
+    for (final f in Directory('lib')
+        .listSync(recursive: true)
+        .whereType<File>()
+        .where((f) => f.path.endsWith('.dart'))) {
+      final src = f.readAsStringSync();
+      for (final call in ['HttpClient(', 'package:http/', 'Socket.connect',
+        'WebSocket.connect']) {
+        if (src.contains(call)) offenders.add('${f.path}: $call');
+      }
+    }
+    expect(offenders, isEmpty,
+        reason: 'something in the app opens its own connection: $offenders');
   });
 
   test('the listing still promises offline, so the check must stay Play\'s',

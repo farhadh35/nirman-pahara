@@ -9,10 +9,29 @@ answer follows from the code, and the decisive fact is checkable in one command:
 aapt2 dump permissions build/app/outputs/flutter-apk/app-release.apk
 ```
 
-The release APK declares `ACCESS_FINE_LOCATION` and `ACCESS_COARSE_LOCATION`,
-and **no `INTERNET` permission at all**. The app cannot transmit anything,
-because Android will not let it. There is no server, no account, no analytics
-and — in this version — no advertising SDK.
+The release APK declares `ACCESS_COARSE_LOCATION` and `INTERNET`. There is no
+server, no account, no analytics and — in this version — no advertising SDK.
+
+**Two changes at 2.0.4 weakened one claim and tightened another, and both
+matter when answering the form.**
+
+`ACCESS_FINE_LOCATION` is gone. It had been declared since 2.0.0 and never
+used: the one call site asks for `LocationAccuracy.medium`, which coarse
+satisfies. The geolocator plugin still declares it, so the app manifest removes
+it explicitly.
+
+`INTERNET` is now declared, and it was not before. That is a real reduction in
+what can be proved. The old claim was that the app **could not** transmit,
+because Android would not permit it — a property of the binary, checkable by
+anyone with `aapt2`. The claim now is that it **does not**: no HTTP client is
+shipped, none is called, and the update check reaches Play services by IPC
+rather than a socket. `test/update_check_test.dart` fails if a network client
+enters the dependency list or `lib/`.
+
+Nothing collects or sends anything today, so every answer below is unchanged.
+But the permission is declared ahead of a feature rather than alongside one, so
+whoever adds that feature must revisit this file and the Play form **in the
+same change**, not after it.
 
 > **This file previously described a build with ads in it.** It answered "Yes"
 > to collection, declared device identifiers as collected and shared by an
@@ -52,9 +71,11 @@ is.
 
 ## Security practices
 
-- **Is data encrypted in transit?** Not applicable — the app transmits nothing
-  and holds no `INTERNET` permission. If the form will not accept "not
-  applicable", the honest answer is that no data is transmitted.
+- **Is data encrypted in transit?** Not applicable — the app transmits no user
+  data. It holds `INTERNET` since 2.0.4, but ships no network client and calls
+  none; the only thing that reaches Play services does so by IPC. If the form
+  will not accept "not applicable", the honest answer is that no user data is
+  transmitted.
 - **Can users request data deletion?** **Yes.** Everything is on the device.
   Deleting an inspection removes it; uninstalling removes all of it. There is no
   server copy for anyone to request deletion from, including us.

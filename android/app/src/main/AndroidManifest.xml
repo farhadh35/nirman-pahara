@@ -14,6 +14,15 @@
 
          The geolocator plugin's own manifest contributes FINE, so it is
          removed explicitly below rather than merely left out. -->
+    <!-- Declared so a later feature that genuinely needs the network is not
+         blocked by a manifest change at the wrong moment. Nothing in this
+         build opens a connection: there is no HTTP client in the dependency
+         list and none in lib/, and test/update_check_test.dart fails if either
+         appears. The update check reaches Play services by IPC, not a socket.
+
+         Adding an SDK that transmits anything means revisiting store/
+         DATA-SAFETY.md and the Play Data safety form in the same change. -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
         tools:node="remove" />
