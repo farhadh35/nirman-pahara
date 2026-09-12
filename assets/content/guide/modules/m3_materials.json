@@ -35,8 +35,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৫ — বিল্ডিং মেটেরিয়ালস",
-            "en": "BNBC 2020, Part 5 — Building Materials"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — সিমেন্ট চেনা ও মজুদ",
+            "en": "Bari Nirman o Site Supervision (2019) — identifying and storing cement"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৫ — বিল্ডিং মেটেরিয়ালস",
+            "en": "corresponds to the standard: BNBC 2020, Part 5 — Building Materials"
           },
           "status": "review"
         }
@@ -69,13 +73,6 @@
             "en": "BDS ISO 6935-2 (reinforcing steel)"
           },
           "status": "review"
-        },
-        {
-          "source": {
-            "bn": "BNBC 2020, পার্ট ৫",
-            "en": "BNBC 2020, Part 5"
-          },
-          "status": "review"
         }
       ],
       "diagram": "standard_hook",
@@ -104,8 +101,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৫ — ইটের শ্রেণি ও শক্তি",
-            "en": "BNBC 2020, Part 5 — brick classes and strength"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — ইট চেনা",
+            "en": "Bari Nirman o Site Supervision (2019) — identifying brick"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৫ — ইটের শ্রেণি ও শক্তি",
+            "en": "corresponds to the standard: BNBC 2020, Part 5 — brick classes and strength"
           },
           "status": "review"
         }
@@ -132,8 +133,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৫ — সূক্ষ্ম সমষ্টি (fine aggregate)",
-            "en": "BNBC 2020, Part 5 — fine aggregate"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — বালি ও সিল্ট পরীক্ষা",
+            "en": "Bari Nirman o Site Supervision (2019) — sand and the silt test"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৫ — সূক্ষ্ম সমষ্টি (fine aggregate)",
+            "en": "corresponds to the standard: BNBC 2020, Part 5 — fine aggregate"
           },
           "status": "review"
         }

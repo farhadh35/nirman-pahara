@@ -31,8 +31,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৬ — কংক্রিটের শক্তি নির্ধারণ",
-            "en": "BNBC 2020, Part 6 — specifying concrete strength"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — মিশ্রণের অনুপাত",
+            "en": "Bari Nirman o Site Supervision (2019) — what the mix ratio means"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৬ — কংক্রিটের শক্তি নির্ধারণ",
+            "en": "corresponds to the standard: BNBC 2020, Part 6 — specifying concrete strength"
           },
           "status": "review"
         }
@@ -62,8 +66,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
-            "en": "BNBC 2020, Part 7 — Construction Practices"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — মিশ্রণে পানির পরিমাণ",
+            "en": "Bari Nirman o Site Supervision (2019) — water in the mix"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
+            "en": "corresponds to the standard: BNBC 2020, Part 7 — Construction Practices"
           },
           "status": "review"
         }
@@ -92,8 +100,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৭ — কিউরিং",
-            "en": "BNBC 2020, Part 7 — curing"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — কিউরিং",
+            "en": "Bari Nirman o Site Supervision (2019) — curing"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৭ — কিউরিং",
+            "en": "corresponds to the standard: BNBC 2020, Part 7 — curing"
           },
           "status": "review"
         }
@@ -122,8 +134,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
-            "en": "BNBC 2020, Part 7 — Construction Practices"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — ঢালাইয়ের ধাপ",
+            "en": "Bari Nirman o Site Supervision (2019) — the sequence of a pour"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
+            "en": "corresponds to the standard: BNBC 2020, Part 7 — Construction Practices"
           },
           "status": "review"
         }
@@ -158,8 +174,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
-            "en": "BNBC 2020, Part 7 — Construction Practices"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — কিউরিংয়ের পদ্ধতি",
+            "en": "Bari Nirman o Site Supervision (2019) — how curing is done"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
+            "en": "corresponds to the standard: BNBC 2020, Part 7 — Construction Practices"
           },
           "status": "review"
         }
@@ -193,8 +213,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
-            "en": "BNBC 2020, Part 7 — Construction Practices"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — প্লাস্টার",
+            "en": "Bari Nirman o Site Supervision (2019) — plaster"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
+            "en": "corresponds to the standard: BNBC 2020, Part 7 — Construction Practices"
           },
           "status": "review"
         }

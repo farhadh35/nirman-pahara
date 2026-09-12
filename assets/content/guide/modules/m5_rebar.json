@@ -35,8 +35,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৬ — রিইনফোর্সমেন্ট ডিটেইলিং",
-            "en": "BNBC 2020, Part 6 — reinforcement detailing"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — রডের সংখ্যা ও ব্যবধান",
+            "en": "Bari Nirman o Site Supervision (2019) — bar count and spacing"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৬ — রিইনফোর্সমেন্ট ডিটেইলিং",
+            "en": "corresponds to the standard: BNBC 2020, Part 6 — reinforcement detailing"
           },
           "status": "review"
         }
@@ -67,8 +71,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৬ — কংক্রিট কভার",
-            "en": "BNBC 2020, Part 6 — concrete cover"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — কনক্রিট কভার",
+            "en": "Bari Nirman o Site Supervision (2019) — concrete cover"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৬ — কংক্রিট কভার",
+            "en": "corresponds to the standard: BNBC 2020, Part 6 — concrete cover"
           },
           "status": "review"
         }
@@ -98,8 +106,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৬ — ল্যাপ ও ডেভেলপমেন্ট লেংথ",
-            "en": "BNBC 2020, Part 6 — lap and development length"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — ল্যাপ ও রিং",
+            "en": "Bari Nirman o Site Supervision (2019) — laps and stirrups"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৬ — ল্যাপ ও ডেভেলপমেন্ট লেংথ",
+            "en": "corresponds to the standard: BNBC 2020, Part 6 — lap and development length"
           },
           "status": "review"
         }
@@ -134,8 +146,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৬ — রিইনফোর্সমেন্ট ডিটেইলিং",
-            "en": "BNBC 2020, Part 6 — reinforcement detailing"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — রড বাঁধা",
+            "en": "Bari Nirman o Site Supervision (2019) — tying reinforcement"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৬ — রিইনফোর্সমেন্ট ডিটেইলিং",
+            "en": "corresponds to the standard: BNBC 2020, Part 6 — reinforcement detailing"
           },
           "status": "review"
         }

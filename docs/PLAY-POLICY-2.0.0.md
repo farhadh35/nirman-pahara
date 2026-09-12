@@ -1,4 +1,8 @@
-# Google Play policy alignment — version 2.0.0 (versionCode 4)
+# Google Play policy alignment — current build (2.0.3, versionCode 7)
+
+> Named for 2.0.0 when it was written. The contents track the current
+> build; the heading did not, which is its own small policy risk when
+> the document exists to tell a reviewer what shipped.
 
 Written against the binary built from commit-tagged `2.0.0+4`. Each section
 names the policy, states what this app does, and — where it can be checked
@@ -40,7 +44,8 @@ asked.
 
 | Permission | Why | Scope |
 |---|---|---|
-| `ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION` | Stamps a photograph so a finding can say where it was seen | Foreground only, at capture |
+| `ACCESS_COARSE_LOCATION` | Stamps a photograph so a finding can say where it was seen | Foreground only, while the inspection screen is open |
+| ~~`ACCESS_FINE_LOCATION`~~ | **Removed at 2.0.4.** Declared since 2.0.0 and never used: the sole call site asks for `LocationAccuracy.medium`, which coarse satisfies. The geolocator plugin contributes it, so the app manifest removes it with `tools:node="remove"` | — |
 
 No background location, so the background-location declaration does not apply.
 `CAMERA` is deliberately **not** declared — the system camera is invoked by

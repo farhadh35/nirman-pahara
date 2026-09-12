@@ -65,8 +65,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৬ — কাঠামোগত নকশা",
-            "en": "BNBC 2020, Part 6 — Structural Design"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — কাঠামোর অংশগুলোর কাজ",
+            "en": "Bari Nirman o Site Supervision (2019) — what each structural element does"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৬ — কাঠামোগত নকশা",
+            "en": "corresponds to the standard: BNBC 2020, Part 6 — Structural Design"
           },
           "status": "review"
         }
@@ -153,8 +157,12 @@
       "citations": [
         {
           "source": {
-            "bn": "BNBC 2020, পার্ট ৬ — কংক্রিট কভার ও স্থায়িত্ব",
-            "en": "BNBC 2020, Part 6 — cover and durability"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯) — কাঠামো ব্যর্থ হওয়ার ধরন",
+            "en": "Bari Nirman o Site Supervision (2019) — how structures fail"
+          },
+          "clause": {
+            "bn": "মান হিসেবে তুলনীয়: BNBC 2020, পার্ট ৬ — কংক্রিট কভার ও স্থায়িত্ব",
+            "en": "corresponds to the standard: BNBC 2020, Part 6 — cover and durability"
           },
           "status": "review"
         }

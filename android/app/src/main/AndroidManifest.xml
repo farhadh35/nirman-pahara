@@ -1,10 +1,22 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
     <!-- Location is stamped onto inspection photographs so a report can say
          where a defect was seen. Optional: a refused permission or no fix
          still lets the photograph be taken, and the report then says the
-         location was not recorded. -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+         location was not recorded.
+
+         COARSE only, deliberately. The one call site asks for
+         LocationAccuracy.medium, which coarse satisfies; FINE was declared and
+         never used. Play treats precise location as a permission to justify
+         rather than assume, and a report saying which building a defect was
+         seen at does not need a fix good to a few metres. Do not add FINE back
+         without changing that call site and saying why here.
+
+         The geolocator plugin's own manifest contributes FINE, so it is
+         removed explicitly below rather than merely left out. -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:node="remove" />
     <application
         android:label="নির্মাণ পাহারা"
         android:name="${applicationName}"
