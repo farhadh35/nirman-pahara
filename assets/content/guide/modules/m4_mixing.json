@@ -1,203 +1,271 @@
 {
- "id": "m4_mixing",
- "code": "M4",
- "track": "both",
- "icon": "concrete",
- "title": {
-  "bn": "মিশ্রণ ও ঢালাই",
-  "en": "Mixing and casting"
- },
- "summary": {
-  "bn": "বেশি পানি — সবচেয়ে সাধারণ আর সবচেয়ে ক্ষতিকর কারচুপি, অথচ খরচ বাঁচে না। কারণটা জানুন।",
-  "en": "Extra water is the most common and most damaging shortcut on a Bangladeshi site — and it saves nobody money. Here is why it happens anyway."
- },
- "cards": [
-  {
-   "id": "m4c1",
-   "title": {
-    "bn": "অনুপাত মানে কী",
-    "en": "What the ratio means"
-   },
-   "body": {
-    "bn": "১:২:৪ মানে এক ভাগ সিমেন্ট, দুই ভাগ বালি, চার ভাগ খোয়া বা পাথর — আয়তনের হিসাবে, ওজনে নয়। মাপার জন্য বাক্স (ফর্মা) ব্যবহার করার কথা; বেলচা দিয়ে গোনা হলে অনুপাত ঠিক থাকে না। মনে রাখবেন, বড় কাঠামোর কাজে BNBC 2020 অনুপাত দিয়ে নয়, শক্তি (f′c) দিয়ে কংক্রিট নির্দিষ্ট করে — অনুপাত শুধু আভাস।",
-    "en": "1:2:4 means one part cement, two parts sand, four parts khoa or stone — by volume, not by weight. Measuring boxes are meant to be used; counted shovelfuls do not hold a ratio. And note that for structural work BNBC 2020 specifies concrete by characteristic strength (f′c), not by ratio — the ratio is only an indication."
-   },
-   "watch_for": [
-    {
-     "bn": "মাপার বাক্স আছে কি না দেখুন। না থাকলে সেটাই প্রথম সমস্যা।",
-     "en": "Check whether measuring boxes exist at all. If not, that is the first problem."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৬ — কংক্রিটের শক্তি নির্ধারণ",
-      "en": "BNBC 2020, Part 6 — specifying concrete strength"
-     },
-     "status": "review"
-    }
-   ]
+  "id": "m4_mixing",
+  "code": "M4",
+  "track": "both",
+  "icon": "concrete",
+  "title": {
+    "bn": "মিশ্রণ ও ঢালাই",
+    "en": "Mixing and casting"
   },
-  {
-   "id": "m4c2",
-   "title": {
-    "bn": "পানি কেন সমস্যা",
-    "en": "Why water is the problem"
-   },
-   "body": {
-    "bn": "পানি বেশি দিলে মিশ্রণ পাতলা হয়, ঢালতে সহজ হয়, শ্রমিকের কষ্ট কমে। কিন্তু শুকানোর পর ঐ বাড়তি পানির জায়গায় অসংখ্য ছিদ্র থেকে যায়, আর কংক্রিট দুর্বল হয়। উপরে দেখে বোঝার উপায় নেই — এখানেই বিপদ। তাই ঢালাইয়ের সময় উপস্থিত থাকা জরুরি, পরে এসে লাভ নেই।",
-    "en": "Extra water thins the mix, makes it easier to place, and saves the crew effort. But when it dries, the space that water occupied is left behind as pores, and the concrete is weaker. Nothing on the surface shows it — which is exactly the danger. This is why being present during the pour matters and inspecting afterwards does not."
-   },
-   "watch_for": [
-    {
-     "bn": "মিশ্রণ পানির মতো গড়িয়ে পড়লে পানি বেশি। ভিডিও করে রাখুন।",
-     "en": "If the mix runs like water, there is too much water. Take a video."
-    },
-    {
-     "bn": "ঢালাইয়ের নমুনা (সিলিন্ডার) নেওয়া হচ্ছে কি না জিজ্ঞেস করুন।",
-     "en": "Ask whether test cylinders are being cast from the pour."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
-      "en": "BNBC 2020, Part 7 — Construction Practices"
-     },
-     "status": "review"
-    }
-   ]
+  "summary": {
+    "bn": "অনুপাত, পানি, ঢালাই আর কিউরিং — ঢালাইয়ের দিনে যা যা দেখার, আর যেসব পরীক্ষা সেদিনই হয়।",
+    "en": "Ratios, water, the pour and curing — what to watch on the day, and the tests that belong to it."
   },
-  {
-   "id": "m4c3",
-   "title": {
-    "bn": "কিউরিং — ঢালাইয়ের পর পানি দেওয়া",
-    "en": "Curing — watering after the pour"
-   },
-   "body": {
-    "bn": "ঢালাই শেষ মানে কাজ শেষ নয়। কংক্রিট শক্তি পায় ধীরে ধীরে, আর তার জন্য ভেজা থাকতে হয়। কয়েক দিন নিয়মিত পানি না দিলে শক্তি অনেকটা কমে যায় এবং ফাটল ধরে। চটের বস্তা ভিজিয়ে ঢেকে রাখা, পানি জমিয়ে রাখা — দুটোই প্রচলিত পদ্ধতি। কিউরিং না করা সবচেয়ে সহজে ধরা পড়ে, কারণ এটা দিনের পর দিন চোখে পড়ে।",
-    "en": "The pour is not the end of the job. Concrete gains strength slowly and needs to stay wet to do it. Skip the watering for a few days and it loses a large part of its strength and cracks. Wet hessian and ponding are the usual methods. Missed curing is the easiest defect for a citizen to catch, because it is visible day after day."
-   },
-   "watch_for": [
+  "cards": [
     {
-     "bn": "একই জায়গার ছবি কয়েক দিন ধরে তুলুন — শুকনা ঢালাইয়ের ধারাবাহিক ছবি শক্ত প্রমাণ।",
-     "en": "Photograph the same spot on successive days. A run of dry-slab photographs is strong evidence."
+      "id": "m4c1",
+      "title": {
+        "bn": "অনুপাত মানে কী",
+        "en": "What the ratio means"
+      },
+      "body": {
+        "bn": "১:২:৪ মানে এক ভাগ সিমেন্ট, দুই ভাগ বালি, চার ভাগ খোয়া বা পাথর — আয়তনের হিসাবে, ওজনে নয়। মাপার জন্য বাক্স (ফর্মা) ব্যবহার করার কথা; বেলচা দিয়ে গোনা হলে অনুপাত ঠিক থাকে না। মনে রাখবেন, বড় কাঠামোর কাজে BNBC 2020 অনুপাত দিয়ে নয়, শক্তি (f′c) দিয়ে কংক্রিট নির্দিষ্ট করে — অনুপাত শুধু আভাস।",
+        "en": "1:2:4 means one part cement, two parts sand, four parts khoa or stone — by volume, not by weight. Measuring boxes are meant to be used; counted shovelfuls do not hold a ratio. And note that for structural work BNBC 2020 specifies concrete by characteristic strength (f′c), not by ratio — the ratio is only an indication."
+      },
+      "watch_for": [
+        {
+          "bn": "মাপার বাক্স আছে কি না দেখুন। না থাকলে সেটাই প্রথম সমস্যা।",
+          "en": "Check whether measuring boxes exist at all. If not, that is the first problem."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৬ — কংক্রিটের শক্তি নির্ধারণ",
+            "en": "BNBC 2020, Part 6 — specifying concrete strength"
+          },
+          "status": "review"
+        }
+      ]
     },
     {
-     "bn": "কত দিন পানি দিতে হবে তা সিমেন্টের ধরনের উপর নির্ভর করে — দপ্তরের স্পেসিফিকেশন দেখুন।",
-     "en": "How many days depends on the cement type — check the department's specification."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৭ — কিউরিং",
-      "en": "BNBC 2020, Part 7 — curing"
-     },
-     "status": "review"
-    }
-   ]
-  },
-  {
-   "id": "m4c4",
-   "title": {
-    "bn": "ঢালাই — ধাপে ধাপে কী হওয়ার কথা",
-    "en": "A pour, step by step"
-   },
-   "body": {
-    "bn": "ঢালাইয়ের দিন যা হওয়ার কথা, ক্রম মেনে। এক, ঢালাইয়ের আগে ফর্মা ও শাটারিং পরীক্ষা — ফাঁক থাকলে সিমেন্টের পানি বেরিয়ে যায়, ভেতরে ফাঁপা থেকে যায়। দুই, রড ও কভার ব্লক দেখা — একবার ঢাললে আর দেখা যাবে না। তিন, মাপার বাক্সে মিশ্রণ, বেলচা গুনে নয়। চার, মিক্সার মেশিনে মেশানো, হাতে নয়। পাঁচ, ঢালার পর ভাইব্রেটর দিয়ে চাপা — বাতাস বের করার জন্য, কিন্তু একই জায়গায় বেশিক্ষণ নয়। ছয়, উপরটা সমান করা। সাত, নমুনা (সিলিন্ডার) নেওয়া। আট, সেদিন থেকেই কিউরিং শুরু।\n\nএকটানা ঢালাই জরুরি। মাঝপথে অনেকক্ষণ থেমে গেলে দুই অংশ ঠিকমতো জোড়া লাগে না — একে বলে কোল্ড জয়েন্ট, আর ওখান থেকেই পরে পানি ঢোকে।",
-    "en": "What should happen on pour day, in order. One: check the formwork and shuttering before anything is poured — gaps let the cement paste run out and leave voids inside. Two: look at the steel and the cover blocks; once it is poured you will never see them again. Three: batch with measuring boxes, not counted shovels. Four: mix in the machine, not on the ground. Five: compact with a vibrator after placing — to drive the air out, but never held in one spot. Six: level the top. Seven: cast the test cylinders. Eight: start curing the same day.\n\nA pour should be continuous. A long stop in the middle leaves the two parts imperfectly joined — a cold joint — and that is where water gets in later."
-   },
-   "watch_for": [
-    {
-     "bn": "ঢালাই শুরুর আগে ফর্মার ফাঁক আর কভার ব্লক — এই দুটোই একবার দেখলে অর্ধেক কাজ হয়ে যায়।",
-     "en": "Gaps in the formwork and the cover blocks: check those two before the pour and you have covered half of it."
+      "id": "m4c2",
+      "title": {
+        "bn": "পানি কেন সমস্যা",
+        "en": "Why water is the problem"
+      },
+      "body": {
+        "bn": "পানি বেশি দিলে মিশ্রণ পাতলা হয়, ঢালতে সহজ হয়, শ্রমিকের কষ্ট কমে। কিন্তু শুকানোর পর ঐ বাড়তি পানির জায়গায় অসংখ্য ছিদ্র থেকে যায়, আর কংক্রিট দুর্বল হয়। উপরে দেখে বোঝার উপায় নেই — এখানেই বিপদ। তাই ঢালাইয়ের সময় উপস্থিত থাকা জরুরি, পরে এসে লাভ নেই।",
+        "en": "Extra water thins the mix, makes it easier to place, and saves the crew effort. But when it dries, the space that water occupied is left behind as pores, and the concrete is weaker. Nothing on the surface shows it — which is exactly the danger. This is why being present during the pour matters and inspecting afterwards does not."
+      },
+      "watch_for": [
+        {
+          "bn": "মিশ্রণ পানির মতো গড়িয়ে পড়লে পানি বেশি। ভিডিও করে রাখুন।",
+          "en": "If the mix runs like water, there is too much water. Take a video."
+        },
+        {
+          "bn": "ঢালাইয়ের নমুনা (সিলিন্ডার) নেওয়া হচ্ছে কি না জিজ্ঞেস করুন।",
+          "en": "Ask whether test cylinders are being cast from the pour."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
+            "en": "BNBC 2020, Part 7 — Construction Practices"
+          },
+          "status": "review"
+        }
+      ]
     },
     {
-     "bn": "মাঝপথে দীর্ঘ বিরতি হলে সময় লিখে রাখুন — কোল্ড জয়েন্টের প্রমাণ ওটাই।",
-     "en": "If there is a long break mid-pour, write down the times. That is your evidence of a cold joint."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
-      "en": "BNBC 2020, Part 7 — Construction Practices"
-     },
-     "status": "review"
-    }
-   ],
-   "diagram": "rcc_pour"
-  },
-  {
-   "id": "m4c5",
-   "title": {
-    "bn": "কিউরিং — কীভাবে করতে হয়",
-    "en": "Curing, and how it is actually done"
-   },
-   "body": {
-    "bn": "কিউরিং মানে ঢালাই ভেজা রাখা, যাতে সিমেন্ট ধীরে ধীরে শক্তি পায়। শুকিয়ে গেলে সেই শক্তি আর কখনো ফিরে আসে না — পরে পানি দিলেও না।\n\nছাদ বা মেঝেতে: চারপাশে মাটি বা বালির আলপথ তুলে পানি জমিয়ে রাখা হয় — একে বলে পন্ডিং। পানি যেন সারাক্ষণ থাকে; শুকিয়ে গেলে আবার দিতে হবে।\n\nকলাম, বিম ও দেয়ালে: ভেজা চটের বস্তা জড়িয়ে রাখা হয়, আর দিনে কয়েকবার পানি দেওয়া হয়। বস্তা শুকিয়ে গেলে কিউরিং হচ্ছে না।\n\nকত দিন: সিমেন্টের ধরন আর আবহাওয়ার উপর নির্ভর করে, আর দপ্তরের স্পেসিফিকেশনে লেখা থাকে। গরমে ও বাতাসে পানি দ্রুত শুকায়, তাই তখন বেশি বার দিতে হয়।",
-    "en": "Curing means keeping a pour wet so the cement can go on gaining strength. Strength lost to early drying never comes back, no matter how much water is added afterwards.\n\nOn a slab or floor: a low bund of earth or sand is raised around the edge and water kept standing on it — ponding. The water has to stay there; once it dries it must be topped up.\n\nOn columns, beams and walls: wet hessian is wrapped around and watered several times a day. If the hessian is dry, no curing is happening.\n\nFor how long: it depends on the cement type and the weather, and the department's specification says. Heat and wind dry it faster, so it needs watering more often, not less."
-   },
-   "watch_for": [
-    {
-     "bn": "সকালে গিয়ে দেখুন — রাতভর পানি ছিল কি না তখনই বোঝা যায়।",
-     "en": "Go in the morning. That is when you can tell whether it stayed wet overnight."
+      "id": "m4c3",
+      "title": {
+        "bn": "কিউরিং — ঢালাইয়ের পর পানি দেওয়া",
+        "en": "Curing — watering after the pour"
+      },
+      "body": {
+        "bn": "ঢালাই শেষ মানে কাজ শেষ নয়। কংক্রিট শক্তি পায় ধীরে ধীরে, আর তার জন্য ভেজা থাকতে হয়। কয়েক দিন নিয়মিত পানি না দিলে শক্তি অনেকটা কমে যায় এবং ফাটল ধরে। চটের বস্তা ভিজিয়ে ঢেকে রাখা, পানি জমিয়ে রাখা — দুটোই প্রচলিত পদ্ধতি। কিউরিং না করা সবচেয়ে সহজে ধরা পড়ে, কারণ এটা দিনের পর দিন চোখে পড়ে।",
+        "en": "The pour is not the end of the job. Concrete gains strength slowly and needs to stay wet to do it. Skip the watering for a few days and it loses a large part of its strength and cracks. Wet hessian and ponding are the usual methods. Missed curing is the easiest defect for a citizen to catch, because it is visible day after day."
+      },
+      "watch_for": [
+        {
+          "bn": "একই জায়গার ছবি কয়েক দিন ধরে তুলুন — শুকনা ঢালাইয়ের ধারাবাহিক ছবি শক্ত প্রমাণ।",
+          "en": "Photograph the same spot on successive days. A run of dry-slab photographs is strong evidence."
+        },
+        {
+          "bn": "কত দিন পানি দিতে হবে তা সিমেন্টের ধরনের উপর নির্ভর করে — দপ্তরের স্পেসিফিকেশন দেখুন।",
+          "en": "How many days depends on the cement type — check the department's specification."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৭ — কিউরিং",
+            "en": "BNBC 2020, Part 7 — curing"
+          },
+          "status": "review"
+        }
+      ]
     },
     {
-     "bn": "শুকনা চটের বস্তা মানে কিউরিং হচ্ছে না — বস্তা থাকলেই হলো না।",
-     "en": "Dry hessian means no curing. The sacking being there is not the point."
+      "id": "m4c4",
+      "title": {
+        "bn": "ঢালাই — ধাপে ধাপে কী হওয়ার কথা",
+        "en": "A pour, step by step"
+      },
+      "body": {
+        "bn": "ঢালাইয়ের দিন যা হওয়ার কথা, ক্রম মেনে। এক, ঢালাইয়ের আগে ফর্মা ও শাটারিং পরীক্ষা — ফাঁক থাকলে সিমেন্টের পানি বেরিয়ে যায়, ভেতরে ফাঁপা থেকে যায়। দুই, রড ও কভার ব্লক দেখা — একবার ঢাললে আর দেখা যাবে না। তিন, মাপার বাক্সে মিশ্রণ, বেলচা গুনে নয়। চার, মিক্সার মেশিনে মেশানো, হাতে নয়। পাঁচ, ঢালার পর ভাইব্রেটর দিয়ে চাপা — বাতাস বের করার জন্য, কিন্তু একই জায়গায় বেশিক্ষণ নয়। ছয়, উপরটা সমান করা। সাত, নমুনা (সিলিন্ডার) নেওয়া। আট, সেদিন থেকেই কিউরিং শুরু।\n\nএকটানা ঢালাই জরুরি। মাঝপথে অনেকক্ষণ থেমে গেলে দুই অংশ ঠিকমতো জোড়া লাগে না — একে বলে কোল্ড জয়েন্ট, আর ওখান থেকেই পরে পানি ঢোকে।",
+        "en": "What should happen on pour day, in order. One: check the formwork and shuttering before anything is poured — gaps let the cement paste run out and leave voids inside. Two: look at the steel and the cover blocks; once it is poured you will never see them again. Three: batch with measuring boxes, not counted shovels. Four: mix in the machine, not on the ground. Five: compact with a vibrator after placing — to drive the air out, but never held in one spot. Six: level the top. Seven: cast the test cylinders. Eight: start curing the same day.\n\nA pour should be continuous. A long stop in the middle leaves the two parts imperfectly joined — a cold joint — and that is where water gets in later."
+      },
+      "watch_for": [
+        {
+          "bn": "ঢালাই শুরুর আগে ফর্মার ফাঁক আর কভার ব্লক — এই দুটোই একবার দেখলে অর্ধেক কাজ হয়ে যায়।",
+          "en": "Gaps in the formwork and the cover blocks: check those two before the pour and you have covered half of it."
+        },
+        {
+          "bn": "মাঝপথে দীর্ঘ বিরতি হলে সময় লিখে রাখুন — কোল্ড জয়েন্টের প্রমাণ ওটাই।",
+          "en": "If there is a long break mid-pour, write down the times. That is your evidence of a cold joint."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
+            "en": "BNBC 2020, Part 7 — Construction Practices"
+          },
+          "status": "review"
+        }
+      ],
+      "diagram": "rcc_pour"
     },
     {
-     "bn": "পরপর কয়েক দিনের ছবিই সবচেয়ে শক্ত প্রমাণ।",
-     "en": "Photographs on consecutive days are the strongest evidence there is."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
-      "en": "BNBC 2020, Part 7 — Construction Practices"
-     },
-     "status": "review"
-    }
-   ],
-   "diagram": "curing"
-  },
-  {
-   "id": "m4c6",
-   "title": {
-    "bn": "প্লাস্টার — কীভাবে হওয়ার কথা",
-    "en": "Plaster, and how it should be done"
-   },
-   "body": {
-    "bn": "আগে প্রস্তুতি। গাঁথুনির জোড়া থেকে বাড়তি মসলা চেঁছে ফেলা হয়, পৃষ্ঠ পরিষ্কার করা হয়, আর প্লাস্টারের আগের দিন ও ঠিক আগে ভিজিয়ে নেওয়া হয়। শুকনা দেয়ালে প্লাস্টার করলে দেয়াল মসলার পানি টেনে নেয়, আর প্লাস্টার ঝুরঝুরে হয়ে যায়।\n\nসমান পুরুত্বের জন্য দেয়ালে কয়েক জায়গায় ছোট ছোট গাইড (থাই বা পাটি) বসানো হয়, তারপর তার সমান করে প্লাস্টার টানা হয়। গাইড ছাড়া করলে কোথাও পাতলা কোথাও মোটা হয়।\n\nপুরুত্ব: ভেতরের দেয়ালে সাধারণত আধা ইঞ্চি, বাইরের দেয়ালে তিন-চতুর্থাংশ ইঞ্চি, ছাদের নিচে আরও পাতলা — তবে নির্দিষ্ট মাপ স্পেসিফিকেশনে থাকে।\n\nএবং প্লাস্টারেও কিউরিং লাগে। শেষ হওয়ার পর কয়েক দিন পানি না দিলে চুল-ফাটল ধরবেই।",
-    "en": "Preparation first. The joints of the masonry are raked out, the surface cleaned, and the wall wetted the day before and again just before work starts. Plaster on a dry wall loses its water into the wall and goes powdery.\n\nTo keep the thickness even, small guide patches are set on the wall and the plaster is then screeded flush with them. Without guides it ends up thick in places and thin in others.\n\nThickness: an inner wall is usually about half an inch, an outer wall three quarters, a ceiling soffit thinner still — but the specification gives the figure that applies.\n\nAnd plaster needs curing too. Without water for a few days after it is finished, it will craze."
-   },
-   "watch_for": [
-    {
-     "bn": "দেয়াল ভেজানো হয়েছে কি না — প্লাস্টার শুরুর আগে দেখুন।",
-     "en": "Was the wall wetted? Check before the plastering starts."
+      "id": "m4c5",
+      "title": {
+        "bn": "কিউরিং — কীভাবে করতে হয়",
+        "en": "Curing, and how it is actually done"
+      },
+      "body": {
+        "bn": "কিউরিং মানে ঢালাই ভেজা রাখা, যাতে সিমেন্ট ধীরে ধীরে শক্তি পায়। শুকিয়ে গেলে সেই শক্তি আর কখনো ফিরে আসে না — পরে পানি দিলেও না।\n\nছাদ বা মেঝেতে: চারপাশে মাটি বা বালির আলপথ তুলে পানি জমিয়ে রাখা হয় — একে বলে পন্ডিং। পানি যেন সারাক্ষণ থাকে; শুকিয়ে গেলে আবার দিতে হবে।\n\nকলাম, বিম ও দেয়ালে: ভেজা চটের বস্তা জড়িয়ে রাখা হয়, আর দিনে কয়েকবার পানি দেওয়া হয়। বস্তা শুকিয়ে গেলে কিউরিং হচ্ছে না।\n\nকত দিন: সিমেন্টের ধরন আর আবহাওয়ার উপর নির্ভর করে, আর দপ্তরের স্পেসিফিকেশনে লেখা থাকে। গরমে ও বাতাসে পানি দ্রুত শুকায়, তাই তখন বেশি বার দিতে হয়।",
+        "en": "Curing means keeping a pour wet so the cement can go on gaining strength. Strength lost to early drying never comes back, no matter how much water is added afterwards.\n\nOn a slab or floor: a low bund of earth or sand is raised around the edge and water kept standing on it — ponding. The water has to stay there; once it dries it must be topped up.\n\nOn columns, beams and walls: wet hessian is wrapped around and watered several times a day. If the hessian is dry, no curing is happening.\n\nFor how long: it depends on the cement type and the weather, and the department's specification says. Heat and wind dry it faster, so it needs watering more often, not less."
+      },
+      "watch_for": [
+        {
+          "bn": "সকালে গিয়ে দেখুন — রাতভর পানি ছিল কি না তখনই বোঝা যায়।",
+          "en": "Go in the morning. That is when you can tell whether it stayed wet overnight."
+        },
+        {
+          "bn": "শুকনা চটের বস্তা মানে কিউরিং হচ্ছে না — বস্তা থাকলেই হলো না।",
+          "en": "Dry hessian means no curing. The sacking being there is not the point."
+        },
+        {
+          "bn": "পরপর কয়েক দিনের ছবিই সবচেয়ে শক্ত প্রমাণ।",
+          "en": "Photographs on consecutive days are the strongest evidence there is."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
+            "en": "BNBC 2020, Part 7 — Construction Practices"
+          },
+          "status": "review"
+        }
+      ],
+      "diagram": "curing"
     },
     {
-     "bn": "গাইড আছে কি না দেখুন। না থাকলে পুরুত্ব সমান হবে না, আর বিলে কিন্তু পূর্ণ পুরুত্বের টাকা যাবে।",
-     "en": "Look for the guide patches. Without them the thickness will not be even, though the bill will be for the full thickness."
+      "id": "m4c6",
+      "title": {
+        "bn": "প্লাস্টার — কীভাবে হওয়ার কথা",
+        "en": "Plaster, and how it should be done"
+      },
+      "body": {
+        "bn": "আগে প্রস্তুতি। গাঁথুনির জোড়া থেকে বাড়তি মসলা চেঁছে ফেলা হয়, পৃষ্ঠ পরিষ্কার করা হয়, আর প্লাস্টারের আগের দিন ও ঠিক আগে ভিজিয়ে নেওয়া হয়। শুকনা দেয়ালে প্লাস্টার করলে দেয়াল মসলার পানি টেনে নেয়, আর প্লাস্টার ঝুরঝুরে হয়ে যায়।\n\nসমান পুরুত্বের জন্য দেয়ালে কয়েক জায়গায় ছোট ছোট গাইড (থাই বা পাটি) বসানো হয়, তারপর তার সমান করে প্লাস্টার টানা হয়। গাইড ছাড়া করলে কোথাও পাতলা কোথাও মোটা হয়।\n\nপুরুত্ব: ভেতরের দেয়ালে সাধারণত আধা ইঞ্চি, বাইরের দেয়ালে তিন-চতুর্থাংশ ইঞ্চি, ছাদের নিচে আরও পাতলা — তবে নির্দিষ্ট মাপ স্পেসিফিকেশনে থাকে।\n\nএবং প্লাস্টারেও কিউরিং লাগে। শেষ হওয়ার পর কয়েক দিন পানি না দিলে চুল-ফাটল ধরবেই।",
+        "en": "Preparation first. The joints of the masonry are raked out, the surface cleaned, and the wall wetted the day before and again just before work starts. Plaster on a dry wall loses its water into the wall and goes powdery.\n\nTo keep the thickness even, small guide patches are set on the wall and the plaster is then screeded flush with them. Without guides it ends up thick in places and thin in others.\n\nThickness: an inner wall is usually about half an inch, an outer wall three quarters, a ceiling soffit thinner still — but the specification gives the figure that applies.\n\nAnd plaster needs curing too. Without water for a few days after it is finished, it will craze."
+      },
+      "watch_for": [
+        {
+          "bn": "দেয়াল ভেজানো হয়েছে কি না — প্লাস্টার শুরুর আগে দেখুন।",
+          "en": "Was the wall wetted? Check before the plastering starts."
+        },
+        {
+          "bn": "গাইড আছে কি না দেখুন। না থাকলে পুরুত্ব সমান হবে না, আর বিলে কিন্তু পূর্ণ পুরুত্বের টাকা যাবে।",
+          "en": "Look for the guide patches. Without them the thickness will not be even, though the bill will be for the full thickness."
+        },
+        {
+          "bn": "কিনারায় ফিতা বসিয়ে পুরুত্ব মাপা যায় — দরজার চৌকাঠের পাশে সবচেয়ে সহজ।",
+          "en": "Thickness can be measured at an edge — beside a door frame is easiest."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
+            "en": "BNBC 2020, Part 7 — Construction Practices"
+          },
+          "status": "review"
+        }
+      ],
+      "diagram": "plaster"
     },
     {
-     "bn": "কিনারায় ফিতা বসিয়ে পুরুত্ব মাপা যায় — দরজার চৌকাঠের পাশে সবচেয়ে সহজ।",
-     "en": "Thickness can be measured at an edge — beside a door frame is easiest."
-    }
-   ],
-   "citations": [
+      "id": "m4c7",
+      "title": {
+        "bn": "স্লাম্প আর সিলিন্ডার — ঢালাইয়ের দিনের দুই পরীক্ষা",
+        "en": "Slump and cylinders: the two tests done on pour day"
+      },
+      "body": {
+        "bn": "ঢালাইয়ের দিন দুটো পরীক্ষা হওয়ার কথা, আর দুটোই আপনার সামনে হয়।\n\n**স্লাম্প** মাপে মিশ্রণটা কতটা পাতলা। একটা ধাতব কোণক — উপরের মুখ ৪ ইঞ্চি, নিচের মুখ ৮ ইঞ্চি, উচ্চতা ১২ ইঞ্চি — কংক্রিট দিয়ে ভরে উল্টে তুলে নেওয়া হয়, তারপর দেখা হয় ঢিবিটা কতটা বসে গেল। বেশি বসা মানে বেশি পানি। এটা সঙ্গে সঙ্গেই জানা যায়, আর তখনই ব্যাচটা ফেরানো যায়।\n\n**সিলিন্ডার** প্রমাণ করে শক্তি, কিন্তু অনেক পরে। একই কংক্রিট থেকে ছাঁচে ভরে রাখা নমুনা পানিতে রেখে ল্যাবে ভাঙা হয়। ছাঁচের চেনা মাপ দুটো: আগে ব্যবহৃত হতো ৬ ইঞ্চি ব্যাস ও ১২ ইঞ্চি লম্বা, এখন ৪ ইঞ্চি ব্যাস ও ৮ ইঞ্চি লম্বা।\n\nপার্থক্যটা কাজের: স্লাম্প আজকের ব্যাচ নিয়ে সিদ্ধান্ত নিতে দেয়, সিলিন্ডার পরে প্রমাণ দেয়। একটা দিয়ে অন্যটার কাজ চলে না।",
+        "en": "Two tests belong to pour day, and both happen in front of you.\n\n**Slump** measures how wet the mix is. A metal cone — four inches across the top, eight across the bottom, twelve high — is filled with concrete, lifted off, and the heap is measured for how far it subsides. More slump means more water. The answer arrives immediately, which is the whole point: a batch can still be turned away.\n\n**Cylinders** prove strength, but long afterwards. Samples from the same concrete are cast in moulds, cured in water and broken at a laboratory. Two mould sizes are familiar: six inches diameter by twelve long was the older one; four by eight is what is used now.\n\nThe difference matters. Slump lets you decide about today's batch; a cylinder gives you proof later. Neither does the other's job."
+      },
+      "watch_for": [
+        {
+          "bn": "স্লাম্প পরীক্ষা না হলে জিজ্ঞেস করুন কেন — যন্ত্রটা সস্তা আর সময় লাগে মিনিট।",
+          "en": "If no slump test is done, ask why. The cone is cheap and the test takes minutes."
+        },
+        {
+          "bn": "সিলিন্ডার ভরার সময় ছবি তুলুন — পরে রিপোর্টের সঙ্গে মেলানোর জন্য।",
+          "en": "Photograph the cylinders as they are filled, to match against the report later."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), অতিরিক্ত অধ্যায়-৩",
+            "en": "Bari Nirman o Site Supervision (2019), supplementary chapter 3"
+          },
+          "clause": {
+            "bn": "স্লাম্প কোণ ও সিলিন্ডারের মাপ",
+            "en": "Slump cone and cylinder sizes"
+          },
+          "status": "review"
+        }
+      ]
+    },
     {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৭ — নির্মাণ পদ্ধতি",
-      "en": "BNBC 2020, Part 7 — Construction Practices"
-     },
-     "status": "review"
+      "id": "m4c8",
+      "title": {
+        "bn": "সেগ্রিগেশন আর ব্লিডিং — বেশি পানির দুই চেহারা",
+        "en": "Segregation and bleeding: two faces of too much water"
+      },
+      "body": {
+        "bn": "অতিরিক্ত পানির ক্ষতি দুই নামে চেনা যায়, আর দুটোই খালি চোখে দেখা যায় — যদি জানা থাকে কী দেখতে হবে।\n\n**সেগ্রিগেশন** হলো উপাদান আলাদা হয়ে যাওয়া। পানি-সিমেন্টের অনুপাত বেশি হলে মিক্সার থেকে ফেলার পর, কিংবা উঁচু থেকে ঢালাইয়ের জায়গায় ফেলার পর, সিমেন্ট-বালু খোয়া থেকে আলাদা হয়ে যায়। ফল: এক জায়গায় খোয়ার স্তূপ, অন্য জায়গায় কেবল মশলা।\n\n**ব্লিডিং** সেগ্রিগেশনেরই একটা ধরন, যেখানে কংক্রিট থেকে সিমেন্ট থিতিয়ে যায়। এর ফলে উপরিতলে চুলের মতো সরু ফাটল দেখা দিতে পারে, আর কংক্রিট ক্ষতিগ্রস্ত হয়।\n\nপানি-সিমেন্ট অনুপাত সাধারণত ০.৪ থেকে ০.৫-এর মধ্যে রাখা হয়। মিশ্রণ কাজের উপযোগী না হলে সমাধান পানি বাড়ানো নয় — সিমেন্ট বাড়িয়ে অনুপাতটা ঠিক রাখা। উঁচু থেকে ফেলা কমানোও একই সমস্যার আরেকটা দিক।",
+        "en": "The harm from extra water goes by two names, and both are visible to the naked eye — if you know what you are looking at.\n\n**Segregation** is the ingredients coming apart. Where the water-cement ratio is high, cement and sand separate from the khoa after discharge from the mixer, or after being dropped from a height into place. The result is khoa heaped in one spot and mortar alone in another.\n\n**Bleeding** is a kind of segregation in which cement settles out of the concrete. It damages the concrete and can leave hairline cracks across the surface.\n\nThe water-cement ratio is ordinarily held between 0.4 and 0.5. When a mix is not workable the answer is not more water but more cement, keeping the ratio where it belongs. Reducing the height concrete falls from is the other half of the same problem."
+      },
+      "watch_for": [
+        {
+          "bn": "ঢালাইয়ের পর জায়গায় জায়গায় খোয়া জমে থাকলে সেটা সেগ্রিগেশন।",
+          "en": "Khoa collected in patches after placing is segregation."
+        },
+        {
+          "bn": "উপরিতলে পানি জমে সিমেন্টের পাতলা স্তর ভেসে উঠলে সেটা ব্লিডিং।",
+          "en": "Water standing on top with a thin film of cement floated up is bleeding."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), অতিরিক্ত অধ্যায়-৩",
+            "en": "Bari Nirman o Site Supervision (2019), supplementary chapter 3"
+          },
+          "clause": {
+            "bn": "সেগ্রিগেশন, ব্লিডিং ও ওয়াটার-সিমেন্ট রেশিও",
+            "en": "Segregation, bleeding and the water-cement ratio"
+          },
+          "status": "review"
+        }
+      ]
     }
-   ],
-   "diagram": "plaster"
-  }
- ]
+  ]
 }
