@@ -171,6 +171,40 @@
           "status": "ruleOfThumb"
         }
       ]
+    },
+    {
+      "id": "m22c6",
+      "title": {
+        "bn": "টয়লেট, ড্রেন আর ছাদে যা ফেলা বা রাখা যায় না",
+        "en": "What must not go down the toilet, the drain, or sit on the roof"
+      },
+      "body": {
+        "bn": "নিষ্কাশন ব্যবস্থা যত ভালো করেই বানানো হোক, কয়েকটা অভ্যাস সেটা নষ্ট করে দেয় — আর মেরামতের খরচ প্রতিবারই নতুন করে লাগে।\n\nটয়লেটের প্যান বা কমোডে অন্য ময়লা, আবর্জনা, এমনকি সাবানের পানিও ফেলা উচিত নয়। সাবানের পানি সেপটিক ট্যাংকের ভেতরের জীবাণুর কাজ নষ্ট করে, আর ট্যাংক কাজ করা বন্ধ করলে সেটা বোঝা যায় গন্ধ আর উপচে পড়া দিয়ে।\n\nড্রেনের মুখে এমন আবর্জনা ফেলা উচিত নয় যাতে মুখ বন্ধ হয়ে যায়।\n\nছাদে বড় গাছপালা থাকা ক্ষতিকর — শিকড় ঢালাইয়ের ফাটল ধরে ভেতরে ঢোকে। দেয়াল বা ছাদে আগাছা দেখা মাত্র নির্মূল করতে হয়, ছোট থাকতেই।\n\nআর ঘরের দেয়াল বা ছাদ কোথাও ভিজে গেলে ভেজার কারণ দ্রুত বের করে তার প্রতিকার করতে হয়। ভেজা দাগ নিজে থেকে শুকায় না; যেটা শুকায় সেটা কেবল ঋতু।",
+        "en": "However well drainage is built, a few habits undo it — and the repair costs afresh every time.\n\nOther waste, rubbish, even soapy water should not go into the toilet pan or commode. Soapy water disrupts the bacteria doing the work inside a septic tank, and a tank that has stopped working announces itself by smell and by backing up.\n\nRubbish that can block the mouth of a drain does not belong at the mouth of a drain.\n\nLarge plants on the roof are harmful — roots follow a crack in the casting inward. Weeds on a wall or roof are removed as soon as they appear, while they are still small.\n\nAnd where a wall or roof goes damp anywhere, the cause is found quickly and dealt with. A damp patch does not dry on its own; what dries is only the season."
+      },
+      "watch_for": [
+        {
+          "bn": "সেপটিক ট্যাংকে গন্ধ বা উপচে পড়া মানে ভেতরের কাজটা থেমে গেছে।",
+          "en": "Smell or backing up from a septic tank means the work inside it has stalled."
+        },
+        {
+          "bn": "বর্ষার আগে ছাদের ঢাল আর পানি নিষ্কাশনের পাইপ দেখে নিন।",
+          "en": "Before the monsoon, check the roof falls and its drainage pipes."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পরিশিষ্ট-৫",
+            "en": "Bari Nirman o Site Supervision (2019), appendix 5"
+          },
+          "clause": {
+            "bn": "পানি সরবরাহ ও নিষ্কাশন সম্পর্কে গুরুত্বপূর্ণ বিষয়",
+            "en": "Important points on water supply and drainage"
+          },
+          "status": "review"
+        }
+      ]
     }
   ]
 }

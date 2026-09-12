@@ -274,6 +274,40 @@
           "status": "review"
         }
       ]
+    },
+    {
+      "id": "m21c9",
+      "title": {
+        "bn": "বিদ্যুতের কাজ: যেসব সিদ্ধান্ত আগেই নিতে হয়",
+        "en": "Electrical work: the decisions that have to come first"
+      },
+      "body": {
+        "bn": "বিদ্যুতের কাজের খরচ আর ঝামেলার বড় অংশ আসে দেরিতে নেওয়া সিদ্ধান্ত থেকে। কয়েকটি জিনিস সংযোগ নেওয়ার আগেই ঠিক করে ফেলার কথা।\n\nবাড়িটি বাণিজ্যিক না নিজস্ব ব্যবহারের — এর উপর মিটারের সংখ্যা নির্ভর করে, আর গ্রাহক শ্রেণি অনুযায়ী বিলের হারও আলাদা। থ্রি-ফেজ না সিংগেল ফেজ লাগবে, সেটাও আগে। বজ্র নিরোধক লাগবে কি না এবং লাগলে কোন কোন পয়েন্টে, তা-ও আগে। আর সার্ভিস কানেকশন কোথা থেকে আসবে এবং এম.ডি.বি./এস.ডি.বি. কোথায় বসবে — এই একটি সিদ্ধান্ত ভুল হলে বাড়তি তারের পেছনে টাকা যায়।\n\nওয়্যারিং শেষ হওয়ার পর দুটো পরীক্ষা হওয়ার কথা, মিটার দিয়ে, প্রতিটি পয়েন্টে: কন্টিনিউটি টেস্ট আর ইনসুলেশন রেজিস্ট্যান্স টেস্ট। দেয়ালে ঢুকে যাওয়ার আগেই এগুলো হওয়ার কথা।\n\nউল্টো দিকও আছে: প্রয়োজনের চেয়ে মোটা তার বা বড় সুইচবোর্ড খরচ বাড়ায়, কাজ বাড়ায় না। বোর্ডে ইন্ডিকেটিং লাইট রাখারও দরকার নেই — ওটা সারাক্ষণ বিদ্যুৎ পোড়ায়।",
+        "en": "Much of what electrical work costs, and most of what goes wrong with it, comes from decisions taken late. Several belong before the connection is even applied for.\n\nWhether the building is commercial or for your own use, since the number of meters follows from it and the tariff class differs. Whether the line is three-phase or single. Whether a lightning arrester is needed and at which points. And where the service connection enters and where the MDB and SDB will sit — get that one wrong and the money goes into extra cable.\n\nTwo tests belong after the wiring and before it disappears into the wall, done with a meter at every point: a continuity test and an insulation resistance test.\n\nIt runs the other way too. Cable heavier than the load needs, or an oversized switchboard, adds cost without adding anything. An indicating light on the board is not needed either — it burns current around the clock."
+      },
+      "watch_for": [
+        {
+          "bn": "ওয়্যারিং ঢাকার আগে দুটি পরীক্ষার ফল লিখিতভাবে চেয়ে নিন।",
+          "en": "Ask for both test results in writing before the wiring is covered."
+        },
+        {
+          "bn": "সুইচ, সকেট আর ফিটিং শিশুদের নাগালের বাইরে রাখা হয়েছে কি না দেখুন।",
+          "en": "Check that switches, sockets and fittings are out of children's reach."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পরিশিষ্ট-৫",
+            "en": "Bari Nirman o Site Supervision (2019), appendix 5"
+          },
+          "clause": {
+            "bn": "বৈদ্যুতিক কাজের গুরুত্বপূর্ণ বিষয়সমূহ",
+            "en": "Important points in electrical work"
+          },
+          "status": "review"
+        }
+      ]
     }
   ]
 }

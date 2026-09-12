@@ -375,6 +375,40 @@
           "status": "review"
         }
       ]
+    },
+    {
+      "id": "m3c12",
+      "title": {
+        "bn": "সিমেন্ট কতদিনে কতটা শক্তি হারায়",
+        "en": "How much strength cement loses while it waits"
+      },
+      "body": {
+        "bn": "সিমেন্ট বসে থাকলে দুর্বল হয়, আর হারটা ধীরে নয়। মজুদ রাখার পর মোটামুটি তিন মাসে প্রায় ২০ শতাংশ, ছয় মাসে ৩০, বারো মাসে ৪০, আর চব্বিশ মাসে প্রায় ৫০ শতাংশ শক্তি কমে যায়। এ কারণেই সিমেন্ট সর্বোচ্চ ছয় মাস পর্যন্ত মজুদ রাখার কথা বলা হয়।\n\nব্যাগের গায়ের উৎপাদন তারিখটা তাই দামের মতোই গুরুত্বপূর্ণ। ছাড়ে পাওয়া পুরোনো সিমেন্ট আসলে ছাড় নয় — কম শক্তির মাল, পুরো দামে ঢালাইয়ে যাচ্ছে।\n\nভালো সিমেন্ট চেনার তিনটি সহজ উপায় আছে। ব্যাগে কোনো দলা থাকবে না। দুই আঙুলে ঘষলে ময়দার মতো মসৃণ লাগবে। আর পানির উপর ছিটিয়ে দিলে ডুবে যাবে, ভাসবে না।",
+        "en": "Cement weakens as it sits, and not slowly. Held in store it loses roughly 20 per cent of its strength by three months, 30 by six, 40 by twelve, and about half by twenty-four. That is why six months is given as the outside limit for storing it.\n\nThe manufacturing date on the bag therefore matters as much as the price. Old cement at a discount is not a discount — it is weaker material going into the pour at full effect.\n\nThree quick checks tell good cement. No lumps in the bag. Rubbed between two fingers it feels smooth, like flour. And sprinkled on water it sinks rather than floats."
+      },
+      "watch_for": [
+        {
+          "bn": "ছাড়ে দেওয়া সিমেন্টের তারিখ আগে দেখুন — ছাড়ের কারণ প্রায়ই ওটাই।",
+          "en": "Check the date on discounted cement first; the date is usually the reason."
+        },
+        {
+          "bn": "ঢালাইয়ের দিন যে ব্যাগগুলো খোলা হচ্ছে, তার তারিখ দেখে নিন।",
+          "en": "On pour day, look at the dates on the bags actually being opened."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পরিশিষ্ট-৫",
+            "en": "Bari Nirman o Site Supervision (2019), appendix 5"
+          },
+          "clause": {
+            "bn": "সিমেন্টের শক্তি হ্রাসের হার ও মজুদের সীমা",
+            "en": "Rate of cement strength loss and the storage limit"
+          },
+          "status": "review"
+        }
+      ]
     }
   ]
 }

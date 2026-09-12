@@ -1,144 +1,178 @@
 {
- "id": "m5_rebar",
- "code": "M5",
- "track": "both",
- "icon": "rebar",
- "title": {
-  "bn": "রড ও ঢালাইয়ের ভেতর",
-  "en": "Inside the concrete"
- },
- "summary": {
-  "bn": "গুনতে পারলেই হবে। ডিজাইন বোঝার দরকার নেই — সংখ্যা, দূরত্ব আর ঢাকনা মিলিয়ে দেখুন।",
-  "en": "You only need to count. You do not need to understand the design — check number, spacing and cover against the drawing."
- },
- "cards": [
-  {
-   "id": "m5c1",
-   "title": {
-    "bn": "রড গুনুন, দূরত্ব মাপুন",
-    "en": "Count the bars, measure the spacing"
-   },
-   "body": {
-    "bn": "নকশায় লেখা থাকে কয়টা রড আর কত দূরত্বে। ঢালাইয়ের আগে সেটা মেলানো যায় — গুনতে ইঞ্জিনিয়ার লাগে না। ছাদের রডের জালিতে দুই রডের মাঝের ফাঁক ফিতা দিয়ে মাপুন। ফাঁক বেশি মানে রড কম, আর রড কম মানে ঐ টাকা কোথাও গেছে।",
-    "en": "The drawing says how many bars and at what spacing. Before the pour, that can be checked — counting takes no engineer. Put a tape across the mesh and measure the gap between bars. A bigger gap means fewer bars, and fewer bars means the money for them went somewhere."
-   },
-   "watch_for": [
-    {
-     "bn": "রড বাঁধা শেষ, ঢালাই শুরুর আগে — এই সময়টাই একমাত্র সুযোগ।",
-     "en": "After tying, before pouring. That window is the only chance."
-    },
-    {
-     "bn": "নকশা দেখতে চান। না দেখালে সেটাও রিপোর্টে লিখুন।",
-     "en": "Ask to see the drawing. If it is refused, record that too."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৬ — রিইনফোর্সমেন্ট ডিটেইলিং",
-      "en": "BNBC 2020, Part 6 — reinforcement detailing"
-     },
-     "status": "review"
-    }
-   ],
-   "diagram": "slab_rebar"
+  "id": "m5_rebar",
+  "code": "M5",
+  "track": "both",
+  "icon": "rebar",
+  "title": {
+    "bn": "রড ও ঢালাইয়ের ভেতর",
+    "en": "Inside the concrete"
   },
-  {
-   "id": "m5c2",
-   "title": {
-    "bn": "কভার ব্লক",
-    "en": "Cover blocks"
-   },
-   "body": {
-    "bn": "রড কংক্রিটের ভেতরে থাকতে হয়, একদম কিনারায় নয়। রড আর বাইরের পৃষ্ঠের মাঝের এই দূরত্বকে বলে কভার। কভার কম হলে বাতাস ও পানি রডে পৌঁছে যায়, রডে মরিচা ধরে, কংক্রিট ফুলে ফেটে যায় — কয়েক বছরেই। ঠিক রাখার জন্য রডের নিচে ছোট সিমেন্টের ব্লক দেওয়া হয়। ইটের টুকরা দিয়ে কাজ চালানো হলে সেটা সমস্যা।",
-    "en": "Steel has to sit inside the concrete, not at its edge. The distance from the bar to the outer surface is the cover. Too little and air and water reach the steel, it rusts, and the concrete spalls — within a few years. Small cement blocks under the bars keep the cover right. Broken brick used instead is a defect."
-   },
-   "watch_for": [
-    {
-     "bn": "কভার ব্লক আছে কি না, আর সেগুলো সিমেন্টের না ইটের টুকরা — ছবি তুলুন।",
-     "en": "Check that cover blocks exist and whether they are cement or brick chips. Photograph it."
-    },
-    {
-     "bn": "কত কভার লাগবে তা কোন অংশ ও কী পরিবেশ তার উপর নির্ভর করে — নকশা দেখুন।",
-     "en": "How much cover depends on the member and the exposure — read it off the drawing."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৬ — কংক্রিট কভার",
-      "en": "BNBC 2020, Part 6 — concrete cover"
-     },
-     "status": "review"
-    }
-   ],
-   "diagram": "cover_block"
+  "summary": {
+    "bn": "গুনতে পারলেই হবে। ডিজাইন বোঝার দরকার নেই — সংখ্যা, দূরত্ব আর ঢাকনা মিলিয়ে দেখুন।",
+    "en": "You only need to count. You do not need to understand the design — check number, spacing and cover against the drawing."
   },
-  {
-   "id": "m5c3",
-   "title": {
-    "bn": "ল্যাপ ও রিং",
-    "en": "Laps and stirrups"
-   },
-   "body": {
-    "bn": "রড লম্বায় কম পড়লে দুটো রড পাশাপাশি রেখে বাঁধা হয় — একে বলে ল্যাপ। ল্যাপ কত লম্বা হবে তা নিয়ম দিয়ে ঠিক করা, চোখের আন্দাজে নয়, আর কিছু জায়গায় ল্যাপ দেওয়াই নিষেধ। কলাম ও বিমে চারপাশে যে রিং (স্টিরাপ) থাকে, সেগুলো ঠেকনার কাছাকাছি ঘন হওয়ার কথা। রিং ফাঁক ফাঁক হলে ভূমিকম্পে সেটাই আগে ভাঙে।",
-    "en": "When a bar is not long enough, two are overlapped and tied — a lap. How long the lap must be is set by rule, not by eye, and in some locations laps are not allowed at all. The rings (stirrups) around a column or beam are meant to be closer together near the supports. Widely spaced rings are what fail first in an earthquake."
-   },
-   "watch_for": [
+  "cards": [
     {
-     "bn": "সব ল্যাপ এক জায়গায় জড়ো হয়ে থাকলে প্রশ্ন করুন।",
-     "en": "If all the laps are bunched at the same section, ask about it."
+      "id": "m5c1",
+      "title": {
+        "bn": "রড গুনুন, দূরত্ব মাপুন",
+        "en": "Count the bars, measure the spacing"
+      },
+      "body": {
+        "bn": "নকশায় লেখা থাকে কয়টা রড আর কত দূরত্বে। ঢালাইয়ের আগে সেটা মেলানো যায় — গুনতে ইঞ্জিনিয়ার লাগে না। ছাদের রডের জালিতে দুই রডের মাঝের ফাঁক ফিতা দিয়ে মাপুন। ফাঁক বেশি মানে রড কম, আর রড কম মানে ঐ টাকা কোথাও গেছে।",
+        "en": "The drawing says how many bars and at what spacing. Before the pour, that can be checked — counting takes no engineer. Put a tape across the mesh and measure the gap between bars. A bigger gap means fewer bars, and fewer bars means the money for them went somewhere."
+      },
+      "watch_for": [
+        {
+          "bn": "রড বাঁধা শেষ, ঢালাই শুরুর আগে — এই সময়টাই একমাত্র সুযোগ।",
+          "en": "After tying, before pouring. That window is the only chance."
+        },
+        {
+          "bn": "নকশা দেখতে চান। না দেখালে সেটাও রিপোর্টে লিখুন।",
+          "en": "Ask to see the drawing. If it is refused, record that too."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৬ — রিইনফোর্সমেন্ট ডিটেইলিং",
+            "en": "BNBC 2020, Part 6 — reinforcement detailing"
+          },
+          "status": "review"
+        }
+      ],
+      "diagram": "slab_rebar"
     },
     {
-     "bn": "কলামের গোড়ায় ও মাথায় রিং ঘন আছে কি না দেখুন।",
-     "en": "Check that stirrups are closer together at the top and bottom of a column."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৬ — ল্যাপ ও ডেভেলপমেন্ট লেংথ",
-      "en": "BNBC 2020, Part 6 — lap and development length"
-     },
-     "status": "review"
-    }
-   ],
-   "diagram": "stirrup_spacing"
-  },
-  {
-   "id": "m5c4",
-   "title": {
-    "bn": "রড বাঁধা — কেমন দেখতে হওয়ার কথা",
-    "en": "Rod binding, and what it should look like"
-   },
-   "body": {
-    "bn": "রড শুধু রাখলেই হয় না, বাঁধতে হয় — নইলে ঢালাইয়ের সময় নড়ে যায় আর জায়গা বদলে যায়।\n\nজালিতে: প্রতিটি ক্রসিং-এ বা এক ঘর পরপর সরু বাঁধন তার দিয়ে বাঁধা হয়। বাঁধন আলগা হলে হাত দিলেই নড়ে — সেটাই পরীক্ষা।\n\nকলাম ও বিমে: চারপাশের রিং (স্টিরাপ) মূল রডের সঙ্গে বাঁধা থাকে, আর রিংয়ের দুই মাথা ভেতরের দিকে বাঁকানো থাকে — একে বলে হুক। হুক বাইরের দিকে থাকলে বা না থাকলে ভূমিকম্পে রিং খুলে যায়।\n\nরিংয়ের ঘনত্ব: কলামের গোড়ায় ও মাথায়, আর বিমের দুই প্রান্তে রিং ঘন থাকার কথা — মাঝখানে ফাঁক বেশি চলে। এটাই সবচেয়ে সহজে চোখে পড়ে।\n\nকভার ব্লক: রডের নিচে ও পাশে ছোট সিমেন্টের ব্লক, যাতে রড ফর্মা ছুঁয়ে না থাকে। ইটের টুকরা দিয়ে কাজ চালানো চলবে না।",
-    "en": "Steel is not just laid, it is tied — otherwise it shifts during the pour and ends up somewhere else.\n\nIn a mesh: the crossings are tied with binding wire, every one or every alternate one. If the mesh moves when you press it, the tying is loose. That is the test.\n\nIn columns and beams: the rings around the main bars are tied to them, and each ring's two ends are bent inwards — the hook. Hooks turned outwards, or missing, let the ring open in an earthquake.\n\nRing spacing: they should be closer together at the top and bottom of a column and at both ends of a beam, and may be wider in the middle. This is the easiest thing of all to see.\n\nCover blocks: small cement blocks under and beside the steel so no bar touches the formwork. Broken brick used instead will not do."
-   },
-   "watch_for": [
-    {
-     "bn": "জালিতে হাত দিয়ে চাপ দিন — নড়লে বাঁধন আলগা।",
-     "en": "Press the mesh with your hand. If it moves, the tying is loose."
+      "id": "m5c2",
+      "title": {
+        "bn": "কভার ব্লক",
+        "en": "Cover blocks"
+      },
+      "body": {
+        "bn": "রড কংক্রিটের ভেতরে থাকতে হয়, একদম কিনারায় নয়। রড আর বাইরের পৃষ্ঠের মাঝের এই দূরত্বকে বলে কভার। কভার কম হলে বাতাস ও পানি রডে পৌঁছে যায়, রডে মরিচা ধরে, কংক্রিট ফুলে ফেটে যায় — কয়েক বছরেই। ঠিক রাখার জন্য রডের নিচে ছোট সিমেন্টের ব্লক দেওয়া হয়। ইটের টুকরা দিয়ে কাজ চালানো হলে সেটা সমস্যা।",
+        "en": "Steel has to sit inside the concrete, not at its edge. The distance from the bar to the outer surface is the cover. Too little and air and water reach the steel, it rusts, and the concrete spalls — within a few years. Small cement blocks under the bars keep the cover right. Broken brick used instead is a defect."
+      },
+      "watch_for": [
+        {
+          "bn": "কভার ব্লক আছে কি না, আর সেগুলো সিমেন্টের না ইটের টুকরা — ছবি তুলুন।",
+          "en": "Check that cover blocks exist and whether they are cement or brick chips. Photograph it."
+        },
+        {
+          "bn": "কত কভার লাগবে তা কোন অংশ ও কী পরিবেশ তার উপর নির্ভর করে — নকশা দেখুন।",
+          "en": "How much cover depends on the member and the exposure — read it off the drawing."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৬ — কংক্রিট কভার",
+            "en": "BNBC 2020, Part 6 — concrete cover"
+          },
+          "status": "review"
+        }
+      ],
+      "diagram": "cover_block"
     },
     {
-     "bn": "কলামের গোড়ার দিকে রিং ঘন আছে কি না — এক নজরেই বোঝা যায়, আর ছবিতেও ধরা পড়ে।",
-     "en": "Whether the rings tighten up near the foot of a column takes one glance, and it shows in a photograph."
+      "id": "m5c3",
+      "title": {
+        "bn": "ল্যাপ ও রিং",
+        "en": "Laps and stirrups"
+      },
+      "body": {
+        "bn": "রড লম্বায় কম পড়লে দুটো রড পাশাপাশি রেখে বাঁধা হয় — একে বলে ল্যাপ। ল্যাপ কত লম্বা হবে তা নিয়ম দিয়ে ঠিক করা, চোখের আন্দাজে নয়, আর কিছু জায়গায় ল্যাপ দেওয়াই নিষেধ। কলাম ও বিমে চারপাশে যে রিং (স্টিরাপ) থাকে, সেগুলো ঠেকনার কাছাকাছি ঘন হওয়ার কথা। রিং ফাঁক ফাঁক হলে ভূমিকম্পে সেটাই আগে ভাঙে।",
+        "en": "When a bar is not long enough, two are overlapped and tied — a lap. How long the lap must be is set by rule, not by eye, and in some locations laps are not allowed at all. The rings (stirrups) around a column or beam are meant to be closer together near the supports. Widely spaced rings are what fail first in an earthquake."
+      },
+      "watch_for": [
+        {
+          "bn": "সব ল্যাপ এক জায়গায় জড়ো হয়ে থাকলে প্রশ্ন করুন।",
+          "en": "If all the laps are bunched at the same section, ask about it."
+        },
+        {
+          "bn": "কলামের গোড়ায় ও মাথায় রিং ঘন আছে কি না দেখুন।",
+          "en": "Check that stirrups are closer together at the top and bottom of a column."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৬ — ল্যাপ ও ডেভেলপমেন্ট লেংথ",
+            "en": "BNBC 2020, Part 6 — lap and development length"
+          },
+          "status": "review"
+        }
+      ],
+      "diagram": "stirrup_spacing"
     },
     {
-     "bn": "রিংয়ের মাথা ভেতরের দিকে বাঁকানো কি না দেখুন।",
-     "en": "Check that the ring ends are bent inwards."
-    }
-   ],
-   "citations": [
+      "id": "m5c4",
+      "title": {
+        "bn": "রড বাঁধা — কেমন দেখতে হওয়ার কথা",
+        "en": "Rod binding, and what it should look like"
+      },
+      "body": {
+        "bn": "রড শুধু রাখলেই হয় না, বাঁধতে হয় — নইলে ঢালাইয়ের সময় নড়ে যায় আর জায়গা বদলে যায়।\n\nজালিতে: প্রতিটি ক্রসিং-এ বা এক ঘর পরপর সরু বাঁধন তার দিয়ে বাঁধা হয়। বাঁধন আলগা হলে হাত দিলেই নড়ে — সেটাই পরীক্ষা।\n\nকলাম ও বিমে: চারপাশের রিং (স্টিরাপ) মূল রডের সঙ্গে বাঁধা থাকে, আর রিংয়ের দুই মাথা ভেতরের দিকে বাঁকানো থাকে — একে বলে হুক। হুক বাইরের দিকে থাকলে বা না থাকলে ভূমিকম্পে রিং খুলে যায়।\n\nরিংয়ের ঘনত্ব: কলামের গোড়ায় ও মাথায়, আর বিমের দুই প্রান্তে রিং ঘন থাকার কথা — মাঝখানে ফাঁক বেশি চলে। এটাই সবচেয়ে সহজে চোখে পড়ে।\n\nকভার ব্লক: রডের নিচে ও পাশে ছোট সিমেন্টের ব্লক, যাতে রড ফর্মা ছুঁয়ে না থাকে। ইটের টুকরা দিয়ে কাজ চালানো চলবে না।",
+        "en": "Steel is not just laid, it is tied — otherwise it shifts during the pour and ends up somewhere else.\n\nIn a mesh: the crossings are tied with binding wire, every one or every alternate one. If the mesh moves when you press it, the tying is loose. That is the test.\n\nIn columns and beams: the rings around the main bars are tied to them, and each ring's two ends are bent inwards — the hook. Hooks turned outwards, or missing, let the ring open in an earthquake.\n\nRing spacing: they should be closer together at the top and bottom of a column and at both ends of a beam, and may be wider in the middle. This is the easiest thing of all to see.\n\nCover blocks: small cement blocks under and beside the steel so no bar touches the formwork. Broken brick used instead will not do."
+      },
+      "watch_for": [
+        {
+          "bn": "জালিতে হাত দিয়ে চাপ দিন — নড়লে বাঁধন আলগা।",
+          "en": "Press the mesh with your hand. If it moves, the tying is loose."
+        },
+        {
+          "bn": "কলামের গোড়ার দিকে রিং ঘন আছে কি না — এক নজরেই বোঝা যায়, আর ছবিতেও ধরা পড়ে।",
+          "en": "Whether the rings tighten up near the foot of a column takes one glance, and it shows in a photograph."
+        },
+        {
+          "bn": "রিংয়ের মাথা ভেতরের দিকে বাঁকানো কি না দেখুন।",
+          "en": "Check that the ring ends are bent inwards."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৬ — রিইনফোর্সমেন্ট ডিটেইলিং",
+            "en": "BNBC 2020, Part 6 — reinforcement detailing"
+          },
+          "status": "review"
+        }
+      ],
+      "diagram": "rod_binding"
+    },
     {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৬ — রিইনফোর্সমেন্ট ডিটেইলিং",
-      "en": "BNBC 2020, Part 6 — reinforcement detailing"
-     },
-     "status": "review"
+      "id": "m5c5",
+      "title": {
+        "bn": "ছাদ ও বিমে যে ভুলগুলো টাকা বাঁচানোর নামে হয়",
+        "en": "The roof and beam shortcuts taken in the name of saving money"
+      },
+      "body": {
+        "bn": "ছাদ আর বিমের কাজে কয়েকটি ভুল বারবার হয়, আর প্রায় প্রতিটিরই যুক্তি একটাই — খরচ কমানো।\n\nঅর্থ বাঁচানোর নামে কোনোভাবেই ল্যাপ বা আন্ডার-সাইজ রড ব্যবহার করা উচিত নয়। ছাদ, বিম ও কলামের রডের প্রয়োজনীয় কভার নিশ্চিত করতে হয় — কভার কমিয়ে দিলে রড দ্রুত মরিচা ধরে এবং কনক্রিট খসে পড়ে।\n\nপ্লাস্টারের পুরুত্ব নির্দিষ্ট মাপের চেয়ে বেশি হওয়া ঠিক নয়; সাধারণত কনক্রিটের গায়ে এক-চতুর্থাংশ ইঞ্চি আর ইটের দেয়ালে আধা ইঞ্চি। বেশি পুরু প্লাস্টার ওজন বাড়ায় আর ফেটে খসে।\n\nআর একটি ভুল কাঠামোগতভাবে গুরুতর: কনসিল্ড ওয়্যারিংয়ের পাইপ কোনো ক্রমেই ছাদের রডের নিচে বসানো যাবে না। নিচে বসালে ঐ জায়গায় কনক্রিটের কার্যকর পুরুত্ব কমে যায়, ঠিক যেখানে সেটা সবচেয়ে বেশি দরকার।\n\nবিম ও ছাদ একবারে ঢালাই করাই উত্তম।",
+        "en": "A few mistakes recur in roof and beam work, and nearly all of them are argued for the same way: saving cost.\n\nLapped or under-size bar should never be used to save money. The required cover to the steel in roof, beam and column has to be ensured — reduce the cover and the bar rusts sooner and the concrete spalls away.\n\nPlaster thicker than specified is not right either; ordinarily a quarter inch on concrete and half an inch on a brick wall. Thicker plaster adds weight and cracks off.\n\nOne more is structurally serious: concealed wiring pipe must never be laid beneath the roof's steel. Put it under and the effective depth of concrete at that spot is reduced, exactly where it is needed most.\n\nBeam and roof are best cast in one go."
+      },
+      "watch_for": [
+        {
+          "bn": "ঢালাইয়ের আগে দেখুন কনসিল্ড পাইপ রডের উপরে আছে, নিচে নয়।",
+          "en": "Before the pour, check the concealed pipe sits above the steel, not below it."
+        },
+        {
+          "bn": "প্লাস্টার অস্বাভাবিক পুরু হলে নিচে কী ঢাকা পড়ছে জিজ্ঞেস করুন।",
+          "en": "Unusually thick plaster is worth a question about what it is covering."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পরিশিষ্ট-৫",
+            "en": "Bari Nirman o Site Supervision (2019), appendix 5"
+          },
+          "clause": {
+            "bn": "ছাদ ও বিম নির্মাণের গুরুত্বপূর্ণ বিষয়",
+            "en": "Important points on roof and beam construction"
+          },
+          "status": "review"
+        }
+      ]
     }
-   ],
-   "diagram": "rod_binding"
-  }
- ]
+  ]
 }

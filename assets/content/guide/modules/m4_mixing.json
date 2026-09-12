@@ -266,6 +266,40 @@
           "status": "review"
         }
       ]
+    },
+    {
+      "id": "m4c9",
+      "title": {
+        "bn": "পুরোনো ঢালাইয়ের উপর নতুন ঢালাই",
+        "en": "Casting new concrete onto old"
+      },
+      "body": {
+        "bn": "কাজ থেমে যাওয়ার পর পুরোনো ঢালাইয়ের উপরে নতুন ঢালাই দিতে হলে চারটি ধাপ আছে, আর চারটিই বাদ পড়ে যায় যখন তাড়া থাকে।\n\nএক, পুরোনো ঢালাইয়ের প্রান্ত ব্রাশ ও কাপড় দিয়ে পরিষ্কার করে নিতে হয় — ধুলা আর আলগা কণা সরানোই আসল কাজ। দুই, প্রান্তটা ভিজিয়ে নিতে হয়; শুকনো পুরোনো কনক্রিট নতুন মিশ্রণ থেকে পানি টেনে নেয়, আর তাতে জোড়ার জায়গাটাই দুর্বল হয়। তিন, ১:২ অনুপাতে সিমেন্ট ও বালির একটা পাতলা মিশ্রণ তৈরি করে পুরোনো প্রান্তে লেপে দিতে হয়। চার, লেপ দেওয়ার সঙ্গে সঙ্গেই নতুন কনক্রিট ঢালতে হয় — লেপ শুকিয়ে গেলে সেটি আর জোড়া দেয় না, বরং নিজেই একটা আলাদা স্তর হয়ে দাঁড়ায়।\n\nএই জোড়াটাকেই কোল্ড জয়েন্ট বলা হয় যখন ঠিকমতো করা হয় না। বাইরে থেকে কিছু বোঝা যায় না; পানি চুইয়ে পড়া বা ফাটল দেখা দেয় অনেক পরে।",
+        "en": "When work has stopped and new concrete has to go onto old, there are four steps, and all four get dropped when a site is in a hurry.\n\nFirst, the edge of the old casting is cleaned with a brush and cloth — getting the dust and loose material off is the real work. Second, that edge is wetted; dry old concrete draws water out of the new mix and it is the joint itself that ends up weak. Third, a thin slurry of cement and sand at 1:2 is made and spread over the old edge. Fourth, the new concrete goes on immediately after that slurry is applied — let the slurry dry and it stops being a bond and becomes a separate layer of its own.\n\nDone badly, this joint is what gets called a cold joint. Nothing shows from outside; the seepage or the crack arrives much later."
+      },
+      "watch_for": [
+        {
+          "bn": "ঢালাই থেমে গেলে কতক্ষণ থামল, লিখে রাখুন।",
+          "en": "If a pour stops, note how long it stopped for."
+        },
+        {
+          "bn": "লেপ দেওয়ার পর সঙ্গে সঙ্গে ঢালাই না হলে কাজটা আবার শুরু করতে হবে।",
+          "en": "If the pour does not follow the slurry at once, the preparation has to be redone."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), পরিশিষ্ট-৫",
+            "en": "Bari Nirman o Site Supervision (2019), appendix 5"
+          },
+          "clause": {
+            "bn": "পুরোনো ঢালাইয়ের উপর নতুন ঢালাই",
+            "en": "Casting new concrete over old"
+          },
+          "status": "review"
+        }
+      ]
     }
   ]
 }
