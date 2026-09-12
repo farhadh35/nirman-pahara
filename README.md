@@ -130,7 +130,7 @@ state is visible, not hidden.
 dart run tool/review_sheet.dart
 ```
 
-**141 technical claims carry citations; 111 are still awaiting sign-off by a
+**148 technical claims carry citations; 118 are still awaiting sign-off by a
 licensed civil engineer.** Review state lives in this sheet, not in the app; what
 the app shows on each claim is a numbered reference to its source. Do not ship to
 Play until that number is zero for the structural modules.

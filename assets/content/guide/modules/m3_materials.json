@@ -1,142 +1,380 @@
 {
- "id": "m3_materials",
- "code": "M3",
- "track": "both",
- "icon": "materials",
- "title": {
-  "bn": "মালামাল চেনা",
-  "en": "Knowing the materials"
- },
- "summary": {
-  "bn": "সিমেন্ট, রড, ইট, বালি — চারটা জিনিসেই সবচেয়ে বেশি কারচুপি হয়, আর চারটাই খালি চোখে অনেকটা যাচাই করা যায়।",
-  "en": "Cement, rod, brick, sand. These four are where most of the cheating happens, and all four can be partly checked with your own eyes."
- },
- "cards": [
-  {
-   "id": "m3c1",
-   "title": {
-    "bn": "সিমেন্ট",
-    "en": "Cement"
-   },
-   "body": {
-    "bn": "ব্যাগে ব্র্যান্ড, ধরন ও উৎপাদনের তারিখ লেখা থাকে। পুরোনো সিমেন্ট শক্তি হারায়, তাই তারিখ দেখা জরুরি। ব্যাগ হাতে চেপে দেখুন — ভেতরে শক্ত দলা মানে ভিজে গেছে, ঐ ব্যাগ ঢালাইয়ে যাওয়ার কথা নয়। ব্যাগ মাটিতে সরাসরি রাখা যাবে না, কাঠের উপরে ও দেয়াল থেকে দূরে রাখতে হয়।",
-    "en": "The bag carries the brand, the type and the manufacturing date. Cement loses strength with age, so the date matters. Squeeze the bag: hard lumps inside mean it has taken damp and that bag should not go into a pour. Bags must be stacked off the ground on timber and away from the wall."
-   },
-   "watch_for": [
-    {
-     "bn": "খালি ব্যাগ গুনুন। এক দিনের ঢালাইয়ে যত ব্যাগ লাগার কথা, তত ব্যাগ খালি হলো কি না — এটা সবচেয়ে সহজ হিসাব।",
-     "en": "Count the empty bags. Whether the number of empties matches the number a day's pour needed is the simplest check there is."
-    },
-    {
-     "bn": "উৎপাদনের তারিখ ও গুদামে রাখার অবস্থা — দুটোরই ছবি তুলুন।",
-     "en": "Photograph both the manufacturing date and how the bags are stored."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৫ — বিল্ডিং মেটেরিয়ালস",
-      "en": "BNBC 2020, Part 5 — Building Materials"
-     },
-     "status": "review"
-    }
-   ]
+  "id": "m3_materials",
+  "code": "M3",
+  "track": "both",
+  "icon": "materials",
+  "title": {
+    "bn": "মালামাল চেনা",
+    "en": "Knowing the materials"
   },
-  {
-   "id": "m3c2",
-   "title": {
-    "bn": "রড",
-    "en": "Reinforcement bar"
-   },
-   "body": {
-    "bn": "রডের গায়ে উৎপাদকের চিহ্ন ও গ্রেড রোল করা থাকে — সেটা পড়ুন। পাঁজর (rib) স্পষ্ট ও সমান হওয়া উচিত; ক্ষয়ে গিয়ে মসৃণ হয়ে গেলে কংক্রিটে আঁকড়ে ধরে না। হালকা মরিচা সমস্যা নয়, কিন্তু আঙুলে ঘষলে খোসার মতো উঠে এলে সমস্যা। ওজন মিলিয়ে দেখা যায়: ব্যাসের বর্গকে ১৬২ দিয়ে ভাগ করলে প্রতি মিটারে কেজি পাওয়া যায় — অ্যাপের রড হিসাব এটাই করে।",
-    "en": "The maker's mark and the grade are rolled onto the bar — read them. The ribs should be sharp and even; worn smooth, a bar cannot grip the concrete. Light rust is not a problem, but rust that flakes off under your thumb is. Weight can be checked: diameter squared divided by 162 gives kilograms per metre, which is what the app's rod calculator does."
-   },
-   "watch_for": [
-    {
-     "bn": "কাগজে যে গ্রেড লেখা আর রডের গায়ে যে গ্রেড — দুটো মেলান।",
-     "en": "Match the grade on the paperwork against the grade on the bar."
-    },
-    {
-     "bn": "এক ট্রাকে একাধিক ব্র্যান্ডের রড মেশানো থাকলে ছবি তুলুন।",
-     "en": "If one delivery mixes brands, photograph it."
-    }
-   ],
-   "citations": [
-    {
-     "source": {
-      "bn": "BDS ISO 6935-2 (রিইনফোর্সিং স্টিল)",
-      "en": "BDS ISO 6935-2 (reinforcing steel)"
-     },
-     "status": "review"
-    },
-    {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৫",
-      "en": "BNBC 2020, Part 5"
-     },
-     "status": "review"
-    }
-   ],
-   "diagram": "standard_hook"
+  "summary": {
+    "bn": "সিমেন্ট, রড, ইট, খোয়া আর বালি — কোনটা ভালো, কোনটা কোন কাজে, আর ব্যবহারের আগে কী দেখে নিতে হয়।",
+    "en": "Cement, steel, brick, khoa and sand — which is good, which work each belongs in, and what to check before any of it is used."
   },
-  {
-   "id": "m3c3",
-   "title": {
-    "bn": "ইট",
-    "en": "Brick"
-   },
-   "body": {
-    "bn": "ভালো ইট সমান লাল, ধার সোজা, কোণ ধারালো। দুটো ইট ঠুকলে ধাতব ঝনঝন শব্দ হয় — ভোঁতা শব্দ মানে কম পোড়া। বুকসমান উঁচু থেকে ফেললে ভালো ইট ভাঙে না। ভাঙা ইটের ভেতরটা দেখুন: ফাঁপা বা কালো কেন্দ্র মানে ঠিকমতো পোড়েনি। মাপ মেপে দেখুন — ছোট ইট মানে একই টাকায় কম গাঁথুনি।",
-    "en": "A good brick is evenly red, straight-edged and sharp-cornered. Strike two together: a metallic ring is good, a dull thud means underburnt. Dropped from chest height a good brick does not break. Look inside a broken one: a hollow or black centre means it was not fired properly. Measure it — an undersized brick means less masonry for the same money."
-   },
-   "watch_for": [
+  "cards": [
     {
-     "bn": "একই স্তূপে ভালো ইট সামনে আর খারাপ ইট পেছনে — স্তূপের ভেতর থেকে টেনে দেখুন।",
-     "en": "Good bricks in front, bad ones behind: pull a few from inside the stack."
+      "id": "m3c1",
+      "title": {
+        "bn": "সিমেন্ট",
+        "en": "Cement"
+      },
+      "body": {
+        "bn": "ব্যাগে ব্র্যান্ড, ধরন ও উৎপাদনের তারিখ লেখা থাকে। পুরোনো সিমেন্ট শক্তি হারায়, তাই তারিখ দেখা জরুরি। ব্যাগ হাতে চেপে দেখুন — ভেতরে শক্ত দলা মানে ভিজে গেছে, ঐ ব্যাগ ঢালাইয়ে যাওয়ার কথা নয়। ব্যাগ মাটিতে সরাসরি রাখা যাবে না, কাঠের উপরে ও দেয়াল থেকে দূরে রাখতে হয়।",
+        "en": "The bag carries the brand, the type and the manufacturing date. Cement loses strength with age, so the date matters. Squeeze the bag: hard lumps inside mean it has taken damp and that bag should not go into a pour. Bags must be stacked off the ground on timber and away from the wall."
+      },
+      "watch_for": [
+        {
+          "bn": "খালি ব্যাগ গুনুন। এক দিনের ঢালাইয়ে যত ব্যাগ লাগার কথা, তত ব্যাগ খালি হলো কি না — এটা সবচেয়ে সহজ হিসাব।",
+          "en": "Count the empty bags. Whether the number of empties matches the number a day's pour needed is the simplest check there is."
+        },
+        {
+          "bn": "উৎপাদনের তারিখ ও গুদামে রাখার অবস্থা — দুটোরই ছবি তুলুন।",
+          "en": "Photograph both the manufacturing date and how the bags are stored."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৫ — বিল্ডিং মেটেরিয়ালস",
+            "en": "BNBC 2020, Part 5 — Building Materials"
+          },
+          "status": "review"
+        }
+      ]
     },
     {
-     "bn": "ঢালাইয়ের খোয়া কোন ইট ভেঙে হচ্ছে, সেটাও দেখুন।",
-     "en": "Look at which bricks are being crushed into khoa for the concrete."
-    }
-   ],
-   "citations": [
+      "id": "m3c2",
+      "title": {
+        "bn": "রড",
+        "en": "Reinforcement bar"
+      },
+      "body": {
+        "bn": "রডের গায়ে উৎপাদকের চিহ্ন ও গ্রেড রোল করা থাকে — সেটা পড়ুন। পাঁজর (rib) স্পষ্ট ও সমান হওয়া উচিত; ক্ষয়ে গিয়ে মসৃণ হয়ে গেলে কংক্রিটে আঁকড়ে ধরে না। হালকা মরিচা সমস্যা নয়, কিন্তু আঙুলে ঘষলে খোসার মতো উঠে এলে সমস্যা। ওজন মিলিয়ে দেখা যায়: ব্যাসের বর্গকে ১৬২ দিয়ে ভাগ করলে প্রতি মিটারে কেজি পাওয়া যায় — অ্যাপের রড হিসাব এটাই করে।",
+        "en": "The maker's mark and the grade are rolled onto the bar — read them. The ribs should be sharp and even; worn smooth, a bar cannot grip the concrete. Light rust is not a problem, but rust that flakes off under your thumb is. Weight can be checked: diameter squared divided by 162 gives kilograms per metre, which is what the app's rod calculator does."
+      },
+      "watch_for": [
+        {
+          "bn": "কাগজে যে গ্রেড লেখা আর রডের গায়ে যে গ্রেড — দুটো মেলান।",
+          "en": "Match the grade on the paperwork against the grade on the bar."
+        },
+        {
+          "bn": "এক ট্রাকে একাধিক ব্র্যান্ডের রড মেশানো থাকলে ছবি তুলুন।",
+          "en": "If one delivery mixes brands, photograph it."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BDS ISO 6935-2 (রিইনফোর্সিং স্টিল)",
+            "en": "BDS ISO 6935-2 (reinforcing steel)"
+          },
+          "status": "review"
+        },
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৫",
+            "en": "BNBC 2020, Part 5"
+          },
+          "status": "review"
+        }
+      ],
+      "diagram": "standard_hook"
+    },
     {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৫ — ইটের শ্রেণি ও শক্তি",
-      "en": "BNBC 2020, Part 5 — brick classes and strength"
-     },
-     "status": "review"
-    }
-   ],
-   "diagram": "brick_bond"
-  },
-  {
-   "id": "m3c4",
-   "title": {
-    "bn": "বালি ও কাদার পরীক্ষা",
-    "en": "Sand, and the silt test"
-   },
-   "body": {
-    "bn": "কাদামাখা বালি সিমেন্টের আঁকড়ে ধরার ক্ষমতা নষ্ট করে। পরীক্ষাটা যে কেউ করতে পারে: একটা স্বচ্ছ কাচের বোতলে এক-তৃতীয়াংশ বালি নিন, পানি ভরে ঝাঁকান, তিন ঘণ্টা রেখে দিন। বালি নিচে বসবে, কাদা উপরে আলাদা স্তর হয়ে জমবে। উপরের স্তর মোটা হলে ঐ বালি ধুয়ে নিতে হবে। বালি মোটা না মিহি সেটাও দেখার বিষয় — ঢালাইয়ে মোটা বালি, প্লাস্টারে মিহি বালি।",
-    "en": "Silty sand stops cement from gripping. Anyone can run the test: fill a clear bottle one-third with sand, top up with water, shake, and leave it three hours. The sand settles; the silt forms a separate layer on top. A thick top layer means the sand needs washing. Coarseness matters too — coarse sand for concrete, fine sand for plaster."
-   },
-   "watch_for": [
+      "id": "m3c3",
+      "title": {
+        "bn": "ইট",
+        "en": "Brick"
+      },
+      "body": {
+        "bn": "ভালো ইট সমান লাল, ধার সোজা, কোণ ধারালো। দুটো ইট ঠুকলে ধাতব ঝনঝন শব্দ হয় — ভোঁতা শব্দ মানে কম পোড়া। বুকসমান উঁচু থেকে ফেললে ভালো ইট ভাঙে না। ভাঙা ইটের ভেতরটা দেখুন: ফাঁপা বা কালো কেন্দ্র মানে ঠিকমতো পোড়েনি। মাপ মেপে দেখুন — ছোট ইট মানে একই টাকায় কম গাঁথুনি।",
+        "en": "A good brick is evenly red, straight-edged and sharp-cornered. Strike two together: a metallic ring is good, a dull thud means underburnt. Dropped from chest height a good brick does not break. Look inside a broken one: a hollow or black centre means it was not fired properly. Measure it — an undersized brick means less masonry for the same money."
+      },
+      "watch_for": [
+        {
+          "bn": "একই স্তূপে ভালো ইট সামনে আর খারাপ ইট পেছনে — স্তূপের ভেতর থেকে টেনে দেখুন।",
+          "en": "Good bricks in front, bad ones behind: pull a few from inside the stack."
+        },
+        {
+          "bn": "ঢালাইয়ের খোয়া কোন ইট ভেঙে হচ্ছে, সেটাও দেখুন।",
+          "en": "Look at which bricks are being crushed into khoa for the concrete."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৫ — ইটের শ্রেণি ও শক্তি",
+            "en": "BNBC 2020, Part 5 — brick classes and strength"
+          },
+          "status": "review"
+        }
+      ],
+      "diagram": "brick_bond"
+    },
     {
-     "bn": "বোতল পরীক্ষার ছবি তুলে রাখুন — এটা রিপোর্টে দেখানোর মতো প্রমাণ।",
-     "en": "Photograph the bottle. It is evidence you can put in a report."
-    }
-   ],
-   "citations": [
+      "id": "m3c4",
+      "title": {
+        "bn": "বালি ও কাদার পরীক্ষা",
+        "en": "Sand, and the silt test"
+      },
+      "body": {
+        "bn": "কাদামাখা বালি সিমেন্টের আঁকড়ে ধরার ক্ষমতা নষ্ট করে। পরীক্ষাটা যে কেউ করতে পারে: একটা স্বচ্ছ কাচের বোতলে এক-তৃতীয়াংশ বালি নিন, পানি ভরে ঝাঁকান, তিন ঘণ্টা রেখে দিন। বালি নিচে বসবে, কাদা উপরে আলাদা স্তর হয়ে জমবে। উপরের স্তর মোটা হলে ঐ বালি ধুয়ে নিতে হবে। বালি মোটা না মিহি সেটাও দেখার বিষয় — ঢালাইয়ে মোটা বালি, প্লাস্টারে মিহি বালি।",
+        "en": "Silty sand stops cement from gripping. Anyone can run the test: fill a clear bottle one-third with sand, top up with water, shake, and leave it three hours. The sand settles; the silt forms a separate layer on top. A thick top layer means the sand needs washing. Coarseness matters too — coarse sand for concrete, fine sand for plaster."
+      },
+      "watch_for": [
+        {
+          "bn": "বোতল পরীক্ষার ছবি তুলে রাখুন — এটা রিপোর্টে দেখানোর মতো প্রমাণ।",
+          "en": "Photograph the bottle. It is evidence you can put in a report."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৫ — সূক্ষ্ম সমষ্টি (fine aggregate)",
+            "en": "BNBC 2020, Part 5 — fine aggregate"
+          },
+          "status": "review"
+        }
+      ],
+      "diagram": "silt_test"
+    },
     {
-     "source": {
-      "bn": "BNBC 2020, পার্ট ৫ — সূক্ষ্ম সমষ্টি (fine aggregate)",
-      "en": "BNBC 2020, Part 5 — fine aggregate"
-     },
-     "status": "review"
+      "id": "m3c5",
+      "title": {
+        "bn": "ইটের শ্রেণি — আর মাঠেই যেভাবে চেনা যায়",
+        "en": "Brick classes, and how to tell them apart on site"
+      },
+      "body": {
+        "bn": "ইট পাঁচ ভাগে চেনা হয়, আর পার্থক্যটা মূলত কতটা পুড়েছে তার উপর।\n\nপ্রথম শ্রেণির ইটের মাপ ও রং সব জায়গায় এক, সর্বত্র সমানভাবে পোড়ানো, গায়ে চিড় বা ফাটল নেই। দ্বিতীয় শ্রেণির রং একই রকম হলেও মাপ ও আকার কিছুটা অসমান, তল অমসৃণ, পোড়ানো কিছুটা কম। তৃতীয় শ্রেণি পর্যাপ্ত পোড়েনি — সহজে ভাঙে, আওয়াজ ভোঁতা। ঝামা অতিরিক্ত চাপে পুড়ে কালো ও ফাঁপা হয়ে যায়। আর পিকেড হলো প্রথম শ্রেণি ও ঝামার মাঝামাঝি — প্রথম শ্রেণির চেয়েও বেশি পুড়েছে, তাই আরও শক্ত, কিন্তু ধারগুলো আঁকাবাঁকা আর পিঠ অসমতল।\n\nমাঠে তিনটি পরীক্ষা যথেষ্ট। দুটি ইট পরস্পরে আঘাত করুন — ভালো ইট পরিষ্কার ঠন ঠন শব্দ করে, ভোঁতা শব্দ মানে কম পোড়া। দুটি ইট ইংরেজি T-এর মতো ধরে ছয় ফুট উপর থেকে সমান মাটিতে ফেলুন — প্রথম শ্রেণির ইট ভাঙে না। আর ইটের পিঠে নখ দিয়ে আঁচড় দিন — ভালো ইটে দাগ পড়ে না।",
+        "en": "Bricks are graded in five kinds, and the difference is mostly how thoroughly they were fired.\n\nA first class brick is uniform in size and colour, evenly burnt throughout, with no cracks. A second class one has much the same colour but is somewhat uneven in size and shape, rough on the surface, and slightly under-fired. Third class has not been fired enough — it breaks easily and sounds dull. Jhama has been over-fired until it is black and bloated. Picked sits between first class and jhama: fired harder than first class and therefore stronger, but with irregular edges and an uneven face.\n\nThree tests settle it on site. Strike two bricks together — a good one rings clearly; a dull sound means under-fired. Hold two like the letter T and drop from six feet onto level ground; a first class brick does not break. And scratch the face with a fingernail — a good brick takes no mark."
+      },
+      "watch_for": [
+        {
+          "bn": "একই গাদার ইট একই রকম হওয়ার কথা — রং বা মাপ ছড়ানো থাকলে মিশ্রিত চালান।",
+          "en": "One stack should look alike. Scattered colour or size means a mixed load."
+        },
+        {
+          "bn": "ভাঙা ইটের ভেতর দেখুন — কালো বা ফাঁপা কেন্দ্র মানে পোড়ানো ঠিক হয়নি।",
+          "en": "Look inside a broken one: a black or hollow centre means it was not fired properly."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), নবম অধ্যায়",
+            "en": "Bari Nirman o Site Supervision (2019), chapter 9"
+          },
+          "clause": {
+            "bn": "ইট সনাক্তকরণ পদ্ধতি",
+            "en": "Identifying brick classes"
+          },
+          "status": "review"
+        }
+      ]
+    },
+    {
+      "id": "m3c6",
+      "title": {
+        "bn": "কোন শ্রেণির ইট কোন কাজে",
+        "en": "Which class of brick belongs in which work"
+      },
+      "body": {
+        "bn": "শ্রেণি চেনা অর্ধেক কাজ; বাকি অর্ধেক হলো কোনটা কোথায় বসছে সেটা দেখা।\n\nস্থায়ী নির্মাণে প্রথম শ্রেণির ইট ব্যবহার করা আবশ্যক। পাকা কাজে দ্বিতীয় বা তৃতীয় শ্রেণির ইট ব্যবহার করা উচিত নয় — এগুলোর জায়গা কেবল বাউন্ডারি ওয়াল, কিংবা অস্থায়ী শেড নির্মাণে আংশিকভাবে।\n\nপিকেড ঝামা ইটের আলাদা একটা ভূমিকা আছে: কনক্রিটের খোয়া তৈরির জন্য এটাই উপযোগী। অর্থাৎ ঝামা গাঁথুনিতে না গিয়ে ভাঙা হয়ে ঢালাইয়ে যায়।\n\nব্যবহারিক দিক থেকে এর মানে, সাইটে ইটের গাদা দেখে চুপ করে থাকা যায় না। দ্বিতীয় শ্রেণির ইট দেয়ালে উঠে গেলে পরে তা বদলানো যায় না, আর দামের পার্থক্যটা ঠিকাদারের পকেটে থেকে যায়। চালান আসার সময়েই দেখা সবচেয়ে সস্তা।",
+        "en": "Recognising the class is half the job; the other half is noticing where it is going.\n\nPermanent work requires first class brick. Second and third class should not go into pakka work at all — their place is a boundary wall, or partially in a temporary shed.\n\nPicked jhama has a distinct role: it is the brick suited to making khoa for concrete. It belongs broken up in a pour rather than laid in a wall.\n\nPractically this means a stack on site is not something to look at in silence. Once second class brick is up in a wall it cannot be swapped out, and the difference in price stays with the contractor. Checking as the load arrives is the cheapest moment there is."
+      },
+      "watch_for": [
+        {
+          "bn": "চালান নামার সময়েই দেখুন — গাঁথুনি উঠে গেলে আর ফেরানো যায় না।",
+          "en": "Check as the load is unloaded; once it is laid there is no going back."
+        },
+        {
+          "bn": "বাউন্ডারি ওয়ালের জন্য আনা ইট যেন দেয়ালে চলে না যায়।",
+          "en": "Brick brought for a boundary wall should not end up in the house."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), নবম অধ্যায়",
+            "en": "Bari Nirman o Site Supervision (2019), chapter 9"
+          },
+          "clause": {
+            "bn": "ইট ব্যবহারে শর্তকীকরণ নির্দেশিকা",
+            "en": "Guidance on brick use"
+          },
+          "status": "review"
+        }
+      ]
+    },
+    {
+      "id": "m3c7",
+      "title": {
+        "bn": "খোয়া — মাপ আর পরিচ্ছন্নতা",
+        "en": "Khoa: size, and how clean it has to be"
+      },
+      "body": {
+        "bn": "খোয়া তৈরি হয় পোড়ানো পিকেড ঝামা ইট ভেঙে। আকারের একটা সীমা আছে — সাধারণত তিন-চতুর্থাংশ ইঞ্চির বেশি নয়, আর এক-চতুর্থাংশ ইঞ্চির কম নয়। খুব বড় হলে কনক্রিটে ফাঁক থেকে যায়, খুব ছোট হলে সিমেন্ট বেশি লাগে।\n\nপরিচ্ছন্নতা এখানে আলঙ্কারিক শর্ত নয়। খোয়ায় কোনো ময়লা, ইটের গুঁড়া, আগাছা বা আবর্জনা থাকা চলবে না। ইটের গুঁড়া আলাদা করতে খোয়া মোটা চালুনি দিয়ে চেলে নিতে হয়, তারপর ব্যবহারের আগে পর্যাপ্ত পরিষ্কার পানি দিয়ে ধুয়ে নিতে হয়। ধুলো লেগে থাকা খোয়ার গায়ে সিমেন্ট ধরে না — ঢালাই দেখতে ঠিকই থাকে, শক্তি থাকে না।\n\nপাইল ফাউন্ডেশনের কাজে খোয়ার বদলে ডিজাইন অনুযায়ী স্টোনচিপস বা সিঙ্গেলস ব্যবহার হয়, আকারের সীমা একই।",
+        "en": "Khoa is made by breaking burnt picked jhama brick. Its size has limits — ordinarily not above three quarters of an inch and not below a quarter. Too large leaves voids in the concrete; too small and the mix demands more cement.\n\nCleanliness here is not a cosmetic condition. Khoa must carry no dirt, brick dust, weeds or rubbish. Brick dust is separated by passing it through a coarse sieve, and it is then washed with enough clean water before use. Cement will not grip khoa with dust on it — the pour looks right and is not.\n\nIn pile foundation work stone chips or shingles are used instead, to the design, within the same size limits."
+      },
+      "watch_for": [
+        {
+          "bn": "খোয়ার গাদায় ইটের গুঁড়ার লালচে স্তর দেখলে চালা হয়নি।",
+          "en": "A reddish layer of brick dust on the pile means it was never sieved."
+        },
+        {
+          "bn": "ঢালাইয়ের দিন খোয়া ধোয়া হয়েছে কি না জিজ্ঞেস করুন, দেখেও নিন।",
+          "en": "On pour day ask whether the khoa was washed — and look."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), নবম অধ্যায়",
+            "en": "Bari Nirman o Site Supervision (2019), chapter 9"
+          },
+          "clause": {
+            "bn": "খোয়া ব্যবহারে সতর্কীকরণ",
+            "en": "Cautions on the use of khoa"
+          },
+          "status": "review"
+        }
+      ]
+    },
+    {
+      "id": "m3c8",
+      "title": {
+        "bn": "বালি কীসে অকেজো হয়",
+        "en": "What makes sand unusable"
+      },
+      "body": {
+        "bn": "বালির মোটা-চিকন মাপা হয় এফ.এম. দিয়ে, আর কোন কাজে কোনটা লাগে তা অ্যাপের তালিকায় আছে। এখানকার প্রশ্ন আলাদা: বালিটা আদৌ ব্যবহারযোগ্য কি না।\n\nবালিতে ময়লা বা কাদামাটির ভেজাল থাকা চলবে না, আর লোনা বালি ব্যবহার করা উচিত নয়। আগাছা, ডালপালা, শিকড়, মাটি বা নুড়ি থাকলে সেটা বালি নয়, মিশ্রণ। ব্যবহারের আগে ভালোভাবে ধুয়ে নিতে হয়।\n\nভালো বালির লক্ষণ কয়েকটি: ধুলা বা কাদামাটি নেই; দানা তীক্ষ্ণ, হাতে ধরলে খসখসে লাগে; আর জৈব পদার্থ বা পচা পাতা নেই। গোল ও মসৃণ দানার বালি দেখতে পরিষ্কার হলেও মশলায় কম আঁকড়ে ধরে।\n\nসিল্ট কতটা আছে তা বোতলের পরীক্ষায় নিজেই দেখা যায় — সেটা আলাদা কার্ডে।",
+        "en": "How coarse a sand is gets measured as its fineness modulus, and which work takes which is in the app's tables. The question here is different: whether the sand is usable at all.\n\nSand must not be adulterated with dirt or clay, and salt-bearing sand should not be used. Weeds, twigs, roots, soil or pebbles in it make it a mixture rather than sand. It is washed thoroughly before use.\n\nGood sand shows a few signs: no dust or clay; sharp grains that feel gritty in the hand; and no organic matter or rotted leaves. Sand with rounded, smooth grains can look clean and still grip poorly in mortar.\n\nHow much silt it carries is something you can test yourself with a bottle — that is on its own card."
+      },
+      "watch_for": [
+        {
+          "bn": "লবণাক্ত এলাকার বালি রডে মরিচা ধরায় — উৎস জিজ্ঞেস করুন।",
+          "en": "Sand from saline areas rusts reinforcement. Ask where it came from."
+        },
+        {
+          "bn": "মুঠোয় নিয়ে ছেড়ে দিন — হাতে কাদার প্রলেপ থেকে গেলে ধোয়া দরকার।",
+          "en": "Squeeze a handful and release it. A clay film left on your palm means it needs washing."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), নবম অধ্যায়",
+            "en": "Bari Nirman o Site Supervision (2019), chapter 9"
+          },
+          "clause": {
+            "bn": "বালি ব্যবহারে সতর্কীকরণ নির্দেশিকা",
+            "en": "Cautions on the use of sand"
+          },
+          "status": "review"
+        }
+      ]
+    },
+    {
+      "id": "m3c9",
+      "title": {
+        "bn": "সিমেন্ট: পানি মেশানোর পর ৩০ মিনিট",
+        "en": "Cement: thirty minutes after the water goes in"
+      },
+      "body": {
+        "bn": "সিমেন্টে পানি পড়ার মুহূর্ত থেকেই ঘড়ি চলতে শুরু করে। মিশ্রণ ঐ সময়ের ৩০ মিনিটের মধ্যে জায়গামতো বসিয়ে ফেলতে হয়; এরপর থেকে শক্তি নষ্ট হতে থাকে। মিশিয়ে রাখা মশলা পরে পানি দিয়ে নেড়ে \"ঠিক করে\" নেওয়া যায় না — দেখতে কাজ চলার মতো লাগে, ভেতরে বন্ধনটা আর তৈরি হয় না।\n\nসময়ের হিসাবটা আরও দুই জায়গায় লাগে। সিমেন্টের প্রাথমিক সেটিং টাইম প্রায় ৪৫ মিনিট, চূড়ান্ত সেটিং প্রায় ১০ ঘণ্টা, আর পুরোপুরি শক্ত হতে ২৮ দিন। অর্থাৎ ঢালাই শেষ হওয়া আর কাজ শেষ হওয়া এক জিনিস নয়।\n\nএই কারণেই ঢালাইয়ের দিন মিক্সার আর ঢালাইয়ের জায়গার দূরত্ব, আর কতটা মশলা একসঙ্গে বানানো হচ্ছে — দুটোই দেখার বিষয়। দূরে মিশিয়ে বড় ব্যাচ বানালে শেষ অংশটা জানালার বাইরে চলে যায়।",
+        "en": "The clock starts the moment water meets cement. The mix has to be placed within thirty minutes of that; after it, strength begins to be lost. Mortar left standing cannot be \"brought back\" by adding water and turning it over — it looks workable, and the bond no longer forms.\n\nTwo other timings matter. Cement's initial set is around 45 minutes, its final set around 10 hours, and it reaches full strength at 28 days. Finishing the pour and finishing the work are not the same event.\n\nThis is why, on pour day, both the distance from the mixer to the place of work and the size of each batch are worth watching. Mixing far away in large batches sends the tail of every batch out past the window."
+      },
+      "watch_for": [
+        {
+          "bn": "বসে থাকা মশলায় আবার পানি দিয়ে নাড়া হলে সেটা ঢালাইয়ে যাওয়ার কথা নয়।",
+          "en": "Mortar that has stood and been re-wetted should not go into the pour."
+        },
+        {
+          "bn": "ভেজা বা দলা পাকানো ব্যাগ ঢালাইয়ে ব্যবহার করবেন না।",
+          "en": "A bag that has taken damp and gone lumpy does not belong in a pour."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "BNBC 2020, পার্ট ৫",
+            "en": "BNBC 2020, Part 5"
+          },
+          "clause": {
+            "bn": "সিমেন্ট — সেটিং টাইম ও ব্যবহারের সময়সীমা",
+            "en": "Cement setting times and placement window"
+          },
+          "status": "review"
+        }
+      ]
+    },
+    {
+      "id": "m3c10",
+      "title": {
+        "bn": "রড: বাঁধার আগে যে কাজটা বাদ পড়ে",
+        "en": "Steel: the step that gets skipped before tying"
+      },
+      "body": {
+        "bn": "রড ব্যবহারের আগে দুটো কাজ করার কথা, আর দুটোই তাড়াহুড়োয় বাদ পড়ে।\n\nপ্রথমত, রড মোটামুটি সোজা রাখতে হয়। বাঁকা রড ঢালাইয়ের ভেতর যেখানে থাকার কথা সেখানে থাকে না, আর কভারও অসমান হয়ে যায়।\n\nদ্বিতীয়ত, ব্যবহারের আগে সিরিষ কাগজ দিয়ে পরিষ্কার করে নিতে হয়। রডে কোনো তৈলাক্ত পদার্থ বা মরিচা থাকলে তা তুলে ফেলতে হবে — তেল কনক্রিটকে রড আঁকড়ে ধরতে দেয় না, আর খসে পড়া মরিচা একই কাজ করে।\n\nবাঁধার তার হওয়ার কথা ২৬ গেজের জি.আই. তার। প্লেইন আর ডি-ফরমড রডের পার্থক্যটাও এখানে কাজে লাগে: ডি-ফরমড রডের গায়ে দড়ির মতো প্যাঁচানো খাঁজ থাকে, যা কনক্রিটের সঙ্গে বন্ধন বাড়ায়; প্লেইন রডে মসৃণ আবরণ থাকায় বন্ধন কম। ডি-ফরমড রডের দাম কিছুটা বেশি হলেও মিস্ত্রির খরচ কম পড়ে।",
+        "en": "Two things are supposed to happen to reinforcement before it is used, and both get dropped when a site is in a hurry.\n\nFirst, the bars are kept reasonably straight. A bent bar does not end up where the drawing put it, and the cover around it goes uneven.\n\nSecond, they are cleaned with emery paper before use. Any oily substance or rust has to come off — oil stops the concrete gripping the bar, and rust that flakes does the same.\n\nThe tying wire should be 26 gauge G.I. The difference between plain and deformed bar matters here too: deformed bar carries rope-like ribbing that increases its bond with concrete, while a plain bar's smooth surface bonds less. Deformed costs somewhat more and reduces the labour."
+      },
+      "watch_for": [
+        {
+          "bn": "খাঁচা বাঁধার আগে রডে তেলের দাগ বা খসা মরিচা আছে কি না দেখুন।",
+          "en": "Before the cage is tied, look for oil marks or flaking rust on the bars."
+        },
+        {
+          "bn": "বাঁধার তার সরু হলে বাঁধন ঢালাইয়ের চাপে খুলে যায়।",
+          "en": "Tying wire thinner than it should be lets the cage open under the pour."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), নবম অধ্যায়",
+            "en": "Bari Nirman o Site Supervision (2019), chapter 9"
+          },
+          "clause": {
+            "bn": "স্টীল রড ব্যবহারের পদ্ধতি",
+            "en": "Method of using steel rod"
+          },
+          "status": "review"
+        }
+      ]
+    },
+    {
+      "id": "m3c11",
+      "title": {
+        "bn": "ল্যাবে নমুনা — কোন মালামালের কতটুকু",
+        "en": "Samples to the laboratory: how much of what"
+      },
+      "body": {
+        "bn": "নির্মাণ শুরুর আগে মালামালের গুণাগুণ পরীক্ষা করানো হয়, এবং নমুনা সংগ্রহের হারও নির্দিষ্ট। কাজটা করেন অভিজ্ঞ ও যোগ্যতাসম্পন্ন নির্মাণ প্রকৌশলী বা কনসালটেন্ট প্রতিষ্ঠান — সাইট থেকে নমুনা নিয়ে, সিল করে, ল্যাবরেটরিতে পাঠিয়ে।\n\nবইটির দেওয়া হার: সিমেন্টে প্রতি ৫০০ ব্যাগের স্তূপ থেকে এক ব্যাগ। ইটে প্রতি ৫০,০০০ ইটের স্তূপ থেকে এক সেট, অর্থাৎ পাঁচটি প্রথম শ্রেণির বা ঝামা ইট। বালিতে প্রতি ১০,০০০ ঘনফুট মিডিয়াম বা মোটা বালির স্তূপ থেকে ৫০০ গ্রাম। আর রডে প্রতি ব্যাচের স্তূপ থেকে এক মিটার লম্বা তিন টুকরা, এক সেট হিসেবে।\n\nসংখ্যাগুলোর চেয়েও কাজের কথা হলো নমুনা সিল করে পাঠানো। সিল না করা নমুনা পথে বদলে যেতে পারে, আর তখন রিপোর্ট আপনার মালামালের নয়।",
+        "en": "Materials are tested for quality before construction starts, and the rate of sampling is specified too. The work belongs to an experienced and qualified construction engineer or consultancy — collecting from site, sealing, and sending to a laboratory.\n\nThe book's rates: from cement, one bag out of every stack of 500. From brick, one set — five first class or jhama bricks — out of every stack of 50,000. From sand, 500 grams out of every 10,000 cubic feet of medium or coarse sand. From steel, three pieces a metre long as one set, out of each batch.\n\nMore useful than the numbers is that the samples go sealed. An unsealed sample can be changed on the way, and then the report is not about your material."
+      },
+      "watch_for": [
+        {
+          "bn": "নমুনা সিল করা হয়েছে কি না দেখুন — রিপোর্টের দাম ওটার উপরেই।",
+          "en": "Watch that the sample is sealed. The report is worth exactly that."
+        },
+        {
+          "bn": "রিপোর্টে যে ব্যাচ বা স্তূপের কথা লেখা, সেটাই সাইটে এসেছে কি না মিলিয়ে নিন।",
+          "en": "Check the batch named in the report is the batch that reached the site."
+        }
+      ],
+      "citations": [
+        {
+          "source": {
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), নবম অধ্যায়",
+            "en": "Bari Nirman o Site Supervision (2019), chapter 9"
+          },
+          "clause": {
+            "bn": "নির্মাণ সামগ্রীর গুণাগুণ পরীক্ষার পদ্ধতি",
+            "en": "Method of testing materials for quality"
+          },
+          "status": "review"
+        }
+      ]
     }
-   ],
-   "diagram": "silt_test"
-  }
- ]
+  ]
 }
