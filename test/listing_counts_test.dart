@@ -8,7 +8,7 @@ Future<String> _fromDisk(String path) => File(path).readAsString();
 
 /// The counts the store listing and the policy document promise.
 ///
-/// docs/PLAY-POLICY-2.0.0.md records that these were wrong at 1.1.1 — the
+/// docs/PLAY-POLICY.md records that these were wrong at 1.1.1 — the
 /// listing was still offering six calculators and 42 cards while the build had
 /// far more. That is the listing describing a different app from the one a
 /// reader downloads, which is the sort of thing Play judges a listing on, and
@@ -67,7 +67,7 @@ void main() {
   });
 
   test('the policy document counts what the build contains', () {
-    final text = flat('docs/PLAY-POLICY-2.0.0.md');
+    final text = flat('docs/PLAY-POLICY.md');
     final calc = RegExp(r'(\d+) calculators').firstMatch(text);
     final chapters = RegExp(r'(\d+) guide chapters').firstMatch(text);
     expect(calc, isNotNull);

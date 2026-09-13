@@ -1,14 +1,14 @@
-# Google Play policy alignment — current build (2.0.3, versionCode 7)
+# Google Play policy alignment — current build (2.0.4, versionCode 8)
 
-> Named for 2.0.0 when it was written. The contents track the current
-> build; the heading did not, which is its own small policy risk when
-> the document exists to tell a reviewer what shipped.
+The filename carries no version on purpose. It used to (`PLAY-POLICY-2.0.0.md`),
+and it went on carrying 2.0.0 through three releases — a document whose whole
+job is telling a reviewer what shipped, announcing the wrong build in its own
+name. One file, updated in the same commit as the thing it describes, is the
+only arrangement that stays true.
 
-Written against the binary built from commit-tagged `2.0.0+4`. Each section
-names the policy, states what this app does, and — where it can be checked
-mechanically — how to check it. Re-do this file for the next version rather than
-editing it; a policy statement that outlives the build it describes is worse
-than none.
+Each section names the policy, states what this app does, and — where it can be
+checked mechanically — how to check it. Update the heading above whenever the
+version changes.
 
 **How to verify the binary this describes**
 
@@ -21,7 +21,7 @@ aapt2 dump xmltree build/app/outputs/flutter-apk/app-release.apk \
 apksigner verify --print-certs build/app/outputs/flutter-apk/app-release.apk
 ```
 
-Expected from 2.0.4: `ACCESS_COARSE_LOCATION` and `INTERNET` — **not**
+Expected: `ACCESS_COARSE_LOCATION` and `INTERNET` — **not**
 `ACCESS_FINE_LOCATION`, which the geolocator plugin declares and this app
 removes — and signer SHA-256 `f999…3147` (full fingerprint in
 `store/CHECKLIST.md`). Earlier builds showed both location permissions and no

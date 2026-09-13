@@ -76,7 +76,7 @@ void main() {
     final pubspec = File('pubspec.yaml').readAsStringSync();
     for (final client in ['http:', 'dio:', 'chopper:', 'retrofit:',
       'web_socket_channel:', 'grpc:']) {
-      expect(RegExp('^\\s+' + RegExp.escape(client), multiLine: true)
+      expect(RegExp('^\\s+${RegExp.escape(client)}', multiLine: true)
               .hasMatch(pubspec),
           isFalse,
           reason: 'a network client ($client) is now a dependency');

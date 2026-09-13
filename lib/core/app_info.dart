@@ -9,8 +9,8 @@ import 'i18n/app_locale.dart';
 class AppInfo {
   AppInfo._();
 
-  static const version = '2.0.3';
-  static const buildNumber = 7;
+  static const version = '2.0.4';
+  static const buildNumber = 8;
   static const applicationId = 'bd.nirmanpahara.nirman_pahara';
 
   static String get versionLabel => '$version ($buildNumber)';

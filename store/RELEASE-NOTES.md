@@ -3,6 +3,23 @@
 Paste the block for the release you are shipping into Play Console.
 Keep each under 500 characters.
 
+## 2.0.4 (8)
+
+<bn-BD>
+"নতুন সংস্করণ দেখুন" এখন সত্যিই দেখে। আগে বোতামটা শুধু প্লে স্টোরের পাতা খুলত আর
+বাকিটা আপনার উপর ছেড়ে দিত; এখন প্লে-কে জিজ্ঞেস করে, উত্তর অ্যাপের ভিতরেই বলে, আর
+নতুন সংস্করণ থাকলে অ্যাপ ছাড়াই নামিয়ে নেয়। কিছু পাঠানো হয় না — প্লে সার্ভিসই
+খোঁজটা করে। আর হালনাগাদের খোঁজ দিনে একবারের বেশি নেওয়া হয় না।
+</bn-BD>
+
+<en-GB>
+"Check for updates" now actually checks. The row used to open the Play Store
+page and leave the rest to you; it now asks Play, says the answer inside the
+app, and installs a newer version without closing the app. Nothing is sent —
+Play services does the lookup. The check also runs at most once a day, instead
+of on every launch.
+</en-GB>
+
 ## 2.0.3 (7)
 
 <bn-BD>

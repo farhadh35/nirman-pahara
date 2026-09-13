@@ -34,8 +34,12 @@ class _UpdatePromptState extends State<UpdatePrompt> {
     final prefs = await SharedPreferences.getInstance();
     if (!await widget.check.dueForCheck(prefs)) return;
     final info = await widget.check.available();
-    if (info == null) return;
+    // Stamped whether or not there was news. Asking Play and hearing "nothing
+    // newer" is still asking, and the quiet day is meant to cover the check
+    // itself — otherwise the common case, an app already current, would reach
+    // Play on every single launch.
     await widget.check.markAsked(prefs);
+    if (info == null) return;
     if (mounted) setState(() => _show = true);
   }
 

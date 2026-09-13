@@ -9,7 +9,7 @@ import '../../../core/content/models.dart';
 import '../../../core/i18n/app_locale.dart';
 import '../../../core/i18n/strings.dart';
 import '../../sources/ui/sources_screen.dart';
-import '../../update/logic/update_check.dart';
+import '../../update/ui/update_settings_tile.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -127,27 +127,7 @@ class SettingsScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 12),
-          Card(
-            child: ListTile(
-              leading: const Icon(Icons.system_update_outlined),
-              title: Text(context.locale.isBangla
-                  ? 'নতুন সংস্করণ দেখুন'
-                  : 'Check for updates'),
-              subtitle: Text(context.locale.isBangla
-                  ? 'প্লে স্টোরের পাতা খুলবে'
-                  : 'Opens the Play Store page'),
-              trailing: const Icon(Icons.open_in_new, size: 18),
-              onTap: () async {
-                final opened = await const UpdateCheck().openStore();
-                if (!context.mounted || opened) return;
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text(context.locale.isBangla
-                      ? 'প্লে স্টোর খোলা গেল না।'
-                      : 'Could not open the Play Store.'),
-                ));
-              },
-            ),
-          ),
+          const UpdateSettingsTile(),
           const SizedBox(height: 12),
           SectionCard(
             title: context.t(S.about),

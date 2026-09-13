@@ -80,7 +80,7 @@ are signed with this key and not with a debug fallback.
       the plugin binds it at launch, but nothing in this app ever starts it in
       the foreground — that happens only through `enableBackgroundMode`, which
       needs a position stream this app does not open.
-      `docs/PLAY-POLICY-2.0.0.md` section 7 has the detail and the `aapt2 dump
+      `docs/PLAY-POLICY.md` section 7 has the detail and the `aapt2 dump
       xmltree` command that shows the declaration.
 
 ## Should be done before the first public release

@@ -21,7 +21,7 @@ void main() {
 
   test('nothing asks the location plugin for a stream or background mode', () {
     // Any of these would put the service into the foreground, at which point
-    // docs/PLAY-POLICY-2.0.0.md section 7 is wrong and Play's foreground
+    // docs/PLAY-POLICY.md section 7 is wrong and Play's foreground
     // service declaration becomes something the listing has to answer for.
     const foregrounding = [
       'getPositionStream',
@@ -39,13 +39,13 @@ void main() {
     }
     expect(found, isEmpty,
         reason: 'the app now foregrounds the location service, so section 7 of '
-            'docs/PLAY-POLICY-2.0.0.md no longer describes the build');
+            'docs/PLAY-POLICY.md no longer describes the build');
   });
 
   test('the policy document still names both declared services', () {
     // If the doc is rewritten back to "no services", the binary contradicts it
     // again — and the reviewer's own command is the one that finds out.
-    final doc = File('docs/PLAY-POLICY-2.0.0.md').readAsStringSync();
+    final doc = File('docs/PLAY-POLICY.md').readAsStringSync();
     expect(doc, contains('GeolocatorLocationService'));
     expect(doc, contains('ModuleDependencies'));
     expect(doc, contains('aapt2 dump xmltree'),

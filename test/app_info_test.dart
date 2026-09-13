@@ -58,4 +58,27 @@ void main() {
     expect(notice, contains('SIL Open Font License'));
     expect(notice, contains('PWD Schedule of Rates'));
   });
+
+  test('the policy document names the build that is actually shipping', () {
+    // This file exists to tell a Play reviewer what is in the binary. It spent
+    // three releases called PLAY-POLICY-2.0.0.md while describing 2.0.1, 2.0.2
+    // and 2.0.3 — the name is gone now, and this is what stops the heading
+    // going the same way. A reviewer reading a version that does not match the
+    // upload has been handed a reason to doubt the rest of it.
+    final doc = File('docs/PLAY-POLICY.md').readAsStringSync();
+    final heading = doc.split('\n').first;
+    expect(heading, contains(AppInfo.version),
+        reason: 'docs/PLAY-POLICY.md still announces an older version');
+    expect(heading, contains('${AppInfo.buildNumber}'),
+        reason: 'docs/PLAY-POLICY.md still announces an older versionCode');
+  });
+
+  test('the release notes carry a block for this version', () {
+    // Play asks for "what's new" at upload. Writing it then, against a build
+    // already made, is how a release note ends up describing the last release.
+    final notes = File('store/RELEASE-NOTES.md').readAsStringSync();
+    expect(notes,
+        contains('## ${AppInfo.version} (${AppInfo.buildNumber})'),
+        reason: 'no release-note block for ${AppInfo.versionLabel}');
+  });
 }
