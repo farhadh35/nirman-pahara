@@ -152,8 +152,8 @@
         "en": "Brick classes, and how to tell them apart on site"
       },
       "body": {
-        "bn": "ইট পাঁচ ভাগে চেনা হয়, আর পার্থক্যটা মূলত কতটা পুড়েছে তার উপর।\n\nপ্রথম শ্রেণির ইটের মাপ ও রং সব জায়গায় এক, সর্বত্র সমানভাবে পোড়ানো, গায়ে চিড় বা ফাটল নেই। দ্বিতীয় শ্রেণির রং একই রকম হলেও মাপ ও আকার কিছুটা অসমান, তল অমসৃণ, পোড়ানো কিছুটা কম। তৃতীয় শ্রেণি পর্যাপ্ত পোড়েনি — সহজে ভাঙে, আওয়াজ ভোঁতা। ঝামা অতিরিক্ত চাপে পুড়ে কালো ও ফাঁপা হয়ে যায়। আর পিকেড হলো প্রথম শ্রেণি ও ঝামার মাঝামাঝি — প্রথম শ্রেণির চেয়েও বেশি পুড়েছে, তাই আরও শক্ত, কিন্তু ধারগুলো আঁকাবাঁকা আর পিঠ অসমতল।\n\nমাঠে তিনটি পরীক্ষা যথেষ্ট। দুটি ইট পরস্পরে আঘাত করুন — ভালো ইট পরিষ্কার ঠন ঠন শব্দ করে, ভোঁতা শব্দ মানে কম পোড়া। দুটি ইট ইংরেজি T-এর মতো ধরে ছয় ফুট উপর থেকে সমান মাটিতে ফেলুন — প্রথম শ্রেণির ইট ভাঙে না। আর ইটের পিঠে নখ দিয়ে আঁচড় দিন — ভালো ইটে দাগ পড়ে না।",
-        "en": "Bricks are graded in five kinds, and the difference is mostly how thoroughly they were fired.\n\nA first class brick is uniform in size and colour, evenly burnt throughout, with no cracks. A second class one has much the same colour but is somewhat uneven in size and shape, rough on the surface, and slightly under-fired. Third class has not been fired enough — it breaks easily and sounds dull. Jhama has been over-fired until it is black and bloated. Picked sits between first class and jhama: fired harder than first class and therefore stronger, but with irregular edges and an uneven face.\n\nThree tests settle it on site. Strike two bricks together — a good one rings clearly; a dull sound means under-fired. Hold two like the letter T and drop from six feet onto level ground; a first class brick does not break. And scratch the face with a fingernail — a good brick takes no mark."
+        "bn": "ইট পাঁচ ভাগে চেনা হয়, আর পার্থক্যটা মূলত কতটা পুড়েছে তার উপর।\n\nপ্রথম শ্রেণির ইটের মাপ ও রং সব জায়গায় এক, সর্বত্র সমানভাবে পোড়ানো, গায়ে চিড় বা ফাটল নেই। দ্বিতীয় শ্রেণির রং একই রকম হলেও মাপ ও আকার কিছুটা অসমান, তল অমসৃণ, পোড়ানো কিছুটা কম। তৃতীয় শ্রেণি পর্যাপ্ত পোড়েনি — সহজে ভাঙে, আওয়াজ ভোঁতা। ঝামা অতিরিক্ত চাপে পুড়ে কালো ও ফাঁপা হয়ে যায়। আর পিকেড হলো প্রথম শ্রেণি ও ঝামার মাঝামাঝি — প্রথম শ্রেণির চেয়েও বেশি পুড়েছে, তাই আরও শক্ত, কিন্তু ধারগুলো আঁকাবাঁকা আর পিঠ অসমতল।\n\nমাঠে তিনটি পরীক্ষা যথেষ্ট। দুটি ইট পরস্পরে আঘাত করুন — ভালো ইট পরিষ্কার ঠন ঠন শব্দ করে, ভোঁতা শব্দ মানে কম পোড়া। দুটি ইট ইংরেজি T-এর মতো ধরে চার থেকে পাঁচ ফুট উপর থেকে সমান মাটিতে ফেলুন — প্রথম শ্রেণির ইট ভাঙে না। আর ইটের পিঠে নখ দিয়ে আঁচড় দিন — ভালো ইটে দাগ পড়ে না।",
+        "en": "Bricks are graded in five kinds, and the difference is mostly how thoroughly they were fired.\n\nA first class brick is uniform in size and colour, evenly burnt throughout, with no cracks. A second class one has much the same colour but is somewhat uneven in size and shape, rough on the surface, and slightly under-fired. Third class has not been fired enough — it breaks easily and sounds dull. Jhama has been over-fired until it is black and bloated. Picked sits between first class and jhama: fired harder than first class and therefore stronger, but with irregular edges and an uneven face.\n\nThree tests settle it on site. Strike two bricks together — a good one rings clearly; a dull sound means under-fired. Hold two like the letter T and drop from four to five feet onto level ground; a first class brick does not break. And scratch the face with a fingernail — a good brick takes no mark."
       },
       "watch_for": [
         {
@@ -168,12 +168,12 @@
       "citations": [
         {
           "source": {
-            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), নবম অধ্যায়",
-            "en": "Bari Nirman o Site Supervision (2019), chapter 9"
+            "bn": "বাড়ি নির্মাণ ও সাইট সুপারভিশন (২০১৯), নবম অধ্যায় ও পরিশিষ্ট ৫",
+            "en": "Bari Nirman o Site Supervision (2019), chapter 9 and appendix 5"
           },
           "clause": {
-            "bn": "ইট সনাক্তকরণ পদ্ধতি",
-            "en": "Identifying brick classes"
+            "bn": "ইট সনাক্তকরণ পদ্ধতি। ফেলে দেখার উচ্চতা বইয়ের দুই জায়গায় দুই রকম — নবম অধ্যায়ে ছয় ফুট, পরিশিষ্ট ৫-এ তিন থেকে চার ফুট। এখানে মাঝামাঝি উচ্চতা ধরা হয়েছে।",
+            "en": "Identifying brick classes. The book gives the drop test at two different heights — six feet in chapter 9, three to four in appendix 5 — so this card states the height between them rather than either one."
           },
           "status": "review"
         }
